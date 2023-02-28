@@ -1,0 +1,105 @@
+<misterromdescription>
+	<name>Peter Pack Rat</name>
+	<mameversion>0249</mameversion>
+	<setname>peterpak</setname>
+	<mratimestamp>20221122000000</mratimestamp>
+	<year>1984</year>
+	<manufacturer>Atari Games</manufacturer>
+	<category>Arcade</category>
+	<rbf>atarisys1</rbf>
+	<mameinfo parent="atarisy1" cpp="atarisy1" input="atarisy1"/>
+	<display type="raster" rotate="0"/>
+	<buttons names="Start,Fire,-,-,Coin,-" default="B,A,R"/>
+
+	<!-- Slapstic type -->
+	<rom index="1">
+		<part>6B</part>
+	</rom>
+
+	<rom index="0" zip="peterpak.zip" md5="none">
+		<!-- TILE ROMs 0x030000, 0x020000, 0x010000, 0x000000 32Kx32 -->
+		<interleave output="32">
+			<part crc="none" name="136028.138" map="0001"/>
+			<part crc="none" name="136028.139" map="0010"/>
+			<part crc="none" name="136028.140" map="0100"/>
+			<part crc="none" name="136028.141" map="1000"/>
+		</interleave>
+
+		<!-- TILE ROMs 0x0B0000, 0x0A0000 , 0x090000, 0x080000 32Kx32 -->
+		<interleave output="32">
+			<part crc="none" name="136028.150" map="0001"/>
+			<part crc="none" name="136028.151" map="0010"/>
+			<part crc="none" name="136028.152" map="0100"/>
+			<part crc="none" name="136028.153" map="1000"/>
+		</interleave>
+
+		<!-- TILE ROMs 0x130000, 0x120000 , 0x110000, 0x100000 32Kx32 -->
+
+		<part repeat="16384">FF</part>
+		<part repeat="16384">FF</part>
+		<part repeat="16384">FF</part>
+		<part repeat="16384">FF</part>
+
+		<!-- TILE ROMs 0x134000, 0x124000, 0x114000, 0x104000 16Kx32 -->
+		<interleave output="32">
+			<part crc="none" name="136028.105" map="0001"/>
+			<part crc="none" name="136028.108" map="0010"/>
+			<part crc="none" name="136028.111" map="0100"/>
+			<part crc="none" name="136028.114" map="1000"/>
+		</interleave>
+		<!-- TILE ROMs 0x1B0000, 0x1A0000, 0x190000, 0x180000 32Kx32 -->
+
+		<part repeat="32768">FF</part>
+		<part repeat="32768">FF</part>
+		<part repeat="32768">FF</part>
+		<part repeat="32768">FF</part>
+
+		<!-- CART ROMs 0x10000 16Kx16 -->
+		<interleave output="16">
+			<part crc="none" name="136028.142" map="01"/>"
+			<part crc="none" name="136028.143" map="10"/>"
+		</interleave>
+		<!-- CART ROMs 0x18000 16Kx16 -->
+		<interleave output="16">
+			<part crc="none" name="136028.144" map="01"/>"
+			<part crc="none" name="136028.145" map="10"/>"
+		</interleave>
+		<!-- MAINCPU ROMs 0x20000 16Kx16 -->
+		<interleave output="16">
+			<part crc="none" name="136028.146" map="01"/>"
+			<part crc="none" name="136028.147" map="10"/>"
+		</interleave>
+
+		<!-- MAINCPU ROMs 0x28000 16Kx16 -->
+		<part repeat="16384">00</part>
+		<part repeat="16384">00</part>
+
+		<!-- MAINCPU ROMs 0x30000 16Kx16 -->
+		<part repeat="16384">00</part>
+		<part repeat="16384">00</part>
+
+		<!-- SLAPSTIC ROMs 0x80000 16Kx16 -->
+		<interleave output="16">
+			<part crc="none" name="136028.148" map="01"/>"
+			<part crc="none" name="136028.149" map="10"/>"
+		</interleave>
+
+		<!-- BIOS ROMs 0x00000 16Kx16 -->
+		<interleave output="16">
+			<part crc="none" name="136032.114.j11" zip="atarisy1.zip" map="01"/>
+			<part crc="none" name="136032.115.j10" zip="atarisy1.zip" map="10"/>
+		</interleave>
+
+		<!-- AUDIOCPU ROM 0x4000 16Kx8 -->
+		<part repeat="16384">00</part>
+		<!-- AUDIOCPU ROM 0x8000 16Kx8 -->
+		<part crc="none" name="136028.101"/>
+		<!-- AUDIOCPU ROM 0xC000 16Kx8 -->
+		<part crc="none" name="136028.102"/>
+
+		<!-- PROMs -->
+		<part crc="none" name="136032.104.f5" zip="atarisy1.zip"/>
+		<part crc="none" name="136028.137"/>
+		<part crc="none" name="136028.136"/>
+	</rom>
+</misterromdescription>
