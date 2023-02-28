@@ -1,0 +1,81 @@
+<misterromdescription>
+  <name>DoDonPachi (Ship Color Hack)</name>
+  <mameversion>0226</mameversion>
+  <setname>ddonpachsc</setname>
+  <year>1997</year>
+  <manufacturer>CAVE</manufacturer>
+  <category>Shooter</category>
+  <rotation>vertical (ccw)</rotation>
+  <rbf>cave</rbf>
+
+  <!-- ROM data -->
+  <rom index="0" zip="ddonpach.zip|ddonpachj.zip" md5="none" address="0x30000000">
+    <!-- prog ROM -->
+    <interleave output="16">
+      <part name="u27.bin" crc="2432ff9b" map="01" />
+      <part name="u26.bin" crc="4f3a914a" map="10" />
+    </interleave>
+
+    <!-- EEPROM -->
+    <part name="eeprom-ddonpach.bin" crc="315fb546" />
+
+    <!-- sound ROM -->
+    <part name="u6.bin" crc="9dfdafaf" />
+    <part name="u7.bin" crc="795b17d5" />
+
+    <!-- layer 0 -->
+    <part name="u60.bin" crc="903096a7" />
+
+    <!-- layer 1 -->
+    <part name="u61.bin" crc="d89b7631" />
+
+    <!-- layer 2 -->
+    <part name="u62.bin" crc="292bfb6b" />
+
+    <!-- sprites -->
+    <part name="u50.bin" crc="14b260ec" />
+    <part name="u51.bin" crc="e7ba8cce" />
+    <part name="u52.bin" crc="02492ee0" />
+    <part name="u53.bin" crc="cb4c10f0" />
+
+    <!-- ship color hack -->
+    <patch offset="0x000053f0">0000 52ee b240 6612 3039 0000 52f2 b440</patch>
+    <patch offset="0x00006560">fc44 4ef9 000c 0024 1d50 001a 1d58 0039</patch>
+    <patch offset="0x00007710">001c 4ef9 000c 0046 5640 1d40 0002 0896</patch>
+    <patch offset="0x000079f0">003d 6600 0104 4ef9 000c 0080 0000 6710</patch>
+    <patch offset="0x00007ad0">4ef9 000c 005e 3d40 002a 3d40 0034 7e23</patch>
+    <patch offset="0x000c0000">526f 6d20 6861 636b 6564 2062 7920 3c65</patch>
+    <patch offset="0x000c0010">6e72 6963 6f40 6570 6f7a 7a6f 626f 6e2e</patch>
+    <patch offset="0x000c0020">6974 3e00 d0c0 d0fc 0001 1039 0010 f8f4</patch>
+    <patch offset="0x000c0030">4a2d 0007 6706 1039 0010 f8f6 1d40 0002</patch>
+    <patch offset="0x000c0040">4ef9 0000 6568 1039 0010 f8f4 4a2d 0007</patch>
+    <patch offset="0x000c0050">6706 1039 0010 f8f6 4ef9 0000 771a 1039</patch>
+    <patch offset="0x000c0060">0010 f8f4 4a2d 0007 6706 1039 0010 f8f6</patch>
+    <patch offset="0x000c0070">1d40 0002 7000 1d40 003f 4ef9 0000 7ad6</patch>
+    <patch offset="0x000c0080">3c2e 001e 1e39 0010 f8f4 4a2d 0007 6706</patch>
+    <patch offset="0x000c0090">1e39 0010 f8f6 0810 0002 6704 5307 6008</patch>
+    <patch offset="0x000c00a0">0810 0003 6724 5207 0207 003f 4a2d 0007</patch>
+    <patch offset="0x000c00b0">6608 13c7 0010 f8f4 6006 13c7 0010 f8f6</patch>
+    <patch offset="0x000c00c0">3e2e 001c 4ef9 0000 7a7a 0810 0000 4ef9</patch>
+    <patch offset="0x000c00d0">0000 79fe ffff ffff ffff ffff ffff ffff</patch>
+
+    <!-- skip CRC -->
+    <patch offset="0x00005410">60 00 00 0C</patch>
+    <!-- skip warning -->
+    <patch offset="0x000054EC">60 00 00 50</patch>
+
+    <!-- enable C button in EEPROM -->
+    <patch offset="0x00100002">ff ff</patch>
+    <patch offset="0x00100008">00 04</patch>
+  </rom>
+
+  <!-- select game -->
+  <rom index="1">
+    <part>01</part>
+  </rom>
+
+  <!-- NVRAM -->
+  <nvram index="2" size="128" />
+
+  <buttons names="Shots/Laser,Spread/Laser Bomber,Full-Auto,-,Start,Coin,Pause" default="A,B,X,R,L,Start" />
+</misterromdescription>
