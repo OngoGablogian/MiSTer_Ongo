@@ -1,0 +1,21 @@
+<misterromdescription>
+	<name>Enigma2</name>
+	<mameversion>0245</mameversion>
+	<setname>enigma2</setname>
+	<mratimestamp>202207120941</mratimestamp>
+	<year>1981</year>
+	<manufacturer>Gameplan</manufacturer>
+	<category>Shooter</category>
+	<rbf>Enigma</rbf>
+	<rom index="0" md5="none" zip="enigma2.zip">
+		<part crc="499749de" name="1.5d"/>
+		<part crc="173c1329" name="2.7d"/>
+		<part crc="c7d3e6b1" name="3.8d"/>
+		<part crc="c6a7428c" name="4.10d"/>
+		<part crc="098ac15b" name="5.11d"/>
+		<part crc="240a9d4b" name="6.13d"/>
+		<part crc="409b5aad" name="7.11f"/>
+		<part crc="e9cb116d" name="8.13f"/>
+		<part crc="68fd8c54" name="enigma2.s"/>
+	</rom>
+</misterromdescription>
