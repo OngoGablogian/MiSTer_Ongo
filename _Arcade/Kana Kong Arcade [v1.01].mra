@@ -35,7 +35,7 @@
 		</switches>
 
 	<rom index="1"></rom>
-	<rom index="0" md5="none" zip="dkongk.zip">
+	<rom index="0" md5="none" zip="dkongk.zip|dkong.zip">
 		<!-- Main CPU 32k -->
 		<part crc="ba70b88b" name="c_5et_g.bin"></part>
 		<part crc="5ec461ec" name="c_5ct_g.bin"></part>
