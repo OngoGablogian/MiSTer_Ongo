@@ -1,0 +1,236 @@
+<misterromdescription>
+  <name>DoDonPachi Trainer [v1.11]</name>
+  <mameversion>0226</mameversion>
+  <setname>ddonpacht1</setname>
+  <year>1997</year>
+  <manufacturer>CAVE</manufacturer>
+  <category>Shooter</category>
+  <rotation>vertical (ccw)</rotation>
+  <rbf>cave</rbf>
+
+  <!-- ROM data -->
+  <rom index="0" zip="ddonpach.zip|ddonpachj.zip" md5="none" address="0x30000000">
+    <!-- prog ROM -->
+    <interleave output="16">
+      <part name="u27.bin" crc="2432ff9b" map="01" />
+      <part name="u26.bin" crc="4f3a914a" map="10" />
+    </interleave>
+
+    <!-- EEPROM -->
+    <part name="eeprom-ddonpach.bin" crc="315fb546" />
+
+    <!-- sound ROM -->
+    <part name="u6.bin" crc="9dfdafaf" />
+    <part name="u7.bin" crc="795b17d5" />
+
+    <!-- layer 0 -->
+    <part name="u60.bin" crc="903096a7" />
+
+    <!-- layer 1 -->
+    <part name="u61.bin" crc="d89b7631" />
+
+    <!-- layer 2 -->
+    <part name="u62.bin" crc="292bfb6b" />
+
+    <!-- sprites -->
+    <part name="u50.bin" crc="14b260ec" />
+    <part name="u51.bin" crc="e7ba8cce" />
+    <part name="u52.bin" crc="02492ee0" />
+    <part name="u53.bin" crc="cb4c10f0" />
+
+    <!-- skip CRC -->
+    <patch offset="0x00005410">60 00 00 0C</patch>
+    <!-- skip warning -->
+    <patch offset="0x000054EC">60 00 00 50</patch>
+
+    <!-- enable C button in EEPROM -->
+    <patch offset="0x00100002">ff ff</patch>
+    <patch offset="0x00100008">00 04</patch>
+
+    <!-- enable C button in EEPROM -->
+    <patch offset="0x00000b00">0f48 4e71 4e71 33fc 0001 0010 e846 4bf9</patch>
+    <patch offset="0x00000b50">67cc 4a40 67c8 4ef9 0009 8280 0f48 48e7</patch>
+    <patch offset="0x00000b60">0006 4eb9 0000 37e2 4cdf 6000 4ef9 0009</patch>
+    <patch offset="0x00000b70">81e4 0010 e846 4eb9 0005 700a 3039 0010</patch>
+    <patch offset="0x00002620">0001 04f5 303c 018f 4ef9 0009 8102 2201</patch>
+    <patch offset="0x000045e0">0005 7dae 33c6 0010 17a8 4ef9 0009 815e</patch>
+    <patch offset="0x00004be0">f0ee 4ef9 0009 81b6 9351 0079 c000 0010</patch>
+    <patch offset="0x00004f40">7dae 4ef9 0009 818a 0079 c000 0010 125c</patch>
+    <patch offset="0x000054e0">4eb9 0006 d400 4eb9 0003 fa42 7000 4eb9</patch>
+    <patch offset="0x00005520">0005 75d0 3e3c 0168 4eb9 0005 6dd6 4ef9</patch>
+    <patch offset="0x00005530">0009 7da0 8079 0010 128e 8079 0010 1290</patch>
+    <patch offset="0x00006160">0180 0180 0000 1700 0000 0000 0004 0004</patch>
+    <patch offset="0x00006170">0606 0602 c9ec 0000 0000 0000 0000 ffff</patch>
+    <patch offset="0x000063e0">142e 0025 41fa fd70 4ef9 0009 8074 fffc</patch>
+    <patch offset="0x00006440">fda0 4ef9 0009 8046 0000 0004 4eb9 0005</patch>
+    <patch offset="0x00009f40">0000 3d7c 0001 000e 600c 4ef9 0009 8296</patch>
+    <patch offset="0x00036220">0003 8000 0016 4ef9 0009 7c44 001a 2b7c</patch>
+    <patch offset="0x000400a0">6a14 536e 0002 506e 0004 4ef9 0009 82d6</patch>
+    <patch offset="0x000400b0">0001 000e 600c 4ef9 0009 82b6 0006 536e</patch>
+    <patch offset="0x000401b0">4e75 082e 0000 0031 6778 4ef9 0009 82fa</patch>
+    <patch offset="0x00040250">0031 4ef9 0009 831a 41f9 0004 89d6 4eb9</patch>
+    <patch offset="0x00046d40">3039 0010 4af2 0240 0070 672e 4ef9 0009</patch>
+    <patch offset="0x00046d50">7c22 1d7c 0000 0073 0239 00fb 0010 2d09</patch>
+    <patch offset="0x00047810">3039 0010 4af0 0240 0070 672e 4ef9 0009</patch>
+    <patch offset="0x00047820">7c00 1d7c 0000 0073 0239 00fb 0010 2cc9</patch>
+    <patch offset="0x00048660">0002 0010 0045 67be 4ef9 0009 7c6c 60b6</patch>
+    <patch offset="0x0004cc80">0004 6624 5246 0c46 003c 651c 4ef9 0009</patch>
+    <patch offset="0x0004cc90">8264 660c 41fa 00c4 4eb9 0004 8c58 6004</patch>
+    <patch offset="0x000575d0">4e75 f040 0240 00ff e748 43f9 0006 c1e6</patch>
+    <patch offset="0x00057620">0100 2f00 7002 4e71 4e71 201f 60c4 4cdf</patch>
+    <patch offset="0x0006bbc0">504c 4159 205c 5c20 2020 2020 4652 4545</patch>
+    <patch offset="0x0006bbd0">2050 4c41 5920 2020 2020 5c20 2020 2020</patch>
+    <patch offset="0x0006bc00">3120 504c 4159 205c 5c20 2020 2020 4652</patch>
+    <patch offset="0x0006bc10">4545 2050 4c41 5920 2020 2020 5c20 2020</patch>
+    <patch offset="0x0006bca0">205c 5c20 2020 2020 4652 4545 2050 4c41</patch>
+    <patch offset="0x0006bcb0">5920 2020 2020 5c20 2020 2020 2020 3120</patch>
+    <patch offset="0x00097c00">7001 13c0 0010 f908 1d7c 0020 0072 1d7c</patch>
+    <patch offset="0x00097c10">0000 0073 0239 00fb 0010 2cc9 4ef9 0004</patch>
+    <patch offset="0x00097c20">7830 7001 13c0 0010 f908 1d7c 0020 0072</patch>
+    <patch offset="0x00097c30">1d7c 0000 0073 0239 00fb 0010 2d09 4ef9</patch>
+    <patch offset="0x00097c40">0004 6d60 2b7c c4e0 0280 001a 4a39 0010</patch>
+    <patch offset="0x00097c50">f9a2 6700 000a 2b7c 00e0 0280 001a 2b7c</patch>
+    <patch offset="0x00097c60">0014 0000 001e 4ef9 0003 6236 1a39 0010</patch>
+    <patch offset="0x00097c70">f910 6600 0120 1a39 0010 f908 6700 0116</patch>
+    <patch offset="0x00097c80">1a39 0010 f904 0c05 0003 6600 00b0 4a39</patch>
+    <patch offset="0x00097c90">0010 f90c 6600 00a6 13fc 0001 0010 f90c</patch>
+    <patch offset="0x00097ca0">48e7 ffc0 4a39 0010 1965 6700 0042 7000</patch>
+    <patch offset="0x00097cb0">1039 0010 f9a5 33c0 0010 192a 33c0 0010</patch>
+    <patch offset="0x00097cc0">192c 0440 0001 7200 0641 0016 51c8 fffa</patch>
+    <patch offset="0x00097cd0">33c1 0010 1924 3039 0010 1924 4eb9 0005</patch>
+    <patch offset="0x00097ce0">76b6 23c2 0010 1926 4eb9 0005 9090 4a39</patch>
+    <patch offset="0x00097cf0">0010 1967 6700 0042 7000 1039 0010 f9a5</patch>
+    <patch offset="0x00097d00">33c0 0010 1934 33c0 0010 1936 0440 0001</patch>
+    <patch offset="0x00097d10">7200 0641 0016 51c8 fffa 33c1 0010 192e</patch>
+    <patch offset="0x00097d20">3039 0010 192e 4eb9 0005 76b6 23c2 0010</patch>
+    <patch offset="0x00097d30">1930 4eb9 0005 90b4 4cdf 03ff 0c05 0004</patch>
+    <patch offset="0x00097d40">6700 0010 0605 0001 13c5 0010 f904 6000</patch>
+    <patch offset="0x00097d50">0028 4a39 0010 f900 6600 001e 13fc 0001</patch>
+    <patch offset="0x00097d60">0010 f900 7a00 1a39 0010 f9a0 33c5 0010</patch>
+    <patch offset="0x00097d70">1978 4eb9 0001 fa40 4a39 0010 f900 6700</patch>
+    <patch offset="0x00097d80">0014 4a39 0010 f90c 6700 000a 13fc 0001</patch>
+    <patch offset="0x00097d90">0010 f910 4eb9 0005 7dae 4ef9 0004 8626</patch>
+    <patch offset="0x00097da0">7040 207c 0010 ad00 227c 0009 835a 6100</patch>
+    <patch offset="0x00097db0">033e 7000 103c 0080 207c 0010 ac40 227c</patch>
+    <patch offset="0x00097dc0">0009 839a 6100 0328 7007 207c 0010 f9a0</patch>
+    <patch offset="0x00097dd0">227c 0009 8352 6100 0316 7000 6100 0244</patch>
+    <patch offset="0x00097de0">7001 6100 023e 7002 6100 0238 7003 6100</patch>
+    <patch offset="0x00097df0">0232 13fc 0007 0010 ac00 6100 01ec 3039</patch>
+    <patch offset="0x00097e00">0010 1270 33c0 0010 ac04 6100 020a 6100</patch>
+    <patch offset="0x00097e10">0092 4a00 6600 0016 3039 0010 1270 b079</patch>
+    <patch offset="0x00097e20">0010 ac04 6600 ffd8 6000 ffee 6100 0038</patch>
+    <patch offset="0x00097e30">6100 0008 4ef9 0000 554e 1039 0010 1297</patch>
+    <patch offset="0x00097e40">e808 0c00 000c 6700 0014 0c00 0003 6700</patch>
+    <patch offset="0x00097e50">000c 0c00 000f 6700 0004 4e75 13fc 0009</patch>
+    <patch offset="0x00097e60">0010 13ab 4e75 1039 0010 f9a0 6700 0010</patch>
+    <patch offset="0x00097e70">0400 0001 13c0 0010 f9a0 6000 0012 13fc</patch>
+    <patch offset="0x00097e80">0001 0010 f900 13fc 00ff 0010 f9a0 4a39</patch>
+    <patch offset="0x00097e90">0010 f9a5 6600 000a 13fc 0001 0010 f90c</patch>
+    <patch offset="0x00097ea0">4e75 3239 0010 ac08 3039 00d0 0000 4640</patch>
+    <patch offset="0x00097eb0">33c0 0010 ac08 b141 c240 0801 0000 6700</patch>
+    <patch offset="0x00097ec0">0020 1039 0010 ac00 0400 0001 6a00 0004</patch>
+    <patch offset="0x00097ed0">7007 13c0 0010 ac00 6100 010e 6000 00ca</patch>
+    <patch offset="0x00097ee0">0801 0001 6700 001a 1039 0010 ac00 0600</patch>
+    <patch offset="0x00097ef0">0001 0c00 0007 6f00 ffda 7000 6000 ffd4</patch>
+    <patch offset="0x00097f00">0801 0002 6700 0042 1039 0010 ac00 0c00</patch>
+    <patch offset="0x00097f10">0007 6700 0034 7000 1039 0010 ac00 207c</patch>
+    <patch offset="0x00097f20">0010 f9a0 227c 0009 834a 7200 1230 0000</patch>
+    <patch offset="0x00097f30">0401 0001 6a00 0006 1231 0000 1181 0000</patch>
+    <patch offset="0x00097f40">6100 006a 6000 0062 0801 0003 6700 0040</patch>
+    <patch offset="0x00097f50">1039 0010 ac00 0c00 0007 6700 0032 7000</patch>
+    <patch offset="0x00097f60">1039 0010 ac00 207c 0010 f9a0 227c 0009</patch>
+    <patch offset="0x00097f70">834a 7400 1431 0000 7200 1230 0000 0601</patch>
+    <patch offset="0x00097f80">0001 b401 6c00 ffb6 7200 6000 ffb0 0801</patch>
+    <patch offset="0x00097f90">0004 6700 0014 1039 0010 ac00 0c00 0007</patch>
+    <patch offset="0x00097fa0">6600 0006 7001 4e75 7000 4e75 7000 1039</patch>
+    <patch offset="0x00097fb0">0010 ac00 740c 207c 0010 f9a0 227c 0009</patch>
+    <patch offset="0x00097fc0">833a 247c 0010 ac40 7200 1230 0000 0c00</patch>
+    <patch offset="0x00097fd0">0002 6400 0006 0601 0001 e958 d042 1231</patch>
+    <patch offset="0x00097fe0">1000 1581 0000 4e75 7200 7007 143c 00c4</patch>
+    <patch offset="0x00097ff0">207c 0010 ad00 3200 e759 1182 1000 51c8</patch>
+    <patch offset="0x00098000">fff6 143c 00c0 7200 1239 0010 ac00 e759</patch>
+    <patch offset="0x00098010">1182 1000 4e75 7007 6100 0012 51c8 fffa</patch>
+    <patch offset="0x00098020">4e75 227c 0009 841a 6000 000c 227c 0010</patch>
+    <patch offset="0x00098030">ad00 6000 0002 48e7 f040 0240 00ff e748</patch>
+    <patch offset="0x00098040">4ef9 0005 75e0 28b2 0000 2973 0000 0004</patch>
+    <patch offset="0x00098050">7000 1039 0010 f9a3 1d40 0021 1d40 0023</patch>
+    <patch offset="0x00098060">e318 d179 0010 1856 d179 0010 185a 4ef9</patch>
+    <patch offset="0x00098070">0000 644c 7a0c 22d8 51cd fffc 1a39 0010</patch>
+    <patch offset="0x00098080">f910 6600 0026 7a00 1a39 0010 f9a1 33c5</patch>
+    <patch offset="0x00098090">0010 197a 1a39 0010 f9a6 6700 000e 2a3c</patch>
+    <patch offset="0x000980a0">0001 f800 23c5 0010 1970 1a39 0010 f9a4</patch>
+    <patch offset="0x000980b0">1345 ffe6 0c05 0003 6c00 0014 1a3c 0003</patch>
+    <patch offset="0x000980c0">4a39 0010 f9a5 6700 0006 1345 ffe6 1345</patch>
+    <patch offset="0x000980d0">ffe7 4a39 0010 f9a7 6700 000e 1a3c 0006</patch>
+    <patch offset="0x000980e0">1345 ffe6 1345 ffe7 4ef9 0000 63f0 1231</patch>
+    <patch offset="0x000980f0">0000 1181 0000 51c8 fff6 4e75 4ef9 0000</patch>
+    <patch offset="0x00098100">52f6 1239 00d0 0001 0c01 007f 6700 ffee</patch>
+    <patch offset="0x00098110">13fc 0000 0010 f910 13fc 0000 0010 f904</patch>
+    <patch offset="0x00098120">13fc 0000 0010 f908 13fc 0000 0010 f90c</patch>
+    <patch offset="0x00098130">4eb9 0009 7e8e 1239 0010 f9a0 0c01 00ff</patch>
+    <patch offset="0x00098140">6700 000e 13fc 0000 0010 f900 6000 000a</patch>
+    <patch offset="0x00098150">13fc 0001 0010 f900 4ef9 0000 2636 1239</patch>
+    <patch offset="0x00098160">0010 1297 e809 0c01 000c 6700 0018 0c01</patch>
+    <patch offset="0x00098170">0003 6700 0010 0c01 000f 6700 0008 5379</patch>
+    <patch offset="0x00098180">0010 13aa 4ef9 0000 45f0 1039 0010 1297</patch>
+    <patch offset="0x00098190">e808 0c00 000c 6700 0018 0c00 0003 6700</patch>
+    <patch offset="0x000981a0">0010 0c00 000f 6700 0008 9f79 0010 13aa</patch>
+    <patch offset="0x000981b0">4ef9 0000 4f48 33d1 0010 13ac 1439 0010</patch>
+    <patch offset="0x000981c0">1297 e80a 0c02 000c 6700 0014 0c02 0003</patch>
+    <patch offset="0x000981d0">6700 000c 0c02 000f 6700 0004 9351 4ef9</patch>
+    <patch offset="0x000981e0">0000 4bea 1039 0010 f908 0c00 0001 6700</patch>
+    <patch offset="0x000981f0">0006 6000 0062 1039 0010 1965 0c00 0000</patch>
+    <patch offset="0x00098200">6700 0024 7000 103c 0004 13c0 0010 2cad</patch>
+    <patch offset="0x00098210">13c0 0010 2caf 103c 0006 13c0 0010 2cb0</patch>
+    <patch offset="0x00098220">13c0 0010 2cb1 1039 0010 1967 0c00 0000</patch>
+    <patch offset="0x00098230">6700 0024 7000 103c 0004 13c0 0010 2ced</patch>
+    <patch offset="0x00098240">13c0 0010 2cef 103c 0006 13c0 0010 2cf0</patch>
+    <patch offset="0x00098250">13c0 0010 2cf1 13fc 0000 0010 f9a7 4ef9</patch>
+    <patch offset="0x00098260">0000 0b1e 4a39 0010 f9a1 6700 0008 4ef9</patch>
+    <patch offset="0x00098270">0004 cc94 4a79 0010 197a 4ef9 0004 cc92</patch>
+    <patch offset="0x00098280">13fc 0001 0010 f9a7 33fc 0001 0010 0f48</patch>
+    <patch offset="0x00098290">4ef9 0000 0b5e 1c39 00d0 0001 0c06 00ff</patch>
+    <patch offset="0x000982a0">6700 0006 303c 0001 3d40 0000 2d4a 0006</patch>
+    <patch offset="0x000982b0">4ef9 0000 9f52 1c39 00d0 0001 0c06 00ff</patch>
+    <patch offset="0x000982c0">6700 0006 303c 0001 3d40 0000 2d4a 0006</patch>
+    <patch offset="0x000982d0">4ef9 0004 00be 3d52 0000 3d7c 0001 000e</patch>
+    <patch offset="0x000982e0">1c39 00d0 0001 0c06 00ff 6700 0008 3d7c</patch>
+    <patch offset="0x000982f0">0001 0000 4ef9 0004 00b4 323c 00f0 1039</patch>
+    <patch offset="0x00098300">00d0 0001 0c00 00ff 6700 0006 323c 0002</patch>
+    <patch offset="0x00098310">3d41 002c 4ef9 0004 01c0 323c 0080 1039</patch>
+    <patch offset="0x00098320">00d0 0001 0c00 00ff 6700 0006 323c 0001</patch>
+    <patch offset="0x00098330">3d41 0034 4ef9 0004 0258 3031 3233 3435</patch>
+    <patch offset="0x00098340">3637 3839 4142 4344 4546 0601 0104 060f</patch>
+    <patch offset="0x00098350">0100 0000 0000 0300 0000 c000 0288 0010</patch>
+    <patch offset="0x00098360">ac40 c400 0280 0010 ac50 c400 0278 0010</patch>
+    <patch offset="0x00098370">ac60 c400 0270 0010 ac70 c400 0268 0010</patch>
+    <patch offset="0x00098380">ac80 c400 0260 0010 ac90 c400 0258 0010</patch>
+    <patch offset="0x00098390">aca0 c400 0250 0010 acb0 2020 2020 2020</patch>
+    <patch offset="0x000983a0">4c45 5645 4c20 3120 5c5c 2020 2020 2020</patch>
+    <patch offset="0x000983b0">204c 4f4f 5020 3120 5c5c 2020 204b 494c</patch>
+    <patch offset="0x000983c0">4c20 4245 4520 3020 5c5c 2020 2020 2020</patch>
+    <patch offset="0x000983d0">2053 484f 5420 3020 5c5c 2020 2020 2020</patch>
+    <patch offset="0x000983e0">2042 4f4d 4220 3320 5c5c 2020 4d41 5820</patch>
+    <patch offset="0x000983f0">424f 4e55 5320 3020 5c5c 2020 204d 4158</patch>
+    <patch offset="0x00098400">2052 414e 4b20 3020 5c5c 2020 2020 2020</patch>
+    <patch offset="0x00098410">2045 5849 5420 2020 5c5c c000 0298 0009</patch>
+    <patch offset="0x00098420">843a c000 0240 0009 8454 c000 0230 0009</patch>
+    <patch offset="0x00098430">846a c000 0228 0009 8485 444f 444f 4e50</patch>
+    <patch offset="0x00098440">4143 4849 2054 5241 494e 4552 2056 312e</patch>
+    <patch offset="0x00098450">3131 5c5c 5245 5649 5345 4420 4259 2041</patch>
+    <patch offset="0x00098460">4c41 4d4f 4e45 2e20 5c5c 4f52 4947 494e</patch>
+    <patch offset="0x00098470">414c 2042 5920 4752 4547 4f2e 2046 554e</patch>
+    <patch offset="0x00098480">4445 445c 5c42 5920 454c 4543 5452 4943</patch>
+    <patch offset="0x00098490">2055 4e44 4552 4752 4f55 4e44 5c5c ffff</patch>
+  </rom>
+
+  <!-- select game -->
+  <rom index="1">
+    <part>01</part>
+  </rom>
+
+  <!-- NVRAM -->
+  <nvram index="2" size="128" />
+
+  <buttons names="Shots/Laser,Spread/Laser Bomber,Full-Auto,-,Start,Coin,Pause" default="A,B,X,R,L,Start" />
+</misterromdescription>

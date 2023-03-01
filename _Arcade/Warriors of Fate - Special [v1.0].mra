@@ -32,7 +32,7 @@
     <rotation>horizontal</rotation>
     <region>World</region>
     <mraauthor>jotego</mraauthor>
-    <rom index="0" zip="wof.zip|qsound.zip|wofs.zip" md5="None" asm_md5="0e41c840a0f9d1c443c0e388c73dc11c">
+    <rom index="0" zip="wof.zip|qsound.zip" md5="None" asm_md5="0e41c840a0f9d1c443c0e388c73dc11c">
         <part>
             00 04 80 04 80 0C 80 1C
             FF FF FF FF FF FF FF FF
@@ -44,7 +44,7 @@
             51 51 51 FF FF FF FF FF
         </part>
         <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
-        <part name="tk2e_23c.8f" crc="f1e9ec0b"/>
+        <part name="tk2e_23c.8f" crc="0d708505"/>
         <part name="tk2e_22c.7f" crc="608c17e3"/>
         <!-- audiocpu - starts at 0x100000 - length 0x20000 (17 bits) -->
         <part name="tk2_qa.5k" crc="c9183a0d"/>
@@ -69,6 +69,47 @@
         <!-- firmware - starts at 0x720000 - length 0x2000 (13 bits) -->
         <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000"/>
         <!-- Total 0x722000 bytes - 7304 kBytes -->
+
+        <!-- Warriors of Fate Special -->
+        <patch offset="0x00022060">0404 0404 0d00 c200 3400 0400 0d00 c200</patch>
+        <patch offset="0x00022070">3400 0400 00aa 00ac 00ae 0404 0404 0404</patch>
+        <patch offset="0x00024e70">0404 0505 0505 0606 0808 0d00 c200 3400</patch>
+        <patch offset="0x00024e80">0400 1a00 8501 d000 0b00 002a 028e 0490</patch>
+        <patch offset="0x00025f50">3801 0b00 4e00 9104 7002 0b00 5400 eb04</patch>
+        <patch offset="0x000278d0">0600 5900 1800 0100 0a00 9500 2800 0300</patch>
+        <patch offset="0x00028b90">0000 0000 0400 3b00 1000 0000 0800 7700</patch>
+        <patch offset="0x00028ba0">2000 0200 000a 8d76 8e78 0404 0404 0404</patch>
+        <patch offset="0x00029ec0">0800 7700 2000 0200 0d00 c200 3400 0400</patch>
+        <patch offset="0x0002b220">3801 0b00 3a00 6503 d401 0b00 4100 ce03</patch>
+        <patch offset="0x0002d720">6503 3801 0b00 4100 ce03 0802 0b00 4700</patch>
+        <patch offset="0x0002f370">0b0b 0b0b 0b0b 0b0b 0b0b 3a00 6503 3801</patch>
+        <patch offset="0x00030e30">0808 1a00 8501 6800 0b00 2700 4802 3801</patch>
+        <patch offset="0x00032a80">3b00 1000 0000 0800 7700 2000 0200 0020</patch>
+        <patch offset="0x00034d40">0d00 c200 3400 0400 1a00 8501 d000 0b00</patch>
+        <patch offset="0x00036330">ce03 3801 0b00 4700 2804 3c02 0b00 4e00</patch>
+        <patch offset="0x0003a190">0505 0f0f 060f 0606 0606 0d00 c200 3400</patch>
+        <patch offset="0x0003a1a0">0400 1a00 8501 d000 0b00 0032 028c 0400</patch>
+        <patch offset="0x0003b580">0c0c 0c0c 0600 5900 1800 0100 0d00 c200</patch>
+        <patch offset="0x0003b590">3400 0400 0030 0286 0488 0600 2600 4600</patch>
+        <patch offset="0x0003cb40">0404 0404 0d00 c200 3400 0400 0d00 c200</patch>
+        <patch offset="0x0003cb50">3400 0400 00b2 00b4 00b6 0404 0404 0404</patch>
+        <patch offset="0x0003e320">c200 3400 0400 0d00 c200 3400 0400 00a2</patch>
+        <patch offset="0x0003fb00">4100 ce03 3801 0b00 4700 2804 3c02 0b00</patch>
+        <patch offset="0x00043120">0504 0606 0606 0606 0606 4e00 9104 3801</patch>
+        <patch offset="0x00044fb0">0404 0504 0505 0505 0505 0600 5900 1800</patch>
+        <patch offset="0x00044fc0">0100 0d00 c200 3400 0400 002c 0092 0094</patch>
+        <patch offset="0x00046170">0c00 0000 0600 5900 3000 0400 000a 8d76</patch>
+        <patch offset="0x00046620">0000 0600 5900 1800 0100 0a00 9500 2800</patch>
+        <patch offset="0x00046630">0300 0014 907a 917c 0404 0404 0404 0404</patch>
+        <patch offset="0x00047200">2000 0200 0d00 c200 3400 0400 0026 937e</patch>
+        <patch offset="0x00047d20">0505 0505 0606 0808 0d00 c200 3400 0400</patch>
+        <patch offset="0x00048520">0504 0505 0606 0606 0300 2c00 0c00 0000</patch>
+        <patch offset="0x000489e0">2c00 1800 0000 0600 5900 3000 0400 0026</patch>
+        <patch offset="0x00048e00">ffff ffff 0000 0000 0400 3b00 1000 0000</patch>
+        <patch offset="0x00048e10">0800 7700 2000 0200 000a 8d76 8e78 0404</patch>
+        <patch offset="0x00059250">754e f84e 1015 0000 8401 5e02 8900 d802</patch>
+        <patch offset="0x00059260">0000 5e02 77ff 0000 7cfe a2fd 77ff 28fd</patch>
+        <patch offset="0x00059270">0000 a2fd 8900 0000 1c00 0d00 1c00 1b00</patch>
     </rom>
     <nvram index="2" size="128"/>
     <rom index="1">
