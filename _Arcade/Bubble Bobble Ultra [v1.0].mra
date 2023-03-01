@@ -85,7 +85,7 @@
         <!-- Skipping region  because there is no dump known -->
         <!-- Total 0xC0100 bytes - 768 kBytes -->
 
-        <!-- No Discomen -->
+        <!-- Bubble Bobble Ultra -->
         <patch offset="0x00000150">0321 36fa 3200 fa80 853a fefc 2037 cdf6</patch>
         <patch offset="0x000028b0">e000 f000 1800 4f4e 2057 5449 5327 5420</patch>
         <patch offset="0x000028c0">4d49 2045 4f46 2052 5542 4242 454c 4220</patch>

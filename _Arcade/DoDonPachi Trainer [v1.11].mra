@@ -47,7 +47,7 @@
     <patch offset="0x00100002">ff ff</patch>
     <patch offset="0x00100008">00 04</patch>
 
-    <!-- enable C button in EEPROM -->
+    <!-- DoDonPachi Trainer -->
     <patch offset="0x00000b00">0f48 4e71 4e71 33fc 0001 0010 e846 4bf9</patch>
     <patch offset="0x00000b50">67cc 4a40 67c8 4ef9 0009 8280 0f48 48e7</patch>
     <patch offset="0x00000b60">0006 4eb9 0000 37e2 4cdf 6000 4ef9 0009</patch>
