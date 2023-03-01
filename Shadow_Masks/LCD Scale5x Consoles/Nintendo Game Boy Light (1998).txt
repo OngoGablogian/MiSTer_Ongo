@@ -1,0 +1,16 @@
+####
+# Name: Nintendo Game Boy Light
+# Author: Tonurics
+# Type: LCD
+# Genre: Handheld
+# Sub-Pixel Layout: Monochrome
+####
+
+Resolution=0
+v2
+5,5
+70f,70f,70f,70f,72d
+70f,00f,00f,00f,72d
+70f,00f,00f,00f,72d
+70f,00f,00f,00f,72d
+72d,72d,72d,72d,72d

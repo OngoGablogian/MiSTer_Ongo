@@ -1,0 +1,16 @@
+####
+# Name: Neo Geo Pocket Color
+# Author: Tonurics
+# Type: LCD
+# Genre: Handheld
+# Sub-Pixel Layout: RGB
+####
+
+Resolution=0
+v2
+5,5
+42a,21d,72a,21d,12a
+42a,21d,72a,21d,12a
+42a,21d,72a,21d,12a
+42a,21d,72a,21d,12a
+428,21a,72a,21a,128

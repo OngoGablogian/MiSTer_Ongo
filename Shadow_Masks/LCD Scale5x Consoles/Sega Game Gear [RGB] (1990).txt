@@ -1,0 +1,16 @@
+####
+# Name: Sega Game Gear
+# Author: Tonurics
+# Type: LCD
+# Genre: Handheld
+# Sub-Pixel Layout: RGB
+####
+
+Resolution=0
+v2
+5,5
+52a,60e,70d,60e,32a
+52a,60e,70d,60e,32a
+52a,60e,70d,60e,32a
+52a,60e,70d,60e,32a
+01e,01e,01e,01e,01e

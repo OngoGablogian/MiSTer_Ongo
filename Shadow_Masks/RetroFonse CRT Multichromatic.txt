@@ -1,0 +1,25 @@
+####
+# Name: RetroFonse CRT Multichromatic
+# Author: TrashUncle
+# Type: CRT
+# Genre: Realistic
+# Sub-Pixel Layout: RGB
+####
+
+Resolution=0
+v2
+3,5
+020,020,12a
+42a,020,12a
+42a,22a,12a
+42a,22a,020
+020,22a,020
+
+Resolution=1080
+v2
+3,5
+020,020,12a
+42a,020,12a
+42a,22a,12a
+42a,22a,020
+020,22a,020

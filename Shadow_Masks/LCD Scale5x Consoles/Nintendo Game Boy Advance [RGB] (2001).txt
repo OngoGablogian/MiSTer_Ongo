@@ -1,0 +1,16 @@
+####
+# Name: Nintendo Game Boy Advance
+# Author: Tonurics
+# Type: LCD
+# Genre: Handheld
+# Sub-Pixel Layout: RGB
+####
+
+Resolution=0
+v2
+5,5
+51d,51d,30e,61d,61d
+51b,30d,30e,30d,61d
+51d,51d,30e,61d,61d
+51d,30e,30e,30e,61d
+00d,00d,00d,00d,00d
