@@ -11,7 +11,7 @@
 	<manufacturer>Sigma</manufacturer>
 	<category>Platform - Climb</category>
 
-	<setname>ChuckieEgg</setname>
+	<setname>chuckieegg</setname>
 	<parent>ponpoko</parent>
 	<mameversion>0220</mameversion>
 	<rbf>pacman</rbf>

@@ -1,7 +1,7 @@
 <misterromdescription>
   <name>DoDonPachi (Ship Color No BGM)</name>
   <mameversion>0226</mameversion>
-  <setname>ddonpachb</setname>
+  <setname>ddonpachscb</setname>
   <year>1997</year>
   <manufacturer>CAVE</manufacturer>
   <category>Shooter</category>
@@ -38,7 +38,16 @@
     <part name="u52.bin" crc="02492ee0" />
     <part name="u53.bin" crc="cb4c10f0" />
 
-    <!-- ship color hack no bgm -->
+    <!-- skip CRC -->
+    <patch offset="0x00005410">60 00 00 0C</patch>
+    <!-- skip warning -->
+    <patch offset="0x000054EC">60 00 00 50</patch>
+
+    <!-- enable C button in EEPROM -->
+    <patch offset="0x00100002">ff ff</patch>
+    <patch offset="0x00100008">00 04</patch>
+
+    <!-- Ship Color Hack No BGM -->
     <patch offset="0x000053f0">0000 52ee b240 6612 3039 0000 52f2 b440</patch>
     <patch offset="0x00006560">fc44 4ef9 000c 0024 1d50 001a 1d58 0039</patch>
     <patch offset="0x00007710">001c 4ef9 000c 0046 5640 1d40 0002 0896</patch>
@@ -59,15 +68,6 @@
     <patch offset="0x000c00b0">6608 13c7 0010 f8f4 6006 13c7 0010 f8f6</patch>
     <patch offset="0x000c00c0">3e2e 001c 4ef9 0000 7a7a 0810 0000 4ef9</patch>
     <patch offset="0x000c00d0">0000 79fe ffff ffff ffff ffff ffff ffff</patch>
-
-    <!-- skip CRC -->
-    <patch offset="0x00005410">60 00 00 0C</patch>
-    <!-- skip warning -->
-    <patch offset="0x000054EC">60 00 00 50</patch>
-
-    <!-- enable C button in EEPROM -->
-    <patch offset="0x00100002">ff ff</patch>
-    <patch offset="0x00100008">00 04</patch>
   </rom>
 
   <!-- select game -->

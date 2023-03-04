@@ -7,7 +7,7 @@
 	<alternative></alternative>
 	<platform></platform>
 	<series>Pac-Man</series>
-	<year>1980</year>
+	<year>2022</year>
 	<manufacturer>Namco</manufacturer>
 	<manufacturer>Midway</manufacturer>
 	<category>Maze</category>
@@ -55,7 +55,7 @@
 		<part crc="77245b66" name="82s126.3m"></part>
 		<part crc="2fc650bd" name="82s123.7f"></part>
 
-		<!-- Pac-Yuyu Arcade -->
+		<!-- Pac-Yuyu Arcade v1.0 -->
 		<patch offset="0x000037f0">2b2c 2d2e 4031 3938 302f 832f 80c3 0240</patch>
 		<patch offset="0x00003800">3b40 5041 433b 5955 5955 403b 4040 4040</patch>
 		<patch offset="0x00003810">4040 402f 8f2f 8065 0126 414b 4142 4549</patch>

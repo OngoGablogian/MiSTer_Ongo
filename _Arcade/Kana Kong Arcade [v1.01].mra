@@ -7,7 +7,7 @@
 	<alternative></alternative>
 	<platform></platform>
 	<series>Donkey Kong</series>
-	<year>1981</year>
+	<year>2022</year>
 	<manufacturer>Nintendo</manufacturer>
 	<category>Platform - Climb</category>
 
@@ -2633,7 +2633,7 @@ ffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffff
 		</part>
 
-		<!-- Kana Kong Arcade -->
+		<!-- Kana Kong Arcade v1.01 -->
 		<patch offset="0x00008000">387c c282 867c 3800 0002 fefe 4200 0000</patch>
 		<patch offset="0x00008010">66f2 9a8a 8eee 6600 6cfe 9292 82ce 4c00</patch>
 		<patch offset="0x00008020">0afe fe4a 2818 0800 1cbe a2a2 e2ee 0c00</patch>

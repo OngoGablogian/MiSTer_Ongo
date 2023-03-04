@@ -25,20 +25,20 @@
     <setname>bublboblu</setname>
     <rbf>jtbubl</rbf>
     <mameversion>0243</mameversion>
-    <year>1986</year>
+    <year>2011</year>
     <manufacturer>Taito Corporation</manufacturer>
     <players>2</players>
     <joystick>2</joystick>
     <rotation>horizontal</rotation>
     <region>World</region>
     <mraauthor>jotego</mraauthor>
-    <rom index="0" zip="bublbobl.zip" md5="None">
+    <rom index="0" zip="bublbobl1.zip|bublbobl.zip" md5="None">
         <!-- maincpu - starts at 0x0 -->
         <interleave output="16">
-            <part name="a78-06-1.51" crc="567934b6" map="12"/>
+            <part name="a78-06.51" crc="32c8305b" map="12"/>
         </interleave>
         <interleave output="16">
-            <part name="a78-05-1.52" crc="9f8ee242" map="12"/>
+            <part name="a78-05.52" crc="53f4bc6e" map="12"/>
         </interleave>
         <part repeat="0x10000"> FF</part>
         <!-- subcpu - starts at 0x28000 -->
@@ -85,8 +85,7 @@
         <!-- Skipping region  because there is no dump known -->
         <!-- Total 0xC0100 bytes - 768 kBytes -->
 
-        <!-- Bubble Bobble Ultra -->
-        <patch offset="0x00000150">0321 36fa 3200 fa80 853a fefc 2037 cdf6</patch>
+        <!-- Bubble Bobble Ultra v1.0 -->
         <patch offset="0x000028b0">e000 f000 1800 4f4e 2057 5449 5327 5420</patch>
         <patch offset="0x000028c0">4d49 2045 4f46 2052 5542 4242 454c 4220</patch>
         <patch offset="0x000028d0">424f 4c42 2045 4c55 5254 2141 2121 2121</patch>
@@ -314,26 +313,6 @@
         <patch offset="0x0000f7b0">6f04 5a70 0000 0161 061e 9067 2811 1406</patch>
         <patch offset="0x0000f7c0">0101 6760 4001 012f 2f28 b001 012f 2fc8</patch>
         <patch offset="0x0000f7d0">9001 0167 4f68 0000 000c 0478 3390 00aa</patch>
-        <patch offset="0x00013b90">4032 21fb f668 0036 3623 2301 0036 27cd</patch>
-        <patch offset="0x00013ba0">0104 2000 0011 c5c0 06af f505 3521 cdbc</patch>
-        <patch offset="0x00013bb0">0d89 127e be1a 0528 ef0e 27cd f1bc 103c</patch>
-        <patch offset="0x00013bc0">c1ea 790b 13b0 df20 0001 1102 f800 afc5</patch>
-        <patch offset="0x00013bd0">0506 21f5 bc35 89cd 7e0d 1a12 28be 0e05</patch>
-        <patch offset="0x00013be0">cdef bc27 3cf1 ea10 0bc1 b079 2013 21df</patch>
-        <patch offset="0x00013bf0">f669 2035 3ea9 3200 fa00 0006 fe10 6821</patch>
-        <patch offset="0x00013c00">11f6 bc3a 6a3a 87f6 84cd 1a0d 88fe 0620</patch>
-        <patch offset="0x00013c10">2323 0036 df18 1377 1a23 2377 2134 fa00</patch>
-        <patch offset="0x00013c20">683a 77f6 9ec3 f5bb 31cd 7904 0021 77f8</patch>
-        <patch offset="0x00013c30">27cd f104 10c9 4020 ff80 1007 1008 1009</patch>
-        <patch offset="0x00013c40">100a 030b 010c 010d 010e 100f 1010 0111</patch>
-        <patch offset="0x00013c50">0212 0113 3814 0115 0116 0117 1018 0119</patch>
-        <patch offset="0x00013c60">011a 011b 011c 011d 011e 011f 0120 0121</patch>
-        <patch offset="0x00013c70">0122 0123 0124 0125 0126 0127 0128 2029</patch>
-        <patch offset="0x00013c80">032a 202b 012c 012d 0100 012f 1030 0131</patch>
-        <patch offset="0x00013c90">0432 0133 0134 ff88 ffff ffff ffff ffff</patch>
-        <patch offset="0x00015380">2eea d464 84e4 82d2 e72d 1bfa 3fff 28f5</patch>
-        <patch offset="0x00015390">4022 03d1 7cff d153 d1d1 d1d1 d1d1 d1d1</patch>
-        <patch offset="0x00017f50">2e30 3130 2e38 5541 2c47 3931 3638 5320</patch>
         <patch offset="0x00028180">af80 5f86 0b23 b178 207b a7f7 18c9 96fe</patch>
         <patch offset="0x00028cf0">036b a7d0 0320 0cc3 c302 0239 4902 9224</patch>
         <patch offset="0x00028d00">2449 4992 9224 0049 4902 9224 2449 4992</patch>
