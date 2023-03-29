@@ -11,25 +11,22 @@
     <players>2</players>
     <joystick>8-way</joystick>
     <num_buttons>2</num_buttons>
-    <buttons default="B,A,R,L" names="Fire,Pod Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
+    <buttons default="B,A,R,L" names="Fire,Psy-Bits Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
     <switches default="00 00 00">
-        <dip bits="0" ids="Off,On" name="Sw1:1"></dip>
-        <dip bits="1" ids="Off,On" name="Sw1:2"></dip>
-        <dip bits="2" ids="Off,On" name="Sw1:3"></dip>
-        <dip bits="3" ids="Off,On" name="Sw1:4"></dip>
-        <dip bits="4" ids="Off,On" name="Sw1:5"></dip>
-        <dip bits="5" ids="Off,On" name="Sw1:6"></dip>
-        <dip bits="6" ids="Off,On" name="Sw1:7"></dip>
-        <dip bits="7" ids="Off,On" name="Sw1:8"></dip>
+        <dip bits="0,1" ids="3,2,4,5" name="Lives"></dip>
+        <dip bits="2,3" ids="Normal,Easy,Hard,Very Easy" name="Difficulty"></dip>
 
-        <dip bits="8" ids="Off,On" name="Sw2:1"></dip>
-        <dip bits="9" ids="Off,On" name="Sw2:2"></dip>
-        <dip bits="10" ids="Off,On" name="Sw2:3"></dip>
-        <dip bits="11" ids="Off,On" name="Sw2:4"></dip>
-        <dip bits="12" ids="Off,On" name="Sw2:5"></dip>
-        <dip bits="13" ids="Off,On" name="Sw2:6"></dip>
-        <dip bits="14" ids="Off,On" name="Sw2:7"></dip>
-        <dip bits="15" ids="Off,On" name="Sw2:8"></dip>
+        <dip bits="5" ids="Yes,No" name="Allow Continue"></dip>
+        <dip bits="6" ids="Off,On" name="Demo Sounds"></dip>
+        <dip bits="7" ids="Off,On" name="Service Mode"></dip>
+        <dip bits="8" ids="Off,On" name="Flip Screen"></dip>
+
+        <dip bits="9" ids="2 Players,More Players" name="Cabinet"></dip>
+        
+        <dip bits="10" ids="Common,Separate" name="Coin Slots"></dip>
+        <dip bits="11" ids="1,2" name="Coin Mode"></dip>
+
+        <dip bits="12,15" ids="1C/1C,2C/1C,3C/1C,4C/1C,5C/1C,6C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C,2C/3C,3C/2C,4C/3C,2S/1C,Free Play" name="Coin Mode"></dip>
 
         <dip bits="16" ids="Off,On" name="Sw3:1"></dip>
         <dip bits="17" ids="Off,On" name="Sw3:2"></dip>
