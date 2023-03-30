@@ -1,0 +1,74 @@
+<misterromdescription>
+    <name>Gunforce - Battle Fire Engulfed Terror Island (Japan)</name>
+    <mameversion>0245</mameversion>
+    <setname>gunforcej</setname>
+    <parent>gunforce</parent>
+    <year>1991</year>
+    <manufacturer>Irem</manufacturer>
+    <category>Shooter</category>
+    <rbf>IremM92</rbf>
+    <rotation>horizontal</rotation>
+
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,R,L" names="Fire,Pod Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
+    <switches default="00 00">
+        <dip bits="0,1" ids="3,2,1,5" name="Lives"></dip>
+        <dip bits="2,3" ids="Normal,Easy,Hard,Hardest" name="Difficulty"></dip>
+        <dip bits="4,7" ids="1C/1P,2C/1P,3C/1P,4C/1P,5C/1P,6C/1P,1C/2P,1C/3P,1C/4P,1C/5P,1C/6P,2C/3P,4C/2P,5C/3P,8C/3P,Free Play" name="Coin Mode"></dip>
+        <dip bits="8" ids="Off,On" name="Flip Picture"></dip>
+        <dip bits="9" ids="On,Off" name="Demo Sound"></dip>
+        <dip bits="11,12" ids="Cocktail,Upright,Upright (2P)" name="Cabinet type"></dip>
+        <dip bits="13" ids="Off,On" name="Stop Mode"></dip>
+        <dip bits="15" ids="Off,On" name="Diagnostic Test"></dip>
+    </switches>
+
+    <rom index="0" zip="gunforce.zip|gunforcej.zip" md5="None">
+        <!-- board type -->
+        <part>00</part>
+
+        <!-- maincpu -->
+        <part>00 08 00 00</part>
+        <interleave output="16">
+        	<part name="gfb_h0-e.5m" crc="43c36e0f" map="10" />
+	        <part name="gfb_l0-e.5f" crc="24a558d8" map="01" />
+        </interleave>
+        <interleave output="16">
+            <part name="gfb_h1-e.5l" crc="d9744f5d" map="10" />
+            <part name="gfb_l1-e.5j" crc="a0f7b61b" map="01" />
+        </interleave>
+
+        <!-- gfx1 tiles -->
+        <part>01 10 00 00</part>
+        <interleave output="32">
+            <part name="gf_c0.rom" crc="b3b74979" map="0001" />
+            <part name="gf_c1.rom" crc="f5c8590a" map="0010" />
+            <part name="gf_c2.rom" crc="30f9fb64" map="0100" />
+            <part name="gf_c3.rom" crc="87b3e621" map="1000" />
+        </interleave>
+
+        <!-- gfx2 sprites -->
+        <part>02 10 00 00</part>
+        <interleave output="32">
+            <part name="gf_000.rom" crc="209e8e8d" map="0001" />
+            <part name="gf_010.rom" crc="6e6e7808" map="0010" />
+            <part name="gf_020.rom" crc="6f5c3cb0" map="0100" />
+            <part name="gf_030.rom" crc="18978a9f" map="1000" />
+        </interleave>
+
+        <!-- soundcpu -->
+        <part>03 02 00 00</part>
+        <interleave output="16">
+           	<part name="gf_sh0.rom" crc="3f8f16e0" map="10" />
+        	<part name="gf_sl0.rom" crc="db0b13a3" map="01" />
+        </interleave>
+
+        <!-- soundcpu key -->
+        <part>04 00 00 00</part>
+
+        <!-- iremg20 -->
+        <part>05 02 00 00</part>
+        <part name="gf-da.rom"  crc="933ba935" />
+    </rom>
+</misterromdescription>

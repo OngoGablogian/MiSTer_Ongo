@@ -1,0 +1,74 @@
+<misterromdescription>
+    <name>Undercover Cops (US)</name>
+    <mameversion>0245</mameversion>
+    <setname>uccopsu</setname>
+    <parent>uccops</parent>
+    <year>1992</year>
+    <manufacturer>Irem</manufacturer>
+    <category>Fighter</category>
+    <rbf>IremM92</rbf>
+    <rotation>horizontal</rotation>
+
+    <players>3</players>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,R,L" names="Fire,Pod Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
+    <switches default="00 00">
+        <dip bits="0,1" ids="3,2,1,5" name="Lives"></dip>
+        <dip bits="2,3" ids="Normal,Easy,Hard,Hardest" name="Difficulty"></dip>
+        <dip bits="4,7" ids="1C/1P,2C/1P,3C/1P,4C/1P,5C/1P,6C/1P,1C/2P,1C/3P,1C/4P,1C/5P,1C/6P,2C/3P,4C/2P,5C/3P,8C/3P,Free Play" name="Coin Mode"></dip>
+        <dip bits="8" ids="Off,On" name="Flip Picture"></dip>
+        <dip bits="9" ids="On,Off" name="Demo Sound"></dip>
+        <dip bits="11,12" ids="Cocktail,Upright,Upright (2P)" name="Cabinet type"></dip>
+        <dip bits="13" ids="Off,On" name="Stop Mode"></dip>
+        <dip bits="15" ids="Off,On" name="Diagnostic Test"></dip>
+    </switches>
+
+    <rom index="0" zip="uccops.zip|uccopsu.zip" md5="None">
+        <!-- board type -->
+        <part>00</part>
+
+        <!-- maincpu -->
+        <part>00 0c 00 00</part>
+        <interleave output="16">
+            <part name="ucc_e-h0.ic28" crc="240aa5f7" map="10" />
+            <part name="ucc_e-l0.ic39" crc="df9a4826" map="01" />
+        </interleave>
+        <interleave output="16">
+            <part name="ucc_h1-g.ic27" crc="6b8ca2de" map="10" />
+            <part name="ucc_l1-g.ic38" crc="2bdec7dd" map="01" />
+        </interleave>
+
+        <!-- gfx1 tiles -->
+        <part>01 20 00 00</part>
+        <interleave output="32">
+            <part name="uc_w38m.rom"  crc="130a40e5" map="0001" />
+            <part name="uc_w39m.rom"  crc="e42ca144" map="0010" />
+            <part name="uc_w40m.rom"  crc="c2961648" map="0100" />
+            <part name="uc_w41m.rom"  crc="f5334b80" map="1000" />
+        </interleave>
+
+        <!-- gfx2 sprites -->
+        <part>02 40 00 00</part>
+        <interleave output="32">
+            <part name="uc_k16m.rom" crc="4a225f09" map="0001" />
+            <part name="uc_k17m.rom" crc="e4ed9a54" map="0010" />
+            <part name="uc_k18m.rom" crc="a626eb12" map="0100" />
+            <part name="uc_k19m.rom" crc="5df46549" map="1000" />
+        </interleave>
+
+        <!-- soundcpu -->
+        <part>03 02 00 00</part>
+        <interleave output="16">
+            <part name="ucc_e-sh0.ic30" crc="df90b198" map="10" />
+            <part name="ucc_e-sl0.ic31" crc="96c11aac" map="01" />
+        </interleave>
+
+        <!-- soundcpu key -->
+        <part>04 00 00 00</part>
+
+        <!-- iremg20 -->
+        <part>05 08 00 00</part>
+        <part name="uc_w42.rom"  crc="d17d3fd6" />
+    </rom>
+</misterromdescription>

@@ -1,0 +1,72 @@
+<misterromdescription>
+    <name>Geo Storm (Japan)</name>
+    <mameversion>0245</mameversion>
+    <setname>geostorm</setname>
+    <year>1994</year>
+    <manufacturer>Irem</manufacturer>
+    <category>Shooter</category>
+    <rbf>IremM92</rbf>
+    <rotation>horizontal</rotation>
+
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,R,L" names="Fire,Pod Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
+    <switches default="00 00">
+        <dip bits="0,1" ids="3,2,1,5" name="Lives"></dip>
+        <dip bits="2,3" ids="Normal,Easy,Hard,Hardest" name="Difficulty"></dip>
+        <dip bits="4,7" ids="1C/1P,2C/1P,3C/1P,4C/1P,5C/1P,6C/1P,1C/2P,1C/3P,1C/4P,1C/5P,1C/6P,2C/3P,4C/2P,5C/3P,8C/3P,Free Play" name="Coin Mode"></dip>
+        <dip bits="8" ids="Off,On" name="Flip Picture"></dip>
+        <dip bits="9" ids="On,Off" name="Demo Sound"></dip>
+        <dip bits="11,12" ids="Cocktail,Upright,Upright (2P)" name="Cabinet type"></dip>
+        <dip bits="13" ids="Off,On" name="Stop Mode"></dip>
+        <dip bits="15" ids="Off,On" name="Diagnostic Test"></dip>
+    </switches>
+
+    <rom index="0" zip="geostorm.zip|gunforc2.zip" md5="None">
+        <!-- board type -->
+        <part>00</part>
+        
+        <!-- maincpu -->
+        <part>00 10 00 00</part>
+        <interleave output="16">
+            <part name="geo-h0.bin" crc="9be58d09" map="10" />
+            <part name="geo-l0.bin" crc="59abb75d" map="01" />
+        </interleave>
+        <interleave output="16">
+            <part name="a2-h1-a.6f" crc="34280b88" map="10" />
+            <part name="a2-l1-a.8f" crc="c8c13f51" map="01" />
+        </interleave>
+
+        <!-- gfx1 tiles -->
+        <part>01 20 00 00</part>
+        <interleave output="32">
+            <part name="a2_c0.1a"  crc="68b8f574" map="0001" />
+            <part name="a2_c1.1b"  crc="0b9efe67" map="0010" />
+            <part name="a2_c2.3a"  crc="7a9e9978" map="0100" />
+            <part name="a2_c3.3b"  crc="1395ee6d" map="1000" />
+        </interleave>
+
+        <!-- gfx2 sprites -->
+        <part>02 40 00 00</part>
+        <interleave output="32">
+            <part name="a2_000.8a" crc="38e03147" map="0001" />
+            <part name="a2_010.8b" crc="1d5b05f8" map="0010" />
+            <part name="a2_020.8c" crc="f2f461cc" map="0100" />
+            <part name="a2_030.8d" crc="97609d9d" map="1000" />
+        </interleave>
+
+        <!-- soundcpu -->
+        <part>03 02 00 00</part>
+        <interleave output="16">
+            <part name="a2_sh0.3l" crc="2e2d103d" map="10" />
+            <part name="a2_sl0.5l" crc="2287e0b3" map="01" />
+        </interleave>
+
+        <!-- soundcpu key -->
+        <part>04 00 00 00</part>
+
+        <!-- iremg20 -->
+        <part>05 0c 00 00</part>
+        <part name="a2_da.1l"  crc="3c8cdb6a" />
+    </rom>
+</misterromdescription>

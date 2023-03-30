@@ -1,0 +1,74 @@
+<misterromdescription>
+    <name>Ninja Baseball Bat Man (World)</name>
+    <mameversion>0245</mameversion>
+    <setname>nbbatmanu</setname>
+    <parent>nbbatman</parent>
+    <year>1993</year>
+    <manufacturer>Irem</manufacturer>
+    <category>Fighter</category>
+    <rbf>IremM92</rbf>
+    <rotation>horizontal</rotation>
+
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,R,L" names="Fire,Pod Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
+    <switches default="00 00">
+        <dip bits="0,1" ids="3,2,1,5" name="Lives"></dip>
+        <dip bits="2,3" ids="Normal,Easy,Hard,Hardest" name="Difficulty"></dip>
+        <dip bits="4,7" ids="1C/1P,2C/1P,3C/1P,4C/1P,5C/1P,6C/1P,1C/2P,1C/3P,1C/4P,1C/5P,1C/6P,2C/3P,4C/2P,5C/3P,8C/3P,Free Play" name="Coin Mode"></dip>
+        <dip bits="8" ids="Off,On" name="Flip Picture"></dip>
+        <dip bits="9" ids="On,Off" name="Demo Sound"></dip>
+        <dip bits="11,12" ids="Cocktail,Upright,Upright (2P)" name="Cabinet type"></dip>
+        <dip bits="13" ids="Off,On" name="Stop Mode"></dip>
+        <dip bits="15" ids="Off,On" name="Diagnostic Test"></dip>
+    </switches>
+
+    <rom index="0" zip="nbbatman.zip|nbbatmanu.zip" md5="None">
+        <!-- board type -->
+        <part>00</part>
+
+        <!-- maincpu -->
+        <part>00 0c 00 00</part>
+        <interleave output="16">
+            <part name="a1-h0-a.34" crc="24a9b794" map="10" />
+            <part name="a1-l0-a.31" crc="846d7716" map="01" />
+        </interleave>
+        <interleave output="16">
+            <part name="a1-h1-.33" crc="3ce2aab5" map="10" />
+            <part name="a1-l1-.32" crc="116d9bcc" map="01" />
+        </interleave>
+
+        <!-- gfx1 tiles -->
+        <part>01 20 00 00</part>
+        <interleave output="32">
+            <part name="lh534k0c.9"   crc="314a0c6d" map="0001" />
+            <part name="lh534k0e.10"  crc="dc31675b" map="0010" />
+            <part name="lh534k0f.11"  crc="e15d8bfb" map="0100" />
+            <part name="lh534k0g.12"  crc="888d71a3" map="1000" />
+        </interleave>
+
+        <!-- gfx2 sprites -->
+        <part>02 40 00 00</part>
+        <interleave output="32">
+            <part name="lh538393.42" crc="26cdd224" map="0001" />
+            <part name="lh538394.43" crc="4bbe94fa" map="0010" />
+            <part name="lh538395.44" crc="2a533b5e" map="0100" />
+            <part name="lh538396.45" crc="863a66fa" map="1000" />
+        </interleave>
+
+        <!-- soundcpu -->
+        <part>03 02 00 00</part>
+        <interleave output="16">
+            <part name="a1-sh0-.14" crc="b7fae3e6" map="10" />
+            <part name="a1-sl0-.17" crc="b26d54fc" map="01" />
+        </interleave>
+
+        <!-- soundcpu key -->
+        <part>04 00 00 00</part>
+
+        <!-- iremg20 -->
+        <part>05 08 00 00</part>
+        <part name="lh534k0k.8"  crc="735e6380" />
+    </rom>
+</misterromdescription>

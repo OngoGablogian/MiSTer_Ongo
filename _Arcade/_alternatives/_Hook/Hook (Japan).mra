@@ -1,0 +1,72 @@
+<misterromdescription>
+    <name>Hook (Japan)</name>
+    <mameversion>0245</mameversion>
+    <setname>hookj</setname>
+    <year>1992</year>
+    <manufacturer>Irem</manufacturer>
+    <category>Shooter</category>
+    <rbf>IremM92</rbf>
+    <rotation>horizontal</rotation>
+
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,R,L" names="Fire,Pod Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
+    <switches default="00 00">
+        <dip bits="0,1" ids="3,2,1,5" name="Lives"></dip>
+        <dip bits="2,3" ids="Normal,Easy,Hard,Hardest" name="Difficulty"></dip>
+        <dip bits="4,7" ids="1C/1P,2C/1P,3C/1P,4C/1P,5C/1P,6C/1P,1C/2P,1C/3P,1C/4P,1C/5P,1C/6P,2C/3P,4C/2P,5C/3P,8C/3P,Free Play" name="Coin Mode"></dip>
+        <dip bits="8" ids="Off,On" name="Flip Picture"></dip>
+        <dip bits="9" ids="On,Off" name="Demo Sound"></dip>
+        <dip bits="11,12" ids="Cocktail,Upright,Upright (2P)" name="Cabinet type"></dip>
+        <dip bits="13" ids="Off,On" name="Stop Mode"></dip>
+        <dip bits="15" ids="Off,On" name="Diagnostic Test"></dip>
+    </switches>
+
+    <rom index="0" zip="hookj.zip|hook.zip" md5="None">
+        <!-- board type -->
+        <part>00</part>
+        
+        <!-- maincpu -->
+        <part>00 0c 00 00</part>
+        <interleave output="16">
+            <part name="h-h0-g.3h" crc="5964c886" map="10" />
+            <part name="h-l0-g.5h" crc="7f7433f2" map="01" />
+        </interleave>
+        <interleave output="16">
+            <part name="h-h1.rom" crc="264ba1f0" map="10" />
+            <part name="h-l1.rom" crc="f9913731" map="01" />
+        </interleave>
+
+        <!-- gfx1 tiles -->
+        <part>01 10 00 00</part>
+        <interleave output="32">
+            <part name="hook-c0.rom" crc="dec63dcf" map="0001" />
+            <part name="hook-c1.rom" crc="e4eb0b92" map="0010" />
+            <part name="hook-c2.rom" crc="a52b320b" map="0100" />
+            <part name="hook-c3.rom" crc="7ef67731" map="1000" />
+        </interleave>
+
+        <!-- gfx2 sprites -->
+        <part>02 40 00 00</part>
+        <interleave output="32">
+            <part name="hook-000.rom" crc="ccceac30" map="0001" />
+            <part name="hook-010.rom" crc="8ac8da67" map="0010" />
+            <part name="hook-020.rom" crc="8847af9a" map="0100" />
+            <part name="hook-030.rom" crc="239e877e" map="1000" />
+        </interleave>
+
+        <!-- soundcpu -->
+        <part>03 02 00 00</part>
+        <interleave output="16">
+            <part name="h-sh0-a.3l" crc="bd3d1f61" map="10" />
+            <part name="h-sl0-a.3n" crc="76371def" map="01" />
+        </interleave>
+
+        <!-- soundcpu key -->
+        <part>04 00 00 00</part>
+
+        <!-- iremg20 -->
+        <part>05 08 00 00</part>
+        <part name="hook-da.rom"  crc="88cd0212" />
+    </rom>
+</misterromdescription>

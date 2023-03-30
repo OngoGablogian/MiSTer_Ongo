@@ -1,0 +1,74 @@
+<misterromdescription>
+    <name>Kaitei Daisensou (Japan)</name>
+    <mameversion>0245</mameversion>
+    <setname>kaiteids</setname>
+    <parent>inthunt</parent>
+    <year>1993</year>
+    <manufacturer>Irem</manufacturer>
+    <category>Shooter</category>
+    <rbf>IremM92</rbf>
+    <rotation>horizontal</rotation>
+
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,R,L" names="Fire,Pod Control,-,-,Start,Coin,P2 Start,Pause"></buttons>
+    <switches default="00 00">
+        <dip bits="0,1" ids="3,2,1,5" name="Lives"></dip>
+        <dip bits="2,3" ids="Normal,Easy,Hard,Hardest" name="Difficulty"></dip>
+        <dip bits="4,7" ids="1C/1P,2C/1P,3C/1P,4C/1P,5C/1P,6C/1P,1C/2P,1C/3P,1C/4P,1C/5P,1C/6P,2C/3P,4C/2P,5C/3P,8C/3P,Free Play" name="Coin Mode"></dip>
+        <dip bits="8" ids="Off,On" name="Flip Picture"></dip>
+        <dip bits="9" ids="On,Off" name="Demo Sound"></dip>
+        <dip bits="11,12" ids="Cocktail,Upright,Upright (2P)" name="Cabinet type"></dip>
+        <dip bits="13" ids="Off,On" name="Stop Mode"></dip>
+        <dip bits="15" ids="Off,On" name="Diagnostic Test"></dip>
+    </switches>
+
+    <rom index="0" zip="inthunt.zip|kaiteids.zip" md5="None">
+        <!-- board type -->
+        <part>00</part>
+
+        <!-- maincpu -->
+        <part>00 0c 00 00</part>
+        <interleave output="16">
+            <part name="ith-h0j.ic28" crc="dc1dec36" map="10" />
+            <part name="ith-l0j.ic39" crc="8835d704" map="01" />
+        </interleave>
+        <interleave output="16">
+            <part name="ith-h1j.ic38" crc="5a7b212d" map="10" />
+            <part name="ith-l1j.ic27" crc="4c084494" map="01" />
+        </interleave>
+
+        <!-- gfx1 tiles -->
+        <part>01 20 00 00</part>
+        <interleave output="32">
+            <part name="ith_c0.ic26"  crc="4c1818cf" map="0001" />
+            <part name="ith_c1.ic25"  crc="91145bae" map="0010" />
+            <part name="ith_c2.ic24"  crc="fc03fe3b" map="0100" />
+            <part name="ith_c3.ic23"  crc="ee156a0a" map="1000" />
+        </interleave>
+
+        <!-- gfx2 sprites -->
+        <part>02 40 00 00</part>
+        <interleave output="32">
+            <part name="ith_000.ic34" crc="a019766e" map="0001" />
+            <part name="ith_010.ic35" crc="3fca3073" map="0010" />
+            <part name="ith_020.ic36" crc="20d1b28b" map="0100" />
+            <part name="ith_030.ic37" crc="90b6fd4b" map="1000" />
+        </interleave>
+
+        <!-- soundcpu -->
+        <part>03 02 00 00</part>
+        <interleave output="16">
+            <part name="ith-sh0.ic30" crc="209c8b7f" map="10" />
+            <part name="ith-sl0.ic31" crc="18472d65" map="01" />
+        </interleave>
+
+        <!-- soundcpu key -->
+        <part>04 00 00 00</part>
+
+        <!-- iremg20 -->
+        <part>05 08 00 00</part>
+        <part name="ith_da.ic9"  crc="318ee71a" />
+    </rom>
+</misterromdescription>
