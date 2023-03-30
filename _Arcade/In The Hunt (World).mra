@@ -16,7 +16,7 @@
         <dip bits="0,1" ids="3,2,4,5" name="Lives"></dip>
         <dip bits="2,3" ids="Normal,Easy,Hard,Very Easy" name="Difficulty"></dip>
 
-        <dip bits="5" ids="Any,Start" name="Start Button"></dip>
+        <dip bits="5" ids="Start,Any" name="Start Button"></dip>
 
         <dip bits="6" ids="Off,On" name="Demo Sounds"></dip>
         <dip bits="7" ids="Off,On" name="Service Mode"></dip>

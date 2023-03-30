@@ -16,13 +16,13 @@
         <dip bits="0,1" ids="2,3,4,1" name="Lives"></dip>
         <dip bits="2,3" ids="Normal,Easy,Hard,Very Easy" name="Difficulty"></dip>
 
-        <dip bits="5" ids="Any,Start" name="Start Button"></dip>
+        <dip bits="5" ids="Start,Any" name="Start Button"></dip>
 
         <dip bits="6" ids="Off,On" name="Demo Sounds"></dip>
         <dip bits="7" ids="Off,On" name="Service Mode"></dip>
         <dip bits="8" ids="Off,On" name="Flip Screen"></dip>
 
-        <dip bits="9" ids="2 Players,More Players" name="Cabinet"></dip>
+        <dip bits="9" ids="2 Players,3 Players" name="Cabinet"></dip>
         
         <dip bits="10" ids="Common,Separate" name="Coin Slots"></dip>
         <dip bits="11" ids="1,2" name="Coin Mode"></dip>
