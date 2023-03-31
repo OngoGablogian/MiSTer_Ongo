@@ -57,7 +57,7 @@
         <!-- gfx1 tiles -->
         <part>01 20 00 00</part>
         <interleave output="32">
-            <part name="lh534k0c.9"  crc="314a0c6d" map="0001" />
+            <part name="lh534k0c.9"   crc="314a0c6d" map="0001" />
             <part name="lh534k0e.10"  crc="dc31675b" map="0010" />
             <part name="lh534k0f.11"  crc="e15d8bfb" map="0100" />
             <part name="lh534k0g.12"  crc="888d71a3" map="1000" />
