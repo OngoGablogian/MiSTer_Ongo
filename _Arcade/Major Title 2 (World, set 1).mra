@@ -104,4 +104,10 @@
         <part>05 08 00 00</part>
     	<part name="k0d.ic8" crc="713b9e9f" />
     </rom>
+
+    <rom index="1" zip="majtitl2.zip" md5="None">
+        <part name="mt2eep" crc="208af971" />
+    </rom>
+
+    <nvram index="1" size="8192" />
 </misterromdescription>
