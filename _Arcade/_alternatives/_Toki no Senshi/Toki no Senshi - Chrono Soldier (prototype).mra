@@ -1,0 +1,55 @@
+<misterromdescription>
+	<name>Toki no Senshi - Chrono Soldier (prototype?)</name>
+	<mameversion>0229</mameversion>
+	<setname>tokisensa</setname>
+	<mratimestamp>20210810000000</mratimestamp>
+	<year>1987</year>
+	<manufacturer>Sega</manufacturer>
+	<rbf>BWsegasys1</rbf>
+	<switches base="8" default="fc,ff">
+		<!-- SWA -->
+		<!--
+		<dip bits="0" name="Cabinet" ids="Upright,Cocktail"/>
+		-->
+		<dip bits="1" name="Demo Sound" ids="On,Off"/>
+		<dip bits="2,3" name="Lives" ids="1,4,2,3"/>
+		<!-- SWB -->
+		<dip name="Coin A" bits="8,11" ids="1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+		<dip name="Coin B" bits="12,15" ids="1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+	<buttons names="Shoot,Bomb,-,-,-,Start 1P,Start 2P,Coin,Pause" default="A,B,Start,Select,R,L" count="2"/>
+	<rom index="1">
+		<part>13</part>
+	</rom>
+	<rom index="0" md5="none" zip="tokisens.zip">
+		<!-- soundcpu, size: 0x8000 -->
+		<part crc="97966bf2" name="epr-10967.ic126"/>
+
+		<!-- maincpu, size: 0x18000 -->
+		<part crc="1466b61d" name="ic90"/>
+		<part crc="a8479f91" name="ic91"/>
+		<part crc="b7193b39" name="ic92"/>
+
+		<!-- sprites, size: 0x20000 -->
+		<part crc="fc2bcbd7" name="ic87"/>
+		<part crc="4ec56860" name="epr-10957.ic86"/>
+		<part crc="880e0d44" name="epr-10960.ic89"/>
+		<part crc="4deda48f" name="epr-10959.ic88"/>
+
+		<!-- tiles, size: 0x18000 -->
+		<part crc="9013b85c" name="ic4"/>
+		<part crc="e4755cc6" name="ic5"/>
+		<part crc="5bbfbdcc" name="ic6"/>
+
+		<!-- lookup_proms, size: 0x0100 -->
+		<part crc="648350b8" name="pr-5317.ic28"/>
+
+		<!-- color_proms, size: 0x0300 -->
+		<part crc="8eee0f72" name="ic20"/>
+		<part crc="3e7babd7" name="ic14"/>
+		<part crc="371c44a6" name="ic8"/>
+
+		<!-- encryption_device - none -->
+		<part repeat="0x100">00</part>
+	</rom>
+</misterromdescription>

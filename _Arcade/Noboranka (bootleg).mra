@@ -1,0 +1,67 @@
+<misterromdescription>
+	<name>Noboranka (bootleg)</name>
+	<mameversion>0229</mameversion>
+	<setname>nobb</setname>
+	<mratimestamp>20210713000000</mratimestamp>
+	<year>1986</year>
+	<manufacturer>bootleg (Game Electronics)</manufacturer>
+	<category>Shooter</category>
+	<rbf>BWsegasys1</rbf>
+	<switches default="2F,FF">
+		<!-- SWA -->
+		<dip name="Coin A" bits="0,1" ids="2 Coins/1 Credit,1 Coin /3 Credits,1 Coin /2 Credits,1 Coin /1 Credit "/>
+		<dip name="Coin B" bits="2,3" ids="2 Coins/1 Credit,1 Coin /3 Credits,1 Coin /2 Credits,1 Coin /1 Credit "/>
+		<dip name="Difficulty" bits="4,5" ids="Hardest,Hard,Easy,Medium"/>
+		<!--
+		<dip name="Cabinet" bits="6" ids="Upright,Cocktail"/>
+		<dip name="Flip Screen" bits="7" ids="Off,On"/>
+		-->
+		<!-- SWB -->
+		<dip bits="8,9" name="Lives" ids="99,5,2,3"/>
+		<dip bits="10,11" name="Bonus Life" ids="None,60k 120k 180k,50k 100k 150k,40k 80k 120k 160k"/>
+ 		<dip bits="12" name="Allow Continue" ids="No,Yes"/>
+ 		<dip bits="13" name="Free Play" ids="On,Off"/>
+	</switches>
+	<buttons names="Shoot,Fly,-,-,-,Start 1P,Start 2P,Coin,Pause" default="A,B,Start,Select,R,L" count="2"/>
+	<rom index="1">
+		<part>82 01</part>
+	</rom>
+	<rom index="0" md5="none" zip="nob.zip" type="merged">
+		<!-- soundcpu, size: 0x8000 -->
+		<part crc="415adf76" name="nobo-m.bin"/>
+		<part crc="415adf76" name="nobo-m.bin"/>
+
+		<!-- maincpu, size: 0x18000 -->
+		<part crc="176fd168" name="nobo-t.bin"/>
+		<part crc="d61cf3c9" name="nobo-r.bin"/>
+		<part crc="b0e7697f" name="nobo-s.bin"/>
+
+		<!-- sprites, size: 0x20000 -->
+		<part crc="2442b86d" name="nobo-q.bin"/>
+		<part crc="e33743a6" name="nobo-o.bin"/>
+		<part crc="7fbba01d" name="nobo-p.bin"/>
+		<part crc="85e7a29f" name="nobo-n.bin"/>
+
+		<!-- tiles, size: 0x18000 -->
+		<part crc="446fbcdd" name="nobo-k.bin"/>
+		<part crc="f12df039" name="nobo-j.bin"/>
+		<part crc="35f396df" name="nobo-l.bin"/>
+
+		<!-- lookup_proms, size: 0x0100 -->
+		<part crc="648350b8" name="nobo_pr.13a"/>
+
+		<!-- color_proms, size: 0x0300 -->
+		<part crc="95010ac2" name="nobo_pr.16d"/>
+		<part crc="c55aac0c" name="nobo_pr.15d"/>
+		<part crc="de394cee" name="nobo_pr.14d"/>
+
+		<!-- encryption_device: none -->
+		<part repeat="0x100">00</part>
+
+		<!-- sound cpu rom patch -->
+		<!--
+		<patch offset="0x2f9">28</patch>
+		<patch offset="0x13347">18</patch>
+		-->
+	</rom>
+</misterromdescription>

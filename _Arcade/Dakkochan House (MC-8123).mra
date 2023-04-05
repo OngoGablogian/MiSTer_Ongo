@@ -1,0 +1,67 @@
+<misterromdescription>
+	<name>Dakkochan House</name>
+	<setname>dakkochn</setname>
+	<rbf>BWsegasys1</rbf>
+	<mameversion>0229</mameversion>
+	<year>1987</year>
+	<manufacturer>Sega</manufacturer>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>World</region>
+	<switches base="8" default="ff,fc">
+		<!-- SWA -->
+		<dip name="Coin A" bits="0,3" ids="1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+		<dip name="Coin B" bits="4,7" ids="1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+		<!-- SWB -->
+		<!--
+		<dip name="Cabinet" bits="8" ids="Upright,Cocktail"/>
+		-->
+		<dip name="Demo Sounds" bits="9" ids="On,Off"/>
+		<dip name="Lives" bits="10,11" ids="4,3,5,4"/>
+		<dip name="Bonus Life" bits="12" ids="50/150/250k,30/100/200k"/>
+		<dip name="Difficulty" bits="13" ids="Hard,Easy"/>
+		<dip name="Test Mode" bits="14" ids="On,Off"/>
+	</switches>
+	<rom index="1">
+		<part>01 04 01 5f</part>
+	</rom>
+	<rom index="0" md5="none" zip="dakkochn.zip">
+		<!-- soundcpu, size: 0x8000 -->
+		<part crc="c11648d0" name="epr-11229.ic126"/>
+
+		<!-- maincpu, size: 0x18000 -->
+		<part crc="9fb1972b" name="epr-11224.ic90"/>
+		<part crc="c540f9e2" name="epr-11225.ic91"/>
+		<part repeat="0x8000">ff</part>
+
+		<!-- sprites, size: 0x20000 -->
+		<part crc="f9a44916" name="epr-11221.ic87"/>
+		<part crc="84c8f6b2" name="epr-11220.ic86"/>
+		<part crc="538adc55" name="epr-11223.ic89"/>
+		<part crc="33fab0b2" name="epr-11222.ic88"/>
+
+		<!-- tiles, size: 0x18000 -->
+		<part crc="3dbc2f78" name="epr-11226.ic4"/>
+		<part crc="34156e8d" name="epr-11227.ic5"/>
+		<part crc="fdd5323f" name="epr-11228.ic6"/>
+
+		<!-- lookup_proms, size: 0x0100 -->
+		<part crc="648350b8" name="pr-5317.ic37"/>
+
+		<!-- color_proms, size: 0x0300 -->
+		<part crc="45e252d9" name="pr-11219.ic20"/>
+		<part crc="3eda3a1b" name="pr-11218.ic14"/>
+		<part crc="49dbde88" name="pr-11217.ic8"/>
+
+		<!-- encryption_device - none -->
+		<part repeat="0x100">00</part>
+
+		<!-- padding -->
+		<part repeat="0x1b00">00</part>
+
+		<!-- maincpu:key, size: 0x2000 -->
+		<part crc="bb9df5ad" name="317-5014.key"/>
+	</rom>
+	<buttons names="Action/Run,Jump,-,-,-,Start 1P,Start 2P,Coin,Pause" default="A,B,X,R,L,Start,Select" count="2"/>
+</misterromdescription>

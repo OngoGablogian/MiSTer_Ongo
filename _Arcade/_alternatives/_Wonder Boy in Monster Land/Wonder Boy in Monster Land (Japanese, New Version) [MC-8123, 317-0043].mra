@@ -1,0 +1,68 @@
+<misterromdescription>
+	<name>Wonder Boy in Monster Land (Japanese, New Version) [MC-8123, 317-0043]</name>
+	<setname>wbml</setname>
+	<rbf>BWsegasys1</rbf>
+	<mameversion>0229</mameversion>
+	<year>1987</year>
+	<manufacturer>Sega / Westone</manufacturer>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Japan</region>
+	<mratimestamp>20210810000000</mratimestamp>
+	<buttons names="Attack,Jump,-,-,-,Start 1P,Start 2P,Coin,Pause" default="A,B,X,R,L,Start,Select" count="2"/>
+	<switches base="8" default="fe,ff">
+		<!-- SWA -->
+		<!--
+		<dip name="Cabinet" bits="0" ids="Upright,Cocktail"/>
+		-->
+		<dip name="Demo Sounds" bits="1" ids="Off,On"/>
+		<dip name="Lives" bits="2,3" ids="Free Play,3,5,4"/>
+		<dip name="Bonus Life" bits="4" ids="50k 150k 250k,30k 10k0 20k0"/>
+		<dip name="Difficulty" bits="5" ids="Hard,Easy"/>
+		<dip name="Test Mode" bits="6" ids="On,Off"/>
+		<!-- SWB -->
+		<dip name="Coin A" bits="8,11" ids="1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+		<dip name="Coin B" bits="12,15" ids="1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+	<rom index="1">
+		<part>01</part>
+	</rom>
+	<rom index="0" zip="wbml.zip" type="merged" md5="None">
+		<!-- soundcpu, size: 0x8000 -->
+		<part name="epr-11037.126" crc="7a4ee585"/>
+
+		<!-- maincpu, size: 0x18000 -->
+                <part crc="bd3349e5" name="epr-11031a.90"/>
+                <part crc="9d03bdb2" name="epr-11032.91"/>
+                <part crc="7076905c" name="epr-11033.92"/>
+
+		<!-- sprites, size: 0x20000 -->
+		<part name="epr-11028.87" crc="af0b3972"/>
+		<part name="epr-11027.86" crc="277d8f1d"/>
+		<part name="epr-11030.89" crc="f05ffc76"/>
+		<part name="epr-11029.88" crc="cedc9c61"/>
+
+		<!-- tiles, size: 0x18000 -->
+		<part name="epr-11034.4" crc="37a2077d"/>
+		<part name="epr-11035.5" crc="cdf2a21b"/>
+		<part name="epr-11036.6" crc="644687fa"/>
+
+		<!-- lookup_proms, size: 0x0100 -->
+		<part name="pr5317.37" crc="648350b8"/>
+
+		<!-- color_proms, size: 0x0300 -->
+		<part name="pr11026.20" crc="27057298"/>
+		<part name="pr11025.14" crc="41e4d86b"/>
+		<part name="pr11024.8" crc="08d71954"/>
+
+		<!-- encryption_device - none -->
+		<part repeat="0x100">00</part>
+
+		<!-- padding -->
+		<part repeat="0x1b00">00</part>
+
+		<!-- mc-8123 key, size: 0x2000 -->
+		<part crc="e354abfc" name="317-0043.key"/>
+	</rom>
+</misterromdescription>
