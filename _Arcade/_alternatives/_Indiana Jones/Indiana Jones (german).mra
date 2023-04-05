@@ -1,9 +1,9 @@
 <misterromdescription>
-	<name>Peter Pack Rat</name>
+	<name>Indiana Jones (german)</name>
 	<mameversion>0252</mameversion>
-	<setname>peterpak</setname>
+	<setname>indytempd</setname>
 	<mratimestamp>20230303000000</mratimestamp>
-	<year>1984</year>
+	<year>1985</year>
 	<manufacturer>Atari Games</manufacturer>
 	<category>Arcade</category>
 	<rbf>atarisys1</rbf>
@@ -13,22 +13,22 @@
 
 	<!-- Slapstic type -->
 	<rom index="1">
-		<part>6B</part>
+		<part>69</part>
 	</rom>
 
-	<rom index="0" zip="peterpak.zip" md5="none">
+	<rom index="0" zip="indytemp.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
 		<!-- TILE ROMs Bank 1 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x070000, 0x060000, 0x050000, 0x040000, 0x030000, 0x020000, 0x010000, 0x000000) 64Kx64 -->
 		<interleave output="64">
-			<part crc="53eaa018" map="00000001" name="136028.138"/>
+			<part crc="ffa8749c" map="00000001" name="136036.135"/>
 			<part repeat="32768" map="00000001">FF</part>
-			<part crc="354a19cb" map="00000010" name="136028.139"/>
+			<part crc="b682bfca" map="00000010" name="136036.139"/>
 			<part repeat="32768" map="00000010">FF</part>
-			<part crc="8d2c4717" map="00000100" name="136028.140"/>
+			<part crc="7697da26" map="00000100" name="136036.143"/>
 			<part repeat="32768" map="00000100">FF</part>
-			<part crc="bf59ea19" map="00001000" name="136028.141"/>
+			<part crc="4e9d664c" map="00001000" name="136036.147"/>
 			<part repeat="32768" map="00001000">FF</part>
 			<part repeat="65536" map="00010000">FF</part>
 			<part repeat="65536" map="00100000">FF</part>
@@ -38,13 +38,13 @@
 
 		<!-- TILE ROMs Bank 2 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x0F0000, 0x0E0000, 0x0D0000, 0x0C0000, 0x0B0000, 0x0A0000, 0x090000, 0x080000) 64Kx64 -->
 		<interleave output="64">
-			<part crc="83362483" map="00000001" name="136028.150"/>
+			<part crc="b2b403aa" map="00000001" name="136036.136"/>
 			<part repeat="32768" map="00000001">FF</part>
-			<part crc="6e95f084" map="00000010" name="136028.151"/>
+			<part crc="ec0c19ca" map="00000010" name="136036.140"/>
 			<part repeat="32768" map="00000010">FF</part>
-			<part crc="9553f084" map="00000100" name="136028.152"/>
+			<part crc="4407df98" map="00000100" name="136036.144"/>
 			<part repeat="32768" map="00000100">FF</part>
-			<part crc="c2a9b028" map="00001000" name="136028.153"/>
+			<part crc="70dce06d" map="00001000" name="136036.148"/>
 			<part repeat="32768" map="00001000">FF</part>
 			<part repeat="65536" map="00010000">FF</part>
 			<part repeat="65536" map="00100000">FF</part>
@@ -54,17 +54,13 @@
 
 		<!-- TILE ROMs Bank 3 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x170000, 0x160000, 0x150000, 0x140000, 0x130000, 0x120000, 0x110000, 0x100000) 64Kx64 -->
 		<interleave output="64">
-			<part repeat="16384" map="00000001">FF</part>
-			<part crc="ac9a5a44" map="00000001" name="136028.105"/>
+			<part crc="3f352547" map="00000001" name="136036.137"/>
 			<part repeat="32768" map="00000001">FF</part>
-			<part repeat="16384" map="00000010">FF</part>
-			<part crc="51941e64" map="00000010" name="136028.108"/>
+			<part crc="9cbdffd0" map="00000010" name="136036.141"/>
 			<part repeat="32768" map="00000010">FF</part>
-			<part repeat="16384" map="00000100">FF</part>
-			<part crc="246599f3" map="00000100" name="136028.111"/>
+			<part crc="e828e64b" map="00000100" name="136036.145"/>
 			<part repeat="32768" map="00000100">FF</part>
-			<part repeat="16384" map="00001000">FF</part>
-			<part crc="918a5082" map="00001000" name="136028.114"/>
+			<part crc="81503a23" map="00001000" name="136036.149"/>
 			<part repeat="32768" map="00001000">FF</part>
 			<part repeat="65536" map="00010000">FF</part>
 			<part repeat="65536" map="00100000">FF</part>
@@ -73,7 +69,20 @@
 		</interleave>
 
 		<!-- TILE ROMs Bank 4 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x1F0000, 0x1E0000, 0x1D0000, 0x1C0000, 0x1B0000, 0x1A0000, 0x190000, 0x180000) 64Kx64 -->
-		<part repeat="524288">FF</part>
+		<interleave output="64">
+			<part crc="48c4d79d" map="00000001" name="136036.138"/>
+			<part repeat="32768" map="00000001">FF</part>
+			<part crc="7faae75f" map="00000010" name="136036.142"/>
+			<part repeat="32768" map="00000010">FF</part>
+			<part crc="8ae5a7b5" map="00000100" name="136036.146"/>
+			<part repeat="32768" map="00000100">FF</part>
+			<part crc="a10c4bd9" map="00001000" name="136036.150"/>
+			<part repeat="32768" map="00001000">FF</part>
+			<part repeat="65536" map="00010000">FF</part>
+			<part repeat="65536" map="00100000">FF</part>
+			<part repeat="65536" map="01000000">FF</part>
+			<part repeat="65536" map="10000000">FF</part>
+		</interleave>
 
 		<!-- TILE ROMs Bank 5 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x270000, 0x260000, 0x250000, 0x240000, 0x230000, 0x220000, 0x210000, 0x200000) 64Kx64 -->
 		<part repeat="524288">FF</part>
@@ -94,18 +103,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="4f9fc020" map="01" name="136028.142"/>
-			<part crc="50267619" map="01" name="136028.144"/>
-			<part crc="9fb257cc" map="10" name="136028.143"/>
-			<part crc="7b6a5004" map="10" name="136028.145"/>
+			<part crc="317dc430" map="01" name="136036.462" zip="indytempd.zip"/>
+			<part crc="8c73f974" map="10" name="136036.461" zip="indytempd.zip"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="418ea67a" map="01" name="136028.146"/>
-			<part repeat="16384" map="01">FF</part>
-			<part crc="14e2d97b" map="10" name="136028.147"/>
-			<part repeat="16384" map="10">FF</part>
+			<part crc="3fcb199f" map="01" name="136036.464" zip="indytempd.zip"/>
+			<part crc="d6bda19a" map="10" name="136036.463 zip="indytempd.zip""/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->
@@ -120,36 +125,41 @@
 		<!-- 0x60000 - 0x6FFFF Filler 32Kx16 -->
 		<part repeat="65536">FF</part>
 
-		<!-- 0x70000 - 0x7FFFF filler 32Kx16 -->
-		<part repeat="65536">FF</part>
+		<!-- 0x70000 - 0x7FFFF MAINCPU ROMs 0x30000 32Kx16 remapped here -->
+		<interleave output="16">
+			<part crc="faa7f23a" map="01" name="136036.466" zip="indytempd.zip"/>
+			<part repeat="16384" map="01">FF</part>
+			<part crc="ee9fd91a" map="10" name="136036.467" zip="indytempd.zip"/>
+			<part repeat="16384" map="10">FF</part>
+		</interleave>
 
 		<!-- 0x80000 - 0x87FFF SLAPSTIC ROMs 16Kx16 -->
 		<interleave output="16">
-			<part crc="230e8ba9" map="01" name="136028.148"/>
-			<part crc="0ff0c13a" map="10" name="136028.149"/>
+			<part crc="d9351106" map="01" name="136036.358"/>
+			<part crc="e731caea" map="10" name="136036.359"/>
 		</interleave>
 
 		<!-- AUDIOCPU ROM 0x4000 - 0x7FFF 16Kx8 -->
-		<part repeat="16384">00</part>
+		<part crc="95294641" name="136036.153"/>
 		<!-- AUDIOCPU ROM 0x8000 - 0xBFFF 16Kx8 -->
-		<part crc="ff712aa2" name="136028.101"/>
+		<part crc="cbfc6adb" name="136036.154"/>
 		<!-- AUDIOCPU ROM 0xC000 - 0xFFFF 16Kx8 -->
-		<part crc="89ea21a1" name="136028.102"/>
+		<part crc="4c8233ac" name="136036.155"/>
 
 		<!-- PROMs -->
 		<part crc="7a29dc07" name="136032.107.b2" zip="atarisy1.zip"/>
 		<part repeat="8192">FF</part>
-		<part crc="8507e5ea" name="136028.137"/>
-		<part crc="861cfa36" name="136028.136"/>
+		<part crc="7daf351f" name="136036.151"/>
+		<part crc="4f96e57c" name="136036.152"/>
 
 		<!-- NVRAM -->
 		<part>
-FF 00 0E 00 0E 00 00 00 0E 00 00 00 00 00 0E 60 
-4E D1 00 2E FF 60 B1 00 00 00 00 00 00 00 FF 00 
-0E 00 0E 00 00 00 0E 00 00 00 00 00 0E 60 4E D1 
-00 2E FF 60 B1 00 00 00 00 00 00 00 CC C5 57 00 
-F2 27 10 64 3E 8C 00 13 88 19 30 8F 56 0F 00 95 
-09 C4 71 7F 55 00 03 E8 78 B9 FF 00 00 00 00 00 
+FF 00 12 00 12 00 00 00 12 00 00 00 00 00 12 7D 
+5C DC 00 23 FF 7D A3 02 00 00 00 00 00 02 FF 00 
+12 00 12 00 00 00 12 00 00 00 00 00 12 7D 5C DC 
+00 23 FF 7D A3 02 00 00 00 00 00 02 89 B0 7A 01 
+C0 B6 AC 67 D1 32 01 5F 5E 0D EE EA E9 0C 01 5A 
+48 84 67 4F 4C 00 F2 94 79 1C FF 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 
@@ -158,7 +168,10 @@ F2 27 10 64 3E 8C 00 13 88 19 30 8F 56 0F 00 95
 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 
 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 
 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
@@ -170,12 +183,9 @@ FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
-FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
-FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
-FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
-FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
-FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
-FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FD A3 00 5E 00 00 00 5E 00 00 00 00 FD A3 
+EA E9 0C 01 5A 48 84 67 4F 4C 00 F2 94 79 1C 89 
+B0 7A 01 C0 B6 AC 67 D1 32 01 5F 5E 0D EE FF FF
 		</part>
 	</rom>
 </misterromdescription>

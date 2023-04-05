@@ -1,7 +1,7 @@
 <misterromdescription>
-	<name>Road Blasters (upright, rev 4)</name>
+	<name>Road Blasters (upright, German, rev 1)</name>
 	<mameversion>0252</mameversion>
-	<setname>roadblst</setname>
+	<setname>roadblstg1</setname>
 	<mratimestamp>20230303000000</mratimestamp>
 	<year>1987</year>
 	<manufacturer>Atari Games</manufacturer>
@@ -13,7 +13,7 @@
 
 	<!-- Slapstic type -->
 	<rom index="1">
-		<part>6E</part>
+		<part>6D</part>
 	</rom>
 
 	<rom index="0" zip="roadblst.zip" md5="none">
@@ -121,14 +121,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="6d9ad91e" map="01" name="136048-1157.11c"/>
-			<part crc="7d4cf151" map="10" name="136048-1158.11a"/>
+			<part crc="7e94d6a2" map="01" name="136048-1251.11c" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="d7a66215" map="10" name="136048-1252.11a" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="921c0e34" map="01" name="136048-1159.13c"/>
-			<part crc="8bf22f7d" map="10" name="136048-1160.13a"/>
+			<part crc="342bf326" map="01" name="136048-1253.13c" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="db8d7495" map="10" name="136048-1254.13a" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->
@@ -139,14 +139,14 @@
 
 		<!-- 0x50000 - 0x5FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="054273b2" map="01" name="136048-2141.7l"/>
-			<part crc="49181bec" map="10" name="136048-2142.8l"/>
+			<part crc="7e94d6a2" map="01" name="136048-1251.11c" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="d7a66215" map="10" name="136048-1252.11a" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
 		</interleave>
 
 		<!-- 0x60000 - 0x6FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="f63dc29a" map="01" name="136048-2143.7m"/>
-			<part crc="b1fc5955" map="10" name="136048-2144.8m"/>
+			<part crc="342bf326" map="01" name="136048-1253.13c" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="db8d7495" map="10" name="136048-1254.13a" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
 		</interleave>
 
 		<!-- 0x70000 - 7FFFF MAINCPU ROMs 32Kx16 -->

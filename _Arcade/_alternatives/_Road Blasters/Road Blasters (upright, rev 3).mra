@@ -1,7 +1,7 @@
 <misterromdescription>
-	<name>Road Blasters (upright, rev 4)</name>
+	<name>Road Blasters (upright, rev 3)</name>
 	<mameversion>0252</mameversion>
-	<setname>roadblst</setname>
+	<setname>roadblst3</setname>
 	<mratimestamp>20230303000000</mratimestamp>
 	<year>1987</year>
 	<manufacturer>Atari Games</manufacturer>
@@ -13,7 +13,7 @@
 
 	<!-- Slapstic type -->
 	<rom index="1">
-		<part>6E</part>
+		<part>6D</part>
 	</rom>
 
 	<rom index="0" zip="roadblst.zip" md5="none">
@@ -121,14 +121,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="6d9ad91e" map="01" name="136048-1157.11c"/>
-			<part crc="7d4cf151" map="10" name="136048-1158.11a"/>
+			<part crc="ce88fe34" map="01" name="136048-3157.11c"/>
+			<part crc="03bf2879" map="10" name="136048-3158.11a"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="921c0e34" map="01" name="136048-1159.13c"/>
-			<part crc="8bf22f7d" map="10" name="136048-1160.13a"/>
+			<part crc="4305d74a" map="01" name="136048-3159.13c"/>
+			<part crc="23304687" map="10" name="136048-3160.13a"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->

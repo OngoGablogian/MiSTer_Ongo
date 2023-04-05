@@ -1,7 +1,7 @@
 <misterromdescription>
-	<name>Peter Pack Rat</name>
+	<name>Marble Madness (set 4)</name>
 	<mameversion>0252</mameversion>
-	<setname>peterpak</setname>
+	<setname>marble4</setname>
 	<mratimestamp>20230303000000</mratimestamp>
 	<year>1984</year>
 	<manufacturer>Atari Games</manufacturer>
@@ -13,24 +13,30 @@
 
 	<!-- Slapstic type -->
 	<rom index="1">
-		<part>6B</part>
+		<part>67</part>
 	</rom>
 
-	<rom index="0" zip="peterpak.zip" md5="none">
+	<rom index="0" zip="marble.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
 		<!-- TILE ROMs Bank 1 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x070000, 0x060000, 0x050000, 0x040000, 0x030000, 0x020000, 0x010000, 0x000000) 64Kx64 -->
 		<interleave output="64">
-			<part crc="53eaa018" map="00000001" name="136028.138"/>
+			<part crc="7a45f5c1" map="00000001" name="136033.137"/>
+			<part crc="7e954a88" map="00000001" name="136033.138"/>
 			<part repeat="32768" map="00000001">FF</part>
-			<part crc="354a19cb" map="00000010" name="136028.139"/>
+			<part crc="1eb1bb5f" map="00000010" name="136033.139"/>
+			<part crc="8a82467b" map="00000010" name="136033.140"/>
 			<part repeat="32768" map="00000010">FF</part>
-			<part crc="8d2c4717" map="00000100" name="136028.140"/>
+			<part crc="52448965" map="00000100" name="136033.141"/>
+			<part crc="b4a70e4f" map="00000100" name="136033.142"/>
 			<part repeat="32768" map="00000100">FF</part>
-			<part crc="bf59ea19" map="00001000" name="136028.141"/>
+			<part crc="7156e449" map="00001000" name="136033.143"/>
+			<part crc="4c3e4c79" map="00001000" name="136033.144"/>
 			<part repeat="32768" map="00001000">FF</part>
-			<part repeat="65536" map="00010000">FF</part>
+			<part crc="9062be7f" map="00010000" name="136033.145"/>
+			<part crc="14566dca" map="00010000" name="136033.146"/>
+			<part repeat="32768" map="00010000">FF</part>
 			<part repeat="65536" map="00100000">FF</part>
 			<part repeat="65536" map="01000000">FF</part>
 			<part repeat="65536" map="10000000">FF</part>
@@ -38,14 +44,16 @@
 
 		<!-- TILE ROMs Bank 2 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x0F0000, 0x0E0000, 0x0D0000, 0x0C0000, 0x0B0000, 0x0A0000, 0x090000, 0x080000) 64Kx64 -->
 		<interleave output="64">
-			<part crc="83362483" map="00000001" name="136028.150"/>
+			<part repeat="16384" map="00000001">FF</part>
+			<part crc="b6658f06" map="00000001" name="136033.149"/>
 			<part repeat="32768" map="00000001">FF</part>
-			<part crc="6e95f084" map="00000010" name="136028.151"/>
+			<part repeat="16384" map="00000010">FF</part>
+			<part crc="84ee1c80" map="00000010" name="136033.151"/>
 			<part repeat="32768" map="00000010">FF</part>
-			<part crc="9553f084" map="00000100" name="136028.152"/>
+			<part repeat="16384" map="00000100">FF</part>
+			<part crc="daa02926" map="00000100" name="136033.153"/>
 			<part repeat="32768" map="00000100">FF</part>
-			<part crc="c2a9b028" map="00001000" name="136028.153"/>
-			<part repeat="32768" map="00001000">FF</part>
+			<part repeat="65536" map="00001000">FF</part>
 			<part repeat="65536" map="00010000">FF</part>
 			<part repeat="65536" map="00100000">FF</part>
 			<part repeat="65536" map="01000000">FF</part>
@@ -53,24 +61,7 @@
 		</interleave>
 
 		<!-- TILE ROMs Bank 3 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x170000, 0x160000, 0x150000, 0x140000, 0x130000, 0x120000, 0x110000, 0x100000) 64Kx64 -->
-		<interleave output="64">
-			<part repeat="16384" map="00000001">FF</part>
-			<part crc="ac9a5a44" map="00000001" name="136028.105"/>
-			<part repeat="32768" map="00000001">FF</part>
-			<part repeat="16384" map="00000010">FF</part>
-			<part crc="51941e64" map="00000010" name="136028.108"/>
-			<part repeat="32768" map="00000010">FF</part>
-			<part repeat="16384" map="00000100">FF</part>
-			<part crc="246599f3" map="00000100" name="136028.111"/>
-			<part repeat="32768" map="00000100">FF</part>
-			<part repeat="16384" map="00001000">FF</part>
-			<part crc="918a5082" map="00001000" name="136028.114"/>
-			<part repeat="32768" map="00001000">FF</part>
-			<part repeat="65536" map="00010000">FF</part>
-			<part repeat="65536" map="00100000">FF</part>
-			<part repeat="65536" map="01000000">FF</part>
-			<part repeat="65536" map="10000000">FF</part>
-		</interleave>
+		<part repeat="524288">FF</part>
 
 		<!-- TILE ROMs Bank 4 Plane 7, 6, 5, 4, 3, 2, 1, 0 (0x1F0000, 0x1E0000, 0x1D0000, 0x1C0000, 0x1B0000, 0x1A0000, 0x190000, 0x180000) 64Kx64 -->
 		<part repeat="524288">FF</part>
@@ -94,18 +85,18 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="4f9fc020" map="01" name="136028.142"/>
-			<part crc="50267619" map="01" name="136028.144"/>
-			<part crc="9fb257cc" map="10" name="136028.143"/>
-			<part crc="7b6a5004" map="10" name="136028.145"/>
+			<part crc="4dc2987a" map="01" name="136033.323" zip="marble4.zip"/>
+			<part crc="743f6c5c" map="01" name="136033.225" zip="marble4.zip"/>
+			<part crc="e22e6e11" map="10" name="136033.324" zip="marble4.zip"/>
+			<part crc="aeb711e3" map="10" name="136033.226" zip="marble4.zip"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="418ea67a" map="01" name="136028.146"/>
-			<part repeat="16384" map="01">FF</part>
-			<part crc="14e2d97b" map="10" name="136028.147"/>
-			<part repeat="16384" map="10">FF</part>
+			<part crc="d06d2c22" map="01" name="136033.227" zip="marble4.zip"/>
+			<part crc="c81d5c14" map="01" name="136033.229"/>
+			<part crc="e69cec16" map="10" name="136033.228" zip="marble4.zip"/>
+			<part crc="526ce8ad" map="10" name="136033.230" zip="marble4.zip"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->
@@ -125,40 +116,40 @@
 
 		<!-- 0x80000 - 0x87FFF SLAPSTIC ROMs 16Kx16 -->
 		<interleave output="16">
-			<part crc="230e8ba9" map="01" name="136028.148"/>
-			<part crc="0ff0c13a" map="10" name="136028.149"/>
+			<part crc="f3b8745b" map="01" name="136033.107"/>
+			<part crc="e51eecaa" map="10" name="136033.108"/>
 		</interleave>
 
 		<!-- AUDIOCPU ROM 0x4000 - 0x7FFF 16Kx8 -->
 		<part repeat="16384">00</part>
 		<!-- AUDIOCPU ROM 0x8000 - 0xBFFF 16Kx8 -->
-		<part crc="ff712aa2" name="136028.101"/>
+		<part crc="2e2e0df8" name="136033.257" zip="marble4.zip"/>
 		<!-- AUDIOCPU ROM 0xC000 - 0xFFFF 16Kx8 -->
-		<part crc="89ea21a1" name="136028.102"/>
+		<part crc="1b9655cd" name="136033.258" zip="marble4.zip"/>
 
 		<!-- PROMs -->
 		<part crc="7a29dc07" name="136032.107.b2" zip="atarisy1.zip"/>
 		<part repeat="8192">FF</part>
-		<part crc="8507e5ea" name="136028.137"/>
-		<part crc="861cfa36" name="136028.136"/>
+		<part crc="19f6e767" name="136033.119"/>
+		<part crc="2101b0ed" name="136033.118"/>
 
 		<!-- NVRAM -->
 		<part>
-FF 00 0E 00 0E 00 00 00 0E 00 00 00 00 00 0E 60 
-4E D1 00 2E FF 60 B1 00 00 00 00 00 00 00 FF 00 
-0E 00 0E 00 00 00 0E 00 00 00 00 00 0E 60 4E D1 
-00 2E FF 60 B1 00 00 00 00 00 00 00 CC C5 57 00 
-F2 27 10 64 3E 8C 00 13 88 19 30 8F 56 0F 00 95 
-09 C4 71 7F 55 00 03 E8 78 B9 FF 00 00 00 00 00 
+FF 00 0C 00 0C 00 00 00 0C 00 00 00 00 00 0C 60 
+FD 63 00 9C FF 60 02 01 00 00 00 00 00 01 FF 00 
+0C 00 0C 00 00 00 0C 00 00 00 00 00 0C 60 FD 63 
+00 9C FF 60 02 01 00 00 00 00 00 01 01 4A BF 00 
+85 38 A4 12 EF D2 00 36 B0 84 3F E3 0F 2B 00 9D 
+34 BC 2D 56 5C 00 32 C8 78 88 FF 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 
 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 
 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 
-00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 
-00 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 
-00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF FF 
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 

@@ -1,7 +1,7 @@
 <misterromdescription>
-	<name>Road Blasters (upright, rev 4)</name>
+	<name>Road Blasters (cockpit, rev 2)</name>
 	<mameversion>0252</mameversion>
-	<setname>roadblst</setname>
+	<setname>roadblstc</setname>
 	<mratimestamp>20230303000000</mratimestamp>
 	<year>1987</year>
 	<manufacturer>Atari Games</manufacturer>
@@ -121,14 +121,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="6d9ad91e" map="01" name="136048-1157.11c"/>
-			<part crc="7d4cf151" map="10" name="136048-1158.11a"/>
+			<part crc="ef448f96" map="01" name="136048-1179.7p" zip="roadblstc.zip"/>
+			<part crc="bdb368d5" map="10" name="136048-1180.8p" zip="roadblstc.zip"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="921c0e34" map="01" name="136048-1159.13c"/>
-			<part crc="8bf22f7d" map="10" name="136048-1160.13a"/>
+			<part crc="d52581da" map="01" name="136048-1181.7r" zip="roadblstc.zip"/>
+			<part crc="847788c4" map="10" name="136048-1182.8r" zip="roadblstc.zip"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->
@@ -177,9 +177,9 @@
 		<!-- NVRAM -->
 		<part>
 FF 00 10 00 10 00 00 00 10 00 00 00 00 00 10 00 
-8D 77 00 88 FF 00 72 05 00 00 00 00 00 05 FF 00 
-10 00 10 00 00 00 10 00 00 00 00 00 10 00 8D 77 
-00 88 FF 00 72 05 00 00 00 00 00 05 FF 00 00 00 
+9D 67 00 98 FF 00 62 05 00 00 00 00 00 05 FF 00 
+10 00 10 00 00 00 10 00 00 00 00 00 10 00 9D 67 
+00 98 FF 00 62 05 00 00 00 00 00 05 FF 00 00 00 
 00 00 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 
 00 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 
 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 
@@ -208,6 +208,7 @@ FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+
 		</part>
 	</rom>
 </misterromdescription>

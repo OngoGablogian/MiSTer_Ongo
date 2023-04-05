@@ -1,7 +1,7 @@
 <misterromdescription>
-	<name>Road Blasters (upright, rev 4)</name>
+	<name>Road Blasters (cockpit, German, rev 1)</name>
 	<mameversion>0252</mameversion>
-	<setname>roadblst</setname>
+	<setname>roadblstcg</setname>
 	<mratimestamp>20230303000000</mratimestamp>
 	<year>1987</year>
 	<manufacturer>Atari Games</manufacturer>
@@ -13,7 +13,7 @@
 
 	<!-- Slapstic type -->
 	<rom index="1">
-		<part>6E</part>
+		<part>6D</part>
 	</rom>
 
 	<rom index="0" zip="roadblst.zip" md5="none">
@@ -121,14 +121,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="6d9ad91e" map="01" name="136048-1157.11c"/>
-			<part crc="7d4cf151" map="10" name="136048-1158.11a"/>
+			<part crc="58b2998f" map="01" name="136048-1235.7p" zip="roadblstcg.zip"/>
+			<part crc="02e23a40" map="10" name="136048-1236.8p" zip="roadblstcg.zip"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="921c0e34" map="01" name="136048-1159.13c"/>
-			<part crc="8bf22f7d" map="10" name="136048-1160.13a"/>
+			<part crc="5e0a7c5d" map="01" name="136048-1237.7r" zip="roadblstcg.zip"/>
+			<part crc="8c8f9523" map="10" name="136048-1238.8r" zip="roadblstcg.zip"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->
@@ -162,11 +162,9 @@
 		</interleave>
 
 		<!-- AUDIOCPU ROM 0x4000 - 0x7FFF 16Kx8 -->
-		<part crc="2e54f95e" name="136048-1149.14e"/>
-		<!-- AUDIOCPU ROM 0x8000 - 0xBFFF 16Kx8 -->
-		<part crc="ee318052" name="136048-1169.1516e"/>
-		<!-- AUDIOCPU ROM 0xC000 - 0xFFFF 16Kx8 -->
-		<part crc="75dfec33" name="136048-1170.17e"/>
+		<part crc="2e54f95e" name="136048-1149.c8" zip="roadblstcg.zip"/>
+		<!-- AUDIOCPU ROM 0x8000 - 0xFFFF 32Kx8 -->
+		<part crc="e89e7fc8" name="136048-1150.d7" zip="roadblstcg.zip"/>
 
 		<!-- PROMs -->
 		<part crc="7a29dc07" name="136032.107.b2" zip="atarisy1.zip"/>
