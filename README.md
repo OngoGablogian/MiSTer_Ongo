@@ -4,6 +4,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 ```
 Required MAME ROMs:
 ```ini
+atarisy1.zip
 brain.zip
 choplift.zip
 dakkochn.zip
