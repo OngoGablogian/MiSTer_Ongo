@@ -102,4 +102,12 @@
         <part>05 04 00 00</part>
         <part name="lt_8a.rom"  crc="357762a2" />
     </rom>
+     <!--hiscore support. see hiscore.sv for modified header values-->
+     <rom index="3" md5="none">
+       <part>
+       00 00 00 F0 05 FF 00 01 00 0F 00 01 00 01 02 00
+       00 0e 00 86 00 b7 00 08
+       </part>
+    </rom>
+    <nvram index="4" size="183"></nvram>
 </misterromdescription>

@@ -106,4 +106,13 @@
         <part>05 08 00 00</part>
     	<part name="f3_w95.da" crc="f7ca432b" />
     </rom>
+     <!--hiscore support. see hiscore.sv for modified header values-->
+     <rom index="3" md5="none">
+       <part>
+       00 00 00 F0 05 FF 00 01 00 0F 00 01 00 01 02 00
+       00 0e 1b 0f 00 31 10 31 
+       00 0e 00 32 00 01 06 06
+       </part>
+    </rom>
+    <nvram index="4" size="50"></nvram>
 </misterromdescription>

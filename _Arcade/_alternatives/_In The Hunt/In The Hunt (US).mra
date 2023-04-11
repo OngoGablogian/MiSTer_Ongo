@@ -105,4 +105,12 @@
         <part>05 08 00 00</part>
         <part name="ith_da.ic9"  crc="318ee71a" />
     </rom>
+     <!--hiscore support. see hiscore.sv for modified header values-->
+     <rom index="3" md5="none">
+       <part>
+       00 00 00 F0 05 FF 00 01 00 0F 00 01 00 01 02 00
+       00 0e 01 80 00 d8 00 02
+       </part>
+    </rom>
+    <nvram index="4" size="216"></nvram>
 </misterromdescription>
