@@ -1,4 +1,7 @@
 <mistergamedescription>
 	<rbf>_Arcade/cores/Battletoads</rbf>
 	<setname>Battletoads</setname>
+	<file delay="1" type="f" index="0" path="btc0-p0.bin"/>
+	<file delay="1" type="f" index="1" path="btc0-p1.bin"/>
+	<file delay="1" type="f" index="2" path="btc0-s.bin"/>
 </mistergamedescription>
