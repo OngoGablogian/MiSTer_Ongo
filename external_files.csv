@@ -21,3 +21,7 @@ games/Battletoads/btc0-p0.bin,https://archive.org/download/mame-merged/mame-merg
 games/Battletoads/btc0-p1.bin,https://archive.org/download/mame-merged/mame-merged/btoads.zip/btc0-p1.u121,"4194304",84de8fc9dbf577344b44ce7c1e2ae3ce,,,
 games/Battletoads/btc0-s.bin,https://archive.org/download/mame-merged/mame-merged/btoads.zip/btc0-s.u109,"2097152",0b590c14aabc49cf43bc39bf18a625d2,,,
 games/mame/btoads.zip,https://archive.org/download/mame-merged/mame-merged/btoads.zip,"4348372",4221c6d7cfefe69a76506e08923c8019,,,
+games/NEOGEO/neocd.bin,https://archive.org/download/OngoFiles/NEOGEO/neocd.bin,"524288",f39572af7584cb5b3f70ae8cc848aba2,,,
+games/NEOGEO/top-sp1.bin,https://archive.org/download/OngoFiles/NEOGEO/top-sp1.bin,"524288",122aee210324c72e8a11116e6ef9c0d0,,,
+games/Saturn/boot.rom,https://archive.org/download/OngoFiles/Saturn/boot.rom,"524288",3240872c70984b6cbfda1586cab68dbe,,,
+games/TOWNS/boot.rom,https://archive.org/download/OngoFiles/TOWNS/boot.rom,"2097152",21c1752e1c3a2d510fdfa1501e7a9a25,,,
