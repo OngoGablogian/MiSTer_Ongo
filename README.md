@@ -5,7 +5,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 ----
 
 # Included Cores:
-| Core | Original Repo |
+| Core | Original Source |
 | --- | --- |
 | 240p Test Suite    | https://github.com/burabure/240p_MiSTer/                   |
 | Atari System 1     | https://github.com/d18c7db/atari_system1_fpga              |
