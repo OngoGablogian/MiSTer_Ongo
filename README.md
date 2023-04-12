@@ -26,9 +26,9 @@ wbml.zip
 
 Required Battletoads ROMs:
 ```ini
-btc0-p0.bin | MD5: 4115131384c96a80aa46b03ccfab2c6c
-
-btc0-p1.bin | MD5: 84de8fc9dbf577344b44ce7c1e2ae3ce
-
-btc0-s.bin | MD5: 0b590c14aabc49cf43bc39bf18a625d2
+| ROM | MD5 Hash |
+| --- | --- |
+| btc0-p0.bin | 4115131384c96a80aa46b03ccfab2c6c |
+| btc0-p1.bin | 84de8fc9dbf577344b44ce7c1e2ae3ce |
+| btc0-s.bin  | 0b590c14aabc49cf43bc39bf18a625d2 |
 ```
