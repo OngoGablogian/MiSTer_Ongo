@@ -24,6 +24,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | SEGA Saturn        | https://github.com/srg320/Saturn_MiSTer                    |
 | SEGA System 1 & 2  | https://github.com/blackwine/Arcade-SEGASYS1_MiSTer        |
 | SNK Neo Geo CD     | https://github.com/paulb-nl/NeoGeo_MiSTer/tree/neocd       |
+| SparcStation 5     | https://github.com/Grabulosaure/ss                         |
+| SparcStation 20    | https://github.com/Grabulosaure/ss                         |
 
 ----
 
