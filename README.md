@@ -26,6 +26,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | SNK Neo Geo CD     | https://github.com/paulb-nl/NeoGeo_MiSTer/tree/neocd       |
 | SparcStation 5     | https://github.com/Grabulosaure/ss                         |
 | SparcStation 20    | https://github.com/Grabulosaure/ss                         |
+| Zet98 (PC-98)      | http://fpga8801.seesaa.net/                                |
 
 ----
 
