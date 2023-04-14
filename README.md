@@ -14,7 +14,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | Elan Enterprise    | https://misterfpga.org/viewtopic.php?t=4645                |
 | Enigma2            | https://github.com/nic24-rgb/Enigma2                       |
 | FM Towns           | http://fpga8801.seesaa.net/                                |
-| IremM92            | https://github.com/wickerwaka/Arcade-IremM92_MiSTer        |
 | JTSDRAM 48         | https://github.com/jotego/jtbin/tree/master/mister/sdram48 |
 | JTSDRAM 96         | https://github.com/jotego/jtbin/tree/master/mister/sdram96 |
 | Konix Multisystem  | https://github.com/SavourySnaX/MiSTer_KonixMultisystem     |
