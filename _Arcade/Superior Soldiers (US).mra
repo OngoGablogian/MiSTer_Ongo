@@ -18,9 +18,6 @@
         <dip bits="7" ids="Off,On" name="Service Mode"></dip>
         <dip bits="8" ids="Off,On" name="Flip Screen"></dip>
 
-        <dip bits="10" ids="Common,Separate" name="Coin Slots"></dip>
-        <dip bits="11" ids="1,2" name="Coin Mode"></dip>
-
         <dip bits="12,15" ids="1C/1C,2C/1C,3C/1C,4C/1C,5C/1C,6C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C,2C/3C,3C/2C,4C/3C,2S/1C,Free Play" name="Coin Mode"></dip>
     </switches>
 

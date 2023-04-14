@@ -24,20 +24,8 @@
         <dip bits="8" ids="Off,On" name="Flip Screen"></dip>
 
         <dip bits="9" ids="2 Players,3 Players" name="Cabinet"></dip>
-        
-        <dip bits="10" ids="Common,Separate" name="Coin Slots"></dip>
-        <dip bits="11" ids="1,2" name="Coin Mode"></dip>
 
         <dip bits="12,15" ids="1C/1C,2C/1C,3C/1C,4C/1C,5C/1C,6C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C,2C/3C,3C/2C,4C/3C,2S/1C,Free Play" name="Coin Mode"></dip>
-
-        <dip bits="16" ids="Off,On" name="Sw3:1"></dip>
-        <dip bits="17" ids="Off,On" name="Sw3:2"></dip>
-        <dip bits="18" ids="Off,On" name="Sw3:3"></dip>
-        <dip bits="19" ids="Off,On" name="Sw3:4"></dip>
-        <dip bits="20" ids="Off,On" name="Sw3:5"></dip>
-        <dip bits="21" ids="Off,On" name="Sw3:6"></dip>
-        <dip bits="22" ids="Off,On" name="Sw3:7"></dip>
-        <dip bits="23" ids="Off,On" name="Sw3:8"></dip>
     </switches>
 
     <rom index="0" zip="uccops.zip|uccopsaru.zip" md5="None">
