@@ -167,8 +167,7 @@
 		<part crc="e89e7fc8" name="136048-1150.d7" zip="roadblstcg.zip"/>
 
 		<!-- PROMs -->
-		<part crc="7a29dc07" name="136032.107.b2" zip="atarisy1.zip"/>
-		<part repeat="8192">FF</part>
+		<part crc="90a1950d" name="136032-120.p1" zip="roadblstcg.zip"/>
 		<part crc="c80574af" name="136048-1173.2d"/>
 		<part crc="db4a4d53" name="136048-1174.12d"/>
 
