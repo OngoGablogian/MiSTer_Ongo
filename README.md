@@ -53,11 +53,13 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 # Other Stuff:
 | Other | Original Source |
 | --- | --- |
-| Natrox MiSTer Utilities       | https://github.com/Natrox/MiSTer_Utils_Natrox                                                            |
-| Sho's NES Palettes (v2.4)     | https://archive.org/details/nes-palettes-v-2.4                                                           |
-| TrashUncle's Gameboy Palettes | https://github.com/trashuncle/Gameboy_Palettes                                                           |
-| RetroFonse Presets            | https://twitter.com/retrofonse/status/1602172002017517571?s=20                                           |
-| Phaedrux LG C1 Settings       | https://cdn.discordapp.com/attachments/811089485495402497/1069852525664149605/LG_C1_HDR_BFI_settings.zip |
-| LCD Scale5x Shadow Masks      | ?                                                                                                        |
+| Natrox MiSTer Utilities         | https://github.com/Natrox/MiSTer_Utils_Natrox                                          |
+| Sho's NES Palettes (v2.4)       | https://archive.org/details/nes-palettes-v-2.4                                         |
+| TrashUncle's Gameboy Palettes   | https://github.com/trashuncle/Gameboy_Palettes                                         |
+| RetroFonse Presets              | https://twitter.com/retrofonse/status/1602172002017517571?s=20                         |
+| Scanlines - Adaptive (Midpoint) | https://discord.com/channels/647909397477195803/811089485495402497/1074842158722465883 |
+| Scanlines - Adaptive (No Boost) | https://discord.com/channels/647909397477195803/811089485495402497/962786206029058179  |
+| Phaedrux LG C1 Settings         | https://discord.com/channels/647909397477195803/647909398072655907/1082827830913671169 |
+| LCD Scale5x Shadow Masks        | ?                                                                                      |
 
 ----
