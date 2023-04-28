@@ -29,6 +29,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | Sony PS1 (2X CPU)             | https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases     |
 | SparcStation 5                | https://github.com/Grabulosaure/ss                              |
 | SparcStation 20               | https://github.com/Grabulosaure/ss                              |
+| Tamagotchi P1                 | https://github.com/agg23/fpga-tamagotchi                        |
 | Zet98 (PC-98)                 | http://fpga8801.seesaa.net/                                     |
 
 ----
