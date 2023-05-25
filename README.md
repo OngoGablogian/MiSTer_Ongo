@@ -37,17 +37,18 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 # MRA:
 | MRA | Original Source |
 | --- | --- |
-| Bubble Bobble Ultra (v1.0)                | https://www.romhacking.net/hacks/754/                  |
-| Chuckie Egg                               | https://arlagames.itch.io/chuckie-egg-arcade           |
-| Dangun Feveron (No Discomen) (v1.0)       | https://www.romhacking.net/hacks/7544/                 |
-| DoDonPachi (Ship Color Hack)              | https://epozzobon.it/re/ddonpach/patcher/              |
-| DoDonPachi (Ship Color No BGM)            | https://epozzobon.it/re/ddonpach/patcher/              |
-| DoDonPachi Trainer (v1.11)                | https://github.com/alamone/ddonpachj-trainer           |
-| Hotdog Storm (Requires Patreon CAVE Core) | https://www.patreon.com/nullobject                     |
-| Kana Kong Arcade (v1.01)                  | https://www.romhacking.net/hacks/6689/                 |
-| Pac-Yuyu Arcade (v1.0)                    | https://www.romhacking.net/hacks/6695/                 |
-| Pollen Angel                              | https://arlagames.itch.io/pollen-angel-pacman-hardware |
-| Warriors of Fate - Special (v1.0)         | https://www.romhacking.net/hacks/7550/                 |
+| Bubble Bobble Ultra (v1.0)                | https://www.romhacking.net/hacks/754/                                                   |
+| Chuckie Egg                               | https://arlagames.itch.io/chuckie-egg-arcade                                            |
+| Dangun Feveron (No Discomen) (v1.0)       | https://www.romhacking.net/hacks/7544/                                                  |
+| DoDonPachi (Ship Color Hack)              | https://epozzobon.it/re/ddonpach/patcher/                                               |
+| DoDonPachi (Ship Color No BGM)            | https://epozzobon.it/re/ddonpach/patcher/                                               |
+| DoDonPachi Trainer (v1.11)                | https://github.com/alamone/ddonpachj-trainer                                            |
+| Hotdog Storm (Requires Patreon CAVE Core) | https://www.patreon.com/nullobject                                                      |
+| IremM92 Turbo MRA                         | https://discord.com/channels/647909397477195803/1089922738682089554/1109969184336658453 |
+| Kana Kong Arcade (v1.01)                  | https://www.romhacking.net/hacks/6689/                                                  |
+| Pac-Yuyu Arcade (v1.0)                    | https://www.romhacking.net/hacks/6695/                                                  |
+| Pollen Angel                              | https://arlagames.itch.io/pollen-angel-pacman-hardware                                  |
+| Warriors of Fate - Special (v1.0)         | https://www.romhacking.net/hacks/7550/                                                  |
 
 ----
 
