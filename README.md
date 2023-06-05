@@ -16,6 +16,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | FM Towns                      | http://fpga8801.seesaa.net/                                     |
 | JTSDRAM 48                    | https://github.com/jotego/jtbin/tree/master/mister/sdram48      |
 | JTSDRAM 96                    | https://github.com/jotego/jtbin/tree/master/mister/sdram96      |
+| Kick And Run                  | https://www.patreon.com/posts/taito-kick-and-83961338           |
 | Konix Multisystem             | https://github.com/SavourySnaX/MiSTer_KonixMultisystem          |
 | Mandelbrot                    | https://github.com/jacquesdriessen/MiSTer-mandelbrot            |
 | Nand2Tetris (Hack)            | https://github.com/sajattack/Hack_MiSTer                        |
@@ -27,8 +28,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | SNK Neo Geo Overclock (18MHz) | https://misterfpga.org/download/file.php?id=6955                |
 | SNK Neo Geo Overclock (24MHz) | https://misterfpga.org/download/file.php?id=6954                |
 | Sony PS1 (2X CPU)             | https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases     |
-| SparcStation 5                | https://github.com/Grabulosaure/ss                              |
 | SparcStation 20               | https://github.com/Grabulosaure/ss                              |
+| SparcStation 5                | https://github.com/Grabulosaure/ss                              |
 | Tamagotchi P1                 | https://github.com/agg23/fpga-tamagotchi                        |
 | Zet98 (PC-98)                 | http://fpga8801.seesaa.net/                                     |
 
