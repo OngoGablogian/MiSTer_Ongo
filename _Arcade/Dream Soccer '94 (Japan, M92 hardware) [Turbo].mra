@@ -6,7 +6,7 @@
     <year>1994</year>
     <manufacturer>Irem</manufacturer>
     <category>Sport</category>
-    <rbf>TURBO_IremM92</rbf>
+    <rbf>IremM92_Turbo</rbf>
     <rotation>horizontal</rotation>
 
     <joystick>8-way</joystick>
