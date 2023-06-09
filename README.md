@@ -24,8 +24,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Saturn](https://github.com/srg320/Saturn_MiSTer)                                                                          |
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
 | [SNK Neo Geo CD](https://github.com/paulb-nl/NeoGeo_MiSTer/tree/neocd)                                                          |
-| [SNK Neo Geo Overclock (18MHz)](https://misterfpga.org/download/file.php?id=6955)                                               |
-| [SNK Neo Geo Overclock (24MHz)](https://misterfpga.org/download/file.php?id=6954)                                               |
+| [SNK Neo Geo Overclock (18MHz)](https://misterfpga.org/viewtopic.php?p=59591#p59591)                                            |
+| [SNK Neo Geo Overclock (24MHz)](https://misterfpga.org/viewtopic.php?p=59591#p59591)                                            |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
@@ -49,6 +49,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)               |
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                 |
 | [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)          |
+| [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                  |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)      |
 
 ----
@@ -59,7 +60,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Natrox MiSTer Utilities](https://github.com/Natrox/MiSTer_Utils_Natrox)                                                  |
 | [Vectrex Overlays](https://github.com/MiSTer-devel/Vectrex_MiSTer/tree/master/overlays)                                   |
 | [Sho's NES Palettes (v2.4)](https://archive.org/details/nes-palettes-v-2.4)                                               |
-| [TrashUncle's Gameboy Palettes](https://github.com/trashuncle/Gameboy_Palette)                                            |
+| [TrashUncle's Gameboy Palettes](https://github.com/trashuncle/Gameboy_Palettes)                                           |
 | [GameBoyPalettes (icelaglace)](https://github.com/icelaglace/GameBoyPalettes)                                             |
 | [RetroFonse Presets](https://twitter.com/retrofonse/status/1602172002017517571?s=20)                                      |
 | [Scanlines - Adaptive (Midpoint)](https://discord.com/channels/647909397477195803/811089485495402497/1074842158722465883) |
