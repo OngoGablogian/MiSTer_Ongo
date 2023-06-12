@@ -19,7 +19,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                              |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
-| [Nintendo N64](https://discord.com/channels/647909397477195803/1096015979055697940/1116280974397947985)                         |
+| [Nintendo N64](https://discord.com/channels/647909397477195803/1096015979055697940/1117895904255553547)                         |
 | [Nintendo NES (RF)](https://twitter.com/iequalshane/status/1619921884682002433?s=20)                                            |
 | [Psychic 5](https://github.com/ika-musume/ikacore_Psychic5)                                                                     |
 | [SEGA Saturn](https://github.com/srg320/Saturn_MiSTer)                                                                          |
