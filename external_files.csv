@@ -36,7 +36,7 @@ games/MC1201/mc.rom,https://archive.org/download/OngoFiles/MC1201/mc.rom,"15360"
 games/N64/boot.rom,https://archive.org/download/OngoFiles/N64/boot.rom,"1984",5c124e7948ada85da603a522782940d0,,,
 games/NEOGEO/neocd.bin,https://archive.org/download/OngoFiles/NEOGEO/neocd.bin,"524288",f39572af7584cb5b3f70ae8cc848aba2,,,
 games/NEOGEO/top-sp1.bin,https://archive.org/download/OngoFiles/NEOGEO/top-sp1.bin,"524288",122aee210324c72e8a11116e6ef9c0d0,,,
-games/Saturn/boot.rom,https://archive.org/download/OngoFiles/Saturn/boot.rom,"524288",3240872c70984b6cbfda1586cab68dbe,,,
+games/Saturn/boot.bin,https://archive.org/download/OngoFiles/Saturn/boot.bin,"524288",3240872c70984b6cbfda1586cab68dbe,,,
 games/SparcStation/boot.rom,https://archive.org/download/OngoFiles/SparcStation/boot.rom,"389464",969aa8ee081bccb4e9382afbc0d973d4,,,
 games/Tamagotchi/rom.bin,https://archive.org/download/OngoFiles/Tamagotchi/rom.bin,"12288",3fce172403c27274e59723bbb9f6d8e9,,,
 games/Tamagotchi/test.bin,https://archive.org/download/OngoFiles/Tamagotchi/test.bin,"12288",b673f32604543f0f66d6a2a9321c18eb,,,
