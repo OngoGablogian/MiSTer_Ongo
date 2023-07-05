@@ -25,8 +25,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Psychic 5](https://github.com/ika-musume/ikacore_Psychic5)                                                                     |
 | [SEGA Saturn (SingleSDRAM)](https://github.com/srg320/Saturn_MiSTer)                                                            |
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
-| [SNK Neo Geo Overclock (18MHz)](https://misterfpga.org/viewtopic.php?p=59591#p59591)                                            |
-| [SNK Neo Geo Overclock (24MHz)](https://misterfpga.org/viewtopic.php?p=59591#p59591)                                            |
+| [SNK Neo Geo (Turbo)](https://discord.com/channels/647909397477195803/1075091985007902812/1125865411733377145)                  |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
