@@ -15,6 +15,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
 | [FM Towns](http://fpga8801.seesaa.net)                                                                                          |
 | [Game & Watch](https://github.com/agg23/fpga-gameandwatch)                                                                      |
+| [IremM92 (Turbo)](https://discord.com/channels/647909397477195803/1089922738682089554/1108604187945730049)                      |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/tree/master/mister/sdram48)                                                        |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/tree/master/mister/sdram96)                                                        |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
@@ -45,7 +46,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)      |
 | [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)      |
 | [Hotdog Storm (Requires Patreon CAVE Core)](https://www.patreon.com/nullobject) |
-| IremM92 Turbo MRA                                                               |
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)               |
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                 |
 | [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)          |
