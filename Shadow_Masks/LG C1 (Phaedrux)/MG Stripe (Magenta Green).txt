@@ -1,9 +1,0 @@
-####
-# Name: MG Stripe (Magenta Green)
-# Author: TrashUncle
-# Type: Other
-# Genre: Stripe
-####
-v2
-2,1
-53d,23d
