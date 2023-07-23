@@ -1,0 +1,17 @@
+####
+# Name: Sony PVM (Subtle)
+# Author: Trash Uncle
+# Type: CRT
+# Genre: PVM
+# Sub-Pixel Layout: Monochrome
+####
+
+Resolution=0
+v2
+2,1
+70f,00f
+
+Resolution=1200
+v2
+4,1
+70f,70f,00f,00f
