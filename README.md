@@ -31,7 +31,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
-| [Teenage Mutant Ninja Turtles (JOTEGO)](https://discord.com/channels/558531469128237076/891324410227732511/1110645682085314641) |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 
 ----
