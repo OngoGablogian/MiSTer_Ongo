@@ -1,0 +1,68 @@
+<misterromdescription>
+	<name>M.I.A. - Missing in Action (version S)</name>
+	<mratimestamp>202304230085200</mratimestamp>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<mameversion>0216</mameversion>
+	<setname>mia2</setname>
+	<year>1989</year>
+	<manufacturer>Konami</manufacturer>
+	<category>Run and gun</category>
+	<rbf>MIA</rbf>
+	<about author="furrtek" source="https://github.com/furrtek/Arcade-TMNT_MiSTer" twitter="@furrtek"></about>
+
+	<num_buttons>3</num_buttons>
+	<players>2</players>
+	<joystick>8-way</joystick>
+
+	<switches default="FF,FF,FF">
+		<!-- DSW1 -->
+			<dip name="Coin A" bits="0,3" ids="Free Play,4/3,4/1,3/4,3/2,3/1,2/5,2/3,2/1,1/7,1/6,1/5,1/4,1/3,1/2,1/1"/>
+			<dip name="Coin B" bits="4,7" ids="Invalid,4/3,4/1,3/4,3/2,3/1,2/5,2/3,2/1,1/7,1/6,1/5,1/4,1/3,1/2,1/1"/>
+		<!-- DSW2 -->
+			<dip name="Lives" bits="8,9" ids="7,5,3,2"/>
+			<dip name="Unused" bits="10" ids="On,Off"/>
+			<dip name="Bonus Life" bits="11,12" ids="100K Only,50K Only,50K, Every 100K,30K, Every 80K"/>
+			<dip name="Difficulty" bits="13,14" ids="Very Difficult,Difficult,Normal,Easy"/>
+			<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<!-- DSW3 -->
+			<dip name="Flip Screen" bits="16" ids="On,Off"/>
+			<dip name="VRAM Character Check" bits="17" ids="On,Off"/>
+			<dip name="Service Mode" bits="18" ids="On,Off"/>
+			<dip name="Unused" bits="19" ids="On,Off"/>
+	</switches>
+
+	<buttons names="Knife,Weapon,Weapon Select,Start,Coin" default="A,B,X,Start,Select"/>
+
+
+	<rom index="1">
+		<part>02</part>		<!-- Title number 2: MIA -->
+	</rom>
+
+	<rom index="0" zip="mia2.zip|mia.zip" md5="None">
+		<!-- maincpu - starts at 0x0 -->
+		<interleave output="16">
+			<part name="808s20.h17" crc="caa2897f" map="01"/>
+			<part name="808s21.j17" crc="3d892ffb" map="10"/>
+		</interleave>
+		<!-- audiocpu - starts at 0x40000 -->
+		<part name="808e03.f4" crc="3d93a7cd"/>
+		<!-- k052109 - starts at 0x48000 -->
+		<interleave output="32">
+			<part name="808e22.i28" crc="73d758f6" map="0001"/>
+			<part name="808e23.k28" crc="8ff08b21" map="0010"/>
+			<part name="808e12.f28" crc="d62f1fde" map="0100"/>
+			<part name="808e13.h28" crc="1fa708f4" map="1000"/>
+		</interleave>
+		<!-- k051960 - starts at 0x88000 -->
+		<interleave output="32">
+			<part name="808d15.h4" crc="2b22a6b6" map="0021"/>
+			<part name="808d17.j4" crc="d1299082" map="2100"/>
+		</interleave>
+		<!-- k007232 - starts at 0x188000 -->
+		<part name="808d01.d4" crc="fd4d37c0"/>
+		<!-- proms - starts at 0x1A8000 -->
+		<part name="808a18.f16" crc="eb95aede"/>
+		<!-- Total 0x1A8100 bytes - 1696 kBytes -->
+	</rom>
+</misterromdescription>
