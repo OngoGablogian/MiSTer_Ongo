@@ -1,0 +1,104 @@
+<!--
+
+FPGA compatible core of arcade hardware by LMN-san, OScherler, Raki.
+
+This core is available for hardware compatible with MiSTer.
+Other FPGA systems may be supported by the time you read this.
+This work is not mantained by the MiSTer project. Please contact the
+core authors for issues and updates.
+
+(c) LMN-san, OScherler, Raki 2020–2022.
+
+Support the authors:
+
+       Raki: https://www.patreon.com/ikamusume
+    LMN-san: https://ko-fi.com/lmnsan
+  OScherler: https://ko-fi.com/oscherler
+
+The authors do not endorse or participate in illegal distribution
+of copyrighted material. This work can be used with legally
+obtained ROM dumps of games or with homebrew software for
+the arcade platform.
+
+This file license is GNU GPLv2.
+You can read the whole license file in
+https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about
+         source="https://github.com/GX400-Friends/gx400-bin"
+         author="LMN-san OScherler Raki"
+        twitter="@LmnSama @oscherler @RCAVictorCo"
+    />
+    <mratimestamp>202206280000</mratimestamp>
+    <name>Nemesis (ROM version)</name>
+    <setname>nemesis</setname>
+    <rbf>nemesis</rbf>
+    <mameversion>0240</mameversion>
+    <year>1985</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Shooter</category>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>World</region>
+
+    <rom index="0" zip="nemesis.zip" md5="None" type="merged|nonmerged|split">
+        <!-- maincpu - starts at 0x00000 -->
+        <interleave output="16">
+            <part name="456-d01.12a" crc="35ff1aaa" map="01"/>
+            <part name="456-d05.12c" crc="23155faa" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="456-d02.13a" crc="ac0cf163" map="01"/>
+            <part name="456-d06.13c" crc="023f22a9" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="456-d03.14a" crc="8cefb25f" map="01"/>
+            <part name="456-d07.14c" crc="d50b82cb" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="456-d04.15a" crc="9ca75592" map="01"/>
+            <part name="456-d08.15c" crc="03c0b7f5" map="10"/>
+        </interleave>
+
+        <!-- audiocpu - starts at 0x40000 -->
+        <interleave output="16">
+            <part name="456-d09.9c" crc="26bf9636" map="12"/>
+        </interleave>
+
+        <!-- k005289 - starts at 0x44000 -->
+        <part name="400-a01.fse" crc="5827b1e8"/>
+        <part name="400-a02.fse" crc="2f44f970"/>
+
+        <!-- Total 0x44200 bytes - 272 kBytes -->
+    </rom>
+
+    <!-- do not enable vertical screen -->
+    <rom index="1">
+        <part>00</part>
+    </rom>
+
+    <!-- DIP Switches B Default
+        US version => A4 -> 10100100
+        UK version => AD -> 10101101
+    -->
+    <switches base="0x10" default="00,A4,00">
+        <!-- DSW0 -->
+        <dip name="Coin 1" bits="0,3" ids="1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,1 Coin/7 Credits,2 Coins/1 Credit,2 Coins/3 Credits,2 Coins/5 Credits,3 Coins/1 Credit,3 Coins/2 Credits,3 Coins/4 Credits,4 Coins/1 Credit,4 Coins/3 Credits,Free Credit"></dip>
+        <dip name="Coin 2" bits="4,7" ids="1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,1 Coin/7 Credits,2 Coins/1 Credit,2 Coins/3 Credits,2 Coins/5 Credits,3 Coins/1 Credit,3 Coins/2 Credits,3 Coins/4 Credits,4 Coins/1 Credit,4 Coins/3 Credits"></dip>
+        <!-- DSW1 -->
+        <dip name="Lives" bits="8,9" ids="3,4,5,7"></dip>
+        <dip name="Cabinet" bits="10" ids="Table,Upright"></dip>
+        <dip name="Bonus Life" bits="11,12" ids="50k/100k,30k,50k,100k"></dip>
+        <dip name="Difficulty" bits="13,14" ids="Easy,Normal,Hard,Very Hard"></dip>
+        <dip name="Demo Sounds" bits="15" ids="Off,On"></dip>
+        <!-- TEST -->
+        <dip name="Flip Screen" bits="16" ids="Normal,Upside down"></dip>
+        <dip name="Controls" bits="17" ids="Single,Dual"></dip>
+        <dip name="Test mode" bits="18" ids="Off,On"></dip>
+    </switches>
+    <buttons names="Option,Fire,Bomb,Start,Coin,Pause" default="Y,B,A,Start,Select,L" count="3"/>
+</misterromdescription>
