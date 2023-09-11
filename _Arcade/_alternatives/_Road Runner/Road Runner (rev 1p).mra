@@ -16,7 +16,7 @@
 		<part>6C</part>
 	</rom>
 
-	<rom index="0" zip="roadrunn.zip" md5="none">
+	<rom index="0" zip="roadrunn.zip|roadrunn2.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
@@ -111,14 +111,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="fbd43085" map="01" name="136040-x28.11c" zip="roadrunn2.zip"/>
-			<part crc="f8d8819b" map="10" name="136040-x29.11a" zip="roadrunn2.zip"/>
+			<part crc="fbd43085" map="01" name="136040-x28.11c"/>
+			<part crc="f8d8819b" map="10" name="136040-x29.11a"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="6a273375" map="01" name="136040-x30.13c" zip="roadrunn2.zip"/>
-			<part crc="eb5c4368" map="10" name="136040-x31.13a" zip="roadrunn2.zip"/>
+			<part crc="6a273375" map="01" name="136040-x30.13c"/>
+			<part crc="eb5c4368" map="10" name="136040-x31.13a"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->

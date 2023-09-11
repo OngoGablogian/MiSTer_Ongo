@@ -16,7 +16,7 @@
 		<part>6D</part>
 	</rom>
 
-	<rom index="0" zip="roadblst.zip" md5="none">
+	<rom index="0" zip="roadblst.zip|roadblstg1.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
@@ -121,14 +121,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="7e94d6a2" map="01" name="136048-1251.11c" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
-			<part crc="d7a66215" map="10" name="136048-1252.11a" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="7e94d6a2" map="01" name="136048-1251.11c" offset="0x0000" length="0x8000"/>
+			<part crc="d7a66215" map="10" name="136048-1252.11a" offset="0x0000" length="0x8000"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="342bf326" map="01" name="136048-1253.13c" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
-			<part crc="db8d7495" map="10" name="136048-1254.13a" offset="0x0000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="342bf326" map="01" name="136048-1253.13c" offset="0x0000" length="0x8000"/>
+			<part crc="db8d7495" map="10" name="136048-1254.13a" offset="0x0000" length="0x8000"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->
@@ -139,14 +139,14 @@
 
 		<!-- 0x50000 - 0x5FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="7e94d6a2" map="01" name="136048-1251.11c" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
-			<part crc="d7a66215" map="10" name="136048-1252.11a" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="7e94d6a2" map="01" name="136048-1251.11c" offset="0x8000" length="0x8000"/>
+			<part crc="d7a66215" map="10" name="136048-1252.11a" offset="0x8000" length="0x8000"/>
 		</interleave>
 
 		<!-- 0x60000 - 0x6FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="342bf326" map="01" name="136048-1253.13c" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
-			<part crc="db8d7495" map="10" name="136048-1254.13a" offset="0x8000" length="0x8000" zip="roadblstg1.zip"/>
+			<part crc="342bf326" map="01" name="136048-1253.13c" offset="0x8000" length="0x8000"/>
+			<part crc="db8d7495" map="10" name="136048-1254.13a" offset="0x8000" length="0x8000"/>
 		</interleave>
 
 		<!-- 0x70000 - 7FFFF MAINCPU ROMs 32Kx16 -->

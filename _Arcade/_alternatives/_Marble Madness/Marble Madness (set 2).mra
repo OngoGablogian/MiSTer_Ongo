@@ -16,7 +16,7 @@
 		<part>67</part>
 	</rom>
 
-	<rom index="0" zip="marble.zip" md5="none">
+	<rom index="0" zip="marble.zip|marble2.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
@@ -85,14 +85,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="ecfc25a2" map="01" name="136033.401" zip="marble2.zip"/>
-			<part crc="7ce9bf53" map="10" name="136033.402" zip="marble2.zip"/>
+			<part crc="ecfc25a2" map="01" name="136033.401"/>
+			<part crc="7ce9bf53" map="10" name="136033.402"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="dafee7a2" map="01" name="136033.403" zip="marble2.zip"/>
-			<part crc="b59ffcf6" map="10" name="136033.404" zip="marble2.zip"/>
+			<part crc="dafee7a2" map="01" name="136033.403"/>
+			<part crc="b59ffcf6" map="10" name="136033.404"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->

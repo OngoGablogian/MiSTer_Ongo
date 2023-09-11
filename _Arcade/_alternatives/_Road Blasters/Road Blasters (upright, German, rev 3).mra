@@ -16,7 +16,7 @@
 		<part>6D</part>
 	</rom>
 
-	<rom index="0" zip="roadblst.zip" md5="none">
+	<rom index="0" zip="roadblst.zip|roadblstg.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
@@ -121,14 +121,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="6e9de790" map="01" name="136048-2257.11c" zip="roadblstg.zip"/>
-			<part crc="5160c69e" map="10" name="136048-2258.11a" zip="roadblstg.zip"/>
+			<part crc="6e9de790" map="01" name="136048-2257.11c"/>
+			<part crc="5160c69e" map="10" name="136048-2258.11a"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="62f10976" map="01" name="136048-2259.13c" zip="roadblstg.zip"/>
-			<part crc="528035ba" map="10" name="136048-2260.13a" zip="roadblstg.zip"/>
+			<part crc="62f10976" map="01" name="136048-2259.13c"/>
+			<part crc="528035ba" map="10" name="136048-2260.13a"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->

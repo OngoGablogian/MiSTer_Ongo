@@ -16,7 +16,7 @@
 		<part>6E</part>
 	</rom>
 
-	<rom index="0" zip="roadblst.zip" md5="none">
+	<rom index="0" zip="roadblst.zip|roadblst2.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 

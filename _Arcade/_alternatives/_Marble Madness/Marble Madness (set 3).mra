@@ -16,7 +16,7 @@
 		<part>67</part>
 	</rom>
 
-	<rom index="0" zip="marble.zip" md5="none">
+	<rom index="0" zip="marble.zip|marble3.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
@@ -85,14 +85,14 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="9395804d" map="01" name="136033.201" zip="marble3.zip"/>
-			<part crc="edd313f5" map="10" name="136033.202" zip="marble3.zip"/>
+			<part crc="9395804d" map="01" name="136033.201"/>
+			<part crc="edd313f5" map="10" name="136033.202"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="dafee7a2" map="01" name="136033.403" zip="marble3.zip"/>
-			<part crc="4d621731" map="10" name="136033.204" zip="marble3.zip"/>
+			<part crc="dafee7a2" map="01" name="136033.403"/>
+			<part crc="4d621731" map="10" name="136033.204"/>
 		</interleave>
 
 		<!-- 0x30000 - 0x3FFFF Filler 32Kx16 -->
@@ -119,9 +119,9 @@
 		<!-- AUDIOCPU ROM 0x4000 - 0x7FFF 16Kx8 -->
 		<part repeat="16384">00</part>
 		<!-- AUDIOCPU ROM 0x8000 - 0xBFFF 16Kx8 -->
-		<part crc="73fe2b46" name="136033.121" zip="marble3.zip"/>
+		<part crc="73fe2b46" name="136033.121"/>
 		<!-- AUDIOCPU ROM 0xC000 - 0xFFFF 16Kx8 -->
-		<part crc="03bf65c3" name="136033.122" zip="marble3.zip"/>
+		<part crc="03bf65c3" name="136033.122"/>
 
 		<!-- PROMs -->
 		<part crc="7a29dc07" name="136032.107.b2" zip="atarisy1.zip"/>

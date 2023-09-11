@@ -16,7 +16,7 @@
 		<part>69</part>
 	</rom>
 
-	<rom index="0" zip="indytemp.zip" md5="none">
+	<rom index="0" zip="indytemp.zip|indytemp2.zip" md5="none">
 		<!-- Filler 64Kx64 to offset ROMs by 1 Bank -->
 		<part repeat="524288">FF</part>
 
@@ -103,8 +103,8 @@
 
 		<!-- 0x10000 - 0x1FFFF MAINCPU ROMs 32Kx16 -->
 		<interleave output="16">
-			<part crc="7fac1dd8" map="01" name="136036.470" zip="indytemp2.zip"/>
-			<part crc="e93272fb" map="10" name="136036.471" zip="indytemp2.zip"/>
+			<part crc="7fac1dd8" map="01" name="136036.470"/>
+			<part crc="e93272fb" map="10" name="136036.471"/>
 		</interleave>
 
 		<!-- 0x20000 - 0x2FFFF MAINCPU ROMs 32Kx16 -->
