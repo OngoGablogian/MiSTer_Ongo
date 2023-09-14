@@ -23,7 +23,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
 | [Nintendo N64](https://discord.com/channels/647909397477195803/1096015979055697940/1117895904255553547)                         |
-| [Nintendo NES (RF)](https://twitter.com/iequalshane/status/1619921884682002433?s=20)                                            |
+| [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
+| [Nintendo NES (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                                          |
 | [Psychic 5](https://github.com/ika-musume/ikacore_Psychic5)                                                                     |
 | [SEGA Saturn (SingleSDRAM)](https://github.com/srg320/Saturn_MiSTer)                                                            |
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
