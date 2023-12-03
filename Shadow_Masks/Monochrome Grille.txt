@@ -1,0 +1,33 @@
+####
+# Name: Monochrome Grille
+# Author: pixeltao
+# Type: CRT
+# Genre: Realistic
+#
+# Information:
+# Mimics the aperture grille of a Sony BVM.
+####
+
+Resolution=0
+v2
+2,1
+00b,740
+
+Resolution=1080
+v2
+2,5
+00a,730
+00b,740
+00c,750
+00b,740
+00a,730
+
+Resolution=1440
+v2
+2,6
+00a,730
+00b,740
+00c,750
+00c,750
+00b,740
+00a,730
