@@ -9,7 +9,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | :---: |
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                      |
 | [4K Core Forks](https://misterfpga.org/viewtopic.php?f=29&t=7357)                                                               |
-| [Atari System 1](https://github.com/d18c7db/atari_system1_fpga)                                                                 |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://misterfpga.org/viewtopic.php?t=4645)                                                                  |
