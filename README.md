@@ -50,6 +50,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)               |
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                 |
 | [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)          |
+| [Toryumon DX](https://www.romhacking.net/hacks/8319/)                           |
 | [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                  |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)      |
 

@@ -1,0 +1,130 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2023. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" source="https://github.com/jotego" twitter="@topapate"/>
+    <name>Toryumon DX [v1.0]</name>
+    <setname>toryumondx</setname>
+    <rbf>jts16b</rbf>
+    <mameversion>0251</mameversion>
+    <year>2023</year>
+    <manufacturer>Sega</manufacturer>
+    <players>2</players>
+    <joystick>8</joystick>
+    <rotation>horizontal</rotation>
+    <region>World</region>
+    <mraauthor>jotego,atrac17</mraauthor>
+    <rom index="0" zip="toryumon.zip" md5="None" asm_md5="b807560cbcac3919e7d55821ff6851ac">
+        <part>
+            00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+            20 00 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x80000 (19 bits) -->
+        <interleave output="16">
+            <part name="epr-17688.a1" crc="717d81c7" map="01"/>
+            <part name="epr-17689.a2" crc="4f0dee19" map="10"/>
+        </interleave>
+        <part repeat="0x40000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- soundcpu - starts at 0x80000 - length 0xC0000 (20 bits) -->
+        <part name="epr-17691.a13" crc="14205388"/>
+        <part repeat="0x8000"> FF</part>
+        <part name="epr-17690.a11" crc="4f9ba4e4"/>
+        <part repeat="0x70000"> FF</part>
+        <!-- JTFRAME_BA2_START -->
+        <!-- gfx1 - starts at 0x140000 - length 0x100000 (20 bits) -->
+        <interleave output="32">
+            <part name="epr-17700.b11" crc="8f288b37" map="0001"/>
+            <part name="epr-17701.b12" crc="6dfb025b" map="0010"/>
+            <part name="epr-17702.b13" crc="ae0b7eab" map="0100"/>
+            <part name="epr-17702.b13" crc="ae0b7eab" map="1000"/>
+        </interleave>
+        <!-- JTFRAME_BA3_START -->
+        <!-- sprites - starts at 0x240000 - length 0x200000 (21 bits) -->
+        <interleave output="16">
+            <part name="epr-17692.b1" crc="543c4327" map="01"/>
+            <part name="epr-17695.b4" crc="ee60f244" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="epr-17693.b2" crc="4a350b3e" map="01"/>
+            <part name="epr-17696.b5" crc="6edb54f1" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="epr-17694.b3" crc="b296d71d" map="01"/>
+            <part name="epr-17697.b6" crc="6ccb7b28" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="epr-17698.b7" crc="cd4dfb82" map="01"/>
+            <part name="epr-17699.b8" crc="2694ecce" map="10"/>
+        </interleave>
+        <part repeat="0x100000"> FF</part>
+        <!-- MCU_START -->
+        <!-- JTFRAME_PROM_START -->
+        <!-- mcu - starts at 0x440000 - length 0x2000 (13 bits) -->
+        <part repeat="0x1000"> FF</part>
+        <part repeat="0x1000"> FF</part>
+        <!-- MAINKEY_START -->
+        <!-- maincpu:key - starts at 0x442000 - length 0x6000 (15 bits) -->
+        <part repeat="0x2000"> FF</part>
+        <part repeat="0x4000"> FF</part>
+        <!-- SNDKEY_START -->
+        <!-- soundcpu:key - starts at 0x448000 - length 0x2000 (13 bits) -->
+        <part repeat="0x2000"> FF</part>
+        <!-- Total 0x44A000 bytes - 4392 kBytes -->
+
+        <!-- Toryumon DX v1.0 -->
+        <patch offset="0x00004d90">2020 2020 4820 4341 204b 5942 4220 4e41</patch>
+        <patch offset="0x00004da0">424b 4e41 204b 3032 3432 2020 2020 2020</patch>
+        <patch offset="0x00004dc0">2020 2020 2020 4a08 4d41 2050 3931 3439</patch>
+        <patch offset="0x0000d0d0">0000 4ce7 3010 0000 754e f94e 0000 b0f1</patch>
+        <patch offset="0x0000d0e0">ffff ffff ffff ffff ffff ffff ffff ffff</patch>
+        <patch offset="0x0000d0f0">ffff ffff ffff ffff ffff ffff ffff ffff</patch>
+        <patch offset="0x0000d100">ffff ffff ffff ffff ffff ffff ffff ffff</patch>
+        <patch offset="0x0000d110">ffff ffff ffff ffff ffff ffff ffff ffff</patch>
+        <patch offset="0x0000d120">ffff ffff ffff ffff 2e08 0500 0300 0066</patch>
+        <patch offset="0x0000f1d0">164a 0067 2a00 2e4a 4000 0067 1800 2e10</patch>
+        <patch offset="0x0000f1e0">0200 401d 0300 b94e 0000 5ee2 401d 0200</patch>
+        <patch offset="0x0000f1f0">0060 3000 b94e 0000 54d8 0060 2600 2e4a</patch>
+        <patch offset="0x0000f200">4000 0067 1800 2e10 0200 401d 0300 b94e</patch>
+        <patch offset="0x0000f210">0000 5ee2 401d 0200 0060 0800 b94e 0000</patch>
+        <patch offset="0x0000f220">34d8 6e4a 2004 1a66 2e08 0000 0200 3067</patch>
+        <patch offset="0x0000f230">6e3d 1a00 2004 ae42 1a00 6e1d 0500 2204</patch>
+        <patch offset="0x0000f240">1e60 401d 2304 411d 2404 2e10 0500 2e12</patch>
+        <patch offset="0x0000f250">2204 00b2 0a67 6e3d 2004 1a00 6e42 2004</patch>
+        <patch offset="0x0000f260">2e08 0600 0300 0a67 2e08 0600 0200 0267</patch>
+        <patch offset="0x0000f270">0660 f94e 0000 08d1 b94e 0000 64d3 f260</patch>
+    </rom>
+    <rom index="1">
+        <part>00</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,fe">
+        <!-- DSW1 -->
+        <dip name="Coin A" bits="0,3" ids="Free Play or 1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+        <dip name="Coin B" bits="4,7" ids="Free Play or 1/1,1/1 2/3,1/1 4/5,1/1 5/6,2/1 4/3,2/1 5/3 6/4,2/3,4/1,3/1,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+        <!-- DSW2 -->
+        <dip name="Demo Sounds" bits="8" ids="On,Off"/>
+        <dip name="VS Play Mode" bits="12" ids="3 Set,1 Set"/>
+        <dip name="Difficulty" bits="13,15" ids="Hard+5,Hard+4,Hard+3,Hard+2,Hard+1,Hard,Easy,Normal"/>
+    </switches>
+    <buttons names="Block Turn,-,-,-,Start,Coin,Core credits" default="Y,X,B,A,Start,Select,-" count="1"/>
+</misterromdescription>
