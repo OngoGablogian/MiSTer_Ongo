@@ -1,0 +1,33 @@
+####
+# Name: Monochrome Grille (Bright)
+# Author: pixeltao
+# Type: CRT
+# Genre: Realistic
+#
+# Information:
+# Mimics the aperture grille of a Sony BVM.
+####
+
+Resolution=0
+v2
+2,1
+00c,770
+
+Resolution=1080
+v2
+2,5
+00b,730
+00c,770
+00f,7a0
+00c,770
+00b,730
+
+Resolution=1440
+v2
+2,6
+00b,730
+00c,770
+00f,7a0
+00f,7a0
+00c,770
+00b,730
