@@ -1,0 +1,19 @@
+10bit
+# 8 Phase Filters
+# Single Set of Coefficients
+
+# The original filename is:
+# lanczos18_8p_256.txt
+
+# Coefficients
+0, 256, 0, 0
+ -29, 265,  38, -17
+ -51, 258,  86, -36
+ -63, 232, 139, -53
+ -63, 191, 191, -63
+ -53, 139, 232, -63
+ -36,  86, 258, -51
+ -17,  38, 265, -29
+
+
+

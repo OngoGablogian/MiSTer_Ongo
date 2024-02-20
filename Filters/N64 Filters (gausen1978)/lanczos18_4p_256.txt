@@ -1,0 +1,13 @@
+10bit
+# 4 Phase Filters
+# Single Set of Coefficients
+
+# The original filename is:
+# lanczos18_4p_256.txt
+
+# Coefficients
+   0, 256,   0,   0
+ -51, 258,  86, -36
+ -63, 191, 191, -63
+ -36,  86, 258, -51
+
