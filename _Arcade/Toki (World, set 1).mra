@@ -1,0 +1,62 @@
+<misterromdescription>
+    <about author="Solal Jacob" webpage="https://ko-fi.com/solalretrogaming" source="https://github.com/vertrex/Arcade-JujuDensetsu_MiSTer" twitter="@s_on_vg"/>
+    <name>Toki(World, set 1)</name>
+    <setname>Toki</setname>
+    <rbf>Toki</rbf>
+    <year>1989</year>
+    <manufacturer>TAD Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8</joystick>
+    <rotation>horizontal</rotation>
+    <region>World</region>
+    <mraauthor>Solal Jacob</mraauthor>
+    <rom index="0" zip="toki.zip" md5="None" asm_md5="e510c4838493f488e598439a164cae30">
+        <!-- maincpu - starts at 0x0 - length 0x60_000 (19 bits) -->
+        <interleave output="16">
+            <part name="6e.m10" crc="94015d91" map="10"/>
+            <part name="4e.k10" crc="531bd3ef" map="01"/>
+        </interleave>
+        <interleave output="16">
+            <part name="5.m12" crc="d6a82808" map="10"/>
+            <part name="3.k12" crc="a01a5b10" map="01"/>
+        </interleave>
+
+        <!-- gfx1 - starts at 0x60_000- length 0x20_000 (17 bits) -->
+        <part name="1.c5" crc="8aa964a2"/>
+        <part name="2.c3" crc="86e87e48"/>
+
+        <!-- gfx2 - starts at 0x80_000 - length 0x100_000 (20 bits) -->
+        <part name="toki_obj1.c20" crc="a27a80ba"/>
+        <part name="toki_obj2.c22" crc="fa687718"/>
+
+        <!-- gfx3 - starts at 0x180_000 - length 0x80000 (19 bits) -->
+        <part name="toki_bk1.cd8" crc="fdaa5f4b"/>
+        <!-- gfx4 - starts at 0x200_000 - length 0x80000 (19 bits) -->
+        <part name="toki_bk2.ef8" crc="d86ac664"/>
+
+        <!-- audiocpu - starts at 0x280_000 - length 0x12000 (17 bits) -->
+        <part name="8.m3" crc="6c87c4c5"/>
+        <part name="7.m7" crc="a67969c4"/>
+
+        <!-- oki - starts at 0x292000 - length 0x20000 (17 bits) -->
+        <part name="9.m1" crc="ae7a6b8b"/>
+
+        <!-- proms - starts at 0x2B2000 - length 0x200 (9 bits) -->
+        <!-- part name="PROM26.B6" crc="ea6312c6"/ -->
+        <!-- part name="PROM27.J3" crc="e616ae85"/ -->
+        <!-- Total 0x2B2200 bytes - 2826752 kBytes -->
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ffdf">
+        <!-- DSW -->
+        <dip name="Coinage" bits="0,4" ids="A 5/1 B 1/6,Free Play,-,8/3,-,5/3,-,3/2,-,2/3,A 3/1 B 1/5,1/6,-,1/5,-,1/4,-,1/3,-,1/2,A 2/1 B 1/3,6/1,-,5/1,-,4/1,-,3/1,-,2/1,A 1/1 B 1/2,1/1"/>
+        <dip name="Joysticks" bits="5" ids="2,1"/>
+        <dip name="Cabinet" bits="6" ids="Cocktail,Upright"/>
+        <dip name="Flip Screen" bits="7" ids="On,Off"/>
+        <dip name="Lives" bits="8,9" ids="Infinite,5,2,3"/>
+        <dip name="Bonus Life" bits="10,11" ids="70k 140k 210k,100k 200k,50k 150k,70k"/>
+        <dip name="Difficulty" bits="12,13" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Allow Continue" bits="14" ids="No,Yes"/>
+        <dip name="Demo Sounds" bits="15" ids="Off,On"/>
+    </switches>
+    <buttons names="Shoot,Jump,Start,Coin,Core credits" default="Y,B,Start,Select,L" count="2"/>
+</misterromdescription>
