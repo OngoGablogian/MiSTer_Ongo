@@ -41,6 +41,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 # MRA:
 | MRA |
 | :---: |
+| [Arcade Offset](https://github.com/atrac17/Arcade_Offset)                       |
 | [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)              |
 | [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                     |
 | [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)    |

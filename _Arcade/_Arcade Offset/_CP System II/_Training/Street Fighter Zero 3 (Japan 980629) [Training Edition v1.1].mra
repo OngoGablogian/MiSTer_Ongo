@@ -1,0 +1,107 @@
+<!--          FPGA compatible core for Capcom arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2021. Please support the author
+              Patreon: https://patreon.com/topapate
+              Paypal:  https://paypal.me/topapate
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with legally
+              obtained ROM dumps or with compatible homebrew software.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/topapate" source="https://github.com/jotego" twitter="@topapate"/>
+    <name>Street Fighter Zero 3 (Japan 980629) [Training Edition v1.1]</name>
+    <setname>sfa3_2</setname>
+    <rbf>jtcps2</rbf>
+    <mameversion>0229</mameversion>
+    <year>1998</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <region>Japan</region>
+    <platform>CPS-2</platform>
+    <category>Fighting</category>
+    <catver>Fighter / Versus</catver>
+    <mraauthor>jotego,atrac17</mraauthor>
+    <rom index="0" zip="sfa3_2.zip|sfa3.zip|qsound.zip" type="merged" md5="None" address="0x30000000">
+        <part>
+        00 10 00 11 00 31 00 b1 
+        ff ff ff ff ff ff ff ff 
+        32 ff 00 02 04 06 26 28 
+        2a 2c 2e 00 00 30 02 04 
+        08 30 ff ff ff ff ff ff 
+        fc ff ff ff
+        </part>
+        <!-- key - starts at 0x0 -->
+        <part name="sfz3j.key" crc="d30cca8d"/>
+        <!-- maincpu - starts at 0x14 -->
+        <part name="sz3j.03" crc="f7cb4b13"/>
+        <part name="sz3j.04" crc="0846c29d"/>
+        <part name="sz3.05" crc="9b21518a"/>
+        <part name="sz3.06" crc="e7a6c3a7"/>
+        <part name="sz3.07" crc="ec4c0cfd"/>
+        <part name="sz3.08" crc="5c7e7240"/>
+        <part name="sz3.09" crc="c5589553"/>
+        <part name="sz3.10" crc="a9717252"/>
+        <!-- audiocpu - starts at 0x400014 -->
+        <part name="sz3.01" crc="de810084"/>
+        <part name="sz3.02" crc="72445dc4"/>
+        <!-- qsound - starts at 0x440014 -->
+        <interleave output="16">
+            <part name="sz3.11m" crc="1c89eed1" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="sz3.12m" crc="f392b13a" map="12"/>
+        </interleave>
+        <!-- gfx - starts at 0xC40014 -->
+        <interleave output="64">
+            <part name="sz3.13m" crc="0f7a60d9" map="00000021"/>
+            <part name="sz3.15m" crc="8e933741" map="00002100"/>
+            <part name="sz3.17m" crc="d6e98147" map="00210000"/>
+            <part name="sz3.19m" crc="f31a728a" map="21000000"/>
+        </interleave>
+        <interleave output="64">
+            <part name="sz3.14m" crc="5ff98297" map="00000021"/>
+            <part name="sz3.16m" crc="52b5bdee" map="00002100"/>
+            <part name="sz3.18m" crc="40631ed5" map="00210000"/>
+            <part name="sz3.20m" crc="763409b4" map="21000000"/>
+        </interleave>
+        <!-- QSound firmware - starts at 0x2C40014 -->
+        <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000"/>
+        <!-- Total 0x2C42014 bytes - 45320 kBytes -->
+        <patch offset="0x08b80">12 ae 30 ac c8 87</patch>
+        <patch offset="0x01cc4c">d0 00 d0 00 d0 00 d0 00 d0 00 d0 00</patch>
+        <patch offset="0x023c46">02 c8 d8 26 a5 76</patch>
+        <patch offset="0x023d90">1e 4d a6 de dc 66</patch>
+        <patch offset="0x029946">de ff 3a 26 b7 b1 a1 0d</patch>
+        <patch offset="0x02a3d6">30 60 8f 7f 04 f3 50 be b0 20 bf 0b 3d a1 1d 44 4e 68 5d 3d 05 e7 89 00 93 56 2e f2</patch>
+        <patch offset="0x02b2a0">9f 7c 11 18 0e 35 0c 9e</patch>
+        <patch offset="0x02e81a">ef 53 fc 5b 36 06</patch>
+        <patch offset="0x02ebe8">e7 85 4d 14 bd 6c cd eb</patch>
+        <patch offset="0x0f0040">4c 4c 51 97 f8 86 f3 55 ef 3b 72 2a 15 e7 78 51 57 2e e0 35 17 55 7d c2 66 10 07 07 77 9c 19 c6 0d 48 24 40</patch>
+        <patch offset="0x0f1040">97 5f b1 78 fb 4e 00 e5 db 3a 5a 0f 79 86 80 d1 8f 1e a9 cf 3c 31 14 83 12 0b 40 af 93 8f 57 fe f2 27 93 96</patch>
+        <patch offset="0x0f2040">73 43 32 78 4f 6d 20 e3 a7 eb fc f3 4c 55 a7 cc 30 0a 9b 60 4f d6 c7 e5</patch>
+        <patch offset="0x0f3040">b1 ec 1b 18 07 e6 9c 7f 3b aa 26 df 96 3c 82 97 c2 13 c9 19 e8 3b 00 04 cf 0d b0 0b 8b e9 fb 72 0e 9b db bc 02 cc fe ff 50 41 98 c4 b7 c3 6e 4e a3 0e 6f 8a aa c1 82 5f c2 c4 52 f3 b2 47 8e f9 c7 bb ff 0b 25 51 89 14 8f 4b ca c6 a8 70 a1 8b 5e 07 33 47 92 8e 7d 63 47 1c 3c 66 62 ed 1e 56 47 90 1a 01 1f e5 01 96 17 87 6a 97 25 b0 9f 25 eb c5 dd c5 57 a0 39 3d 22 68 1a 47 37 fc be 0d 6e 43 c3 35 c9 e6 ea 23 55 d4</patch>
+        <patch offset="0x0ff040">09 2e e3 6a 20 21 ce 0b 77 ef f1 05 d1 3d 9e 0c 8b 0e d8 2d fe 28 30 2b cd 84 79 16 a3 26 50 1f ec 4a cf 77 b8 a5 46 4b 2f 23 2c d0 04 34 f0 42 1b 49 45 33 b0 a3 40 66 f2 2d a2 d0 8c 62 bb 1d d7 d8 7a 40 51 ed 6f 22 64 e1 76 c3 b2 c8 18 23 2d b2 16 20 f8 f6 b5 42 29 3f 18 54 a8 86 cc bc 85 11 4d 22 a1 14 6d f6 f8 f8 7f 64 62 a0 18 3c 9f 69 70 0d fd 3f d2 d1 8b be 18 7e 97 2d 8d 19 05 c7 78 83 d6 60 f8 8a d1 ca 6d 20 48 4f 16 af 7a ee 54 70 f1 a6 3c 3c b0 8b 81 64 3d 85 ed 60 6d 48 eb 6a 8d 55 72 2a b3 b0 3c b8 df 24 53 31 97 33 2e 09 42 b4 4e fa e5 35 93 f7 f6 b5 cb 46 06 0c 57 da b5 1c bc 3a ce b1 9d 5f 9f 34 46 de 5c 18 c7 7c 7b a1 e9 35 c1 4d 67 22 cf 21 5a a7 cd 4d c1 cb db 94 b5 ae dd ce f3 49 37 57 5f b8 c6 6f ef a9 58 ff cd 17 c6 bd fd 91 ff 3a ce d4 7a 4a b2 bb 39 61 97 82 86 45 7e da 55 59 c4 be 25 b2 f7 3f 9c 3f fb 11 7c 61 89 3e cd a2 0c 49 8b d1 5b 1d ed 8c 73 6b 18 cd ae 8e 41 c8 ad da b8 df ea 60 56 f2 ba e8 53 ab 28 23 e0 a1 46 6f 16 44 0c ff c7 85 65 51 4d 7b cf b7 2f 60 ee e8 f8 0b 52 65 21 5f e7 72 84 31 42 8e f3 dc cc a9 14 4d 0b d2 01 6a 3a c7 01 f3 54 a4 18 b2 81 d9 61 9b 71 54 a0 27 96 69 4b ff d5 f1 53 69 84 c0 53 91 cd 8d 19 dd 05 71 3c 80 d1 89 d7 21 11 e9 15 de a9 4b c6 37 c3 41 24 83 86 ca 8f f5 57 57 38 db 4e 51 9a 0a d1 cf 91 e8 cd 15 8c bc 8d 16 23 24 4f 94 3d e8 38 6d 75 05 44 3c 05 b8 48 88 7b bc 4b 36 a9 8b 5f 4a 93 5c 51 b5 8a a3 ce 45 2f 1f 1c 2f d8 cd 97 5e 6f aa d4 44 d1 e5 c9 c6 b8 4f 5c f2 03 c6 6e ab d2 4a e0 01 79 d3 2b d2 d6 d5 9e 13 c2 5f b9 ea d7 e4 d1 40 cc b7 71 98 41 98 bd 96 ca d5 36 66 05 be 77 15 4a 58 02 63 3b a5 7b 63 55 15 c6 a7 1d a1 43 af 66 05 eb 0f b3 98 7b 7f a5 15 4d 57 05 18 9e 23 8b 6b 6f 25 89 23 40 9b c4 c9 aa f4 ef 68 14 16 f2 14 fd 89 1c 11 b1 48 79 67 2f de 98 bf 09 ea c7 0d de 1b fb 96 da 43 42 86 19 32 1e de 93 4c 35 94 f8 30 ec cd a4 00 16 c1 3b eb fd 43 19 40 4b 58 19 bb 8d b8 3f ac b1 35 49 4a 8f 04 08 3a f9 e9 cb fc 6f a9 67 24 7d 08 25 f8 ce 12 b5 27 9c 11 fd df 58 90 c8 76 f8 bb f4 71 dd 0f 11 03 58 40 96 9b 9d 6a 93 4e 8e b5 ca 15 a2 5d c3 ad c8 7a 6b a0 32 b2 70 c6 a6 19 55 d1 17 83 5b a0 60 38 cb 95 1b ca be fb f6 3e f3 d3 3c c5 43 36 4d b9 7c f0 25 91 bf 4e 36 d9 9a d1 34 7a 3f ac da 97 0b 35 e3 a5 9e 52 b7 b6 e8 fd fb 1d 12 37 2b 30 66 87 ce ac 92 1e 98 2e dc ca 69 32 b0 5f 1a fc ba 50 ed 57 3e 4b bb 48 94 c9 9e d3 ea cc ba e0 cf 53 db ef b6 85 a7 bb 4c a3 82 6a 60 df 77 59 69 9c f6 cf c1 ef 49 c3 79 04 43 58 f6 78 32 c9 61 33 9f 45 8f e6 dc 33 20 7b c2 d7 88 cc 6c dd 67 79 16 65 e9 0c bf ea 8e d9 82 9f 01 d2 5a 45 4e 05 26 56 08 1c b0 13 e4 b4 e6 fb cf eb 28 aa 4f 5c db c6 7a 27 7a 19 a6 ac 29 21 8d 47 25 6f 8e f3 08 f9 0a a8 50 5c 21 fd b3 a3 e4 3c 37 62 f2 fd 45 78 4e 92 f3 be 7d f7 8a 63 2d 59 29 88 fb c2 ad 58 8f 0c 33 1c d9 5f 44 a1 29 54 9d fb 25 8e b2 0e 23 de b4 65 c7 5f 6a f2 36 28 37 fe ec 53 e2 af f5 bb a6 cf ce 17 ab 6d eb a8 a1 5f 6f 5b 32 a3 fc 42 ae 24 f6 dd 6e d0 66 21 8e 99 e5 ef 53 6c 0f f3 18 d1 44 fa f9 f2 08 42 41 b6 3f 07 ac 65 a2 20 19 4a b4 bf f8 c5 bb 06 b9 09 f8 25 10 66 4a 9e a1 7c b3 e0 ff 34 3b 71 b3 3f b9 dd 95 5d ae 85 a4 23 15 59 78 f6 c5 46 8e e7 55 39 59 58 44 d2 74 1e ff 74 d0 a4 c2 42 75 40 25 e5 61 6b 3a 2e c9 6b f8 ed b0 1c 42 9d 6b 32 21 ae 6b 22 bf 5f</patch>
+    </rom>
+    <rom index="1">
+        <part>00</part>
+    </rom>
+    <rom index="2">
+        <part>01 12 01 00 00 01 00 00 00 00 00 00 00 00 00 00 01 01 01 01 01 01 01 00 00 00 00 00 00 00 00 00 06 98 00 29 5a 53 4a 33 5a 20 52 45 20 4f 20 33 01 12 01 00 00 01 00 00 00 00 00 00 00 00 00 00 01 01 01 01 01 01 01 00 00 00 00 00 00 00 00 00 06 98 00 29 5a 53 4a 33 5a 20 52 45 20 4f 20 33 00 00 0f 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <buttons names="Light Punch,Middle Punch,Heavy Punch,Light Kick,Middle Kick,Heavy Kick,Start,Coin,Core credits" default="Y,X,B,A,L,R,Select,Start,-" count="6"/>
+</misterromdescription>

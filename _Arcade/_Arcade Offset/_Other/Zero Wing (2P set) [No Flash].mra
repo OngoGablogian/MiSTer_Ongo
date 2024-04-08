@@ -1,0 +1,73 @@
+<misterromdescription>
+  <name>Zero Wing</name>
+  <mameversion>0229</mameversion>
+  <setname>zerowing</setname>
+  <year>1989</year>
+  <manufacturer>Toaplan</manufacturer>
+  <category>Shoot 'em up</category>
+  <rbf>toaplan1</rbf>
+
+  <buttons names="Shot,Shield,-,Start,Coin" default="A,B,R,L"/>
+
+  <switches default="00,80,00,00">
+    <!-- DSWA -->
+    <dip name="Flip Screen" bits="1" ids="Off,On"/>
+    <dip name="Service Mode" bits="2" ids="Off,On"/>
+    <dip name="Demo Sounds" bits="3" ids="On,Off"/>
+    <dip name="Coin A" bits="4,5" ids="1/1,2/1,1/2,3/1,2/1,4/1,2/3"/>
+    <dip name="Coin B" bits="6,7" ids="1/1,1/2,1/2,1/3,2/1,1/4,2/3,1/6"/>
+    <!-- DSWB -->
+    <dip name="Difficulty" bits="8,9" ids="Normal,Easy,Hard,Very Hard"/>
+    <dip name="Bonus Life" bits="10,11" ids="200k 700k 500k+,500k 1500k 1000k+,500k Only,None"/>
+    <dip name="Lives" bits="12,13" ids="3,5,4,2"/>
+    <dip name="Invulnerability" bits="14" ids="Off,On"/>
+    <!-- SYSTEM -->
+    <dip name="Test Switch" bits="18" ids="Off,On"/>
+    <!-- TJUMP -->
+    <dip name="Region" bits="25" ids="USA,Europe"/>
+  </switches>
+
+  <!-- ROM data -->
+  <rom index="0" zip="zerowing.zip" md5="none">
+    <!-- main cpu   0x000000-0x00ffff 256K -->
+    <interleave output="16">
+        <part crc="e697ecb9" name="o15-11ii.bin" map="01" />
+        <part crc="b29ee3ad" name="o15-12ii.bin" map="10" />
+    </interleave>
+    <part repeat="0x30000">ff</part>
+
+    <!-- main cpu   0x040000-0x07ffff 256K -->
+    <interleave output="16">
+        <part crc="13764e95" name="o15-09.rom" map="01" />
+        <part crc="351ba71a" name="o15-10.rom" map="10" />
+    </interleave>
+
+    <!-- gfx1       0x080000-0x17ffff 1M -->
+    <interleave output="32">
+        <part crc="4e5dd246" name="o15-05.rom" map="0001"/>
+        <part crc="c8c6d428" name="o15-06.rom" map="0010"/>
+        <part crc="efc40e99" name="o15-07.rom" map="0100"/>
+        <part crc="1b019eab" name="o15-08.rom" map="1000"/>
+    </interleave>
+    <part repeat="0x80000">ff</part>
+
+    <!-- gfx2       0x180000-0x1fffff 512K -->
+    <interleave output="32">
+        <part crc="7f245fd3" name="o15-03.rom" map="0001"/>
+        <part crc="0b1a1289" name="o15-04.rom" map="0010"/>
+        <part crc="70570e43" name="o15-01.rom" map="0100"/>
+        <part crc="724b487f" name="o15-02.rom" map="1000"/>
+    </interleave>
+
+    <!-- sound cpu  0x200000-0x207FFF 32K -->
+    <part crc="e7b72383" name="o15-13.rom" />
+
+    <patch offset="0x00000186">60 10</patch>
+    <patch offset="0x00000764">4E 71</patch>
+    <patch offset="0x00000776">4E 71</patch>
+  </rom>
+
+  <rom index="1" md5="None">
+    <part>00</part>
+  </rom>
+</misterromdescription>
