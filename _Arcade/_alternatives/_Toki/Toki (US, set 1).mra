@@ -1,7 +1,7 @@
 <misterromdescription>
     <about author="Solal Jacob" webpage="https://ko-fi.com/solalretrogaming" source="https://github.com/vertrex/Arcade-JujuDensetsu_MiSTer" twitter="@s_on_vg"/>
-    <name>Toki(World, set 1)</name>
-    <setname>toki</setname>
+    <name>Toki (US, set 1)</name>
+    <setname>tokiu</setname>
     <rbf>Toki</rbf>
     <year>1989</year>
     <manufacturer>TAD Corporation</manufacturer>
@@ -13,8 +13,8 @@
     <rom index="0" zip="toki.zip" md5="None" asm_md5="e510c4838493f488e598439a164cae30">
         <!-- maincpu - starts at 0x0 - length 0x60_000 (19 bits) -->
         <interleave output="16">
-            <part name="6e.m10" crc="94015d91" map="10"/>
-            <part name="4e.k10" crc="531bd3ef" map="01"/>
+            <part name="6b.10m" crc="3674d9fe" map="10"/>
+            <part name="14.10k" crc="bfdd48af" map="01"/>
         </interleave>
         <interleave output="16">
             <part name="5.m12" crc="d6a82808" map="10"/>
