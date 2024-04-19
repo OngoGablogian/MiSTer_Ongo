@@ -1,4 +1,4 @@
 <mistergamedescription>
 	<rbf>_Unstable/_N64 Test/N64_80MHz</rbf>
-	<setname>N64</setname>
+	<setname same_dir="1">N64_80MHz</setname>
 </mistergamedescription>

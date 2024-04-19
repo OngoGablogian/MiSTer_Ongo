@@ -1,4 +1,4 @@
 <mistergamedescription>
 	<rbf>_Arcade/cores/NeoGeo_Turbo</rbf>
-	<setname>NEOGEO_TURBO</setname>
+	<setname same_dir="1">NEOGEO_TURBO</setname>
 </mistergamedescription>
