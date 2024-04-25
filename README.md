@@ -15,7 +15,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
 | [FM Towns](http://fpga8801.seesaa.net)                                                                                          |
 | [Game & Watch](https://github.com/agg23/fpga-gameandwatch)                                                                      |
-| [IremM92 (Turbo)](https://discord.com/channels/647909397477195803/1089922738682089554/1108604187945730049)                      |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/tree/master/mister/sdram48)                                                        |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/tree/master/mister/sdram96)                                                        |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
