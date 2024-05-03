@@ -31,7 +31,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
-| [Toki](https://github.com/vertrex/Arcade-JujuDensetsu_MiSTer)                                                                   |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
 
