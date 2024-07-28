@@ -1,0 +1,39 @@
+// Filter code developed by Gregory Hogan (Soltan_G42) & Newsdee
+// Filter preset created by Herbert A. Smelik (BearOnGuitar)
+// Special thanks to Gregory Hogan (Soltan_G42) & Robert Peip (FPGAzumSpass)
+
+// Filter preset based on Nintendo 64 Model No. NUS-001 (EUR) Serial No. NUP10257116 via multi out using factory original capacitors and original AV cable.
+
+#Version
+v1
+
+#Original Filename
+#Bear LPF N64 (Multi-Out).txt
+
+#Filter Description
+#Bear LPF N64 (Multi-Out)
+
+#Sampling Frequency
+7056000
+
+#Base gain
+0.00000236259861427707
+
+#gain scale for X0
+3
+
+#gain scale for X1
+3
+
+#gain scale for X2
+1
+
+#gain scale for Y0
+-2.97669724084363052086
+
+#gain scale for Y1
+2.95367703381392354700
+
+#gain scale for Y2
+-0.97697809325905959899
+
