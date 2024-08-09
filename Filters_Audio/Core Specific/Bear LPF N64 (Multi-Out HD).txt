@@ -1,9 +1,3 @@
-// Filter code developed by Gregory Hogan (Soltan_G42) & Newsdee
-// Filter preset created by Herbert A. Smelik (BearOnGuitar)
-// Special thanks to Gregory Hogan (Soltan_G42) & Robert Peip (FPGAzumSpass)
-
-// Filter preset based on Nintendo 64 Model No. NUS-001 (EUR) Serial No. NUP10257116 via multi out using factory original capacitors and original AV cable. High-Definition audio filter preset intended for use with muddy sounding games for slightly increased audio clarity.
-
 #Version
 v1
 
