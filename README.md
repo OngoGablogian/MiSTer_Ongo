@@ -11,7 +11,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [4K Core Forks](https://misterfpga.org/viewtopic.php?f=29&t=7357)                                                               |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
-| [Elan Enterprise](https://misterfpga.org/viewtopic.php?t=4645)                                                                  |
+| [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
 | [FM Towns](http://fpga8801.seesaa.net)                                                                                          |
 | [Game & Watch](https://github.com/agg23/fpga-gameandwatch)                                                                      |
