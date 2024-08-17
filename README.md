@@ -13,6 +13,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
+| [Epoch - Super Cassette Vision](https://gitlab.com/ReverendGumby/SuperCassetteVision_MiSTer)                                   |
 | [FM Towns](http://fpga8801.seesaa.net)                                                                                          |
 | [Game & Watch](https://github.com/agg23/fpga-gameandwatch)                                                                      |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/tree/master/mister/sdram48)                                                        |
