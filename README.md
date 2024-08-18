@@ -22,6 +22,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                              |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
+| [Nintendo N64 (PWM)](https://github.com/Jokippo/N64_MiSTer_PWM)                                                                 |
 | [Nintendo NES (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                                          |
 | [Nintendo NES (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                                   |
 | [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
