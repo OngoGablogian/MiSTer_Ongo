@@ -8,7 +8,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | Core |
 | :---: |
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                      |
-| [4K Core Forks](https://misterfpga.org/viewtopic.php?f=29&t=7357)                                                               |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
