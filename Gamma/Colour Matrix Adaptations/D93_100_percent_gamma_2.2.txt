@@ -1,4 +1,8 @@
-# Simulate D93 
+# Simulate D93 white point inside a D65 container. 
+# Scaled down to 100%, where 75% has no Blue channel clipping. 
+# Higher percentages are brighter, but clip more Blue channel. 
+# Assumed source gamma 2.2, and destination gamma 2.2 
+# Gamma 2.2 is unchanged from the source. Smaller is brighter in the mid range, larger is darker in the mid range. 
 # by Dan Mons 
 # https://github.com/danmons/colour_matrix_adaptations 
 0,0,0
