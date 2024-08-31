@@ -61,6 +61,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | Other |
 | :---: |
 | [Natrox MiSTer Utilities](https://github.com/Natrox/MiSTer_Utils_Natrox)                                                  |
+| [Names_MiSTer (names_CHAR18_Common_US)](https://github.com/ThreepwoodLeBrush/Names_MiSTer)                                |
 | [Vectrex Overlays](https://github.com/MiSTer-devel/Vectrex_MiSTer/tree/master/overlays)                                   |
 | [Sho's NES Palettes (v2.4)](https://archive.org/details/nes-palettes-v-2.4)                                               |
 | [TrashUncle's Gameboy Palettes](https://github.com/trashuncle/Gameboy_Palettes)                                           |
