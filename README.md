@@ -64,6 +64,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Names_MiSTer (names_CHAR18_Common_US)](https://github.com/ThreepwoodLeBrush/Names_MiSTer)                                |
 | [Vectrex Overlays](https://github.com/MiSTer-devel/Vectrex_MiSTer/tree/master/overlays)                                   |
 | [Sho's NES Palettes (v2.4)](https://archive.org/details/nes-palettes-v-2.4)                                               |
+| [openfpga-palettes](https://github.com/davewongillies/openfpga-palettes)                                                  |
 | [TrashUncle's Gameboy Palettes](https://github.com/trashuncle/Gameboy_Palettes)                                           |
 | [GameBoyPalettes (icelaglace)](https://github.com/icelaglace/GameBoyPalettes)                                             |
 | [RetroFonse Presets](https://twitter.com/retrofonse/status/1602172002017517571?s=20)                                      |
