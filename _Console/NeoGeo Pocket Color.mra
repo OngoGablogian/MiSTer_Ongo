@@ -31,9 +31,9 @@
     <joystick>8</joystick>
     <rotation>horizontal</rotation>
     <region>World</region>
-    <rom index="0" zip="neogeopc.zip" md5="None" asm_md5="e9b3bcc1eac35c908bfd9765121e7ce0">
+    <rom index="0" zip="neogeopc.zip" md5="None" asm_md5="43d0d53c69c12cc0d28f197717a1bb06">
         <!-- maincpu - starts at 0x0 - length 0x10000 (16 bits) -->
-        <part name="ngpcboot.rom" crc="343317cc"/>
+        <part name="ngpcboot.rom" crc="3f008c8d"/>
         <!-- Total 0x10000 bytes - 64 kBytes -->
     </rom>
     <rom index="17" zip="jtbeta.zip" md5="None" asm_md5="c6a4be95256a59cbf8cdd01b7c2a6e70">
