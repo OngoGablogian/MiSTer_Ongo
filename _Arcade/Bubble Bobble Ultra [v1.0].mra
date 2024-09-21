@@ -20,18 +20,17 @@
 -->
 
 <misterromdescription>
-    <about author="jotego" webpage="https://patreon.com/jotego" source="https://github.com/jotego" twitter="@topapate"/>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://github.com/jotego/jtcores"/>
     <name>Bubble Bobble Ultra [v1.0]</name>
     <setname>bublboblu</setname>
     <rbf>jtbubl</rbf>
-    <mameversion>0251</mameversion>
+    <mameversion>0261</mameversion>
     <year>2011</year>
     <manufacturer>Taito Corporation</manufacturer>
     <players>2</players>
     <joystick>2</joystick>
     <rotation>horizontal</rotation>
     <region>World</region>
-    <mraauthor>jotego</mraauthor>
     <rom index="0" zip="bublbobl1.zip|bublbobl.zip" md5="None" asm_md5="9dd7c507580993532c4fba8b99ddb226">
         <!--  Header to identify the PCB type
         Byte 0 = 0 for Bubble Bobble (MC6801 MCU)
@@ -797,7 +796,7 @@
         <patch offset="0x0002fd40">4924 9240 0092 4024 9249 2492 4900 9240</patch>
     </rom>
     <rom index="1">
-        <part>00</part>
+        <part>00 83</part>
     </rom>
     <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
         <!-- DSW0 -->

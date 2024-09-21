@@ -20,19 +20,18 @@
 -->
 
 <misterromdescription>
-    <about author="jotego" webpage="https://patreon.com/jotego" source="https://github.com/jotego" twitter="@topapate"/>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://github.com/jotego/jtcores"/>
     <name>Toryumon DX [v1.0]</name>
     <setname>toryumondx</setname>
     <rbf>jts16b</rbf>
-    <mameversion>0251</mameversion>
+    <mameversion>0261</mameversion>
     <year>2023</year>
     <manufacturer>Sega</manufacturer>
     <players>2</players>
     <joystick>8</joystick>
     <rotation>horizontal</rotation>
     <region>World</region>
-    <mraauthor>jotego,atrac17</mraauthor>
-    <rom index="0" zip="toryumon.zip" md5="None" asm_md5="b807560cbcac3919e7d55821ff6851ac">
+    <rom index="0" zip="toryumon.zip" md5="None" address="0x30000000" asm_md5="b807560cbcac3919e7d55821ff6851ac">
         <part>
             00 00 00 00 00 00 00 00
             00 00 00 00 00 00 00 00
@@ -114,8 +113,9 @@
         <patch offset="0x0000f260">2e08 0600 0300 0a67 2e08 0600 0200 0267</patch>
         <patch offset="0x0000f270">0660 f94e 0000 08d1 b94e 0000 64d3 f260</patch>
     </rom>
+    <nvram index="2" size="16384"/>
     <rom index="1">
-        <part>00</part>
+        <part>00 FF</part>
     </rom>
     <switches page_id="1" page_name="Switches" base="16" default="ff,fe">
         <!-- DSW1 -->
