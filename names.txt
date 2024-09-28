@@ -116,21 +116,23 @@ Mega Duck:          Mega Duck
 MyVision:           My Vision
 N64:                N64
 NeoGeo:             Neo Geo MVS/AES
+NeoGeoPocket:       Neo Geo Pocket
 NES:                NES
 NES3D:              NES 3D
-Odyssey2:           Magnavox Odyssey2
                    |                  |         |                         |
+Odyssey2:           Magnavox Odyssey2
 PICO:               Kids Computer Pico
 Pocket Challenge V2:Pocket Challenge 2
 PokemonMini:        Pokemon mini
 PSX:                PlayStation
 S32X:               Genesis 32X
 Saturn:             Saturn
+SCV:                Super Cassette Vision
 SGB:                Super Game Boy
 SMS:                Master System
+                   |                  |         |                         |
 SMS3D:              Master System 3D
 SNES:               Super NES
-                   |                  |         |                         |
 SuperVision:        SuperVision
 Super_Vision_8000:  Super Vision 8000
 TurboGrafx16:       Turbo Duo
@@ -139,9 +141,9 @@ Vectrex:            Vectrex
 WonderSwan:         WonderSwan
 WonderSwan Color:   WonderSwan Color
 EpochGalaxyII:      Galaxy II
+                   |                  |         |                         |
 TomyScramble:       Tomy Scramble
 Arduboy:            Arduboy
-                   |                  |         |                         |
 Chess:              Chess
 Chip8:              CHIP-8
 FlappyBird:         Flappy Bird
@@ -150,9 +152,9 @@ Hack:               Nand2Tetris Hack
 mandelbrot:         Mandelbrot Zoom
 240pSuite:          240p Test Suite
 SlugCross:          Slug Cross
+                   |                  |         |                         |
 SuperJacob:         Super Jacob
 ADCTest:            ADC Input Test
-                   |                  |         |                         |
 InputTest:          Gamepad Input Test
 jtsdram48:          SDRAM Test 48 MHz
 jtsdram96:          SDRAM Test 96 MHz
@@ -161,9 +163,9 @@ MiSTerLaggy:        MiSTer Laggy
 Gameboy_LLAPI:      GB/GBC #LLAPI
 GBA_LLAPI:          GBA #LLAPI
 Genesis_LLAPI:      Genesis #LLAPI
+                   |                  |         |                         |
 MegaCD_LLAPI:       SEGA CD #LLAPI
 NeoGeo_LLAPI:       Neo Geo #LLAPI
-                   |                  |         |                         |
 NES_LLAPI:          NES #LLAPI
 Pacman_LLAPI:       Pac-Man #LLAPI
 SMS_LLAPI:          SMS #LLAPI
@@ -172,7 +174,3 @@ TurboGrafx16_LLAPI: TGFX-16/CD #LLAPI
 arcade_SMS:         SEGA System E
 arcade_NeoGeo:      SNK NeoGeo MVS
 Alpha68k:           SNK Alpha 68000
-NeoGeoPocket:       NeoGeo Pocket
-SCV:                Super Cassette Vision
-                   |                  |         |                         |
-CDi:                CD-i
