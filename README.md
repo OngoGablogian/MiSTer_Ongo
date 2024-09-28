@@ -36,6 +36,14 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
 
+
+> [!IMPORTANT]  
+> For the CD-i core to function properly you must add the lines below to your MiSTer.ini file.
+
+```
+[CD-i]
+main=MiSTer_CDi
+```
 ----
 
 # MRA:
