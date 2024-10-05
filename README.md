@@ -44,6 +44,15 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 main=MiSTer_CDi
 ```
 
+
+> [!IMPORTANT]  
+> The Neo Geo Pocket Color MRA in the consoles folder requires that you symlink the "_Arcade/Cores" folder to "_Console/cores". This is necessary until the core leaves beta. To do this, enter the command listed below into the Linux command line on your MiSTer. 
+
+```
+ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
+```
+
+
 ----
 
 # MRA:

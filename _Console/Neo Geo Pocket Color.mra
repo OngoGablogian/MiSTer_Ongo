@@ -24,7 +24,7 @@
     <name>NeoGeo Pocket Color</name>
     <setname>NeoGeoPocketColor</setname>
     <rbf>jtngpc</rbf>
-    <mameversion>0251</mameversion>
+    <mameversion>0261</mameversion>
     <year>1999</year>
     <manufacturer>SNK</manufacturer>
     <players>1</players>
@@ -39,7 +39,7 @@
     <rom index="17" zip="jtbeta.zip" md5="None" asm_md5="c6a4be95256a59cbf8cdd01b7c2a6e70">
         <part name="beta.bin" crc="330da304"/>
     </rom>
-    <nvram index="2" size="12356"/>
+    <nvram index="2" size="12868"/>
     <rom index="1">
         <part>00 80</part>
     </rom>
