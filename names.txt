@@ -174,3 +174,5 @@ TurboGrafx16_LLAPI: TGFX-16/CD #LLAPI
 arcade_SMS:         SEGA System E
 arcade_NeoGeo:      SNK NeoGeo MVS
 Alpha68k:           SNK Alpha 68000
+                   |                  |         |                         |
+CDi:                CD-i
