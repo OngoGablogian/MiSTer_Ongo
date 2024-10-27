@@ -58,20 +58,19 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 # MRA:
 | MRA |
 | :---: |
-| [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                                        |
-| [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                                                                               |
-| [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)                                                              |
-| [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                                                  |
-| [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)                                                                |
-| [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                                                |
-| [Hotdog Storm (Requires Patreon CAVE Core)](https://www.patreon.com/nullobject)                                                           |
-| [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                                         |
-| [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                                           |
-| [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                                                                    |
-| [Street Fighter II' Champion Edition ROM Hacks](https://discord.com/channels/1166475109477920878/1190931492986171452/1299824262353518654) |
-| [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                                                     |
-| [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                                                            |
-| [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                                                |
+| [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)              |
+| [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                     |
+| [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)    |
+| [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)        |
+| [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)      |
+| [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)      |
+| [Hotdog Storm (Requires Patreon CAVE Core)](https://www.patreon.com/nullobject) |
+| [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)               |
+| [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                 |
+| [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)          |
+| [Toryumon DX](https://www.romhacking.net/hacks/8319/)                           |
+| [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                  |
+| [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)      |
 
 ----
 
