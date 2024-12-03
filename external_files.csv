@@ -46,7 +46,7 @@ games/MC1201/mc.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/M
 games/MegaDrive/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/MegaDrive/boot.rom,"16384",45e298905a08f9cfb38fd504cd6dbc84,,,
 games/NeoGeoPocket/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/NeoGeoPocket/boot.rom,"65536",6d7eba21a9f8fb71a63badfca8f9ba63,,,
 games/Saturn/boot.bin,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/Saturn/boot.bin,"524288",bde8d6225194b1be7d7127f9f5a7bb29,,,
-games/SCV/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/SCV/boot.rom,"5120",c50c57c172c76deec382785278e0ccbf,,,
+games/SCV/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/SCV/boot.rom,"6144",b596975be2e0360232bbeb1e492ab873,,,
 games/SparcStation/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/SparcStation/boot.rom,"389464",969aa8ee081bccb4e9382afbc0d973d4,,,
 games/Tamagotchi/rom.bin,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/Tamagotchi/rom.bin,"12288",3fce172403c27274e59723bbb9f6d8e9,,,
 games/Tamagotchi/test.bin,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/Tamagotchi/test.bin,"12288",b673f32604543f0f66d6a2a9321c18eb,,,
