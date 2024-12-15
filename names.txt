@@ -73,9 +73,10 @@ TSConf:             TS-Config
 UK101:              UK101
 Vector-06C:         Vector-06C
 VIC20:              Commodore VIC-20
+VT52:               VT52 Terminal
 X68000:             X68000
-zet98:              PC-98
                    |                  |         |                         |
+zet98:              PC-98
 ZX-Spectrum:        ZX Spectrum
 zx48:               ZX48
 ZX81:               TS-1500
@@ -85,8 +86,9 @@ Astrocade:          Bally Astrocade
 Atari 2600:         Atari 2600
 Atari5200:          Atari 5200
 Atari7800:          Atari 7800
-AtariLynx:          Atari Lynx
                    |                  |         |                         |
+Atari7800_Sinden:   Atari 7800 (S)
+AtariLynx:          Atari Lynx
 AY-3-8500:          AY-3-8500
 BBCBridgeCompanion: Bridge Companion
 C2650:              Arcadia 2001
@@ -95,44 +97,52 @@ ColecoVision:       ColecoVision
 Gamate:             Gamate
 Gameboy:            Game Boy
 GameboyColor:       Game Boy Color
+                   |                  |         |                         |
 Gameboy2P:          Game Boy/Color 2P
 Gameboy2Pultrawide: Game Boy/Color 2PW
-                   |                  |         |                         |
 Game Gear:          Game Gear
 GameAndWatch:       Game & Watch agg23
 GBA:                Game Boy Advance
 GBA2P:              Game Boy Adv. 2P
 Genesis:            Genesis (old)
+Genesis_Sinden:     Genesis (old S)
 Genesis3D:          Genesis 3D (old)
 GnW:                Game & Watch
+                   |                  |         |                         |
 Intellivision:      Intellivision
 Intv:               Intellivision
 Jaguar:             Atari Jaguar
-                   |                  |         |                         |
 Konix:              Multisystem
 MegaCD:             SEGA CD
+MegaCD_Sinden:      SEGA CD (S)
 MegaDrive:          Genesis
+MegaDrive_Sinden:   Genesis (S)
 Mega Duck:          Mega Duck
 MyVision:           My Vision
+                   |                  |         |                         |
 N64:                N64
 NeoGeo:             Neo Geo MVS/AES
 NeoGeoPocket:       Neo Geo Pocket
 NES:                NES
-NES3D:              NES 3D
-                   |                  |         |                         |
+NES_Sinden:         NES (S)
+NES3D:              NES (3D)
 Odyssey2:           Magnavox Odyssey2
 PICO:               Kids Computer Pico
 Pocket Challenge V2:Pocket Challenge 2
 PokemonMini:        Pokemon mini
+                   |                  |         |                         |
 PSX:                PlayStation
+PSX_Sinden:         PlayStation (S)
 S32X:               Genesis 32X
 Saturn:             Saturn
 SCV:                Super Cassette Vision
 SGB:                Super Game Boy
 SMS:                Master System
-                   |                  |         |                         |
+SMS_Sinden:         Master System (S)
 SMS3D:              Master System 3D
 SNES:               Super NES
+                   |                  |         |                         |
+SNES_Sinden:        Super NES (S)
 SuperVision:        SuperVision
 Super_Vision_8000:  Super Vision 8000
 TurboGrafx16:       Turbo Duo
@@ -141,8 +151,8 @@ Vectrex:            Vectrex
 WonderSwan:         WonderSwan
 WonderSwan Color:   WonderSwan Color
 EpochGalaxyII:      Galaxy II
-                   |                  |         |                         |
 TomyScramble:       Tomy Scramble
+                   |                  |         |                         |
 Arduboy:            Arduboy
 Chess:              Chess
 Chip8:              CHIP-8
@@ -152,10 +162,11 @@ Hack:               Nand2Tetris Hack
 mandelbrot:         Mandelbrot Zoom
 240pSuite:          240p Test Suite
 SlugCross:          Slug Cross
-                   |                  |         |                         |
 SuperJacob:         Super Jacob
+                   |                  |         |                         |
 ADCTest:            ADC Input Test
-InputTest:          Gamepad Input Test
+InputTest:          Input Test
+InputTest_Sinden:   Input Test (S)
 jtsdram48:          SDRAM Test 48 MHz
 jtsdram96:          SDRAM Test 96 MHz
 memtest:            SDRAM Test
@@ -176,3 +187,4 @@ arcade_NeoGeo:      SNK NeoGeo MVS
 Alpha68k:           SNK Alpha 68000
                    |                  |         |                         |
 CDi:                CD-i
+                   
