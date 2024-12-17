@@ -51,4 +51,5 @@ games/SparcStation/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/head
 games/Tamagotchi/rom.bin,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/Tamagotchi/rom.bin,"12288",3fce172403c27274e59723bbb9f6d8e9,,,
 games/Tamagotchi/test.bin,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/Tamagotchi/test.bin,"12288",b673f32604543f0f66d6a2a9321c18eb,,,
 games/TOWNS/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/TOWNS/boot.rom,"2097152",21c1752e1c3a2d510fdfa1501e7a9a25,,,
+games/Uneon/UNEON.VHD,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/Uneon/UNEON.VHD,"33554432",b953b5c105f3935f1d474f7499637a34,,,
 games/Zet98/boot.rom,https://github.com/OngoFiles/OngoFiles/raw/refs/heads/main/Zet98/boot.rom,"550912",73fcde408c51bea3b23ba5b7c66be37d,,,

@@ -22,6 +22,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
 | [Nintendo N64 (Test Cores)](https://github.com/MiSTer-devel/N64_MiSTer)                                                         |
+| [Nintendo N64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
 | [Nintendo NES (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                                          |
 | [Nintendo NES (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                                   |
 | [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
@@ -29,6 +30,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
 | [SNK Neo Geo (Turbo)](https://discord.com/channels/647909397477195803/1075091985007902812/1125865411733377145)                  |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                |
+| [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                 |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
@@ -50,6 +52,15 @@ main=MiSTer_CDi
 
 ```
 ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
+```
+
+
+> [!IMPORTANT]  
+> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly you must add the lines below to your MiSTer.ini file.
+
+```
+[Uneon]
+main=MiSTer_Uneon
 ```
 
 
