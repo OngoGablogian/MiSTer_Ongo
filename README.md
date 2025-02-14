@@ -40,7 +40,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 
 
 > [!IMPORTANT]  
-> For the CD-i core core to function properly you must add the lines below to your MiSTer.ini file.
+> For the CD-i core core to function properly, you need a MiSTer Main from Jan. 18th 2025 or later (commit 57d29ae). If you've previously added the lines below to you MiSTer.ini file, please remove them.
 
 ```
 [CD-i]
