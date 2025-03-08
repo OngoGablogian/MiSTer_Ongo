@@ -5,7 +5,7 @@
               This work is not mantained by the MiSTer project. Please contact the
               core author for issues and updates.
 
-              (c) Jose Tejada, 2024. Please support this research
+              (c) Jose Tejada, 2025. Please support this research
               Patreon: https://patreon.com/jotego
 
               The author does not endorse or participate in illegal distribution
@@ -20,16 +20,16 @@
 -->
 
 <misterromdescription>
-    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://github.com/jotego/jtcores"/>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
     <name>NeoGeo Pocket Color</name>
     <setname>NeoGeoPocketColor</setname>
-    <rbf>jtngpc</rbf>
     <mameversion>0261</mameversion>
     <year>1999</year>
     <manufacturer>SNK</manufacturer>
     <players>1</players>
+    <rbf>jtngpc</rbf>
     <joystick>8</joystick>
-    <rotation>horizontal</rotation>
     <region>World</region>
     <rom index="0" zip="neogeopc.zip" md5="None" asm_md5="43d0d53c69c12cc0d28f197717a1bb06">
         <!-- maincpu - starts at 0x0 - length 0x10000 (16 bits) -->
