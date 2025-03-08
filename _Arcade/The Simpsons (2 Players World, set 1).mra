@@ -5,7 +5,7 @@
               This work is not mantained by the MiSTer project. Please contact the
               core author for issues and updates.
 
-              (c) Jose Tejada, 2024. Please support this research
+              (c) Jose Tejada, 2025. Please support this research
               Patreon: https://patreon.com/jotego
 
               The author does not endorse or participate in illegal distribution
@@ -20,16 +20,16 @@
 -->
 
 <misterromdescription>
-    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://github.com/jotego/jtcores"/>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
     <name>The Simpsons (2 Players World, set 1)</name>
     <setname>simpsons2p</setname>
-    <rbf>jtsimson</rbf>
     <mameversion>0261</mameversion>
     <year>1991</year>
     <manufacturer>Konami</manufacturer>
     <players>2</players>
+    <rbf>jtsimson</rbf>
     <joystick>8</joystick>
-    <rotation>horizontal</rotation>
     <region>World</region>
     <rom index="0" zip="simpsons2p.zip|simpsons.zip" md5="None" address="0x30000000" asm_md5="37f8fec68d2d1b0122413065f2ca5f1d">
         <!--  Header to identify the PCB type
@@ -80,8 +80,8 @@
 </part>
     </rom>
     <nvram index="2" size="28833"/>
+    <!-- 16-pxl black frame on sides. -->
     <rom index="1">
-        <!-- black frame 16x0 -->
         <part>60 53</part>
     </rom>
     <buttons names="Attack,Jump,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
