@@ -8,6 +8,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | Core |
 | :---: |
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                      |
+| [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                            |
 | [Atari Jaguar](https://github.com/greyrogue/Jaguar_MiSTer)                                                                      |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
