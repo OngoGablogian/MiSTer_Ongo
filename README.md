@@ -111,7 +111,8 @@ main=MiSTer_Uneon
 
 ----
 
-> [!Other Recommended Repos]  
+> [!TIP]  
+> Here are some other recommended repositories you can add to your 'downloader.ini' file.
 
 ```
 [unstable_nightlies_folder]
