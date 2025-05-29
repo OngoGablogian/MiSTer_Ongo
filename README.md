@@ -110,3 +110,23 @@ main=MiSTer_Uneon
 | LCD Scale5x Shadow Masks                                                                                                  |
 
 ----
+
+> [!Other Recommended Repos]  
+
+```
+[unstable_nightlies_folder]
+db_url = https://raw.githubusercontent.com/MiSTer-unstable-nightlies/Unstable_Folder_MiSTer/main/db_unstable_nightlies_folder.json
+```
+
+```
+[danmons/MiSTer_D93]
+db_url = https://raw.githubusercontent.com/danmons/MiSTer_D93/db/db.json.zip
+```
+
+```
+[davewongillies/gameboy_palettes]
+db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-gameboy-palettes/db/db.json.zip
+```
+
+
+----
