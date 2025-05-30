@@ -99,8 +99,6 @@ main=MiSTer_Uneon
 | [Names_MiSTer (names_CHAR18_Common_US)](https://github.com/ThreepwoodLeBrush/Names_MiSTer)                                |
 | [Vectrex Overlays](https://github.com/MiSTer-devel/Vectrex_MiSTer/tree/master/overlays)                                   |
 | [Sho's NES Palettes (v2.4)](https://archive.org/details/nes-palettes-v-2.4)                                               |
-| [openfpga-palettes](https://github.com/davewongillies/openfpga-palettes)                                                  |
-| [TrashUncle's Gameboy Palettes](https://github.com/trashuncle/Gameboy_Palettes)                                           |
 | [GameBoyPalettes (icelaglace)](https://github.com/icelaglace/GameBoyPalettes)                                             |
 | [RetroFonse Presets](https://twitter.com/retrofonse/status/1602172002017517571?s=20)                                      |
 | [Scanlines - Adaptive (Midpoint)](https://discord.com/channels/647909397477195803/811089485495402497/1074842158722465883) |
@@ -129,5 +127,9 @@ db_url = https://raw.githubusercontent.com/danmons/MiSTer_D93/db/db.json.zip
 db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-gameboy-palettes/db/db.json.zip
 ```
 
+```
+[misteraddons/reflexadapt]
+db_url = https://github.com/misteraddons/Reflex-Adapt/raw/main/reflexadapt.json.zip
+```
 
 ----
