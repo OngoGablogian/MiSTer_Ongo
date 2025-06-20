@@ -30,7 +30,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo NES (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                                          |
 | [Nintendo NES (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                                   |
 | [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
-| [Philips CD-i](https://github.com/Slamy/CDi_MiSTer)                                                                             |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
 | [SNK Neo Geo (Turbo)](https://discord.com/channels/647909397477195803/1075091985007902812/1125865411733377145)                  |
@@ -45,7 +44,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 
 
 > [!IMPORTANT]  
-> For the CD-i core core to function properly, you need a MiSTer Main from Jan. 18th 2025 or later (commit 57d29ae). If you've previously added the lines below to you MiSTer.ini file, please remove them.
+> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you MiSTer.ini file, please remove them.
 
 ```
 [CD-i]
