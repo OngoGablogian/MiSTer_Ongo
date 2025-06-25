@@ -14,10 +14,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
-| [Epoch - Super Cassette Vision](https://gitlab.com/ReverendGumby/SuperCassetteVision_MiSTer)                                    |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                 |
 | [FM Towns](http://fpga8801.seesaa.net)                                                                                          |
-| [Game & Watch](https://github.com/agg23/fpga-gameandwatch)                                                                      |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                     |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                     |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
@@ -26,11 +24,14 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                     |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
+| [Nintendo Game & Watch](https://github.com/agg23/fpga-gameandwatch)                                                             |
+| [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                |
 | [Nintendo N64 (Test Cores)](https://github.com/MiSTer-devel/N64_MiSTer)                                                         |
 | [Nintendo N64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
 | [Nintendo NES (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                                          |
 | [Nintendo NES (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                                   |
 | [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
+| [Nintendo SNES (Save States)](https://misterfpga.org/viewtopic.php?t=8459)                                                      |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
@@ -88,6 +89,8 @@ main=MiSTer_Uneon
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                     |
 | [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                              |
 | [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer) |
+| [Salamander (SP ver. clone)]                                                                        | 
+| [Salamander (SP ver. clone Neo)]                                                                    |
 | [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                               |
 | [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                      |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                          |
@@ -98,15 +101,17 @@ main=MiSTer_Uneon
 | Other |
 | :---: |
 | [Natrox MiSTer Utilities](https://github.com/Natrox/MiSTer_Utils_Natrox)                                                  |
+| [MiSTer rclone for Savestates & Screenshots]                                                                              |
 | [Vectrex Overlays](https://github.com/MiSTer-devel/Vectrex_MiSTer/tree/master/overlays)                                   |
 | [Sho's NES Palettes (v2.4)](https://archive.org/details/nes-palettes-v-2.4)                                               |
 | [GameBoyPalettes (icelaglace)](https://github.com/icelaglace/GameBoyPalettes)                                             |
+| [TrashUncle Game Boy Shadow Masks](https://github.com/trashuncle/Gameboy_Palettes)                                        |
 | [RetroFonse Presets](https://twitter.com/retrofonse/status/1602172002017517571?s=20)                                      |
 | [Scanlines - Adaptive (Midpoint)](https://discord.com/channels/647909397477195803/811089485495402497/1074842158722465883) |
 | [Scanlines - Adaptive (No Boost)](https://discord.com/channels/647909397477195803/811089485495402497/962786206029058179)  |
 | [Phaedrux LG C1 Settings](https://discord.com/channels/647909397477195803/647909398072655907/1082827830913671169)         |
 | [Bear N64 Audio Filter Presets](https://discord.com/channels/647909397477195803/1096015979055697940/1271142144135925771)  |
-| LCD Scale5x Shadow Masks                                                                                                  |
+| [LCD Scale5x Shadow Masks]                                                                                                |
 
 ----
 
