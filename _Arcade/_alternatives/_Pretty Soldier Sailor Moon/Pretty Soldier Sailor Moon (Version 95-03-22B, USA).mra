@@ -1,0 +1,47 @@
+<misterromdescription>
+    <name>Pretty Soldier Sailor Moon (Version 95/03/22B, USA)</name>
+    <setname>sailormnu</setname>
+    <rbf>sailormn_mister</rbf>
+    <mameversion>0275</mameversion>
+    <year>1995</year>
+    <manufacturer>Gazelle (Banpresto License)</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>USA</region>
+
+    <buttons names="Attack,Jump,Special Move,-,Start,Coin,Pause" default="Y,X,B,A,R,L,Start"/>
+
+    <rom index="0" zip="sailormnd.zip|sailormnu.zip|sailormn.zip" md5="None" address="0x30000000">
+        <!-- maincpu - starts at 0x0 -->
+        <interleave output="16">
+            <part name="bpsm945a.u45" crc="898c9515" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="bpsm.u46" crc="32084e80" map="12"/>
+        </interleave>
+        <!-- eeprom - starts at 0x280000 -->
+        <part name="sailormn_usa.nv" crc="3915abe3"/>
+        <!-- audiocpu - starts at 0x280080 -->
+        <part name="bpsm945a.u9" crc="438de548"/>
+        <!-- oki1 - starts at 0x300080 -->
+        <part name="bpsm.u48" crc="498e4ed1"/>
+        <!-- oki2 - starts at 0x500080 -->
+        <part name="bpsm.u47" crc="0f2901b9"/>
+        <!-- layer0 - starts at 0x580080 -->
+        <part name="bpsm.u53" crc="b9b15f83"/>
+        <!-- layer1 - starts at 0x780080 -->
+        <part name="bpsm.u54" crc="8f00679d"/>
+        <!-- layer2 - starts at 0x980080 -->
+         <part name="layer2.dd.rom" crc="9ea60deb"/>
+        <!-- sprites0 - starts at 0x1980080 -->
+        <part name="bpsm.u76.d" crc="efe92b53"/>
+        <part name="bpsm.u77.d" crc="76eefa34"/>
+    </rom>
+
+    <rom index="1">
+        <part>0C</part>
+    </rom>
+
+    <nvram index="2" size="128"/>
+</misterromdescription>

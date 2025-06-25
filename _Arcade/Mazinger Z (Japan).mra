@@ -1,0 +1,46 @@
+<misterromdescription>
+    <name>Mazinger Z (Japan)</name>
+    <setname>mazingerj</setname>
+    <rbf>mazinger_mister</rbf>
+    <mameversion>0275</mameversion>
+    <year>1994</year>
+    <manufacturer>Banpresto / Dynamic Pl. Toei Animation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Vertical</rotation>
+    <region>Japan</region>
+
+    <buttons names="Shot,Punch,Super Weapon,-,Start,Coin,Pause" default="Y,X,B,A,R,L,Start"/>
+
+    <rom index="0" zip="mazingerd.zip|mazingerj.zip|mazinger.zip" md5="None" address="0x30000000">
+        <!-- maincpu - starts at 0x0 -->
+        <interleave output="16">
+            <part name="mzp-0.u24" crc="43a4279f" map="12"/>
+        </interleave>
+        <!-- user1 - starts at 0x80000 -->
+        <interleave output="16">
+            <part name="mzp-1.924" crc="db40acba" map="12"/>
+        </interleave>
+        <!-- eeprom - starts at 0x100000 -->
+        <part name="mazinger_japan.nv" crc="f84a2a45"/>
+        <!-- audiocpu - starts at 0x100080 -->
+        <part name="mzs.u21" crc="c5b4f7ed"/>
+        <!-- oki1 - starts at 0x120080 -->
+        <part name="bp943a-4.u64" crc="3fc7f29a"/>
+        <!-- layer0 - starts at 0x1A0080 -->
+        <part name="bp943a-1.u60" crc="46327415"/>
+        <!-- layer1 - starts at 0x3A0080 -->
+        <part name="bp943a-0.u63" crc="c1fed98a"/>
+        <!-- sprites0 - starts at 0x5A0080 -->
+        <!-- <part name="bp943a-2.u56" crc="97e13959"/> -->
+        <!-- <part name="bp943a-3.u55" crc="9c4957dd"/> -->
+        <part name="bp943a-2.u56.d" crc="870dc3ef"/>
+        <part name="bp943a-3.u55.d" crc="ccb2a16a"/>
+    </rom>
+
+    <rom index="1">
+        <part>08</part>
+    </rom>
+
+    <nvram index="2" size="128"/>
+</misterromdescription>

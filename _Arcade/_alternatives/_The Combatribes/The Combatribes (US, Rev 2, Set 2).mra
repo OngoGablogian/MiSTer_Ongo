@@ -1,0 +1,39 @@
+<misterromdescription>
+    <about author="atrac17" source="https://github.com/Coin-OpCollection" twitter="@_atrac17"/>
+    <name>The Combatribes (US, Rev 2, Set 2)</name>
+    <setname>ctribeua</setname>
+    <rbf>ctribe_mister</rbf>
+    <mameversion>0265</mameversion>
+    <year>1990</year>
+    <manufacturer>Technos Japan</manufacturer>
+    <players>3</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>US</region>
+    <platform>Technos16</platform>
+    <category>Side Scrolling / Beatem Up</category>
+    <catver>Beatem Up</catver>
+    <mraauthor>atrac17</mraauthor>
+
+    <buttons names="Punch,Kick,-,Start,Coin,Pause" default="Y,X,A,R,L,Start" count="3"/>
+
+    <switches default="FF,FF,FF,04">
+        <!-- DSW1 -->
+        <dip name="Flip Screen" bits="26" ids="On,Off"/>
+        <dip name="Coinage" bits="8,9" ids="3/1,2/1,1/2,1/1"/>
+        <dip name="Continue Discount" bits="12" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="13" ids="Off,On"/>
+        <!-- DSW2 -->
+        <dip name="Difficulty" bits="16,17" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Timer Speed" bits="18" ids="Fast,Normal"/>
+        <dip name="FBI Logo" bits="19" ids="Off,On"/>
+        <dip name="Service Mode" bits="20" ids="On,Off"/>
+        <dip name="Stage Clear Energy" bits="21" ids="50/150,0/100"/>
+        <dip name="More Clear Energy" bits="22" ids="On,Off"/>
+        <dip name="Players" bits="25" ids="3,2"/>
+    </switches>
+
+    <rom index="0" zip="ctribeua.zip|ctribe.zip" md5="None" address="0x30000000">
+        <part name="ctribeua.rom" crc="None"/>
+    </rom>
+</misterromdescription>

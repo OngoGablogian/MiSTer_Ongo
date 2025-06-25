@@ -1,0 +1,39 @@
+<misterromdescription>
+    <about author="pram0d" webpage="https://pram0d.com" source="https://github.com/Coin-OpCollection" twitter="@pr4m0d"/>
+    <name>WWF WrestleFest (US, Rev 2)</name>
+    <setname>wwfwfestu</setname>
+    <rbf>wwfwfest_mister</rbf>
+    <mameversion>0264</mameversion>
+    <year>1991</year>
+    <manufacturer>Technos Japan</manufacturer>
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>US</region>
+    <platform>Technos16</platform>
+    <category>Wrestling</category>
+    <catver>Wrestling</catver>
+    <mraauthor>pram0d</mraauthor>
+
+    <buttons names="Punch,Kick,-,Start,Coin,Pause" default="Y,X,R,L,Start" count="2"/>
+
+    <switches default="FF,F3,FF">
+        <!-- DSW1 -->
+        <dip name="Coin" bits="0,1" ids="3/1,2/1,1/2,1/1"/>
+        <dip name="Buy In Price" bits="2" ids="Start Price,1"/>
+        <dip name="Regain Power Price" bits="3" ids="Start Price,1"/>
+        <dip name="Continue Price" bits="4" ids="Start Price,1"/>
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <dip name="Flip Screen" bits="6" ids="On,Off"/>
+        <dip name="FBI Logo" bits="7" ids="Off,On"/>
+        <!-- DSW2 -->
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Players" bits="10,11" ids="4,2,3"/>
+        <dip name="Clear Stage Power Up" bits="13,14" ids="0,12,32,24"/>
+        <dip name="Championship Game" bits="15" ids="4th,5th"/>
+    </switches>
+
+    <rom index="0" zip="wwfwfest.zip" md5="None" address="0x30000000">
+        <part name="wwfwfestu.rom" crc="None"/>
+    </rom>
+</misterromdescription>

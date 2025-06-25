@@ -1,0 +1,38 @@
+<misterromdescription>
+    <about author="pram0d" webpage="https://pram0d.com" source="https://github.com/Coin-OpCollection" twitter="@pr4m0d"/>
+    <name>Double Dragon 3: The Rosetta Stone (Japan)</name>
+    <setname>ddragon3j</setname>
+    <rbf>ddragon3_mister</rbf>
+    <mameversion>0265</mameversion>
+    <year>1990</year>
+    <manufacturer>East Technology / Technos Japan</manufacturer>
+    <players>3</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>Japan</region>
+    <platform>Technos16</platform>
+    <category>Side Scrolling / Beatem Up</category>
+    <catver>Beatem Up</catver>
+    <mraauthor>pram0d</mraauthor>
+
+    <buttons names="Punch,Jump,Kick,Start,Coin,Pause" default="Y,X,A,R,L,Start" count="3"/>
+
+    <switches default="EF,7B,FF">
+        <!-- DSW A -->
+        <dip name="Coinage" bits="0,1" ids="3/1,2/1,1/2,1/1"/>
+        <dip name="Continue Discount" bits="4" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <dip name="Flip Screen" bits="6" ids="On,Off"/>
+        <!-- DSW B -->
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Player Damage" bits="10" ids="On,Off"/>
+        <dip name="Service Mode" bits="12" ids="On,Off"/>
+        <dip name="Stage Clear Energy" bits="13" ids="Off,50"/>
+        <dip name="Starting Energy" bits="14" ids="200,230"/>
+        <dip name="Players" bits="15" ids="3,2"/>
+    </switches>
+
+    <rom index="0" zip="ddragon3j.zip|ddragon3.zip" md5="None"address="0x30000000">
+        <part name="ddragon3j.rom" crc="None"/>
+    </rom>
+</misterromdescription>
