@@ -89,8 +89,8 @@ main=MiSTer_Uneon
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                     |
 | [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                              |
 | [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer) |
-| [Salamander (SP ver. clone)]                                                                        | 
-| [Salamander (SP ver. clone Neo)]                                                                    |
+| Salamander (SP ver. clone)                                                                          | 
+| Salamander (SP ver. clone Neo)                                                                      |
 | [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                               |
 | [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                      |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                          |
@@ -101,7 +101,7 @@ main=MiSTer_Uneon
 | Other |
 | :---: |
 | [Natrox MiSTer Utilities](https://github.com/Natrox/MiSTer_Utils_Natrox)                                                  |
-| [MiSTer rclone for Savestates & Screenshots]                                                                              |
+| MiSTer rclone for Savestates & Screenshots                                                                                |
 | [Vectrex Overlays](https://github.com/MiSTer-devel/Vectrex_MiSTer/tree/master/overlays)                                   |
 | [Sho's NES Palettes (v2.4)](https://archive.org/details/nes-palettes-v-2.4)                                               |
 | [GameBoyPalettes (icelaglace)](https://github.com/icelaglace/GameBoyPalettes)                                             |
@@ -111,7 +111,7 @@ main=MiSTer_Uneon
 | [Scanlines - Adaptive (No Boost)](https://discord.com/channels/647909397477195803/811089485495402497/962786206029058179)  |
 | [Phaedrux LG C1 Settings](https://discord.com/channels/647909397477195803/647909398072655907/1082827830913671169)         |
 | [Bear N64 Audio Filter Presets](https://discord.com/channels/647909397477195803/1096015979055697940/1271142144135925771)  |
-| [LCD Scale5x Shadow Masks]                                                                                                |
+| LCD Scale5x Shadow Masks                                                                                                  |
 
 ----
 
