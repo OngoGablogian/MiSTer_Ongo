@@ -9,7 +9,7 @@
 	<series></series>
 	<year>1984</year>
 	<manufacturer>Able Corp</manufacturer>
-	<category>Shooter - Vertical</category>
+	<category>Platform</category>
 
 	<setname>baluba</setname>
 	<parent>baluba</parent>
@@ -25,7 +25,7 @@
 	<joystick>8-way</joystick>
 	<special_controls></special_controls>
 	<num_buttons>1</num_buttons>
-	<buttons default="A,Start,Select,R" names="Fire,-,Start 1P,-,Coin"></buttons>
+	<buttons default="A,Start,Select,R" names="Jump,-,Start 1P,-,Coin"></buttons>
 
 	<switches default="00,00">
 	  <dip bits="12,13" name="Lives" ids="3,4,5,2"></dip>
