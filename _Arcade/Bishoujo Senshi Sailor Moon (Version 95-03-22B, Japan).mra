@@ -33,7 +33,7 @@
         <!-- layer1 - starts at 0x780080 -->
         <part name="bpsm.u54" crc="8f00679d"/>
         <!-- layer2 - starts at 0x980080 -->
-         <part name="layer2.dd.rom" crc="9ea60deb"/>
+        <part name="layer2.dd.rom" crc="9ea60deb"/>
         <!-- sprites0 - starts at 0x1980080 -->
         <part name="bpsm.u76.d" crc="efe92b53"/>
         <part name="bpsm.u77.d" crc="76eefa34"/>

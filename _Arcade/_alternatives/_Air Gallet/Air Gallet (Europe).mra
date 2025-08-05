@@ -1,0 +1,44 @@
+<misterromdescription>
+    <name>Air Gallet (Europe)</name>
+    <setname>agallet</setname>
+    <rbf>agallet_mister</rbf>
+    <mameversion>0275</mameversion>
+    <year>1996</year>
+    <manufacturer>Gazelle (Banpresto License)</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Vertical</rotation>
+    <region>Europe</region>
+
+    <buttons names="Shot,Bomb,-,-,Start,Coin,Pause" default="Y,X,B,A,R,L,Start"/>
+
+    <rom index="0" zip="agalletd.zip|agallet.zip" md5="None" address="0x30000000">
+        <!-- maincpu - starts at 0x0 -->
+        <interleave output="16">
+            <part name="bp962a.u45" crc="24815046" map="12"/>
+        </interleave>
+        <!-- eeprom - starts at 0x80000 -->
+        <part name="agallet_europe.nv" crc="ec38bf65"/>
+        <!-- audiocpu - starts at 0x80080 -->
+        <part name="bp962a.u9" crc="06caddbe"/>
+        <!-- oki1 - starts at 0x100080 -->
+        <part name="bp962a.u48" crc="ae00a1ce"/>
+        <!-- oki2 - starts at 0x300080 -->
+        <part name="bp962a.u47" crc="6d4e9737"/>
+        <!-- layer0 - starts at 0x500080 -->
+        <part name="bp962a.u53" crc="fcd9a107"/>
+        <!-- layer1 - starts at 0x700080 -->
+        <part name="bp962a.u54" crc="0cfa3409"/>
+        <!-- layer2 - starts at 0x900080 -->
+        <part name="layer2.dd.rom" crc="5b5ada54"/>
+        <!-- sprites0 - starts at 0xD00080 -->
+        <part name="bp962a.u76" crc="858da439"/>
+        <part name="bp962a.u77" crc="ea2ba35e"/>
+    </rom>
+
+    <rom index="1">
+        <part>0D</part>
+    </rom>
+
+    <nvram index="2" size="128"/>
+</misterromdescription>
