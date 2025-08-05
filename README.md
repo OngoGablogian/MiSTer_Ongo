@@ -9,7 +9,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | :---: |
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                      |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                            |
-| [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029]                                                      |
+| [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                      |
 | [Atari Jaguar](https://github.com/greyrogue/Jaguar_MiSTer)                                                                      |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
@@ -46,7 +46,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [StarForce](https://github.com/madoov/MiSTer-StarForce)                                                                         |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
-| [Taito F2 (Test)][https://discord.com/channels/647909397477195803/1345451572368244827/1401766653712400394]                      |
+| [Taito F2 (Test)](https://discord.com/channels/647909397477195803/1345451572368244827/1401766653712400394)                      |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
