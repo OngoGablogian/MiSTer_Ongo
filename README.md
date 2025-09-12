@@ -1,4 +1,6 @@
-```ini
+----
+# Add this to your MiSTer 'downloader.ini' file:
+```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
 ```
@@ -124,21 +126,25 @@ main=MiSTer_Uneon
 > [!TIP]  
 > Here are some other recommended repositories you can add to your 'downloader.ini' file.
 
+[MiSTer Unstable Nightlies](https://github.com/MiSTer-unstable-nightlies)
 ```
 [unstable_nightlies_folder]
 db_url = https://raw.githubusercontent.com/MiSTer-unstable-nightlies/Unstable_Folder_MiSTer/main/db_unstable_nightlies_folder.json
 ```
 
+[MiSTer FPGA D93 Whitepoint Filter (danmons)](https://github.com/danmons/MiSTer_D93)
 ```
 [danmons/MiSTer_D93]
 db_url = https://raw.githubusercontent.com/danmons/MiSTer_D93/db/db.json.zip
 ```
 
+[MiSTer Game Boy Palettes (davewongillies)](https://github.com/davewongillies/MiSTer-gameboy-palettes)
 ```
 [davewongillies/gameboy_palettes]
 db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-gameboy-palettes/db/db.json.zip
 ```
 
+[MiSTer Addons Reflex Adapt Firmware](https://github.com/misteraddons/Reflex-Adapt)
 ```
 [misteraddons/reflexadapt]
 db_url = https://github.com/misteraddons/Reflex-Adapt/raw/main/reflexadapt.json.zip
