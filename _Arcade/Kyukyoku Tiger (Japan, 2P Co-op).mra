@@ -1,0 +1,90 @@
+<misterromdescription>
+    <name>Kyukyoku Tiger (Japan, 2P Co-Op)</name>
+    <setname>ktiger</setname>
+    <rbf>twincobra</rbf>
+    <mameversion>0255</mameversion>
+    <year>1989</year>
+    <manufacturer>Toaplan / Taito Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Vertical (CW)</rotation>
+    <region>Japan</region>
+
+    <switches default="00,80,00,00,00,00,00,00">
+        <!-- DSWA -->
+        <dip name="Invulnerability" bits="0" ids="Off,On"/>
+        <dip name="Screen Inversion" bits="1" ids="Normal,Invert"/>
+        <dip name="Service Mode" bits="2" ids="Normal,Screen Test"/>
+        <dip name="Advertise Sound" bits="3" ids="On,Off"/>
+        <dip name="Coin A" bits="4,5" ids="1/1,1/2,2/1,2/3"/>
+        <dip name="Coin B" bits="6,7" ids="1/1,1/2,2/1,2/3"/>
+        <!-- DSWB -->
+        <dip name="Game Difficulty" bits="8,9" ids="B,A,C,D"/>
+        <dip name="Extend" bits="10,11" ids="70k/200k,50k/150k,100k Only,None"/>
+        <dip name="Hero Counts" bits="12,13" ids="3,5,4,2"/>
+        <dip name="Screen Halt" bits="14" ids="Off,On"/>
+        <dip name="Continue Play" bits="15" ids="No,Yes"/>
+    </switches>
+
+    <buttons names="Shot,Bomb,P1 Start,P2 Start,Coin A,Coin B,Pause" default="A,B,X,Y,R,L,Start"/>
+
+    <rom index="1">
+        <part>00</part>
+    </rom>
+
+    <rom index="0" zip="ktiger.zip|twincobr.zip" md5="None">
+        <!-- maincpu - starts at 0x0 -->
+        <interleave output="16">
+            <part name="b30_01.7j" crc="07f64d13" map="01"/>
+            <part name="b30_03.7h" crc="41be6978" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="b30_02.8j" crc="321e2be6" map="01"/>
+            <part name="b30_04.8h" crc="c3f960ff" map="10"/>
+        </interleave>
+        <part repeat="0x10000">00</part>
+
+        <!-- gfx1 - starts at 0x40000 -->
+        <interleave output="32">
+            <part name="b30_08.8c" crc="0a254133" map="0010"/>
+            <part name="b30_07.10b" crc="e9e2d4b1" map="0100"/>
+            <part name="b30_06.8b" crc="a599d845" map="1000"/>
+            <part repeat="0x4000" map="0001">00</part>
+        </interleave>
+        <part repeat="0x30000">00</part>
+
+        <!-- gfx2 - starts at 0x80000 -->
+        <interleave output="32">
+            <part name="b30_16.20b" crc="15b3991d" map="0001"/>
+            <part name="b30_15.18b" crc="d9e2e55d" map="0010"/>
+            <part name="b30_13.18c" crc="13daeac8" map="0100"/>
+            <part name="b30_14.20c" crc="8cc79357" map="1000"/>
+        </interleave>
+
+        <!-- gfx3 - starts at 0xc0000 -->
+        <interleave output="32">
+            <part name="b30_12.16c" crc="b5d48389" map="0001"/>
+            <part name="b30_11.14c" crc="97f20fdc" map="0010"/>
+            <part name="b30_10.12c" crc="170c01db" map="0100"/>
+            <part name="b30_09.10c" crc="44f5accd" map="1000"/>
+        </interleave>
+        <part repeat="0x20000">00</part>
+
+        <!-- scu - starts at 0x100000 -->
+        <interleave output="32">
+            <part name="b30_20.12d" crc="cb4092b8" map="1000"/>
+            <part name="b30_19.14d" crc="9cb8675e" map="0100"/>
+            <part name="b30_18.15d" crc="806fb374" map="0010"/>
+            <part name="b30_17.16d" crc="4264bff8" map="0001"/>
+        </interleave>
+
+        <!-- audiocpu - starts at 0x140000 -->
+        <part name="b30_05.4f" crc="1a8f1e10"/>
+        <part repeat="0x08000">00</part>
+
+        <!-- dsp - starts at 0x150000 -->
+        <part name="d70015u_gxc-03_mcu_74002" crc="265b6f32"/>
+
+        <!-- Total 0x150C00 bytes - 1347 kBytes -->
+    </rom>
+</misterromdescription>

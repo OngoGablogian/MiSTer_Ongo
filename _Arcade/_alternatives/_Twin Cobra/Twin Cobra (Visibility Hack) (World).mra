@@ -1,0 +1,124 @@
+<misterromdescription>
+    <name>Twin Cobra (Visibility Hack) (World)</name>
+    <setname>twincobr_v</setname>
+    <rbf>twincobra</rbf>
+    <mameversion>0255</mameversion>
+    <year>1987</year>
+    <manufacturer>Toaplan / Taito Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Vertical (CW)</rotation>
+    <region>World</region>
+
+    <switches default="00,00,00,00,00,00,00,00">
+        <!-- DSWA -->
+        <dip name="Screen Inversion" bits="1" ids="Normal,Invert"/>
+        <dip name="Service Mode" bits="2" ids="Normal,Screen Test"/>
+        <dip name="Advertise Sound" bits="3" ids="On,Off"/>
+        <dip name="Coin A" bits="4,5" ids="1/1,1/2,2/1,2/3"/>
+        <dip name="Coin B" bits="6,7" ids="1/1,1/2,2/1,2/3"/>
+        <!-- DSWB -->
+        <dip name="Game Difficulty" bits="8,9" ids="B,A,C,D"/>
+        <dip name="Extend" bits="10,11" ids="50k/150k,70k/200k,50k Only,100k Only"/>
+        <dip name="Hero Counts" bits="12,13" ids="3,5,4,2"/>
+        <dip name="Dip Switch Display" bits="14" ids="Off,On"/>
+    </switches>
+
+    <buttons names="Shot,Bomb,P1 Start,P2 Start,Coin A,Coin B,Pause" default="A,B,X,Y,R,L,Start"/>
+
+    <rom index="1">
+        <part>01</part>
+    </rom>
+
+    <rom index="0" zip="twincobr.zip" md5="None">
+        <!-- maincpu - starts at 0x0 -->
+        <interleave output="16">
+            <part name="b30_01.7j" crc="07f64d13" map="01"/>
+            <part name="b30_03.7h" crc="41be6978" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="b30_26_ii.8j" crc="3a646618" map="01"/>
+            <part name="b30_27_ii.8h" crc="d7d1e317" map="10"/>
+        </interleave>
+        <part repeat="0x10000">00</part>
+
+        <!-- gfx1 - starts at 0x40000 -->
+        <interleave output="32">
+            <part name="b30_08.8c"  crc="0a254133" map="0010"/>
+            <part name="b30_07.10b" crc="e9e2d4b1" map="0100"/>
+            <part name="b30_06.8b"  crc="a599d845" map="1000"/>
+            <part repeat="0x4000" map="0001">00</part>
+        </interleave>
+        <part repeat="0x30000">00</part>
+
+        <!-- gfx2 - starts at 0x80000 -->
+        <interleave output="32">
+            <part name="b30_16.20b" crc="15b3991d" map="0001"/>
+            <part name="b30_15.18b" crc="d9e2e55d" map="0010"/>
+            <part name="b30_13.18c" crc="13daeac8" map="0100"/>
+            <part name="b30_14.20c" crc="8cc79357" map="1000"/>
+        </interleave>
+
+        <!-- gfx3 - starts at 0xc0000 -->
+        <interleave output="32">
+            <part name="b30_12.16c" crc="b5d48389" map="0001"/>
+            <part name="b30_11.14c" crc="97f20fdc" map="0010"/>
+            <part name="b30_10.12c" crc="170c01db" map="0100"/>
+            <part name="b30_09.10c" crc="44f5accd" map="1000"/>
+        </interleave>
+        <part repeat="0x20000">00</part>
+
+        <!-- scu - starts at 0x100000 -->
+        <interleave output="32">
+            <part name="b30_20.12d" crc="cb4092b8" map="1000"/>
+            <part name="b30_19.14d" crc="9cb8675e" map="0100"/>
+            <part name="b30_18.15d" crc="806fb374" map="0010"/>
+            <part name="b30_17.16d" crc="4264bff8" map="0001"/>
+        </interleave>
+
+        <!-- audiocpu - starts at 0x140000 -->
+        <part name="b30_05_ii.4f" crc="e37b3c44"/>
+        <part repeat="0x08000">00</part>
+
+        <!-- dsp - starts at 0x150000 -->
+        <interleave output="16">
+            <part name="dsp_21.bin" crc="2d135376" map="01"/>
+            <part name="dsp_22.bin" crc="79389a71" map="10"/>
+        </interleave>
+
+        <!-- Total 0x151000 bytes - 1348 kBytes -->
+
+        <!-- Twin Cobra (Visibility Hack) (World) [v1.0] -->
+        <patch offset="0x000fc280">38e4 3000 0000 0000 18e4 1000 0000 0000</patch>
+        <patch offset="0x000fc290">b8c4 a000 0000 0000 d4ec 0000 0000 0000</patch>
+        <patch offset="0x000fc2b0">f9f2 0cf0 0000 0000 1f1c 031c 8000 0000</patch>
+        <patch offset="0x000fc2c0">0706 0106 c000 8000 0303 0003 e000 8000</patch>
+        <patch offset="0x000fc2d0">0101 0001 f090 6080 0000 0000 d0d0 20c0</patch>
+        <patch offset="0x00101e20">0101 0200 80c0 0000 0203 0400 6080 0000</patch>
+        <patch offset="0x00101e30">0e07 0800 f000 0000 0607 0800 f000 0000</patch>
+        <patch offset="0x00101e40">0607 0800 6090 0000 0707 0800 10f0 0000</patch>
+        <patch offset="0x00101e50">0303 0400 e0e0 0000 0200 0300 4000 c000</patch>
+        <patch offset="0x00101ea0">0200 0300 0000 c000 0303 0400 c0c0 2000</patch>
+        <patch offset="0x00101eb0">0707 0800 f0e0 1000 080f 0000 60e0 1000</patch>
+        <patch offset="0x00101ec0">0b0c 0000 20e0 1000 0708 0000 b060 1000</patch>
+        <patch offset="0x00101ed0">0700 0000 a060 0000 0300 0000 40c0 0000</patch>
+        <patch offset="0x00101f20">0300 0000 40c0 0000 0700 0000 a060 0000</patch>
+        <patch offset="0x00101f30">0708 0000 b060 1000 0b0c 0000 20e0 1000</patch>
+        <patch offset="0x00101f40">080f 0000 60e0 1000 0707 0800 f0e0 1000</patch>
+        <patch offset="0x00101f50">0303 0400 c0c0 2000 0200 0300 0000 c000</patch>
+        <patch offset="0x00104890">0706 1900 e060 8000 0e01 0f10 7090 e000</patch>
+        <patch offset="0x001048a0">0d03 0f30 b0f0 c030 061f 1c23 f8f0 e810</patch>
+        <patch offset="0x001048b0">1f16 1e61 78f8 7880 3f37 3748 f8b4 b448</patch>
+        <patch offset="0x001048c0">3d2f 3dc2 b4fc b04c 2a1f 2ad5 fcfc fc00</patch>
+        <patch offset="0x001048d0">3f3e 3ec1 dc74 50ac bfcd ec13 dfed c638</patch>
+        <patch offset="0x001048e0">bfe7 f708 fdf5 ee10 8ffb e710 77e9 5ea0</patch>
+        <patch offset="0x001048f0">cffc fb00 f1df 3ec0 feff ff00 fe3f ff00</patch>
+        <patch offset="0x00104930">1f0f 1f78 b0b8 b850 3938 395f f8ec eca8</patch>
+        <patch offset="0x00104970">8fff ff04 71bf be20 fffe ff01 feff ff00</patch>
+        <patch offset="0x00108b90">0303 0300 2bcc f000 0607 0700 579a e202</patch>
+        <patch offset="0x00108ba0">0607 0700 5798 e101 0607 0700 579c e505</patch>
+        <patch offset="0x00108bb0">0607 0700 579c e505 0607 0700 579c e505</patch>
+        <patch offset="0x00108bc0">0607 0700 5798 e101 0607 0700 579a e303</patch>
+        <patch offset="0x00108bd0">0303 0300 2bcc f000 0303 0300 2bcd f101</patch>
+    </rom>
+</misterromdescription>

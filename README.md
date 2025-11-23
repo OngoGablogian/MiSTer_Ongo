@@ -99,8 +99,13 @@ main=MiSTer_Uneon
 | [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer)         |
 | Salamander (SP ver. clone)                                                                                  |
 | Salamander (SP ver. clone Neo)                                                                              |
+| [SlapFight (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                       |
+| [Terra Cresta (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                    |
+| [Tiger Heli (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                      |
 | [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                       |
 | [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                              |
+| [Twin Cobra (Requires Patreon Core)](https://www.patreon.com/posts/coin-op-presents-110275899)              |
+| [Twin Cobra (Visibility Hack) (Requires Patreon Core)](https://www.romhacking.net/hacks/9236/)              |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                  |
 
 ----
