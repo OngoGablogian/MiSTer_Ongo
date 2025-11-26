@@ -1,5 +1,5 @@
 <misterromdescription>
-    <name>Kyukyoku Tiger (Visibility Hack) (Japan, 2P Co-Op)</name>
+    <name>Kyukyoku Tiger (Japan, 2P Co-op) (Visibility Mod) [v1.0]</name>
     <setname>ktiger_v</setname>
     <rbf>twincobra</rbf>
     <mameversion>0255</mameversion>
@@ -32,7 +32,7 @@
         <part>00</part>
     </rom>
 
-    <rom index="0" zip="ktiger.zip|twincobr.zip" md5="None">
+    <rom index="0" zip="ktiger.zip|twincobr_patched.zip" md5="None">
         <!-- maincpu - starts at 0x0 -->
         <interleave output="16">
             <part name="b30_01.7j" crc="07f64d13" map="01"/>
@@ -72,10 +72,10 @@
 
         <!-- scu - starts at 0x100000 -->
         <interleave output="32">
-            <part name="b30_20.12d" crc="cb4092b8" map="1000"/>
-            <part name="b30_19.14d" crc="9cb8675e" map="0100"/>
-            <part name="b30_18.15d" crc="806fb374" map="0010"/>
-            <part name="b30_17.16d" crc="4264bff8" map="0001"/>
+            <part name="p-b30_20.12d" crc="328e06d9" map="1000"/>
+            <part name="p-b30_19.14d" crc="422a216b" map="0100"/>
+            <part name="p-b30_18.15d" crc="bd7adb4e" map="0010"/>
+            <part name="p-b30_17.16d" crc="c0e0a291" map="0001"/>
         </interleave>
 
         <!-- audiocpu - starts at 0x140000 -->
@@ -86,38 +86,5 @@
         <part name="d70015u_gxc-03_mcu_74002" crc="265b6f32"/>
 
         <!-- Total 0x150C00 bytes - 1347 kBytes -->
-
-        <!-- Kyukyoku Tiger (Visibility Hack) (Japan, 2P Co-Op) [v1.0] -->
-        <patch offset="0x000fc280">38e4 3000 0000 0000 18e4 1000 0000 0000</patch>
-        <patch offset="0x000fc290">b8c4 a000 0000 0000 d4ec 0000 0000 0000</patch>
-        <patch offset="0x000fc2b0">f9f2 0cf0 0000 0000 1f1c 031c 8000 0000</patch>
-        <patch offset="0x000fc2c0">0706 0106 c000 8000 0303 0003 e000 8000</patch>
-        <patch offset="0x000fc2d0">0101 0001 f090 6080 0000 0000 d0d0 20c0</patch>
-        <patch offset="0x00101e20">0101 0200 80c0 0000 0203 0400 6080 0000</patch>
-        <patch offset="0x00101e30">0e07 0800 f000 0000 0607 0800 f000 0000</patch>
-        <patch offset="0x00101e40">0607 0800 6090 0000 0707 0800 10f0 0000</patch>
-        <patch offset="0x00101e50">0303 0400 e0e0 0000 0200 0300 4000 c000</patch>
-        <patch offset="0x00101ea0">0200 0300 0000 c000 0303 0400 c0c0 2000</patch>
-        <patch offset="0x00101eb0">0707 0800 f0e0 1000 080f 0000 60e0 1000</patch>
-        <patch offset="0x00101ec0">0b0c 0000 20e0 1000 0708 0000 b060 1000</patch>
-        <patch offset="0x00101ed0">0700 0000 a060 0000 0300 0000 40c0 0000</patch>
-        <patch offset="0x00101f20">0300 0000 40c0 0000 0700 0000 a060 0000</patch>
-        <patch offset="0x00101f30">0708 0000 b060 1000 0b0c 0000 20e0 1000</patch>
-        <patch offset="0x00101f40">080f 0000 60e0 1000 0707 0800 f0e0 1000</patch>
-        <patch offset="0x00101f50">0303 0400 c0c0 2000 0200 0300 0000 c000</patch>
-        <patch offset="0x00104890">0706 1900 e060 8000 0e01 0f10 7090 e000</patch>
-        <patch offset="0x001048a0">0d03 0f30 b0f0 c030 061f 1c23 f8f0 e810</patch>
-        <patch offset="0x001048b0">1f16 1e61 78f8 7880 3f37 3748 f8b4 b448</patch>
-        <patch offset="0x001048c0">3d2f 3dc2 b4fc b04c 2a1f 2ad5 fcfc fc00</patch>
-        <patch offset="0x001048d0">3f3e 3ec1 dc74 50ac bfcd ec13 dfed c638</patch>
-        <patch offset="0x001048e0">bfe7 f708 fdf5 ee10 8ffb e710 77e9 5ea0</patch>
-        <patch offset="0x001048f0">cffc fb00 f1df 3ec0 feff ff00 fe3f ff00</patch>
-        <patch offset="0x00104930">1f0f 1f78 b0b8 b850 3938 395f f8ec eca8</patch>
-        <patch offset="0x00104970">8fff ff04 71bf be20 fffe ff01 feff ff00</patch>
-        <patch offset="0x00108b90">0303 0300 2bcc f000 0607 0700 579a e202</patch>
-        <patch offset="0x00108ba0">0607 0700 5798 e101 0607 0700 579c e505</patch>
-        <patch offset="0x00108bb0">0607 0700 579c e505 0607 0700 579c e505</patch>
-        <patch offset="0x00108bc0">0607 0700 5798 e101 0607 0700 579a e303</patch>
-        <patch offset="0x00108bd0">0303 0300 2bcc f000 0303 0300 2bcd f101</patch>
     </rom>
 </misterromdescription>
