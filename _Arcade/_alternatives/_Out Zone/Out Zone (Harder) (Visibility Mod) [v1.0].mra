@@ -1,0 +1,62 @@
+<misterromdescription>
+    <name>Out Zone (Harder) (Visibility Mod) [v1.0]</name>
+    <setname>outzoneh_v</setname>
+    <rbf>zerowing_20240404</rbf>
+    <mameversion>0254</mameversion>
+    <year>1990</year>
+    <manufacturer>Toaplan</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Vertical (CW)</rotation>
+    <region>Japan</region>
+
+    <switches default="00,00,00,00,00,00,00,00">
+        <!-- DSWA -->
+        <dip name="Screen Rotation" bits="1" ids="Off,On"/>
+        <dip name="Function Check" bits="2" ids="Off,On"/>
+        <dip name="Demo Sound" bits="3" ids="On,Off"/>
+        <dip name="Coin SW1" bits="4,5" ids="1/1,2/1,1/2,3/1,2/1,4/1,2/3"/>
+        <dip name="Coin SW2" bits="6,7" ids="1/1,1/2,1/2,1/3,2/1,1/4,2/3,1/6"/>
+        <!-- DSWB -->
+        <dip name="Difficulty" bits="8,9" ids="Normal,Easy,Difficult,More Difficult"/>
+        <dip name="Extra Player" bits="10,11" ids="300k(E),200/500k(E),300k,None"/>
+        <dip name="No. of Player" bits="12,13" ids="3,5,2,1"/>
+        <dip name="No Death Mode" bits="14" ids="Off,On"/>
+        <!-- TJUMP -->
+        <dip name="Region" bits="16,19" ids="Japan-0,USA-0,Europe,Hong Kong,Korea,Taiwan-0,Taiwan-1,USA-1,Hong Kong/China,Japan-1,Japan-2,Japan-3,Japan-4,Japan-5,Japan-6,Japan-7"/>
+    </switches>
+
+    <buttons names="Shot,Bomb,-,Slow Scroll,P1 Start,P2 Start,Coin A,Coin B,Pause" default="A,B,X,Y,R,L,Start,Select"/>
+
+    <rom index="1">
+        <part>02</part>
+    </rom>
+
+    <rom index="0" zip="outzoneh.zip|outzone_patched.zip" md5="None">
+        <!-- maincpu - starts at 0x0 -->
+        <interleave output="16">
+            <part name="tp_018_07h.bin" crc="0c2ac02d" map="01"/>
+            <part name="tp_018_08h.bin" crc="ca7e48aa" map="10"/>
+        </interleave>
+        <part repeat="0x40000"> FF</part>
+
+        <!-- gfx1 - starts at 0x80000 -->
+        <interleave output="32">
+            <part name="tp-018_rom5.bin" crc="c64ec7b6" map="0021"/>
+            <part name="tp-018_rom6.bin" crc="64b6c5ac" map="2100"/>
+        </interleave>
+
+        <!-- gfx2 - starts at 0x180000 -->
+        <interleave output="32">
+            <part name="p-tp-018_rom2.1c" crc="a14beaf7" map="0001"/>
+            <part name="p-tp-018_rom1.1e" crc="70497466" map="0010"/>
+            <part name="p-tp-018_rom3.1d" crc="f000b848" map="0100"/>
+            <part name="p-tp-018_rom4.1b" crc="59ff9637" map="1000"/>
+        </interleave>
+
+        <!-- audiocpu - starts at 0x200000 -->
+        <part name="tp_018_09.bin" crc="73d8e235"/>
+
+        <!-- Total 0x208000 bytes - 2080 kBytes -->
+    </rom>
+</misterromdescription>
