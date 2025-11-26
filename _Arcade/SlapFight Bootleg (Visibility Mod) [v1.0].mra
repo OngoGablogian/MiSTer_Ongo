@@ -24,7 +24,7 @@
 		<dip bits="8" name="Unused SW1:8" ids="OFF,ON"/>	
 		<dip bits="16" name="Unused SW2:8" ids="ON,OFF"/>
 	</switches>		
-	<rom index="0" md5="none" zip="alcon_patched.zip|slapfighb1.zip" type="merged|nonmerged">
+	<rom index="0" md5="none" zip="alcon.zip|slapfighb1.zip" type="merged|nonmerged">
 		<part crc="9a7ac8b3" name="sf_r19jb.bin"/>
 		<part crc="18bb2f12" name="a77_01-1.8n"/>
 		<part crc="87f4705a" name="a77_02.12d"/>
@@ -35,13 +35,39 @@
 		<part crc="5FAEEEA3" name="a77_06.6n"/>
 		<part crc="E92D9D60" name="a77_07.6m"/>
 		<part crc="B6358305" name="a77_08.6k"/>
-		<part crc="60321aa6" name="p-a77_09.7h"/>
+		<part crc="587113AE" name="a77_09.7h"/>
 		<part crc="422D946B" name="a77_10.8h"/>
-		<part crc="dcd776fb" name="p-a77_11.7j"/>
-		<part crc="025195bb" name="p-a77_12.8j"/>
+		<part crc="B1B7B925" name="a77_11.7j"/>
+		<part crc="8545D397" name="a77_12.8j"/>
 		<part crc="a0efaf99" name="21_82s129.12q"/>
 		<part crc="5cbf9fbf" name="19_82s129.12n"/>
 		<part crc="a56d57e5" name="20_82s129.12m"/>
+
+		<!-- SlapFight Bootleg (Visibility Mod) [v1.0] -->
+		<patch offset="0x00039f00">0000 0000 0000 0000 0000 01c0 01c0 07f0</patch>
+		<patch offset="0x00039f10">07f0 07f0 01c0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00039f20">0000 0000 0000 0000 0000 01c0 01c0 07f0</patch>
+		<patch offset="0x00039f30">07f0 07f0 01c0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00039f40">0000 0000 0000 0000 0000 01c0 01c0 07f0</patch>
+		<patch offset="0x00039f50">07f0 07f0 01c0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00039f60">0000 0000 0000 0000 0000 01c0 01c0 07f0</patch>
+		<patch offset="0x00039f70">07f0 07f0 01c0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00049f00">0000 0000 0000 0000 0000 0000 0220 0470</patch>
+		<patch offset="0x00049f10">0630 0710 0220 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00049f20">0000 0000 0000 0000 0000 0000 0220 0710</patch>
+		<patch offset="0x00049f30">0630 0470 0220 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00049f40">0000 0000 0000 0000 0000 01c0 03a0 0100</patch>
+		<patch offset="0x00049f50">0000 0040 02e0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00049f60">0000 0000 0000 0000 0000 01c0 02e0 0040</patch>
+		<patch offset="0x00049f70">0000 0100 03a0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00051f00">0000 0000 0000 0000 0000 01c0 03a0 0570</patch>
+		<patch offset="0x00051f10">0630 0750 02e0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00051f20">0000 0000 0000 0000 0000 01c0 02e0 0750</patch>
+		<patch offset="0x00051f30">0630 0570 03a0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00051f40">0000 0000 0000 0000 0000 01c0 03a0 0570</patch>
+		<patch offset="0x00051f50">0630 0750 02e0 01c0 0000 0000 0000 0000</patch>
+		<patch offset="0x00051f60">0000 0000 0000 0000 0000 01c0 02e0 0750</patch>
+		<patch offset="0x00051f70">0630 0570 03a0 01c0 0000 0000 0000 0000</patch>
 	</rom>
 	<rom index="1">
 		<part>0</part>

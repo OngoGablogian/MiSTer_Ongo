@@ -32,7 +32,7 @@
         <part>00</part>
     </rom>
 
-    <rom index="0" zip="outzonecv.zip|outzone_patched.zip" md5="None">
+    <rom index="0" zip="outzonecv.zip|outzone.zip" md5="None">
         <!-- maincpu - starts at 0x0 -->
         <interleave output="16">
             <part name="tp_018_07+.bin" crc="8768d843" map="01"/>
@@ -46,11 +46,18 @@
         </interleave>
         <!-- gfx2 - starts at 0x180000 -->
         <interleave output="32">
-            <part name="p-tp-018_rom2.1c" crc="a14beaf7" map="0001"/>
-            <part name="p-tp-018_rom1.1e" crc="70497466" map="0010"/>
-            <part name="p-tp-018_rom3.1d" crc="f000b848" map="0100"/>
-            <part name="p-tp-018_rom4.1b" crc="59ff9637" map="1000"/>
+            <part name="tp-018_rom2.bin" crc="6bb72d16" map="0001"/>
+            <part name="tp-018_rom1.bin" crc="0934782d" map="0010"/>
+            <part name="tp-018_rom3.bin" crc="ec903c07" map="0100"/>
+            <part name="tp-018_rom4.bin" crc="50cbf1a8" map="1000"/>
         </interleave>
+
+        <!-- Out Zone (Zero Wing TP-015 PCB Conversion) (Visibility Mod) [v1.0] -->
+        <patch offset="0x001c1860">0024 003c 243c 3c42 66cb 7681 105e 6281</patch>
+        <patch offset="0x001c1870">185a 6681 66c3 7e81 243c 3c42 0024 003c</patch>
+        <patch offset="0x001c1880">243c 003c 2442 007e f3a5 3cc3 2889 34c3</patch>
+        <patch offset="0x001c1890">2481 3cc3 ffa5 3cc3 2442 007e 243c 003c</patch>
+
         <!-- audiocpu - starts at 0x200000 -->
         <part name="tp_018_09+.bin" crc="b7201606"/>
         <!-- Total 0x208000 bytes - 2080 kBytes -->

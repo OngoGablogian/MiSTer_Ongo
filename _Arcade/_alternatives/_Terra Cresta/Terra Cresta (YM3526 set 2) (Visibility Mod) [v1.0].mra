@@ -24,7 +24,7 @@
 
     <buttons names="Cannon Beam,Formation,Start (1p),Start (2p),Coin,Pause" default="A,B,X,R,L,Start"/>
 
-    <rom index="0" zip="terracreo.zip|terracre_patched.zip" md5="None">
+    <rom index="0" zip="terracreo.zip|terracre.zip" md5="None">
 
         <!-- maincpu - starts at 0x0 -->
         <interleave output="16">
@@ -50,9 +50,9 @@
         <part repeat="0x10000"> FF</part>
 
         <!-- gfx3 - starts at 0x40000 -->
-        <part name="p-7.6e" crc="aeece51d"/>
+        <part name="14.6e" crc="bcf7740b"/>
         <part name="15.7e" crc="a70b565c"/>
-        <part name="p-9.6g" crc="c95c8990"/>
+        <part name="16.6g" crc="4a9ec3e6"/>
         <part name="17.7g" crc="450749fc"/>
         <part repeat="0x10000"> FF</part>
 
@@ -75,5 +75,23 @@
         <!-- user1 - starts at 0x7E400 -->
         <part name="5.4e" crc="2c43991f"/>
         <!-- Total 0x7E500 bytes - 505 kBytes -->
+    
+        <!-- Terra Cresta (YM3526 set 2) (Visibility Mod) [v1.0] -->
+        <patch offset="0x000426d0">0000 0000 0000 6600 0060 6900 0060 9900</patch>
+        <patch offset="0x000426e0">0060 9900 0060 6900 0000 6600 0000 0000</patch>
+        <patch offset="0x00042710">0000 2200 0020 9900 0092 9300 0092 3300</patch>
+        <patch offset="0x00042720">0092 2200 0092 9200 0020 9900 0000 2200</patch>
+        <patch offset="0x00042750">0000 3300 0020 4400 0021 9400 0021 4400</patch>
+        <patch offset="0x00042760">0021 4300 0011 3300 0010 2200 0000 1100</patch>
+        <patch offset="0x00042790">0000 bb00 00d0 aa00 00de 9a00 00de aa00</patch>
+        <patch offset="0x000427a0">00de ab00 00ee bb00 00e0 dd00 0000 ee00</patch>
+        <patch offset="0x0004a6d0">0000 0000 0066 0000 0096 0600 0099 0600</patch>
+        <patch offset="0x0004a6e0">0099 0600 0096 0600 0066 0000 0000 0000</patch>
+        <patch offset="0x0004a710">0022 0000 0099 0200 0029 2900 0022 2900</patch>
+        <patch offset="0x0004a720">0011 2900 0019 2900 0099 0200 0022 0000</patch>
+        <patch offset="0x0004a750">0032 0000 0043 0300 0043 3400 0033 3400</patch>
+        <patch offset="0x0004a760">0032 3400 0022 2300 0021 0200 0011 0000</patch>
+        <patch offset="0x0004a790">00bd 0000 00ab 0b00 00ab ba00 00bb ba00</patch>
+        <patch offset="0x0004a7a0">00bd ba00 00dd db00 00de 0d00 00ee 0000</patch>
     </rom>
 </misterromdescription>

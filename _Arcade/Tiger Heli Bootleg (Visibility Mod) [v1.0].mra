@@ -1,5 +1,5 @@
 <misterromdescription>
-	<name>Tiger Heli (Bootleg) (Visibility Mod) [v1.0]</name>
+	<name>Tiger Heli Bootleg (Visibility Mod) [v1.0]</name>
 	<mameversion>0245</mameversion>
 	<setname>tigerhb1_v</setname>
 	<parent>Tigerh</parent>
@@ -22,7 +22,7 @@
 		<dip bits="18,19" name="Difficulty" ids="Difficult,Normal,Easy"/>
 		<dip bits="16,17" name="Number of Tiger Helis" ids="2,1,5,3"/>
 	</switches>		
-	<rom index="0" md5="none" zip="tigerh_patched.zip|tigerhb2.zip" type="merged|nonmerged">
+	<rom index="0" md5="none" zip="tigerh.zip|tigerhb2.zip" type="merged|nonmerged">
 		<part crc="ef738c68" name="rom00_09.bin"/>
 		<part crc="65DF2152" name="a47_01.8n"/>
 		<part crc="36e250b9" name="rom02_07.bin"/>
@@ -39,17 +39,48 @@
 		<part repeat="0x4000"> FF </part>
 		<part crc="31FAE8A8" name="a47_09.4m"/>
 		<part repeat="0x4000"> FF </part>
-		<part crc="ea84620f" name="p-a47_10.6h"/>
+		<part crc="E1CF844E" name="a47_10.6h"/>
 		<part repeat="0x4000"> FF </part>
-		<part crc="71c32b3b" name="p-a47_11.8h"/>
+		<part crc="744FAE9B" name="a47_11.8h"/>
 		<part repeat="0x4000"> FF </part>
-		<part crc="43d7f04a" name="p-a47_12.6j"/>	
+		<part crc="C064ECDB" name="a47_12.6j"/>	
 		<part repeat="0x4000"> FF </part>
-		<part crc="f02962ef" name="p-a47_13.8j"/>			
+		<part crc="739A7E7E" name="a47_13.8j"/>			
 		<part repeat="0x4000"> FF </part>
 		<part crc="2c69350d" name="82s129.12q"/>
 		<part crc="25f273f2" name="82s129.12n"/>
 		<part crc="7142e972" name="82s129.12m"/>		
+
+		<!-- Tiger Heli Bootleg (Visibility Mod) [v1.0] -->
+		<patch offset="0x00038700">0000 0000 0000 0000 0180 01c0 00e0 00e0</patch>
+		<patch offset="0x00038710">0600 0300 0100 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00038720">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00038730">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00038740">0000 0000 0000 0000 0080 02c0 0760 0780</patch>
+		<patch offset="0x00038750">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00040700">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00040710">01e0 00c0 0080 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00040720">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00040730">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00040740">0000 0000 0000 0000 0180 01c0 00e0 0060</patch>
+		<patch offset="0x00040760">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00040770">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00048700">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00048710">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00048720">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00048730">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00048740">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00048750">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00048760">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00048770">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00050700">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00050710">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00050720">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00050730">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00050740">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00050750">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
+		<patch offset="0x00050760">0000 0000 0000 0000 0180 03c0 07e0 07e0</patch>
+		<patch offset="0x00050770">07e0 03c0 0180 0000 0000 0000 0000 0000</patch>
 	</rom>
 	<rom index="1">
 		<part>1</part>
