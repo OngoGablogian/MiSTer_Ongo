@@ -91,8 +91,10 @@ main=MiSTer_Uneon
 | [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                    |
 | [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)                                  |
 | [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                  |
+| [Gradius II (ver.xh)](https://github.com/Toryalai1/Arcade_Offset)                                           |
 | [Hotdog Storm (Requires Patreon CAVE Core)](https://www.patreon.com/nullobject)                             |
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                           |
+| [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                        |
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                             |
 | [Pacu Pacu (v1.1)](https://discord.com/channels/647909397477195803/1046942006942900304/1408732261028860004) |
 | [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                                      |
