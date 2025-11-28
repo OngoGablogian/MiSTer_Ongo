@@ -54,7 +54,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
 
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you MiSTer.ini file, please remove them.
 
 ```
@@ -63,15 +63,15 @@ main=MiSTer_CDi
 ```
 
 
-> [!IMPORTANT]  
-> The Neo Geo Pocket Color MRA in the consoles folder requires that you symlink the "_Arcade/Cores" folder to "_Console/cores". This is necessary until the core leaves beta. To do this, enter the command listed below into the Linux command line on your MiSTer. 
+> [!IMPORTANT]
+> The Neo Geo Pocket Color MRA in the consoles folder requires that you symlink the "_Arcade/Cores" folder to "_Console/cores". This is necessary until the core leaves beta. To do this, enter the command listed below into the Linux command line on your MiSTer.
 
 ```
 ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 ```
 
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > For the Soyuz-Neon PC-11/16 (Uneon) core to function properly you must add the lines below to your MiSTer.ini file.
 
 ```
@@ -79,6 +79,14 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 main=MiSTer_Uneon
 ```
 
+
+> [!IMPORTANT]
+> Since the release of Downloader v2.3, I'd recommended adding the lines below to your 'downloader.ini' file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
+
+```
+[MiSTer]
+file_checking = 'exhaustive'
+```
 
 ----
 
@@ -130,7 +138,7 @@ main=MiSTer_Uneon
 
 ----
 
-> [!TIP]  
+> [!TIP]
 > Here are some other recommended repositories you can add to your 'downloader.ini' file.
 
 [MiSTer Unstable Nightlies](https://github.com/MiSTer-unstable-nightlies)
@@ -159,7 +167,7 @@ db_url = https://github.com/misteraddons/Reflex-Adapt/raw/main/reflexadapt.json.
 
 ----
 
-> [!NOTE]  
+> [!NOTE]
 > If you are a developer of one of the cores included in this repository and would like it removed, please create an issue on the [GitHub page](https://github.com/OngoGablogian/MiSTer_Ongo/issues).
 
 ----
