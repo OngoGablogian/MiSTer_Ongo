@@ -1,14 +1,14 @@
 <misterromdescription>
-    <name>Twin Cobra (World) (Visibility Mod) [v1.0]</name>
-    <setname>twincobr_v</setname>
+    <name>Twin Twist (US)</name>
+    <setname>twintwstu</setname>
     <rbf>twincobr_mister</rbf>
     <mameversion>0281</mameversion>
     <year>1987</year>
-    <manufacturer>Toaplan / Taito Corporation</manufacturer>
+    <manufacturer>Toaplan / Taito America Corporation (Romstar License)</manufacturer>
     <players>2</players>
     <joystick>8-way</joystick>
     <rotation>Vertical (CW)</rotation>
-    <region>World</region>
+    <region>US</region>
     <platform>Twin Cobra Platform</platform>
     <category>Shoot'em up</category>
     <catver>Shooter / Flying Horizontal</catver>
@@ -30,7 +30,7 @@
     <buttons names="Shot,Bomb,Start,Coin,Pause" default="A,B,X,Y,R,L,Start"/>
 
     <rom index="1">
-        <part>02</part>
+        <part>03</part>
     </rom>
 
     <rom index="0" zip="twincobr_patched.zip" md5="None">
@@ -40,16 +40,16 @@
             <part name="b30_03.7h" crc="41be6978" map="10"/>
         </interleave>
         <interleave output="16">
-            <part name="b30_26_ii.8j" crc="3a646618" map="01"/>
-            <part name="b30_27_ii.8h" crc="d7d1e317" map="10"/>
+            <part name="b30_26_i.8j" crc="bdd00ba4" map="01"/>
+            <part name="b30_27_i.8h" crc="ed600907" map="10"/>
         </interleave>
         <part repeat="0x10000">00</part>
 
         <!-- gfx1 - starts at 0x40000 -->
         <interleave output="32">
-            <part name="b30_08.8c"  crc="0a254133" map="0010"/>
+            <part name="b30_08.8c" crc="0a254133" map="0010"/>
             <part name="b30_07.10b" crc="e9e2d4b1" map="0100"/>
-            <part name="b30_06.8b"  crc="a599d845" map="1000"/>
+            <part name="b30_06.8b" crc="a599d845" map="1000"/>
             <part repeat="0x4000" map="0001">00</part>
         </interleave>
         <part repeat="0x30000">00</part>
@@ -73,14 +73,14 @@
 
         <!-- scu - starts at 0x100000 -->
         <interleave output="32">
-            <part name="p-b30_20.12d" crc="328e06d9" map="1000"/>
-            <part name="p-b30_19.14d" crc="422a216b" map="0100"/>
-            <part name="p-b30_18.15d" crc="bd7adb4e" map="0010"/>
-            <part name="p-b30_17.16d" crc="c0e0a291" map="0001"/>
+            <part name="tcw20" crc="41c8f4ea" map="1000"/>
+            <part name="tcw19" crc="8d5db99e" map="0100"/>
+            <part name="tcw18" crc="eade1ca3" map="0010"/>
+            <part name="tcw17" crc="6a559622" map="0001"/>
         </interleave>
 
         <!-- audiocpu - starts at 0x140000 -->
-        <part name="b30_05_ii.4f" crc="e37b3c44"/>
+        <part name="b30_05.4f" crc="1a8f1e10"/>
         <part repeat="0x08000">00</part>
 
         <!-- dsp - starts at 0x150000 -->

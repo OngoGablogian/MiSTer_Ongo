@@ -1,16 +1,19 @@
 <misterromdescription>
     <name>Kyukyoku Tiger (Japan, 1P Set) (Visibility Mod) [v1.0]</name>
     <setname>ktigera_v</setname>
-    <rbf>twincobra</rbf>
-    <mameversion>0255</mameversion>
+    <rbf>twincobr_mister</rbf>
+    <mameversion>0281</mameversion>
     <year>1987</year>
     <manufacturer>Toaplan / Taito Corporation</manufacturer>
     <players>2</players>
     <joystick>8-way</joystick>
     <rotation>Vertical (CW)</rotation>
     <region>Japan</region>
+    <platform>Twin Cobra Platform</platform>
+    <category>Shoot'em up</category>
+    <catver>Shooter / Flying Horizontal</catver>
 
-    <switches default="01,80,00,00,00,00,00,00">
+    <switches default="01,80">
         <!-- DSWA -->
         <dip name="Cabinet Type" bits="0" ids="Table,Upright"/>
         <dip name="Screen Inversion" bits="1" ids="Normal,Invert"/>
@@ -26,13 +29,13 @@
         <dip name="Continue Play" bits="15" ids="No,Yes"/>
     </switches>
 
-    <buttons names="Shot,Bomb,P1 Start,P2 Start,Coin A,Coin B,Pause" default="A,B,X,Y,R,L,Start"/>
+    <buttons names="Shot,Bomb,Start,Coin,Pause" default="A,B,X,Y,R,L,Start"/>
 
     <rom index="1">
-        <part>00</part>
+        <part>01</part>
     </rom>
 
-    <rom index="0" zip="ktigera.zip|twincobr_patched.zip" md5="None">
+    <rom index="0" zip="twincobr_patched.zip" md5="None">
         <!-- maincpu - starts at 0x0 -->
         <interleave output="16">
             <part name="b30_01.7j" crc="07f64d13" map="01"/>
@@ -84,7 +87,6 @@
 
         <!-- dsp - starts at 0x150000 -->
         <part name="d70015u_gxc-03_mcu_74002" crc="265b6f32"/>
-
         <!-- Total 0x150C00 bytes - 1347 kBytes -->
     </rom>
 </misterromdescription>

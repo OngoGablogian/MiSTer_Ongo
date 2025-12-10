@@ -1,20 +1,21 @@
 <misterromdescription>
-    <name>Twin Cobra (World) (Visibility Mod) [v1.0]</name>
-    <setname>twincobr_v</setname>
+    <name>Twin Twist (Japan, 2P Co-Op)</name>
+    <setname>twintwst</setname>
     <rbf>twincobr_mister</rbf>
     <mameversion>0281</mameversion>
-    <year>1987</year>
+    <year>1989</year>
     <manufacturer>Toaplan / Taito Corporation</manufacturer>
     <players>2</players>
     <joystick>8-way</joystick>
     <rotation>Vertical (CW)</rotation>
-    <region>World</region>
+    <region>Japan</region>
     <platform>Twin Cobra Platform</platform>
     <category>Shoot'em up</category>
     <catver>Shooter / Flying Horizontal</catver>
 
-    <switches default="00,00">
+    <switches default="00,80">
         <!-- DSWA -->
+        <dip name="Invulnerability" bits="0" ids="Off,On"/>
         <dip name="Screen Inversion" bits="1" ids="Normal,Invert"/>
         <dip name="Service Mode" bits="2" ids="Normal,Screen Test"/>
         <dip name="Advertise Sound" bits="3" ids="On,Off"/>
@@ -22,15 +23,16 @@
         <dip name="Coin B" bits="6,7" ids="1/1,1/2,2/1,2/3"/>
         <!-- DSWB -->
         <dip name="Game Difficulty" bits="8,9" ids="B,A,C,D"/>
-        <dip name="Extend" bits="10,11" ids="50k/150k,70k/200k,50k Only,100k Only"/>
+        <dip name="Extend" bits="10,11" ids="70k/200k,50k/150k,100k Only,None"/>
         <dip name="Hero Counts" bits="12,13" ids="3,5,4,2"/>
-        <dip name="Dip Switch Display" bits="14" ids="Off,On"/>
+        <dip name="Screen Halt" bits="14" ids="Off,On"/>
+        <dip name="Continue Play" bits="15" ids="No,Yes"/>
     </switches>
 
     <buttons names="Shot,Bomb,Start,Coin,Pause" default="A,B,X,Y,R,L,Start"/>
 
     <rom index="1">
-        <part>02</part>
+        <part>00</part>
     </rom>
 
     <rom index="0" zip="twincobr_patched.zip" md5="None">
@@ -40,16 +42,16 @@
             <part name="b30_03.7h" crc="41be6978" map="10"/>
         </interleave>
         <interleave output="16">
-            <part name="b30_26_ii.8j" crc="3a646618" map="01"/>
-            <part name="b30_27_ii.8h" crc="d7d1e317" map="10"/>
+            <part name="b30_02.8j" crc="321e2be6" map="01"/>
+            <part name="b30_04.8h" crc="c3f960ff" map="10"/>
         </interleave>
         <part repeat="0x10000">00</part>
 
         <!-- gfx1 - starts at 0x40000 -->
         <interleave output="32">
-            <part name="b30_08.8c"  crc="0a254133" map="0010"/>
+            <part name="b30_08.8c" crc="0a254133" map="0010"/>
             <part name="b30_07.10b" crc="e9e2d4b1" map="0100"/>
-            <part name="b30_06.8b"  crc="a599d845" map="1000"/>
+            <part name="b30_06.8b" crc="a599d845" map="1000"/>
             <part repeat="0x4000" map="0001">00</part>
         </interleave>
         <part repeat="0x30000">00</part>
@@ -73,21 +75,18 @@
 
         <!-- scu - starts at 0x100000 -->
         <interleave output="32">
-            <part name="p-b30_20.12d" crc="328e06d9" map="1000"/>
-            <part name="p-b30_19.14d" crc="422a216b" map="0100"/>
-            <part name="p-b30_18.15d" crc="bd7adb4e" map="0010"/>
-            <part name="p-b30_17.16d" crc="c0e0a291" map="0001"/>
+            <part name="tcw20" crc="41c8f4ea" map="1000"/>
+            <part name="tcw19" crc="8d5db99e" map="0100"/>
+            <part name="tcw18" crc="eade1ca3" map="0010"/>
+            <part name="tcw17" crc="6a559622" map="0001"/>
         </interleave>
 
         <!-- audiocpu - starts at 0x140000 -->
-        <part name="b30_05_ii.4f" crc="e37b3c44"/>
+        <part name="b30_05.4f" crc="1a8f1e10"/>
         <part repeat="0x08000">00</part>
 
         <!-- dsp - starts at 0x150000 -->
-        <interleave output="16">
-            <part name="dsp_21.bin" crc="2d135376" map="01"/>
-            <part name="dsp_22.bin" crc="79389a71" map="10"/>
-        </interleave>
-        <!-- Total 0x151000 bytes - 1348 kBytes -->
+        <part name="d70015u_gxc-03_mcu_74002" crc="265b6f32"/>
+        <!-- Total 0x150C00 bytes - 1347 kBytes -->
     </rom>
 </misterromdescription>

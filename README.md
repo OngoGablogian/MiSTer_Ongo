@@ -114,7 +114,8 @@ file_checking = 'exhaustive'
 | [Tiger Heli (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                             |
 | [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                              |
 | [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                                     |
-| [Twin Cobra (Visibility Hack) (Requires Patreon Core)](https://www.romhacking.net/hacks/9236/)                     |
+| [Twin Cobra (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                             |
+| Twin Twist (Twin Cobra Hack)                                                                                       |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                         |
 
 ----

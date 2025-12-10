@@ -1,6 +1,6 @@
 <misterromdescription>
-    <name>Twin Cobra (World) (Visibility Mod) [v1.0]</name>
-    <setname>twincobr_v</setname>
+    <name>Twin Twist (World)</name>
+    <setname>twintwstw</setname>
     <rbf>twincobr_mister</rbf>
     <mameversion>0281</mameversion>
     <year>1987</year>
@@ -73,10 +73,10 @@
 
         <!-- scu - starts at 0x100000 -->
         <interleave output="32">
-            <part name="p-b30_20.12d" crc="328e06d9" map="1000"/>
-            <part name="p-b30_19.14d" crc="422a216b" map="0100"/>
-            <part name="p-b30_18.15d" crc="bd7adb4e" map="0010"/>
-            <part name="p-b30_17.16d" crc="c0e0a291" map="0001"/>
+            <part name="tcw20" crc="41c8f4ea" map="1000"/>
+            <part name="tcw19" crc="8d5db99e" map="0100"/>
+            <part name="tcw18" crc="eade1ca3" map="0010"/>
+            <part name="tcw17" crc="6a559622" map="0001"/>
         </interleave>
 
         <!-- audiocpu - starts at 0x140000 -->
