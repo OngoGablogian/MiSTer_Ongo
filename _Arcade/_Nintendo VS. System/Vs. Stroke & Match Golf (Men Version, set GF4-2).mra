@@ -25,7 +25,7 @@
         <part crc="a3e286d3" name="mds-gf4-2.1d"/>
         <part crc="e477e48b" name="mds-gf4-2.1c"/>
         <part crc="7d80b511" name="mds-gf4-2.1b"/>
-        <part crc="0f0f3a24" name="mds-gf4-2.1a"/>
+        <part crc="7b767da6" name="mds-gf4-2.1a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
         <part crc="2782a3e5" name="mds-gf4-2 f.2b or 8b"/>
@@ -36,7 +36,7 @@
         <part crc="a3e286d3" name="mds-gf4-2.1d"/>
         <part crc="e477e48b" name="mds-gf4-2.1c"/>
         <part crc="7d80b511" name="mds-gf4-2.1b"/>
-        <part crc="0f0f3a24" name="mds-gf4-2.1a"/>
+        <part crc="7b767da6" name="mds-gf4-2.1a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
         <part crc="2782a3e5" name="mds-gf4-2 f.2b or 8b"/>

@@ -22,25 +22,25 @@
     </switches>
     <rom index="0" zip="excitebkj.zip|excitebk.zip">
         <!--Region: prg, Size: 0x8000 bytes-->
-        <part crc="aa87037f" name="mds-eb4-4 a.6d"/>
+        <part crc="6aa87037" name="mds-eb4-4 a.6d"/>
         <part crc="bdb317db" name="mds-eb4-4 a.6c"/>
         <part crc="d1afe2dd" name="mds-eb4-4 a.6b"/>
-        <part crc="c5b7dab7" name="mds-eb4-4 a.6a"/>
+        <part crc="46711d0e" name="mds-eb4-4 a.6a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="f2e59c76" name="mds-eb4-4 a.8b"/>
-        <part crc="a7f2f1f0" name="mds-eb4-4 a.8a"/>
+        <part crc="62a76c52" name="mds-eb4-4 a.8b"/>
+        <part crc="a9b49a05" name="mds-eb4-4 a.8a"/>
         <part repeat="114688">00</part>
         <!--NES2-->
         <!--Region: prg, Size: 0x8000 bytes-->
-        <part crc="aa87037f" name="mds-eb4-4 a.6d"/>
+        <part crc="6aa87037" name="mds-eb4-4 a.6d"/>
         <part crc="bdb317db" name="mds-eb4-4 a.6c"/>
         <part crc="d1afe2dd" name="mds-eb4-4 a.6b"/>
-        <part crc="c5b7dab7" name="mds-eb4-4 a.6a"/>
+        <part crc="46711d0e" name="mds-eb4-4 a.6a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="f2e59c76" name="mds-eb4-4 a.8b"/>
-        <part crc="a7f2f1f0" name="mds-eb4-4 a.8a"/>
+        <part crc="62a76c52" name="mds-eb4-4 a.8b"/>
+        <part crc="a9b49a05" name="mds-eb4-4 a.8a"/>
         <part repeat="114688">00</part>
     </rom>
     <rom index="1">
