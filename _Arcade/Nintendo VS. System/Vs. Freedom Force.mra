@@ -1,0 +1,42 @@
+<misterromdescription>
+    <name>Vs. Freedom Force</name>
+    <setname>vsfdf</setname>
+    <year>1988</year>
+    <manufacturer>Sunsoft</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="10,10">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="3,4" name="Health Awarded At" ids="20k_60k,20k_60k_Every_60k,10k_50k,10k_50k_Every_50k"/>
+        <dip bits="5,6" name="Difficulty (Damage)" ids="Normal,Hard,Easy,Hardest"/>
+        <dip bits="7" name="Difficulty (Enemy)" ids="Normal,Hard"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="11,12" name="Health Awarded At" ids="20k_60k,20k_60k_Every_60k,10k_50k,10k_50k_Every_50k"/>
+        <dip bits="13,14" name="Difficulty (Damage)" ids="Normal,Hard,Easy,Hardest"/>
+        <dip bits="15" name="Difficulty (Enemy)" ids="Normal,Hard"/>
+    </switches>
+    <rom index="0" zip="vsfdf.zip">
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="3bce8f0f" name="prg0"/>
+        <part crc="c74499ce" name="prg1"/>
+        <!--Region: gfx1, Size: 0x10000 bytes-->
+        <part crc="a2f88df0" name="cha2.1"/>
+        <part repeat="0x10000">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="3bce8f0f" name="prg0"/>
+        <part crc="c74499ce" name="prg1"/>
+        <!--Region: gfx1, Size: 0x10000 bytes-->
+        <part crc="a2f88df0" name="cha2.1"/>
+        <part repeat="0x10000">00</part>
+    </rom>
+    <rom index="1">
+        <part>43</part>
+    </rom>
+    <rom index="2">
+        <part>43</part>
+    </rom>
+</misterromdescription>

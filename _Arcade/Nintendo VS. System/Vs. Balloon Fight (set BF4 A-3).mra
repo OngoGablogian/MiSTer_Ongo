@@ -1,0 +1,51 @@
+<misterromdescription>
+    <name>Vs. Balloon Fight (set BF4 A-3)</name>
+    <setname>balonfgt</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+<switches default="00,50">
+    <dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+    <dip bits="3" name="Unused" ids="Off,On"/>
+    <dip bits="4" name="Unused" ids="Off,On"/>
+    <dip bits="5" name="Unused" ids="Off,On"/>
+    <dip bits="6" name="Unused" ids="Off,On"/>
+    <dip bits="7" name="Service Mode" ids="Off,On"/>
+    <dip bits="8,9" name="Lives" ids="3,5,4,6"/>
+    <dip bits="10,11" name="Difficulty" ids="Easy,Medium,Normal,Hard"/>
+    <dip bits="12" name="Enemy Regeneration" ids="Low,High"/>
+    <dip bits="13,14" name="Bonus Life" ids="10000 Pts,40000 Pts,20000 Pts,None"/>
+    <dip bits="15" name="Unused" ids="Off,On"/>
+</switches>
+    <rom index="0" zip="balonfgt.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="1248a6d6" name="mds-bf4 a-3.1d"/>
+        <part crc="14af0e42" name="mds-bf4 a-3.1c"/>
+        <part crc="a420babf" name="mds-bf4 a-3.1b"/>
+        <part crc="9c31f94d" name="mds-bf4 a-3.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="f27d9aa0" name="mds-bf4 a-3.2b"/>
+        <part crc="76e6bbf8" name="mds-bf4 a-3.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="ef4ebff1" name="mds-bf4 a-3.6d"/>
+        <part crc="14af0e42" name="mds-bf4 a-3.6c"/>
+        <part crc="a420babf" name="mds-bf4 a-3.6b"/>
+        <part crc="3aa5c095" name="mds-bf4 a-3.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="f27d9aa0" name="mds-bf4 a-3.8b"/>
+        <part crc="76e6bbf8" name="mds-bf4 a-3.8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>05</part>
+    </rom>
+    <rom index="2">
+        <part>05</part>
+    </rom>
+</misterromdescription>

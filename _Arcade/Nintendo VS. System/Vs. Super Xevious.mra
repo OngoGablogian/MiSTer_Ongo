@@ -1,0 +1,85 @@
+<misterromdescription>
+    <name>Vs. Super Xevious</name>
+    <setname>supxevs</setname>
+    <year>1986</year>
+    <manufacturer>Namco</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+        <dip bits="0" name="Bonus Life" ids="50k_150k_Every_150k,70k_200k_Every_200k"/>
+        <dip bits="1" name="Lives" ids="3,5"/>
+        <dip bits="2" name="Unknown_SW1_3" ids="Off,On"/>
+        <dip bits="3" name="Hidden Password Screen" ids="Yes,No"/>
+        <dip bits="4,5" name="Coinage" ids="1C_1C,1C_2C,2C_1C,3C_1C"/>
+        <dip bits="6,7" name="PPU Type" ids="RP2C04-0001,RP2C04-0002,RP2C04-0003,RP2C04-0004"/>
+
+        <dip bits="8" name="Bonus Life" ids="50k_150k_Every_150k,70k_200k_Every_200k"/>
+        <dip bits="9" name="Lives" ids="3,5"/>
+        <dip bits="10" name="Unknown_SW1_3" ids="Off,On"/>
+        <dip bits="11" name="Hidden Password Screen" ids="Yes,No"/>
+        <dip bits="12,13" name="Coinage" ids="1C_1C,1C_2C,2C_1C,3C_1C"/>
+        <dip bits="14,15" name="PPU Type" ids="RP2C04-0001,RP2C04-0002,RP2C04-0003,RP2C04-0004"/>
+    </switches>
+    <rom index="0" zip="supxevs.zip">
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="645669f0" name="prg2"/>
+        <part crc="ff762ceb" name="prg1"/>
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x1F9AA">
+        	EA EA
+        	</patch>
+        	<!-- end Protection1 Patch -->
+        	<!-- begin Protection2 Patch -->
+        	<patch offset="0x1F9B2">
+        	EA EA
+        	</patch>
+        	<!-- end Protection2 Patch -->
+        	<!-- begin Protection3 Patch -->
+        	<patch offset="0x1F9BA">
+        	EA EA
+        	</patch>
+        	<!-- end Protection3 Patch -->
+        	<!-- begin Protection4 Patch -->
+        	<patch offset="0x1F9C2">
+        	EA EA
+        	</patch>
+        	<!-- end Protection4 Patch -->
+        <!--Region: gfx1, Size: 0x8000 bytes-->
+        <part crc="e27c7434" name="cha"/>
+        <part repeat="0x18000">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="645669f0" name="prg2"/>
+        <part crc="ff762ceb" name="prg1"/>
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x5F9AA">
+        	EA EA
+        	</patch>
+        	<!-- end Protection1 Patch -->
+        	<!-- begin Protection2 Patch -->
+        	<patch offset="0x5F9B2">
+        	EA EA
+        	</patch>
+        	<!-- end Protection2 Patch -->
+        	<!-- begin Protection3 Patch -->
+        	<patch offset="0x5F9BA">
+        	EA EA
+        	</patch>
+        	<!-- end Protection3 Patch -->
+        	<!-- begin Protection4 Patch -->
+        	<patch offset="0x5F9C2">
+        	EA EA
+        	</patch>
+        	<!-- end Protection4 Patch -->
+        <!--Region: gfx1, Size: 0x8000 bytes-->
+        <part crc="e27c7434" name="cha"/>
+        <part repeat="0x18000">00</part>
+    </rom>
+    <rom index="1">
+        <part>43</part>
+    </rom>
+    <rom index="2">
+        <part>43</part>
+    </rom>
+</misterromdescription>

@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Vs. Mach Rider (Endurance Course Version)</name>
+    <setname>nvs_machrider</setname>
+    <year>1985</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+    	<dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+    	<dip bits="3,4" name="Time" ids="280 (Easy),220,250,200 (Hard)"/>
+    	<dip bits="5" name="Unknown_SW1_6" ids="Off,On"/>
+    	<dip bits="6" name="Enemies" ids="Less,More"/>
+    	<dip bits="7" name="Unknown_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+    	<dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+    	<dip bits="11,12" name="Time" ids="280 (Easy),220,250,200 (Hard)"/>
+    	<dip bits="13" name="Unknown_SW1_6" ids="Off,On"/>
+    	<dip bits="14" name="Enemies" ids="Less,More"/>
+    	<dip bits="15" name="Unknown_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="nvs_machrider.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="379c44b9" name="mr-1d"/>
+        <part crc="cb864802" name="mr-1c"/>
+        <part crc="5547261f" name="mr-1b"/>
+        <part crc="e3e3900d" name="mr-1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="33a2b41a" name="mr-2b"/>
+        <part crc="685899d8" name="mr-2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="379c44b9" name="mr-1d"/>
+        <part crc="cb864802" name="mr-1c"/>
+        <part crc="5547261f" name="mr-1b"/>
+        <part crc="e3e3900d" name="mr-1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="33a2b41a" name="mr-2b"/>
+        <part crc="685899d8" name="mr-2a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>04</part>
+    </rom>
+    <rom index="2">
+        <part>04</part>
+    </rom>
+</misterromdescription>

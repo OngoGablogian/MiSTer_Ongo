@@ -1,0 +1,53 @@
+<misterromdescription>
+    <name>Vs. Stroke & Match Golf (Ladies Version)</name>
+    <setname>ladygolf</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="24,24">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="Free_Play,1C_1C,1C_3C,3C_1C,1C_4C,2C_1C,1C_2C,4C_1C"/>
+        <dip bits="3" name="Hole Size" ids="Large,Small"/>
+        <dip bits="4" name="Points per Stroke" ids="Easier,Harder"/>
+        <dip bits="5,6" name="Starting Points" ids="10,16,13,20"/>
+        <dip bits="7" name="Difficulty Vs. Comp" ids="Easy,Hard"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="Free_Play,1C_1C,1C_3C,3C_1C,1C_4C,2C_1C,1C_2C,4C_1C"/>
+        <dip bits="11" name="Hole Size" ids="Large,Small"/>
+        <dip bits="12" name="Points per Stroke" ids="Easier,Harder"/>
+        <dip bits="13,14" name="Starting Points" ids="10,16,13,20"/>
+        <dip bits="15" name="Difficulty Vs. Comp" ids="Easy,Hard"/>
+    </switches>
+    <rom index="0" zip="ladygolf.zip|smgolf.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="8b2ab436" name="lg-1d"/>
+        <part crc="bda6b432" name="lg-1c"/>
+        <part crc="dcdd8220" name="lg-1b"/>
+        <part crc="26a3cb3b" name="lg-1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="95618947" name="mds-lg4 e.2b or 8b"/>
+        <part crc="d07407b1" name="mds-lg4 e.2a or 8a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="8b2ab436" name="lg-1d"/>
+        <part crc="bda6b432" name="lg-1c"/>
+        <part crc="dcdd8220" name="lg-1b"/>
+        <part crc="26a3cb3b" name="lg-1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="95618947" name="mds-lg4 e.2b or 8b"/>
+        <part crc="d07407b1" name="mds-lg4 e.2a or 8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>84</part>
+    </rom>
+    <rom index="2">
+        <part>84</part>
+    </rom>
+</misterromdescription>
+

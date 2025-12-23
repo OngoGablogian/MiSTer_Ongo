@@ -1,0 +1,51 @@
+<misterromdescription>
+    <name>Vs. Tennis (Japan USA, set 2)</name>
+    <setname>vstennisa</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,88">
+        <dip bits="0,1" name="Difficulty Vs. Comp" ids="Easy,Medium,Normal,Hard"/>
+        <dip bits="2,3" name="Difficulty Vs. P2" ids="Easy,Medium,Normal,Hard"/>
+        <dip bits="4" name="Raquet Size" ids="Large,Small"/>
+        <dip bits="5" name="Extra Score" ids="1_Set,1_Game"/>
+        <dip bits="6" name="Court Color" ids="Green,Blue"/>
+        <dip bits="7" name="Copyright" ids="Japan,USA"/>
+        <dip bits="8" name="Service Mode" ids="Off,On"/>
+        <dip bits="9,10" name="Coinage" ids="Free_Play,1C_2C,2C_1C,1C_1C"/>
+        <dip bits="11,12" name="1VC/2VC/1V1/2V2" ids="A - 1/1/2/2,C - 1/1/2/4,B - 1/2/2/2,D - 1/2/2/4"/>
+        <dip bits="13,14" name="Rackets Per Game" ids="3,5,4,2"/>
+        <dip bits="15" name="Demo Sounds" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="vstennisa.zip|vstennis.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="f4e9fca0" name="mds-te.1d"/>
+        <part crc="7e52df58" name="mds-te.1c"/>
+        <part crc="1a0d809a" name="mds-te.1b"/>
+        <part crc="8483a612" name="mds-te.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="9de19c9c" name="mds-te a.2b"/>
+        <part crc="67a5800e" name="mds-te a.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="3131b1bf" name="mds-te.6d"/>
+        <part crc="27195d13" name="mds-te.6c"/>
+        <part crc="4b4e26ca" name="mds-te.6b"/>
+        <part crc="b6bfee07" name="mds-te.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="c81e9260" name="mds-te a.8b"/>
+        <part crc="d91eb295" name="mds-te a.8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>01</part>
+    </rom>
+    <rom index="2">
+        <part>01</part>
+    </rom>
+</misterromdescription>

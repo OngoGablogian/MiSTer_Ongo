@@ -1,0 +1,66 @@
+<misterromdescription>
+    <name>Vs. Raid on Bungeling Bay (RD4-2 B)</name>
+    <setname>bnglngby</setname>
+    <year>1985</year>
+    <manufacturer>Broderbund / Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="3" name="Lives" ids="3,4"/>
+        <dip bits="4" name="Unknown_SW1_5" ids="Off,On"/>
+        <dip bits="5,6" name="Difficulty" ids="Easy,Medium,Normal,Hard"/>
+        <dip bits="7" name="Unknown_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="11" name="Lives" ids="3,4"/>
+        <dip bits="12" name="Unknown_SW1_5" ids="Off,On"/>
+        <dip bits="13,14" name="Difficulty" ids="Easy,Medium,Normal,Hard"/>
+        <dip bits="15" name="Unknown_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="bnglngby.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="d152d8c2" name="mds-rb4-2 b.6d"/>
+        <part crc="c3383935" name="mds-rb4-2 b.6c"/>
+        <part crc="e2a24af8" name="mds-rb4-2 b.6b"/>
+        <part crc="024ad874" name="mds-rb4-2 b.6a"/>
+        <part repeat="98304">00</part>
+        <!-- begin Extra Rom Patch -->
+        <patch offset="0x16df">
+        EA EA EA
+        </patch>
+        <!-- end Extra Rom Patch -->
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="d3d946ab" name="mds-rb4-2 b.8b"/>
+        <part crc="ca08126a" name="mds-rb4-2 b.8a"/>
+        <part repeat="114688">00</part>
+        <!--Region: user1, Size: 0x2000 bytes (optional)-->
+        <!--part crc="b49939ad" name="mds-rb4-2 b.1a"/-->
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="d152d8c2" name="mds-rb4-2 b.6d"/>
+        <part crc="c3383935" name="mds-rb4-2 b.6c"/>
+        <part crc="e2a24af8" name="mds-rb4-2 b.6b"/>
+        <part crc="024ad874" name="mds-rb4-2 b.6a"/>
+        <part repeat="98304">00</part>
+        <!-- begin Extra Rom Patch -->
+        <patch offset="0x416df">
+        EA EA EA
+        </patch>
+        <!-- end Extra Rom Patch -->
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="d3d946ab" name="mds-rb4-2 b.8b"/>
+        <part crc="ca08126a" name="mds-rb4-2 b.8a"/>
+        <part repeat="114688">00</part>
+        <!--Region: user1, Size: 0x2000 bytes (optional)-->
+        <!--part crc="b49939ad" name="mds-rb4-2 b.1a"/-->
+    </rom>
+    <rom index="1">
+        <part>84</part>
+    </rom>
+    <rom index="2">
+        <part>84</part>
+    </rom>
+</misterromdescription>

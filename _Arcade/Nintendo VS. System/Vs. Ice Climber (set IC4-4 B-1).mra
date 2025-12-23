@@ -1,0 +1,60 @@
+<misterromdescription>
+	<name>Vs. Ice Climber (set IC4-4 B-1)</name>
+	<setname>iceclimb</setname>
+	<year>1984</year>
+	<manufacturer>Nintendo</manufacturer>
+	<rbf>VSnes</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<switches default="00,00">
+            <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+   		<dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+    		<dip bits="3,4" name="Lives" ids="3,5,4,7"/>
+    		<dip bits="5" name="Difficulty" ids="Easy,Hard"/>
+    		<dip bits="6" name="Time bear appears" ids="Long,Short"/>
+    		<dip bits="7" name="Unused_SW1_8" ids="Off,On"/>
+            <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+   		<dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+    		<dip bits="11,12" name="Lives" ids="3,5,4,7"/>
+    		<dip bits="13" name="Difficulty" ids="Easy,Hard"/>
+    		<dip bits="14" name="Time bear appears" ids="Long,Short"/>
+    		<dip bits="15" name="Unused_SW1_8" ids="Off,On"/>
+	</switches>
+	<rom index="0" zip="iceclimb.zip">
+		<!--Region: prg, Size: 0x8000 bytes-->
+		<part crc="0ea5f9cb" name="mds-ic4-4 b.6d"/>
+		<part crc="51fe438e" name="mds-ic4-4 b.6c"/>
+		<part crc="a8afdc62" name="mds-ic4-4 b-1.6b"/>
+		<part crc="96505d4d" name="mds-ic4-4 b.6a"/>
+                <part repeat="98304">00</part>
+                <!-- begin Controller check Patch -->
+                <patch offset="0x35FB">
+                EA EA EA
+                </patch>
+		<!--Region: gfx1, Size: 0x4000 bytes-->
+		<part crc="331460b4" name="mds-ic4-4 b.8b"/>
+		<part crc="4ec44fb3" name="mds-ic4-4 b.8a"/>
+                <part repeat="114688">00</part>
+		<!--NES2-->
+		<!--Region: prg, Size: 0x8000 bytes-->
+		<part crc="0ea5f9cb" name="mds-ic4-4 b.6d"/>
+		<part crc="51fe438e" name="mds-ic4-4 b.6c"/>
+		<part crc="a8afdc62" name="mds-ic4-4 b-1.6b"/>
+		<part crc="96505d4d" name="mds-ic4-4 b.6a"/>
+                <part repeat="98304">00</part>
+                <!-- begin Controller check Patch -->
+                <patch offset="0x435FB">
+                EA EA EA
+                </patch>
+		<!--Region: gfx1, Size: 0x4000 bytes-->
+		<part crc="331460b4" name="mds-ic4-4 b.8b"/>
+		<part crc="4ec44fb3" name="mds-ic4-4 b.8a"/>
+                <part repeat="114688">00</part>
+	</rom>
+	<rom index="1">
+                <part>86</part>
+	</rom>
+	<rom index="2">
+                <part>86</part>
+	</rom>
+</misterromdescription>

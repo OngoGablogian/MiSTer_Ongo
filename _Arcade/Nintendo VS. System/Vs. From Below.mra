@@ -1,0 +1,51 @@
+<misterromdescription>
+	<name>Vs. From Below</name>
+	<setname>vsfrombelow</setname>
+	<year>2020</year>
+	<manufacturer>Matt Hughson</manufacturer>
+	<rbf>VSnes</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<switches default="00,00">
+            <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+		<dip bits="0,1" name="Coinage"              ids="FreePlay,1cr/1c,1cr/2c,1c/4cr"/>
+		<dip bits="2,4" name="PPU Type"             ids="RP2C01-0001,RP2C01-0002,RP2C01-0003,RP2C01-0004,2C03/2C05,2C02"/>
+		<dip bits="5" name="Disable Music"          ids="Off,On"/>
+		<dip bits="6" name="Disable SFX"            ids="Off,On"/>
+		<dip bits="7" name="Disable Attract Sound"  ids="Off,On"/>
+            <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+		<dip bits="8,9" name="Coinage"              ids="FreePlay,1cr/1c,1cr/2c,1c/4cr"/>
+		<dip bits="10,12" name="PPU Type"           ids="RP2C01-0001,RP2C01-0002,RP2C01-0003,RP2C01-0004,2C03/2C05,2C02"/>
+		<dip bits="13" name="Disable Music"         ids="Off,On"/>
+		<dip bits="14" name="Disable SFX"           ids="Off,On"/>
+		<dip bits="15" name="Disable Attract Sound" ids="Off,On"/>
+	</switches>
+	<rom index="0" zip="vsfrombelow.zip">
+		<!--Region: prg, Size: 0x8000 bytes-->
+		<part crc="1DAB37F8" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1d.bin"/>
+		<part crc="CD611EBA" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1c.bin"/>
+		<part crc="9CF6F503" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1b.bin"/>
+		<part crc="483FC028" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1a.bin"/>
+		<part repeat="98304">00</part>
+		<!--Region: gfx1, Size: 0x4000 bytes-->
+		<part crc="42BA557D" name="from_below_vs_2021_01_13_v_0_10_0.nes.chr.2b.bin"/>
+		<part repeat="0x2000">00</part>
+		<part repeat="114688">00</part>
+		<!--NES2-->
+		<part crc="1DAB37F8" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6d.bin"/>
+		<part crc="CD611EBA" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6c.bin"/>
+		<part crc="9CF6F503" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6b.bin"/>
+		<part crc="483FC028" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6a.bin"/>
+		<part repeat="98304">00</part>
+		<!--Region: gfx1, Size: 0x4000 bytes-->
+		<part crc="42BA557D" name="from_below_vs_2021_01_13_v_0_10_0.nes.chr.8b.bin"/>
+		<part repeat="0x2000">00</part>
+		<part repeat="114688">00</part>
+	</rom>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <rom index="2">
+        <part>03</part>
+    </rom>
+</misterromdescription>

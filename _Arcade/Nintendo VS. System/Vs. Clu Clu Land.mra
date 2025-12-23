@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Vs. Clu Clu Land</name>
+    <setname>cluclu</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="10,10">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="3" name="Unknown_SW1_4" ids="Off,On"/>
+        <dip bits="4" name="Credits for 2 Players" ids="1,2"/>
+        <dip bits="5,6" name="Lives" ids="3,5,4,2"/>
+        <dip bits="7" name="Unknown_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="11" name="Unknown_SW1_4" ids="Off,On"/>
+        <dip bits="12" name="Credits for 2 Players" ids="1,2"/>
+        <dip bits="13,14" name="Lives" ids="3,5,4,2"/>
+        <dip bits="15" name="Unknown_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="cluclu.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="1e9f97c9" name="cl.6d"/>
+        <part crc="e8b843a7" name="cl.6c"/>
+        <part crc="418ee9ea" name="cl.6b"/>
+        <part crc="5e8a8457" name="cl.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="960d9a6c" name="cl.8b"/>
+        <part crc="e3139791" name="cl.8a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="1e9f97c9" name="cl.6d"/>
+        <part crc="e8b843a7" name="cl.6c"/>
+        <part crc="418ee9ea" name="cl.6b"/>
+        <part crc="5e8a8457" name="cl.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="960d9a6c" name="cl.8b"/>
+        <part crc="e3139791" name="cl.8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>86</part>
+    </rom>
+    <rom index="2">
+        <part>86</part>
+    </rom>
+</misterromdescription>

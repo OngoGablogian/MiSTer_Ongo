@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Vs. Tetris</name>
+    <setname>vstetris</setname>
+    <year>1987</year>
+    <manufacturer>Academysoft-Elorg</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="04,04">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0"   name="Unused"     ids="Off,On"/>
+        <dip bits="1"   name="Unused"     ids="Off,On"/>
+        <dip bits="2,3" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+        <dip bits="4"   name="Unused"     ids="Off,On"/>
+        <dip bits="5,7" name="PPU Type"   ids="RP2C04-0001,RP2C03,RP2C04-0002,RP2C03,RP2C04-0003,RP2C03,RP2C04-0004,RP2C03"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8"   name="Unused"     ids="Off,On"/>
+        <dip bits="9"   name="Unused"     ids="Off,On"/>
+        <dip bits="10,11" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+        <dip bits="12"   name="Unused"     ids="Off,On"/>
+        <dip bits="13,15" name="PPU Type"   ids="RP2C04-0001,RP2C03,RP2C04-0002,RP2C03,RP2C04-0003,RP2C03,RP2C04-0004,RP2C03"/>
+    </switches>
+    <rom index="0" zip="vstetris.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part repeat="8192">00</part>
+        <part crc="92a1cf10" name="a000.6c"/>
+        <part crc="9e9cda9d" name="c000.6b"/>
+        <part crc="bfeaf6c1" name="e000.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="51e8d403" name="char.8b"/>
+        <part repeat="8192">00</part>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part repeat="8192">00</part>
+        <part crc="92a1cf10" name="a000.6c"/>
+        <part crc="9e9cda9d" name="c000.6b"/>
+        <part crc="bfeaf6c1" name="e000.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="51e8d403" name="char.8b"/>
+        <part repeat="8192">00</part>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>83</part>
+    </rom>
+    <rom index="2">
+        <part>83</part>
+    </rom>
+</misterromdescription>

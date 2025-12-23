@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Vs. Pinball (Japan)</name>
+    <setname>vspinbalj</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="01,01">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="Free_Play,1C_1C,1C_3C,3C_1C,1C_4C,2C_1C,1C_2C,4C_1C"/>
+        <dip bits="3" name="Side Drain Walls" ids="High,Low"/>
+        <dip bits="4" name="Bonus Life" ids="50000,70000"/>
+        <dip bits="5,6" name="Balls" ids="3,5,4,2"/>
+        <dip bits="7" name="Ball Speed" ids="Slow,Fast"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="Free_Play,1C_1C,1C_3C,3C_1C,1C_4C,2C_1C,1C_2C,4C_1C"/>
+        <dip bits="11" name="Side Drain Walls" ids="High,Low"/>
+        <dip bits="12" name="Bonus Life" ids="50000,70000"/>
+        <dip bits="13,14" name="Balls" ids="3,5,4,2"/>
+        <dip bits="15" name="Ball Speed" ids="Slow,Fast"/>
+    </switches>
+    <rom index="0" zip="vspinbalj.zip|vspinbal.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="fd50c42e" name="mds-pn3 b.6d"/>
+        <part crc="59beb9e5" name="mds-pn3 b.6c"/>
+        <part crc="ce7f47ce" name="mds-pn3 b.6b"/>
+        <part crc="5685e2ee" name="mds-pn3 b.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="1e3fec3e" name="mds-pn3 b.8b"/>
+        <part crc="6f963a65" name="mds-pn3 b.8a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="fd50c42e" name="mds-pn3 b.6d"/>
+        <part crc="59beb9e5" name="mds-pn3 b.6c"/>
+        <part crc="ce7f47ce" name="mds-pn3 b.6b"/>
+        <part crc="5685e2ee" name="mds-pn3 b.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="1e3fec3e" name="mds-pn3 b.8b"/>
+        <part crc="6f963a65" name="mds-pn3 b.8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>01</part>
+    </rom>
+    <rom index="2">
+        <part>01</part>
+    </rom>
+</misterromdescription>

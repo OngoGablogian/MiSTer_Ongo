@@ -1,0 +1,56 @@
+<misterromdescription>
+    <name>Vs. Battle City</name>
+    <setname>btlecity</setname>
+    <year>1985</year>
+    <manufacturer>Namco</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="01,01">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0" name="Credits for 2 Players" ids="1,2"/>
+        <dip bits="1" name="Lives" ids="3,5"/>
+        <dip bits="2" name="Demo Sounds" ids="On,Off"/>
+        <dip bits="3" name="Unknown_SW1_4" ids="Off,On"/>
+        <dip bits="4" name="Unknown_SW1_5" ids="Off,On"/>
+        <dip bits="5" name="Unknown_SW1_6" ids="Off,On"/>
+        <dip bits="6,7" name="PPU Type" ids="RP2C04-0001,RP2C04-0002,RP2C04-0003,RP2C04-0004"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8" name="Credits for 2 Players" ids="1,2"/>
+        <dip bits="9" name="Lives" ids="3,5"/>
+        <dip bits="10" name="Demo Sounds" ids="On,Off"/>
+        <dip bits="11" name="Unknown_SW1_4" ids="Off,On"/>
+        <dip bits="12" name="Unknown_SW1_5" ids="Off,On"/>
+        <dip bits="13" name="Unknown_SW1_6" ids="Off,On"/>
+        <dip bits="14,15" name="PPU Type" ids="RP2C04-0001,RP2C04-0002,RP2C04-0003,RP2C04-0004"/>
+    </switches>
+    <rom index="0" zip="btlecity.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="6aa87037" name="bc.1d"/>
+        <part crc="bdb317db" name="bc.1c"/>
+        <part crc="1a0088b8" name="bc.1b"/>
+        <part crc="86307c89" name="bc.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="634f68bd" name="bc.2b"/>
+        <part crc="a9b49a05" name="bc.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="6aa87037" name="bc.1d"/>
+        <part crc="bdb317db" name="bc.1c"/>
+        <part crc="1a0088b8" name="bc.1b"/>
+        <part crc="86307c89" name="bc.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="634f68bd" name="bc.2b"/>
+        <part crc="a9b49a05" name="bc.2a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>83</part>
+    </rom>
+    <rom index="2">
+        <part>83</part>
+    </rom>
+</misterromdescription>

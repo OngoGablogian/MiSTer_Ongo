@@ -1,0 +1,44 @@
+<misterromdescription>
+    <name>Vs. Gradius (US, set GR E)</name>
+    <setname>vsgradus</setname>
+    <year>1986</year>
+    <manufacturer>Konami</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="80,80">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="3" name="Lives" ids="4,3"/>
+        <dip bits="4,5" name="Bonus" ids="100k,300k,200k,400k"/>
+        <dip bits="6" name="Difficulty" ids="Easy,Hard"/>
+        <dip bits="7" name="Demo Sounds" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="11" name="Lives" ids="4,3"/>
+        <dip bits="12,13" name="Bonus" ids="100k,300k,200k,400k"/>
+        <dip bits="14" name="Difficulty" ids="Easy,Hard"/>
+        <dip bits="15" name="Demo Sounds" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="vsgradus.zip">
+        <!--Region: prg, Size: 0x10000 bytes-->
+        <part crc="d99a2087" name="mds-gr__prg_e.u7"/>
+        <part repeat="0x10000">00</part>
+        <!--Region: gfx1, Size: 0x10000 bytes-->
+        <part crc="23cf2fc3" name="mds-gr__chr_e.u4"/>
+        <part repeat="0x10000">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x10000 bytes-->
+        <part crc="d99a2087" name="mds-gr__prg_e.u7"/>
+        <part repeat="0x10000">00</part>
+        <!--Region: gfx1, Size: 0x10000 bytes-->
+        <part crc="23cf2fc3" name="mds-gr__chr_e.u4"/>
+        <part repeat="0x10000">00</part>
+    </rom>
+    <rom index="1">
+        <part>D3</part>
+    </rom>
+    <rom index="2">
+        <part>D3</part>
+    </rom>
+</misterromdescription>

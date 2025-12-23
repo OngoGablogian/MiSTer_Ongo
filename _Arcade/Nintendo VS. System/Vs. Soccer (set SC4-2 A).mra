@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Vs. Soccer (set SC4-2 A)</name>
+    <setname>vssoccer</setname>
+    <year>1985</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="40,40">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="3,4" name="Points Timer" ids="1000_Pts,2000_Pts,1500_Pts,600_Pts"/>
+        <dip bits="5,6" name="Difficulty" ids="Easy,Medium,Normal,Hard"/>
+        <dip bits="7" name="Unused_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="11,12" name="Points Timer" ids="1000_Pts,2000_Pts,1500_Pts,600_Pts"/>
+        <dip bits="13,14" name="Difficulty" ids="Easy,Medium,Normal,Hard"/>
+        <dip bits="15" name="Unused_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="vssoccer.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="722fc5bc" name="mds-sc4-2 a.1d or 6d"/>
+        <part crc="6407cb08" name="mds-sc4-2 a.1c or 6c"/>
+        <part crc="d156b824" name="mds-sc4-2 a.1b or 6b"/>
+        <part crc="2d75ca32" name="mds-sc4-2 a.1a or 6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="f3c2bfb2" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="f8b8f3c4" name="mds-sc4-2 a.2a or 8a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="722fc5bc" name="mds-sc4-2 a.1d or 6d"/>
+        <part crc="6407cb08" name="mds-sc4-2 a.1c or 6c"/>
+        <part crc="d156b824" name="mds-sc4-2 a.1b or 6b"/>
+        <part crc="2d75ca32" name="mds-sc4-2 a.1a or 6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="f3c2bfb2" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="f8b8f3c4" name="mds-sc4-2 a.2a or 8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>84</part>
+    </rom>
+    <rom index="2">
+        <part>84</part>
+    </rom>
+</misterromdescription>

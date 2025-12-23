@@ -1,0 +1,40 @@
+<misterromdescription>
+    <name>Vs. Castlevania</name>
+    <setname>cstlevna</setname>
+    <year>1987</year>
+    <manufacturer>Konami</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="3" name="Lives" ids="3,2"/>
+        <dip bits="4,5" name="Bonus" ids="Timer4_Hearts40,Timer8_Hearts80,Timer6_Hearts60,Timer9_Hearts90"/>
+        <dip bits="6" name="Difficulty" ids="Easy,Hard"/>
+        <dip bits="7" name="Unused_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="11" name="Lives" ids="3,2"/>
+        <dip bits="12,13" name="Bonus" ids="Timer4_Hearts40,Timer8_Hearts80,Timer6_Hearts60,Timer9_Hearts90"/>
+        <dip bits="14" name="Difficulty" ids="Easy,Hard"/>
+        <dip bits="15" name="Unused_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="cstlevna.zip">
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="ffbef374" name="mds-cv.u7"/>
+        <!--Region: gfx1, Size: 0x0 bytes-->
+        <part repeat="131072">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="ffbef374" name="mds-cv.u7"/>
+        <!--Region: gfx1, Size: 0x0 bytes-->
+        <part repeat="131072">00</part>
+    </rom>
+    <rom index="1">
+        <part>24</part>
+    </rom>
+    <rom index="2">
+        <part>24</part>
+    </rom>
+</misterromdescription>

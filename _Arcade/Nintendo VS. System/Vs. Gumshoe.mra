@@ -1,0 +1,64 @@
+<misterromdescription>
+    <name>Vs. Gumshoe</name>
+    <setname>vsgshoe</setname>
+    <year>1986</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="3,4" name="Difficulty" ids="Easy,Normal,Hard,Hardest"/>
+        <dip bits="5" name="Lives" ids="5,3"/>
+        <dip bits="6" name="Bullets per Balloon" ids="3,2"/>
+        <dip bits="7" name="Bonus Man Awarded" ids="At_50000,None"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+        <dip bits="11,12" name="Difficulty" ids="Easy,Normal,Hard,Hardest"/>
+        <dip bits="13" name="Lives" ids="5,3"/>
+        <dip bits="14" name="Bullets per Balloon" ids="3,2"/>
+        <dip bits="15" name="Bonus Man Awarded" ids="At_50000,None"/>
+    </switches>
+    <rom index="0" zip="vsgshoe.zip">
+        <!--Region: prg, Size: 0xA000 bytes-->
+        <part crc="063b342f" name="mds-gm5.1d" offset="0" length="0x2000"/>
+        <part crc="e1b7915e" name="mds-gm5.1c"/>
+        <part crc="5b73aa3c" name="mds-gm5.1b"/>
+        <part crc="70e606bc" name="mds-gm5.1a"/>
+        <part repeat="0x8000">00</part>
+        <part crc="063b342f" name="mds-gm5.1d" offset="0x2000" length="0x2000"/>
+        <part repeat="57344">00</part>
+        <!-- begin ID check Patch -->
+        <patch offset="0x2013">
+        EA EA
+        </patch>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="f3c2bfb2" name="mds-gm5.2b"/>
+        <part crc="f8b8f3c4" name="mds-gm5.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0xA000 bytes-->
+        <part crc="063b342f" name="mds-gm5.1d" offset="0" length="0x2000"/>
+        <part crc="e1b7915e" name="mds-gm5.1c"/>
+        <part crc="5b73aa3c" name="mds-gm5.1b"/>
+        <part crc="70e606bc" name="mds-gm5.1a"/>
+        <part repeat="0x8000">00</part>
+        <part crc="063b342f" name="mds-gm5.1d" offset="0x2000" length="0x2000"/>
+        <part repeat="57344">00</part>
+        <!-- begin ID check Patch -->
+        <patch offset="0x42013">
+        EA EA
+        </patch>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="f3c2bfb2" name="mds-gm5.2b"/>
+        <part crc="f8b8f3c4" name="mds-gm5.2a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>39</part>
+    </rom>
+    <rom index="2">
+        <part>39</part>
+    </rom>
+</misterromdescription>

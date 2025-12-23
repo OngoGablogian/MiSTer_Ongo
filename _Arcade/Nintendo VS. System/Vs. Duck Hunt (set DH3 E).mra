@@ -1,0 +1,50 @@
+<misterromdescription>
+	<name>Vs. Duck Hunt (set DH3 E)</name>
+	<setname>duckhunt</setname>
+	<year>1985</year>
+	<manufacturer>Nintendo</manufacturer>
+	<rbf>VSnes</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+    	<switches default="28,28">
+            <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+    		<dip bits="0,2" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+    		<dip bits="3,4" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+    		<dip bits="5" name="Misses per game" ids="3,5"/>
+    		<dip bits="6,7" name="Bonus Life" ids="30000,50000,80000,100000"/>
+            <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+    		<dip bits="8,10" name="Coinage" ids="1C_1C,3C_1C,1C_3C,5C_1C,1C_2C,4C_1C,2C_1C,Free_Play"/>
+    		<dip bits="11,12" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+    		<dip bits="13" name="Misses per game" ids="3,5"/>
+    		<dip bits="14,15" name="Bonus Life" ids="30000,50000,80000,100000"/>
+    	</switches>
+	<rom index="0" zip="duckhunt.zip">
+		<!--Region: prg, Size: 0x8000 bytes-->
+		<part crc="3f51f0ed" name="mds-dh3 e.1d or 6d"/>
+		<part crc="8bc7376c" name="mds-dh3 e.1c or 6c"/>
+		<part crc="a042b6e1" name="mds-dh3 e.1b or 6b"/>
+		<part crc="1906e3ab" name="mds-dh3 e.1a or 6a"/>
+		<part repeat="98304">00</part>
+		<!--Region: gfx1, Size: 0x4000 bytes-->
+		<part crc="0c52ec28" name="mds-dh3 e.2b or 8b"/>
+		<part crc="3d238df3" name="mds-dh3 e.2a or 8a"/>
+		<part repeat="114688">00</part>
+		<!--NES2-->
+		<!--Region: prg, Size: 0x8000 bytes-->
+		<part crc="3f51f0ed" name="mds-dh3 e.1d or 6d"/>
+		<part crc="8bc7376c" name="mds-dh3 e.1c or 6c"/>
+		<part crc="a042b6e1" name="mds-dh3 e.1b or 6b"/>
+		<part crc="1906e3ab" name="mds-dh3 e.1a or 6a"/>
+		<part repeat="98304">00</part>
+		<!--Region: gfx1, Size: 0x4000 bytes-->
+		<part crc="0c52ec28" name="mds-dh3 e.2b or 8b"/>
+		<part crc="3d238df3" name="mds-dh3 e.2a or 8a"/>
+		<part repeat="114688">00</part>
+	</rom>
+	<rom index="1">
+		<part>01</part>
+	</rom>
+	<rom index="2">
+		<part>01</part>
+	</rom>
+</misterromdescription>

@@ -1,0 +1,52 @@
+<misterromdescription>
+	<name>Vs. Ice Climber (set IC4-4 )</name>
+	<setname>iceclimba</setname>
+	<year>1984</year>
+	<manufacturer>Nintendo</manufacturer>
+	<rbf>VSnes</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<switches default="00,00">
+            <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+		<dip bits="0,2"	        name="Coinage"                   ids="1c/1cr,2c/1cr,3c/1cr,4c/1cr,1c/2cr,1c/3cr,1c/4cr,Free Play"/>
+		<dip bits="3,4"		name="Lives"                     ids="3,5,4,7"/>
+		<dip bits="5"		name="Difficulty"                ids="Easy,Hard"/>
+		<dip bits="6"		name="Time bear appears"	 ids="Long,Short"/>
+		<dip bits="7"           name="Unused_SW1_8"              ids="Off,On"/>
+            <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+		<dip bits="8,10"	name="Coinage"                   ids="1c/1cr,2c/1cr,3c/1cr,4c/1cr,1c/2cr,1c/3cr,1c/4cr,Free Play"/>
+		<dip bits="11,12"	name="Lives"                     ids="3,5,4,7"/>
+		<dip bits="13"		name="Difficulty"                ids="Easy,Hard"/>
+		<dip bits="14"		name="Time bear appears"	 ids="Long,Short"/>
+		<dip bits="15"          name="Unused_SW1_8"              ids="Off,On"/>
+	</switches>
+	<rom index="0" zip="iceclimba.zip|iceclimb.zip">
+		<!--Region: prg, Size: 0x8000 bytes-->
+		<part crc="65e21765" name="mds-ic4-4.1d"/>
+		<part crc="a7909c51" name="mds-ic4-4.1c"/>
+		<part crc="7fb3cc21" name="mds-ic4-4.1b"/>
+		<part crc="bf196bf7" name="mds-ic4-4.1a"/>
+                <part repeat="98304">00</part>
+		<!--Region: gfx1, Size: 0x4000 bytes from iceclimb-->
+		<part crc="331460b4" name="mds-ic4-4 b.8b"/>
+		<part crc="4ec44fb3" name="mds-ic4-4 b.8a"/>
+                <part repeat="114688">00</part>
+		<!--NES2-->
+		<!--Region: prg, Size: 0x8000 bytes-->
+		<part crc="65e21765" name="mds-ic4-4.1d"/>
+		<part crc="a7909c51" name="mds-ic4-4.1c"/>
+		<part crc="7fb3cc21" name="mds-ic4-4.1b"/>
+		<part crc="bf196bf7" name="mds-ic4-4.1a"/>
+                <part repeat="98304">00</part>
+		<!--Region: gfx1, Size: 0x4000 bytes from iceclimb-->
+		<part crc="331460b4" name="mds-ic4-4 b.8b"/>
+		<part crc="4ec44fb3" name="mds-ic4-4 b.8a"/>
+                <part repeat="114688">00</part>
+	</rom>
+	<rom index="1">
+                <part>86</part>
+	</rom>
+	<rom index="2">
+                <part>86</part>
+	</rom>
+</misterromdescription>

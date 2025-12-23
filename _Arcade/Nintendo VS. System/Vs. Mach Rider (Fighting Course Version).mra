@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Vs. Mach Rider (Fighting Course Version)</name>
+    <setname>nvs_machridera</setname>
+    <year>1985</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+    	<dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+    	<dip bits="3,4" name="Max Lives After Level 1" ids="4,6,5,3"/>
+    	<dip bits="5" name="Unknown_SW1_6" ids="Off,On"/>
+    	<dip bits="6" name="Enemies" ids="Less,More"/>
+    	<dip bits="7" name="Unknown_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+    	<dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+    	<dip bits="11,12" name="Max Lives After Level 1" ids="4,6,5,3"/>
+    	<dip bits="13" name="Unknown_SW1_6" ids="Off,On"/>
+    	<dip bits="14" name="Enemies" ids="Less,More"/>
+    	<dip bits="15" name="Unknown_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="nvs_machridera.zip|nvs_machrider.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="ab7e0594" name="mds-mr4-1 a.1d or 6d"/>
+        <part crc="d4a341c3" name="mds-mr4-1 a.1c or 6c"/>
+        <part crc="cbdcfece" name="mds-mr4-1 a.1b or 6b"/>
+        <part crc="e5b1e350" name="mds-mr4-1 a.1a or 6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="59867e36" name="mds-mr4-1 a.2b or 8b"/>
+        <part crc="ccfedc5a" name="mds-mr4-1 a.2a or 8a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="ab7e0594" name="mds-mr4-1 a.1d or 6d"/>
+        <part crc="d4a341c3" name="mds-mr4-1 a.1c or 6c"/>
+        <part crc="cbdcfece" name="mds-mr4-1 a.1b or 6b"/>
+        <part crc="e5b1e350" name="mds-mr4-1 a.1a or 6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="59867e36" name="mds-mr4-1 a.2b or 8b"/>
+        <part crc="ccfedc5a" name="mds-mr4-1 a.2a or 8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <rom index="2">
+        <part>03</part>
+    </rom>
+</misterromdescription>

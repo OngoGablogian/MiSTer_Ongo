@@ -1,0 +1,60 @@
+<misterromdescription>
+    <name>Vs. Mighty Bomb Jack (Japan)</name>
+    <setname>nvs_mightybj</setname>
+    <year>1986</year>
+    <manufacturer>Tecmo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,5C_1C"/>
+        <dip bits="3,4" name="Lives" ids="3,4,2,5"/>
+        <dip bits="5" name="Unknown_SW1_6" ids="Off,On"/>
+        <dip bits="6" name="Unknown_SW1_7" ids="Off,On"/>
+        <dip bits="7" name="Unknown_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,5C_1C"/>
+        <dip bits="11,12" name="Lives" ids="3,4,2,5"/>
+        <dip bits="13" name="Unknown_SW1_6" ids="Off,On"/>
+        <dip bits="14" name="Unknown_SW1_7" ids="Off,On"/>
+        <dip bits="15" name="Unknown_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="nvs_mightybj.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="55dc8d77" name="1d.bin"/>
+        <part crc="151a6d15" name="1c.bin"/>
+        <part crc="9f9944bc" name="1b.bin"/>
+        <part crc="76f49b65" name="1a.bin"/>
+        <part repeat="98304">00</part>
+        <!-- begin ID check Patch -->
+        <patch offset="0x0018">
+        EA EA
+        </patch>
+        <!--Region: gfx1, Size: 0x2000 bytes-->
+        <part crc="5425a4d0" name="2b.bin"/>
+	<part repeat="8192">00</part>
+	<part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="55dc8d77" name="1d.bin"/>
+        <part crc="151a6d15" name="1c.bin"/>
+        <part crc="9f9944bc" name="1b.bin"/>
+        <part crc="76f49b65" name="1a.bin"/>
+        <part repeat="98304">00</part>
+        <!-- begin ID check Patch -->
+        <patch offset="0x40018">
+        EA EA
+        </patch>
+        <!--Region: gfx1, Size: 0x2000 bytes-->
+        <part crc="5425a4d0" name="2b.bin"/>
+	<part repeat="8192">00</part>
+	<part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+	<part>08</part>
+    </rom>
+    <rom index="2">
+	<part>08</part>
+    </rom>
+</misterromdescription>

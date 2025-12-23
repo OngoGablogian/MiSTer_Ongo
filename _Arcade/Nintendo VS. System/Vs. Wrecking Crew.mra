@@ -1,0 +1,48 @@
+<misterromdescription>
+    <name>Vs. Wrecking Crew</name>
+    <setname>wrecking</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="F8,09">
+        <dip bits="0,1" name="Lives" ids="3,5,4,6"/>
+        <dip bits="2,4" name="1st Bonus Life" ids="20000,40000,30000,70000,100000,80000,50000,None"/>
+        <dip bits="5,7" name="Additional Bonus" ids="20000,40000,70000,30000,80000,100000,50000,None"/>
+        <dip bits="8,10" name="Coinage" ids="Free_Play,1C_1C,1C_3C,3C_1C,1C_4C,2C_1C,1C_2C,4C_1C"/>
+        <dip bits="11,12" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+        <dip bits="13" name="Copyright" ids="Japan,USA"/>
+        <dip bits="14" name="Unused 1" ids="Off,On"/>
+        <dip bits="15" name="Unused 2" ids="Off,On"/>
+        </switches>
+    <rom index="0" zip="wrecking.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="8897e1b9" name="wr.1d"/>
+        <part crc="d4dc5ebb" name="wr.1c"/>
+        <part crc="8ee4a454" name="wr.1b"/>
+        <part crc="63d6490a" name="wr.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="e27c7434" name="wr.2b"/>
+        <part crc="f8b8f3c4" name="wr.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="90e49ce7" name="wr.6d"/>
+        <part crc="a12ae745" name="wr.6c"/>
+        <part crc="03947ca9" name="wr.6b"/>
+        <part crc="2c0a13ac" name="wr.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="455d77ac" name="wr.8b"/>
+        <part crc="653350d8" name="wr.8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>04</part>
+    </rom>
+    <rom index="2">
+        <part>04</part>
+    </rom>
+</misterromdescription>

@@ -1,0 +1,40 @@
+<misterromdescription>
+    <name>Vs. Platoon</name>
+    <setname>nvs_platoon</setname>
+    <year>1987</year>
+    <manufacturer>Ocean Software Limited</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0" name="Unknown_SW1_1" ids="Off,On"/>
+        <dip bits="1" name="Unknown_SW1_2" ids="Off,On"/>
+        <dip bits="2" name="Demo Sounds" ids="On,Off"/>
+        <dip bits="3,4" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+        <dip bits="5,7" name="Coinage" ids="1C_1C,1C_2C,1C_3C,2C_1C,3C_1C,4C_1C,5C_1C,Free_Play"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8" name="Unknown_SW1_1" ids="Off,On"/>
+        <dip bits="9" name="Unknown_SW1_2" ids="Off,On"/>
+        <dip bits="10" name="Demo Sounds" ids="On,Off"/>
+        <dip bits="11,12" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+        <dip bits="13,15" name="Coinage" ids="1C_1C,1C_2C,1C_3C,2C_1C,3C_1C,4C_1C,5C_1C,Free_Play"/>
+    </switches>
+    <rom index="0" zip="nvs_platoon.zip">
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="e2c0a2be" name="prgver0.ic4"/>
+        <!--Region: gfx1, Size: 0x20000 bytes-->
+        <part crc="689df57d" name="chrver0.ic6"/>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x20000 bytes-->
+        <part crc="e2c0a2be" name="prgver0.ic4"/>
+        <!--Region: gfx1, Size: 0x20000 bytes-->
+        <part crc="689df57d" name="chrver0.ic6"/>
+    </rom>
+    <rom index="1">
+        <part>63</part>
+    </rom>
+    <rom index="2">
+        <part>63</part>
+    </rom>
+</misterromdescription>

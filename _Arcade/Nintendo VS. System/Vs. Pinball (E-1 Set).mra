@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Vs. Pinball (E-1 Set)</name>
+    <setname>vspinbal</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="01,01">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="Free_Play,1C_1C,1C_3C,3C_1C,1C_4C,2C_1C,1C_2C,4C_1C"/>
+        <dip bits="3" name="Side Drain Walls" ids="High,Low"/>
+        <dip bits="4" name="Bonus Life" ids="50000,70000"/>
+        <dip bits="5,6" name="Balls" ids="3,5,4,2"/>
+        <dip bits="7" name="Ball Speed" ids="Slow,Fast"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="Free_Play,1C_1C,1C_3C,3C_1C,1C_4C,2C_1C,1C_2C,4C_1C"/>
+        <dip bits="11" name="Side Drain Walls" ids="High,Low"/>
+        <dip bits="12" name="Bonus Life" ids="50000,70000"/>
+        <dip bits="13,14" name="Balls" ids="3,5,4,2"/>
+        <dip bits="15" name="Ball Speed" ids="Slow,Fast"/>
+    </switches>
+    <rom index="0" zip="vspinbal.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="69fc575e" name="mds-pn4_1__6d_e.6d"/>
+        <part crc="fa9472d2" name="mds-pn4_1__6c_e.6c"/>
+        <part crc="f57d89c5" name="mds-pn4_1__6b_e.6b"/>
+        <part crc="640c4741" name="mds-pn4_1__6a_e.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="8822ee9e" name="mds-pn4_1__8b_e.8b"/>
+        <part crc="cbe98a28" name="mds-pn4_1__8a_e.8a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="69fc575e" name="mds-pn4_1__6d_e.6d"/>
+        <part crc="fa9472d2" name="mds-pn4_1__6c_e.6c"/>
+        <part crc="f57d89c5" name="mds-pn4_1__6b_e.6b"/>
+        <part crc="640c4741" name="mds-pn4_1__6a_e.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="8822ee9e" name="mds-pn4_1__8b_e.8b"/>
+        <part crc="cbe98a28" name="mds-pn4_1__8a_e.8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <rom index="2">
+        <part>03</part>
+    </rom>
+</misterromdescription>

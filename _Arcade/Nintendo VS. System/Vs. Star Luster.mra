@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Vs. Star Luster</name>
+    <setname>starlstr</setname>
+    <year>1985</year>
+    <manufacturer>Namco</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,1" name="Coinage" ids="1C_1C,2C_1C,3C_1C,1C_2C"/>
+        <dip bits="2" name="Unknown_SW1_3" ids="Off,On"/>
+        <dip bits="3" name="Unknown_SW1_4" ids="Off,On"/>
+        <dip bits="4" name="Unknown_SW1_5" ids="Off,On"/>
+        <dip bits="5,7" name="PPU Type" ids="RP2C03,RP2C04-0001,RP2C03,RP2C04-0002,RP2C03,RP2C04-0003,RP2C03,RP2C04-0004"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,9" name="Coinage" ids="1C_1C,2C_1C,3C_1C,1C_2C"/>
+        <dip bits="10" name="Unknown_SW1_3" ids="Off,On"/>
+        <dip bits="11" name="Unknown_SW1_4" ids="Off,On"/>
+        <dip bits="12" name="Unknown_SW1_5" ids="Off,On"/>
+        <dip bits="13,15" name="PPU Type" ids="RP2C03,RP2C04-0001,RP2C03,RP2C04-0002,RP2C03,RP2C04-0003,RP2C03,RP2C04-0004"/>
+    </switches>
+    <rom index="0" zip="starlstr.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="4fd5b385" name="sl_04.1d"/>
+        <part crc="f26cd7ca" name="sl_03.1c"/>
+        <part crc="9308f34e" name="sl_02.1b"/>
+        <part crc="d87296e4" name="sl_01.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="25f0e027" name="sl_06.2b"/>
+        <part crc="2bbb45fd" name="sl_05.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="4fd5b385" name="sl_04.1d"/>
+        <part crc="f26cd7ca" name="sl_03.1c"/>
+        <part crc="9308f34e" name="sl_02.1b"/>
+        <part crc="d87296e4" name="sl_01.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="25f0e027" name="sl_06.2b"/>
+        <part crc="2bbb45fd" name="sl_05.2a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>81</part>
+    </rom>
+    <rom index="2">
+        <part>81</part>
+    </rom>
+</misterromdescription>

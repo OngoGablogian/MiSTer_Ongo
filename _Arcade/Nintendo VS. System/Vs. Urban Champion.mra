@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Vs. Urban Champion</name>
+    <setname>vs_urban</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="00,00">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,2" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="3,4" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+        <dip bits="5,6" name="Lives" ids="3,4,5,6"/>
+        <dip bits="7" name="Unknown_SW1_8" ids="Off,On"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,10" name="Coinage" ids="1C_1C,2C_1C,1C_3C,4C_1C,1C_2C,3C_1C,1C_4C,Free_Play"/>
+        <dip bits="11,12" name="Difficulty" ids="Easy,Normal,Medium,Hard"/>
+        <dip bits="13,14" name="Lives" ids="3,4,5,6"/>
+        <dip bits="15" name="Unknown_SW1_8" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="vs_urban.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="b31a2c0c" name="urb.1d"/>
+        <part crc="de14ac45" name="urb.1c"/>
+        <part crc="82b79f28" name="urb.1b"/>
+        <part crc="7ccff543" name="urb.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="ddb9a263" name="urb.2b"/>
+        <part crc="329b8b6d" name="urb.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="b31a2c0c" name="urb.1d"/>
+        <part crc="de14ac45" name="urb.1c"/>
+        <part crc="82b79f28" name="urb.1b"/>
+        <part crc="7ccff543" name="urb.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="ddb9a263" name="urb.2b"/>
+        <part crc="329b8b6d" name="urb.2a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>85</part>
+    </rom>
+    <rom index="2">
+        <part>85</part>
+    </rom>
+</misterromdescription>

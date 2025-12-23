@@ -1,0 +1,106 @@
+<misterromdescription>
+    <name>Vs. Atari R.B.I. Baseball (set 2)</name>
+    <setname>rbibba</setname>
+    <year>1986</year>
+    <manufacturer>Namco</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="0C,0C">
+      <dip name="--- NES1 ---" bits="16" ids=" " values="0"/>
+        <dip bits="0,1" name="Coinage" ids="1C_1C,1C_2C,2C_1C,3C_1C"/>
+        <dip bits="2,3" name="1p/in, 2p/in, T/Min" ids="3_2_6,2_1_3,4_3_7,2_2_4"/>
+        <dip bits="4" name="Demo Sounds" ids="On,Off"/>
+        <dip bits="5,7" name="PPU Type" ids="RP2C04-0001,RP2C03,RP2C04-0002,RP2C03,RP2C04-0003,RP2C03,RP2C04-0004,RP2C03"/>
+      <dip name="--- NES2 ---" bits="16" ids=" " values="0"/>
+        <dip bits="8,9" name="Coinage" ids="1C_1C,1C_2C,2C_1C,3C_1C"/>
+        <dip bits="10,11" name="1p/in, 2p/in, T/Min" ids="3_2_6,2_1_3,4_3_7,2_2_4"/>
+        <dip bits="12" name="Demo Sounds" ids="On,Off"/>
+        <dip bits="13,15" name="PPU Type" ids="RP2C04-0001,RP2C03,RP2C04-0002,RP2C03,RP2C04-0003,RP2C03,RP2C04-0004,RP2C03"/>
+        </switches>
+    <rom index="0" zip="rbibba.zip|rbibb.zip">
+        <!--Region: prg, Size: 0x10000 bytes-->
+        <part crc="a5939d0d" name="rbi-prga"/>
+        <part crc="a5939d0d" name="rbi-prga"/>
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x3233">
+        	EA EA EA
+        	</patch>
+        	<!-- end Protection1 Patch -->
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x13233">
+        	EA EA EA
+        	</patch>
+        	<!-- end Protection2 Patch -->
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0xF904">
+        	EA EA EA
+        	</patch>
+        	<!-- end Protection2 Patch -->
+        	<!-- begin Protection2 Patch -->
+        	<patch offset="0x1F904">
+        	EA EA EA
+        	</patch>
+        	<!-- end Froze Ball Patch -->
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x21DF">
+        	EA EA EA
+        	</patch>
+        	<!-- end Froze Ball Patch -->
+        	<!-- begin Froze Ball Patch -->
+        	<patch offset="0x121DF">
+        	EA EA EA
+        	</patch>
+        	<!-- end Froze Ball Patch -->
+        <!--Region: gfx1, Size: 0x8000 bytes-->
+        <part crc="a3c14889" name="rbi-cha"/>
+        <part crc="a3c14889" name="rbi-cha"/>
+        <part crc="a3c14889" name="rbi-cha"/>
+        <part crc="a3c14889" name="rbi-cha"/>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x10000 bytes-->
+        <part crc="a5939d0d" name="rbi-prga"/>
+        <part crc="a5939d0d" name="rbi-prga"/>
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x43233">
+        	EA EA EA
+        	</patch>
+        	<!-- end Protection1 Patch -->
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x53233">
+        	EA EA EA
+        	</patch>
+        	<!-- end Protection2 Patch -->
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x4F904">
+        	EA EA EA
+        	</patch>
+        	<!-- end Protection2 Patch -->
+        	<!-- begin Protection2 Patch -->
+        	<patch offset="0x5F904">
+        	EA EA EA
+        	</patch>
+        	<!-- end Froze Ball Patch -->
+        	<!-- begin Protection1 Patch -->
+        	<patch offset="0x421DF">
+        	EA EA EA
+        	</patch>
+        	<!-- end Froze Ball Patch -->
+        	<!-- begin Froze Ball Patch -->
+        	<patch offset="0x521DF">
+        	EA EA EA
+        	</patch>
+        	<!-- end Froze Ball Patch -->
+        <!--Region: gfx1, Size: 0x8000 bytes-->
+        <part crc="a3c14889" name="rbi-cha"/>
+        <part crc="a3c14889" name="rbi-cha"/>
+        <part crc="a3c14889" name="rbi-cha"/>
+        <part crc="a3c14889" name="rbi-cha"/>
+    </rom>
+    <rom index="1">
+        <part>C3</part>
+    </rom>
+    <rom index="2">
+        <part>C3</part>
+    </rom>
+</misterromdescription>

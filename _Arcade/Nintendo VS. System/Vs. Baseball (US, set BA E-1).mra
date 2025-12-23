@@ -1,0 +1,49 @@
+<misterromdescription>
+    <name>Vs. Baseball (US, set BA E-1)</name>
+    <setname>vsbball</setname>
+    <year>1984</year>
+    <manufacturer>Nintendo of America</manufacturer>
+    <rbf>VSnes</rbf>
+    <rotation>horizontal</rotation>
+    <mameversion>277</mameversion>
+    <switches default="A5,98">
+        <dip bits="0,1" name="Player Defense Str" ids="Weak,Medium,Normal,Strong"/>
+        <dip bits="2,3" name="Player Offense Str" ids="Weak,Medium,Normal,Strong"/>
+        <dip bits="4,5" name="Computer Defense Str" ids="Weak,Medium,Normal,Strong"/>
+        <dip bits="6,7" name="Computer Offense Str" ids="Weak,Medium,Normal,Strong"/>
+        <dip bits="8" name="Service Mode" ids="Off,On"/>
+        <dip bits="9,10" name="Coinage" ids="Free_Play,1C_2C,2C_1C,1C_1C"/>
+        <dip bits="11,13" name="Starting Points" ids="80 Pts,150 Pts,250 Pts,350 Pts,100 Pts,300 Pts,200 Pts,400 Pts"/>
+        <dip bits="14" name="Bonus Play" ids="On,Off"/>
+        <dip bits="15" name="Demo Sounds" ids="Off,On"/>
+    </switches>
+    <rom index="0" zip="vsbball.zip">
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="7ec792bc" name="mds-ba__1d_e-1.1d"/>
+        <part crc="b631f8aa" name="mds-ba__1c_e-1.1c"/>
+        <part crc="c856b45a" name="mds-ba__1b_e-1.1b"/>
+        <part crc="06b74c18" name="mds-ba__1a_e-1.1a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="3ff8bec3" name="mds-ba__2b_e.2b"/>
+        <part crc="13b20cfd" name="mds-ba__2a_e.2a"/>
+        <part repeat="114688">00</part>
+        <!--NES2-->
+        <!--Region: prg, Size: 0x8000 bytes-->
+        <part crc="0cc5225f" name="mds-ba__6d_e-1.6d"/>
+        <part crc="9856ac60" name="mds-ba__6c_e-1.6c"/>
+        <part crc="d1312e63" name="mds-ba__6b_e-1.6b"/>
+        <part crc="28199b4d" name="mds-ba__6a_e-1.6a"/>
+        <part repeat="98304">00</part>
+        <!--Region: gfx1, Size: 0x4000 bytes-->
+        <part crc="3ff8bec3" name="mds-ba__8b_e.8b"/>
+        <part crc="13b20cfd" name="mds-ba__8a_e.8a"/>
+        <part repeat="114688">00</part>
+    </rom>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <rom index="2">
+        <part>03</part>
+    </rom>
+</misterromdescription>
