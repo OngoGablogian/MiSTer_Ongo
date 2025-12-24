@@ -20,25 +20,25 @@
         </switches>
     <rom index="0" zip="vssoccera.zip|vssoccer.zip">
         <!--Region: prg, Size: 0x8000 bytes-->
-        <part crc="ac521451" name="mds-sc4-3.1d"/>
+        <part crc="0ac52145" name="mds-sc4-3.1d"/>
         <part crc="f132e794" name="mds-sc4-3.1c"/>
         <part crc="26bb7325" name="mds-sc4-3.1b"/>
-        <part crc="c4e0e3f9" name="mds-sc4-3.1a"/>
+        <part crc="e731635a" name="mds-sc4-3.1a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="f3c2bfb2" name="mds-sc4-2 a.2b or 8b"/>
-        <part crc="f8b8f3c4" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="307b19ab" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="7263613a" name="mds-sc4-2 a.2b or 8b"/>
         <part repeat="114688">00</part>
         <!--NES2-->
         <!--Region: prg, Size: 0x8000 bytes-->
-        <part crc="ac521451" name="mds-sc4-3.1d"/>
+        <part crc="0ac52145" name="mds-sc4-3.1d"/>
         <part crc="f132e794" name="mds-sc4-3.1c"/>
         <part crc="26bb7325" name="mds-sc4-3.1b"/>
-        <part crc="c4e0e3f9" name="mds-sc4-3.1a"/>
+        <part crc="e731635a" name="mds-sc4-3.1a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="f3c2bfb2" name="mds-sc4-2 a.2b or 8b"/>
-        <part crc="f8b8f3c4" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="307b19ab" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="7263613a" name="mds-sc4-2 a.2b or 8b"/>
         <part repeat="114688">00</part>
     </rom>
     <rom index="1">
