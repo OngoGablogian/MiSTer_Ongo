@@ -7,7 +7,7 @@
     <manufacturer>Toaplan / Taito Corporation</manufacturer>
     <players>2</players>
     <joystick>8-way</joystick>
-    <rotation>Vertical (CW)</rotation>
+    <rotation>Vertical (CCW)</rotation>
     <region>World</region>
     <platform>Twin Cobra Platform</platform>
     <category>Shoot'em up</category>

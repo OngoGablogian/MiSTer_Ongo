@@ -7,7 +7,7 @@
     <manufacturer>Toaplan / Taito America Corporation (Romstar License)</manufacturer>
     <players>2</players>
     <joystick>8-way</joystick>
-    <rotation>Vertical (CW)</rotation>
+    <rotation>Vertical (CCW)</rotation>
     <region>US</region>
     <platform>Twin Cobra Platform</platform>
     <category>Shoot'em up</category>
