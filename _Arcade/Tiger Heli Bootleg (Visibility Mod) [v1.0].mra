@@ -8,7 +8,7 @@
 	<manufacturer>Toaplan</manufacturer>
 	<category>Shooter</category>
 	<rbf>SlapFight</rbf>
-	<rotation>vertical (ccw)</rotation>
+	<rotation>vertical (cw)</rotation>
 	<joystick>8-way</joystick>
 	<switches default="FF,FF,FF">
 		<dip bits="15" name="Heli Speed" ids="Fast,Normal"/>
