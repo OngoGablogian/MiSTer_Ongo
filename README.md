@@ -130,6 +130,7 @@ file_checking = 'exhaustive'
 | MiSTer rclone for Savestates & Screenshots                                                                                |
 | [Vectrex Overlays](https://github.com/MiSTer-devel/Vectrex_MiSTer/tree/master/overlays)                                   |
 | [Sho's NES Palettes (v2.4)](https://archive.org/details/nes-palettes-v-2.4)                                               |
+| [Pixeltao NES Palettes](https://pixeltao.itch.io/)                                                                        |
 | [GameBoyPalettes (icelaglace)](https://github.com/icelaglace/GameBoyPalettes)                                             |
 | [TrashUncle Game Boy Shadow Masks](https://github.com/trashuncle/Gameboy_Palettes)                                        |
 | [RetroFonse Presets](https://twitter.com/retrofonse/status/1602172002017517571?s=20)                                      |
