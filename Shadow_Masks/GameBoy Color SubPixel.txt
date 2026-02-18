@@ -1,0 +1,11 @@
+####
+# Name: Gameboy Color SubPixel
+# Author: BSeraph
+# Type: Handled
+# Genre: Handled
+####
+
+Resolution=0
+v2
+6,1
+0e6,0e6,4bf,2bf,2bf,1bf

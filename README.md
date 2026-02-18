@@ -138,6 +138,7 @@ file_checking = 'exhaustive'
 | [Scanlines - Adaptive (No Boost)](https://discord.com/channels/647909397477195803/811089485495402497/962786206029058179)  |
 | [Phaedrux LG C1 Settings](https://discord.com/channels/647909397477195803/647909398072655907/1082827830913671169)         |
 | [Bear N64 Audio Filter Presets](https://discord.com/channels/647909397477195803/1096015979055697940/1271142144135925771)  |
+| [GameBoy Color SubPixel](https://discord.com/channels/647909397477195803/1046941428758102086/1473666707326505100)         |
 | LCD Scale5x Shadow Masks                                                                                                  |
 
 ----
