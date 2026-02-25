@@ -14,7 +14,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                      |
 | [Atari Jaguar](https://github.com/greyrogue/Jaguar_MiSTer)                                                                      |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
-| [Blue Print (Test Version)](https://github.com/RodimusFVC/Arcade-BluePrint_MiSTer)                                              |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                         |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
