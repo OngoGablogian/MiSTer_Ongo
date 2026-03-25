@@ -36,7 +36,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo NES (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                                   |
 | [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
 | [Nintendo NES (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)                   |
-| [Nintendo SNES (Save States)](https://misterfpga.org/viewtopic.php?t=8459)                                                      |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
@@ -168,6 +167,12 @@ db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-gameboy-palette
 ```
 [misteraddons/reflexadapt]
 db_url = https://github.com/misteraddons/Reflex-Adapt/raw/main/reflexadapt.json.zip
+```
+
+[MiSTer-syncthing](https://github.com/davewongillies/MiSTer-syncthing)
+```
+[davewongillies/syncthing]
+db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-syncthing/db/db.json.zip
 ```
 
 ----
