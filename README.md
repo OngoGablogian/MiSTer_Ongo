@@ -159,7 +159,7 @@ db_url = https://raw.githubusercontent.com/danmons/MiSTer_D93/db/db.json.zip
 
 [MiSTer Game Boy Palettes (davewongillies)](https://github.com/davewongillies/MiSTer-gameboy-palettes)
 ```
-[davewongillies/gameboy_palettes]
+[gameboy_palettes]
 db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-gameboy-palettes/db/db.json.zip
 ```
 
