@@ -19,7 +19,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                 |
-| [FM Towns](http://fpga8801.seesaa.net)                                                                                          |
+| [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                  |
+| [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                     |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                       |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                     |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                     |
@@ -37,11 +38,13 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
 | [Nintendo NES (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)                   |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
+| [Panasonic 3DO (Dual SDRAM Only)](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)      |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                  |
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
+| [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                       |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                    |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                |
