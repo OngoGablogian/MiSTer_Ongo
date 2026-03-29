@@ -41,6 +41,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Panasonic 3DO (Dual SDRAM Only)](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)      |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
+| [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                  |
 | [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
