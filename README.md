@@ -12,7 +12,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                      |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                            |
 | [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                      |
-| [Atari Jaguar](https://github.com/greyrogue/Jaguar_MiSTer)                                                                      |
+| [Atari Jaguar (Single SDRAM)](https://github.com/greyrogue/Jaguar_MiSTer)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                         |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
@@ -37,9 +37,9 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo NES (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                                   |
 | [Nintendo NES (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                                  |
 | [Nintendo NES (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)                   |
-| [Nintendo Virtual Boy (Unstable)](https://discord.com/channels/647909397477195803/1056040100141735986)                          |
+| [Nintendo Virtual Boy (Unstable)](https://discord.com/channels/647909397477195803/1056040100141735986/1397022893673545840)      |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
-| [Panasonic 3DO (Dual SDRAM Only)](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)      |
+| [Panasonic 3DO (Dual SDRAM)](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)           |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
