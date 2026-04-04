@@ -15,6 +15,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Atari Jaguar (Single SDRAM)](https://github.com/greyrogue/Jaguar_MiSTer)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                         |
+| [Darius](https://discord.com/channels/647909397477195803/737506076806611064/1489773783719084042)                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
@@ -84,6 +85,15 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 ```
 [Uneon]
 main=MiSTer_Uneon
+```
+
+
+> [!IMPORTANT]
+> The Darius core uses a triple-screen display and looks best when integer scaled. You can add the lines below to your 'MiSTer.ini' file to apply this setting to the core.
+
+```
+[darius*]
+vscale_mode=1
 ```
 
 
