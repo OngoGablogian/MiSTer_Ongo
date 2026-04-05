@@ -29,6 +29,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                             |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                              |
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                     |
+| [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                             |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
 | [Nintendo Game & Watch](https://github.com/agg23/fpga-gameandwatch)                                                             |
@@ -63,7 +64,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 
 
 > [!IMPORTANT]
-> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you MiSTer.ini file, please remove them.
+> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you 'MiSTer.ini' file, please remove them.
 
 ```
 [CD-i]
@@ -80,7 +81,7 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 
 
 > [!IMPORTANT]
-> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly you must add the lines below to your MiSTer.ini file.
+> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly you must add the lines below to your 'MiSTer.ini' file.
 
 ```
 [Uneon]
@@ -89,11 +90,12 @@ main=MiSTer_Uneon
 
 
 > [!IMPORTANT]
-> The Darius core uses a triple-screen display and looks best when integer scaled. You can add the lines below to your 'MiSTer.ini' file to apply this setting to the core.
+> The Darius core uses a triple-screen display and looks best when integer scaled at 1080p. You can add the lines below to your 'MiSTer.ini' file to apply this setting to the core.
 
 ```
 [darius*]
 vscale_mode=1
+video_mode=8
 ```
 
 
