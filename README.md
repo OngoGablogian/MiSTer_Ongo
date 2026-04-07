@@ -90,7 +90,7 @@ main=MiSTer_Uneon
 
 
 > [!IMPORTANT]
-> The Darius core uses a triple-screen display and looks best when integer scaled at 1080p. You can add the lines below to your 'MiSTer.ini' file to apply this setting to the core.
+> The Darius core has been updated and now has an integer scaling toggle in the core OSD. If you previously added the lines below to your 'MiSTer.ini' file, they can be removed. The core still looks best at 1080p, so if you use a higher resolution, it's recommended to just delete the 'vscale_mode=1' line.
 
 ```
 [darius*]
