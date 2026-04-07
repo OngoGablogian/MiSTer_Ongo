@@ -41,7 +41,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo NES (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)                   |
 | [Nintendo Virtual Boy (Unstable)](https://discord.com/channels/647909397477195803/1056040100141735986/1397022893673545840)      |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
-| [Panasonic 3DO (Dual SDRAM)](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)           |
+| [Panasonic 3DO](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)                        |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
