@@ -90,7 +90,7 @@ main=MiSTer_Uneon
 
 
 > [!IMPORTANT]
-> The Darius core has been updated and now has an integer scaling toggle in the core OSD. If you previously added the lines below to your 'MiSTer.ini' file, they can be removed. The core still looks best at 1080p, so if you use a higher resolution, it's recommended to just delete the 'vscale_mode=1' line.
+> The Darius core has been updated and now has an integer scaling toggle in the core OSD. If you previously added the lines below to your 'MiSTer.ini' file, they can be removed. The core still looks best at 1080p, so if you use a higher resolution, it's recommended to just delete the 'vscale_mode=1' line and use the 'Narrower HV-Integer' option in the core.
 
 ```
 [darius*]
