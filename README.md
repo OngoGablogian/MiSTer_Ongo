@@ -168,6 +168,12 @@ file_checking = 'exhaustive'
 db_url = https://raw.githubusercontent.com/MiSTer-unstable-nightlies/Unstable_Folder_MiSTer/main/db_unstable_nightlies_folder.json
 ```
 
+[Dual Ram Versions of MiSTer Console Cores](https://github.com/TheJesusFish/Dual-Ram-Console-Cores)
+```
+[TheJesusFish/Dual-Ram-Console-Cores]
+db_url = https://raw.githubusercontent.com/TheJesusFish/Dual-Ram-Console-Cores/db/db.json.zip
+```
+
 [MiSTer FPGA D93 Whitepoint Filter (danmons)](https://github.com/danmons/MiSTer_D93)
 ```
 [danmons/MiSTer_D93]
