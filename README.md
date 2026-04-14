@@ -15,7 +15,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Atari Jaguar (Single SDRAM)](https://github.com/greyrogue/Jaguar_MiSTer)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                         |
-| [Darius](https://github.com/rmonic79/Arcade-Darius_MiSTer)                                                                      |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
@@ -54,7 +53,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                 |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
-| [StarForce](https://github.com/madoov/MiSTer-StarForce)                                                                         |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
