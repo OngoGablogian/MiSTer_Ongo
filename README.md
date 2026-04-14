@@ -47,7 +47,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                  |
-| [SEGA System 1 & 2](https://github.com/blackwine/Arcade-SEGASYS1_MiSTer)                                                        |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                       |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                    |
@@ -172,6 +171,12 @@ db_url = https://raw.githubusercontent.com/MiSTer-unstable-nightlies/Unstable_Fo
 ```
 [TheJesusFish/Dual-Ram-Console-Cores]
 db_url = https://raw.githubusercontent.com/TheJesusFish/Dual-Ram-Console-Cores/db/db.json.zip
+```
+
+[Blackwine SEGA System 1 and 2](https://github.com/TheJesusFish/Blackwine-SegaSystem1-2_MiSTer)
+```
+[TheJesusFish/Blackwine-Segasystem1-2_Mister]
+db_url = https://raw.githubusercontent.com/TheJesusFish/Blackwine-SegaSystem1-2_MiSTer/db/db.json.zip
 ```
 
 [MiSTer FPGA D93 Whitepoint Filter (danmons)](https://github.com/danmons/MiSTer_D93)
