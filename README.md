@@ -28,7 +28,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                             |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                              |
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                     |
-[ [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                       |
+| [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                       |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                             |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
@@ -61,6 +61,15 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
 
+----
+
+> [!IMPORTANT]
+> Since the release of Downloader v2.3, I'd recommended adding the lines below to your 'downloader.ini' file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
+
+```
+[MiSTer]
+file_checking = 'exhaustive'
+```
 
 > [!IMPORTANT]
 > The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you 'MiSTer.ini' file, please remove them.
@@ -70,23 +79,12 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 main=MiSTer_CDi
 ```
 
-
 > [!IMPORTANT]
 > The Neo Geo Pocket Color MRA in the consoles folder requires that you symlink the "_Arcade/Cores" folder to "_Console/cores". This is necessary until the core leaves beta. To do this, enter the command listed below into the Linux command line on your MiSTer.
 
 ```
 ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 ```
-
-
-> [!IMPORTANT]
-> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
-
-```
-[Uneon]
-main=MiSTer_Uneon
-```
-
 
 > [!IMPORTANT]
 > For the [RetroAchievements](https://retroachievements.org) cores to function properly, you must add the lines below to your 'MiSTer.ini' file.
@@ -102,13 +100,12 @@ main=MiSTer_Uneon
 main=MiSTer_RA
 ```
 
-
 > [!IMPORTANT]
-> Since the release of Downloader v2.3, I'd recommended adding the lines below to your 'downloader.ini' file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
+> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
 
 ```
-[MiSTer]
-file_checking = 'exhaustive'
+[Uneon]
+main=MiSTer_Uneon
 ```
 
 ----
