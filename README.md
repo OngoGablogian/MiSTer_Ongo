@@ -43,6 +43,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
 | [Panasonic 3DO](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)                        |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
+| [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
@@ -79,7 +80,7 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 
 
 > [!IMPORTANT]
-> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly you must add the lines below to your 'MiSTer.ini' file.
+> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
 
 ```
 [Uneon]
@@ -88,12 +89,17 @@ main=MiSTer_Uneon
 
 
 > [!IMPORTANT]
-> The Darius core has been updated and now has an integer scaling toggle in the core OSD. If you previously added the lines below to your 'MiSTer.ini' file, they can be removed. The core still looks best at 1080p, so if you use a higher resolution, it's recommended to just delete the 'vscale_mode=1' line and use the 'Narrower HV-Integer' option in the core.
+> For the [RetroAchievements](https://retroachievements.org) cores to function properly, you must add the lines below to your 'MiSTer.ini' file.
 
 ```
-[darius*]
-vscale_mode=1
-video_mode=8
+[RA_Gameboy
++RA_MegaDrive
++RA_N64
++RA_NES
++RA_PSX
++RA_SMS
++RA_SNES]
+main=MiSTer_RA
 ```
 
 
