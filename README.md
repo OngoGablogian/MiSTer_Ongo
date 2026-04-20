@@ -92,13 +92,16 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 
 ```
 [RA_Gameboy
++RA_GBA
++RA_MegaCD
 +RA_MegaDrive
 +RA_N64
 +RA_NeoGeo
 +RA_NES
 +RA_PSX
 +RA_SMS
-+RA_SNES]
++RA_SNES
++RA_TurboGrafx16]
 main=MiSTer_RA
 ```
 
