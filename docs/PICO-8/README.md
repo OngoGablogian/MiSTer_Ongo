@@ -4,7 +4,7 @@ A PICO-8 fantasy console emulator for MiSTer FPGA with native video and audio ou
 
 ## Features
 
-- **Native FPGA video output** — 320×256 @ 59.41Hz through MiSTer's native video pipeline (128×128 doubled to 256×256, centered in 320-pixel active area for 4:3 CRT fill)
+- **Native FPGA video output** — 256×256 @ 60.10Hz with exact NES pixel clock (5.369 MHz from NTSC colorburst crystal). 128×128 doubled to 256×256, no borders. CRT image width matches NES/SNES/Genesis exactly (47.68 µs active time)
 - **Native FPGA audio output** — 48 kHz signed 16-bit stereo via DDR3 ring buffer and dual-clock DCFIFO (same audio path as NES/SNES/Genesis cores)
 - **CRT support** — scanlines, shadow masks, and analog video output for CRT displays
 - **MiSTer OSD integration** — load .p8 and .p8.png carts from the file browser
@@ -69,7 +69,7 @@ Extract the release zip to the root of your MiSTer SD card (`/media/fat/`):
 Hybrid core: FPGA handles video/audio output and controller input, ARM CPU runs the PICO-8 emulator (zepto8).
 
 - **ARM** renders 128×128 RGBA frames → RGB565 → DDR3
-- **FPGA** reads DDR3, doubles to 256×256, centers in 320×256 active area, outputs native video (15,625 Hz horizontal, CRT-safe)
+- **FPGA** reads DDR3, doubles to 256×256, outputs native video (15,746 Hz horizontal, exact NES timing)
 - **Audio** — ARM writes 48 kHz S16 stereo to DDR3 ring buffer, FPGA reads and outputs via I2S/SPDIF/DAC
 - **Controller** — USB → Main_MiSTer → hps_io → FPGA → DDR3 → ARM
 - **Cart loading** — OSD file browser → hps_io ioctl → FPGA → DDR3 → ARM
