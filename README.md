@@ -15,6 +15,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Atari Jaguar (Single SDRAM)](https://github.com/greyrogue/Jaguar_MiSTer)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                         |
+| [Darius II](https://discord.com/channels/647909397477195803/737506076806611064/1497625736444379297)                             |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
@@ -41,7 +42,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo NES (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)                   |
 | [Nintendo Virtual Boy (Unstable)](https://discord.com/channels/647909397477195803/1056040100141735986/1397022893673545840)      |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
-| [Panasonic 3DO](https://discord.com/channels/647909397477195803/1329170138234097745/1329213968622948352)                        |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                       |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                |
@@ -64,20 +64,14 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 
 ----
 
+# Important Info:
+
 > [!IMPORTANT]
 > Since the release of Downloader v2.3, I'd recommended adding the lines below to your 'downloader.ini' file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
 
 ```
 [MiSTer]
 file_checking = 'exhaustive'
-```
-
-> [!IMPORTANT]
-> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you 'MiSTer.ini' file, please remove them.
-
-```
-[CD-i]
-main=MiSTer_CDi
 ```
 
 > [!IMPORTANT]
@@ -112,6 +106,14 @@ main=MiSTer_RA
 ```
 [Uneon]
 main=MiSTer_Uneon
+```
+
+> [!IMPORTANT]
+> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you 'MiSTer.ini' file, please remove them.
+
+```
+[CD-i]
+main=MiSTer_CDi
 ```
 
 ----
