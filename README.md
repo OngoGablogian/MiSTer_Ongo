@@ -82,8 +82,7 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 ```
 
 > [!IMPORTANT]
-> For the [RetroAchievements](https://retroachievements.org) cores to function properly, you must add the lines below to your 'MiSTer.ini' file.
-
+> For the [RetroAchievements](https://retroachievements.org) cores to function properly, you must add the lines below to your 'MiSTer.ini' file. Also, you'll need to add your [RetroAchievements](https://retroachievements.org) login credentials to the 'retroachievements.cfg' file located on the root of your MiSTer's SD card. The 'retroachievements.cfg' file receives updates periodically, when this happens your login credentials will be removed and will need to be added again.
 ```
 [RA_Gameboy
 +RA_GBA
