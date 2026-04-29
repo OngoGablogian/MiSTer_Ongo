@@ -86,8 +86,11 @@
     <!-- ==================== YM2610 ADPCM-A samples (1MB) @ 0x440000 ==================== -->
     <part name="c07-10.95" crc="4bbe0ed9"/>
     <part name="c07-11.96" crc="3c815699"/>
+    <!-- Pad 512KB per riempire slot ADPCM-A (1.5MB hardcoded nel loader audio_top).
+         Senza questo pad ADPCM-B a 0x540000 verrebbe interpretato come ADPCM-A. -->
+    <part repeat="0x80000"> FF</part>
 
-    <!-- ==================== YM2610 ADPCM-B / Delta-T (512KB) @ 0x540000 ==================== -->
+    <!-- ==================== YM2610 ADPCM-B / Delta-T (512KB) @ 0x5C0000 ==================== -->
     <part name="c07-12.107" crc="e0b71258"/>
 
   </rom>
