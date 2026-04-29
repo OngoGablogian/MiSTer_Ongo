@@ -7,8 +7,25 @@
 
 LOCKDIR="/tmp/pico8_daemon.lock"
 PIDFILE="/tmp/pico8_arm.pid"
-BINARY="/media/fat/games/PICO-8/PICO-8"
-ARGS="-nativevideo -data /media/fat/games/PICO-8/"
+GAMEDIR="/media/fat/games/PICO-8"
+BINARY="$GAMEDIR/PICO-8"
+ARGS="-nativevideo -data $GAMEDIR/"
+
+# Clear any stale .s0 from a previous boot so MiSTer doesn't auto-mount
+# a previously-selected cart on core load
+rm -f /media/fat/config/PICO-8.s0
+
+# Sweep any rogue PICO-8 binary left over from a previous daemon
+# instance that failed to kill its child cleanly (deploy script
+# kill, crash, manual SSH restart). Filter by /proc/$pid/cwd so
+# we only kill OUR binary — defensive even though PICO-8 is the
+# only core named "PICO-8" today.
+for pid in $(pidof PICO-8 2>/dev/null); do
+    cwd=$(readlink "/proc/$pid/cwd" 2>/dev/null)
+    if [ "$cwd" = "$GAMEDIR" ]; then
+        kill -9 "$pid" 2>/dev/null
+    fi
+done
 
 # Prevent multiple daemon instances
 if ! mkdir "$LOCKDIR" 2>/dev/null; then
@@ -57,12 +74,18 @@ while true; do
             continue
         fi
         if [ "$CUR" != "PICO-8" ]; then
-            # User left the core — kill binary
+            # User left the core — kill binary aggressively so it
+            # cannot keep writing to DDR3 while another core tries
+            # to render. SIGTERM grace window, then SIGKILL — zepto8
+            # cleanup paths can hang under SDL dummy + audio thread.
             kill $CHILD 2>/dev/null
+            sleep 1
+            kill -9 $CHILD 2>/dev/null
             wait $CHILD 2>/dev/null
             CHILD=""
             FIRST_LOAD=1
             rm -f "$PIDFILE"
+            rm -f /media/fat/config/PICO-8.s0
         fi
     fi
 

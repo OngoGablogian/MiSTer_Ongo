@@ -561,7 +561,7 @@ function __z8_pause_menu()
             end
         end
         add(entries, { l = stat(201), c = function (e) if e == 112 then __z8_menu.inoption = true __z8_menu.optioncursor = 0 end return true end })
-        add(entries, { l = stat(208), c = function (e) if e == 112 then run() end end, ask = true})
+        add(entries, { l = stat(208), c = function (e) if e == 112 then extcmd("reset") end end, ask = true})
         local bread = stat(100)
         if bread then
             add(entries, { l = bread, c = function (e) if e == 112 then extcmd("breadcrumb") end end, ask = true})
