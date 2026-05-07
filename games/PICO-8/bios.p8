@@ -255,17 +255,47 @@ function _set_fps()
 end
 
 -- Load a cart from file or URL
+--
+-- MiSTer Frontier patch: # prefix in `arg` is PICO-8's BBS cart-ID syntax
+-- (used by carts hosted on the Lexaloffle BBS — e.g. multicart games that
+-- set load_mode=2 to fetch sub-carts from BBS). zepto8 on MiSTer has no
+-- network so the original __download() path hangs. Resolve `#name` against
+-- local files first; only fall through to __download if every local lookup
+-- fails. Lookup order:
+--   (1) full BBS name + .p8.png  (e.g., 'freezing_knights_map.p8.png')
+--   (2) full BBS name, auto .p8  (matches text-format carts)
+--   (3) suffix-after-last-underscore + .p8.png  (matches renamed files
+--       like 'map.p8.png' that dropped the cart-specific prefix)
+--   (4) suffix, auto .p8
+-- See project_zepto8_bbs_prefix_local_fallback.md.
 function load(arg, breadcrumb, params)
     local finished, success, msg
     if string.match(arg, '^#') then
-        color(6)
-        local x,y = cursor()
-        print('downloading.. ', x, y)
-        cursor(x+14*4, y)
-        finished, success, msg = __download(arg)
-        while not finished do
-            finished, success, msg = __download()
-            flip()
+        local full_name = string.sub(arg, 2)
+        msg = ""
+        success = __load(full_name .. ".p8.png", breadcrumb, params)
+        if not success then
+            success = __load(full_name, breadcrumb, params)
+        end
+        if not success then
+            local short_name = string.match(full_name, "_([^_]+)$")
+            if short_name then
+                success = __load(short_name .. ".p8.png", breadcrumb, params)
+                if not success then
+                    success = __load(short_name, breadcrumb, params)
+                end
+            end
+        end
+        if not success then
+            color(6)
+            local x,y = cursor()
+            print('downloading.. ', x, y)
+            cursor(x+14*4, y)
+            finished, success, msg = __download(arg)
+            while not finished do
+                finished, success, msg = __download()
+                flip()
+            end
         end
     else
         color(14)
@@ -297,6 +327,11 @@ function create_sandbox()
             t[k] = v
         end
     end
+    -- MiSTer Frontier: expose the active sandbox so C++ savestate code
+    -- can persist/restore the cart's globals via eris. This is the
+    -- table the cart's chunk uses as its _ENV — mutating its keys in
+    -- place updates the running cart's state.
+    __z8_sandbox = t
     return t;
 end
 

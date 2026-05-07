@@ -9,17 +9,32 @@ A PICO-8 fantasy console emulator for MiSTer FPGA with native video and audio ou
 - **CRT support** — scanlines, shadow masks, and analog video output for CRT displays
 - **MiSTer OSD integration** — load .p8 and .p8.png carts from the file browser
 - **Hot-swap carts** — load a new cart from the OSD while a game is playing
+- **Save states** — 4 slots per cart, NES-style UX, OSD-driven and F1–F4 keyboard shortcuts (see [Save States](#save-states) below)
 - **Controller support** — d-pad, analog stick, and button mapping through MiSTer's input system
 - **Auto-launch** — the emulator starts automatically when the core is loaded
 
 ## Quick Install
 
-1. Copy `Scripts/Install_PICO-8.sh` to `/media/fat/Scripts/` on your MiSTer SD card
-2. From the MiSTer main menu, go to Scripts and run **Install_PICO-8**
-3. Place your `.p8` or `.p8.png` carts in `games/PICO-8/Carts/`
-4. Load **PICO-8** from the console menu to play
+The recommended path is via the **MiSTer Frontier** combined database, which auto-deploys the PICO-8 core (and any other Frontier core you opt into) every time you run `update_all`.
 
-The install script downloads and installs everything: the FPGA core, ARM binary, BIOS, and daemon.
+Add this to `/media/fat/downloader.ini` on your MiSTer's SD card:
+
+```ini
+[MiSTerOrganize/MiSTer_Frontier]
+db_url = https://raw.githubusercontent.com/MiSTerOrganize/MiSTer_Frontier/db/db.json.zip
+filter = pico-8
+```
+
+The `filter = pico-8` line tells the downloader to install **only** PICO-8 from the Frontier database. Drop the filter line if you want every Frontier core, or pick others — see the [Frontier README](https://github.com/MiSTerOrganize/MiSTer_Frontier#choosing-what-to-install-filters) for the full filter list.
+
+After editing `downloader.ini`:
+
+1. Run `update_all` from MiSTer's Scripts menu — installs the FPGA core, ARM binary, BIOS (`bios.p8`), handler script, and docs
+2. Run `Scripts/Install_MiSTer_Frontier.sh` once — registers the Master Daemon that auto-launches the emulator. Idempotent
+3. Place your `.p8` or `.p8.png` carts in `/media/fat/games/PICO-8/Carts/`
+4. Load **PICO-8** from the MiSTer console menu — the emulator launches automatically
+
+**Inspecting the manifest:** [DB Inspector for MiSTer_Frontier](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FMiSTerOrganize%2FMiSTer_Frontier%2Fdb%2Fdb.json.zip) — every file, hash, size, and tag visible in the browser. Useful for verifying which files a given filter would install before you run `update_all`.
 
 ## Manual Install
 
@@ -36,12 +51,14 @@ Extract the release zip to the root of your MiSTer SD card (`/media/fat/`):
 │   └── PICO-8/
 │       ├── PICO-8                         ARM binary (emulator)
 │       ├── pico8_daemon.sh                Auto-launch daemon
-│       ├── boot.rom                       BIOS
+│       ├── bios.p8                        BIOS
 │       └── Carts/                         Place your .p8 and .p8.png carts here
 ├── logs/
 │   └── PICO-8/                            Debug logs
 ├── saves/
-│   └── PICO-8/                            Game saves (created automatically)
+│   └── PICO-8/                            Cart-data saves (created automatically when a cart calls cartdata())
+├── savestates/
+│   └── PICO-8/                            Save state files (created automatically — <cart>_<slot>.ss)
 └── Scripts/
     └── Install_PICO-8.sh                  Install script
 ```
@@ -63,6 +80,66 @@ Extract the release zip to the root of your MiSTer SD card (`/media/fat/`):
 | X                   | X (action)  |
 | Start               | Pause       |
 | Menu button         | MiSTer OSD  |
+
+## Save States
+
+Same UX as the MiSTer NES core — 4 slots per cart, OSD pause-menu driven, with optional F1–F4 keyboard shortcuts.
+
+### How to use
+
+**Via the MiSTer OSD pause menu:**
+
+1. Open the MiSTer OSD (Menu button on your controller).
+2. Pick **Save Slot** to choose slot 1, 2, 3, or 4.
+3. Pick **Save State** to save the current cart's state to that slot.
+4. Pick **Load State** to restore the saved state from the selected slot.
+
+**Via keyboard shortcuts (USB keyboard plugged into the MiSTer):**
+
+| Key      | Action               |
+|----------|----------------------|
+| F1       | Load slot 1          |
+| F2       | Load slot 2          |
+| F3       | Load slot 3          |
+| F4       | Load slot 4          |
+| Alt + F1 | Save to slot 1       |
+| Alt + F2 | Save to slot 2       |
+| Alt + F3 | Save to slot 3       |
+| Alt + F4 | Save to slot 4       |
+
+### Where save state files live
+
+`/media/fat/savestates/PICO-8/<cart>_<slot>.ss`
+
+For example, saving slot 1 of a cart called `vracing_title.p8` produces `/media/fat/savestates/PICO-8/vracing_title_0.ss` (slots are zero-indexed in the filename: slot 1 → `_0`, slot 2 → `_1`, etc.).
+
+Save state files are independent of regular cart save data (`.p8d.txt` files in `/media/fat/saves/PICO-8/`). The two systems coexist — `cartdata()` persistence works normally for carts that use it.
+
+### What gets saved
+
+- Full cart RAM (graphics, sound, music, code, persistent / cartdata region)
+- Cart's currently-active globals (`_init`, `_update`, `_draw`, all variables)
+- Audio sequencer state (which sfx/music is playing, channel positions, fade)
+- Pause menu items (including any cart-defined `menuitem()` callbacks)
+- For multicart games: the currently-active sub-cart filename, so loads restore to the right sub-cart
+
+### Multicart save state notes
+
+Most multicart games (e.g., Pico Sonic) work transparently — save and load operate on whatever sub-cart is currently active and the state is preserved across sub-cart transitions in-game.
+
+**Known UX wart for cart-mismatch loads:** if you save while on one sub-cart, then change carts (via the in-cart Reset Cart pause menu, or by hot-swapping a different cart from the OSD), then press Load State — the **first** Load press will reload the saved cart but show its default state, and you need to press Load State a **second** time for the saved state to fully restore. This is unavoidable in PICO-8's multicart model: many sub-carts only run correctly when started by their parent cart's `load("subcart", breadcrumb, params)` call (which passes state through `params`/`breadcrumb`). Forcing the sub-cart to start standalone crashes it. The two-load workflow is the lesser evil.
+
+If you save+load on the same sub-cart without changing carts in between, no double-press is needed. The two-load behavior only affects the cart-mismatch case.
+
+### Tested compatibility
+
+Save states have been verified working on:
+
+- Single-cart games (Adventure Time World 2, A Hat on Time, A Small Dragon Kid Game, etc.)
+- Multicart games on the same sub-cart (Pico Sonic, Virtua Racing, Freezing Knights)
+- Multicart games across sub-cart transitions (with the two-load behavior described above)
+
+Audio resumes from saved music position, visuals resume from saved frame, gameplay continues from saved state.
 
 ## CRT Display Notes
 
