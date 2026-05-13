@@ -141,6 +141,12 @@ Save states have been verified working on:
 
 Audio resumes from saved music position, visuals resume from saved frame, gameplay continues from saved state.
 
+## Cart compatibility
+
+Carts using the standard PICO-8 API (`sfx()`, `music()`, `print()`, `pset()`, `spr()`, etc.) are supported, as are carts using zepto8's extension features: extended memory at 0x8000–0xFFFF (used by carts that allocate their own page buffers), raster-mode gradient palette (`poke(0x5f5f, 0x30)`), per-scanline raster bits, PCM streaming via `serial(0x808)` for carts that do their own audio mixing in pure Lua, custom drawstring blend formulas using fix32 arithmetic, and multicart `load()` chains.
+
+Notable verified carts: POOM, Pico Sonic, Virtua Racing, Freezing Knights, Adventure Time World 2, and **Another World** (Eric Chahi's classic ported by @fsouchu — full visual + audio parity with the PC reference, exercises extended-memory page buffers, a pure-Lua 4-channel PCM mixer, and raster-mode gradient sky; pause/unpause preserves the cart's palette mapping so the sky stays correctly colored). For Another World, MiSTer save states aren't supported because the cart's state model (bytecode VM, mid-`__reload` bank streaming, page-buffer closures) exceeds what NES-style save states can faithfully capture — use the cart's built-in **ACCESS CODE** save system instead (e.g., the "LDKD" prompt) for cross-session progress.
+
 ## CRT Display Notes
 
 PICO-8 ships with **video timing identical to the MiSTer NES core's default output**: 256×224 active, 262 lines total, 60.10 Hz refresh, exact NES pixel clock. Game pixels render at **8:7 pixel aspect** (slightly wider than tall) — the same proportions an NES or SNES has on a CRT TV. The 128×128 PICO-8 source is doubled horizontally to 256 and Bresenham-scaled vertically (1.75×) to 224. **No source pixels are cropped.**

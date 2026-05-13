@@ -81,9 +81,20 @@ end
 -- We also try to mimic the PICO-8 error messages:
 --  count(nil) → attempt to get length of local 'c' (a nil value)
 --  count("x") → attempt to index local 'c' (a string value)
-function count(c)
-    local cnt,max = 0,#c
-    for i=1,max do if (c[i] != nil) cnt+=1 end
+function count(c, v)
+    -- Two PICO-8-documented forms:
+    --   count(tbl)        -- number of non-nil entries in array part
+    --   count(tbl, v)     -- number of occurrences of v in array part
+    -- We previously only implemented the first form; carts using
+    -- the second (e.g., count(D, tile_value) > 0 for collision)
+    -- always got the array length back and treated everything as a
+    -- match. oblivion_eve training was completely broken by this.
+    local cnt, max = 0, #c
+    if v == nil then
+        for i = 1, max do if (c[i] != nil) cnt += 1 end
+    else
+        for i = 1, max do if (c[i] == v) cnt += 1 end
+    end
     return cnt
 end
 
@@ -232,7 +243,10 @@ abort = stub("abort")
 folder = stub("folder")
 resume = stub("resume")
 reboot = stub("reboot")
-serial = stub("serial")
+-- serial: bound directly to vm::api_serial in the C++ exported_api table
+-- (vm.h). Do NOT shadow with a Lua stub here — that would intercept every
+-- cart's serial() call before it reaches our PCM streaming implementation
+-- (serial(0x808) for AW's pure-Lua mixer; commit ccd76f6 + this fix).
 
 function _update_buttons()
     if(not __z8_button_updated) __buttons()
@@ -300,6 +314,17 @@ function load(arg, breadcrumb, params)
     else
         color(14)
         success, msg = __load(arg, breadcrumb, params), ""
+        -- Cart-compat fallback: if the cart asked for `foo.p8` (or any
+        -- name without `.png`) and that file doesn't exist, transparently
+        -- try the `.p8.png` steganography variant. Many BBS-distributed
+        -- multicart games ship sub-carts only as `.p8.png` but the cart's
+        -- hardcoded load() calls reference the `.p8` source name. Cart
+        -- authors seem to assume the loader will try both — we haven't
+        -- verified this against any explicit PICO-8 doc, but it's how
+        -- carts in the wild are written.
+        if not success and not string.match(arg, '%.png$') then
+            success = __load(arg .. ".png", breadcrumb, params)
+        end
     end
     if success then
         print('ok')
@@ -428,13 +453,34 @@ function __z8_run_cart(cart_code)
         end
     ]]
 
+    -- Distinguish "first cart launched from BIOS / OSD picker" (entry
+    -- cart) from "sub-cart loaded via load() from within a running cart".
+    -- BBS multicart games (oblivion_eve, freezing_knights, etc.) write
+    -- breadcrumb / state into user-data memory (commonly 0xF6D7+) and
+    -- expect the next cart's peek() to see it — so on sub-cart load we
+    -- skip the memory wipe. The sandbox itself is recreated every load
+    -- so each cart's own top-level definitions (function l, function s,
+    -- etc.) start from a clean global slate and don't have to fight
+    -- previous-cart values. Inferred from observed cart-author patterns;
+    -- haven't verified against any specific PICO-8 doc.
+    local is_subcart = __z8_sandbox ~= nil
+    local sandbox = create_sandbox()
+
     __z8_loop = cocreate(function()
 
-        __init_ram()
-        -- reload cart into memory
+        if not is_subcart then
+            __init_ram()
+        end
+        -- reload cart into memory (always — new cart's ROM at 0x0..0x4300)
         reload()
 
         __z8_reset_state()
+        -- Always reset cartdata: cartdata() is per-cart-session in PICO-8
+        -- (each cart can claim its own id once). Without this reset on
+        -- sub-cart load, the new cart's cartdata() call hits our BIOS
+        -- "can only be called once" guard, abort()s the cart, and the
+        -- multicart bounces back to title. Menu items are also cleared
+        -- here so each sub-cart can re-register its own menuitem()s.
         __z8_reset_cartdata()
 
         -- Load cart and run the user-provided functions. Note that if the
@@ -443,7 +489,7 @@ function __z8_run_cart(cart_code)
         -- The code has to be appended as a string because the functions
         -- may be stored in local variables.
         local code, ex = __z8_load_code(cart_code..glue_code, nil, nil,
-                                        create_sandbox())
+                                        sandbox)
         if not code then
             color(14) print('syntax error')
             poke(0x5f36, 0x80) -- activate word wrap
@@ -468,6 +514,15 @@ function __z8_tick()
         _update_buttons()
         if not __z8_pause_menu() then
             __mask_buttons()
+            -- Restore palette state captured at pause entry — see
+            -- __z8_enter_pause for rationale (AW pink-sky-on-unpause bug).
+            local sp = __z8_menu.saved_pal
+            if sp then
+                poke4(0x5f00, sp[1]) poke4(0x5f04, sp[2]) poke4(0x5f08, sp[3]) poke4(0x5f0c, sp[4])
+                poke4(0x5f10, sp[5]) poke4(0x5f14, sp[6]) poke4(0x5f18, sp[7]) poke4(0x5f1c, sp[8])
+                poke4(0x5f60, sp[9]) poke4(0x5f64, sp[10]) poke4(0x5f68, sp[11]) poke4(0x5f6c, sp[12])
+                __z8_menu.saved_pal = nil
+            end
             __z8_paused = false
         end
         __z8_frame_hold = false
@@ -550,6 +605,18 @@ end
 
 function __z8_enter_pause()
     __mask_buttons()
+    -- Snapshot palette state so the pause menu's pal() reset on line 656
+    -- doesn't permanently clobber the cart's palette mapping. AW (Another
+    -- World) sets screen_palette[N] = sky_blue at scene transitions only;
+    -- without this save/restore, after unpause the sky reverts to default
+    -- (pink for N=14) and stays wrong until the next scene change.
+    -- Captures: 0x5f00-0x5f1f (draw + screen palette) and 0x5f60-0x5f6f
+    -- (raster palette). 48 bytes = 12 fix32 slots.
+    __z8_menu.saved_pal = {
+        peek4(0x5f00), peek4(0x5f04), peek4(0x5f08), peek4(0x5f0c),
+        peek4(0x5f10), peek4(0x5f14), peek4(0x5f18), peek4(0x5f1c),
+        peek4(0x5f60), peek4(0x5f64), peek4(0x5f68), peek4(0x5f6c),
+    }
     __z8_paused = true
     __z8_menu.cursor = 0
 end
