@@ -50,7 +50,7 @@ Extract the release zip to the root of your MiSTer SD card (`/media/fat/`):
 ├── games/
 │   └── PICO-8/
 │       ├── PICO-8                         ARM binary (emulator)
-│       ├── pico8_daemon.sh                Auto-launch daemon
+│       ├── _handler.sh                    Master_Daemon dispatcher (auto-launches the emulator)
 │       ├── bios.p8                        BIOS
 │       └── Carts/                         Place your .p8 and .p8.png carts here
 ├── logs/
@@ -60,7 +60,7 @@ Extract the release zip to the root of your MiSTer SD card (`/media/fat/`):
 ├── savestates/
 │   └── PICO-8/                            Save state files (created automatically — <cart>_<slot>.ss)
 └── Scripts/
-    └── Install_PICO-8.sh                  Install script
+    └── Install_MiSTer_Frontier.sh         Install script (shipped by MiSTer_Frontier — unified across all Frontier cores)
 ```
 
 ## Usage
