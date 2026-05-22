@@ -5,7 +5,7 @@ A PICO-8 fantasy console emulator for MiSTer FPGA with native video and audio ou
 ## Features
 
 - **Native FPGA video output** — 256×224 @ 60.10Hz, byte-for-byte identical to the MiSTer NES core's default timing. Exact NES pixel clock (5.369 MHz from NTSC colorburst crystal), 47.68 µs active time, 38 lines of vertical blanking. 128×128 source is 2× horizontal + 1.75× vertical (Bresenham 4/7) so all source pixels display at 8:7 pixel aspect — same proportions as NES games on a CRT TV
-- **Native FPGA audio output** — 48 kHz signed 16-bit stereo via DDR3 ring buffer and dual-clock DCFIFO (same audio path as NES/SNES/Genesis cores)
+- **Native FPGA audio output** — 48 kHz signed 16-bit stereo via DDR3 ring buffer and dual-clock DCFIFO (same audio path as NES/SNES/Genesis cores). Audio kernel: **linear interpolation** at engine + wrapper (matches zepto8's `src/pico8/sfx.cpp::get_audio` linear-interp PCM math; wrapper at `src/mister_main.cpp::upsample_mono_to_stereo` mirrors the engine character — both stages linear).
 - **CRT support** — scanlines, shadow masks, and analog video output for CRT displays
 - **MiSTer OSD integration** — load .p8 and .p8.png carts from the file browser
 - **Hot-swap carts** — load a new cart from the OSD while a game is playing
@@ -71,15 +71,44 @@ Extract the release zip to the root of your MiSTer SD card (`/media/fat/`):
 4. Select **Load Cart** to browse and load a cart
 5. Load a different cart from the OSD at any time during gameplay
 
-## Controls
+## Supported Features
 
-| Button              | PICO-8      |
-|---------------------|-------------|
-| D-pad / Analog stick | Movement   |
-| A                   | O (confirm) |
-| X                   | X (action)  |
-| Start               | Pause       |
-| Menu button         | MiSTer OSD  |
+| Feature | PICO-8 |
+|---|---|
+| Saves (cartdata `.p8d.txt`) | ✅ |
+| Savestates (4 slots/cart, NES-style `.ss`) | ✅ |
+| Logs (`/media/fat/logs/PICO-8/pico8.log`) | ✅ |
+| Configs (`/media/fat/config/`) | ✅ |
+| MGLs (`_Other/*.mgl` one-click launchers) | ✅ |
+| Gameplay Recordings / TAS | ❌ no (zepto8 doesn't expose PICO-8 record/replay) |
+| Gamepad | ✅ |
+| Keyboard | ✅ (cart browser; blocked when gamepad connected) |
+| Mouse | ❌ no (PICO-8 spec exists but zepto8 hasn't wired `stat(32,33,34)`) |
+| Screen Positioning (CRT) H ±3 / V ±3 | ✅ |
+| Online Network Play | ❌ |
+| Multiplayer | ✅ up to **4 players** (FPGA `hps_io` `joystick_0..3` slots; cart determines actual usage) |
+| Light Gun | ❌ |
+| Aspect Ratio (Original / Full Screen / Custom1 / Custom2) | ❌ planned (roadmap #1) — fixed at `VIDEO_ARX=4` / `VIDEO_ARY=3` in `fpga/PICO8.sv` lines 202-203 |
+| Vertical Crop (216p 5x for clean 1080p integer scale) | ❌ planned (roadmap #2) |
+| Crop Offset (±12, paired with V-Crop) | ❌ planned (roadmap #2 pair) |
+| Scale Mode (Normal / V-Int / HV-Int integer scaling) | ❌ planned (roadmap #3) |
+| Swap Joysticks (P1↔P2) | ❌ planned (roadmap #4) |
+| Pause when OSD open | ❌ planned (roadmap #5) |
+| Stereo Mix (None / 25 / 50 / 100% channel cross-bleed) | ❌ n/a (mono source — zepto8 outputs L=R, cross-bleed is a no-op) |
+
+> **Roadmap note** — rows above marked "planned (roadmap #N)" are tracked in the mainstream-core parity roadmap: 6 LOW-difficulty OSD features common to ≥6 of 11 surveyed mainstream MiSTer cores (NES/Genesis/SNES/GB/GBA/SMS/NeoGeo/N64/PSX/Saturn/MegaCD). Ship order: Aspect Ratio → V-Crop+Offset → Scale → Swap Joysticks → Pause-when-OSD → Stereo Mix. Implementation is sys/-framework status-bit wiring only — no new RTL, no engine-side work.
+
+## Controls (Xbox wireless controller default mapping)
+
+| Xbox wireless    | PICO-8 action     | Notes |
+|------------------|-------------------|-------|
+| D-pad / Left stick | Movement (4-way) | analog stick has ARM-side dead zone for drift |
+| **A** button     | O (confirm / primary action) | |
+| **X** button     | X (cancel / secondary action) | |
+| **Menu / Start** | Pause / system menu | opens PICO-8's built-in pause menu |
+| **Xbox Guide (center)** | MiSTer OSD | core's OSD overlay (Load Cart, Save State, etc.) — framework-level, not per-core |
+
+CONF_STR: `J1,O,X,Pause;` / `jn,B,Y,Start;`. MiSTer's `jn` extension uses SNES naming (`jn A`=Xbox B, `jn B`=Xbox A, `jn X`=Xbox Y, `jn Y`=Xbox X), so the defaults above pair `jn B` (Xbox A) → PICO-8 O and `jn Y` (Xbox X) → PICO-8 X.
 
 ## Save States
 
