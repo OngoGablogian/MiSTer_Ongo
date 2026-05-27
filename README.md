@@ -98,7 +98,7 @@ main=MiSTer_RA
 ```
 
 > [!IMPORTANT]
-> The Star Wars Arcade core is a vector based game which looks best with certain settings applied to your 'MiSTer.ini' file. Check the linked GitHub repo below for information.
+> The Star Wars Arcade core is a vector based game which looks best with certain settings applied to your 'MiSTer.ini' file. Check the linked GitHub repo below for more information.
 
 [https://github.com/Videodr0me/Arcade-StarWars_MiSTer#recommended-mister-settings](https://github.com/Videodr0me/Arcade-StarWars_MiSTer#recommended-mister-settings)
 
