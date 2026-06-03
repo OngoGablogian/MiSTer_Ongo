@@ -1,0 +1,75 @@
+<misterromdescription>
+	<name>Major Havoc</name>
+	<region></region>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<version>rev 3</version>
+	<alternative></alternative>
+	<platform></platform>
+	<series></series>
+	<year>1983</year>
+	<manufacturer>Atari</manufacturer>
+	<category>Maze / Platform</category>
+
+	<setname>mhavoc</setname>
+	<parent>mhavoc</parent>
+	<mameversion>0287</mameversion>
+	<rbf>MajorHavoc</rbf>
+	<about>Major Havoc on the Star Wars DDR-framebuffer chassis. Dual 6502 (alpha+gamma) + colour AVG + banked vector ROM, rendered by the proven SW vector_fb_ddram. v0.1 bring-up: quad POKEY audio (P4) and DSW1 gameplay DIPs (read via POKEY) are NOT yet wired; coinage (DSW2) + roller + fire/shield work.</about>
+
+	<resolution>31kHz</resolution>
+	<rotation>horizontal</rotation>
+	<flip></flip>
+
+	<players>2</players>
+	<joystick></joystick>
+	<special_controls>spinner</special_controls>
+	<num_buttons>2</num_buttons>
+	<!-- J1 matches the core's CONF_STR: Fire, Shield, Coin, Pause -> joy[4..7]. MH starts on
+	     FIRE after a coin (no separate Start input on this PCB). Roller = analog spinner / D-pad L-R. -->
+	<buttons default="A,B,Select,Start" names="Fire,Shield,Coin,Pause"></buttons>
+
+	<!--
+	  ROM download layout (index 0, concatenated in this exact order) -> dn_addr, matching
+	  sim/build_mhavoc_dl.py + the majorhavoc.vhd / avg_majorhavoc.vhd download decodes:
+	    dn 0x00000  136025.216  (16K)  alpha $8000 fixed
+	    dn 0x04000  136025.217  (16K)  alpha $C000 fixed (holds the reset vector $8014)
+	    dn 0x08000  136025.215  (16K)  alpha banked (rompg pages 0/1)
+	    dn 0x0C000  136025.318  (16K)  alpha banked (rompg pages 2/3)
+	    dn 0x10000  136025.108  (16K)  gamma program
+	    dn 0x14000  136025.210  (8K)   vector ROM (.210) -> AVG pc $1000-$1FFF
+	    dn 0x16000  136025.106  (16K)  banked vector ROM, banks 0+1 -> AVG pc $2000-$3FFF (m_map)
+	    dn 0x1A000  136025.107  (16K)  banked vector ROM, banks 2+3
+	    dn 0x1E000  136002-125.6c (256) AVG state/colour PROM -- behavioral AVG hardcodes it, IGNORED.
+	-->
+
+	<switches default="00,FF">
+		<!-- DSW1 (13/14S). sw[0]. !! Read via POKEY 0 allpot -> NOT wired until P4 (quad POKEY); inert for now. -->
+		<dip bits="0" ids="On,Off" name="Adaptive Difficulty"></dip>
+		<dip bits="1" ids="On,Off" name="Demo Sounds"></dip>
+		<dip bits="2,3" ids="100000,200000,None,50000" name="Bonus Life"></dip>
+		<dip bits="4,5" ids="Medium,Easy,Demo,Hard" name="Difficulty"></dip>
+		<dip bits="6,7" ids="3,6,5,4" name="Lives"></dip>
+		<!-- DSW2 (8S). sw[1] -> gamma $4000 (mh_dsw2). Coinage WORKS now. -->
+		<dip bits="8,9" ids="1C 2C,Free Play,2C 1C,1C 1C" name="Coinage"></dip>
+		<dip bits="10,11" ids="x6,x5,x4,x1" name="Right Coin"></dip>
+		<dip bits="12" ids="x2,x1" name="Left Coin"></dip>
+		<dip bits="13,14,15" ids="None,2 each 4,1 each 3,1 each 5,1 each 4,*,*,*" name="Bonus Credits"></dip>
+	</switches>
+
+	<rom index="0" md5="none" type="merged|nonmerged" zip="mhavoc.zip">
+		<part crc="522a9cc0" name="136025.216"></part>
+		<part crc="ea3d6877" name="136025.217"></part>
+		<part crc="a4d380ca" name="136025.215"></part>
+		<part crc="ba935067" name="136025.318"></part>
+		<part crc="93faf210" name="136025.108"></part>
+		<part crc="c67284ca" name="136025.210"></part>
+		<part crc="2ca83c76" name="136025.106"></part>
+		<part crc="5f81c5f3" name="136025.107"></part>
+		<part crc="5903af03" name="136002-125.6c"></part>
+		</rom>
+
+	<remark>Major Havoc v0.1 — Star Wars DDR chassis. clk_12 first-cut (game ~20% fast); audio (quad POKEY) + DSW1 gameplay DIPs pending P4. Orientation/roller direction are HW-tunable (OSD Rotate/Mirror).</remark>
+
+	<mratimestamp>20260531000000</mratimestamp>
+</misterromdescription>

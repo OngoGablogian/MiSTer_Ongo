@@ -25,6 +25,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                     |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                             |
+| [Major Havoc](https://github.com/derpyder/Arcade-MajorHavoc_MiSTer)                                                             |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                              |
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                     |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                       |
@@ -41,8 +42,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                       |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
-| [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
+| [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                  |
@@ -56,6 +57,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Star Wars Arcade](https://github.com/Videodr0me/Arcade-StarWars_MiSTer)                                                        |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
+| [Tempest](https://github.com/derpyder/Arcade-Tempest_MiSTer)                                                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
