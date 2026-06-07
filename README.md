@@ -55,7 +55,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                 |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
-| [Star Wars Arcade](https://github.com/Videodr0me/Arcade-StarWars_MiSTer)                                                        |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
 | [Tempest](https://github.com/derpyder/Arcade-Tempest_MiSTer)                                                                    |
