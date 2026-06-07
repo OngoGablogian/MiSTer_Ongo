@@ -1,0 +1,46 @@
+<misterromdescription>
+	<name>DoDonPachi Dai-Ou-Jou Black Label (Japan, 2002.10.07.Black Ver, newer) (deprotected)</name>
+	<setname>ddpdojblkd</setname>
+	<rbf>IGSPGM</rbf>
+	<rotation>vertical</rotation>
+	<mameversion>277</mameversion>
+	<buttons default="B,A,X,Y,Start,Select,L,R" names="A,B,C,D,-,-,Start,Coin,Pause,SS"/>
+	<switches default="fffe">
+		<dip name="Test mode"   bits="0" values="1,0" ids="Off,On"/>
+		<dip name="Music"       bits="1" values="1,0" ids="Off,On"/>
+		<dip name="Voice"       bits="2" values="1,0" ids="Off,On"/>
+		<dip name="Free play"   bits="3" values="1,0" ids="Off,On"/>
+		<dip name="Stop mode"   bits="4" values="1,0" ids="Off,On"/>
+		<dip name="Unused"      bits="5" values="1,0" ids="Off,On"/>
+		<dip name="Unused"      bits="6" values="1,0" ids="Off,On"/>
+		<dip name="Debug"       bits="7" values="1,0" ids="Off,On"/>
+	</switches>
+	<rom index="0" address="0x30000000" zip="pgm.zip|ddp3d.zip|ddp3.zip">
+		<part>86 00</part>
+
+        <part>00 00080000 00000000</part>
+        <part name="ddp3_bios.u37" crc="b3cc5c8f"/>
+        
+        <part>01 00200000 00000000</part>
+        <part name="pgm_t01s.rom" crc="1a7123a0"/>
+        
+        <part>02 00200000 00000000</part>
+        <part name="pgm_m01s.rom" crc="45ae7159"/>
+
+        <part>03 00200000 00100000</part>
+        <part name="ddb10_10_8_434f-deprotected.u45" crc="30ee5878"/>
+        
+        <part>04 00800000 00180000</part>
+        <part name="cave_t04401w064.u19" crc="3a95f19c"/>
+        
+        <part>05 00400000 00400000</part>
+        <part name="cave_m04401b032.u17" crc="5a0dbd76"/>
+        
+        <part>06 01000000 00000000</part>
+        <part name="cave_a04401w064.u7" crc="ed229794"/>
+        <part name="cave_a04402w064.u8" crc="752167b0"/>
+        
+        <part>07 00800000 00000000</part>
+        <part name="cave_b04401w064.u1" crc="17731c9d"/>
+	</rom>
+</misterromdescription>
