@@ -41,4 +41,7 @@ echo 3 > /proc/sys/vm/drop_caches 2>/dev/null
 # FPGA settle on first launch (the FPGA was just reflashed)
 sleep 1
 
-exec ./PICO-8 -nativevideo -data "$GAMEDIR/" > "$LOGDIR/PICO-8.log" 2>&1
+# 2026-06-08 affinity fix: taskset 0x03 (both cores) so the binary's render-thread
+# pin to core 1 + audio-thread pin to core 0 (mister_main.cpp) take effect. Core 0
+# takes ~165M device IRQs (USB/fb/SD), core 1 is interrupt-free — render belongs on 1.
+exec taskset 0x03 ./PICO-8 -nativevideo -data "$GAMEDIR/" > "$LOGDIR/PICO-8.log" 2>&1

@@ -12,6 +12,9 @@ A PICO-8 fantasy console emulator for MiSTer FPGA with native video and audio ou
 - **Save states** — 4 slots per cart, NES-style UX, OSD-driven and F1–F4 keyboard shortcuts (see [Save States](#save-states) below)
 - **Controller support** — d-pad, analog stick, and button mapping through MiSTer's input system
 - **Auto-launch** — the emulator starts automatically when the core is loaded
+- **Reliable database delivery via `update_all`** (2026-05-26 infrastructure) — two CI guardrails on the per-core repo's `build.yml` ensure users always receive working binaries:
+  - **Diagnostic-marker gate** — research-phase instrumentation patches (`TEMPORARY PROFILE`, `TEMPORARY DIAG`, `REVERT AFTER MEASURED`) are auto-detected in `src/` and `bios.p8`; if any are present, CI rebuilds the ARM binary BUT refuses to commit it back to main. The binary uploads as a workflow artifact for manual deploy testing while the public manifest continues to ship the last known-clean build. Prevents diagnostic binaries from accidentally landing in `db.json`.
+  - **DB rebuild auto-trigger** — after every clean binary commit-back, CI fires `gh workflow run "Build Custom Database"` against `MiSTer_Frontier`. The database refreshes within ~30 seconds of the binary push instead of waiting for the daily cron. Closes the previous hash-mismatch window where `raw.githubusercontent.com` served a new binary while `db.json` still referenced the previous hash (which would cause `update_all` to reject the download). The auto-trigger uses a per-repo `MISTER_FRONTIER_DISPATCH_TOKEN` secret (one-time setup).
 
 ## Quick Install
 
@@ -88,15 +91,12 @@ Extract the release zip to the root of your MiSTer SD card (`/media/fat/`):
 | Online Network Play | ❌ |
 | Multiplayer | ✅ up to **4 players** (FPGA `hps_io` `joystick_0..3` slots; cart determines actual usage) |
 | Light Gun | ❌ |
-| Aspect Ratio (Original / Full Screen / Custom1 / Custom2) | ❌ planned (roadmap #1) — fixed at `VIDEO_ARX=4` / `VIDEO_ARY=3` in `fpga/PICO8.sv` lines 202-203 |
-| Vertical Crop (216p 5x for clean 1080p integer scale) | ❌ planned (roadmap #2) |
-| Crop Offset (±12, paired with V-Crop) | ❌ planned (roadmap #2 pair) |
-| Scale Mode (Normal / V-Int / HV-Int integer scaling) | ❌ planned (roadmap #3) |
-| Swap Joysticks (P1↔P2) | ❌ planned (roadmap #4) |
-| Pause when OSD open | ❌ planned (roadmap #5) |
+| Aspect Ratio (Original / Full Screen / Custom1 / Custom2) | ✅ |
+| Scale Mode (Normal / V-Int / HV-Int integer scaling) | ✅ |
+| Swap Joysticks (P1↔P2) | ✅ |
 | Stereo Mix (None / 25 / 50 / 100% channel cross-bleed) | ❌ n/a (mono source — zepto8 outputs L=R, cross-bleed is a no-op) |
 
-> **Roadmap note** — rows above marked "planned (roadmap #N)" are tracked in the mainstream-core parity roadmap: 6 LOW-difficulty OSD features common to ≥6 of 11 surveyed mainstream MiSTer cores (NES/Genesis/SNES/GB/GBA/SMS/NeoGeo/N64/PSX/Saturn/MegaCD). Ship order: Aspect Ratio → V-Crop+Offset → Scale → Swap Joysticks → Pause-when-OSD → Stereo Mix. Implementation is sys/-framework status-bit wiring only — no new RTL, no engine-side work.
+> **Note** -- Aspect Ratio, Scale Mode, Swap Joysticks, and (on OpenBOR) Stereo Mix shipped 2026-06-08, bringing these cores in line with mainstream MiSTer console-core OSD options.
 
 ## Controls (Xbox wireless controller default mapping)
 
