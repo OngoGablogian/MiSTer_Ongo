@@ -60,7 +60,6 @@
         <!-- B ROM -->
         <part>07 00800000 00000000</part>
 	    <part name="b04401w064_corrupt.u1" crc="8cbff066"/>
-	</rom>
 	
 	<!-- IGS027A INTERNAL ARM ROM (16KB -> block RAM) -->
         <part>09 00004000 00000000</part>
