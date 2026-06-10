@@ -1,7 +1,7 @@
 <misterromdescription>
 	<!-- IGS027A type1 (CAVE), 20 MHz.  Internal ROM undumped; uses the RetroHQ
 	     ASIC27A recreation (real ARM7 + hardware latch).  68k decrypt: pgm_ket_decrypt. -->
-	<name>Ketsui - Kizuna Jigoku Tachi (IKD 2007 Special)</name>
+	<name>Ketsui - Kizuna Jigoku Tachi (2007.09.22 IKD 2007 Special)</name>
 	<setname>ketikd</setname>
 	<rbf>IGSPGM</rbf>
 	<rotation>vertical</rotation>
