@@ -24,4 +24,5 @@
 		<part>02 00200000 00000000</part>
 		<part name="pgm_m01s.rom"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

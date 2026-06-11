@@ -65,4 +65,5 @@
         <part>09 00004000 00000000</part>
         <part name="kovsh_v100_china.asic" crc="0f09a5c1"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

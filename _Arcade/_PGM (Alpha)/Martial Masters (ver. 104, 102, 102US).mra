@@ -66,4 +66,5 @@
         <part>0a 00200000 00000000</part>
         <part name="v102_16m.u10" crc="18b745e6"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

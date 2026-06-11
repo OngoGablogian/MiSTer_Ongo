@@ -44,4 +44,5 @@
         <part>07 00400000 00000000</part>
 	    <part name="cabal_b1.bin" crc="4649b84a"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

@@ -70,4 +70,5 @@
 	    <part name="pgm_b0502.u15" crc="e97b31c3"/>
 	    <part name="pgm_b0503.u16" crc="e41d98e4"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

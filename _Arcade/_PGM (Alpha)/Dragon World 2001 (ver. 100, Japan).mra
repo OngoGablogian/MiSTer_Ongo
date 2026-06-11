@@ -60,4 +60,5 @@
         <part>0a 00080000 00000000</part>
         <part name="dw2001_u12.u12" crc="973db1ab"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

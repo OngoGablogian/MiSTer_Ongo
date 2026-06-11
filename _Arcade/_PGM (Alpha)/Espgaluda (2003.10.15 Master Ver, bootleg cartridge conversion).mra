@@ -61,4 +61,5 @@
         <part>07 00800000 00000000</part>
 	    <part name="cave_b04801w064.u1" crc="98dce13a"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

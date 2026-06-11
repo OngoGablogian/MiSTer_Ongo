@@ -60,4 +60,5 @@
         <part>09 00004000 00000000</part>
         <part name="igs027a_photoy2k_v100_china_alt.asic" crc="6dd7f257"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

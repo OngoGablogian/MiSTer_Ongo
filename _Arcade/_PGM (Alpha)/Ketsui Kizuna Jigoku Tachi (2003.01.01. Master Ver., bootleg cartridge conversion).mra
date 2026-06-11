@@ -61,4 +61,5 @@
         <part>07 00800000 00000000</part>
 	    <part name="b04701w064.u1" crc="1bec008d"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

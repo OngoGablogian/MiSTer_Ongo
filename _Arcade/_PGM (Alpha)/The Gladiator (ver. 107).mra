@@ -88,4 +88,5 @@
         <part>0a 00200000 00000000</part>
         <part name="v107_u26.u26" crc="f7c61357"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

@@ -60,4 +60,5 @@
         <part>0a 00020000 00000000</part>
         <part name="v100_210.u23" crc="06c3dd29"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

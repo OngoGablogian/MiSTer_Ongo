@@ -71,4 +71,5 @@
         <part>08 00010000 00000000</part>
         <part name="kb_u2_v109.u2" crc="de3eae63"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

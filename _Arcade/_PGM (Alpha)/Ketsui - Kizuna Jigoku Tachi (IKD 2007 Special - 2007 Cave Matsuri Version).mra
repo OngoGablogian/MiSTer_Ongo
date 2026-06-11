@@ -91,4 +91,5 @@
         </part>
         <part repeat="15792">00</part>
 	</rom>
+    <nvram index="8" size="131072"/>
 </misterromdescription>

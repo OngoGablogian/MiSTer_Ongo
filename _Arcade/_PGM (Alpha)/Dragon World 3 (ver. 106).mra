@@ -64,4 +64,5 @@
         <part>08 00010000 00000000</part>
         <part name="dw3_text_u15.u15" crc="03dc4fdf"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>

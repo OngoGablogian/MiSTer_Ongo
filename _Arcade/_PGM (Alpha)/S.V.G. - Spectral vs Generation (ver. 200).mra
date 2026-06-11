@@ -91,4 +91,5 @@
         <part name="epr.u26" crc="46826ec8"/>
         <part name="epr.u36" crc="fa5f3901"/>
 	</rom>
+	<nvram index="8" size="131072"/>
 </misterromdescription>
