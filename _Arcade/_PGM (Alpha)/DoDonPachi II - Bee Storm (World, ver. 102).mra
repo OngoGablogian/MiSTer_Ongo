@@ -20,45 +20,45 @@
 		<dip name="Debug" bits="7" ids="On,Off"/>
 	</switches>
 	<rom index="0" address="0x30000000" zip="pgm.zip|ddp2.zip">
-        <!-- SYSTEM INFO (game = GAME_DDP2 = 15) -->
+		<!-- SYSTEM INFO (game = GAME_DDP2 = 15) -->
 		<part>0f 00</part>
 
-        <!-- BIOS PROG / TILE / MUSIC -->
+		<!-- BIOS PROG / TILE / MUSIC -->
 		<part>00 00020000 00000000</part>
 		<part name="pgm_p02s.u20"/>
-        <part>01 00200000 00000000</part>
+		<part>01 00200000 00000000</part>
 		<part name="pgm_t01s.rom"/>
-        <part>02 00200000 00000000</part>
+		<part>02 00200000 00000000</part>
 		<part name="pgm_m01s.rom"/>
 
-        <!-- CART PROG (ROM_LOAD16_WORD_SWAP, plaintext) -->
-        <part>03 00200000 00100000</part>
-        <part name="v102.u8" crc="5a9ea040"/>
+		<!-- CART PROG (ROM_LOAD16_WORD_SWAP, plaintext) -->
+		<part>03 00200000 00100000</part>
+		<part name="v102.u8" crc="5a9ea040"/>
 
-        <!-- CART TILE -->
-        <part>04 00800000 00180000</part>
-        <part name="pgm_t1300.u21" crc="e748f0cb"/>
+		<!-- CART TILE -->
+		<part>04 00800000 00180000</part>
+		<part name="pgm_t1300.u21" crc="e748f0cb"/>
 
-        <!-- CART MUSIC -->
-        <part>05 00400000 00400000</part>
-        <part name="pgm_m1300.u5" crc="82d4015d"/>
+		<!-- CART MUSIC -->
+		<part>05 00400000 00400000</part>
+		<part name="pgm_m1300.u5" crc="82d4015d"/>
 
-        <!-- A ROM (sprite colour) -->
-        <part>06 01000000 00000000</part>
-        <part name="pgm_a1300.u1" crc="fc87a405"/>
-        <part name="pgm_a1301.u2" crc="0c8520da"/>
+		<!-- A ROM (sprite colour) -->
+		<part>06 01000000 00000000</part>
+		<part name="pgm_a1300.u1" crc="fc87a405"/>
+		<part name="pgm_a1301.u2" crc="0c8520da"/>
 
-        <!-- B ROM (sprite mask) -->
-        <part>07 00800000 00000000</part>
-        <part name="pgm_b1300.u7" crc="ef646604"/>
+		<!-- B ROM (sprite mask) -->
+		<part>07 00800000 00000000</part>
+		<part name="pgm_b1300.u7" crc="ef646604"/>
 
-        <!-- IGS027A INTERNAL ARM ROM -->
-        <part>09 00004000 00000000</part>
-        <part name="ddp2_igs027a_world.bin" crc="3654e20b"/>
+		<!-- IGS027A INTERNAL ARM ROM -->
+		<part>09 00004000 00000000</part>
+		<part name="ddp2_igs027a_world.bin" crc="3654e20b"/>
 
-        <!-- IGS027A EXTERNAL ARM ROM (encrypted; RTL-decrypted) -->
-        <part>0a 00020000 00000000</part>
-        <part name="v100_210.u23" crc="06c3dd29"/>
+		<!-- IGS027A EXTERNAL ARM ROM (encrypted; RTL-decrypted) -->
+		<part>0a 00020000 00000000</part>
+		<part name="v100_210.u23" crc="06c3dd29"/>
 	</rom>
 	<nvram index="8" size="131072"/>
 </misterromdescription>

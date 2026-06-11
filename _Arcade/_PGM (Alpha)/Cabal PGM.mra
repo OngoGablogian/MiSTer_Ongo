@@ -16,33 +16,40 @@
 		<dip name="Debug" bits="7" ids="On,Off"/>
 	</switches>
 	<rom index="0" address="0x30000000" zip="pgm.zip|cabalpgm_b1.zip">
-        <!-- REGION_BIOS_PROG_ROM  = 00 -->
-        <!-- REGION_BIOS_TILE_ROM  = 01 -->
-        <!-- REGION_BIOS_MUSIC_ROM = 02 -->
-        <!-- REGION_CART_PROG_ROM  = 03 -->
-        <!-- REGION_CART_TILE_ROM  = 04 -->
-        <!-- REGION_CART_MUSIC_ROM = 05 -->
-        <!-- REGION_CART_A_ROM     = 06 -->
-        <!-- REGION_CART_B_ROM     = 07 -->
+		<!-- REGION_BIOS_PROG_ROM  = 00 -->
 
-        <!-- SYSTEM INFO -->
+		<!-- REGION_BIOS_TILE_ROM  = 01 -->
+
+		<!-- REGION_BIOS_MUSIC_ROM = 02 -->
+
+		<!-- REGION_CART_PROG_ROM  = 03 -->
+
+		<!-- REGION_CART_TILE_ROM  = 04 -->
+
+		<!-- REGION_CART_MUSIC_ROM = 05 -->
+
+		<!-- REGION_CART_A_ROM     = 06 -->
+
+		<!-- REGION_CART_B_ROM     = 07 -->
+
+		<!-- SYSTEM INFO -->
 		<part>00 00</part>
 
-        <!-- CART PROG -->
-        <part>03 00400000 00000000</part>
-        <part name="cabal_p1.bin" crc="9e68f9b0"/>
+		<!-- CART PROG -->
+		<part>03 00400000 00000000</part>
+		<part name="cabal_p1.bin" crc="9e68f9b0"/>
 
-        <!-- CART TILE -->
-        <part>04 00400000 00180000</part>
-        <part name="cabal_t1.bin" crc="26591749"/>
+		<!-- CART TILE -->
+		<part>04 00400000 00180000</part>
+		<part name="cabal_t1.bin" crc="26591749"/>
 
-        <!-- A ROM -->
-        <part>06 00400000 00000000</part>
-	    <part name="cabal_a1.bin" crc="a3c04b56"/>
+		<!-- A ROM -->
+		<part>06 00400000 00000000</part>
+		<part name="cabal_a1.bin" crc="a3c04b56"/>
 
-        <!-- B ROM -->
-        <part>07 00400000 00000000</part>
-	    <part name="cabal_b1.bin" crc="4649b84a"/>
+		<!-- B ROM -->
+		<part>07 00400000 00000000</part>
+		<part name="cabal_b1.bin" crc="4649b84a"/>
 	</rom>
 	<nvram index="8" size="131072"/>
 </misterromdescription>
