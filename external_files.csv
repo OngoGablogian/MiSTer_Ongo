@@ -57,10 +57,10 @@ games/Tamagotchi/test.bin,https://archive.org/download/OngoFiles/Tamagotchi/test
 games/TOWNS/boot.rom,https://archive.org/download/OngoFiles/TOWNS/boot.rom,"2097152",21c1752e1c3a2d510fdfa1501e7a9a25,,,
 games/Uneon/UNEON.VHD,https://archive.org/download/OngoFiles/Uneon/UNEON.VHD,"33554432",b953b5c105f3935f1d474f7499637a34,,,
 games/Zet98/boot.rom,https://archive.org/download/OngoFiles/Zet98/boot.rom,"550912",73fcde408c51bea3b23ba5b7c66be37d,,,
+
 games/mame/cabalpgm_b1.zip,https://archive.org/download/OngoFiles/mame-pgm/cabalpgm_b1.zip,"1888774",1c65814baa011f52a99c4e542892a83a,,,
 games/mame/ddp2.zip,https://archive.org/download/OngoFiles/mame-pgm/ddp2.zip,"13753530",490902b47c689f928b0a4ca5794435a2,,,
 games/mame/ddp3.zip,https://archive.org/download/OngoFiles/mame-pgm/ddp3.zip,"41573313",2d0ad0ab4ac890008e4e244e41b4d536,,,
-games/mame/ddp3d.zip,https://archive.org/download/OngoFiles/mame-pgm/ddp3d.zip,"1413559",f798994419c0ea50e94a77a0d841a6e7,,,
 games/mame/dmnfrnt.zip,https://archive.org/download/OngoFiles/mame-pgm/dmnfrnt.zip,"34468387",1c7865389ca921a2e1e60b84d98d321f,,,
 games/mame/drgw3.zip,https://archive.org/download/OngoFiles/mame-pgm/drgw3.zip,"6363305",9923da7047e0d2d7b7c08aab6ac3ac95,,,
 games/mame/dw2001.zip,https://archive.org/download/OngoFiles/mame-pgm/dw2001.zip,"3813422",b1045e314d12a6c7ebef484ba0d16c8a,,,
@@ -82,6 +82,7 @@ games/mame/olds.zip,https://archive.org/download/OngoFiles/mame-pgm/olds.zip,"23
 games/mame/orlegend.zip,https://archive.org/download/OngoFiles/mame-pgm/orlegend.zip,"22303963",1a27437ba10237e85754ea536bded5d9,,,
 games/mame/pgm.zip,https://archive.org/download/OngoFiles/mame-pgm/pgm.zip,"2094636",87cc944eef4c671aa2629a8ba48a08e0,,,
 games/mame/photoy2k.zip,https://archive.org/download/OngoFiles/mame-pgm/photoy2k.zip,"17508783",6302a486849baffbbfde640d416d9cd5,,,
+
 games/mame/balonfgt.zip,https://archive.org/download/OngoFiles/mame-vs/balonfgt.zip,"59660",c8c42ee2483f194e3f958453a1e0390d,,,
 games/mame/bnglngby.zip,https://archive.org/download/OngoFiles/mame-vs/bnglngby.zip,"25045",392874302004b3dbeee2f4c1ffc5014f,,,
 games/mame/btlecity.zip,https://archive.org/download/OngoFiles/mame-vs/btlecity.zip,"32092",81f2b85e989425cc343cd24182c56321,,,
