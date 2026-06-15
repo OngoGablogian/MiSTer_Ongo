@@ -1,0 +1,43 @@
+<misterromdescription>
+	<rbf>PsikyoSH2</rbf>
+	<setname>gnbarich</setname>
+	<description>Gunbarich</description>
+	<rotation>vertical</rotation>
+	<year>2001</year>
+	<manufacturer>Psikyo</manufacturer>
+	<buttons names="Button 1,Start,Coin,Test,Service" />
+	<rom index="0" md5="" zip="gnbarich.zip" address="0x30000000">
+		<part repeat="0x1800000">00</part>
+		<interleave output="64">
+			<part crc="0432e1a8" name="6l.u1" map="125600" />
+			<part crc="f90fa3ea" name="6h.u2" map="1256" />
+		</interleave>
+		<interleave output="64">
+			<part crc="36bf9a58" name="7l.u19" map="125600" />
+			<part crc="4b3eafd8" name="7h.u20" map="1256" />
+		</interleave>
+		<interleave output="64">
+			<part crc="026754da" name="8l.u28" map="125600" />
+			<part crc="8cd7aaa0" name="8h.u29" map="1256" />
+		</interleave>
+		<interleave output="64">
+			<part crc="02c066fe" name="9l.u41" map="125600" />
+			<part crc="5433385a" name="9h.u42" map="1256" />
+		</interleave>
+		<part repeat="0x1400000">00</part>
+		<interleave output="64">
+			<part crc="7b10436b" name="snd0.u52" map="12345678" />
+		</interleave>
+	</rom>
+	<rom index="1" md5="" zip="gnbarich.zip" address="0x34000000">
+		<interleave output="64">
+			<part crc="6588fc96" name="1-prog_h.u22" map="2165" />
+			<part crc="c136cd9c" name="2-prog_l.u21" map="216500" />
+		</interleave>
+	</rom>
+	<rom index="2" md5="" zip="gnbarich.zip">
+		<part crc="0f5bf42f" name="eeprom-gnbarich.bin" />
+		<part>01</part>
+	</rom>
+	<nvram index="3" size="256" />
+</misterromdescription>

@@ -57,6 +57,7 @@ games/Tamagotchi/test.bin,https://archive.org/download/OngoFiles/Tamagotchi/test
 games/TOWNS/boot.rom,https://archive.org/download/OngoFiles/TOWNS/boot.rom,"2097152",21c1752e1c3a2d510fdfa1501e7a9a25,,,
 games/Uneon/UNEON.VHD,https://archive.org/download/OngoFiles/Uneon/UNEON.VHD,"33554432",b953b5c105f3935f1d474f7499637a34,,,
 games/Zet98/boot.rom,https://archive.org/download/OngoFiles/Zet98/boot.rom,"550912",73fcde408c51bea3b23ba5b7c66be37d,,,
+
 games/mame/cabalpgm_b1.zip,https://archive.org/download/OngoFiles/mame-pgm/cabalpgm_b1.zip,"1888774",1c65814baa011f52a99c4e542892a83a,,,
 games/mame/ddp2.zip,https://archive.org/download/OngoFiles/mame-pgm/ddp2.zip,"13753530",490902b47c689f928b0a4ca5794435a2,,,
 games/mame/ddp3.zip,https://archive.org/download/OngoFiles/mame-pgm/ddp3.zip,"41573313",2d0ad0ab4ac890008e4e244e41b4d536,,,
@@ -81,6 +82,18 @@ games/mame/olds.zip,https://archive.org/download/OngoFiles/mame-pgm/olds.zip,"23
 games/mame/orlegend.zip,https://archive.org/download/OngoFiles/mame-pgm/orlegend.zip,"22303963",1a27437ba10237e85754ea536bded5d9,,,
 games/mame/pgm.zip,https://archive.org/download/OngoFiles/mame-pgm/pgm.zip,"2094636",87cc944eef4c671aa2629a8ba48a08e0,,,
 games/mame/photoy2k.zip,https://archive.org/download/OngoFiles/mame-pgm/photoy2k.zip,"17508783",6302a486849baffbbfde640d416d9cd5,,,
+
+games/mame/daraku.zip,https://archive.org/download/OngoFiles/mame-sh2/daraku.zip,"22496394",5911ab7a0092166ac8402ace0ef0bcee,,,
+games/mame/dragnblz.zip,https://archive.org/download/OngoFiles/mame-sh2/dragnblz.zip,"16713106",e2d573a9461c737b0d641d3e657718fb,,,
+games/mame/gnbarich.zip,https://archive.org/download/OngoFiles/mame-sh2/gnbarich.zip,"5366883",0dc22d2a3b5aed2203a51d0648a84de9,,,
+games/mame/gunbird2.zip,https://archive.org/download/OngoFiles/mame-sh2/gunbird2.zip,"23552818",77d2eebde3c30011663ca6dc9de08889,,,
+games/mame/mjgtaste.zip,https://archive.org/download/OngoFiles/mame-sh2/mjgtaste.zip,"10303454",3d618a04b786033545a4dd0e4c6babf3,,,
+games/mame/s1945ii.zip,https://archive.org/download/OngoFiles/mame-sh2/s1945ii.zip,"18307306",bcd26a2ff28dc9b1f8b9b2f9cc199173,,,
+games/mame/s1945iii.zip,https://archive.org/download/OngoFiles/mame-sh2/s1945iii.zip,"23547595",dba81e46d809d9f1de0d163e759164eb,,,
+games/mame/sbomber.zip,https://archive.org/download/OngoFiles/mame-sh2/sbomber.zip,"18142703",3c77ca6842fb7e13ea8e1dfc380efa67,,,
+games/mame/soldivid.zip,https://archive.org/download/OngoFiles/mame-sh2/soldivid.zip,"14835532",50515686db40c678c8661558991411b9,,,
+games/mame/tgm2.zip,https://archive.org/download/OngoFiles/mame-sh2/tgm2.zip,"21085670",dc1df85a28bb1bb94e74cbd1217c379f,,,
+
 games/mame/balonfgt.zip,https://archive.org/download/OngoFiles/mame-vs/balonfgt.zip,"59660",c8c42ee2483f194e3f958453a1e0390d,,,
 games/mame/bnglngby.zip,https://archive.org/download/OngoFiles/mame-vs/bnglngby.zip,"25045",392874302004b3dbeee2f4c1ffc5014f,,,
 games/mame/btlecity.zip,https://archive.org/download/OngoFiles/mame-vs/btlecity.zip,"32092",81f2b85e989425cc343cd24182c56321,,,

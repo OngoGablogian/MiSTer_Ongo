@@ -21,7 +21,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                  |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                     |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                       |
-| [IGS - PolyGame Master (Alpha)](https://github.com/wickerwaka/Arcade-IGSPGM_MiSTer)                                            |
+| [IGS - PolyGame Master (Alpha)](https://github.com/wickerwaka/Arcade-IGSPGM_MiSTer)                                             |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                     |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                     |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
@@ -43,6 +43,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                       |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
+| [Psikyo SH2 (WIP)](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                           |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
@@ -98,11 +99,6 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 +RA_TurboGrafx16]
 main=MiSTer_RA
 ```
-
-> [!IMPORTANT]
-> The Star Wars Arcade core is a vector based game which looks best with certain settings applied to your 'MiSTer.ini' file. Check the linked GitHub repo below for more information.
-
-[https://github.com/Videodr0me/Arcade-StarWars_MiSTer#recommended-mister-settings](https://github.com/Videodr0me/Arcade-StarWars_MiSTer#recommended-mister-settings)
 
 > [!IMPORTANT]
 > For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
