@@ -1,11 +1,12 @@
 <misterromdescription>
+	<!-- Auto-derived from "ket" MRA; ROM parts per MAME set "ketikd". Untested on core - verify before release. -->
 	<!-- IGS027A type1 (CAVE), 20 MHz.  Internal ROM undumped; uses the RetroHQ
 	     ASIC27A recreation (real ARM7 + hardware latch).  68k decrypt: pgm_ket_decrypt. -->
 	<name>Ketsui - Kizuna Jigoku Tachi (IKD 2007 Special - 2007 Cave Matsuri Version)</name>
 	<setname>ketikd</setname>
 	<rbf>IGSPGM</rbf>
 	<rotation>vertical</rotation>
-	<mameversion>288</mameversion>
+	<mameversion>277</mameversion>
 	<buttons default="B,A,X,Y,Start,Select,L,R" names="A,B,C,D,-,-,Start,Coin,Pause,SS"/>
 	<switches default="ffff">
 		<dip name="Service Mode" bits="0" ids="On,Off"/>
@@ -17,7 +18,7 @@
 		<dip name="Unused 2" bits="6" ids="On,Off"/>
 		<dip name="Debug" bits="7" ids="On,Off"/>
 	</switches>
-	<rom index="0" address="0x30000000" zip="pgm.zip|ketikd.zip|ket.zip">
+	<rom index="0" address="0x30000000" zip="pgm.zip|ket.zip|ketikd.zip">
 		<!-- SYSTEM INFO (game id = 22) -->
 		<part>16 00</part>
 
@@ -97,7 +98,7 @@
 		</part>
 		<part repeat="15792">00</part>
 	</rom>
-	<rom index="8" zip="pgm.zip|ketikd.zip|ket.zip">
+	<rom index="8" zip="pgm.zip|ket.zip">
 		<part name="ket_defaults.nv" crc="3ca892d8"/>
 	</rom>
 	<nvram index="8" size="131072"/>
