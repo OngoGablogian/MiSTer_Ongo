@@ -1,10 +1,8 @@
 <misterromdescription>
-	<!-- IGS027A type1 (CAVE), 20 MHz.  Internal ROM undumped; uses the RetroHQ
-	     ASIC27A recreation (real ARM7 + hardware latch).  68k decrypt: pgm_ket_decrypt. -->
-	<name>Ketsui: Kizuna Jigoku Tachi (PS4 - Ketsui Deathtiny - Custom Difficulty 5)</name>
-	<setname>ketps4-ac5</setname>
+	<name>Ketsui Deathtiny - Kizuna Jigoku Tachi (Custom Difficulty 9)</name>
+	<setname>ketps409</setname>
 	<rbf>IGSPGM</rbf>
-	<rotation>vertical</rotation>
+	<rotation>vertical (ccw)</rotation>
 	<mameversion>288</mameversion>
 	<buttons default="B,A,X,Y,Start,Select,L,R" names="A,B,C,D,-,-,Start,Coin,Pause,SS"/>
 	<switches default="ffff">
@@ -23,19 +21,19 @@
 
 		<!-- BIOS PROG (unused by the game; cart_prog_base=0) -->
 		<part>00 00020000 00000000</part>
-		<part name="pgm_p02s.u20"/>
+		<part name="pgm_p02s.u20" crc="78c15fa2"/>
 
 		<!-- BIOS TILE -->
 		<part>01 00200000 00000000</part>
-		<part name="pgm_t01s.rom"/>
+		<part name="pgm_t01s.rom" crc="1a7123a0"/>
 
 		<!-- BIOS MUSIC -->
 		<part>02 00200000 00000000</part>
-		<part name="pgm_m01s.rom"/>
+		<part name="pgm_m01s.rom" crc="45ae7159"/>
 
 		<!-- CART PROG (68k, encrypted; decrypted in RTL) -->
 		<part>03 00200000 00000000</part>
-		<part name="ketsui_v100_ac5.u38" crc="0f3e7e4f"/>
+		<part name="ketsui_v100_ac9.u38" crc="c8d74c5e"/>
 
 		<!-- CART TILE -->
 		<part>04 00800000 00180000</part>
@@ -97,7 +95,7 @@
 		</part>
 		<part repeat="15792">00</part>
 	</rom>
-	<rom index="8" zip="pgm.zip|ketps4.zip|ket.zip">
+	<rom index="8" zip="pgm.zip|ket.zip">
 		<part name="ket_defaults.nv" crc="3ca892d8"/>
 	</rom>
 	<nvram index="8" size="131072"/>
