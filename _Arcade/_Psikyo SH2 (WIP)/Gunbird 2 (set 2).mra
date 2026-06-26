@@ -6,6 +6,12 @@
 	<year>1998</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service" />
+
+	<switches default="41">
+		<dip bits="0,1,2,3" name="Region" ids="Japan,International Ver A,International Ver B"/>
+		<dip bits="6" name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="gunbird2.zip|gunbird2a.zip" address="0x30000000">
 		<interleave output="64">
 			<part crc="5c826bc8" name="0l.u3" map="125600" />
@@ -28,6 +34,7 @@
 			<part crc="f19796ab" name="sound.u9" map="12345678" />
 		</interleave>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="974f85ba" name="prog_l.u16" map="2165" />
 			<part crc="cb0cb826" name="prog_h.u17" map="216500" />

@@ -6,6 +6,12 @@
 	<year>2002</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Start,Coin,Test,Service" />
+
+	<switches default="41">
+		<dip bits="0,1,2,3" name="Region" ids="Japan,International Ver B,International Ver A"/>
+		<dip bits="6" name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="mjgtaste.zip" address="0x30000000">
 		<part repeat="0x400000">00</part>
 		<interleave output="64">
@@ -29,6 +35,7 @@
 			<part crc="0179f018" name="snd0.u52" map="12345678" />
 		</interleave>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="5f2041dc" name="2.u21" map="216500" />
 			<part crc="f5ff7876" name="1.u22" map="2165" />

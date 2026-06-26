@@ -6,6 +6,12 @@
 	<year>1999</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service" />
+
+	<switches default="41">
+		<dip bits="0,1,2,3"     name="Region" ids="Japan,International Ver B,International Ver A"/>
+		<dip bits="6"     name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="s1945iii.zip" address="0x30000000">
 		<interleave output="64">
 			<part crc="70a0d52c" name="0l.u3" map="125600" />
@@ -28,6 +34,7 @@
 			<part crc="c5374beb" name="sound.u9" map="12345678" />	
 		</interleave>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="1b8a5a18" name="1_progh.u17" map="216500" />
 			<part crc="5d5d385f" name="2_progl.u16" map="2165" />

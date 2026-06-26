@@ -6,6 +6,12 @@
 	<year>1998</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Start,Coin,Test,Service" />
+
+	<switches default="41">
+		<dip bits="0,1,2,3" name="Region" ids="Japan,World"/>
+		<dip bits="6" name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="sbomber.zip|sbombera.zip" address="0x30000000">
 		<interleave output="64">
 			<part crc="b7e4ac51" name="0l.u4" map="125600" />
@@ -32,6 +38,7 @@
 			<part crc="85cbff69" name="sound.u32" map="12345678" />
 		</interleave>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="57819a26" name="2.u18" map="2165" />
 			<part crc="c388e847" name="1.u17" map="216500" />

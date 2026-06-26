@@ -6,6 +6,12 @@
 	<year>2000</year>
 	<manufacturer>Arika</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service" />
+
+	<switches default="41">
+		<dip bits="0,1,2,3" name="Region" ids="Japan,International Ver B,International Ver A"/>
+		<dip bits="6" name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="tgm2.zip|tgm2p.zip" address="0x30000000">
 		<part repeat="0xC00000">00</part>
 		<interleave output="64">
@@ -45,6 +51,7 @@
 			<part crc="9155eca6" name="97ts_snd.u52" map="12345678" />
 		</interleave>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="38bc626c" name="2b.u21" map="216500" />
 			<part crc="7599fb19" name="1b.u22" map="2165" />

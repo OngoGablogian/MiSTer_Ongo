@@ -6,6 +6,12 @@
 	<year>1997</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service" />
+
+	<switches default="41">
+		<dip bits="0,1,2,3" name="Region" ids="Japan,World"/>
+		<dip bits="6" name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="soldivid.zip|soldividk.zip" address="0x30000000">
 		<part repeat="0x2000000">00</part>
 		<interleave output="64">
@@ -25,6 +31,7 @@
 			<part crc="e98f8d45" name="sound.u32" map="12345678" />
 		</interleave>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="f467d1c4" name="1-prog_h.u17" map="216500" />
 			<part crc="cf179b04" name="2-prog_l.u18" map="2165" />

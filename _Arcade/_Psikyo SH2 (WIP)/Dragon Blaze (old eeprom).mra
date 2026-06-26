@@ -6,6 +6,12 @@
 	<year>2000</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service" />
+
+	<switches default="01">
+		<dip bits="0,1,2,3" name="Region" ids="Japan,International Ver B,International Ver A"/>
+		<dip bits="6" name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="dragnblz.zip" address="0x30000000">
 		<part repeat="0x400000">00</part>
 		<interleave output="64">
@@ -54,6 +60,7 @@
 		</interleave>
 		<part repeat="0x200000">00</part>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="fc5eade8" name="2prog_h.u21" map="216500" />
 			<part crc="95d6fd02" name="1prog_l.u2216" map="2165" />

@@ -6,6 +6,12 @@
 	<year>2001</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Start,Coin,Test,Service" />
+
+	<switches default="41">
+		<dip bits="0,1,2,3" name="Region" ids="Japan,International Ver B,International Ver A"/>
+		<dip bits="6" name="Debug" ids="On,Off"/>
+	</switches>
+
 	<rom index="0" md5="" zip="gnbarich.zip" address="0x30000000">
 		<part repeat="0x1800000">00</part>
 		<interleave output="64">
@@ -30,6 +36,7 @@
 		</interleave>
 		<part repeat="0x200000">00</part>
 
+		<part repeat="0x800000">00</part>
 		<interleave output="64">
 			<part crc="6588fc96" name="1-prog_h.u22" map="2165" />
 			<part crc="c136cd9c" name="2-prog_l.u21" map="216500" />
