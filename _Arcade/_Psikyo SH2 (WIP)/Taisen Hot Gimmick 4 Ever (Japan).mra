@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>hotgm4ev</setname>
 	<description>Taisen Hot Gimmick 4 Ever (Japan)</description>
-	<rotation>vertical</rotation>
+	<rotation>horizontal</rotation>
 	<year>2000</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="A,B,C,D,E,F,G,H,I,J,K,L,M,N,Chi,Pon,Kan,Reach,Ron,Start,Bet,Coin,Test,Service" />
@@ -11,7 +11,7 @@
 		<dip bits="6" name="Debug" ids="On,Off"/>
 	</switches>
 
-	<rom index="0" md5="" zip="hotgmck3.zip" address="0x30000000">
+	<rom index="0" md5="" zip="hotgm4ev.zip" address="0x30000000">
 		<interleave output="64">
 			<part crc="f65986f7" name="0l.u2" map="125600" />
 			<part crc="51fd07a9" name="0h.u11" map="1256" />
@@ -55,8 +55,9 @@
 			<part crc="3334c21e" name="2.u22" map="216500" />
 			<part crc="b1a1c643" name="1.u23" map="2165" />
 		</interleave>
+		<part repeat="0x100000">00</part>
 		<interleave output="64">
-			<part crc="ad556d8e" name="prog.u1" map="21436587" />
+			<part crc="ad556d8e" name="prog.u1" map="21436587" length="0x200000" />
 		</interleave>
 		<part repeat="0x100">00</part>
 	</rom>

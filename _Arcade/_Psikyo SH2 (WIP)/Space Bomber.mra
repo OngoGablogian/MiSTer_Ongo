@@ -43,7 +43,7 @@
 			<part crc="57819a26" name="2.u18" map="2165" />
 			<part crc="c388e847" name="1.u17" map="216500" />
 		</interleave>
-		<part repeat="0x100000">00</part>
+		<part repeat="0x300000">00</part>
 		<interleave output="64">
 			<part crc="7ac38846" name="eeprom-sbomber.bin" map="21436587" />
 		</interleave>

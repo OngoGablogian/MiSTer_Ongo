@@ -51,9 +51,11 @@
 			<part crc="7a9cf601" name="3_prog_h.u17" map="216500" />
 			<part crc="660b4609" name="4_prog_l.u18" map="2165" />
 		</interleave>
+		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="3742e990" name="prog.u16" map="21436587" />
 		</interleave>
+		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="a9715297" name="eeprom-daraku.bin" map="21436587" />
 		</interleave>

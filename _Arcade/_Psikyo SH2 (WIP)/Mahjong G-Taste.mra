@@ -7,8 +7,7 @@
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Start,Coin,Test,Service" />
 
-	<switches default="41">
-		<dip bits="0,1,2,3" name="Region" ids="Japan,International Ver B,International Ver A"/>
+	<switches default="40">
 		<dip bits="6" name="Debug" ids="On,Off"/>
 	</switches>
 
@@ -40,6 +39,7 @@
 			<part crc="5f2041dc" name="2.u21" map="216500" />
 			<part crc="f5ff7876" name="1.u22" map="2165" />
 		</interleave>
+		<part repeat="0x300000">00</part>
 		<interleave output="64">
 			<part crc="d35586f2" name="eeprom-mjgtaste.u44" map="12345678" />
 		</interleave>

@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>loderndf</setname>
 	<description>Lode Runner - The Dig Fight (ver. B)</description>
-	<rotation>vertical</rotation>
+	<rotation>horizontal</rotation>
 	<year>2000</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service" />
@@ -30,7 +30,7 @@
 			<part crc="fe2424c0" name="2b.u22" map="216500" />
 			<part crc="fae92286" name="1b.u23" map="2165" />
 		</interleave>
-		<part repeat="0x100000">00</part>
+		<part repeat="0x300000">00</part>
 		<part repeat="0x100">00</part>
 	</rom>
 	<rom index="2" md5="">

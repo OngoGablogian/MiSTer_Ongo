@@ -39,7 +39,7 @@
 			<part crc="4c0fe85e" name="1_prog_h.u17" map="216500" />
 			<part crc="20a911b8" name="2_prog_l.u18" map="2165" />
 		</interleave>
-		<part repeat="0x100000">00</part>
+		<part repeat="0x300000">00</part>
 		<interleave output="64">
 			<part crc="7ac38846" name="eeprom-s1945ii.bin" map="21436587" />
 		</interleave>

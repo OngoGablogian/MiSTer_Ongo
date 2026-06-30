@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>hotgmck</setname>
 	<description>Taisen Hot Gimmick (Japan)</description>
-	<rotation>vertical</rotation>
+	<rotation>horizontal</rotation>
 	<year>1997</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="A,B,C,D,E,F,G,H,I,J,K,L,M,N,Chi,Pon,Kan,Reach,Ron,Start,Bet,Coin,Test,Service" />
@@ -40,6 +40,7 @@
 			<part crc="5db3649f" name="1-u22.bin" map="216500" />
 			<part crc="23ed4aa5" name="2-u23.bin" map="2165" />
 		</interleave>
+		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="500f6b1b" name="prog.bin" map="21436587" />
 		</interleave>

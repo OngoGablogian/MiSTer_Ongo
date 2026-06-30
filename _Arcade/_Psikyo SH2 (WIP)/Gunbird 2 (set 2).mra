@@ -39,10 +39,11 @@
 			<part crc="974f85ba" name="prog_l.u16" map="2165" />
 			<part crc="cb0cb826" name="prog_h.u17" map="216500" />
 		</interleave>
+		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="23751839" name="pdata.u1" map="21436587" />
 		</interleave>
-		<part repeat="0x80000">00</part>
+		<part repeat="0x180000">00</part>
 		<interleave output="64">
 			<part crc="7ac38846" name="eeprom-gunbird2.bin" map="21436587" />
 		</interleave>

@@ -36,7 +36,7 @@
 			<part crc="f467d1c4" name="1-prog_h.u17" map="216500" />
 			<part crc="cf179b04" name="2-prog_l.u18" map="2165" />
 		</interleave>
-		<part repeat="0x100000">00</part>
+		<part repeat="0x300000">00</part>
 		<part repeat="0x100">00</part>
 	</rom>
 	<rom index="2" md5="" >

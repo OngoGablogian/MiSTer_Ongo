@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>hotdebut</setname>
 	<description>Quiz de Idol! Hot Debut (Japan)</description>
-	<rotation>vertical</rotation>
+	<rotation>horizontal</rotation>
 	<year>2000</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin,Test,Service" />
@@ -34,7 +34,7 @@
 			<part crc="c3b5180b" name="2.u22" map="216500" />
 			<part crc="0b0d0027" name="1.u23" map="2165" />
 		</interleave>
-		<part repeat="0x100000">00</part>
+		<part repeat="0x300000">00</part>
 		<part repeat="0x100">00</part>
 	</rom>
 	<rom index="2" md5="">

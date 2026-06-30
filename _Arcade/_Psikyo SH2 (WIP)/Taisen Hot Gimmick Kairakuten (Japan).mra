@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>hgkairak</setname>
 	<description>Taisen Hot Gimmick Kairakuten (Japan)</description>
-	<rotation>vertical</rotation>
+	<rotation>horizontal</rotation>
 	<year>1998</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="A,B,C,D,E,F,G,H,I,J,K,L,M,N,Chi,Pon,Kan,Reach,Ron,Start,Bet,Coin,Test,Service" />
@@ -48,9 +48,11 @@
 			<part crc="24b04aa2" name="1.u22" map="216500" />
 			<part crc="1c1a034d" name="2.u23" map="2165" />
 		</interleave>
+		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="83cff542" name="prog.u1" map="21436587" />
 		</interleave>
+		<part repeat="0x100000">00</part>
 		<part repeat="0x100">00</part>
 	</rom>
 	<rom index="2" md5="">
