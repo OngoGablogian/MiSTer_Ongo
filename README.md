@@ -32,6 +32,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                             |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
+| [Night Slashers](https://github.com/derpyder/Arcade-NightSlashers_MiSTer)                                                       |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                |
 | [Nintendo N64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
 | [Nintendo NES (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                                          |
@@ -84,7 +85,8 @@ ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 > [!IMPORTANT]
 > For the [RetroAchievements](https://retroachievements.org) cores to function properly, you must add the lines below to your 'MiSTer.ini' file. Also, you'll need to add your [RetroAchievements](https://retroachievements.org) login credentials to the 'retroachievements.cfg' file located on the root of your MiSTer's SD card. The 'retroachievements.cfg' file receives updates periodically, when this happens your login credentials will be removed and will need to be added again.
 ```
-[RA_Gameboy
+[RA_Atari7800
++RA_Gameboy
 +RA_GBA
 +RA_MegaCD
 +RA_MegaDrive
