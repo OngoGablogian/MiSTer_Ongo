@@ -30,6 +30,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                     |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                       |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                             |
+| [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                 |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
 | [Night Slashers](https://github.com/derpyder/Arcade-NightSlashers_MiSTer)                                                       |

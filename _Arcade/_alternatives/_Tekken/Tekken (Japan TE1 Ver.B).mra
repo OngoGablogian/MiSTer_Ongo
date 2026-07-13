@@ -1,0 +1,69 @@
+<misterromdescription>
+	<name>Tekken (Japan, TE1/VER.B)</name>
+	<setname>tekkenjb</setname>
+	<year>1994</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Fighting</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<rbf>XNSYSTEM11</rbf>
+
+	<!-- ioctl_index 0: 4MB game program -> SDRAM 0x400000, CPU 0x1FC00000.    -->
+	<!-- System 11 has NO separate Sony BIOS; the program IS the boot code.     -->
+	<!-- ROM16_BYTE: low byte (MAME offset 0) = map "01", high byte = map "10". -->
+	<rom index="0" zip="tekkenjb.zip|tekken.zip" md5="none">
+		<interleave output="16">
+			<part name="te1verb.2l" crc="4291afee" map="01"/>
+			<part name="te1verb.2j" crc="5c534705" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="te1verb.2k" crc="b9860b29" map="01"/>
+			<part name="te1verb.2f" crc="3dc01aad" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl_index 1: platform byte. bit4=1 -> Namco System 11 mode;          -->
+	<!-- low nibble 4 (Tecmo) selects well-tested non-Visco behavior for any    -->
+	<!-- path not gated by zn_system11.                                         -->
+	<rom index="1">
+		<part>14</part>
+	</rom>
+
+	<!-- ioctl_index 3: 16MB banked data ROM -> SDRAM 0x800000, CPU 0x1F000000  -->
+	<!-- as 8x1MB windows. 3x4MB interleaved pairs (12MB used, pages 0-11).     -->
+	<rom index="3" zip="tekkenjb.zip|tekken.zip" md5="none">
+		<interleave output="16">
+			<part name="te1rom0l.ic5" crc="03786e09" map="01"/>
+			<part name="te1rom0u.ic6" crc="75d91051" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="te1rom1l.ic3" crc="81416f8e" map="01"/>
+			<part name="te1rom1u.ic8" crc="fa7ba433" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="te1rom2l.ic4" crc="41d77846" map="01"/>
+			<part name="te1rom2u.ic7" crc="a678987e" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl_index 6: C76 sound subprogram (te1sprog, 256KB). Not yet wired   -->
+	<!-- to c76_sound (first boot is video-only); reserved for sound bring-up.  -->
+	<rom index="6" zip="tekkenjb.zip|tekken.zip" md5="none">
+		<part name="te1sprog.6d" crc="849587e9"/>
+	</rom>
+
+	<!-- ioctl_index 7: C352 PCM wave ROM (te1wave, 2MB). Not yet wired.        -->
+	<rom index="7" zip="tekkenjb.zip|tekken.zip" md5="none">
+		<part name="te1wave.8k" crc="fce6c57a"/>
+	</rom>
+	<rom index="8" zip="namcoc76.zip" md5="none">
+		<!-- C76 internal BIOS (16KB) - loaded into the sound MCU at core start -->
+		<part name="c76.bin"/>
+	</rom>
+	<!-- ioctl_index 9: EEPROM (AT28C16, 2KB). All-FF blank fill (4096 bytes -> 1024 words). -->
+	<!-- No proprietary nvram ships; the game writes its own defaults on first boot.      -->
+	<rom index="9">
+		<part repeat="4096">FF</part>
+	</rom>
+</misterromdescription>
