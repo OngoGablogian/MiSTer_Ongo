@@ -60,6 +60,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
 | [Tempest](https://github.com/derpyder/Arcade-Tempest_MiSTer)                                                                    |
+| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                         |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
