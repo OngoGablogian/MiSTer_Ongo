@@ -1,0 +1,35 @@
+<misterromdescription>
+	<name>Star Sweep (Japan, STP1/VER.A)</name>
+	<setname>starswepj</setname>
+	<year>1997</year>
+	<manufacturer>Axela / Namco</manufacturer>
+	<rbf>XNSYSTEM11</rbf>
+
+	<!-- NOTE: no banked-ROM windows in the MAME map for this game -->
+	<!-- NOTE: KEYCUS C442 implemented (keycus_id 0x08) -->
+	<!-- NOTE: wave ROM 4MB - needs the >=4MB wave window core build -->
+	<!-- ioctl_index 0: game program -> SDRAM 0x400000, CPU 0x1FC00000 -->
+	<rom index="0" zip="starswepj.zip|starswep.zip" md5="none">
+		<part name="stp1vera.1j" crc="ef83e126"/>
+		<part name="stp1vera.1l" crc="0ee7fe1e"/>
+	</rom>
+	<!-- ioctl_index 1: platform byte: bit4=1 -> Namco System 11 -->
+	<rom index="1"><part>14 08</part></rom>
+	<!-- ioctl_index 6: C76 sound program (SPROG) -> SDRAM 0x1800000 -->
+	<rom index="6" zip="starswepj.zip|starswep.zip" md5="none">
+		<part name="stp1sprog.7e" crc="08aaaf6a"/>
+	</rom>
+	<!-- ioctl_index 7: C352 wave ROM -> SDRAM 0x1840000 -->
+	<rom index="7" zip="starswepj.zip|starswep.zip" md5="none">
+		<part name="stp1wave.8k" crc="18f30e92"/>
+	</rom>
+	<rom index="8" zip="namcoc76.zip" md5="none">
+		<!-- C76 internal BIOS (16KB) - loaded into the sound MCU at core start -->
+		<part name="c76.bin"/>
+	</rom>
+	<!-- ioctl_index 9: EEPROM (AT28C16, 2KB). All-FF blank fill (4096 bytes -> 1024 words). -->
+	<!-- No proprietary nvram ships; the game writes its own defaults on first boot.      -->
+	<rom index="9">
+		<part repeat="4096">FF</part>
+	</rom>
+</misterromdescription>
