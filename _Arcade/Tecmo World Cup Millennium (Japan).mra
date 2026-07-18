@@ -1,0 +1,56 @@
+<misterromdescription>
+	<name>Tecmo World Cup Millennium (Japan)</name>
+	<setname>twcupmil</setname>
+	<year>2000</year>
+	<manufacturer>Tecmo</manufacturer>
+	<category>Sports</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Japan</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Tecmo TPS System BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1002m.zip" md5="none">
+		<part name="m534002c-61.ic353" crc="69ffbcb4"/>
+	</rom>
+
+	<!-- Platform: Tecmo (0x04), ioctl_index 1 -->
+	<rom index="1">
+		<part>04</part>
+	</rom>
+
+	<!-- Banked ROM: 3 banks x 8MB = 24MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: 2MB interleaved + 2MB empty + 4MB twm-0                        -->
+	<!-- Bank 1: twm-1 (4MB) + twm-2 (4MB)                                     -->
+	<!-- Bank 2: twm-3 (4MB) + twm-4 (4MB)                                     -->
+	<rom index="3" zip="twcupmil.zip|coh1002m.zip" md5="none">
+		<interleave output="16">
+			<part name="twm-ep.120" crc="1a0ef17a" map="01"/>
+			<part name="twm-ep.119" crc="5f2908fb" map="10"/>
+		</interleave>
+		<part repeat="0x200000">00</part>
+		<part name="twm-0.216" crc="39cbc56a"/>
+		<part name="twm-1.217" crc="fae0687a"/>
+		<part name="twm-2.218" crc="cb852264"/>
+		<part name="twm-3.219" crc="7c9f6925"/>
+		<part name="twm-4.220" crc="17cd0ec9"/>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (mg01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1002m.zip" md5="none">
+		<part name="mg01.ic652" crc="50dc8322"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (mg13), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="twcupmil.zip" md5="none">
+		<part name="mg13" crc="5778418e"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(zn) parent DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+</misterromdescription>

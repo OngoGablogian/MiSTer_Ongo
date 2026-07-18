@@ -1,0 +1,55 @@
+<misterromdescription>
+	<name>Magical Date EX (Ver 2.01J)</name>
+	<setname>mgcldtex</setname>
+	<year>1997</year>
+	<manufacturer>Taito</manufacturer>
+	<category>Puzzle</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Japan</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Taito FX-1 BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1000t.zip" md5="none">
+		<part name="m534002c-14.ic353" crc="e3f23b6e"/>
+	</rom>
+
+	<!-- Platform: Taito FX (0x02), ioctl_index 1 -->
+	<rom index="1">
+		<part>02</part>
+	</rom>
+
+	<!-- Banked ROM: 2 banks x 8MB = 16MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: 2MB interleaved + 2MB empty + 4MB e32-01                       -->
+	<!-- Bank 1: e32-02 (4MB) + e32-03 (2MB) + 2MB empty                       -->
+	<rom index="3" zip="mgcldtex.zip|coh1000t.zip" md5="none">
+		<interleave output="16">
+			<part name="e32-09.7" crc="db7ec115" map="01"/>
+			<part name="e32-08.2" crc="3d42cd28" map="10"/>
+		</interleave>
+		<part repeat="0x200000">00</part>
+		<part name="e32-01.1" crc="cf5f1d01"/>
+		<part name="e32-02.6" crc="61c8438c"/>
+		<part name="e32-03.12" crc="190d1618"/>
+		<part repeat="0x200000">00</part>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (tt01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1000t.zip" md5="none">
+		<part name="tt01.ic652" crc="daac13e7"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (tt06), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="mgcldtex.zip" md5="none">
+		<part name="tt06" crc="ce282fc9"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(znt2p) DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+		<dip name="Test Mode"    bits="3" ids="Off,On"/>
+	</switches>
+</misterromdescription>

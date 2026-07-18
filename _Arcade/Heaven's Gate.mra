@@ -1,0 +1,56 @@
+<misterromdescription>
+	<name>Heaven's Gate</name>
+	<setname>hvnsgate</setname>
+	<year>1996</year>
+	<manufacturer>Racdym / Atlus</manufacturer>
+	<category>Fighter</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Atlus ZN-1 BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1001l.zip" md5="none">
+		<part name="m534002c-17.ic353" crc="6721146b"/>
+	</rom>
+
+	<!-- Platform: Atlus (0x03), ioctl_index 1 -->
+	<rom index="1">
+		<part>03</part>
+	</rom>
+
+	<!-- Banked ROM: 3 banks x 8MB = 24MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- 19MB of data loaded contiguously; bank splits occur within ROM files:    -->
+	<!--   bank 0: [0x000000-0x7FFFFF] (interleave 1MB + athg-07 4MB + athg-08 first 3MB) -->
+	<!--   bank 1: [0x800000-0xFFFFFF] (athg-08 last 1MB + athg-09 4MB + athg-10 first 3MB) -->
+	<!--   bank 2: [0x1000000-0x17FFFFF] (athg-10 last 1MB + athg-11 2MB + 5MB empty) -->
+	<rom index="3" zip="hvnsgate.zip|coh1001l.zip" md5="none">
+		<interleave output="16">
+			<part name="athg-02b.17" crc="11bfa89b" map="01"/>
+			<part name="athg-01b.18" crc="e820136f" map="10"/>
+		</interleave>
+		<part name="athg-07.027" crc="46411f67"/>
+		<part name="athg-08.028" crc="85289345"/>
+		<part name="athg-09.210" crc="19e558b5"/>
+		<part name="athg-10.029" crc="748f936e"/>
+		<part name="athg-11.215" crc="ac8e53bd"/>
+		<part repeat="0x500000">00</part>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (at01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1001l.zip" md5="none">
+		<part name="at01.ic652" crc="181668b3"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (at02), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="hvnsgate.zip" md5="none">
+		<part name="at02" crc="55fe469e"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(zn) parent DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+</misterromdescription>

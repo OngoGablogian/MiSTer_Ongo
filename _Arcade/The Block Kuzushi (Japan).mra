@@ -1,0 +1,50 @@
+<misterromdescription>
+	<name>The Block Kuzushi (Japan)</name>
+	<setname>tblkkuzu</setname>
+	<year>2000</year>
+	<manufacturer>Tamsoft / D3 Publisher</manufacturer>
+	<category>Puzzle</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Japan</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Tecmo TPS System BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1002m.zip" md5="none">
+		<part name="m534002c-61.ic353" crc="69ffbcb4"/>
+	</rom>
+
+	<!-- Platform: Tecmo (0x04), ioctl_index 1 -->
+	<rom index="1">
+		<part>04</part>
+	</rom>
+
+	<!-- Banked ROM: 1 bank x 8MB = 8MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: 2MB interleaved + 2MB empty + 4MB tbk.u0216                    -->
+	<rom index="3" zip="tblkkuzu.zip|coh1002m.zip" md5="none">
+		<interleave output="16">
+			<part name="tbk.u120" crc="bb390f7d" map="01"/>
+			<part name="tbk.u119" crc="621b07e1" map="10"/>
+		</interleave>
+		<part repeat="0x200000">00</part>
+		<part name="tbk.u0216" crc="41f8285f"/>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (mg01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1002m.zip" md5="none">
+		<part name="mg01.ic652" crc="50dc8322"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (mg12), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="tblkkuzu.zip" md5="none">
+		<part name="mg12" crc="584e6ea2"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(zn) parent DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+</misterromdescription>

@@ -1,0 +1,55 @@
+<misterromdescription>
+	<name>Shanghai Matekibuyuu (Japan)</name>
+	<setname>shngmtkb</setname>
+	<year>1998</year>
+	<manufacturer>Sunsoft / Activision</manufacturer>
+	<category>Puzzle</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Japan</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Tecmo TPS System BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1002m.zip" md5="none">
+		<part name="m534002c-61.ic353" crc="69ffbcb4"/>
+	</rom>
+
+	<!-- Platform: Tecmo (0x04), ioctl_index 1 -->
+	<rom index="1">
+		<part>04</part>
+	</rom>
+
+	<!-- Banked ROM: 3 banks x 8MB = 24MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: 1MB interleaved + 7MB empty                                    -->
+	<!-- Bank 1: sh-00 (4MB) + sh-01 (4MB)                                     -->
+	<!-- Bank 2: sh-02 (4MB) + sh-03 (4MB)                                     -->
+	<rom index="3" zip="shngmtkb.zip|coh1002m.zip" md5="none">
+		<interleave output="16">
+			<part name="shmj-a.120" crc="a789defa" map="01"/>
+			<part name="shmj-b.119" crc="65522c67" map="10"/>
+		</interleave>
+		<part repeat="0x700000">00</part>
+		<part name="sh-00.217" crc="081fed1c"/>
+		<part name="sh-01.218" crc="5a84ea96"/>
+		<part name="sh-02.219" crc="c8f80d76"/>
+		<part name="sh-03.220" crc="daaa4c73"/>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (mg01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1002m.zip" md5="none">
+		<part name="mg01.ic652" crc="50dc8322"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (mg04), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="shngmtkb.zip" md5="none">
+		<part name="mg04" crc="2711a75f"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(zn) parent DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+</misterromdescription>

@@ -1,0 +1,62 @@
+<misterromdescription>
+	<name>Gallop Racer 3 (Japan)</name>
+	<setname>glpracr3j</setname>
+	<year>1999</year>
+	<manufacturer>Tecmo</manufacturer>
+	<category>Racing</category>
+	<players>1</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Japan</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Tecmo TPS System BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1002m.zip" md5="none">
+		<part name="m534002c-61.ic353" crc="69ffbcb4"/>
+	</rom>
+
+	<!-- Platform: Tecmo (0x04), ioctl_index 1 -->
+	<rom index="1">
+		<part>04</part>
+	</rom>
+
+	<!-- Banked ROM: 5 banks x 8MB = 40MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: 2MB interleaved + 2MB empty + 4MB gra3-0 (mask ROMs start at 0x400000) -->
+	<!-- Bank 1: gra3-1 (4MB) + gra3-2 (4MB)                                           -->
+	<!-- Bank 2: gra3-3 (4MB) + gra3-4 (4MB)                                           -->
+	<!-- Bank 3: gra3-5 (4MB) + gra3-6 (4MB)                                           -->
+	<!-- Bank 4: gra3-7 (4MB) + 4MB empty                                               -->
+	<rom index="3" zip="glpracr3j.zip|glpracr3.zip|coh1002m.zip" md5="none">
+		<interleave output="16">
+			<part name="gra3u120.120" crc="8aa98d99" map="01"/>
+			<part name="gra3u119.119" crc="aba69017" map="10"/>
+		</interleave>
+		<part repeat="0x200000">00</part>
+		<part name="gra3-0.216" crc="b405ee65"/>
+		<part name="gra3-1.217" crc="a06f05ac"/>
+		<part name="gra3-2.218" crc="31793f9b"/>
+		<part name="gra3-3.219" crc="d59fb3eb"/>
+		<part name="gra3-4.220" crc="59a0a105"/>
+		<part name="gra3-5.221" crc="4994fb17"/>
+		<part name="gra3-6.222" crc="1362c1af"/>
+		<part name="gra3-7.223" crc="73565e1f"/>
+		<part repeat="0x400000">00</part>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (mg01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1002m.zip" md5="none">
+		<part name="mg01.ic652" crc="50dc8322"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (mg08), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="glpracr3j.zip|glpracr3.zip" md5="none">
+		<part name="mg08" crc="679367fe"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(zn) parent DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+</misterromdescription>

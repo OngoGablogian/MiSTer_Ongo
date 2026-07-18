@@ -1,0 +1,56 @@
+<misterromdescription>
+	<name>Brave Blade (USA)</name>
+	<setname>brvbladeu</setname>
+	<year>2000</year>
+	<manufacturer>Eighting / Raizing</manufacturer>
+	<category>Shooter</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>vertical</rotation>
+	<region>USA</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Tecmo TPS System BIOS (used by brvblade), 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1002m.zip" md5="none">
+		<part name="m534002c-61.ic353" crc="69ffbcb4"/>
+	</rom>
+
+	<!-- Platform: Raizing (0x01), ioctl_index 1 -->
+	<!-- brvblade uses Tecmo BIOS hardware but Raizing banking (0x1FA10300) -->
+	<rom index="1">
+		<part>01</part>
+	</rom>
+
+	<!-- Banked ROM: 3 banks x 8MB = 24MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: flash0 (2MB) + flash1 (2MB) + 4MB empty                        -->
+	<!-- Bank 1: rom1 (4MB) + 4MB empty                                         -->
+	<!-- Bank 2: 8MB empty                                                       -->
+	<rom index="3" zip="brvbladeu.zip|brvblade.zip" md5="none">
+		<part name="flash0.021" crc="97e12c63"/>
+		<part name="flash1.024" crc="d9d40a34"/>
+		<part repeat="0x400000">00</part>
+		<part name="ra-bbl_rom1.028" crc="418535e0"/>
+		<part repeat="0x400000">00</part>
+		<part repeat="0x800000">00</part>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (mg01 from Tecmo BIOS), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1002m.zip" md5="none">
+		<part name="mg01.ic652" crc="50dc8322"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (mg11), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="brvbladeu.zip|brvblade.zip" md5="none">
+		<part name="mg11" crc="56d917de"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(znt2p) DSW. -->
+		<switches base="96" default="00">
+		<dip name="DIP S551:1"   bits="0" ids="Off,On"/>
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+		<dip name="DIP S551:3"   bits="2" ids="Off,On"/>
+		<dip name="Test Mode"    bits="3" ids="Off,On"/>
+	</switches>
+</misterromdescription>

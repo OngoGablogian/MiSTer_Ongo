@@ -1,0 +1,61 @@
+<misterromdescription>
+	<name>1 on 1 Government (Japan)</name>
+	<setname>1on1gov</setname>
+	<year>2000</year>
+	<manufacturer>Tecmo</manufacturer>
+	<category>Sports</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Japan</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Tecmo TPS System BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1002m.zip" md5="none">
+		<part name="m534002c-61.ic353" crc="69ffbcb4"/>
+	</rom>
+
+	<!-- Platform: Tecmo (0x04), ioctl_index 1 -->
+	<rom index="1">
+		<part>04</part>
+	</rom>
+
+	<!-- Banked ROM: 5 banks x 8MB = 40MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: 2MB interleaved + 6MB empty (mask ROMs start at 0x800000)             -->
+	<!-- Bank 1: oog-0 (4MB) + oog-1 (4MB)                                             -->
+	<!-- Bank 2: oog-2 (4MB) + oog-3 (4MB)                                             -->
+	<!-- Bank 3: oog-4 (4MB) + oog-5 (4MB)                                             -->
+	<!-- Bank 4: oog-6 (4MB) + oog-7 (4MB)                                             -->
+	<rom index="3" zip="1on1gov.zip|coh1002m.zip" md5="none">
+		<interleave output="16">
+			<part name="1on1.u120" crc="eea158bd" map="01"/>
+			<part name="1on1.u119" crc="10aecc19" map="10"/>
+		</interleave>
+		<part repeat="0x600000">00</part>
+		<part name="oog-0.u0217" crc="8b42f365"/>
+		<part name="oog-1.u0218" crc="65162f46"/>
+		<part name="oog-2.u0219" crc="14cf3a84"/>
+		<part name="oog-3.u0220" crc="9a45f6ff"/>
+		<part name="oog-4.u0221" crc="ba20a1fd"/>
+		<part name="oog-5.u0222" crc="eed1953d"/>
+		<part name="oog-6.u0223" crc="f74f38b6"/>
+		<part name="oog-7.u0323" crc="0e58777c"/>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (mg01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1002m.zip" md5="none">
+		<part name="mg01.ic652" crc="50dc8322"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (mg10), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="1on1gov.zip" md5="none">
+		<part name="mg10" crc="8a73da40"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(zn) parent DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+</misterromdescription>

@@ -1,0 +1,56 @@
+<misterromdescription>
+	<name>Super Football Champ (Ver 2.4A)</name>
+	<setname>sfchampu</setname>
+	<year>1995</year>
+	<manufacturer>Taito</manufacturer>
+	<category>Sports</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Asia</region>
+	<rbf>ZN1</rbf>
+
+	<!-- BIOS: Taito FX-1 BIOS, 512KB, ioctl_index 0 -->
+	<rom index="0" zip="coh1000t.zip" md5="none">
+		<part name="m534002c-14.ic353" crc="e3f23b6e"/>
+	</rom>
+
+	<!-- Platform: Taito FX (0x02), ioctl_index 1 -->
+	<rom index="1">
+		<part>02</part>
+	</rom>
+
+	<!-- Banked ROM: 2 banks x 8MB = 16MB, ioctl_index 3, CPU 0x1F000000 (8MB window) -->
+	<!-- Bank 0: 1MB interleaved + 5MB empty + 2MB e18-02                       -->
+	<!-- Bank 1: e18-03 (2MB) + e18-04 (2MB) + e18-05 (2MB) + 2MB empty        -->
+	<rom index="3" zip="sfchampu.zip|sfchampo.zip|sfchamp.zip" md5="none">
+		<interleave output="16">
+			<part name="e18-08.7" crc="6a5558cd" map="01"/>
+			<part name="e18-10.2" crc="82411fa6" map="10"/>
+		</interleave>
+		<part repeat="0x500000">00</part>
+		<part name="e18-02.12" crc="c7b4fe29"/>
+		<part name="e18-03.16" crc="76392346"/>
+		<part name="e18-04.19" crc="fc3731da"/>
+		<part name="e18-05.21" crc="2e984c50"/>
+		<part repeat="0x200000">00</part>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (tt01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1000t.zip" md5="none">
+		<part name="tt01.ic652" crc="daac13e7"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (tt02), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="sfchampu.zip|sfchampo.zip|sfchamp.zip" md5="none">
+		<part name="tt02" crc="b1585ac7"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
+	     From MAME zn.cpp INPUT_PORTS_START(znt2p) DSW. -->
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+		<dip name="Test Mode"    bits="3" ids="Off,On"/>
+	</switches>
+</misterromdescription>
