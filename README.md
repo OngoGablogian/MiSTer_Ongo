@@ -51,6 +51,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                  |
+| [SETA Aleck 64](https://discord.com/channels/647909397477195803/737506076806611064/1528069723042877632)                         |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                       |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                    |
