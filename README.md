@@ -22,6 +22,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                  |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                     |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                       |
+| [Ironman Ivan Stewart's Super Off-Road](https://discord.com/channels/647909397477195803/737506076806611064/1528179729784504381) |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                     |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                     |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
@@ -223,6 +224,12 @@ db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-syncthing/db/db
 ```
 [jlrh/jlrh-misterfpga-db]
 db_url = https://raw.githubusercontent.com/jlrh/jlrh-misterfpga-db/db/db.json.zip
+```
+
+[Arcade_HyperDuel_MiSTer](https://github.com/searchsolved/Arcade_HyperDuel_MiSTer)
+```
+[searchsolved/hyperduel]
+db_url = https://raw.githubusercontent.com/searchsolved/Arcade_HyperDuel_MiSTer/main/hyperduel_db.json
 ```
 
 [Slop-Core](https://github.com/TheJesusFish/Slop-Core)

@@ -1,0 +1,59 @@
+<misterromdescription>
+	<name>Ironman Ivan Stewart's Super Off-Road (rev 4)</name>
+	<mameversion>0.257</mameversion>
+	<setname>offroad</setname>
+	<year>1989</year>
+	<manufacturer>Leland / Tradewest</manufacturer>
+	<category>Driving</category>
+	<rbf>SuperOffRoad</rbf>
+
+	<rom index="0" zip="offroad.zip" md5="None" type="merged">
+		<part name="03-22121-04.u58t" crc="c5790988" length="0x10000"/>
+		<part name="03-22122-03.u59t" crc="ae862fdc" length="0x10000"/>
+		<part name="03-22120-01.u57t" crc="e9f0f175" length="0x10000"/>
+		<part name="03-22119-02.u56t" crc="38642f22" length="0x10000"/>
+
+		<part name="03-22100-02.u3"   crc="08c96a4b" length="0x2000"/>
+		<part repeat="0x2E000">00</part>
+		<part name="03-22108-02.u4t"  crc="0d72780a" length="0x10000"/>
+		<part name="03-22109-02.u5t"  crc="5429ce2c" length="0x10000"/>
+		<part name="03-22110-02.u6t"  crc="f97bad5c" length="0x10000"/>
+		<part name="03-22111-01.u7t"  crc="f79157a1" length="0x10000"/>
+		<part name="03-22112-01.u8t"  crc="3eef38d3" length="0x10000"/>
+
+		<part repeat="0x40000">00</part>
+		<interleave output="16">
+			<part name="03-22113-03.u13t" crc="71b28df6" length="0x10000" map="01"/>
+			<part name="03-22116-03.u25t" crc="95bb31d3" length="0x10000" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="03-22114-03.u14t" crc="f8b31bf8" length="0x10000" map="01"/>
+			<part name="03-22117-03.u26t" crc="703d81ce" length="0x10000" map="10"/>
+		</interleave>
+		<part repeat="0x60000">00</part>
+		<interleave output="16">
+			<part name="03-22115-03.u15t" crc="c8439a7a" length="0x10000" map="01"/>
+			<part name="03-22118-03.u27t" crc="806ccf8b" length="0x10000" map="10"/>
+		</interleave>
+
+		<part name="03-22105-02.u93" crc="4426e367" length="0x8000"/>
+		<part name="03-22106-02.u94" crc="687dc1fc" length="0x8000"/>
+		<part name="03-22107-02.u95" crc="cee6ee5f" length="0x8000"/>
+
+		<part repeat="0x4000">00</part>
+		<part name="03-22104-01.u92" crc="03e0497d" length="0x4000"/>
+		<part name="03-22102-01.u69" crc="c3f2e443" length="0x4000"/>
+		<part repeat="0x8000">00</part>
+		<part name="03-22103-02.u90" crc="2266757a" length="0x4000"/>
+		<part name="03-22101-02.u67" crc="ecab0527" length="0x4000"/>
+		<part repeat="0x4000">00</part>
+	</rom>
+
+	<switches page="1" title="DIP Switches">
+		<dip name="Lives"        bits="7:6" values="3,4,5,2"/>
+		<dip name="Difficulty"   bits="9:8" values="Normal,Easy,Hard,Very Hard"/>
+		<dip name="Service Mode" bits="4"   values="Off,On"/>
+		<dip name="Free Play"    bits="5"   values="Off,On"/>
+	</switches>
+
+</misterromdescription>
