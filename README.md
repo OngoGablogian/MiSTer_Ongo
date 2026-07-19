@@ -219,6 +219,18 @@ db_url = https://raw.githubusercontent.com/misteraddons/Reflex-Adapt-Legacy/main
 db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-syncthing/db/db.json.zip
 ```
 
+[jlrh-misterfpga-db](https://github.com/jlrh/jlrh-misterfpga-db)
+```
+[jlrh/jlrh-misterfpga-db]
+db_url = https://raw.githubusercontent.com/jlrh/jlrh-misterfpga-db/db/db.json.zip
+```
+
+[Slop-Core](https://github.com/TheJesusFish/Slop-Core)
+```
+[TheJesusFish/Slop-Core]
+db_url = https://raw.githubusercontent.com/TheJesusFish/Slop-Core/db/db.json.zip
+```
+
 ----
 
 > [!NOTE]
