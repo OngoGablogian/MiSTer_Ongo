@@ -1,0 +1,52 @@
+<!-- NBA Hangtime timing-clean graphics-stream cabinet test. ROM data is
+     user-supplied and CRC-checked; none is distributed by this project. -->
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>NBA Hangtime (ver L1.3 10.10.96)</name>
+    <setname>nbahangt</setname>
+    <mameversion>0287</mameversion>
+    <year>1996</year>
+    <manufacturer>Midway</manufacturer>
+    <players>4</players>
+    <rbf>NBAHangtime</rbf>
+    <region>World</region>
+
+    <rom index="0" zip="nbahangt.zip" md5="None">
+        <part name="l1.3_nba_hangtime_u_54_game_rom.u54" crc="fd9ccca2"/>
+        <part name="l1.3_nba_hangtime_u_63_game_rom.u63" crc="57de886f"/>
+    </rom>
+
+    <rom index="1" zip="nbahangt.zip" md5="None">
+        <part name="l1.0_nba_hangtime_u_133_image_rom.u133" crc="3163feed"/>
+        <part name="l1.0_nba_hangtime_u_132_image_rom.u132" crc="428eaf44"/>
+        <part name="l1.0_nba_hangtime_u_131_image_rom.u131" crc="5f7c5111"/>
+        <part name="l1.0_nba_hangtime_u_130_image_rom.u130" crc="c7c0c514"/>
+        <part name="l1.0_nba_hangtime_u_129_image_rom.u129" crc="b3d0daa0"/>
+        <part name="l1.0_nba_hangtime_u_128_image_rom.u128" crc="3704ee69"/>
+        <part name="l1.0_nba_hangtime_u_127_image_rom.u127" crc="4ea64d5a"/>
+        <part name="l1.0_nba_hangtime_u_126_image_rom.u126" crc="0c5c19b7"/>
+        <part name="l1.0_nba_hangtime_u_125_image_rom.u125" crc="46c43d67"/>
+        <part name="l1.0_nba_hangtime_u_124_image_rom.u124" crc="ed495156"/>
+        <part name="l1.0_nba_hangtime_u_123_image_rom.u123" crc="b48aa5da"/>
+        <part name="l1.0_nba_hangtime_u_122_image_rom.u122" crc="b18cd181"/>
+        <part name="l1.0_nba_hangtime_u_121_image_rom.u121" crc="5acb267a"/>
+        <part name="l1.0_nba_hangtime_u_120_image_rom.u120" crc="28e05f86"/>
+        <part name="l1.0_nba_hangtime_u_119_image_rom.u119" crc="b4f604ea"/>
+        <part name="l1.0_nba_hangtime_u_118_image_rom.u118" crc="a257b973"/>
+        <part name="l1.0_nba_hangtime_u_113_image_rom.u113" crc="d712a779"/>
+        <part name="l1.0_nba_hangtime_u_112_image_rom.u112" crc="644e1bca"/>
+        <part name="l1.0_nba_hangtime_u_111_image_rom.u111" crc="10d3b768"/>
+        <part name="l1.0_nba_hangtime_u_110_image_rom.u110" crc="8575aeb2"/>
+    </rom>
+
+    <rom index="2" zip="nbahangt.zip" md5="None">
+        <part name="l1.0_nba_hangtime_u_2_music_spch.u2" crc="3f0b0d0a"/>
+        <part name="l1.0_nba_hangtime_u_3_music_spch.u3" crc="ec1db988"/>
+        <part name="l1.0_nba_hangtime_u_4_music_spch.u4" crc="c7f847a3"/>
+        <part name="l1.0_nba_hangtime_u_5_music_spch.u5" crc="ef19316a"/>
+    </rom>
+
+    <buttons names="Turbo,Shoot / Block,Pass / Steal,Start,Coin"
+             default="A,X,Y,Start,Select" count="3"/>
+</misterromdescription>

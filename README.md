@@ -34,6 +34,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                             |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                 |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
+| [NBA Hangtime](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164314317)                                                 |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
 | [Night Slashers](https://github.com/derpyder/Arcade-NightSlashers_MiSTer)                                                       |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                |
