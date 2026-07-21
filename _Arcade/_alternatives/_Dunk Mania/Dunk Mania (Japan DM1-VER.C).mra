@@ -45,7 +45,6 @@
 	</rom>
 	<!-- ioctl_index 9: EEPROM (AT28C16, 2KB). All-FF blank fill (4096 bytes -> 1024 words). -->
 	<!-- No proprietary nvram ships; the game writes its own defaults on first boot.      -->
-	<rom index="9">
-		<part repeat="4096">FF</part>
-	</rom>
+	<!-- index 9: AT28C16 EEPROM (settings) — persisted as a .nvram save file (see core nvram save/load). -->
+	<nvram index="9" size="4096"/>
 </misterromdescription>
