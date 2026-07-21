@@ -36,7 +36,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
 | [NBA Hangtime](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164314317)                                                 |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
-| [Night Slashers](https://github.com/derpyder/Arcade-NightSlashers_MiSTer)                                                       |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                |
 | [Nintendo N64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
 | [Nintendo NES (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                                          |
@@ -63,7 +62,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
-| [Tempest](https://github.com/derpyder/Arcade-Tempest_MiSTer)                                                                    |
 | [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                         |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
