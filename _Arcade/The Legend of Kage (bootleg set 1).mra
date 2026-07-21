@@ -1,0 +1,32 @@
+<misterromdescription>
+    <name>The Legend of Kage (bootleg set 1)</name>
+    <setname>lkagebl1</setname>
+    <year>1985</year>
+    <manufacturer>Taito</manufacturer>
+    <rbf>LegendOfKage</rbf>
+    <rotation>horizontal</rotation>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <buttons names="Sword,Shuriken,Start 1P,Start 2P,Coin,Pause" default="A,B,Start,Select,R,L" />
+
+    <rom index="0" zip="lkage.zip">
+        <part name="lkagebl1/ic37_1" />
+        <part name="lkagebl1/ic38_2" />
+        <part name="a54-04.54" />
+        <part name="a54-03.51" />
+        <part name="lkageb/a54-05.84" />
+        <part name="lkageb/a54-06.85" />
+        <part name="lkageb/a54-07.86" />
+        <part name="lkageb/a54-08.87" />
+    </rom>
+
+    <switches default="7F,00,FF" base="8">
+        <dip name="Bonus Life" bits="0,1" ids="30k 130k 100k+,30k 100k 70k+,20k 90k 70k+,20k 70k 50k+" />
+        <dip name="Free Play" bits="2" ids="On,Off" />
+        <dip name="Lives" bits="3,4" ids="255,5,4,3" />
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail" />
+        <dip name="Difficulty" bits="18,19" ids="Hardest,Hard,Normal,Easy" />
+        <dip name="Initial Season" bits="17" ids="Winter,Spring" />
+        <dip name="Invulnerability" bits="22" ids="On,Off" />
+    </switches>
+</misterromdescription>

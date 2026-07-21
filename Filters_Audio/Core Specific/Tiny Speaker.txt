@@ -1,0 +1,37 @@
+#Version
+v1
+
+#Original Filename
+#Game.com Tiny Speaker.txt
+
+#Filter Description
+#Broad Game Boy-like handheld speaker approximation (about 330 Hz-4.6 kHz)
+
+#Sampling Frequency
+#32 times 48 kHz keeps the three-pole feedback values well-conditioned
+1536000
+
+#Base gain
+#Quantized for a -2 dB peak near 1.7 kHz after the framework's output scaling
+0.00027403825515648350
+
+#gain scale for X0
+#Bit 7 selects negative; bits 2:0 encode 5/16
+133
+
+#gain scale for X1
+#Bit 7 selects negative; bits 2:0 encode 6/16
+134
+
+#gain scale for X2
+#Bit 7 selects negative; bits 2:0 encode 5/16
+133
+
+#coefficient for Y0
+-2.97253799438476562500
+
+#coefficient for Y1
+2.94544792175292968750
+
+#coefficient for Y2
+-0.97290945053100585938

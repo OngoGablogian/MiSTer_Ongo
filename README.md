@@ -62,6 +62,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
+| [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                           |
 | [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                         |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
@@ -168,6 +169,7 @@ main=MiSTer_CDi
 | [Scanlines - Adaptive (No Boost)](https://discord.com/channels/647909397477195803/811089485495402497/962786206029058179)  |
 | [Phaedrux LG C1 Settings](https://discord.com/channels/647909397477195803/647909398072655907/1082827830913671169)         |
 | [Bear N64 Audio Filter Presets](https://discord.com/channels/647909397477195803/1096015979055697940/1271142144135925771)  |
+| [Tiny Speaker Audio Filter](https://discord.com/channels/647909397477195803/1056022299234541578/1526335762214162543)      | 
 | [GameBoy Color SubPixel](https://discord.com/channels/647909397477195803/1046941428758102086/1473666707326505100)         |
 | LCD Scale5x Shadow Masks                                                                                                  |
 
