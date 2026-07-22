@@ -1,0 +1,55 @@
+<!-- Mortal Kombat (rev 5.5) Wolf Unit hack by Asure & Creeping1, running on the UMK3 core.
+     ROM data is user-supplied and CRC-checked; none is distributed by this project.
+     Note: DCS sound is deferred in this core — no audio yet. -->
+<misterromdescription>
+    <about author="Asure"/>
+    <rotation>horizontal</rotation>
+    <name>Mortal Kombat (rev 5.5) (Wolf Unit)</name>
+    <setname>mk_wolf</setname>
+    <mameversion>0287</mameversion>
+    <year>1992</year>
+    <manufacturer>Midway / Hack by Asure &amp; Creeping1</manufacturer>
+    <players>2</players>
+    <rbf>UMK3</rbf>
+    <region>World</region>
+
+    <rom index="0" zip="mk_wolf.zip" md5="None">
+        <part name="mk321u54.bin" crc="33DC55EB"/>
+        <part name="mk321u63.bin" crc="7957744F"/>
+    </rom>
+
+    <!-- GFX from mk3.zip: 20 ROMs. u133-u130 and u129-u122 are MK1-specific;
+         u121-u114 fill the lower block (MK1 wolf uses u117-u114 where UMK3 uses u113-u110). -->
+    <rom index="1" zip="mk_wolf.zip" md5="None">
+        <part name="mk3-u133.bin" crc="79b94667"/>
+        <part name="mk3-u132.bin" crc="13e95228"/>
+        <part name="mk3-u131.bin" crc="41001e30"/>
+        <part name="mk3-u130.bin" crc="49379dd7"/>
+        <part name="l1_mortal_kombat_3_u129_game_rom.u129" crc="78357955"/>
+        <part name="l1_mortal_kombat_3_u128_game_rom.u128" crc="e73b47ab"/>
+        <part name="l1_mortal_kombat_3_u127_game_rom.u127" crc="fb171bb6"/>
+        <part name="l1_mortal_kombat_3_u126_game_rom.u126" crc="73b639bb"/>
+        <part name="l1_mortal_kombat_3_u125_game_rom.u125" crc="08116e73"/>
+        <part name="l1_mortal_kombat_3_u124_game_rom.u124" crc="3df42876"/>
+        <part name="l1_mortal_kombat_3_u123_game_rom.u123" crc="f3327782"/>
+        <part name="l1_mortal_kombat_3_u122_game_rom.u122" crc="c3a218e5"/>
+        <part name="mk3-u121.bin" crc="b6c6296a"/>
+        <part name="mk3-u120.bin" crc="8d1ccc3b"/>
+        <part name="mk3-u119.bin" crc="63215b59"/>
+        <part name="mk3-u118.bin" crc="8b681e34"/>
+        <part name="mk3-u117.bin" crc="1ab20377"/>
+        <part name="mk3-u116.bin" crc="ba246ad0"/>
+        <part name="mk3-u115.bin" crc="3ee8b124"/>
+        <part name="mk3-u114.bin" crc="a8d99922"/>
+    </rom>
+    
+    <rom index="2" zip="mk_wolf.zip" md5="None">
+        <part name="l1_mortal_kombat_3_u2_music_spch.u2" crc="8574f56a"/>
+        <part name="l1_mortal_kombat_3_u3_music_spch.u3" crc="459f578d"/>
+        <part name="l1_mortal_kombat_3_u4_music_spch.u4" crc="3834cd29"/>
+        <part name="l1_mortal_kombat_3_u5_music_spch.u5" crc="97f4ab02"/>
+    </rom>
+
+    <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Run,Start,Coin"
+             default="X,Y,A,B,R,L,Start,Select" count="6"/>
+</misterromdescription>

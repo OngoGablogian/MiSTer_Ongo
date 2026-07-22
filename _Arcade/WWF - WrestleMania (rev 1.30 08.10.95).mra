@@ -1,0 +1,55 @@
+<!-- WWF: WrestleMania - The Arcade Game (Midway Wolf Unit), built on the
+     Arcade-UMK3_SRT_ERASE core base so all 5 game buttons are assignable.
+     ROM data is user-supplied and CRC-checked; none is distributed here.
+     Filenames/CRCs match current MAME (0.288) romset "wwfmania". -->
+<misterromdescription>
+    <about author="community"/>
+    <rotation>horizontal</rotation>
+    <name>WWF: WrestleMania (rev 1.30 08/10/95)</name>
+    <setname>wwfmania</setname>
+    <mameversion>0288</mameversion>
+    <year>1995</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>UMK3</rbf>
+    <region>World</region>
+
+    <!-- index 0 : TMS34010 game code (u54 = even, u63 = odd) -->
+    <rom index="0" zip="wwfmania.zip" md5="None">
+        <part name="wwf_game_rom_l1.30.u54" crc="eeb7bf58"/>
+        <part name="wwf_game_rom_l1.30.u63" crc="09759529"/>
+    </rom>
+
+    <!-- index 1 : image/graphics ROMs, 16 chips u133..u118 (descending = gfx offset 0..0xF00000) -->
+    <rom index="1" zip="wwfmania.zip" md5="None">
+        <part name="wwf_image_rom_l1.u133" crc="5e1b1e3d"/>
+        <part name="wwf_image_rom_l1.u132" crc="5943b3b2"/>
+        <part name="wwf_image_rom_l1.u131" crc="0815db22"/>
+        <part name="wwf_image_rom_l1.u130" crc="9ee9a145"/>
+        <part name="wwf_image_rom_l1.u129" crc="c644c2f4"/>
+        <part name="wwf_image_rom_l1.u128" crc="fcda4e9a"/>
+        <part name="wwf_image_rom_l1.u127" crc="45be7428"/>
+        <part name="wwf_image_rom_l1.u126" crc="eaa276a8"/>
+        <part name="wwf_image_rom_l1.u125" crc="a19ebeed"/>
+        <part name="wwf_image_rom_l1.u124" crc="dc7d3dbb"/>
+        <part name="wwf_image_rom_l1.u123" crc="e0ade56f"/>
+        <part name="wwf_image_rom_l1.u122" crc="2800c78d"/>
+        <part name="wwf_image_rom_l1.u121" crc="a28ffcba"/>
+        <part name="wwf_image_rom_l1.u120" crc="3a05d371"/>
+        <part name="wwf_image_rom_l1.u119" crc="97ffa659"/>
+        <part name="wwf_image_rom_l1.u118" crc="46668e97"/>
+    </rom>
+
+    <!-- index 2 : DCS (ADSP-2105) music/speech ROMs u2..u5 -->
+    <rom index="2" zip="wwfmania.zip" md5="None">
+        <part name="wwf_music-spch_l1.u2" crc="a9acb250"/>
+        <part name="wwf_music-spch_l1.u3" crc="9442b6c9"/>
+        <part name="wwf_music-spch_l1.u4" crc="cee78fac"/>
+        <part name="wwf_music-spch_l1.u5" crc="5b31fd40"/>
+    </rom>
+
+    <!-- 6 button slots kept (like UMK3) so Start/Coin stay on joy[10]/[11].
+         WWF uses 5: labels ordered to match this core's joy->hardware-bit wiring. -->
+    <buttons names="Punch,Kick,Block,Power Punch,Power Kick,-,Start,Coin"
+             default="X,Y,A,B,R,L,Start,Select" count="6"/>
+</misterromdescription>

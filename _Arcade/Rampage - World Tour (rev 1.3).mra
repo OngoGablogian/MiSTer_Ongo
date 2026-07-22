@@ -1,0 +1,67 @@
+<!-- Rampage: World Tour (rev 1.3) profile for the shared Q256 Wolf/DCS stack.
+     Consumed by the RAMPAGE_WT build config of the Wolf-unit core (Arcade-SmashTV.sv
+     RAMPAGE_WT arms: input block, 465 picemu response table, DSW bit-15 test switch);
+     build with quartus/build_hw.sh "RAMPAGE_WT=1,USE_DDR3_GFX=1,USE_DDR3_VRAM=1"
+     Arcade-RampageWT (matching the <rbf> name below).
+     Stream layout mirrors the cabinet-proven NBA Hangtime MRA exactly:
+       index 0: program u54 then u63, raw 512KB halves (byte-lane interleave is done
+                on-chip in the emu top, per the donor precedent)
+       index 1: gfx chips back-to-back in ROM_LOAD32_BYTE group order
+                u133..u130, u129..u126, u125..u122, u121..u118 (16 x 1MB = 16MB;
+                wolf_gfx_interleave consumes this linear order; RWT stops at
+                group 3, so the donor's U114-U117 hole-skip at group 4 is never hit)
+       index 2: DCS sound u2,u3,u4,u5 raw 1MB each (dcs stripe expansion on-chip)
+     The PIC dump 465_rampage_wt.u64 is deliberately NOT in the stream: the core's
+     wolf_pic.sv takes the 16-byte response table as an elaboration parameter
+     captured from MAME 0.280, and does not execute the PIC program.
+     ROM data is user-supplied and CRC-checked; none is distributed by this project. -->
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Rampage: World Tour (rev 1.3)</name>
+    <setname>rmpgwt</setname>
+    <mameversion>0280</mameversion>
+    <year>1997</year>
+    <manufacturer>Midway</manufacturer>
+    <players>3</players>
+    <rbf>RampageWT</rbf>
+    <region>World</region>
+
+    <rom index="0" zip="rmpgwt.zip" md5="None">
+        <part name="1.3_rampage_world_u54_game.u54" crc="2a8f6e1e"/>
+        <part name="1.3_rampage_world_u63_game.u63" crc="403ae41e"/>
+    </rom>
+
+    <rom index="1" zip="rmpgwt.zip" md5="None">
+        <part name="1.0_rampage_world_tour_u133_image.u133" crc="5b5ac449"/>
+        <part name="1.0_rampage_world_tour_u132_image.u132" crc="7b3f09c6"/>
+        <part name="1.0_rampage_world_tour_u131_image.u131" crc="fdecf12e"/>
+        <part name="1.0_rampage_world_tour_u130_image.u130" crc="4a983b05"/>
+        <part name="1.0_rampage_world_tour_u129_image.u129" crc="dc495c6e"/>
+        <part name="1.0_rampage_world_tour_u128_image.u128" crc="5545503d"/>
+        <part name="1.0_rampage_world_tour_u127_image.u127" crc="6e1756ba"/>
+        <part name="1.0_rampage_world_tour_u126_image.u126" crc="c300eb1b"/>
+        <part name="1.0_rampage_world_tour_u125_image.u125" crc="7369bf5d"/>
+        <part name="1.0_rampage_world_tour_u124_image.u124" crc="c0bf88c8"/>
+        <part name="1.0_rampage_world_tour_u123_image.u123" crc="ac4c712a"/>
+        <part name="1.0_rampage_world_tour_u122_image.u122" crc="609862a2"/>
+        <part name="1.0_rampage_world_tour_u121_image.u121" crc="f65119b7"/>
+        <part name="1.0_rampage_world_tour_u120_image.u120" crc="6d643dee"/>
+        <part name="1.0_rampage_world_tour_u119_image.u119" crc="4e49c133"/>
+        <part name="1.0_rampage_world_tour_u118_image.u118" crc="43a6f51e"/>
+    </rom>
+
+    <rom index="2" zip="rmpgwt.zip" md5="None">
+        <part name="1.0_rampage_world_tour_u2_sound.u2" crc="0e82f83d"/>
+        <part name="1.0_rampage_world_tour_u3_sound.u3" crc="3ff54d15"/>
+        <part name="1.0_rampage_world_tour_u4_sound.u4" crc="5c7f5656"/>
+        <part name="1.0_rampage_world_tour_u5_sound.u5" crc="fd9aaf24"/>
+    </rom>
+
+    <!-- Button name order = future core joystick bit order [4],[5],[6] (B1,B2,B3).
+         MAME io bits are Punch=4, Kick=5, Jump=6 but MAME's BUTTON1 is Jump
+         (midwunit.cpp rmpgwt port); the RWT input block must wire
+         joystick B1(Jump)->io bit6, B2(Punch)->io bit4, B3(Kick)->io bit5. -->
+    <buttons names="Jump,Punch,Kick,Start,Coin"
+             default="A,X,Y,Start,Select" count="3"/>
+</misterromdescription>

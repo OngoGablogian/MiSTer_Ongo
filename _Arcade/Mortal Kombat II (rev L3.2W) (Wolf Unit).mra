@@ -1,0 +1,45 @@
+<!-- Mortal Kombat II (rev L3.2W) Wolf Unit hack by Asure, running on the UMK3 core.
+     ROM data is user-supplied and CRC-checked; none is distributed by this project.
+     Note: DCS sound is deferred in this core — no audio yet. -->
+<misterromdescription>
+    <about author="Asure"/>
+    <rotation>horizontal</rotation>
+    <name>Mortal Kombat II (rev L3.2W) (Wolf Unit)</name>
+    <setname>mk2_wolf</setname>
+    <mameversion>0287</mameversion>
+    <year>1993</year>
+    <manufacturer>Midway / Hack by Asure</manufacturer>
+    <players>2</players>
+    <rbf>UMK3</rbf>
+    <region>World</region>
+
+    <rom index="0" zip="mk2_wolf.zip" md5="None">
+        <part name="mk321u54.bin" crc="b873db81"/>
+        <part name="mk321u63.bin" crc="4bd4cb92"/>
+    </rom>
+
+    <rom index="1" zip="mk2_wolf.zip" md5="None">
+        <part name="l1_mortal_kombat_3_u133_game_rom.u133" crc="01e73af6"/>
+        <part name="l1_mortal_kombat_3_u132_game_rom.u132" crc="d4985cbb"/>
+        <part name="l1_mortal_kombat_3_u131_game_rom.u131" crc="fec137be"/>
+        <part name="l1_mortal_kombat_3_u130_game_rom.u130" crc="2d763156"/>
+        <part name="l1_mortal_kombat_3_u129_game_rom.u129" crc="8ba6ae18"/>
+        <part name="l1_mortal_kombat_3_u128_game_rom.u128" crc="39d885b4"/>
+        <part name="l1_mortal_kombat_3_u127_game_rom.u127" crc="809118c1"/>
+        <part name="l1_mortal_kombat_3_u126_game_rom.u126" crc="b96824f0"/>
+        <part name="l1_mortal_kombat_3_u125_game_rom.u125" crc="937d8620"/>
+        <part name="l1_mortal_kombat_3_u124_game_rom.u124" crc="218de160"/>
+        <part name="l1_mortal_kombat_3_u123_game_rom.u123" crc="154d53b1"/>
+        <part name="l1_mortal_kombat_3_u122_game_rom.u122" crc="8891d785"/>
+    </rom>
+
+    <rom index="2" zip="mk2_wolf.zip" md5="None">
+        <part name="l1_mortal_kombat_3_u2_music_spch.u2" crc="1fa334c8"/>
+        <part name="l1_mortal_kombat_3_u3_music_spch.u3" crc="86dc17a6"/>
+        <part name="l1_mortal_kombat_3_u4_music_spch.u4" crc="1ca12f40"/>
+        <part name="l1_mortal_kombat_3_u5_music_spch.u5" crc="bf2132c8"/>
+    </rom>
+    
+    <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Run,Start,Coin"
+             default="X,Y,A,B,R,L,Start,Select" count="6"/>
+</misterromdescription>
