@@ -224,10 +224,16 @@ db_url = https://raw.githubusercontent.com/danmons/MiSTer_D93/db/db.json.zip
 db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-gameboy-palettes/db/db.json.zip
 ```
 
-[MiSTer Addons Reflex Adapt](https://github.com/misteraddons/Reflex-Adapt)
+[MiSTer Addons Reflex Adapt](https://github.com/misteraddons/Reflex-Adapt-Legacy)
 ```
 [misteraddons/reflex-adapt-legacy]
 db_url = https://raw.githubusercontent.com/misteraddons/Reflex-Adapt-Legacy/main/reflex-adapt-legacy.json.zip
+```
+
+[MiSTer Addons Reflex Adapt 2 (Classic2USB)](https://github.com/misteraddons/Reflex-Adapt)
+```
+[misteraddons/reflex-adapt-manager]
+db_url = https://raw.githubusercontent.com/misteraddons/Reflex-Adapt/main/reflex-adapt-manager.json.zip
 ```
 
 [MiSTer-syncthing](https://github.com/davewongillies/MiSTer-syncthing)
