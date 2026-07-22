@@ -1,0 +1,72 @@
+<!--          Arcade-UMK3 (Midway Wolf-unit) — open TMS34010 MiSTer core
+
+              An open, anti-paywall implementation. This work does not endorse or
+              participate in illegal distribution of copyrighted material; use it
+              only with a legally obtained umk3.zip (MAME 0.280 romset).
+
+              License GNU GPLv2: https://opensource.org/licenses/gpl-2.0.php
+
+     gfx ROM loads via USE_DDR3_GFX (index=1, on-chip interleave transform + boot-copy into
+     HPS DDR3 — see rtl/wolf/wolf_gfx_interleave.sv, rtl/sdram/wolf_gfx_ddr_top.sv). Requires
+     the RBF to have been built with -DUSE_DDR3_GFX; builds without it stall index=1
+     and are rejected by the release preflight. DCS (ADSP-2105) sound is still DEFERRED — no
+     audio yet, video sprites should render.
+-->
+
+<!-- ROM LAYOUT (raw parts; the 34010 byte-lane interleave is done on-chip in Arcade-SmashTV.sv):
+       [0x000000, 0x080000)  u54  -> program-ROM LOW  byte lane (34010 D0-7,  EVEN bytes)
+       [0x080000, 0x100000)  u63  -> program-ROM HIGH byte lane (34010 D8-15, ODD  bytes)
+     Each 34010 word j = {u63[j], u54[j]}; the emu writes u54 via be=01 and u63 via be=10
+     of SDRAM word (ROMW_BASE + j). Verified vs mame-gospel midwunit.cpp:878-879
+     (ROM_LOAD16_BYTE even/odd) and sim/make_maindata_hex.py. Total download = 0x100000 B. -->
+
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Ultimate Mortal Kombat 3 (rev 1.2)</name>
+    <setname>umk3</setname>
+    <mameversion>0280</mameversion>
+    <year>1995</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>UMK3</rbf>
+    <region>World</region>
+
+    <rom index="0" zip="umk3.zip" md5="None">
+        <!-- 34010 program ROM (DCS sound still deferred) -->
+        <part name="l1.2_mortal_kombat_3_u54_ultimate.u54" crc="712b4db6"/>
+        <part name="l1.2_mortal_kombat_3_u63_ultimate.u63" crc="6d301faf"/>
+    </rom>
+
+    <!-- gfx ROM: 20 chips, RAW linear concatenation (NOT pre-interleaved; the core's
+         wolf_gfx_interleave does the byte-interleave transform at download time, same as the
+         u54/u63 program-ROM lane interleave above). Order matches sim/make_wolf_gfx_linear_hex.py's
+         CHIPS list and mame-gospel/midway/midwunit.cpp ROM_START(umk3):884-909 EXACTLY; any
+         reorder here breaks the interleave assumption. Routed via ioctl_index=1. -->
+    <rom index="1" zip="umk3.zip" md5="None">
+        <part name="l1_mortal_kombat_3_u133_game_rom.u133" crc="79b94667"/>
+        <part name="l1_mortal_kombat_3_u132_game_rom.u132" crc="13e95228"/>
+        <part name="l1_mortal_kombat_3_u131_game_rom.u131" crc="41001e30"/>
+        <part name="l1_mortal_kombat_3_u130_game_rom.u130" crc="49379dd7"/>
+        <part name="l1_mortal_kombat_3_u129_game_rom.u129" crc="a8b41803"/>
+        <part name="l1_mortal_kombat_3_u128_game_rom.u128" crc="b410d72f"/>
+        <part name="l1_mortal_kombat_3_u127_game_rom.u127" crc="bd985be7"/>
+        <part name="l1_mortal_kombat_3_u126_game_rom.u126" crc="e7c32cf4"/>
+        <part name="l1_mortal_kombat_3_u125_game_rom.u125" crc="9a52227e"/>
+        <part name="l1_mortal_kombat_3_u124_game_rom.u124" crc="5c750ebc"/>
+        <part name="l1_mortal_kombat_3_u123_game_rom.u123" crc="f0ab88a8"/>
+        <part name="l1_mortal_kombat_3_u122_game_rom.u122" crc="9b87cdac"/>
+        <part name="umk-u121.bin" crc="cc4b95db"/>
+        <part name="umk-u120.bin" crc="1c8144cd"/>
+        <part name="umk-u119.bin" crc="5f10c543"/>
+        <part name="umk-u118.bin" crc="de0c4488"/>
+        <part name="umk-u113.bin" crc="99d74a1e"/>
+        <part name="umk-u112.bin" crc="b5a46488"/>
+        <part name="umk-u111.bin" crc="a87523c8"/>
+        <part name="umk-u110.bin" crc="0038f205"/>
+    </rom>
+
+    <!-- UMK3 6-button fighting layout. Matches Arcade-SmashTV.sv CONF_STR J1. -->
+    <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Run,Start,Coin"
+             default="X,Y,A,B,R,L,Start,Select" count="6"/>
+</misterromdescription>

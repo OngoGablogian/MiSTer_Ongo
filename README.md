@@ -64,6 +64,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                           |
 | [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                         |
+| [Ultimate Mortal Kombat 3](https://www.patreon.com/blahm1d/posts/blahm1d-forces-3-164509136)                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
