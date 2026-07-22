@@ -1,25 +1,4 @@
-<!--          Arcade-UMK3 (Midway Wolf-unit) — open TMS34010 MiSTer core
-
-              An open, anti-paywall implementation. This work does not endorse or
-              participate in illegal distribution of copyrighted material; use it
-              only with a legally obtained umk3.zip (MAME 0.280 romset).
-
-              License GNU GPLv2: https://opensource.org/licenses/gpl-2.0.php
-
-     gfx ROM loads via USE_DDR3_GFX (index=1, on-chip interleave transform + boot-copy into
-     HPS DDR3 — see rtl/wolf/wolf_gfx_interleave.sv, rtl/sdram/wolf_gfx_ddr_top.sv). Requires
-     the RBF to have been built with -DUSE_DDR3_GFX; builds without it stall index=1
-     and are rejected by the release preflight. DCS (ADSP-2105) sound is still DEFERRED — no
-     audio yet, video sprites should render.
--->
-
-<!-- ROM LAYOUT (raw parts; the 34010 byte-lane interleave is done on-chip in Arcade-SmashTV.sv):
-       [0x000000, 0x080000)  u54  -> program-ROM LOW  byte lane (34010 D0-7,  EVEN bytes)
-       [0x080000, 0x100000)  u63  -> program-ROM HIGH byte lane (34010 D8-15, ODD  bytes)
-     Each 34010 word j = {u63[j], u54[j]}; the emu writes u54 via be=01 and u63 via be=10
-     of SDRAM word (ROMW_BASE + j). Verified vs mame-gospel midwunit.cpp:878-879
-     (ROM_LOAD16_BYTE even/odd) and sim/make_maindata_hex.py. Total download = 0x100000 B. -->
-
+<!-- UMK3 Q256/scan-publication baseline plus the TMS34010 SRT hidden-page erase fix. -->
 <misterromdescription>
     <about author="rejectedcoins"/>
     <rotation>horizontal</rotation>
@@ -33,16 +12,10 @@
     <region>World</region>
 
     <rom index="0" zip="umk3.zip" md5="None">
-        <!-- 34010 program ROM (DCS sound still deferred) -->
         <part name="l1.2_mortal_kombat_3_u54_ultimate.u54" crc="712b4db6"/>
         <part name="l1.2_mortal_kombat_3_u63_ultimate.u63" crc="6d301faf"/>
     </rom>
 
-    <!-- gfx ROM: 20 chips, RAW linear concatenation (NOT pre-interleaved; the core's
-         wolf_gfx_interleave does the byte-interleave transform at download time, same as the
-         u54/u63 program-ROM lane interleave above). Order matches sim/make_wolf_gfx_linear_hex.py's
-         CHIPS list and mame-gospel/midway/midwunit.cpp ROM_START(umk3):884-909 EXACTLY; any
-         reorder here breaks the interleave assumption. Routed via ioctl_index=1. -->
     <rom index="1" zip="umk3.zip" md5="None">
         <part name="l1_mortal_kombat_3_u133_game_rom.u133" crc="79b94667"/>
         <part name="l1_mortal_kombat_3_u132_game_rom.u132" crc="13e95228"/>
@@ -66,7 +39,14 @@
         <part name="umk-u110.bin" crc="0038f205"/>
     </rom>
 
-    <!-- UMK3 6-button fighting layout. Matches Arcade-SmashTV.sv CONF_STR J1. -->
+    <!-- Dense physical-chip order: U2 | U3 | U4 | U5. -->
+    <rom index="2" zip="umk3.zip" md5="None">
+        <part name="l2.0_mortal_kombat_3_u2_ultimate.u2" crc="3838cfe5"/>
+        <part name="l1_mortal_kombat_3_u3_music_spch.u3" crc="856fe411"/>
+        <part name="l1_mortal_kombat_3_u4_music_spch.u4" crc="428a406f"/>
+        <part name="l1_mortal_kombat_3_u5_music_spch.u5" crc="3b98a09f"/>
+    </rom>
+
     <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Run,Start,Coin"
              default="X,Y,A,B,R,L,Start,Select" count="6"/>
 </misterromdescription>

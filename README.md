@@ -54,6 +54,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                  |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                   |
+| [Smash T.V.](https://www.patreon.com/blahm1d/posts/system-warning-164511442)                                                    |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                       |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                    |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                |
