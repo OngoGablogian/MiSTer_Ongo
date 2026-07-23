@@ -21,6 +21,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                 |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                  |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                     |
+| [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                             |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                       |
 | [Ironman Ivan Stewart's Super Off-Road](https://discord.com/channels/647909397477195803/737506076806611064/1528179729784504381) |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                     |
