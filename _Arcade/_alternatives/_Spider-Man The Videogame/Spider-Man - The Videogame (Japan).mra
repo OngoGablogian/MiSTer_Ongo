@@ -5,7 +5,7 @@
   <year>1991</year>
   <manufacturer>Sega</manufacturer>
   <rbf>SegaS32</rbf>
-  <rom index="0" zip="spidmanj.zip" md5="none">
+  <rom index="0" zip="spidmanj.zip|spidman.zip" md5="none">
     <part>20000081000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
     <part name="epr-14287.ic13" crc="403ccdc9"/>
     <part name="epr-14287.ic13" crc="403ccdc9"/>
