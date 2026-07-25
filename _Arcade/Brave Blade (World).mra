@@ -7,7 +7,7 @@
 	<players>2</players>
 	<joystick>8-way</joystick>
 	<rotation>vertical</rotation>
-	<rbf>ZN1</rbf>
+	<rbf>XNZN1</rbf>
 
 	<!-- BIOS: Tecmo TPS System BIOS (used by brvblade), 512KB, ioctl_index 0 -->
 	<rom index="0" zip="coh1002m.zip" md5="none">
