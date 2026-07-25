@@ -5,7 +5,8 @@
   <year>1991</year>
   <manufacturer>Sega</manufacturer>
   <rbf>SegaS32</rbf>
-  <rom index="0" zip="spidmanu.zip|spidman.zip" md5="none">
+  <buttons names="Attack,Jump,-,-,-,-,Start,Coin,Test,Service" default="A,B,-,-,-,-,Start,Select,R,L" count="10"/>
+  <rom index="0" zip="spidman.zip|spidmanu.zip" md5="none">
     <part>20000081000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
     <part name="epr-14303a.ic13" crc="7f1bd28f"/>
     <part name="epr-14303a.ic13" crc="7f1bd28f"/>
