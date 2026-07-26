@@ -8,10 +8,13 @@
 	<rbf>SuperOffRoad</rbf>
 
 	<rom index="0" zip="offroad.zip" md5="None" type="merged">
+		<part>4C 01 03 00 00 01 00 00 00 00 00 00 00 00 00 00</part>
+
 		<part name="03-22121-04.u58t" crc="c5790988" length="0x10000"/>
 		<part name="03-22122-03.u59t" crc="ae862fdc" length="0x10000"/>
 		<part name="03-22120-01.u57t" crc="e9f0f175" length="0x10000"/>
 		<part name="03-22119-02.u56t" crc="38642f22" length="0x10000"/>
+		<part repeat="0xC0000">00</part>
 
 		<part name="03-22100-02.u3"   crc="08c96a4b" length="0x2000"/>
 		<part repeat="0x2E000">00</part>
@@ -20,6 +23,7 @@
 		<part name="03-22110-02.u6t"  crc="f97bad5c" length="0x10000"/>
 		<part name="03-22111-01.u7t"  crc="f79157a1" length="0x10000"/>
 		<part name="03-22112-01.u8t"  crc="3eef38d3" length="0x10000"/>
+		<part repeat="0x180000">00</part>
 
 		<part repeat="0x40000">00</part>
 		<interleave output="16">
@@ -39,6 +43,7 @@
 		<part name="03-22105-02.u93" crc="4426e367" length="0x8000"/>
 		<part name="03-22106-02.u94" crc="687dc1fc" length="0x8000"/>
 		<part name="03-22107-02.u95" crc="cee6ee5f" length="0x8000"/>
+		<part repeat="0x1E8000">00</part>
 
 		<part repeat="0x4000">00</part>
 		<part name="03-22104-01.u92" crc="03e0497d" length="0x4000"/>
@@ -47,6 +52,9 @@
 		<part name="03-22103-02.u90" crc="2266757a" length="0x4000"/>
 		<part name="03-22101-02.u67" crc="ecab0527" length="0x4000"/>
 		<part repeat="0x4000">00</part>
+
+		<part repeat="0xE0000">00</part>
+		<part name="eeprom-offroad.bin" crc="57955248" length="0x80"/>
 	</rom>
 
 	<switches page="1" title="DIP Switches">
@@ -55,5 +63,7 @@
 		<dip name="Service Mode" bits="4"   values="Off,On"/>
 		<dip name="Free Play"    bits="5"   values="Off,On"/>
 	</switches>
+
+	<buttons names="Nitro,Coin,Gas"></buttons>
 
 </misterromdescription>

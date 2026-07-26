@@ -24,7 +24,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                             |
 | [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-164889396)                         |                                      
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                       |
-| [Ironman Ivan Stewart's Super Off-Road](https://discord.com/channels/647909397477195803/737506076806611064/1528179729784504381) |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                     |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                     |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
@@ -66,6 +65,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                 |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
+| [Super Off-Road](https://discord.com/channels/647909397477195803/737506076806611064/1531033302679687400)                        |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                           |
