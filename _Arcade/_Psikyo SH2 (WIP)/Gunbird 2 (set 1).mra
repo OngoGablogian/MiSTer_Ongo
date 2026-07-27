@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>gunbird2</setname>
 	<description>Gunbird 2 (set 1)</description>
-	<rotation>vertical</rotation>
+	<rotation>Vertical (CCW)</rotation>
 	<year>1998</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service" />

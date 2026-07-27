@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>gnbarich</setname>
 	<description>Gunbarich</description>
-	<rotation>vertical</rotation>
+	<rotation>Vertical (CCW)</rotation>
 	<year>2001</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Start,Coin,Test,Service" />

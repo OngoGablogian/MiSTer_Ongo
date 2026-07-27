@@ -2,7 +2,7 @@
 	<rbf>PsikyoSH2</rbf>
 	<setname>sbomber</setname>
 	<description>Space Bomber (ver. B)</description>
-	<rotation>vertical</rotation>
+	<rotation>Vertical (CCW)</rotation>
 	<year>1998</year>
 	<manufacturer>Psikyo</manufacturer>
 	<buttons names="Button 1,Button 2,Start,Coin,Test,Service" />
