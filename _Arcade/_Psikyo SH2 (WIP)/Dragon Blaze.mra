@@ -73,5 +73,12 @@
 	<rom index="2" md5="" >
 		<part>25</part>
 	</rom>
-	<nvram index="3" size="256" />
+
+	<rom index="3" md5="none">
+		<part>
+			00 08 24 B4 00 DD 00 00
+			00 08 25 D4 00 4D 00 03
+		</part>
+	</rom>
+	<nvram index="4" size="554" />
 </misterromdescription>
