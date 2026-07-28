@@ -9,72 +9,72 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 # Included Cores:
 | Core |
 | :---: |
-| [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                      |
-| [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                            |
-| [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                      |
-| [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                              |
-| [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                     |
-| [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                         |
-| [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                 |
-| [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                 |
-| [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                 |
-| [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                 |
-| [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                  |
-| [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                     |
-| [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                             |
-| [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-164889396)                         |                                      
-| [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                       |
-| [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                     |
-| [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                     |
-| [Klax](https://misterfpga.org/viewtopic.php?p=110704#p110704)                                                                   |
-| [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                     |
-| [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                             |
-| [Major Havoc](https://github.com/derpyder/Arcade-MajorHavoc_MiSTer)                                                             |
-| [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                              |
-| [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                     |
-| [Midway Wolf Unit](https://www.patreon.com/blahm1d/posts/blahm1d-wolf-164937303)                                                |
-| [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                       |
-| [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                             |
-| [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                 |
-| [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
-| [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
-| [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                |
-| [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                      |
-| [Nintendo 64DD](https://discord.com/channels/647909397477195803/737506076806611064/1529275738497482913)                         |
-| [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                         |
-| [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                  |
-| [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                 |
-| [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)  |
-| [Nintendo Virtual Boy (Unstable)](https://discord.com/channels/647909397477195803/1056040100141735986/1397022893673545840)      |
-| [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                   |
-| [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                       |
-| [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
-| [Psikyo SH2 (WIP)](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                           |
-| [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
-| [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                |
-| [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
-| [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                    |
-| [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                  |
-| [SEGA Kyugo](https://github.com/RodimusFVC/Arcade-Kyugo_MiSTer)                                                                 |
-| [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                    |
-| [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                   |
-| [Smash T.V.](https://www.patreon.com/blahm1d/posts/system-warning-164511442)                                                    |
-| [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                       |
-| [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                    |
-| [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                |
-| [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                            |
-| [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                 |
-| [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                            |
-| [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                           |
-| [Super Off-Road](https://discord.com/channels/647909397477195803/737506076806611064/1531033302679687400)                        |
-| [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                       |
-| [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
-| [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                           |
-| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                         |
-| [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
-| [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                  |
-| [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
-| [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
+| [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                     |
+| [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                           |
+| [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                     |
+| [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
+| [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
+| [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
+| [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
+| [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                |
+| [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
+| [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
+| [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
+| [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
+| [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
+| [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-164889396)                        |
+| [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
+| [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                    |
+| [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                    |
+| [Klax](https://misterfpga.org/viewtopic.php?p=110704#p110704)                                                                  |
+| [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
+| [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
+| [Major Havoc](https://github.com/derpyder/Arcade-MajorHavoc_MiSTer)                                                            |
+| [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
+| [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                    |
+| [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
+| [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                      |
+| [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
+| [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
+| [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |
+| [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |
+| [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
+| [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
+| [Nintendo 64DD](https://discord.com/channels/647909397477195803/737506076806611064/1529275738497482913)                        |
+| [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                        |
+| [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                 |
+| [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                |
+| [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781) |
+| [Nintendo Virtual Boy (Unstable)](https://discord.com/channels/647909397477195803/1056040100141735986/1397022893673545840)     |
+| [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1452810318370832384)                  |
+| [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
+| [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                     |
+| [Psikyo SH2 (WIP)](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                          |
+| [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                              |
+| [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                               |
+| [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
+| [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
+| [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
+| [SEGA Kyugo](https://github.com/RodimusFVC/Arcade-Kyugo_MiSTer)                                                                |
+| [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                   |
+| [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                  |
+| [Smash T.V.](https://www.patreon.com/blahm1d/posts/system-warning-164511442)                                                   |
+| [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
+| [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                   |
+| [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                               |
+| [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                           |
+| [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                |
+| [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                           |
+| [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                          |
+| [Super Off-Road](https://discord.com/channels/647909397477195803/737506076806611064/1531033302679687400)                       |
+| [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
+| [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
+| [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
+| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                        |
+| [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
+| [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
+| [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
+| [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                |
 
 ----
 
@@ -144,31 +144,31 @@ main=MiSTer_CDi
 # MRA:
 | MRA |
 | :---: |
-| [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                                   |
-| [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                                                                          |
-| [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)                                                         |
-| [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                                             |
-| [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)                                                           |
-| [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                                           |
-| [Gradius II (ver.xh)](https://github.com/Toryalai1/Arcade_Offset/tree/main/release/_Arcade%20Offset/_Gradius%20II)                   |
-| [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                                    |
-| [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)              |
-| [Mortal Kombat II (rev L3.2W) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk2-for-wolf-unit-boards.34080/)         |
-| [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                                 |
-| [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                                      |
-| [Pacu Pacu (v1.1)](https://discord.com/channels/647909397477195803/1046942006942900304/1408732261028860004)                          |
-| [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                                                               |
-| [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer)                                  |
-| Salamander (SP ver. clone)                                                                                                           |
-| Salamander (SP ver. clone Neo)                                                                                                       |
-| [SlapFight (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                                |
-| [Terra Cresta (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                             |
-| [Tiger Heli (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                               |
-| [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                                                |
-| [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                                                       |
-| [Twin Cobra (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                               |
-| Twin Twist (Twin Cobra Hack)                                                                                                         |
-| [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                                           |
+| [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                           |
+| [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                                                                  |
+| [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)                                                 |
+| [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                                     |
+| [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)                                                   |
+| [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                                   |
+| [Gradius II (ver.xh)](https://github.com/Toryalai1/Arcade_Offset/tree/main/release/_Arcade%20Offset/_Gradius%20II)           |
+| [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                            |
+| [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)      |
+| [Mortal Kombat II (rev L3.2W) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk2-for-wolf-unit-boards.34080/) |
+| [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                         |
+| [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                              |
+| [Pacu Pacu (v1.1)](https://discord.com/channels/647909397477195803/1046942006942900304/1408732261028860004)                  |
+| [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                                                       |
+| [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer)                          |
+| Salamander (SP ver. clone)                                                                                                   |
+| Salamander (SP ver. clone Neo)                                                                                               |
+| [SlapFight (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                        |
+| [Terra Cresta (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                     |
+| [Tiger Heli (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                       |
+| [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                                        |
+| [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                                               |
+| [Twin Cobra (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                       |
+| Twin Twist (Twin Cobra Hack)                                                                                                 |
+| [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                                   |
 
 ----
 
@@ -187,7 +187,7 @@ main=MiSTer_CDi
 | [Scanlines - Adaptive (No Boost)](https://discord.com/channels/647909397477195803/811089485495402497/962786206029058179)  |
 | [Phaedrux LG C1 Settings](https://discord.com/channels/647909397477195803/647909398072655907/1082827830913671169)         |
 | [Bear N64 Audio Filter Presets](https://discord.com/channels/647909397477195803/1096015979055697940/1271142144135925771)  |
-| [Tiny Speaker Audio Filter](https://discord.com/channels/647909397477195803/1056022299234541578/1526335762214162543)      | 
+| [Tiny Speaker Audio Filter](https://discord.com/channels/647909397477195803/1056022299234541578/1526335762214162543)      |
 | [GameBoy Color SubPixel](https://discord.com/channels/647909397477195803/1046941428758102086/1473666707326505100)         |
 | LCD Scale5x Shadow Masks                                                                                                  |
 

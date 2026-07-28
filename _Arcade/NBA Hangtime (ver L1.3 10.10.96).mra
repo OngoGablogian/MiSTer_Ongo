@@ -2,7 +2,7 @@
      ROM data is user-supplied and CRC-checked; none is distributed by this
      project. -->
 <misterromdescription>
-    <about author="rejectedcoins"/>
+    <about author="blahm1d"/>
     <rotation>horizontal</rotation>
     <name>NBA Hangtime (ver L1.3 10/10/96)</name>
     <setname>nbahangt</setname>

@@ -21,7 +21,7 @@
      (ROM_LOAD16_BYTE even/odd) and sim/make_maindata_hex.py. Total download = 0x100000 B. -->
 
 <misterromdescription>
-    <about author="rejectedcoins"/>
+    <about author="blahm1d"/>
     <rotation>horizontal</rotation>
     <name>Ultimate Mortal Kombat 3 (rev 1.2)</name>
     <setname>umk3</setname>
