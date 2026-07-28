@@ -1,57 +1,58 @@
-<!-- NBA Maximum Hangtime (ver L1.03) for the Arcade-NBAHangtime core.
-     It is a clone of NBA Hangtime: only the u54/u63 game code differs; all
-     image and sound ROMs are the stock NBA Hangtime ones and merge from
-     nbahangt.zip. Put the 2 game ROMs in nbamht.zip; the rest reads from
-     your nbahangt.zip. ROM data is user-supplied and CRC-checked. -->
+<!-- NBA Maximum Hangtime runtime profile for the shared Q256 Wolf/DCS master
+     core. Maximum Hangtime uses the same graphics, sound, controls, DIP
+     layout, and development-528 serial PIC profile as NBA Hangtime; only the
+     two program ROMs differ. ROM data is user-supplied and CRC-checked. -->
 <misterromdescription>
-    <about author="community"/>
+    <about author="rejectedcoins"/>
     <rotation>horizontal</rotation>
     <name>NBA Maximum Hangtime (ver L1.03 06/09/97)</name>
     <setname>nbamht</setname>
-    <mameversion>0288</mameversion>
+    <mameversion>0280</mameversion>
     <year>1996</year>
     <manufacturer>Midway</manufacturer>
     <players>4</players>
-    <rbf>NBAHangtime</rbf>
+    <rbf>WolfUnit</rbf>
     <region>World</region>
 
-    <!-- index 0 : TMS34010 game code - Maximum Hangtime L1.03 (differs from NBA Hangtime) -->
+    <!-- Wolf master profile 5: Maximum Hangtime 2P/4P harness and development-528 PIC. -->
+    <rom index="3" md5="None"><part>05</part></rom>
+
     <rom index="0" zip="nbamht.zip|nbahangt.zip" md5="None">
-        <part name="l1.03_maximum_hangtime_u54_l_version.u54" crc="21b0d9e1"/>
-        <part name="l1.03_maximum_hangtime_u63_l_version.u63" crc="c6fdbb97"/>
+        <part name="mhtu54_v103.bin" crc="21b0d9e1"/>
+        <part name="mhtu63_v103.bin" crc="c6fdbb97"/>
     </rom>
 
-    <!-- index 1 : image/graphics ROMs - stock NBA Hangtime (merge from nbahangt.zip), 20 chips -->
     <rom index="1" zip="nbamht.zip|nbahangt.zip" md5="None">
-        <part name="l1.0_nba_hangtime_u_133_image_rom.u133" crc="3163feed"/>
-        <part name="l1.0_nba_hangtime_u_132_image_rom.u132" crc="428eaf44"/>
-        <part name="l1.0_nba_hangtime_u_131_image_rom.u131" crc="5f7c5111"/>
-        <part name="l1.0_nba_hangtime_u_130_image_rom.u130" crc="c7c0c514"/>
-        <part name="l1.0_nba_hangtime_u_129_image_rom.u129" crc="b3d0daa0"/>
-        <part name="l1.0_nba_hangtime_u_128_image_rom.u128" crc="3704ee69"/>
-        <part name="l1.0_nba_hangtime_u_127_image_rom.u127" crc="4ea64d5a"/>
-        <part name="l1.0_nba_hangtime_u_126_image_rom.u126" crc="0c5c19b7"/>
-        <part name="l1.0_nba_hangtime_u_125_image_rom.u125" crc="46c43d67"/>
-        <part name="l1.0_nba_hangtime_u_124_image_rom.u124" crc="ed495156"/>
-        <part name="l1.0_nba_hangtime_u_123_image_rom.u123" crc="b48aa5da"/>
-        <part name="l1.0_nba_hangtime_u_122_image_rom.u122" crc="b18cd181"/>
-        <part name="l1.0_nba_hangtime_u_121_image_rom.u121" crc="5acb267a"/>
-        <part name="l1.0_nba_hangtime_u_120_image_rom.u120" crc="28e05f86"/>
-        <part name="l1.0_nba_hangtime_u_119_image_rom.u119" crc="b4f604ea"/>
-        <part name="l1.0_nba_hangtime_u_118_image_rom.u118" crc="a257b973"/>
-        <part name="l1.0_nba_hangtime_u_113_image_rom.u113" crc="d712a779"/>
-        <part name="l1.0_nba_hangtime_u_112_image_rom.u112" crc="644e1bca"/>
-        <part name="l1.0_nba_hangtime_u_111_image_rom.u111" crc="10d3b768"/>
-        <part name="l1.0_nba_hangtime_u_110_image_rom.u110" crc="8575aeb2"/>
+        <part name="mhtu133.bin" crc="3163feed"/>
+        <part name="mhtu132.bin" crc="428eaf44"/>
+        <part name="mhtu131.bin" crc="5f7c5111"/>
+        <part name="mhtu130.bin" crc="c7c0c514"/>
+        <part name="mhtu129.bin" crc="b3d0daa0"/>
+        <part name="mhtu128.bin" crc="3704ee69"/>
+        <part name="mhtu127.bin" crc="4ea64d5a"/>
+        <part name="mhtu126.bin" crc="0c5c19b7"/>
+        <part name="mhtu125.bin" crc="46c43d67"/>
+        <part name="mhtu124.bin" crc="ed495156"/>
+        <part name="mhtu123.bin" crc="b48aa5da"/>
+        <part name="mhtu122.bin" crc="b18cd181"/>
+        <part name="mhtu121.bin" crc="5acb267a"/>
+        <part name="mhtu120.bin" crc="28e05f86"/>
+        <part name="mhtu119.bin" crc="b4f604ea"/>
+        <part name="mhtu118.bin" crc="a257b973"/>
+        <part name="mhtu113.bin" crc="d712a779"/>
+        <part name="mhtu112.bin" crc="644e1bca"/>
+        <part name="mhtu111.bin" crc="10d3b768"/>
+        <part name="mhtu110.bin" crc="8575aeb2"/>
     </rom>
 
-    <!-- index 2 : DCS sound - stock NBA Hangtime -->
     <rom index="2" zip="nbamht.zip|nbahangt.zip" md5="None">
-        <part name="l1.0_nba_hangtime_u_2_music_spch.u2" crc="3f0b0d0a"/>
-        <part name="l1.0_nba_hangtime_u_3_music_spch.u3" crc="ec1db988"/>
-        <part name="l1.0_nba_hangtime_u_4_music_spch.u4" crc="c7f847a3"/>
-        <part name="l1.0_nba_hangtime_u_5_music_spch.u5" crc="ef19316a"/>
+        <part name="mhtu2.bin" crc="3f0b0d0a"/>
+        <part name="mhtu3.bin" crc="ec1db988"/>
+        <part name="mhtu4.bin" crc="c7f847a3"/>
+        <part name="mhtu5.bin" crc="ef19316a"/>
     </rom>
+
+    <nvram index="4" size="49152"></nvram>
 
     <buttons names="Turbo,Shoot / Block,Pass / Steal,Start,Coin"
              default="A,X,Y,Start,Select" count="3"/>

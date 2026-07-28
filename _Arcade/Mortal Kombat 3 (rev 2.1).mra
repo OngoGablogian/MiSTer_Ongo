@@ -1,0 +1,60 @@
+<!-- Mortal Kombat 3 dedicated profile for the shared cabinet-confirmed
+     Wolf/DCS source lineage. MK3 retains the proven UMK3 six-button controls
+     and 0xFD7D DSW layout, selects the development-528 PIC response, and maps
+     the final four 512 KiB U117..U114 parts immediately at gfx 0x1000000.
+     ROM data is user-supplied and CRC-checked. -->
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Mortal Kombat 3 (rev 2.1)</name>
+    <setname>mk3</setname>
+    <mameversion>0280</mameversion>
+    <year>1994</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>WolfUnit</rbf>
+    <region>World</region>
+
+    <!-- Wolf master profile 2: MK3 controls, development-528 PIC, MK3 tail sockets. -->
+    <rom index="3" md5="None"><part>02</part></rom>
+
+    <rom index="0" zip="mk3.zip" md5="None">
+        <part name="mk321u54.bin" crc="9e344401"/>
+        <part name="mk321u63.bin" crc="64d34776"/>
+    </rom>
+
+    <rom index="1" zip="mk3.zip" md5="None">
+        <part name="l1_mortal_kombat_3_u133_game_rom.u133" crc="79b94667"/>
+        <part name="l1_mortal_kombat_3_u132_game_rom.u132" crc="13e95228"/>
+        <part name="l1_mortal_kombat_3_u131_game_rom.u131" crc="41001e30"/>
+        <part name="l1_mortal_kombat_3_u130_game_rom.u130" crc="49379dd7"/>
+        <part name="l1_mortal_kombat_3_u129_game_rom.u129" crc="a8b41803"/>
+        <part name="l1_mortal_kombat_3_u128_game_rom.u128" crc="b410d72f"/>
+        <part name="l1_mortal_kombat_3_u127_game_rom.u127" crc="bd985be7"/>
+        <part name="l1_mortal_kombat_3_u126_game_rom.u126" crc="e7c32cf4"/>
+        <part name="l1_mortal_kombat_3_u125_game_rom.u125" crc="9a52227e"/>
+        <part name="l1_mortal_kombat_3_u124_game_rom.u124" crc="5c750ebc"/>
+        <part name="l1_mortal_kombat_3_u123_game_rom.u123" crc="f0ab88a8"/>
+        <part name="l1_mortal_kombat_3_u122_game_rom.u122" crc="9b87cdac"/>
+        <part name="l1_mortal_kombat_3_u121_game_rom.u121" crc="b6c6296a"/>
+        <part name="l1_mortal_kombat_3_u120_game_rom.u120" crc="8d1ccc3b"/>
+        <part name="l1_mortal_kombat_3_u119_game_rom.u119" crc="63215b59"/>
+        <part name="l1_mortal_kombat_3_u118_game_rom.u118" crc="8b681e34"/>
+        <part name="l1_mortal_kombat_3_u117_game_rom.u117" crc="1ab20377"/>
+        <part name="l1_mortal_kombat_3_u116_game_rom.u116" crc="ba246ad0"/>
+        <part name="l1_mortal_kombat_3_u115_game_rom.u115" crc="3ee8b124"/>
+        <part name="l1_mortal_kombat_3_u114_game_rom.u114" crc="a8d99922"/>
+    </rom>
+
+    <rom index="2" zip="mk3.zip" md5="None">
+        <part name="l1_mortal_kombat_3_u2_music_spch.u2" crc="5273436f"/>
+        <part name="l1_mortal_kombat_3_u3_music_spch.u3" crc="856fe411"/>
+        <part name="l1_mortal_kombat_3_u4_music_spch.u4" crc="428a406f"/>
+        <part name="l1_mortal_kombat_3_u5_music_spch.u5" crc="3b98a09f"/>
+    </rom>
+
+    <nvram index="4" size="49152"></nvram>
+
+    <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Run,Start,Coin"
+             default="X,A,R,Y,B,L,Start,Select" count="6"/>
+</misterromdescription>

@@ -1,26 +1,28 @@
-<!-- WWF: WrestleMania - The Arcade Game (Midway Wolf Unit), built on the
-     Arcade-UMK3_SRT_ERASE core base so all 5 game buttons are assignable.
-     ROM data is user-supplied and CRC-checked; none is distributed here.
-     Filenames/CRCs match current MAME (0.288) romset "wwfmania". -->
+<!-- WWF WrestleMania dedicated profile for the shared cabinet-confirmed
+     Wolf/DCS master core. Runtime profile 1 selects the exact two-player,
+     five-button controls, development-528 PIC response, 0x7FFD DSW default,
+     and the five dynamic I/O shuffle tables used by the game executable.
+     ROM data is user-supplied and CRC-checked. -->
 <misterromdescription>
-    <about author="community"/>
+    <about author="rejectedcoins"/>
     <rotation>horizontal</rotation>
-    <name>WWF: WrestleMania (rev 1.30 08/10/95)</name>
+    <name>WWF: Wrestlemania (rev 1.30 08/10/95)</name>
     <setname>wwfmania</setname>
-    <mameversion>0288</mameversion>
+    <mameversion>0280</mameversion>
     <year>1995</year>
     <manufacturer>Midway</manufacturer>
     <players>2</players>
-    <rbf>UMK3</rbf>
+    <rbf>WolfUnit</rbf>
     <region>World</region>
 
-    <!-- index 0 : TMS34010 game code (u54 = even, u63 = odd) -->
+    <!-- Wolf master profile 1: WWF five-button controls and dynamic I/O shuffle. -->
+    <rom index="3" md5="None"><part>01</part></rom>
+
     <rom index="0" zip="wwfmania.zip" md5="None">
         <part name="wwf_game_rom_l1.30.u54" crc="eeb7bf58"/>
         <part name="wwf_game_rom_l1.30.u63" crc="09759529"/>
     </rom>
 
-    <!-- index 1 : image/graphics ROMs, 16 chips u133..u118 (descending = gfx offset 0..0xF00000) -->
     <rom index="1" zip="wwfmania.zip" md5="None">
         <part name="wwf_image_rom_l1.u133" crc="5e1b1e3d"/>
         <part name="wwf_image_rom_l1.u132" crc="5943b3b2"/>
@@ -40,7 +42,6 @@
         <part name="wwf_image_rom_l1.u118" crc="46668e97"/>
     </rom>
 
-    <!-- index 2 : DCS (ADSP-2105) music/speech ROMs u2..u5 -->
     <rom index="2" zip="wwfmania.zip" md5="None">
         <part name="wwf_music-spch_l1.u2" crc="a9acb250"/>
         <part name="wwf_music-spch_l1.u3" crc="9442b6c9"/>
@@ -48,8 +49,8 @@
         <part name="wwf_music-spch_l1.u5" crc="5b31fd40"/>
     </rom>
 
-    <!-- 6 button slots kept (like UMK3) so Start/Coin stay on joy[10]/[11].
-         WWF uses 5: labels ordered to match this core's joy->hardware-bit wiring. -->
-    <buttons names="Punch,Kick,Block,Power Punch,Power Kick,-,Start,Coin"
-             default="X,Y,A,B,R,L,Start,Select" count="6"/>
+    <nvram index="4" size="49152"></nvram>
+
+    <buttons names="Punch,Defense,Power Punch,Kick,Power Kick,Start,Coin"
+             default="A,X,Y,B,L,Start,Select" count="5"/>
 </misterromdescription>

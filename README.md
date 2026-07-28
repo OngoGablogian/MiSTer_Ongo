@@ -31,11 +31,11 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Major Havoc](https://github.com/derpyder/Arcade-MajorHavoc_MiSTer)                                                             |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                              |
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                     |
+| [Midway Wolf Unit](https://www.patreon.com/blahm1d/posts/blahm1d-wolf-164937303)                                                |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                       |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                             |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                 |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                  |
-| [NBA Hangtime](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164314317)                                                 |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                            |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                |
 | [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                      |
@@ -49,7 +49,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                       |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                      |
 | [Psikyo SH2 (WIP)](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                           |
-| [Rampage: World Tour (rev 1.3)](https://www.patreon.com/blahm1d/posts/transmission-164511021)                                   |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                               |
 | [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                     |
@@ -71,7 +70,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                     |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                           |
 | [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                         |
-| [Ultimate Mortal Kombat 3](https://www.patreon.com/blahm1d/posts/blahm1d-forces-3-164509136)                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                        |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                    |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                 |
@@ -154,7 +152,6 @@ main=MiSTer_CDi
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                                    |
 | [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)              |
 | [Mortal Kombat II (rev L3.2W) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk2-for-wolf-unit-boards.34080/)         |
-| [NBA Maximum Hangtime (ver L1.03 06/09/97)](https://discord.com/channels/647909397477195803/1047333006555217991/1529552491144941739) |
 | [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                                 |
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                                      |
 | [Pacu Pacu (v1.1)](https://discord.com/channels/647909397477195803/1046942006942900304/1408732261028860004)                          |
@@ -170,7 +167,6 @@ main=MiSTer_CDi
 | [Twin Cobra (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                               |
 | Twin Twist (Twin Cobra Hack)                                                                                                         |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                                           |
-| [WWF: WrestleMania (rev 1.30 08/10/95)](https://discord.com/channels/647909397477195803/1453063377436807410/1529501841610510367)     |
 
 ----
 

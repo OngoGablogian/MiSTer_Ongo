@@ -1,16 +1,20 @@
-<!-- NBA Hangtime timing-clean graphics-stream cabinet test. ROM data is
-     user-supplied and CRC-checked; none is distributed by this project. -->
+<!-- NBA Hangtime runtime profile for the shared Q256 Wolf/DCS master core.
+     ROM data is user-supplied and CRC-checked; none is distributed by this
+     project. -->
 <misterromdescription>
     <about author="rejectedcoins"/>
     <rotation>horizontal</rotation>
-    <name>NBA Hangtime (ver L1.3 10.10.96)</name>
+    <name>NBA Hangtime (ver L1.3 10/10/96)</name>
     <setname>nbahangt</setname>
-    <mameversion>0287</mameversion>
+    <mameversion>0280</mameversion>
     <year>1996</year>
     <manufacturer>Midway</manufacturer>
     <players>4</players>
-    <rbf>NBAHangtime</rbf>
+    <rbf>WolfUnit</rbf>
     <region>World</region>
+
+    <!-- Wolf master profile 4: Hangtime 2P/4P harness and development-528 PIC. -->
+    <rom index="3" md5="None"><part>04</part></rom>
 
     <rom index="0" zip="nbahangt.zip" md5="None">
         <part name="l1.3_nba_hangtime_u_54_game_rom.u54" crc="fd9ccca2"/>
@@ -46,6 +50,8 @@
         <part name="l1.0_nba_hangtime_u_4_music_spch.u4" crc="c7f847a3"/>
         <part name="l1.0_nba_hangtime_u_5_music_spch.u5" crc="ef19316a"/>
     </rom>
+
+    <nvram index="4" size="49152"></nvram>
 
     <buttons names="Turbo,Shoot / Block,Pass / Steal,Start,Coin"
              default="A,X,Y,Start,Select" count="3"/>

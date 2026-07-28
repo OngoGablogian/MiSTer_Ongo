@@ -10,7 +10,7 @@
     <year>1993</year>
     <manufacturer>Midway / Hack by Asure</manufacturer>
     <players>2</players>
-    <rbf>UMK3</rbf>
+    <rbf>WolfUnit</rbf>
     <region>World</region>
 
     <rom index="0" zip="mk2_wolf.zip" md5="None">

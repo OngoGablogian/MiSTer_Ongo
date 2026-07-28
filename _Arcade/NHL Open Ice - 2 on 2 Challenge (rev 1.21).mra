@@ -1,0 +1,57 @@
+<!-- NHL Open Ice dedicated profile for the shared cabinet-confirmed Wolf/DCS
+     master core. Runtime profile 0 selects the exact four-player controls,
+     development-528 PIC response, and Open Ice DSW layout (Test=bit15,
+     Cabinet=bit12). The stock revision-1.21 program ROMs are intentional;
+     the core supplies security, so an any-U64 bypass patch is unnecessary.
+     ROM data is user-supplied and CRC-checked. -->
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>NHL Open Ice: 2 on 2 Challenge (rev 1.21)</name>
+    <setname>openice</setname>
+    <mameversion>0280</mameversion>
+    <year>1995</year>
+    <manufacturer>Midway</manufacturer>
+    <players>4</players>
+    <rbf>WolfUnit</rbf>
+    <region>World</region>
+
+    <!-- Wolf master profile 0: Open Ice 2P/4P harness and development-528 PIC. -->
+    <rom index="3" md5="None"><part>00</part></rom>
+
+    <rom index="0" zip="openice.zip" md5="None">
+        <part name="open_ice_l1.21.u54" crc="e4225284"/>
+        <part name="open_ice_l1.21.u63" crc="97d308a3"/>
+    </rom>
+
+    <rom index="1" zip="openice.zip" md5="None">
+        <part name="open_ice_l1.2.u133" crc="8a81605c"/>
+        <part name="open_ice_l1.2.u132" crc="cfdd6702"/>
+        <part name="open_ice_l1.2.u131" crc="cc428eb7"/>
+        <part name="open_ice_l1.2.u130" crc="74c2d50c"/>
+        <part name="open_ice_l1.2.u129" crc="9e2ff012"/>
+        <part name="open_ice_l1.2.u128" crc="35d2e610"/>
+        <part name="open_ice_l1.2.u127" crc="bcbf19fe"/>
+        <part name="open_ice_l1.2.u126" crc="8e3106ae"/>
+        <part name="open_ice_l1.u125" crc="a7b54550"/>
+        <part name="open_ice_l1.u124" crc="7c02cb50"/>
+        <part name="open_ice_l1.u123" crc="d543bd9d"/>
+        <part name="open_ice_l1.u122" crc="3744d291"/>
+        <part name="open_ice_l1.2.u121" crc="acd2f7c7"/>
+        <part name="open_ice_l1.2.u120" crc="4295686a"/>
+        <part name="open_ice_l1.2.u119" crc="948b9b27"/>
+        <part name="open_ice_l1.2.u118" crc="9eaaf93e"/>
+    </rom>
+
+    <rom index="2" zip="openice.zip" md5="None">
+        <part name="open_ice_l1.2.u2" crc="8adb5aab"/>
+        <part name="open_ice_l1.u3" crc="11c61ad6"/>
+        <part name="open_ice_l1.u4" crc="04279290"/>
+        <part name="open_ice_l1.u5" crc="e90ad61f"/>
+    </rom>
+
+    <nvram index="4" size="49152"></nvram>
+
+    <buttons names="Turbo,Shoot / Block,Pass / Steal,Start,Coin"
+             default="A,X,Y,Start,Select" count="3"/>
+</misterromdescription>
