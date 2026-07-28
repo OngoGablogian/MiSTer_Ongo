@@ -1,0 +1,58 @@
+<misterromdescription>
+	<name>Yellow Cab (bootleg)</name>
+	<mameversion>0270</mameversion>
+	<setname>yellowcbb</setname>
+	<parent>kamikcab</parent>
+	<homebrew>no</homebrew>
+	<bootleg>yes</bootleg>
+	<year>1984</year>
+	<manufacturer>bootleg</manufacturer>
+	<category>Driving</category>
+	<rbf>YellowCab</rbf>
+	<about author="aCORES Yellow Cab scaffold" source="MAME liberate.cpp / kamikcab"/>
+	<resolution>15kHz</resolution>
+	<rotation>vertical</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<num_buttons>2</num_buttons>
+	<buttons names="Button1,Button2,Start1P,Start2P,CoinA,CoinB" default="A,B,Start,Select,R,L"></buttons>
+
+	<switches default="FF,FF">
+		<dip bits="0,1" name="Coin A" ids="2C_1C,1C_3C,1C_2C,1C_1C"/>
+		<dip bits="2,3" name="Coin B" ids="2C_1C,1C_3C,1C_2C,1C_1C"/>
+		<dip bits="6" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="7" name="Manufacturer" ids="Data East USA,Data East Corp"/>
+		<dip bits="8,9" name="Lives" ids="Infinite,5,2,3"/>
+		<dip bits="10,11" name="Bonus" ids="20k only,40k/50k,30k/40k,20k/30k"/>
+		<dip bits="12,13" name="Difficulty" ids="Hardest,Hard,Normal,Easy"/>
+		<dip bits="15" name="Invincibility" ids="On,Off"/>
+	</switches>
+
+	<rom index="0" zip="yellowcbb.zip|kamikcab.zip" md5="none">
+		<part repeat="0x8000">00</part>
+		<part name="rom11.rom" crc="af97d530"/>
+		<part name="rom10.rom" crc="33c3e9b9"/>
+		<part name="rom11.rom" crc="af97d530"/>
+		<part name="rom10.rom" crc="33c3e9b9"/>
+
+		<part name="bp09" crc="16b13676"/>
+
+		<part name="rom3.rom" crc="6761d767"/>
+		<part name="rom4.rom" crc="55517196"/>
+		<part name="rom5.rom" crc="33658fd9"/>
+		<part name="rom6.rom" crc="fbc20f07"/>
+		<part name="rom7.rom" crc="061f9e54"/>
+		<part name="rom8.rom" crc="2ace626d"/>
+
+		<part name="rom1.rom" crc="8e92a253"/>
+		<part name="rom2.rom" crc="47ada1bb"/>
+		<part name="rom0.rom" crc="9ead0da1"/>
+		<part repeat="0x2000">00</part>
+
+		<part name="bp12" crc="8c8f5d35"/>
+		<part name="bp15" crc="30d3acce"/>
+	</rom>
+
+	<remark>Bootleg set; same machine as yellowcbj. Main ROM nibble-swapped on load.</remark>
+</misterromdescription>

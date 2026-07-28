@@ -1,25 +1,24 @@
-<!-- Mortal Kombat (rev 5.5) Wolf Unit hack by Asure & Creeping1, running on the UMK3 core.
-     ROM data is user-supplied and CRC-checked; none is distributed by this project.
-     Note: DCS sound is deferred in this core — no audio yet. -->
+<!-- Mortal Kombat (rev 5.5) Wolf Unit hack by Asure & Creeping1, running on the WolfUnit core. -->
 <misterromdescription>
     <about author="Asure"/>
     <rotation>horizontal</rotation>
     <name>Mortal Kombat (rev 5.5) (Wolf Unit)</name>
     <setname>mk_wolf</setname>
-    <mameversion>0287</mameversion>
+    <mameversion>0280</mameversion>
     <year>1992</year>
-    <manufacturer>Midway / Hack by Asure &amp; Creeping1</manufacturer>
+    <manufacturer>Midway</manufacturer>
     <players>2</players>
     <rbf>WolfUnit</rbf>
     <region>World</region>
+
+    <!-- Wolf master profile 2: MK3 controls, development-528 PIC, MK3 tail sockets. -->
+    <rom index="3" md5="None"><part>02</part></rom>
 
     <rom index="0" zip="mk_wolf.zip" md5="None">
         <part name="mk321u54.bin" crc="33DC55EB"/>
         <part name="mk321u63.bin" crc="7957744F"/>
     </rom>
 
-    <!-- GFX from mk3.zip: 20 ROMs. u133-u130 and u129-u122 are MK1-specific;
-         u121-u114 fill the lower block (MK1 wolf uses u117-u114 where UMK3 uses u113-u110). -->
     <rom index="1" zip="mk_wolf.zip" md5="None">
         <part name="mk3-u133.bin" crc="79b94667"/>
         <part name="mk3-u132.bin" crc="13e95228"/>
@@ -42,7 +41,7 @@
         <part name="mk3-u115.bin" crc="3ee8b124"/>
         <part name="mk3-u114.bin" crc="a8d99922"/>
     </rom>
-    
+
     <rom index="2" zip="mk_wolf.zip" md5="None">
         <part name="l1_mortal_kombat_3_u2_music_spch.u2" crc="8574f56a"/>
         <part name="l1_mortal_kombat_3_u3_music_spch.u3" crc="459f578d"/>
@@ -50,6 +49,8 @@
         <part name="l1_mortal_kombat_3_u5_music_spch.u5" crc="97f4ab02"/>
     </rom>
 
+    <nvram index="4" size="49152"></nvram>
+
     <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Run,Start,Coin"
-             default="X,Y,A,B,R,L,Start,Select" count="6"/>
+             default="X,A,R,Y,B,L,Start,Select" count="6"/>
 </misterromdescription>

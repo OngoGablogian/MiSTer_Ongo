@@ -1,0 +1,85 @@
+<misterromdescription>
+	<name>Yellow Cab (Japan)</name>
+	<mameversion>0270</mameversion>
+	<setname>yellowcbj</setname>
+	<parent>kamikcab</parent>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<year>1984</year>
+	<manufacturer>Data East Corporation</manufacturer>
+	<category>Driving</category>
+	<rbf>YellowCab</rbf>
+	<about author="aCORES Yellow Cab scaffold" source="MAME liberate.cpp / kamikcab"/>
+	<resolution>15kHz</resolution>
+	<rotation>vertical</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<num_buttons>2</num_buttons>
+	<buttons names="Button1,Button2,Start1P,Start2P,CoinA,CoinB" default="A,B,Start,Select,R,L"></buttons>
+
+	<!-- Defaults are MAME's: DSW1 = 0x3F, DSW2 = 0xFF. FF,FF would have selected
+	     Cabinet=Cocktail, which makes the game flip the screen for player 2. -->
+	<switches default="3F,FF">
+		<!-- DSW1 -->
+		<dip bits="0,1" name="Coin A" ids="2C_1C,1C_3C,1C_2C,1C_1C"/>
+		<dip bits="2,3" name="Coin B" ids="2C_1C,1C_3C,1C_2C,1C_1C"/>
+		<dip bits="4" name="Unknown DSW1:5" ids="On,Off"/>
+		<dip bits="5" name="Unknown DSW1:6" ids="On,Off"/>
+		<dip bits="6" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="7" name="Manufacturer" ids="Data East USA,Data East Corp"/>
+		<!-- DSW2 -->
+		<dip bits="8,9" name="Lives" ids="Infinite,5,2,3"/>
+		<dip bits="10,11" name="Bonus" ids="20k only,40k/50k,30k/40k,20k/30k"/>
+		<dip bits="12,13" name="Difficulty" ids="Hardest,Hard,Normal,Easy"/>
+		<dip bits="14" name="Unknown DSW2:7" ids="On,Off"/>
+		<dip bits="15" name="Invincibility" ids="On,Off"/>
+	</switches>
+
+	<!--
+	  Ioctl linear map (see rtl/mem/rom_map.sv):
+	    0x00000  maincpu 64K (nibble-swapped in FPGA)
+	    0x10000  audiocpu 8K (@$E000)
+	    0x12000  gfx1 48K
+	    0x1E000  gfx2 32K
+	    0x26000  user1 16K
+	    0x2A000  prom 32
+	-->
+	<rom index="0" zip="yellowcbj.zip|kamikcab.zip" md5="none">
+		<!-- maincpu $0000-$7FFF pad -->
+		<part repeat="0x8000">00</part>
+		<!-- $8000 / reload $C000 -->
+		<part name="bp10.bin" crc="1024f2f1"/>
+		<!-- $A000 -->
+		<part name="bp11.bin" crc="63cdee83"/>
+		<!-- $C000 reload bp10 -->
+		<part name="bp10.bin" crc="1024f2f1"/>
+		<!-- $E000 reload bp11 -->
+		<part name="bp11.bin" crc="63cdee83"/>
+
+		<!-- audiocpu @$E000 (8K) -->
+		<part name="bp09" crc="16b13676"/>
+
+		<!-- gfx1 -->
+		<part name="bp03.bin" crc="6761d767"/>
+		<part name="bp04.bin" crc="55517196"/>
+		<part name="bp05.rom" crc="33658fd9"/>
+		<part name="bp06.rom" crc="fbc20f07"/>
+		<part name="bp07.rom" crc="061f9e54"/>
+		<part name="bp08.rom" crc="2ace626d"/>
+
+		<!-- gfx2 (32K region; only 24K ROM — pad so user1 lands at 0x26000) -->
+		<part name="bp01.bin" crc="8e92a253"/>
+		<part name="bp02.bin" crc="47ada1bb"/>
+		<part name="bp00.bin" crc="9ead0da1"/>
+		<part repeat="0x2000">00</part>
+
+		<!-- user1 -->
+		<part name="bp12" crc="8c8f5d35"/>
+
+		<!-- prom -->
+		<part name="bp15" crc="30d3acce"/>
+	</rom>
+
+	<remark>Main ROM nibble-swapped on load (init_yellowcb). Bank enable = DECO16 IO write bit2.</remark>
+</misterromdescription>

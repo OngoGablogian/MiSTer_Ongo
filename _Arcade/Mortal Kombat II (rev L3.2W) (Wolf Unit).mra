@@ -1,17 +1,18 @@
-<!-- Mortal Kombat II (rev L3.2W) Wolf Unit hack by Asure, running on the UMK3 core.
-     ROM data is user-supplied and CRC-checked; none is distributed by this project.
-     Note: DCS sound is deferred in this core — no audio yet. -->
+<!-- Mortal Kombat II (rev L3.2W) Wolf Unit hack by Asure, running on the WolfUnit core. -->
 <misterromdescription>
     <about author="Asure"/>
     <rotation>horizontal</rotation>
     <name>Mortal Kombat II (rev L3.2W) (Wolf Unit)</name>
     <setname>mk2_wolf</setname>
-    <mameversion>0287</mameversion>
+    <mameversion>0280</mameversion>
     <year>1993</year>
-    <manufacturer>Midway / Hack by Asure</manufacturer>
+    <manufacturer>Midway</manufacturer>
     <players>2</players>
     <rbf>WolfUnit</rbf>
     <region>World</region>
+
+    <!-- Wolf master profile 2: MK3 controls, development-528 PIC, MK3 tail sockets. -->
+    <rom index="3" md5="None"><part>02</part></rom>
 
     <rom index="0" zip="mk2_wolf.zip" md5="None">
         <part name="mk321u54.bin" crc="b873db81"/>
@@ -39,7 +40,9 @@
         <part name="l1_mortal_kombat_3_u4_music_spch.u4" crc="1ca12f40"/>
         <part name="l1_mortal_kombat_3_u5_music_spch.u5" crc="bf2132c8"/>
     </rom>
-    
+
+    <nvram index="4" size="49152"></nvram>
+
     <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Run,Start,Coin"
-             default="X,Y,A,B,R,L,Start,Select" count="6"/>
+             default="X,A,R,Y,B,L,Start,Select" count="6"/>
 </misterromdescription>
