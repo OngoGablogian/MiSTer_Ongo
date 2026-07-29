@@ -24,7 +24,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-1-165050191)                      |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
-| [Ikki](https://www.patreon.com/Meathax/posts/ikki-1985-arcade-165057780)                                                       |
+| [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                        |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                    |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                    |
 | [Klax](https://misterfpga.org/viewtopic.php?p=110704#p110704)                                                                  |

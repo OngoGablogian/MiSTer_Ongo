@@ -1,0 +1,62 @@
+<misterromdescription>
+	<name>Farmers Rebellion</name>
+	<region></region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<version></version>
+	<alternative></alternative>
+	<platform></platform>
+	<series></series>
+	<year>1985</year>
+	<manufacturer>Sun Electronics</manufacturer>
+	<category>Shooter / Walking</category>
+
+	<setname>farmer</setname>
+	<parent>ikki</parent>
+	<mameversion>0264</mameversion>
+	<rbf>Ikki</rbf>
+	<about author="aCORES" source="MAME ikki.cpp (farmer clone)" />
+
+	<resolution>240x224</resolution>
+	<rotation>horizontal</rotation>
+	<flip></flip>
+
+	<!--
+	  Same linear layout as ikki.mra.  farmer has its own program and sprite
+	  ROMs; tiles and PROMs come from the ikki set, so both zips are searched.
+	  tvg-1.10 is 16 KB and is split by MAME's ROM_CONTINUE, so it appears twice
+	  here as two 8 KB slices.
+	-->
+	<rom index="0" zip="farmer.zip|ikki.zip" md5="none" type="merged|nonmerged">
+		<part name="tvg-1.10"  crc="2c0bd392" offset="0x0000" length="0x2000"/>
+		<part name="tvg-2.9"   crc="b86efe02" length="0x2000"/>
+		<part name="tvg-3.8"   crc="fd686ff4" length="0x2000"/>
+		<part name="tvg-4.7"   crc="1415355d" length="0x2000"/>
+		<part name="tvg-1.10"  crc="2c0bd392" offset="0x2000" length="0x2000"/>
+
+		<part name="tvg-5.30"  crc="22bdb40e" length="0x2000"/>
+
+		<part name="tvg-8.102" crc="45c9087a" length="0x4000"/>
+		<part name="tvg-7.103" crc="0e9efeba" length="0x4000"/>
+		<part name="tvg-6.104" crc="dc8aa269" length="0x4000"/>
+
+		<part name="tvg17_11"  crc="35012775" length="0x4000"/>
+		<part name="tvg17_10"  crc="2e510b4e" length="0x4000"/>
+		<part name="tvg17_9"   crc="c594f3c5" length="0x4000"/>
+
+		<part name="prom17_3"  crc="dbcd3bec" length="0x100"/>
+		<part name="prom17_4"  crc="9eb7b6cf" length="0x100"/>
+		<part name="prom17_5"  crc="9b30a7f3" length="0x100"/>
+		<part name="prom17_6"  crc="962e619d" length="0x200"/>
+		<part name="prom17_7"  crc="b1f5148c" length="0x200"/>
+
+		<part name="prom17_1"  crc="ca0af30c" length="0x100"/>
+		<part name="prom17_2"  crc="f3c55174" length="0x100"/>
+	</rom>
+
+	<rom index="1">
+		<part>00</part>
+	</rom>
+
+	<buttons names="Fire,-,Start 2P,Start 1P,Coin,Service,Pause" default="A,B,R,Start,Select,X,L"/>
+</misterromdescription>
