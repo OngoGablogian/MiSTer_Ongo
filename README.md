@@ -16,6 +16,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
+| [Dyna Gear](https://www.patreon.com/Meathax/posts/dyna-gear-1994-165154459)                                                    |
 | [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
@@ -32,6 +33,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Major Havoc](https://github.com/derpyder/Arcade-MajorHavoc_MiSTer)                                                            |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
+| [Marble Madness II](https://github.com/kandowontu/MarbleMadness2_MiSTer)                                                       |
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                    |
 | [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                      |
@@ -190,6 +192,7 @@ main=MiSTer_CDi
 | [Scanlines - Adaptive (Midpoint)](https://discord.com/channels/647909397477195803/811089485495402497/1074842158722465883) |
 | [Scanlines - Adaptive (No Boost)](https://discord.com/channels/647909397477195803/811089485495402497/962786206029058179)  |
 | [Phaedrux LG C1 Settings](https://discord.com/channels/647909397477195803/647909398072655907/1082827830913671169)         |
+| [Meatshaders](https://github.com/meathax/Meatshaders)                                                                     |
 | [Bear N64 Audio Filter Presets](https://discord.com/channels/647909397477195803/1096015979055697940/1271142144135925771)  |
 | [Tiny Speaker Audio Filter](https://discord.com/channels/647909397477195803/1056022299234541578/1526335762214162543)      |
 | [GameBoy Color SubPixel](https://discord.com/channels/647909397477195803/1046941428758102086/1473666707326505100)         |

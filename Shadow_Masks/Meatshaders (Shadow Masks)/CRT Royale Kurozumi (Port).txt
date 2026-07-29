@@ -1,0 +1,11 @@
+####
+# Name: CRT Royale Kurozumi (Port)
+# crt-royale-kurozumi (P22/PVM preset over crt-royale); libretro/slang-shaders @ 3b0d6aa1d134
+# Fitted in encoded space with MiSTer's exact saturating mask arithmetic
+# Jointly fitted with the matching adaptive gamma and V filter
+# Pixel-local objective over the complete hardware/reference LCM supercell
+# Tile kind: mean
+####
+v2
+2,1
+63a,33a

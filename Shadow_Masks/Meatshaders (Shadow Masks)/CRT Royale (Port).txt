@@ -1,0 +1,22 @@
+####
+# Name: CRT Royale (Port)
+# crt-royale (TroggleMonkey); libretro/slang-shaders @ 3b0d6aa1d134
+# Fitted in encoded space with MiSTer's exact saturating mask arithmetic
+# Jointly fitted with the matching adaptive gamma and V filter
+# Pixel-local objective over the complete hardware/reference LCM supercell
+# Tile kind: verbatim
+####
+v2
+6,12
+4b5,2bb,1b5,4b5,2bb,1b5
+4a5,2ab,1a5,4a5,2ab,1a5
+4c5,2cc,1c4,4c5,2cc,1c4
+4a4,2ab,1a5,4a5,2ab,1a5
+4c5,2cc,1c5,4c5,2cc,1c5
+4b4,2bb,1b5,4b4,2bb,1b5
+4a5,2bb,1a5,4b5,2bb,1a5
+4c5,2cc,1c4,4c5,2cc,1c4
+4a5,2ab,1a5,4a5,2ab,1a5
+4c5,2cc,1c5,4c5,2cc,1c5
+4a5,2ab,1a5,4a5,2ab,1a5
+4b5,2bb,1b4,4b5,2bb,1b5

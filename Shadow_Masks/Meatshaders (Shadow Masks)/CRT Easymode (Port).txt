@@ -1,0 +1,11 @@
+####
+# Name: CRT Easymode (Port)
+# crt-easymode (Easymode, GPL); libretro/slang-shaders @ 3b0d6aa1d134
+# Fitted in encoded space with MiSTer's exact saturating mask arithmetic
+# Carries the 1.105 gain-split factor; pair only with the matching (Port) gamma
+# Pixel-local objective over the complete hardware/reference LCM supercell
+# Tile kind: mean
+####
+v2
+3,1
+42f,22f,12f

@@ -32,7 +32,7 @@
 		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
 	</switches>
 
-	<rom index="0" zip="asoccer.zip|idsoccer.zip" md5="None">
+	<rom index="0" zip="asoccer.zip|idsoccer.zip" md5="None" type="merged|nonmerged|split">
 		<part name="as1.e10" crc="e9d61bbf"/>
 		<part name="as2.f10" crc="62b2e4c8"/>
 		<part repeat="8192">00</part>

@@ -1,0 +1,31 @@
+<misterromdescription>
+  <name>Dyna Gear</name>
+  <setname>dynagear</setname>
+  <year>1993</year>
+  <manufacturer>Sammy</manufacturer>
+  <rbf>SSV</rbf>
+  <rom index="0" zip="dynagear.zip">
+    <interleave output="16">
+      <part name="si002-prl.u4" crc="71ba29c6" map="01"/>
+      <part name="si002-prh.u3" crc="d0947a12" map="10"/>
+    </interleave>
+    <part name="si002-01.u27" crc="0060a521"/>
+    <part name="si002-04.u26" crc="6140f47d"/>
+    <part name="si002-02.u23" crc="c22f2a41"/>
+    <part name="si002-05.u22" crc="482412fd"/>
+    <part name="si002-03.u17" crc="4261a6b8"/>
+    <part name="si002-06.u16" crc="0e1f23f6"/>
+    <interleave output="16">
+      <part name="si002-07.u9" crc="30d2bf11" map="21"/>
+    </interleave>
+    <interleave output="16">
+      <part name="si002-08.u8" crc="253704ee" map="21"/>
+    </interleave>
+    <interleave output="16">
+      <part name="si002-09.u7" crc="1ea86db7" map="21"/>
+    </interleave>
+    <interleave output="16">
+      <part name="si002-10.u6" crc="e369c177" map="21"/>
+    </interleave>
+  </rom>
+</misterromdescription>

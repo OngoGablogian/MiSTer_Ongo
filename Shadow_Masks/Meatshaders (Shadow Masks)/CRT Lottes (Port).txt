@@ -1,0 +1,11 @@
+####
+# Name: CRT Lottes (Port)
+# Original shader: Timothy Lottes; canonical 1920x1080 default mask
+# Type: CRT
+# Encoded-domain gain is paired with CRT Lottes (Port)_H and _V Adaptive
+# Phase anchored to the source shader at output pixel (0,0); no hidden roll
+####
+v2
+6,2
+27e,27e,17e,17e,47e,47e
+17e,47e,47e,27e,27e,17e

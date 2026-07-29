@@ -32,7 +32,7 @@
 		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
 	</switches>
 
-	<rom index="0" zip="docastle.zip" md5="None">
+	<rom index="0" zip="docastle.zip" md5="None" type="merged|nonmerged|split">
 		<part name="01p_a1.bin" crc="17c6fc24"/>
 		<part name="01n_a2.bin" crc="1d2fc7f4"/>
 		<part name="01l_a3.bin" crc="71a70ba9"/>
