@@ -1,0 +1,52 @@
+<misterromdescription>
+	<name>Mr. Do's Castle (set 1)</name>
+	<region>World</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1983</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Platform</category>
+	<setname>docastle</setname>
+	<parent>docastle</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>vertical (ccw)</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<num_buttons>1</num_buttons>
+	<buttons names="Hammer,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+
+	<switches default="DF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Rack Test" ids="On,Off"/>
+		<dip bits="3" name="Bonus Credit for Diamond" ids="No,Yes"/>
+		<dip bits="4" name="Difficulty of EXTRA" ids="Difficult,Easy"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6,7" name="Lives" ids="2,5,4,3"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="docastle.zip" md5="None">
+		<part name="01p_a1.bin" crc="17c6fc24"/>
+		<part name="01n_a2.bin" crc="1d2fc7f4"/>
+		<part name="01l_a3.bin" crc="71a70ba9"/>
+		<part name="01k_a4.bin" crc="479a745e"/>
+		<part repeat="32768">00</part>
+		<part name="07n_a0.bin" crc="f23b5cdb"/>
+		<part name="01d.bin" crc="2747ca77"/>
+		<part name="03a_a5.bin" crc="0636b8f4"/>
+		<part name="04m_a6.bin" crc="3bbc9b26"/>
+		<part name="04l_a7.bin" crc="3dfaa9d1"/>
+		<part name="04j_a8.bin" crc="9afb16e9"/>
+		<part name="04h_a9.bin" crc="af24bce0"/>
+		<part repeat="163840">00</part>
+		<part name="09c.bin" crc="066f52bc"/>
+	</rom>
+	<rom index="1"><part>00</part></rom>
+</misterromdescription>

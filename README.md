@@ -36,6 +36,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                      |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
+| [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |

@@ -1,0 +1,55 @@
+<misterromdescription>
+	<name>Kick Rider</name>
+	<region>World</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1984</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Driving</category>
+	<setname>kickridr</setname>
+	<parent>kickridr</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>horizontal</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<num_buttons>1</num_buttons>
+	<buttons names="Accelerate,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+
+	<switches default="DF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Rack Test" ids="On,Off"/>
+		<dip bits="3" name="Flip Screen" ids="On,Off"/>
+		<dip bits="4" name="Unknown SWA:4" ids="On,Off"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6" name="Unknown SWA:2" ids="On,Off"/>
+		<dip bits="7" name="Unknown SWA:1" ids="On,Off"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="kickridr.zip" md5="None">
+		<part name="k1" crc="dfdd1ab4"/>
+		<part repeat="8192">00</part>
+		<part name="k3" crc="412244da"/>
+		<part name="k4" crc="a67dd2ec"/>
+		<part name="k2" crc="e193fb5c"/>
+		<part repeat="24576">00</part>
+		<part name="k10" crc="6843dbc0"/>
+		<part name="8300b-2" crc="2747ca77"/>
+		<part name="k5" crc="3f7d7e49"/>
+		<part name="k6" crc="94252ed3"/>
+		<part name="k7" crc="7ef2420e"/>
+		<part name="k8" crc="29bed201"/>
+		<part name="k9" crc="847584d3"/>
+		<part repeat="163840">00</part>
+		<part name="kickridr.clr" crc="73ec281c"/>
+		<part repeat="256">00</part>
+	</rom>
+	<rom index="1"><part>05</part></rom>
+</misterromdescription>

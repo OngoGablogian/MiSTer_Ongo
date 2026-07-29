@@ -1,0 +1,55 @@
+<misterromdescription>
+	<name>Do! Run Run (set 1)</name>
+	<region>World</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1984</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Maze</category>
+	<setname>dorunrun</setname>
+	<parent>dorunrun</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>horizontal</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<num_buttons>1</num_buttons>
+	<buttons names="Throw,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+
+	<switches default="DF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Demo Sounds" ids="Off,On"/>
+		<dip bits="3" name="Flip Screen" ids="On,Off"/>
+		<dip bits="4" name="Difficulty of EXTRA" ids="Difficult,Easy"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6" name="Special" ids="Not Given,Given"/>
+		<dip bits="7" name="Lives" ids="5,3"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="dorunrun.zip" md5="None">
+		<part name="2764.p1" crc="95c86f8e"/>
+		<part repeat="8192">00</part>
+		<part name="2764.l1" crc="e9a65ba7"/>
+		<part name="2764.k1" crc="b1195d3d"/>
+		<part name="2764.n1" crc="6a8160d1"/>
+		<part repeat="24576">00</part>
+		<part name="27128.p7" crc="8b06d461"/>
+		<part name="bprom2.bin" crc="2747ca77"/>
+		<part name="27128.a3" crc="4be96dcf"/>
+		<part name="2764.m4" crc="4bb231a0"/>
+		<part name="2764.l4" crc="0c08508a"/>
+		<part name="2764.j4" crc="79287039"/>
+		<part name="2764.h4" crc="523aa999"/>
+		<part repeat="163840">00</part>
+		<part name="dorunrun.clr" crc="d5bab5d5"/>
+		<part repeat="256">00</part>
+	</rom>
+	<rom index="1"><part>02</part></rom>
+</misterromdescription>

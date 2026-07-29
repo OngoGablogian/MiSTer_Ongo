@@ -1,0 +1,54 @@
+<misterromdescription>
+	<name>Super Pierrot (Japan)</name>
+	<region>Japan</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1987</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Platform</category>
+	<setname>spiero</setname>
+	<parent>dorunrun</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>horizontal</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<num_buttons>1</num_buttons>
+	<buttons names="Throw,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+
+	<switches default="DF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Demo Sounds" ids="Off,On"/>
+		<dip bits="3" name="Flip Screen" ids="On,Off"/>
+		<dip bits="4" name="Difficulty of EXTRA" ids="Difficult,Easy"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6" name="Special" ids="Not Given,Given"/>
+		<dip bits="7" name="Lives" ids="5,3"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="spiero.zip|dorunrun.zip" md5="None">
+		<part name="sp1.bin" crc="08d23e38"/>
+		<part repeat="8192">00</part>
+		<part name="sp3.bin" crc="faa0c18c"/>
+		<part name="sp4.bin" crc="639b4e5d"/>
+		<part name="sp2.bin" crc="3a29ccb0"/>
+		<part repeat="24576">00</part>
+		<part name="27128.p7" crc="8b06d461"/>
+		<part name="bprom2.bin" crc="2747ca77"/>
+		<part name="sp5.bin" crc="1b704bb0"/>
+		<part name="sp6.bin" crc="00f893a7"/>
+		<part name="sp7.bin" crc="173e5c6a"/>
+		<part name="sp8.bin" crc="2e66525a"/>
+		<part name="sp9.bin" crc="9c571525"/>
+		<part repeat="163840">00</part>
+		<part name="bprom1.bin" crc="fc1b66ff"/>
+	</rom>
+	<rom index="1"><part>06</part></rom>
+</misterromdescription>

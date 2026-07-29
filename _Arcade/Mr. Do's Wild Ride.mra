@@ -1,0 +1,55 @@
+<misterromdescription>
+	<name>Mr. Do's Wild Ride</name>
+	<region>World</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1984</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Driving</category>
+	<setname>dowild</setname>
+	<parent>dowild</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>horizontal</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<num_buttons>1</num_buttons>
+	<buttons names="Speed,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+
+	<switches default="DF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Rack Test" ids="On,Off"/>
+		<dip bits="3" name="Flip Screen" ids="On,Off"/>
+		<dip bits="4" name="Difficulty of EXTRA" ids="Difficult,Easy"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6" name="Special" ids="Not Given,Given"/>
+		<dip bits="7" name="Lives" ids="5,3"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="dowild.zip" md5="None">
+		<part name="w1" crc="097de78b"/>
+		<part repeat="8192">00</part>
+		<part name="w3" crc="fc6a1cbb"/>
+		<part name="w4" crc="8aac1d30"/>
+		<part name="w2" crc="0914ab69"/>
+		<part repeat="24576">00</part>
+		<part name="w10" crc="d1f37fba"/>
+		<part name="8300b-2" crc="2747ca77"/>
+		<part name="w5" crc="b294b151"/>
+		<part name="w6" crc="57e0208b"/>
+		<part name="w7" crc="5001a6f7"/>
+		<part name="w8" crc="ec503251"/>
+		<part name="w9" crc="af7bd7eb"/>
+		<part repeat="163840">00</part>
+		<part name="dowild.clr" crc="a703dea5"/>
+		<part repeat="256">00</part>
+	</rom>
+	<rom index="1"><part>03</part></rom>
+</misterromdescription>

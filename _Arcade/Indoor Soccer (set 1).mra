@@ -1,0 +1,56 @@
+<misterromdescription>
+	<name>Indoor Soccer (set 1)</name>
+	<region>World</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1985</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Sports</category>
+	<setname>idsoccer</setname>
+	<parent>idsoccer</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>horizontal</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>8-way dual</joystick>
+	<num_buttons>2</num_buttons>
+	<buttons names="Kick,Change Player,Start 1P,Start 2P,Coin,Service Mode,Pause,Right Stick Left,Right Stick Right,Right Stick Up,Right Stick Down,Service Credit" default="A,B,Start,Select,R,L,X" />
+
+	<switches default="FF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Continuity" ids="No,Yes"/>
+		<dip bits="3" name="Flip Screen" ids="On,Off"/>
+		<dip bits="4" name="Allow Continue (2P)" ids="No,Yes"/>
+		<dip bits="5" name="Allow Continue (1P)" ids="No,Yes"/>
+		<dip bits="6,7" name="Real Game Time" ids="1:00,2:00,2:30,3:00"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="idsoccer.zip" md5="None">
+		<part name="id01" crc="f1c3bf09"/>
+		<part name="id02" crc="184e6af0"/>
+		<part repeat="8192">00</part>
+		<part name="id03" crc="22524661"/>
+		<part name="id04" crc="e8cd95fd"/>
+		<part repeat="24576">00</part>
+		<part name="id10" crc="6c8b2037"/>
+		<part name="id_8p" crc="2747ca77"/>
+		<part name="id05" crc="a57c7a11"/>
+		<part name="id06" crc="b42a6f4a"/>
+		<part name="id07" crc="fa2b1c77"/>
+		<part name="id08" crc="5e97eab9"/>
+		<part name="id09" crc="a2a69223"/>
+		<part name="is1" crc="9eb76196"/>
+		<part repeat="16384">00</part>
+		<part name="is3" crc="27bebba3"/>
+		<part name="is4" crc="dd5ffaa2"/>
+		<part name="id_3d.clr" crc="a433ff62"/>
+	</rom>
+	<rom index="1"><part>07</part></rom>
+</misterromdescription>

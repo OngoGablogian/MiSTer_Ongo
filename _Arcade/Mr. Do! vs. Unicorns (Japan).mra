@@ -1,0 +1,52 @@
+<misterromdescription>
+	<name>Mr. Do! vs. Unicorns (Japan)</name>
+	<region>Japan</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1983</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Platform</category>
+	<setname>douni</setname>
+	<parent>docastle</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>vertical (ccw)</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<num_buttons>1</num_buttons>
+	<buttons names="Hammer,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+
+	<switches default="DF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Rack Test" ids="On,Off"/>
+		<dip bits="3" name="Bonus Credit for Diamond" ids="No,Yes"/>
+		<dip bits="4" name="Difficulty of EXTRA" ids="Difficult,Easy"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6,7" name="Lives" ids="2,5,4,3"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="douni.zip|docastle.zip" md5="None">
+		<part name="dorev1.bin" crc="1e2cbb3c"/>
+		<part name="dorev2.bin" crc="18418f83"/>
+		<part name="dorev3.bin" crc="7b9e2061"/>
+		<part name="dorev4.bin" crc="e013954d"/>
+		<part repeat="32768">00</part>
+		<part name="dorev10.bin" crc="4b1925e3"/>
+		<part name="01d.bin" crc="2747ca77"/>
+		<part name="03a_a5.bin" crc="0636b8f4"/>
+		<part name="dorev6.bin" crc="9e335bf8"/>
+		<part name="dorev7.bin" crc="f5d5701d"/>
+		<part name="dorev8.bin" crc="7143ca68"/>
+		<part name="dorev9.bin" crc="893fc004"/>
+		<part repeat="163840">00</part>
+		<part name="dorevc9.bin" crc="96624ebe"/>
+	</rom>
+	<rom index="1"><part>01</part></rom>
+</misterromdescription>

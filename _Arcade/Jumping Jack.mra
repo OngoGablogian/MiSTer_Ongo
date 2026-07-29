@@ -1,0 +1,53 @@
+<misterromdescription>
+	<name>Jumping Jack</name>
+	<region>World</region>
+	<homebrew>0</homebrew>
+	<bootleg>0</bootleg>
+	<platform>Universal Do! Castle Hardware</platform>
+	<series>Mr. Do</series>
+	<year>1984</year>
+	<manufacturer>Universal</manufacturer>
+	<category>Platform</category>
+	<setname>jjack</setname>
+	<parent>jjack</parent>
+	<mameversion>0288</mameversion>
+	<rbf>Universal_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<resolution>240x192</resolution>
+	<rotation>vertical (ccw)</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>4-way</joystick>
+	<num_buttons>1</num_buttons>
+	<buttons names="Action,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+
+	<switches default="DF,FF">
+		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="2" name="Rack Test" ids="On,Off"/>
+		<dip bits="3" name="Flip Screen" ids="On,Off"/>
+		<dip bits="4" name="Extra" ids="Hard,Easy"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6,7" name="Lives" ids="2,5,4,3"/>
+		<dip bits="8,9,10,11" name="Coin B" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
+	</switches>
+
+	<rom index="0" zip="jjack.zip" md5="None">
+		<part name="j1.bin" crc="87f29bd2"/>
+		<part repeat="8192">00</part>
+		<part name="j3.bin" crc="35b0517e"/>
+		<part name="j4.bin" crc="35bb316a"/>
+		<part name="j2.bin" crc="dec52e80"/>
+		<part repeat="24576">00</part>
+		<part name="j0.bin" crc="ab042f04"/>
+		<part name="bprom2.bin" crc="2747ca77"/>
+		<part name="j5.bin" crc="75038ff9"/>
+		<part name="j6.bin" crc="5937bd7b"/>
+		<part name="j7.bin" crc="cf8ae8e7"/>
+		<part name="j8.bin" crc="84f6fc8c"/>
+		<part name="j9.bin" crc="3f9bb09f"/>
+		<part repeat="163840">00</part>
+		<part name="bprom1.bin" crc="2f0955f2"/>
+	</rom>
+	<rom index="1"><part>04</part></rom>
+</misterromdescription>
