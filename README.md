@@ -46,7 +46,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
 | [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
-| [Nintendo 64DD](https://discord.com/channels/647909397477195803/737506076806611064/1529275738497482913)                        |
 | [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                        |
 | [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                 |
 | [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                |
@@ -123,14 +122,6 @@ main=MiSTer_RA
 ```
 
 > [!IMPORTANT]
-> For the Nintendo 64DD core to function properly, you must add the lines below to your 'MiSTer.ini' file.
-
-```
-[N64DD]
-main=MiSTer_N64DD
-```
-
-> [!IMPORTANT]
 > For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
 
 ```
@@ -144,6 +135,14 @@ main=MiSTer_Uneon
 ```
 [CD-i]
 main=MiSTer_CDi
+```
+
+> [!IMPORTANT]
+> The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to you 'MiSTer.ini' file, please remove them.
+
+```
+[N64DD]
+main=MiSTer_N64DD
 ```
 
 ----
