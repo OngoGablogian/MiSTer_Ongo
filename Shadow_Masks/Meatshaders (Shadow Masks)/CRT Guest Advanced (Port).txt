@@ -1,11 +1,9 @@
 ####
 # Name: CRT Guest Advanced (Port)
-# crt-guest-advanced (guest.r); crt-guest-advanced-2026-07-12-release1
-# Fitted in encoded space with MiSTer's exact saturating mask arithmetic
-# Jointly fitted with the matching adaptive gamma and V filter
-# Pixel-local objective over the complete hardware/reference LCM supercell
-# Tile kind: mean
+# Source-preserving colour calibration (light-linear)
+# Equal mean R/G/B energy at 20/16 selected, 15/16 other
+# Fitted against the light-linear spatial mean at 240p -> 1080p
 ####
 v2
 2,1
-50e,20e
+54f,24f

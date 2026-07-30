@@ -1,5 +1,5 @@
 # Name: CRT Royale Kurozumi (Port)_V No Scanlines
-# Original shader: crt-royale-kurozumi (P22/PVM preset over crt-royale); libretro/slang-shaders @ 3b0d6aa1d134
+# Original shader: crt-royale-kurozumi (P22/PVM preset over crt-royale); historical Kuro preset+Grade @ 7f34fc7469ec (Grade d5d58f8c8836) + upstream-fixed Royale bloom @ 3b0d6aa1d134
 # Fitted to MiSTer RTL arithmetic (see tools/DESIGN.md)
 # Scan-free vertical interpolation; interlace fallback
 

@@ -1,0 +1,63 @@
+<misterromdescription>
+    <name>Narc (rev 7.00)</name>
+    <setname>narc</setname>
+    <rbf>NARC</rbf>
+    <mameversion>0287</mameversion>
+    <year>1988</year>
+    <manufacturer>Williams</manufacturer>
+    <players>2</players>
+    <buttons>4</buttons>
+    <category>Run and Gun</category>
+
+    <rom index="0" zip="narc.zip" md5="none">
+        <!-- "NZ" + 14 reserved bytes; consumed by narc_rom_loader. -->
+        <part>4E 5A 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+
+        <!-- Populated 512 KB of the 1 MB TMS34010 ROM window. -->
+        <interleave output="16">
+            <part name="rev7_narc_game_rom_u42.u42" map="01"/>
+            <part name="rev7_narc_game_rom_u24.u24" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="rev7_narc_game_rom_u41.u41" map="01"/>
+            <part name="rev7_narc_game_rom_u23.u23" map="10"/>
+        </interleave>
+
+        <!-- MAME init_gfxrom(8): one byte from each 2 MB quarter. -->
+        <interleave output="32"><part name="rev2_narc_image_rom_u94.u94" map="0001"/><part name="rev2_narc_image_rom_u76.u76" map="0010"/><part name="rev2_narc_image_rom_u58.u58" map="0100"/><part name="rev2_narc_image_rom_u40.u40" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u93.u93" map="0001"/><part name="rev2_narc_image_rom_u75.u75" map="0010"/><part name="rev2_narc_image_rom_u57.u57" map="0100"/><part name="rev2_narc_image_rom_u39.u39" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u92.u92" map="0001"/><part name="rev2_narc_image_rom_u74.u74" map="0010"/><part name="rev2_narc_image_rom_u56.u56" map="0100"/><part name="rev2_narc_image_rom_u38.u38" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u91.u91" map="0001"/><part name="rev2_narc_image_rom_u73.u73" map="0010"/><part name="rev2_narc_image_rom_u55.u55" map="0100"/><part name="rev2_narc_image_rom_u37.u37" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u90.u90" map="0001"/><part name="rev2_narc_image_rom_u72.u72" map="0010"/><part name="rev2_narc_image_rom_u54.u54" map="0100"/><part name="rev2_narc_image_rom_u36.u36" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u89.u89" map="0001"/><part name="rev2_narc_image_rom_u71.u71" map="0010"/><part name="rev2_narc_image_rom_u53.u53" map="0100"/><part name="rev2_narc_image_rom_u35.u35" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u88.u88" map="0001"/><part name="rev2_narc_image_rom_u70.u70" map="0010"/><part name="rev2_narc_image_rom_u52.u52" map="0100"/><part name="rev2_narc_image_rom_u34.u34" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u87.u87" map="0001"/><part name="rev2_narc_image_rom_u69.u69" map="0010"/><part name="rev2_narc_image_rom_u51.u51" map="0100"/><part name="rev2_narc_image_rom_u33.u33" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u86.u86" map="0001"/><part name="rev2_narc_image_rom_u68.u68" map="0010"/><part name="rev2_narc_image_rom_u50.u50" map="0100"/><part name="rev2_narc_image_rom_u32.u32" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u85.u85" map="0001"/><part name="rev2_narc_image_rom_u67.u67" map="0010"/><part name="rev2_narc_image_rom_u49.u49" map="0100"/><part name="rev2_narc_image_rom_u31.u31" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u84.u84" map="0001"/><part name="rev2_narc_image_rom_u66.u66" map="0010"/><part name="rev2_narc_image_rom_u48.u48" map="0100"/><part name="rev2_narc_image_rom_u30.u30" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u83.u83" map="0001"/><part name="rev2_narc_image_rom_u65.u65" map="0010"/><part name="rev2_narc_image_rom_u47.u47" map="0100"/><part name="rev2_narc_image_rom_u29.u29" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u82.u82" map="0001"/><part name="rev2_narc_image_rom_u64.u64" map="0010"/><part name="rev2_narc_image_rom_u46.u46" map="0100"/><part name="rev2_narc_image_rom_u28.u28" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u81.u81" map="0001"/><part name="rev2_narc_image_rom_u63.u63" map="0010"/><part name="rev2_narc_image_rom_u45.u45" map="0100"/><part name="rev2_narc_image_rom_u27.u27" map="1000"/></interleave>
+        <interleave output="32"><part name="rev2_narc_image_rom_u80.u80" map="0001"/><part name="rev2_narc_image_rom_u62.u62" map="0010"/><part name="rev2_narc_image_rom_u44.u44" map="0100"/><part name="rev2_narc_image_rom_u26.u26" map="1000"/></interleave>
+        <!-- MAME allocates an 8 MiB zero-filled GFX region; 15 ROM groups populate 3.75 MiB. -->
+        <part repeat="0x440000">00</part>
+    </rom>
+
+    <rom index="1" zip="narc.zip" md5="none">
+        <!-- Master 6809 region, 0x90000 bytes. -->
+        <part repeat="0x50000">00</part>
+        <part name="rev2_narc_sound_rom_u4.u4"/><part name="rev2_narc_sound_rom_u4.u4"/>
+        <part name="rev2_narc_sound_rom_u5.u5"/><part name="rev2_narc_sound_rom_u5.u5"/>
+        <!-- Slave 6809 region, 0x90000 bytes. -->
+        <part repeat="0x10000">00</part>
+        <part name="rev2_narc_sound_rom_u35.u35"/><part name="rev2_narc_sound_rom_u35.u35"/>
+        <part name="rev2_narc_sound_rom_u36.u36"/><part name="rev2_narc_sound_rom_u36.u36"/>
+        <part name="rev2_narc_sound_rom_u37.u37"/><part name="rev2_narc_sound_rom_u37.u37"/>
+        <part name="rev2_narc_sound_rom_u38.u38"/><part name="rev2_narc_sound_rom_u38.u38"/>
+    </rom>
+
+    <nvram index="3" size="32768"/>
+    <!-- Advance and Hi Score Reset are the coin-door service buttons; with the
+         OSD "Service Switch" set to Manual Down they open NARC's operator menu. -->
+    <buttons names="Fire,Jump,Rocket Bomb,Crouch,Start,Coin,Advance,Hi Score Reset" default="A,B,X,Y,Start,Select,L,R" count="8"/>
+</misterromdescription>

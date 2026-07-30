@@ -1,5 +1,5 @@
 # Name: CRT Guest Advanced (Port)_H
-# Original shader: crt-guest-advanced (guest.r); crt-guest-advanced-2026-07-12-release1
+# Original shader: crt-guest-advanced (guest.r); crt-guest-advanced-2026-07-23-release1
 # Fitted to MiSTer RTL arithmetic (see tools/DESIGN.md)
 
 10bit
