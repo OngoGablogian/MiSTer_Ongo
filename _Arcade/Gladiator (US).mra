@@ -1,0 +1,79 @@
+<misterromdescription>
+  <name>Gladiator (US) [DIP CRT Guard 20260729]</name>
+  <mameversion>0280</mameversion>
+  <setname>gladiatr</setname>
+  <year>1986</year>
+  <manufacturer>Taito America Corporation</manufacturer>
+  <category>Fighter</category>
+  <rotation>horizontal</rotation>
+  <rbf>Gladiator</rbf>
+
+  <!--
+    DIP/CRT Guard release. The packaged RBF's SHA-256 is:
+    0a9a36773ac83a87a4a6632309e4104d96d9140cb2b3ab867dd4a1a7c90c43c3
+
+    INCLUDED FROM THE CABINET-TESTED 20260728 CANDIDATES:
+      * corrected background and sprite pen order
+      * x=0 sprite line-buffer swap race fixed
+      * MC6809 E bus corrected to 750 kHz; sound improved
+      * UPI-41 MLAB write-edge collision guard
+
+    NEW IN THIS BUILD:
+      * the eight-byte MiSTer DIP transfer cannot alias trailing zeros onto
+        DSW1-3, fixing false Free Play and the stuck Starting Stage
+      * optional core-side CRT geometry adjustment, Off by default
+      * native frame and line timing retained; no full-frame retimer
+      * HSync shift clamped to the proven safe -32 through +62 range
+
+    This build is intentionally named separately so it receives a fresh NVRAM
+    file and cannot be confused with earlier cabinet-test images.
+  -->
+
+  <rom index="0" zip="gladiatr.zip" md5="none">
+    <part name="qb0_5" crc="25b19efb" />
+    <part name="qb0_4" crc="347ec794" />
+    <part name="qb0_1" crc="040c9839" />
+    <part name="qc0_3" crc="8d182326" />
+    <part name="qb0_17" crc="e78be010" />
+    <part name="qb0_20" crc="15916eda" />
+    <part name="qb0_19" crc="79caa7ed" />
+    <part name="qb0_18" crc="e9591260" />
+    <part name="qc0_15" crc="a7efa340" />
+    <part name="qb0_12" crc="0585d9ac" />
+    <part name="qb0_13" crc="a6bb797b" />
+    <part name="qb0_14" crc="85b71211" />
+    <part name="qc1_6" crc="651e6e44" />
+    <part name="qc2_7" crc="c992c4f7" />
+    <part name="qc0_8" crc="1c7ffdad" />
+    <part name="qc1_9" crc="01043e03" />
+    <part name="qc1_10" crc="364cdb58" />
+    <part name="qc2_11" crc="c9fecfff" />
+    <part name="q3.2b" crc="6a7c3c60" />
+    <part name="q4.5s" crc="e325808e" />
+    <part name="aq_002.9b" crc="b30d225f" />
+    <part name="aq_003.xx" crc="1d02cd5f" />
+    <part name="aq_006.3a" crc="3c5ca4c6" />
+    <part name="aq_007.6c" crc="f19af04d" />
+  </rom>
+
+  <nvram index="2" size="2048" />
+
+  <buttons names="Attack 1,Attack 2,Attack 3,-,Start,Coin,Service"
+           default="A,B,X,R,L,Start" />
+
+  <switches default="5a,bf,ff">
+    <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Medium,Easy" />
+    <dip name="After 4 Stages" bits="2" ids="Continues,Ends" />
+    <dip name="Bonus Life" bits="3" ids="Every 100000,Only at 100000" />
+    <dip name="Lives" bits="4,5" ids="4,3,2,1" />
+    <dip name="Allow Continue" bits="6" ids="No,Yes" />
+    <dip name="Demo Sounds" bits="7" ids="On,Off" />
+    <dip name="Coin A" bits="8,9" ids="1C/5C,1C/4C,1C/2C,1C/1C" />
+    <dip name="Coin B" bits="10,11" ids="5C/1C,4C/1C,3C/1C,2C/1C" />
+    <dip name="Free Play" bits="12" ids="On,Off" />
+    <dip name="Cabinet" bits="14" ids="Upright,Cocktail" />
+    <dip name="Invulnerability (Cheat)" bits="16" ids="On,Off" />
+    <dip name="Memory Backup" bits="17" ids="Clear,Normal" />
+    <dip name="Starting Stage" bits="18,19" ids="4,3,2,1" />
+  </switches>
+</misterromdescription>
