@@ -5,7 +5,7 @@
      the core supplies security, so an any-U64 bypass patch is unnecessary.
      ROM data is user-supplied and CRC-checked. -->
 <misterromdescription>
-    <about author="blahm1d"/>
+    <about author="rejectedcoins"/>
     <rotation>horizontal</rotation>
     <name>NHL Open Ice: 2 on 2 Challenge (rev 1.21)</name>
     <setname>openice</setname>

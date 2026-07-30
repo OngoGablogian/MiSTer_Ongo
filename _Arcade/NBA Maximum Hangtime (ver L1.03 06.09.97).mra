@@ -3,7 +3,7 @@
      layout, and development-528 serial PIC profile as NBA Hangtime; only the
      two program ROMs differ. ROM data is user-supplied and CRC-checked. -->
 <misterromdescription>
-    <about author="blahm1d"/>
+    <about author="rejectedcoins"/>
     <rotation>horizontal</rotation>
     <name>NBA Maximum Hangtime (ver L1.03 06/09/97)</name>
     <setname>nbamht</setname>
