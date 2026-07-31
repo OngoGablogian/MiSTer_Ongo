@@ -1,6 +1,6 @@
 <misterromdescription>
-    <name>Vs. Super Mario Bros. (set SM4-4 E)</name>
-    <setname>suprmrio</setname>
+    <name>Vs. Super Mario Bros. (set ? harder)</name>
+    <setname>suprmrioa</setname>
     <year>1986</year>
     <manufacturer>Nintendo</manufacturer>
     <rbf>VSnes</rbf>
@@ -20,10 +20,10 @@
         <dip bits="14"		name="Timer"	      ids="Slow,Fast"/>
         <dip bits="15"		name="Continue Lives" ids="4,3"/>
     </switches>
-    <rom index="0" zip="suprmrio.zip">
+    <rom index="0" zip="suprmrioa.zip|suprmrio.zip">
         <!--Region: prg, Size: 0x8000 bytes-->
         <part crc="be4d5436" name="mds-sm4-4__1dor6d_e.1d or 6d"/>
-        <part crc="5e3fb550" name="mds-sm4-4__1cor6c_e.1c or 6c"/>
+        <part crc="0011fc5a" name="__suprmrioa,.1c or 6c"/>
         <part crc="b1b87893" name="mds-sm4-4__1bor6b_e.1b or 6b"/>
         <part crc="1abf053c" name="mds-sm4-4__1aor6a_e.1a or 6a"/>
         <part repeat="98304">00</part>
@@ -34,7 +34,7 @@
         <!--NES2-->
         <!--Region: prg, Size: 0x8000 bytes-->
         <part crc="be4d5436" name="mds-sm4-4__1dor6d_e.1d or 6d"/>
-        <part crc="5e3fb550" name="mds-sm4-4__1cor6c_e.1c or 6c"/>
+        <part crc="0011fc5a" name="__suprmrioa,.1c or 6c"/>
         <part crc="b1b87893" name="mds-sm4-4__1bor6b_e.1b or 6b"/>
         <part crc="1abf053c" name="mds-sm4-4__1aor6a_e.1a or 6a"/>
         <part repeat="98304">00</part>

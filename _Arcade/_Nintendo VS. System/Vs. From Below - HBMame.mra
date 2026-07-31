@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Vs. From Below</name>
-	<setname>vsfrombelow</setname>
+	<setname>frombelow</setname>
 	<year>2020</year>
 	<manufacturer>Matt Hughson</manufacturer>
 	<rbf>VSnes</rbf>
@@ -20,25 +20,25 @@
 		<dip bits="14" name="Disable SFX"           ids="Off,On"/>
 		<dip bits="15" name="Disable Attract Sound" ids="Off,On"/>
 	</switches>
-	<rom index="0" zip="vsfrombelow.zip">
+	<rom index="0" zip="/hbmame/frombelow.zip">
 		<!--Region: prg, Size: 0x8000 bytes-->
-		<part crc="1DAB37F8" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1d.bin"/>
-		<part crc="CD611EBA" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1c.bin"/>
-		<part crc="9CF6F503" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1b.bin"/>
-		<part crc="483FC028" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.1a.bin"/>
+		<part crc="1aebf43b" name="from_below_vs_2020_12_21_v_0_8_0.nes.prg.1d.bin"/>
+		<part crc="345ae82e" name="from_below_vs_2020_12_21_v_0_8_0.nes.prg.1c.bin"/>
+		<part crc="d991120e" name="from_below_vs_2020_12_21_v_0_8_0.nes.prg.1b.bin"/>
+		<part crc="37445c70" name="from_below_vs_2020_12_21_v_0_8_0.nes.prg.1a.bin"/>
 		<part repeat="98304">00</part>
 		<!--Region: gfx1, Size: 0x4000 bytes-->
-		<part crc="42BA557D" name="from_below_vs_2021_01_13_v_0_10_0.nes.chr.2b.bin"/>
+		<part crc="7f2e1b5b" name="from_below_vs_2020_12_21_v_0_8_0.nes.chr.2b.bin"/>
 		<part repeat="0x2000">00</part>
 		<part repeat="114688">00</part>
 		<!--NES2-->
-		<part crc="1DAB37F8" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6d.bin"/>
-		<part crc="CD611EBA" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6c.bin"/>
-		<part crc="9CF6F503" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6b.bin"/>
-		<part crc="483FC028" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6a.bin"/>
+		<part crc="1aebf43b" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6d.bin"/>
+		<part crc="345ae82e" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6c.bin"/>
+		<part crc="d991120e" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6b.bin"/>
+		<part crc="37445c70" name="from_below_vs_2021_01_13_v_0_10_0.nes.prg.6a.bin"/>
 		<part repeat="98304">00</part>
 		<!--Region: gfx1, Size: 0x4000 bytes-->
-		<part crc="42BA557D" name="from_below_vs_2021_01_13_v_0_10_0.nes.chr.8b.bin"/>
+		<part crc="7f2e1b5b" name="from_below_vs_2021_01_13_v_0_10_0.nes.chr.8b.bin"/>
 		<part repeat="0x2000">00</part>
 		<part repeat="114688">00</part>
 	</rom>
@@ -48,4 +48,5 @@
     <rom index="2">
         <part>03</part>
     </rom>
+	<nvram index="4" size="4096"></nvram>
 </misterromdescription>

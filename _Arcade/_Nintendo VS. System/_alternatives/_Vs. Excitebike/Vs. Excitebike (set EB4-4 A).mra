@@ -49,5 +49,6 @@
     <rom index="2">
         <part>06</part>
     </rom>
+	<nvram index="4" size="4096"></nvram>
 </misterromdescription>
 
