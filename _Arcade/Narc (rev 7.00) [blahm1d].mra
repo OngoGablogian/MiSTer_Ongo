@@ -1,0 +1,161 @@
+<!--          Arcade-NARC (Williams Z-unit) - open TMS34010 MiSTer core
+
+              An open, anti-paywall implementation. This work does not endorse or
+              participate in illegal distribution of copyrighted material; use it
+              only with a legally obtained narc.zip (MAME 0.280 romset, set narc,
+              rev 7.00). ROM layout transcribed bit-exact from MAME 0.280
+              src/mame/midway/midyunit.cpp ROM_START(narc) lines 1449-1548.
+
+              License GNU GPLv2: https://opensource.org/licenses/gpl-2.0.php
+-->
+
+<!-- DOWNLOAD STREAM (single rom index=0). Regions concatenate in this order;
+     the on-chip demux (rtl/zunit) binds each region to its physical home (D1).
+     All packing (program 16-bit interleave is pre-done here; gfx init_gfxrom(8)
+     4-way quadrant byte de-interleave and sound bank select are done on-chip).
+
+       [0x000000, 0x080000)  PROGRAM 512KB  (maindata, 34010 code, rev 7.00)
+                              ROM_LOAD16_BYTE even/odd -> pre-interleaved 16-bit:
+                              [0x000000] {u24,u42}  (region-word 0x40000, byte 0x80000)
+                              [0x040000] {u23,u41}  (region-word 0x60000, byte 0xC0000)
+       [0x080000, 0x880000)  GFX 8MB region  (ROM_REGION 0x800000, raw quadrants)
+                              quadrant bases @+0x000000/+0x200000/+0x400000/+0x600000,
+                              each = 15x64KB descending (u94..u80, u76..u62,
+                              u58..u44, u40..u26); gaps 0-filled to 0x800000.
+       [0x880000, 0x910000)  SOUND MASTER 0x90000  (narcsnd:cpu0, incl reloads)
+       [0x910000, 0x9A0000)  SOUND SLAVE  0x90000  (narcsnd:cpu1, incl reloads)
+       [0x9A0000, 0x9A0500)  PLDS 0x500  (5x PLS153, 0xEB each, ERASE00-padded)
+     Total download = 0x9A0500 bytes. -->
+
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Narc (rev 7.00) [blahm1d]</name>
+    <setname>narc</setname>
+    <mameversion>0280</mameversion>
+    <year>1988</year>
+    <manufacturer>Williams</manufacturer>
+    <players>2</players>
+    <rbf>NARC_blahm1d</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+
+    <rom index="0" zip="narc.zip" md5="None">
+        <!-- ===== PROGRAM 512KB @0x000000 : rev7 game ROMs, LOAD16_BYTE interleave ===== -->
+        <!-- pair0: byte 0x80000/0x80001 -> u42 even(low) / u24 odd(high) -->
+        <interleave output="16">
+            <part name="rev7_narc_game_rom_u42.u42" crc="d1111b76" map="01"/>
+            <part name="rev7_narc_game_rom_u24.u24" crc="aa0d3082" map="10"/>
+        </interleave>
+        <!-- pair1: byte 0xC0000/0xC0001 -> u41 even(low) / u23 odd(high) -->
+        <interleave output="16">
+            <part name="rev7_narc_game_rom_u41.u41" crc="3903191f" map="01"/>
+            <part name="rev7_narc_game_rom_u23.u23" crc="7a316582" map="10"/>
+        </interleave>
+
+        <!-- ===== GFX 8MB @0x080000 : ROM_REGION 0x800000 raw quadrants ===== -->
+        <!-- quadrant @+0x000000 : u94..u80 (15x64KB) -->
+        <part name="rev2_narc_image_rom_u94.u94" crc="ca3194e4"/>
+        <part name="rev2_narc_image_rom_u93.u93" crc="0ed7f7f5"/>
+        <part name="rev2_narc_image_rom_u92.u92" crc="40d2fc66"/>
+        <part name="rev2_narc_image_rom_u91.u91" crc="f39325e0"/>
+        <part name="rev2_narc_image_rom_u90.u90" crc="0132aefa"/>
+        <part name="rev2_narc_image_rom_u89.u89" crc="f7260c9e"/>
+        <part name="rev2_narc_image_rom_u88.u88" crc="edc19f42"/>
+        <part name="rev2_narc_image_rom_u87.u87" crc="d9b42ff9"/>
+        <part name="rev2_narc_image_rom_u86.u86" crc="af7daad3"/>
+        <part name="rev2_narc_image_rom_u85.u85" crc="095fae6b"/>
+        <part name="rev2_narc_image_rom_u84.u84" crc="3fdf2057"/>
+        <part name="rev2_narc_image_rom_u83.u83" crc="f2d27c9f"/>
+        <part name="rev2_narc_image_rom_u82.u82" crc="962ce47c"/>
+        <part name="rev2_narc_image_rom_u81.u81" crc="00fe59ec"/>
+        <part name="rev2_narc_image_rom_u80.u80" crc="147ba8e9"/>
+        <part repeat="0x110000">00</part> <!-- gap 0x0F0000..0x200000 -->
+        <!-- quadrant @+0x200000 : u76..u62 (15x64KB) -->
+        <part name="rev2_narc_image_rom_u76.u76" crc="1cd897f4"/>
+        <part name="rev2_narc_image_rom_u75.u75" crc="78abfa01"/>
+        <part name="rev2_narc_image_rom_u74.u74" crc="66d2a234"/>
+        <part name="rev2_narc_image_rom_u73.u73" crc="efa5cd4e"/>
+        <part name="rev2_narc_image_rom_u72.u72" crc="70638eb5"/>
+        <part name="rev2_narc_image_rom_u71.u71" crc="61226883"/>
+        <part name="rev2_narc_image_rom_u70.u70" crc="c808849f"/>
+        <part name="rev2_narc_image_rom_u69.u69" crc="e7f9c34f"/>
+        <part name="rev2_narc_image_rom_u68.u68" crc="88a634d5"/>
+        <part name="rev2_narc_image_rom_u67.u67" crc="4ab8b69e"/>
+        <part name="rev2_narc_image_rom_u66.u66" crc="e1da4b25"/>
+        <part name="rev2_narc_image_rom_u65.u65" crc="6df0d125"/>
+        <part name="rev2_narc_image_rom_u64.u64" crc="abab1b16"/>
+        <part name="rev2_narc_image_rom_u63.u63" crc="80602f31"/>
+        <part name="rev2_narc_image_rom_u62.u62" crc="c2a476d1"/>
+        <part repeat="0x110000">00</part> <!-- gap 0x2F0000..0x400000 -->
+        <!-- quadrant @+0x400000 : u58..u44 (15x64KB) -->
+        <part name="rev2_narc_image_rom_u58.u58" crc="8a7501e3"/>
+        <part name="rev2_narc_image_rom_u57.u57" crc="a504735f"/>
+        <part name="rev2_narc_image_rom_u56.u56" crc="55f8cca7"/>
+        <part name="rev2_narc_image_rom_u55.u55" crc="d3c932c1"/>
+        <part name="rev2_narc_image_rom_u54.u54" crc="c7f4134b"/>
+        <part name="rev2_narc_image_rom_u53.u53" crc="6be4da56"/>
+        <part name="rev2_narc_image_rom_u52.u52" crc="1ea36a4a"/>
+        <part name="rev2_narc_image_rom_u51.u51" crc="9d4b0324"/>
+        <part name="rev2_narc_image_rom_u50.u50" crc="6f9f0c26"/>
+        <part name="rev2_narc_image_rom_u49.u49" crc="80386fce"/>
+        <part name="rev2_narc_image_rom_u48.u48" crc="05c16185"/>
+        <part name="rev2_narc_image_rom_u47.u47" crc="4c0151f1"/>
+        <part name="rev2_narc_image_rom_u46.u46" crc="5670bfcb"/>
+        <part name="rev2_narc_image_rom_u45.u45" crc="27f10d98"/>
+        <part name="rev2_narc_image_rom_u44.u44" crc="93b8eaa4"/>
+        <part repeat="0x110000">00</part> <!-- gap 0x4F0000..0x600000 -->
+        <!-- quadrant @+0x600000 : u40..u26 (15x64KB) -->
+        <part name="rev2_narc_image_rom_u40.u40" crc="7fcaebc7"/>
+        <part name="rev2_narc_image_rom_u39.u39" crc="7db5cf52"/>
+        <part name="rev2_narc_image_rom_u38.u38" crc="3f9f3ef7"/>
+        <part name="rev2_narc_image_rom_u37.u37" crc="ed81826c"/>
+        <part name="rev2_narc_image_rom_u36.u36" crc="e5d855c0"/>
+        <part name="rev2_narc_image_rom_u35.u35" crc="3a7b1329"/>
+        <part name="rev2_narc_image_rom_u34.u34" crc="fe982b0e"/>
+        <part name="rev2_narc_image_rom_u33.u33" crc="6bc7eb0f"/>
+        <part name="rev2_narc_image_rom_u32.u32" crc="5875a6d3"/>
+        <part name="rev2_narc_image_rom_u31.u31" crc="2fa4b8e5"/>
+        <part name="rev2_narc_image_rom_u30.u30" crc="7e4bb8ee"/>
+        <part name="rev2_narc_image_rom_u29.u29" crc="45136fd9"/>
+        <part name="rev2_narc_image_rom_u28.u28" crc="d6cdac24"/>
+        <part name="rev2_narc_image_rom_u27.u27" crc="4d33bbec"/>
+        <part name="rev2_narc_image_rom_u26.u26" crc="cb19f784"/>
+        <part repeat="0x110000">00</part> <!-- trailing pad 0x6F0000..0x800000 -->
+
+        <!-- ===== SOUND MASTER 0x90000 @0x880000 : narcsnd:cpu0 (rev2), incl reloads ===== -->
+        <part repeat="0x50000">00</part> <!-- 0x00000..0x50000 zero -->
+        <part name="rev2_narc_sound_rom_u4.u4" crc="450a591a"/> <!-- 0x50000 -->
+        <part name="rev2_narc_sound_rom_u4.u4" crc="450a591a"/> <!-- 0x60000 RELOAD -->
+        <part name="rev2_narc_sound_rom_u5.u5" crc="e551e5e3"/> <!-- 0x70000 -->
+        <part name="rev2_narc_sound_rom_u5.u5" crc="e551e5e3"/> <!-- 0x80000 RELOAD -->
+
+        <!-- ===== SOUND SLAVE 0x90000 @0x910000 : narcsnd:cpu1 (rev2), incl reloads ===== -->
+        <part repeat="0x10000">00</part> <!-- 0x00000..0x10000 zero -->
+        <part name="rev2_narc_sound_rom_u35.u35" crc="81295892"/> <!-- 0x10000 -->
+        <part name="rev2_narc_sound_rom_u35.u35" crc="81295892"/> <!-- 0x20000 RELOAD -->
+        <part name="rev2_narc_sound_rom_u36.u36" crc="16cdbb13"/> <!-- 0x30000 -->
+        <part name="rev2_narc_sound_rom_u36.u36" crc="16cdbb13"/> <!-- 0x40000 RELOAD -->
+        <part name="rev2_narc_sound_rom_u37.u37" crc="29dbeffd"/> <!-- 0x50000 -->
+        <part name="rev2_narc_sound_rom_u37.u37" crc="29dbeffd"/> <!-- 0x60000 RELOAD -->
+        <part name="rev2_narc_sound_rom_u38.u38" crc="09b03b80"/> <!-- 0x70000 -->
+        <part name="rev2_narc_sound_rom_u38.u38" crc="09b03b80"/> <!-- 0x80000 RELOAD -->
+
+        <!-- ===== PLDS 0x500 @0x9A0000 : 5x PLS153, 0xEB each, ERASE00 pad to 0x100 ===== -->
+        <part name="a-5346-3036-1_narc_pls153.u28" crc="4db36615"/>
+        <part repeat="0x15">00</part>
+        <part name="a-5346-3036-2_narc_pls153.u78" crc="4b151863"/>
+        <part repeat="0x15">00</part>
+        <part name="a-5346-3036-3_narc_pls153.u79" crc="35bd6ed8"/>
+        <part repeat="0x15">00</part>
+        <part name="a-5346-3036-4_narc_pls153.u80" crc="9c10e4cf"/>
+        <part repeat="0x15">00</part>
+        <part name="a-5346-3036-5_narc_pls153.u83" crc="3a2f21b2"/>
+        <part repeat="0x15">00</part>
+    </rom>
+
+    <!-- NARC is four-button, not the donor's two-button metadata. Order must
+         match CONF_STR/joystick bits 4..11 exactly. -->
+    <buttons names="Fire,Jump,Rocket Bomb,Crouch,Start,Coin,Vault,Service"
+             default="A,B,X,Y,Start,Select,R,L" count="4"/>
+</misterromdescription>
