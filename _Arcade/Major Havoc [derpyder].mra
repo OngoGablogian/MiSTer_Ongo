@@ -14,7 +14,7 @@
 	<setname>mhavoc</setname>
 	<parent>mhavoc</parent>
 	<mameversion>0287</mameversion>
-	<rbf>MajorHavoc</rbf>
+	<rbf>MajorHavoc_derpyder</rbf>
 	<about>Major Havoc on the Star Wars DDR-framebuffer chassis. Dual 6502 (alpha+gamma) + colour AVG + banked vector ROM, rendered by the proven SW vector_fb_ddram. v0.1 bring-up: quad POKEY audio (P4) and DSW1 gameplay DIPs (read via POKEY) are NOT yet wired; coinage (DSW2) + roller + fire/shield work.</about>
 
 	<resolution>31kHz</resolution>
