@@ -16,17 +16,26 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 # Version string
-_version="0.2.0"  # Released 2022-11-04
+_version="0.2.0b"  # Released 2022-11-04
 
 # Small changelog
-# v0.2.0 -- Added functionality to filter out directories if desired,
-#           directories that are mandatory are not able to be filtered.
-#           ... it could be better with --checklist, but MiSTer cannot
-#           deal with that at the moment.
-#           Also a few minor changes to text.
-# v0.1.0 -- Initial version.
+# v0.2.0b -- Added a donation dialog.
+#
+# v0.2.0  -- Added functionality to filter out directories if desired,
+#            directories that are mandatory are not able to be filtered.
+#            ... it could be better with --checklist, but MiSTer cannot
+#            deal with that at the moment.
+#            Also a few minor changes to text.
+# v0.1.0  -- Initial version.
+
+# Nasty dialog code
+_sleep10secs='echo 10 seconds left; sleep 1; echo 9 seconds left; sleep 1; echo 8 seconds left; sleep 1; echo 7 seconds left; sleep 1; echo 6 seconds left; sleep 1; echo 5 seconds left; sleep 1; echo 4 seconds left; sleep 1; echo 3 seconds left; sleep 1; echo 2 seconds left; sleep 1; echo 1 second left; sleep 1; echo Thank you for waiting.'
 
 # Dialog texts
+_donationDialog=$(echo  "\ZbHello! Due to circumstances regarding loss of work and extended medical leave, I have trouble paying my bills." \
+                        "\nIf you find this tool useful, please consider donating! Anything helps, I appreciate your support!" \
+                        "\n\nDonation page: \Z1ko-fi.com/natrox\n" );
+
 _welcomeDialog=$(echo   "This tool allows you to migrate from one SD card to another SD." \
                         "\nNOTICE: The maximum supported size is 2TB. Larger targets will be skipped." \
                         "\n\nBefore continuing, please make sure you have the target SD connected to the MiSTer with an SD card reader." \
@@ -96,7 +105,7 @@ function onExit()
   rm -rf $_filteredDirsFile
   rm -rf $_consideredDirsDuFile
   rm -rf $_msgSyntaxFile
-  
+
   renice -20 $(pidof MiSTer) 1>/dev/null
   kill -CONT $(pidof MiSTer)
   umount /tmp/newfat 2>/dev/null
@@ -106,6 +115,8 @@ function onExit()
 # Set traps for cleanup
 trap 'onExit' EXIT
 trap 'onExit' SIGINT
+
+dialog $DIALOGVARS --title "Please help" --backtitle "$(_backTitle "Version $_version")" --hline "[The 'OK' button will appear after 10 seconds]" --colors --prgbox "$_donationDialog" "$_sleep10secs" 0 0
 
 dialog $DIALOGVARS --title "Welcome" --backtitle "$(_backTitle "Version $_version")"  --yesno "$_welcomeDialog" 0 0
 _response=$?
