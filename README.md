@@ -62,6 +62,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
 | [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                   |
+| [SEGA VCO](https://discord.com/channels/647909397477195803/737506076806611064/1532979355565817957)                             |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                  |
 | [Smash T.V.](https://www.patreon.com/blahm1d/posts/system-warning-164511442)                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
