@@ -32,7 +32,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Klax](https://misterfpga.org/viewtopic.php?p=110704#p110704)                                                                  |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
-| [Major Havoc](https://github.com/derpyder/Arcade-MajorHavoc_MiSTer)                                                            |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
 | [Marble Madness II](https://github.com/kandowontu/MarbleMadness2_MiSTer)                                                       |
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                    |
