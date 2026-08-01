@@ -62,7 +62,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
 | [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                   |
-| [SEGA VCO](https://discord.com/channels/647909397477195803/737506076806611064/1532979355565817957)                             |
+| [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                  |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                  |
 | [Smash T.V.](https://www.patreon.com/blahm1d/posts/system-warning-164511442)                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
@@ -72,7 +72,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                           |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                          |
-| [Super Off-Road](https://discord.com/channels/647909397477195803/737506076806611064/1531033302679687400)                       |
+| [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                       |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
