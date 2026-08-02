@@ -20,17 +20,17 @@
 		<dip name="Unused 2" bits="6" ids="On,Off"/>
 		<dip name="Debug" bits="7" ids="On,Off"/>
 	</switches>
-	<rom index="0" address="0x30000000" zip="pgm.zip|dwpc.zip|dwpc101j.zip">
+	<rom index="0" address="0x30000000" zip="pgm.zip|dwpc101j|dwpc.zip.zip">
 		<!-- SYSTEM INFO (game = GAME_DWPC = 18) -->
 		<part>11 00</part>
 
 		<!-- BIOS PROG / TILE / MUSIC -->
 		<part>00 00020000 00000000</part>
-		<part name="pgm_p02s.u20"/>
+		<part name="pgm_p02s.u20" crc="78c15fa2"/>/>
 		<part>01 00200000 00000000</part>
-		<part name="pgm_t01s.rom"/>
+		<part name="pgm_t01s.rom" crc="1a7123a0"/>/>
 		<part>02 00200000 00000000</part>
-		<part name="pgm_m01s.rom"/>
+		<part name="pgm_m01s.rom" crc="45ae7159"/>/>
 
 		<!-- CART PROG (ROM_LOAD16_WORD_SWAP, plaintext) -->
 		<part>03 00080000 00100000</part>

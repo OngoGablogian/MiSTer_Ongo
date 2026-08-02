@@ -42,7 +42,7 @@
 	</rom>
 	<rom index="8" zip="namcoc76.zip" md5="none">
 		<!-- C76 internal BIOS (16KB) - loaded into the sound MCU at core start -->
-		<part name="c76.bin"/>
+		<part name="c76.bin" crc="399faac7">
 	</rom>
 	<!-- ioctl_index 9: EEPROM (AT28C16, 2KB). All-FF blank fill (4096 bytes -> 1024 words). -->
 	<!-- No proprietary nvram ships; the game writes its own defaults on first boot.      -->
