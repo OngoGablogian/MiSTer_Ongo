@@ -11,7 +11,7 @@
 	<setname>spiero</setname>
 	<parent>dorunrun</parent>
 	<mameversion>0288</mameversion>
-	<rbf>Universal_DoCastle</rbf>
+	<rbf>DoCastle</rbf>
 	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
 	<resolution>240x192</resolution>
 	<rotation>horizontal</rotation>
@@ -19,7 +19,7 @@
 	<players>2</players>
 	<joystick>4-way</joystick>
 	<num_buttons>1</num_buttons>
-	<buttons names="Throw,-,Start 1P,Start 2P,Coin,Service Mode,Pause,-,-,-,-,Service Credit" default="A,Start,Select,R,L,X" />
+	<buttons names="Throw,-,Start 1P,Start 2P,Coin 1,Coin 2,Service Mode,Pause,-,-,-,-,Service Credit" default="A,-,Start,Select,R,L,X,Y,-,-,-,-,-" />
 
 	<switches default="DF,FF">
 		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>

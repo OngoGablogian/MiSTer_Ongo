@@ -11,7 +11,7 @@
 	<setname>idsoccer</setname>
 	<parent>idsoccer</parent>
 	<mameversion>0288</mameversion>
-	<rbf>Universal_DoCastle</rbf>
+	<rbf>DoCastle</rbf>
 	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
 	<resolution>240x192</resolution>
 	<rotation>horizontal</rotation>
@@ -19,7 +19,7 @@
 	<players>2</players>
 	<joystick>8-way dual</joystick>
 	<num_buttons>2</num_buttons>
-	<buttons names="Kick,Change Player,Start 1P,Start 2P,Coin,Service Mode,Pause,Right Stick Left,Right Stick Right,Right Stick Up,Right Stick Down,Service Credit" default="A,B,Start,Select,R,L,X" />
+	<buttons names="Kick,Change Player,Start 1P,Start 2P,Coin 1,Coin 2,Service Mode,Pause,Right Stick Left,Right Stick Right,Right Stick Up,Right Stick Down,Service Credit" default="A,B,Start,Select,R,L,X,Y,-,-,-,-,-" />
 
 	<switches default="FF,FF">
 		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
