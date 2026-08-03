@@ -1,0 +1,59 @@
+<misterromdescription>
+	<name>Asteroids Deluxe (rev 3)</name>
+	<region></region>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<version>Rev 3</version>
+	<alternative></alternative>
+	<platform>Asteroids Deluxe</platform>
+	<series></series>
+	<year>1980</year>
+	<manufacturer>Atari</manufacturer>
+	<category>Shooter - Multi-directional</category>
+
+	<setname>astdelux</setname>
+	<parent>astdelux</parent>
+	<mameversion>0287</mameversion>
+	<rbf>Asteroids_Videodr0me</rbf>
+	<about>Atari Asteroids Deluxe with a hardware-level DVG, POKEY audio, EAROM, and high-resolution vector framebuffer.</about>
+
+	<resolution>31kHz</resolution>
+	<rotation>horizontal</rotation>
+	<flip></flip>
+
+	<players>2</players>
+	<joystick>2-way</joystick>
+	<num_buttons>3</num_buttons>
+	<buttons default="A,B,X,Start,Select,R,L,Y" names="Fire,Thrust,Shield,Start 1,Start 2,Coin,Pause,Coin Right"></buttons>
+
+	<switches default="04,FD,00">
+		<dip bits="0,1" ids="English,German,French,Spanish" name="Language"></dip>
+		<dip bits="2,3" ids="2-4,3-5,4-6,5-7" name="Lives"></dip>
+		<dip bits="4" ids="1,2" name="Minimum Plays"></dip>
+		<dip bits="5" ids="Easy,Hard" name="Difficulty"></dip>
+		<dip bits="6,7" ids="10000,12000,15000,None" name="Bonus Life"></dip>
+		<dip bits="8,9" ids="2 Coins 1 Credit,1 Coin 1 Credit,1 Coin 2 Credits,Free Play" name="Coinage"></dip>
+		<dip bits="10,11" ids="x6,x5,x4,x1" name="Right Coin"></dip>
+		<dip bits="12" ids="x2,x1" name="Left/Center Coin"></dip>
+		<dip bits="13,15" ids="1 Coin Each 5 Coins,2 Coins Each 4 Coins,1 Coin Each 4 Coins,1 Coin Each 2 Coins,None" name="Bonus Coins" values="3,4,5,6,7"></dip>
+		<dip bits="16" ids="Off,On" name="Service Mode"></dip>
+		<dip bits="17" ids="Off,On" name="Slam Switch"></dip>
+	</switches>
+
+	<rom index="1">
+		<part>1</part>
+	</rom>
+
+	<rom index="0" md5="none" type="merged|nonmerged" zip="astdelux.zip">
+		<part crc="a4d7a525" name="036430-02.d1"></part>
+		<part crc="d4004aae" name="036431-02.ef1"></part>
+		<part crc="6d720c41" name="036432-02.fh1"></part>
+		<part crc="0dcc0be6" name="036433-03.j1"></part>
+		<part crc="bb8cabe1" name="036800-02.r2"></part>
+		<part crc="7d511572" name="036799-01.np2"></part>
+		<part crc="97953db8" name="034602-01.c8"></part>
+	</rom>
+
+	<nvram index="4" size="64"></nvram>
+	<mratimestamp>20260723000000</mratimestamp>
+</misterromdescription>

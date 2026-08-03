@@ -12,6 +12,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                     |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                           |
 | [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                     |
+| [Asteroids / Asteroids Deluxe / Lunar Lander (Videodr0me)](https://github.com/Videodr0me/Arcade-Asteroids_MiSTer)              |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
@@ -40,6 +41,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
+| [Namco System 12](https://www.patreon.com/XelaNotPu/posts/system12-starts-165193187)                                           |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |
 | [NARC (blahm1d)](https://www.patreon.com/blahm1d/posts/blahm1d-coaxes-164867975)                                               |
 | [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-beta-165262696)                                               |
