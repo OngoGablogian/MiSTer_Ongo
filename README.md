@@ -30,7 +30,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                        |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                    |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                    |
-| [Klax](https://misterfpga.org/viewtopic.php?p=110704#p110704)                                                                  |
+| [Klax](https://misterfpga.org/viewtopic.php?p=110704)                                                                          |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
@@ -57,7 +57,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                             |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                     |
-| [Psikyo SH2 (WIP)](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                          |
+| [Psikyo SH2](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                                |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                              |
 | [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                               |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
@@ -79,7 +79,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
 | [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                        |
-| [Toobin'](https://misterfpga.org/viewtopic.php?p=110799#p110799)                                                               |
+| [Toobin'](https://misterfpga.org/viewtopic.php?p=110799)                                                                       |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
@@ -133,7 +133,7 @@ main=MiSTer_Uneon
 ```
 
 > [!IMPORTANT]
-> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to you 'MiSTer.ini' file, please remove them.
+> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
 
 ```
 [CD-i]
@@ -141,7 +141,7 @@ main=MiSTer_CDi
 ```
 
 > [!IMPORTANT]
-> The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to you 'MiSTer.ini' file, please remove them.
+> The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
 
 ```
 [N64DD]
@@ -276,6 +276,6 @@ db_url = https://raw.githubusercontent.com/TheJesusFish/Slop-Core/db/db.json.zip
 ----
 
 > [!NOTE]
-> If you are a developer of one of the cores included in this repository and would like it removed, please create an issue on the [GitHub page](https://github.com/OngoGablogian/MiSTer_Ongo/issues).
+> If you run into any issues or you are a developer of one of the cores included in this repository and would like it removed, please create an issue on the [GitHub page](https://github.com/OngoGablogian/MiSTer_Ongo/issues).
 
 ----
