@@ -152,31 +152,33 @@ main=MiSTer_N64DD
 # MRA:
 | MRA |
 | :---: |
-| [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                           |
-| [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                                                                  |
-| [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)                                                 |
-| [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                                     |
-| [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)                                                   |
-| [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                                   |
-| [Gradius II (ver.xh)](https://github.com/Toryalai1/Arcade_Offset/tree/main/release/_Arcade%20Offset/_Gradius%20II)           |
-| [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                            |
-| [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)      |
-| [Mortal Kombat II (rev L3.2W) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk2-for-wolf-unit-boards.34080/) |
-| [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                         |
-| [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                              |
-| [Pacu Pacu (v1.1)](https://discord.com/channels/647909397477195803/1046942006942900304/1408732261028860004)                  |
-| [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                                                       |
-| [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer)                          |
-| Salamander (SP ver. clone)                                                                                                   |
-| Salamander (SP ver. clone Neo)                                                                                               |
-| [SlapFight (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                        |
-| [Terra Cresta (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                     |
-| [Tiger Heli (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                       |
-| [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                                        |
-| [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                                               |
-| [Twin Cobra (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                       |
-| Twin Twist (Twin Cobra Hack)                                                                                                 |
-| [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                                   |
+| [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                             |
+| [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                                                                    |
+| [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)                                                   |
+| [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                                       |
+| [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)                                                     |
+| [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                                     |
+| [Gradius II (ver.xh)](https://github.com/Toryalai1/Arcade_Offset/tree/main/release/_Arcade%20Offset/_Gradius%20II)             |
+| [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                              |
+| [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)        |
+| [Mortal Kombat II (rev L3.2W) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk2-for-wolf-unit-boards.34080/)   |
+| [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                           |
+| [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                                |
+| [Pacu Pacu (v1.1)](https://discord.com/channels/647909397477195803/1046942006942900304/1408732261028860004)                    |
+| [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                                                         |
+| [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer)                            |
+| Salamander (SP ver. clone)                                                                                                     |
+| Salamander (SP ver. clone Neo)                                                                                                 |
+| [SlapFight (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                          |
+| [Terra Cresta (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                       |
+| [Tiger Heli (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                         |
+| [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                                          |
+| [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                                                 |
+| [Twin Cobra (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                         |
+| Twin Twist (Twin Cobra Hack)                                                                                                   |
+| [Vampire Hunter 2 (Night Warriors 2) (English Translation)](https://strygo.github.io/arcade-patches/vhunt2-english/index.html) |
+| [Vampire Savior 2 (English Translation)](https://strygo.github.io/arcade-patches/vsav2-english/index.html)                     |
+| [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                                     |
 
 ----
 
