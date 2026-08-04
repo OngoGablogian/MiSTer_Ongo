@@ -1,0 +1,74 @@
+<misterromdescription>
+	<name>Ehrgeiz (Japan, EG1/VER.A)</name>
+	<setname>ehrgeizja</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1998</year>
+	<manufacturer>Square / Namco</manufacturer>
+	<category>Fighting</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM   28 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB  ioctl 7                        (S12_WAVE_START)
+	     top of image 0x3080000 (48.5 MB) - fits a 64 MB module.
+
+	     28 MB banked ROM, all four blocks are 16-bit interleaved L/U pairs and
+	     contiguous in MAME's region (0x0000000/0x1000000/0x1400000/0x1800000).
+	-->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
+	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
+	<rom index="0" zip="ehrgeiz.zip" md5="none">
+		<interleave output="16">
+			<part name="eg1vera.2l" crc="302d62cf" map="01"/>
+			<part name="eg1vera.2p" crc="1d7fb3a1" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay
+	     CLEAR). bit6 = Tekken-3 JAMMA button remap. 0x24 = System 12 with the STOCK
+	     namcos12 JVS button map (bit6 clear).
+	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00. -->
+	<rom index="1"><part>24 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 28 MB. Concatenated in MAME "bankedroms" region
+	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
+	<rom index="3" zip="ehrgeiz.zip" md5="none">
+		<interleave output="16">
+			<part name="eg1rom0l.12" crc="fe11a48e" map="01"/>
+			<part name="eg1rom0u.11" crc="7cb90c25" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="eg1fl1l.9"  crc="dd4cac2b" map="01"/>
+			<part name="eg1fl1u.10" crc="e3348407" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="eg1fl2l.7" crc="34493262" map="01"/>
+			<part name="eg1fl2u.8" crc="4fb84f1d" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="eg1fl3l.5" crc="f9441f87" map="01"/>
+			<part name="eg1fl3u.6" crc="cea397de" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="ehrgeiz.zip" md5="none">
+		<part name="eg1vera.11s" crc="9e44645e"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
+	<rom index="7" zip="ehrgeiz.zip" md5="none">
+		<part name="eg1wave0.2" crc="961fe69f"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file. -->
+	<nvram index="9" size="2048"/>
+
+	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+</misterromdescription>

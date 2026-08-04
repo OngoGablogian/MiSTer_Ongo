@@ -1,0 +1,75 @@
+<misterromdescription>
+	<name>Super World Stadium '98 (Japan, SS81/VER.A)</name>
+	<setname>sws98</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1998</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Sports</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM   28 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave    16 MB  ioctl 7                        (S12_WAVE_START)
+	     top of image 0x3880000 (56.5 MB) - fits a 64 MB module.
+
+	     MAME's bankedroms region is 28 MB but the FIRST ROM loads at 0x1000000 -
+	     the low 16 MB are genuinely empty (banks 0-7 unpopulated). The 16 MB of 00
+	     leading pad is mandatory to keep the 2 MB bank numbering identical to MAME.
+	-->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
+	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
+	<rom index="0" zip="sws98.zip" md5="none">
+		<interleave output="16">
+			<part name="ss81vera.2l" crc="94b1f34c" map="01"/>
+			<part name="ss81vera.2p" crc="7d0ed33d" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay
+	     CLEAR). bit6 = Tekken-3 JAMMA button remap. 0x24 = System 12 with the STOCK
+	     namcos12 JVS button map (bit6 clear).
+	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00. -->
+	<rom index="1"><part>24 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 28 MB. Concatenated in MAME "bankedroms" region
+	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
+	<rom index="3" zip="sws98.zip" md5="none">
+		<!-- 16 MB of 00: MAME leaves this range of the bankedroms region empty -->
+		<part repeat="262144">00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+		<interleave output="16">
+			<part name="ss81fl1l.9"  crc="b0b5dc77" map="01"/>
+			<part name="ss81fl1u.10" crc="e526dba5" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="ss81fl2l.7" crc="2dc6f6b5" map="01"/>
+			<part name="ss81fl2u.8" crc="c8341c9f" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="ss81fl3l.5" crc="ce5d2a96" map="01"/>
+			<part name="ss81fl3u.6" crc="02df4df8" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="sws98.zip" md5="none">
+		<part name="ss81vera.11s" crc="c6bc5c31"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 16 MB. -->
+	<rom index="7" zip="sws98.zip" md5="none">
+		<part name="ss81wave0.2" crc="1c5e2ff1"/>
+		<part name="ss81wave1.1" crc="5f4c8861"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file. -->
+	<nvram index="9" size="2048"/>
+
+	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+</misterromdescription>

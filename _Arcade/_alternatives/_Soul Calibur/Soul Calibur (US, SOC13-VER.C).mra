@@ -1,0 +1,63 @@
+<misterromdescription>
+	<name>Soul Calibur (US, SOC13/VER.C)</name>
+	<setname>soulclbruc</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1998</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Fighting</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM   32 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB  ioctl 7                        (S12_WAVE_START)
+	     top of image 0x3080000 (48.5 MB) - fits a 64 MB module.
+
+	     Same 32 MB banked ROM / 8 MB wave / H8 program as the parent set;
+	     only the 2x2 MB program pair differs.
+	-->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
+	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
+	<rom index="0" zip="soulclbr.zip" md5="none">
+		<interleave output="16">
+			<part name="soc13verc.2l" crc="4ba962fb" map="01"/>
+			<part name="soc13verc.2p" crc="140c40de" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay
+	     CLEAR). bit6 = Tekken-3 JAMMA button remap. 0x24 = System 12 with the STOCK
+	     namcos12 JVS button map (bit6 clear).
+	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00. -->
+	<rom index="1"><part>24 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 32 MB. Concatenated in MAME "bankedroms" region
+	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
+	<rom index="3" zip="soulclbr.zip" md5="none">
+		<part name="soc1rom0.7" crc="cdc47b55"/>
+		<part name="soc1rom1.8" crc="30d2dd5a"/>
+		<part name="soc1rom2.9" crc="dbb93955"/>
+		<part name="soc1fl3.6" crc="24d94c38"/>
+		<part name="soc1fl4.5" crc="6212090e"/>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="soulclbr.zip" md5="none">
+		<part name="soc1vera.11s" crc="52aa206a"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
+	<rom index="7" zip="soulclbr.zip" md5="none">
+		<part name="soc1wave0.2" crc="c100618d"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file. -->
+	<nvram index="9" size="2048"/>
+
+	<buttons names="Horizontal,Vertical,Kick,Guard,-,-,Start,Coin,Pause" default="A,B,X,Y,,,Start,Select,L3" count="4"/>
+</misterromdescription>

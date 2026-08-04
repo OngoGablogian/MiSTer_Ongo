@@ -1,0 +1,83 @@
+<misterromdescription>
+	<name>Soul Calibur (World, SOC12/VER.A2)</name>
+	<setname>soulclbr</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1998</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Fighting</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB   (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (this IS the boot rom; no BIOS)
+	     0x0800000  Banked ROM   32 MB   ioctl 3 -> DMA-5 source / CPU window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB   ioctl 7                     (S12_WAVE_START)
+	     top of image 0x3080000 (48.5 MB) — fits a 64 MB module.
+
+	     NOTE vs Tekken 3: the banked ROM is 32 MB here (T3 = 28 MB). That is the
+	     EXACT size of the region the core reserves (0x0800000..0x2800000), so it
+	     abuts S12_SPROG_START with zero slack. The DMA-5 reader masks the source
+	     with dmaoffset[24:0] (32 MB) and MAME-measured offsets top out at
+	     0x01F7B0C8, so it is in range — but there is no headroom for a bigger set.
+
+	     Soul Calibur is a plain COH-700 / namcos12_state game (same machine config
+	     as Tekken 3, no alt-bank, no gun, no ADC, KEYCUS KC020 is not emulated).
+	-->
+
+	<!-- ioctl 0: main program (2x 2MB, 16-bit interleaved: 2l=low bytes @even, 2p=high @odd). -->
+	<rom index="0" zip="soulclbr.zip" md5="none">
+		<interleave output="16">
+			<part name="soc12vera.2l" crc="ceadcc9a" map="01"/>
+			<part name="soc12vera.2p" crc="65a74cf0" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay CLEAR).
+	     bit6 (Tekken-3 JAMMA button remap) must stay CLEAR as well: Soul Calibur uses
+	     the STOCK namcos12 in_r button map - buttons 1-3 at 0x300001 bits 4/5/6 and
+	     button 4 at 0x300003 bit1 (P1) - which is what bit6=0 selects.
+	     Second byte = protection id; System 12 has no emulated KEYCUS -> 0x00. -->
+	<rom index="1"><part>24 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 32 MB. MAME loads all five with plain ROM_LOAD
+	     (unified dumps, no L/U split), so NO interleave — straight concatenation in
+	     MAME's region order:
+	       soc1rom0.7  0x0000000  8 MB
+	       soc1rom1.8  0x0800000  8 MB
+	       soc1rom2.9  0x1000000  8 MB
+	       soc1fl3.6   0x1800000  4 MB
+	       soc1fl4.5   0x1C00000  4 MB
+	     Fetched by the DMA-5 ROM reader (0x1F700000 source latch); MAME shows Soul
+	     Calibur never writes the 0x1F000000 bank register, so the CPU's 2 MB window
+	     at 0x1FA00000 is unused during boot/attract. -->
+	<rom index="3" zip="soulclbr.zip" md5="none">
+		<part name="soc1rom0.7" crc="cdc47b55"/>
+		<part name="soc1rom1.8" crc="30d2dd5a"/>
+		<part name="soc1rom2.9" crc="dbb93955"/>
+		<part name="soc1fl3.6"  crc="24d94c38"/>
+		<part name="soc1fl4.5"  crc="6212090e"/>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     ROM_LOAD16_WORD_SWAP in MAME -> byte-swapped vs a plain load, same as
+	     Tekken 3's tet1vere.11s, so it is shipped plainly and treated identically. -->
+	<rom index="6" zip="soulclbr.zip" md5="none">
+		<part name="soc1vera.11s" crc="52aa206a"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB (one unified dump; T3 ships 2x4MB = same total). -->
+	<rom index="7" zip="soulclbr.zip" md5="none">
+		<part name="soc1wave0.2" crc="c100618d"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file. -->
+	<nvram index="9" size="2048"/>
+
+	<!-- Soul Calibur uses the stock namcos12 JVS/JAMMA button map (unlike Tekken 3,
+	     which remaps BUTTON3/4 down one slot), so buttons 1-4 land on JAMMA
+	     button1..button4 = joy[4..7] in the core's in_r builder:
+	       btn1 Horizontal attack, btn2 Vertical attack, btn3 Kick, btn4 Guard. -->
+	<buttons names="Horizontal,Vertical,Kick,Guard,-,-,Start,Coin,Pause" default="A,B,X,Y,,,Start,Select,L3" count="4"/>
+</misterromdescription>

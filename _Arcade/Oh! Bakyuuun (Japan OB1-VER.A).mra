@@ -1,0 +1,71 @@
+<misterromdescription>
+    <!-- *** REQUIRES THE coh700b BOOT-SIGNATURE MECHANISM (core build 2026-08-01 or later): this is a MAME coh700b machine, whose boot ROM spins forever unless main RAM 0x80010000 holds the 12 signature bytes 4E 61 6D 63 6F 20 4C 74 64 2E 2D 2D (ASCII "Namco Ltd." followed by two dashes) taken from program ROM +0x20280, as MAME namcos12_state::driver_reset does when m_boot_hack is set. Platform byte 0xA4 (bit7 set) tells the core to copy those 12 bytes into RAM after every reset. On an older core build (platform byte 0x24, no bit7 handling) this title will not boot. *** -->
+	<name>Oh! Bakyuuun (Japan, OB1/VER.A)</name>
+	<setname>ohbakyuun</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1999</year>
+	<manufacturer>Eighting / Raizing / Namco</manufacturer>
+	<category>Shooter</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM    8 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB  ioctl 7                        (S12_WAVE_START)
+	     top of image 0x3080000 (48.5 MB) - fits a 64 MB module.
+
+	     *** PROVISIONAL - LIGHT GUN NOT SUPPORTED YET ***
+	     MAME drives this set through ptblank2_state: the gun X/Y are read from
+	     0x1F780000-0x1F78000F and the outputs (recoil solenoid, start lamps) are
+	     written at 0x1F788000. The core has no gun block, so aiming will not work
+	     and the game is expected to stall at or before the calibration screen.
+	     MAME additionally PATCHES the program ROM (zeroing the word at 0x331C4) to
+	     skip a wait-for-DMA-5 loop; that patch is NOT applied here, so this MRA may
+	     hang even once a gun exists. Everything else (sizes, layout) is correct.
+	-->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
+	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
+	<rom index="0" zip="ghlpanic.zip" md5="none">
+		<interleave output="16">
+			<part name="ob1vera.2l" crc="4cb3c25a" map="01"/>
+			<part name="ob1vera.2p" crc="85abbe30" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay
+	     CLEAR). bit6 = Tekken-3 JAMMA button remap. bit7 = coh700b boot signature
+	     (copy 12 bytes from program ROM +0x20280 to main RAM 0x80010000 on every
+	     reset, as MAME's namcos12_state::driver_reset does when m_boot_hack is set).
+	     0xA4 = System 12, STOCK namcos12 JVS button map (bit6 clear), boot signature ON.
+	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00. -->
+	<rom index="1"><part>A4 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 8 MB. Concatenated in MAME "bankedroms" region
+	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
+	<rom index="3" zip="ghlpanic.zip" md5="none">
+		<interleave output="16">
+			<part name="ob1rom0l.ic12" crc="f8b6a599" map="01"/>
+			<part name="ob1rom0u.ic11" crc="0625db92" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="ghlpanic.zip" md5="none">
+		<part name="ob1vera.11s" crc="f8c459f2"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
+	<rom index="7" zip="ghlpanic.zip" md5="none">
+		<part name="ob1wave.ic2" crc="e7bc7202"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file. -->
+	<nvram index="9" size="2048"/>
+
+	<buttons names="Trigger,-,-,-,-,-,Start,Coin,Pause" default="A,,,,,,Start,Select,L3" count="1"/>
+</misterromdescription>
