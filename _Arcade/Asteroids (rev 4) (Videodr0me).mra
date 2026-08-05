@@ -17,12 +17,11 @@
 	<rbf>Asteroids_Videodr0me</rbf>
 	<about>Atari Asteroids with a hardware-level DVG and high-resolution vector framebuffer.</about>
 
-	<resolution>31kHz</resolution>
 	<rotation>horizontal</rotation>
-	<flip></flip>
+	<flip>yes</flip>
 
 	<players>2</players>
-	<joystick>2-way</joystick>
+	<joystick>2-way horizontal</joystick>
 	<num_buttons>3</num_buttons>
 	<buttons default="A,B,X,Start,Select,R,L,Y" names="Fire,Thrust,Hyperspace,Start 1,Start 2,Coin,Pause,Coin Right"></buttons>
 
@@ -48,5 +47,5 @@
 		<part crc="97953db8" name="034602-01.c8"></part>
 	</rom>
 
-	<mratimestamp>20260721000000</mratimestamp>
+	<mratimestamp>20260804000000</mratimestamp>
 </misterromdescription>

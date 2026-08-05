@@ -17,13 +17,12 @@
 	<rbf>Asteroids_Videodr0me</rbf>
 	<about>Atari Lunar Lander with a hardware-level DVG, analog thrust control, discrete audio, and high-resolution vector framebuffer.</about>
 
-	<resolution>31kHz</resolution>
 	<rotation>horizontal</rotation>
-	<flip></flip>
+	<flip>yes</flip>
 
 	<players>1</players>
-	<joystick>2-way</joystick>
-	<special_controls>tilt</special_controls>
+	<joystick>2-way horizontal</joystick>
+	<special_controls>throttle</special_controls>
 	<num_buttons>2</num_buttons>
 	<buttons default="A,B,-,Start,Select,R,L,Y" names="Digital Thrust,Abort Thrust,-,Start,Select Mission,Coin Left,Pause,Coin Right"></buttons>
 
@@ -52,5 +51,5 @@
 		<part crc="97953db8" name="034602-01.c8"></part>
 	</rom>
 
-	<mratimestamp>20260724000000</mratimestamp>
+	<mratimestamp>20260804000000</mratimestamp>
 </misterromdescription>
