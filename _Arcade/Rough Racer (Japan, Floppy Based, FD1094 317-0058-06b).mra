@@ -1,0 +1,28 @@
+<misterromdescription>
+  <name>Rough Racer (Japan, Floppy Based, FD1094 317-0058-06b)</name>
+  <mameversion>0288</mameversion>
+  <setname>roughrac</setname>
+  <year>1990</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>segas24</rbf>
+  <rotation>horizontal</rotation>
+  <joystick>8-way</joystick>
+  <buttons default="A,B,X,Start,Select,R,L" names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Service,Test"/>
+  <switches default="FF FD"/>
+  <rom index="1" zip="roughrac.zip" md5="none" type="merged|nonmerged|split">
+    <interleave output="16">
+      <part name="epr-12187.ic2" crc="e83783f3" map="01"/>
+      <part name="epr-12186.ic1" crc="ce76319d" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="3" zip="roughrac.zip" md5="none" type="merged|nonmerged|split">
+    <part name="ds3-5000-06b.img" crc="a7fb2149"/>
+    <part repeat="253952">00</part>
+  </rom>
+  <rom index="4" zip="roughrac.zip" md5="none" type="merged|nonmerged|split">
+    <part name="317-0058-06b.key" crc="6a5bf536"/>
+  </rom>
+  <rom index="0">
+    <part>0D00002D00000000</part>
+  </rom>
+</misterromdescription>

@@ -1,0 +1,25 @@
+<misterromdescription>
+  <name>Hot Rod (World, 3 Players, Turbo set 1, Floppy Based)</name>
+  <mameversion>0288</mameversion>
+  <setname>hotrod</setname>
+  <year>1988</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>segas24</rbf>
+  <rotation>horizontal</rotation>
+  <joystick>Steering Wheel / Accelerator</joystick>
+  <buttons default="Start,Select,R,L" names="-,-,-,-,-,-,Start,Coin,Service,Test"/>
+  <switches default="FF FF"/>
+  <rom index="1" zip="hotrod.zip" md5="none" type="merged|nonmerged|split">
+    <interleave output="16">
+      <part name="epr-11339.ic2" crc="75130e73" map="01"/>
+      <part name="epr-11338.ic1" crc="7d4a7ff3" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="3" zip="hotrod.zip" md5="none" type="merged|nonmerged|split">
+    <part name="ds3-5000-01d_3p_turbo.img" crc="842006fd"/>
+    <part repeat="172032">00</part>
+  </rom>
+  <rom index="0">
+    <part>5900002F00000000</part>
+  </rom>
+</misterromdescription>

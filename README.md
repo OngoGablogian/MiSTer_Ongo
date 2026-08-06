@@ -61,6 +61,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
+| [SEGA System 24](https://github.com/meathax/s24)                                                                               |
 | [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                   |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                  |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                  |
