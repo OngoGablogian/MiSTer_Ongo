@@ -68,6 +68,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Smash T.V.](https://www.patreon.com/blahm1d/posts/system-warning-164511442)                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                   |
+| [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                   |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                               |
 | [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                           |
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                |
