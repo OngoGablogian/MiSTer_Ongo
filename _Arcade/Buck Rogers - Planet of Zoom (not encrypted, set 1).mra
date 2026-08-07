@@ -4,6 +4,18 @@
   <year>1982</year>
   <manufacturer>Sega</manufacturer>
   <rbf>SegaVCO</rbf>
+  <switches default="C0,92">
+    <dip bits="0,1,2" name="Coin A" ids="1C_1C,1C_2C,1C_3C,1C_6C,2C_1C,3C_1C,4C_1C,5C_1C"/>
+    <dip bits="3,4,5" name="Coin B" ids="1C_1C,1C_2C,1C_3C,1C_6C,2C_1C,3C_1C,4C_1C,5C_1C"/>
+    <dip bits="8" name="Collisions" ids="On,Off (Cheat)"/>
+    <dip bits="9" name="Accel By" ids="Pedal,Button"/>
+    <dip bits="10" name="Best 5 Scores" ids="On,Off"/>
+    <dip bits="11" name="Score Display" ids="Off,On"/>
+    <dip bits="12" name="Difficulty" ids="Hard,Normal"/>
+    <dip bits="13,14" name="Lives" ids="3,4,5,6"/>
+    <dip bits="15" name="Cabinet" ids="Cockpit,Upright"/>
+  </switches>
+  <rom index="1"><part>00</part></rom>
   <rom index="0" zip="buckrogn.zip|buckrog.zip" md5="none">
     <!-- maincpu @ 0x000000, 0x8000 bytes -->
     <part name="epr-5257.cpu-ic3" crc="7f1910af"/>
@@ -47,5 +59,4 @@
     <part name="epr-5238.prom-ic90" crc="7aff0886"/>
     <part repeat="8192">FF</part>
   </rom>
-
 </misterromdescription>
