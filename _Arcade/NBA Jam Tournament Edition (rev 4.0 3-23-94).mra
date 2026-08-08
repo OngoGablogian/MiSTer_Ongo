@@ -1,0 +1,65 @@
+<misterromdescription>
+  <!-- Candidate generated from official MAME 0.289 signed tag mame0289 (f34f02505e32c1993c6a782b6814232cbfc74e36); no ROM data is distributed. -->
+  <about author="rejectedcoins" />
+  <rotation>horizontal</rotation>
+  <name>NBA Jam Tournament Edition (rev 4.0 3/23/94)</name>
+  <setname>nbajamte</setname>
+  <parent>nbajamte</parent>
+  <mameversion>0289</mameversion>
+  <year>1994</year>
+  <manufacturer>Midway</manufacturer>
+  <players>4</players>
+  <rbf>TUnit</rbf>
+  <joystick>8-way</joystick>
+  <region>World</region>
+  <!-- Descriptor: magic/version/profile/sound/gfx/program/flags/xor. -->
+  <rom index="3">
+    <part>54 01 03 00 03 01 00 54</part>
+  </rom>
+  <!-- Physical TMS34010 program EPROMs: UJ12 even/low, then UG12 odd/high. -->
+  <rom index="0" zip="nbajamte.zip" md5="None" type="merged|nonmerged">
+    <part name="l4_nba_jam_tournament_game_rom_uj12.uj12" crc="d7c21bc4" />
+    <part name="l4_nba_jam_tournament_game_rom_ug12.ug12" crc="7ad49229" />
+  </rom>
+  <!-- Raw graphics devices in pinned MAME four-lane declaration order. -->
+  <rom index="1" zip="nbajamte.zip" md5="None" type="merged|nonmerged">
+    <part name="l1_nba_jam_tournament_game_rom_ug14.ug14" crc="04bb9f64" />
+    <part name="l1_nba_jam_tournament_game_rom_uj14.uj14" crc="b34b7af3" />
+    <part name="l1_nba_jam_tournament_game_rom_ug19.ug19" crc="a8f22fbb" />
+    <part name="l1_nba_jam_tournament_game_rom_uj19.uj19" crc="8130a8a2" />
+    <part name="l1_nba_jam_tournament_game_rom_ug16.ug16" crc="c7ce74d0" />
+    <part name="l1_nba_jam_tournament_game_rom_uj16.uj16" crc="905ad88b" />
+    <part name="l1_nba_jam_tournament_game_rom_ug20.ug20" crc="8a48728c" />
+    <part name="l1_nba_jam_tournament_game_rom_uj20.uj20" crc="bf263d61" />
+    <part name="l1_nba_jam_tournament_game_rom_ug17.ug17" crc="9401be62" />
+    <part name="l1_nba_jam_tournament_game_rom_uj17.uj17" crc="8a852b9e" />
+    <part name="l1_nba_jam_tournament_game_rom_ug22.ug22" crc="3b05133b" />
+    <part name="l1_nba_jam_tournament_game_rom_uj22.uj22" crc="39791051" />
+    <part name="l1_nba_jam_tournament_game_rom_ug18.ug18" crc="6fd08f57" />
+    <part name="l1_nba_jam_tournament_game_rom_uj18.uj18" crc="4eb73c26" />
+    <part name="l1_nba_jam_tournament_game_rom_ug23.ug23" crc="854f73bc" />
+    <part name="l1_nba_jam_tournament_game_rom_uj23.uj23" crc="f8c30998" />
+  </rom>
+  <!-- Raw physical sound devices; reload/mirror transforms are descriptor-driven. -->
+  <rom index="2" zip="nbajamte.zip" md5="None" type="merged|nonmerged">
+    <part name="l1_nba_jam_tournament_u3_sound_rom.u3" crc="d4551195" />
+    <part name="l1_nba_jam_tournament_u12_sound_rom.u12" crc="4fac97bc" />
+    <part name="l1_nba_jam_tournament_u13_sound_rom.u13" crc="6f27b202" />
+  </rom>
+  <nvram index="4" size="16384" />
+  <switches default="FD,7F">
+    <dip name="Test Switch" bits="0" ids="On,Off" />
+    <dip name="Powerup Test" bits="1" ids="Off,On" />
+    <dip name="Unused" bits="2" ids="On,Off" />
+    <dip name="Unused" bits="3" ids="On,Off" />
+    <dip name="Unused" bits="4" ids="On,Off" />
+    <dip name="Unused" bits="5" ids="Off,On" />
+    <dip name="Dollar Bill Validator" bits="6" ids="Installed,Not Present" />
+    <dip name="Players" bits="7" ids="2,4" />
+    <dip name="Coin Counters" bits="8,9" ids="-,2 Counters / 1 count/coin,1 Counter / Totalizing,1 Counter / 1 count/coin" />
+    <dip name="Country" bits="10,11" ids="-,German,French,USA" />
+    <dip name="Coinage" bits="12,13,14" ids="Free Play,4,-,2,-,3,ECA,1" />
+    <dip name="Coinage Source" bits="15" ids="CMOS,Dipswitch" />
+  </switches>
+  <buttons names="Turbo,Shoot / Block,Pass / Steal,Start,Coin" default="A,B,X,Start,Select" count="3" />
+</misterromdescription>

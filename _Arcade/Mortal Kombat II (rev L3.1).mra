@@ -1,0 +1,64 @@
+<misterromdescription>
+  <!-- Candidate generated from official MAME 0.289 signed tag mame0289 (f34f02505e32c1993c6a782b6814232cbfc74e36); no ROM data is distributed. -->
+  <about author="rejectedcoins" />
+  <rotation>horizontal</rotation>
+  <name>Mortal Kombat II (rev L3.1)</name>
+  <setname>mk2</setname>
+  <parent>mk2</parent>
+  <mameversion>0289</mameversion>
+  <year>1993</year>
+  <manufacturer>Midway</manufacturer>
+  <players>2</players>
+  <rbf>TUnit</rbf>
+  <joystick>8-way</joystick>
+  <region>World</region>
+  <!-- Descriptor: magic/version/profile/sound/gfx/program/flags/xor. -->
+  <rom index="3">
+    <part>54 01 01 01 01 01 01 54</part>
+  </rom>
+  <!-- Physical TMS34010 program EPROMs: UJ12 even/low, then UG12 odd/high. -->
+  <rom index="0" zip="mk2.zip" md5="None" type="merged|nonmerged">
+    <part name="l3.1_mortal_kombat_ii_game_rom_uj12.uj12" crc="cf100a75" />
+    <part name="l3.1_mortal_kombat_ii_game_rom_ug12.ug12" crc="582c7dfd" />
+  </rom>
+  <!-- Raw graphics devices in pinned MAME four-lane declaration order. -->
+  <rom index="1" zip="mk2.zip" md5="None" type="merged|nonmerged">
+    <part name="l1_mortal_kombat_ii_game_rom_ug14.ug14" crc="01e73af6" />
+    <part name="l1_mortal_kombat_ii_game_rom_uj14.uj14" crc="d4985cbb" />
+    <part name="l1_mortal_kombat_ii_game_rom_ug19.ug19" crc="fec137be" />
+    <part name="l1_mortal_kombat_ii_game_rom_uj19.uj19" crc="2d763156" />
+    <part name="l1_mortal_kombat_ii_game_rom_ug16.ug16" crc="8ba6ae18" />
+    <part name="l1_mortal_kombat_ii_game_rom_uj16.uj16" crc="39d885b4" />
+    <part name="l1_mortal_kombat_ii_game_rom_ug20.ug20" crc="809118c1" />
+    <part name="l1_mortal_kombat_ii_game_rom_uj20.uj20" crc="b96824f0" />
+    <part name="l1_mortal_kombat_ii_game_rom_ug17.ug17" crc="937d8620" />
+    <part name="l1_mortal_kombat_ii_game_rom_uj17.uj17" crc="218de160" />
+    <part name="l1_mortal_kombat_ii_game_rom_ug22.ug22" crc="154d53b1" />
+    <part name="l1_mortal_kombat_ii_game_rom_uj22.uj22" crc="8891d785" />
+  </rom>
+  <!-- Raw physical sound devices; reload/mirror transforms are descriptor-driven. -->
+  <rom index="2" zip="mk2.zip" md5="None" type="merged|nonmerged">
+    <part name="l1_mortal_kombat_ii_sound_rom_u2.u2" crc="5f23d71d" />
+    <part name="l1_mortal_kombat_ii_sound_rom_u3.u3" crc="d6d92bf9" />
+    <part name="l1_mortal_kombat_ii_sound_rom_u4.u4" crc="eebc8e0f" />
+    <part name="l1_mortal_kombat_ii_sound_rom_u5.u5" crc="2b0b7961" />
+    <part name="l1_mortal_kombat_ii_sound_rom_u6.u6" crc="f694b27f" />
+    <part name="l1_mortal_kombat_ii_sound_rom_u7.u7" crc="20387e0a" />
+  </rom>
+  <nvram index="4" size="16384" />
+  <switches default="7D,FC">
+    <dip name="Test Switch" bits="0" ids="On,Off" />
+    <dip name="Counters" bits="1" ids="Two,One" />
+    <dip name="Coinage" bits="2,3,4,5,6" ids="-,German-Free Play,French-Free Play,USA-Free Play,-,German-4,French-4,USA-4,-,German-ECA,-,-,-,German-2,French-2,USA-2,-,-,-,-,-,German-3,French-3,USA-3,-,German-5,French-ECA,USA-ECA,-,German-1,French-1,USA-1" />
+    <dip name="Coinage Source" bits="7" ids="CMOS,Dipswitch" />
+    <dip name="Circuit Boards" bits="8" ids="1,2" />
+    <dip name="Powerup Test" bits="9" ids="Off,On" />
+    <dip name="Bill Validator" bits="10" ids="Installed,Not Present" />
+    <dip name="Comic Book Offer" bits="11" ids="Off,On" />
+    <dip name="Attract Sound" bits="12" ids="Off,On" />
+    <dip name="Low Blows" bits="13" ids="Off,On" />
+    <dip name="Blood" bits="14" ids="Off,On" />
+    <dip name="Violence" bits="15" ids="Off,On" />
+  </switches>
+  <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Block 2,Start,Coin" default="X,Y,A,B,R,L,Start,Select" count="6" />
+</misterromdescription>

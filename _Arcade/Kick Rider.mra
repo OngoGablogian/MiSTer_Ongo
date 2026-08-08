@@ -1,8 +1,8 @@
 <misterromdescription>
 	<name>Kick Rider</name>
 	<region>World</region>
-	<homebrew>0</homebrew>
-	<bootleg>0</bootleg>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
 	<platform>Universal Do! Castle Hardware</platform>
 	<series>Mr. Do</series>
 	<year>1984</year>
@@ -13,7 +13,7 @@
 	<mameversion>0288</mameversion>
 	<rbf>DoCastle</rbf>
 	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
-	<resolution>240x192</resolution>
+	<resolution>15kHz</resolution>
 	<rotation>horizontal</rotation>
 	<flip>yes</flip>
 	<players>2</players>
@@ -33,7 +33,7 @@
 		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
 	</switches>
 
-	<rom index="0" zip="kickridr.zip" md5="None" type="merged|nonmerged|split">
+	<rom index="0" zip="kickridr.zip" md5="None">
 		<part name="k1" crc="dfdd1ab4"/>
 		<part repeat="8192">00</part>
 		<part name="k3" crc="412244da"/>
