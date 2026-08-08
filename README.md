@@ -37,6 +37,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                    |
 | [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-atomizes-164896787)                                              |
 | [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
+| [Midway Y Unit](https://www.patreon.com/blahm1d/posts/system-warning-164511442?collection=2278348)                             |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                      |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
@@ -66,7 +67,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                   |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                  |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                  |
-| [Smash T.V.](https://www.patreon.com/blahm1d/posts/system-warning-164511442)                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                   |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                   |
