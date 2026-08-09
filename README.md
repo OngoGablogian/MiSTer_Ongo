@@ -25,6 +25,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-1-165050191)                      |
+| [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                  |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                        |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                    |
@@ -47,17 +48,18 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [NARC (blahm1d)](https://www.patreon.com/blahm1d/posts/blahm1d-coaxes-164867975)                                               |
 | [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-v1-0-165736329)                                               |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |
-| [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
 | [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
 | [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                        |
 | [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                 |
 | [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                |
 | [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781) |
+| [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                  |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                             |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                     |
 | [Psikyo SH2](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                                |
+| [Raiden II](https://github.com/spacestate1/Arcade-Raiden2_MiSTer)                                                              |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                              |
 | [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                               |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
@@ -68,8 +70,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                  |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                  |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
-| [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                   |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                   |
+| [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                   |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                               |
 | [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                           |
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                |
