@@ -78,7 +78,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                           |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                          |
 | [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                       |
-| [Taito C-Chip (Rainbow Islands)](https://github.com/bazset/Rainbow-Islands-FPGA)                                               |
 | [Taito C-Chip (Volfied)](https://github.com/bazset/Volfied-FPGA)                                                               |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
