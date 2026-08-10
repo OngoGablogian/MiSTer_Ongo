@@ -1,0 +1,123 @@
+<misterromdescription>
+  <name>Raiden DX (UK)</name>
+  <setname>raidendx</setname>
+  <mameversion>0264</mameversion>
+  <rbf>Raiden2</rbf>
+  <year>1994</year>
+  <manufacturer>Seibu Kaihatsu</manufacturer>
+  <category>Shoot</category>
+  <rotation>vertical</rotation>
+  <resolution>15kHz</resolution>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <num_buttons>3</num_buttons>
+
+  <!-- Raiden DX adds a THIRD button that Raiden II does not have
+       (INPUT_PORTS_START raidendx: PORT_BIT 0x0040 P1, 0x4000 P2).
+       Names stay positional against the CONF_STR "J1,..." list in
+       Raiden2.sv, dashes included. -->
+  <buttons names="Fire,Bomb,Button 3,-,-,-,Start,Coin,-,Pause"
+           default="A,B,X,R,L,Start"/>
+
+  <!-- DIP layout is raiden2's (PORT_INCLUDE) with SW2:5 and SW2:6 changed
+       from Bonus Life to unused - the manual marks them "Not Used". All
+       switches are active low, so FF,FF is the factory default. -->
+  <switches default="FF,FF">
+    <dip name="Coin A" bits="0,2" ids="Free Play,4C 1C,3C 1C,1C 4C,2C 1C,1C 3C,1C 2C,1C 1C"/>
+    <dip name="Coin B" bits="3,5" ids="Free Play,4C 1C,3C 1C,1C 4C,2C 1C,1C 3C,1C 2C,1C 1C"/>
+    <dip name="Starting Coin" bits="6" ids="X 2,Normal"/>
+    <dip name="Flip Screen" bits="7" ids="On,Off"/>
+    <dip name="Difficulty" bits="8,9" ids="Very Hard,Hard,Easy,Normal"/>
+    <dip name="Lives" bits="10,11" ids="1,4,2,3"/>
+    <dip name="SW2:5 (unused)" bits="12" ids="On,Off"/>
+    <dip name="SW2:6 (unused)" bits="13" ids="On,Off"/>
+    <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+  </switches>
+
+  <!-- ============================================================
+       SDRAM layout, Raiden DX. This is NOT the Raiden II map: DX has a
+       2 MB program ROM and 1 MB OKI regions, so everything after the
+       program ROM moves. Must match the game_dx bases in Raiden2.sv:
+
+         0x000000  maincpu    2 MB
+         0x200000  audiocpu   128 KB
+         0x220000  chars      128 KB
+         0x240000  copx       256 KB
+         0x280000  oki1       1 MB   (256 KB used, rest padded)
+         0x380000  oki2       1 MB   (256 KB used, rest padded)
+         0x480000  tiles      4 MB
+         0x880000  sprites    8 MB
+
+       Total 16.5 MB. The padding after each OKI is REQUIRED: MAME
+       declares 0x100000 regions and only fills the first quarter, and
+       the parts are written sequentially, so without it every later
+       region lands 768 KB early.
+       ============================================================ -->
+  <!-- Game select, read by the core at ioctl index 1. This MUST come BEFORE
+       index 0. Sprites are decrypted inline as the index-0 stream arrives and
+       the decrypt window is per-game, so the core has to know which map it is
+       loading before the first sprite byte reaches it. Listed after index 0
+       (as it was originally) every DX load decrypted against Raiden II's map
+       and the game came up garbled. -->
+  <rom index="1">
+    <part>01</part>
+  </rom>
+
+  <rom index="0" zip="raidendx.zip" md5="None">
+
+    <!-- maincpu 0x000000, 2 MB: ROM_LOAD32_BYTE, a FOUR-way byte
+         interleave (Raiden II is a two-way 16-bit one). Each chip
+         supplies one byte of every dword, at offsets 0,1,2,3. -->
+    <interleave output="32">
+      <part name="1d.4n" crc="14d725fc" map="0001"/>
+      <part name="2d.4p" crc="5e7e45cb" map="0010"/>
+      <part name="3d.6n" crc="f0a47e67" map="0100"/>
+      <part name="4d.6p" crc="2a2003e8" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu 0x200000, 128 KB. Same CONTINUE/COPY shape as Raiden II:
+           ROM_LOAD  0x0000 len 0x8000 -> 0x00000
+           ROM_CONTINUE        0x8000  -> 0x10000
+           ROM_COPY  0x0000 len 0x8000 -> 0x18000
+         giving a fixed low bank plus two selectable high banks. -->
+    <part name="seibu_5.u1110" crc="8c46857a" offset="0x0000" length="0x8000"/>
+    <part repeat="0x8000">FF</part>
+    <part name="seibu_5.u1110" crc="8c46857a" offset="0x8000" length="0x8000"/>
+    <part name="seibu_5.u1110" crc="8c46857a" offset="0x0000" length="0x8000"/>
+
+    <!-- chars 0x220000, 128 KB -->
+    <part name="seibu_7.u0724" crc="c73986d4"/>
+
+    <!-- copx 0x240000, 256 KB. The same COPX-D2 as Raiden II. -->
+    <part name="copx-d2.u0313" crc="a6732ff9"/>
+
+    <!-- oki1 0x280000: 256 KB of samples in a 1 MB region -->
+    <part name="seibu_6.u1017" crc="9a9196da"/>
+    <part repeat="0xC0000">FF</part>
+
+    <!-- oki2 0x380000: 256 KB of samples in a 1 MB region.
+         The same PCM mask ROM as Raiden II. -->
+    <part name="raiden_2_pcm.u1018" crc="8cf0d17e"/>
+    <part repeat="0xC0000">FF</part>
+
+    <!-- tiles 0x480000, 4 MB -->
+    <part name="dx_back-1.u075" crc="90970355"/>
+    <part name="dx_back-2.u0714" crc="5799af3e"/>
+
+    <!-- sprites 0x880000, 8 MB: ROM_REGION32_LE + ROM_LOAD32_WORD.
+         obj-1/obj-2 are the low/high halves of each dword for the first
+         4 MB and are the SAME chips Raiden II uses; dx_obj-3/4 follow. -->
+    <interleave output="32">
+      <part name="raiden_2_obj-1.u0811" crc="ff08ef0b" map="0021"/>
+      <part name="raiden_2_obj-2.u082"  crc="638eb771" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="dx_obj-3.u0837" crc="ba381227" map="0021"/>
+      <part name="dx_obj-4.u0836" crc="65e50d19" map="2100"/>
+    </interleave>
+  </rom>
+
+  <rom index="254" zip="raidendx.zip" type="nvram" md5="None">
+    <part>FF FF</part>
+  </rom>
+</misterromdescription>

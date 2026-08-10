@@ -54,6 +54,16 @@
        bg-1.u075 / bg-2.u0714 while many sets on disk use the opposite
        u-numbers. The CRCs below are authoritative; e61ad38e goes first.
        ============================================================ -->
+  <!-- Game select, read by the core at ioctl index 1, and it MUST come BEFORE
+       index 0. Sprites are decrypted inline as the index-0 stream arrives and
+       the decrypt window is per-game, so the core has to know the map before
+       the first sprite byte lands. 00 = Raiden II, 01 = Raiden DX. Stating it
+       explicitly is what lets the core drop its old clear-on-index-0 guard,
+       which would now wipe the value index 1 has just set. -->
+  <rom index="1">
+    <part>00</part>
+  </rom>
+
   <rom index="0" zip="raiden2.zip" md5="None">
 
     <!-- maincpu 0x000000, 1 MB: ROM_LOAD16_BYTE even/odd -->
