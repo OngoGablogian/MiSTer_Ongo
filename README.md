@@ -82,7 +82,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
-| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578)                                        |
+| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578/1528901089796034600)                    |
 | [Toobin'](https://misterfpga.org/viewtopic.php?p=110799)                                                                       |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
@@ -99,13 +99,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 ```
 [MiSTer]
 file_checking = 'exhaustive'
-```
-
-> [!IMPORTANT]
-> The Neo Geo Pocket Color MRA in the consoles folder requires that you symlink the "_Arcade/Cores" folder to "_Console/cores". This is necessary until the core leaves beta. To do this, enter the command listed below into the Linux command line on your MiSTer.
-
-```
-ln -s /media/fat/_Arcade/cores /media/fat/_Console/cores
 ```
 
 > [!IMPORTANT]
@@ -151,6 +144,9 @@ main=MiSTer_CDi
 [N64DD]
 main=MiSTer_N64DD
 ```
+
+> [!IMPORTANT]
+> Jotego's Neo Geo Pocket Color is out of beta. If you previously symlinked your **_Arcade/Cores** folder to **_Console/cores**, it can now be removed.
 
 ----
 

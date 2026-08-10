@@ -1,21 +1,24 @@
 <misterromdescription>
   <name>Bonanza Bros (US, Floppy DS3-5000-07d? Based)</name>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
   <mameversion>0288</mameversion>
   <setname>bnzabros</setname>
   <year>1990</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>segas24</rbf>
+  <rbf>SegaSystem24</rbf>
+  <resolution>15kHz</resolution>
   <rotation>horizontal</rotation>
   <joystick>8-way</joystick>
-  <buttons default="A,B,Start,Select,R,L" names="Fire,Jump,-,-,-,-,Start,Coin,Service,Test"/>
+  <buttons default="A,B,Start,Select,R,L,Y" names="Fire,Jump,-,-,-,-,Start,Coin,Service,Test,Pause"/>
   <switches default="FF FE"/>
-  <rom index="1" zip="bnzabros.zip" md5="none" type="merged|nonmerged|split">
+  <rom index="1" zip="bnzabros.zip" md5="none">
     <interleave output="16">
       <part name="epr-12187.ic2" crc="e83783f3" map="01"/>
       <part name="epr-12186.ic1" crc="ce76319d" map="10"/>
     </interleave>
   </rom>
-  <rom index="2" zip="bnzabros.zip" md5="none" type="merged|nonmerged|split">
+  <rom index="2" zip="bnzabros.zip" md5="none">
     <interleave output="16">
       <part name="mpr-13188-h.2" crc="d3802294" map="01"/>
       <part name="mpr-13187-h.1" crc="e3d8c5f7" map="10"/>
@@ -33,11 +36,13 @@
       <part repeat="1048576" map="10">00</part>
     </interleave>
   </rom>
-  <rom index="3" zip="bnzabros.zip" md5="none" type="merged|nonmerged|split">
+  <rom index="3" zip="bnzabros.zip" md5="none">
     <part name="ds3-5000-07d.img" crc="2e70251f"/>
     <part repeat="253952">00</part>
   </rom>
+  <nvram index="8" size="2097152"/>
   <rom index="0">
-    <part>0307002D00000000</part>
+    <part>0307002D00010004</part>
   </rom>
+  <mratimestamp>20260808</mratimestamp>
 </misterromdescription>

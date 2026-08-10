@@ -1,0 +1,89 @@
+<misterromdescription>
+  <name>Ougon no Shiro (Japan)</name>
+  <mameversion>0280</mameversion>
+  <setname>ogonsiro</setname>
+  <year>1986</year>
+  <manufacturer>Allumer / Taito</manufacturer>
+  <category>Fighter</category>
+  <rotation>horizontal</rotation>
+  <rbf>Arcade-Gladiator</rbf>
+
+  <!--
+    Japanese parent-region set. Same PCB, same machine config and same DIP
+    map as gladiatr in MAME (gladiatr.cpp GAME line 1455 uses the gladiatr
+    machine + gladiatr input ports), so the switch block below is identical
+    to the US MRA. Only the ROM stream differs.
+
+    Physical-ROM stream. No executable or MCU bytes are patched here.
+
+    Pack layout is fixed by rtl/memory/gladiator_roms.sv and must be filled
+    exactly; a short or reordered region shifts every later region:
+      0x00000 main   0x12000   0x2E000 text    0x02000   0x6C000 prom 0x040
+      0x12000 sound  0x04000   0x30000 bg p3   0x08000   0x6C040 cctl 0x400
+      0x16000 adpcm  0x18000   0x38000 bg p12  0x10000   0x6C440 ccpu 0x400
+                               0x48000 sp p3   0x0C000   0x6C840 ucpu 0x400
+                               0x54000 sp p12  0x18000   0x6CC40 csnd 0x800
+    Total 0x6D440.
+
+    The four aq_* MCU ROMs are shared with the gladiatr parent and MUST be
+    present in ogonsiro.zip. A split (parent-relative) zip omits them, which
+    leaves the UPI-41 cluster with blank code.
+  -->
+  <rom index="0" zip="ogonsiro.zip|gladiatr.zip" md5="none">
+    <!-- main Z80 0x00000 -->
+    <part name="qb0_5" crc="25b19efb" />
+    <part name="qb0_4" crc="347ec794" />
+    <part name="qb0_1" crc="040c9839" />
+    <part name="qb0_3" crc="d6a342e7" />
+    <!-- sub Z80 0x12000 -->
+    <part name="qb0_17" crc="e78be010" />
+    <!-- 6809 + ADPCM 0x16000 -->
+    <part name="qb0_20" crc="15916eda" />
+    <part name="qb0_19" crc="79caa7ed" />
+    <part name="qb0_18" crc="e9591260" />
+    <!-- text tiles 0x2E000 -->
+    <part name="qb0_15" crc="5e1332b8" />
+    <!-- bg plane 3 0x30000 -->
+    <part name="qb0_12" crc="0585d9ac" />
+    <!-- bg planes 1,2 0x38000 -->
+    <part name="qb0_13" crc="a6bb797b" />
+    <part name="qb0_14" crc="85b71211" />
+    <!-- sprite plane 3 0x48000 -->
+    <part name="qb0_6" crc="1a2bc769" />
+    <part name="qb0_7" crc="4b677bd9" />
+    <!-- sprite planes 1,2 0x54000 -->
+    <part name="qc0_8" crc="1c7ffdad" />
+    <part name="qb0_9" crc="38f5152d" />
+    <part name="qb0_10" crc="87ab6cc4" />
+    <part name="qb0_11" crc="25eaa4ff" />
+    <!-- address-decode PROMs 0x6C000 -->
+    <part name="q3.2b" crc="6a7c3c60" />
+    <part name="q4.5s" crc="e325808e" />
+    <!-- UPI-41 cluster 0x6C040 -->
+    <part name="aq_002.9b" crc="b30d225f" />
+    <part name="aq_003.xx" crc="1d02cd5f" />
+    <part name="aq_006.3a" crc="3c5ca4c6" />
+    <part name="aq_007.6c" crc="f19af04d" />
+  </rom>
+
+  <nvram index="2" size="2048" />
+
+  <buttons names="Attack 1,Attack 2,Attack 3,-,Start,Coin,Service"
+           default="A,B,X,R,L,Start" />
+
+  <switches default="5a,bf,ff">
+    <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Medium,Easy" />
+    <dip name="After 4 Stages" bits="2" ids="Continues,Ends" />
+    <dip name="Bonus Life" bits="3" ids="Every 100000,Only at 100000" />
+    <dip name="Lives" bits="4,5" ids="4,3,2,1" />
+    <dip name="Allow Continue" bits="6" ids="No,Yes" />
+    <dip name="Demo Sounds" bits="7" ids="On,Off" />
+    <dip name="Coin A" bits="8,9" ids="1C/5C,1C/4C,1C/2C,1C/1C" />
+    <dip name="Coin B" bits="10,11" ids="5C/1C,4C/1C,3C/1C,2C/1C" />
+    <dip name="Free Play" bits="12" ids="On,Off" />
+    <dip name="Cabinet" bits="14" ids="Upright,Cocktail" />
+    <dip name="Invulnerability (Cheat)" bits="16" ids="On,Off" />
+    <dip name="Memory Backup" bits="17" ids="Clear,Normal" />
+    <dip name="Starting Stage" bits="18,19" ids="4,3,2,1" />
+  </switches>
+</misterromdescription>

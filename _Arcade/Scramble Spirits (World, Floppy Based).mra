@@ -1,0 +1,30 @@
+<misterromdescription>
+  <name>Scramble Spirits (World, Floppy Based)</name>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <mameversion>0288</mameversion>
+  <setname>sspirits</setname>
+  <year>1988</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>SegaSystem24</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>vertical (ccw)</rotation>
+  <joystick>8-way</joystick>
+  <buttons default="A,B,Start,Select,R,L,Y" names="Fire,Formation,-,-,-,-,Start,Coin,Service,Test,Pause"/>
+  <switches default="FF FD"/>
+  <rom index="1" zip="sspirits.zip" md5="none">
+    <interleave output="16">
+      <part name="epr-12187.ic2" crc="e83783f3" map="01"/>
+      <part name="epr-12186.ic1" crc="ce76319d" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="3" zip="sspirits.zip" md5="none">
+    <part name="ds3-5000-02-.img" crc="179b98e9"/>
+    <part repeat="253952">00</part>
+  </rom>
+  <nvram index="8" size="2097152"/>
+  <rom index="0">
+    <part>0100002D00000000</part>
+  </rom>
+  <mratimestamp>20260808</mratimestamp>
+</misterromdescription>
