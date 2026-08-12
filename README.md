@@ -15,6 +15,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
+| [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                               |
 | [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                               |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Dyna Gear](https://www.patreon.com/Meathax/posts/dyna-gear-1994-165154459)                                                    |

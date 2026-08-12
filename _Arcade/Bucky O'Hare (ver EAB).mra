@@ -1,0 +1,69 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <resolution>15kHz</resolution>
+    <name>Bucky O'Hare (ver EAB)</name>
+    <setname>bucky</setname>
+    <rbf>Bucky</rbf>
+    <joystick>8</joystick>
+    <rom index="0" zip="bucky.zip" address="0x30000000">
+        <!-- Byte offsets for each ROM region. -->
+        <part>
+            00 00 40 02 80 06 80 08
+            80 10 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x240000 (22 bits) -->
+        <interleave output="16">
+            <part name="173eab02.q6" crc="9b45f122" map="01"/>
+            <part name="173eab01.q5" crc="7785ac8a" map="10"/>
+        </interleave>
+        <part repeat="0x180000"> FF</part>
+        <interleave output="16">
+            <part name="173a04.t6" crc="7dd54d6f" map="01"/>
+            <part name="173a03.t5" crc="cd724026" map="10"/>
+        </interleave>
+        <!-- soundcpu - starts at 0x240000 - length 0x40000 (18 bits) -->
+        <part name="173a07.f5" crc="4cdaee71"/>
+        <!-- pcm - starts at 0x280000 - length 0x400000 (22 bits) -->
+        <part name="173a08.b6" crc="dcdded95"/>
+        <part name="173a09.a6" crc="c93697c4"/>
+        <!-- k056832 - starts at 0x680000 - length 0x200000 (21 bits) -->
+        <interleave output="32">
+            <part name="173a05.t8" crc="d14333b4" map="0021"/>
+            <part name="173a06.t10" crc="6541a34f" map="2100"/>
+        </interleave>
+        <!-- obj - starts at 0x880000 - length 0x800000 (23 bits) -->
+        <interleave output="64">
+            <part name="173a10.b8" crc="42fb0a0c" map="00000021"/>
+            <part name="173a11.a8" crc="b0d747c4" map="00002100"/>
+            <part name="173a12.b10" crc="0fc2ad24" map="00210000"/>
+            <part name="173a13.a10" crc="4cf85439" map="21000000"/>
+        </interleave>
+        <!-- eeprom - starts at 0x1080000 - length 0x80 (7 bits) -->
+        <part name="bucky.nv" crc="6a5986f3"/>
+        <!-- Total 0x1080080 bytes - 16896 kBytes -->
+    </rom>
+    <rom index="2">
+        <part>
+00 00 02 00 03 01 00 00 00 1E 01 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 25
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <!--  8-pxl black frame on sides. -->
+    <rom index="1">
+        <part>20 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="af">
+        <IN1/>
+        <dip name="Sound Output" bits="4" ids="Stereo,Mono"/>
+        <dip name="Coin Mechanism" bits="5" ids="Independent,Common"/>
+        <dip name="Number of Players" bits="6,7" ids="-,3,4,2"/>
+    </switches>
+    <buttons names="Shoot,Jump,Special,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+</misterromdescription>
