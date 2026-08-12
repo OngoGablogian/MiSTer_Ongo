@@ -6,7 +6,7 @@
   <manufacturer>Allumer / Taito</manufacturer>
   <category>Fighter</category>
   <rotation>horizontal</rotation>
-  <rbf>Arcade-Gladiator</rbf>
+  <rbf>Gladiator</rbf>
 
   <!--
     Japanese parent-region set. Same PCB, same machine config and same DIP
