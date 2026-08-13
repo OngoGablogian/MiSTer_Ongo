@@ -24,6 +24,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
+| [GameKing](https://discord.com/channels/647909397477195803/1046941428758102086/1536851511965917204)                            |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-1-165050191)                      |
