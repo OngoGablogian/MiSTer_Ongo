@@ -1,0 +1,76 @@
+<!--
+Twin Hawk (World) - Toaplan / Taito, 1989. Taito X System (PCB P0-051A).
+
+All regions are concatenated into a single stream that the core splits by
+address:
+
+    0x000000  68000 program    256KB
+    0x040000  Z80 program       32KB
+    0x048000  X1-001 tile ROM    2MB
+
+ROM names, CRCs and DIP definitions follow MAME's src/mame/taito/taito_x.cpp.
+The screen is rotated 270 degrees; the core's Rotation option defaults to CCW.
+-->
+<misterromdescription>
+    <rbf>TwinHawk</rbf>
+    <name>Twin Hawk (World)</name>
+    <setname>twinhawk</setname>
+    <year>1989</year>
+    <manufacturer>Toaplan / Taito</manufacturer>
+    <players>2</players>
+    <joystick>8way</joystick>
+    <buttons count="2"/>
+    <rotation>vertical (ccw)</rotation>
+    <region>World</region>
+
+    <rom index="0" zip="twinhawk.zip" type="merged" md5="none">
+
+        <!-- 68000 program, 256 KB. The even byte of each word is the high
+             byte; MAME loads the .u7 half at region offset 0. -->
+        <interleave output="16">
+            <part name="b87-11.u7" crc="fc84a399" map="01"/>
+            <part name="b87-10.u5" crc="17181706" map="10"/>
+        </interleave>
+
+        <!-- Z80 program, 32 KB = two 16 KB banks. -->
+        <part name="b87-07.13e" crc="e2e0efa0"/>
+
+        <!-- Tile ROM, 2 MB. Four mask ROMs, one bit plane each; MAME builds
+             the region with ROM_LOAD32_WORD_SWAP, which is the byte order
+             produced here. The core re-orders the rows into scan order as it
+             writes them to SDRAM, so a whole tile row arrives in one burst.
+             map is read right to left across the output bytes. -->
+        <interleave output="32">
+            <part name="b87-04.3k" crc="958434b6" map="0012"/>
+            <part name="b87-02.3h" crc="89ad43a0" map="1200"/>
+        </interleave>
+        <interleave output="32">
+            <part name="b87-03.3j" crc="ce155ae0" map="0012"/>
+            <part name="b87-01.3f" crc="81e82ae1" map="1200"/>
+        </interleave>
+
+    </rom>
+
+    <!-- HIGH SCORE TABLE.
+         index MUST be 2, matching .ioctl_upload_index(8'd2) in TwinHawk.sv.
+         size is the table MAME's hiscore data describes for this set:
+             @:maincpu,program,f00132,40,00,aa
+         i.e. 0x40 bytes of work RAM at $F00132, valid once the first byte
+         reads back 00 and the last AA. -->
+    <nvram index="2" size="64"/>
+
+    <switches default="ff,7f" base="16">
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="4C 1C,3C 1C,2C 1C,1C 1C"/>
+        <dip name="Coin B" bits="6,7" ids="1C 6C,1C 4C,1C 3C,1C 2C"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Bonus Life" bits="10,11" ids="100k,50k,70k 200k,50k 150k"/>
+        <dip name="Lives" bits="12,13" ids="2,4,5,3"/>
+        <dip name="Allow Continue" bits="15" ids="Yes,No"/>
+    </switches>
+
+    <buttons names="Shot,Bomb,Start 1P,Start 2P,Coin,Service,Pause"
+             default="A,B,Start,Select,R,L,X" count="7"/>
+</misterromdescription>
