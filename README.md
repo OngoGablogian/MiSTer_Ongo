@@ -60,10 +60,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                         |
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                                |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
-| [Psikyo SH2](https://github.com/srg320/Arcade-PsikyoSH2_MiSTer)                                                                   |
 | [Raiden II](https://github.com/spacestate1/Arcade-Raiden2_MiSTer)                                                                 |
 | [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                                 |
-| [RetroAchievements Cores](https://github.com/odelot/Main_MiSTer)                                                                  |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                       |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                      |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                    |
@@ -86,7 +84,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                       |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                             |
 | [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578/1528901089796034600)                       |
-| [Toobin'](https://misterfpga.org/viewtopic.php?p=110799)                                                                          |
 | [Twin Hawk](https://www.patreon.com/bazset/posts/new-beta-release-166341563)                                                      |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                          |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                    |
@@ -103,26 +100,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 ```
 [MiSTer]
 file_checking = 'exhaustive'
-```
-
-> [!IMPORTANT]
-> For the [RetroAchievements](https://retroachievements.org) cores to function properly, you must add the lines below to your 'MiSTer.ini' file. Also, you'll need to add your [RetroAchievements](https://retroachievements.org) login credentials to the 'retroachievements.cfg' file located on the root of your MiSTer's SD card. The 'retroachievements.cfg' file receives updates periodically, when this happens your login credentials will be removed and will need to be added again.
-```
-[RA_Atari7800
-+RA_Gameboy
-+RA_GBA
-+RA_MegaCD
-+RA_MegaDrive
-+RA_N64
-+RA_NeoGeo
-+RA_NES
-+RA_PSX
-+RA_S32X
-+RA_Saturn
-+RA_SMS
-+RA_SNES
-+RA_TurboGrafx16]
-main=MiSTer_RA
 ```
 
 > [!IMPORTANT]
