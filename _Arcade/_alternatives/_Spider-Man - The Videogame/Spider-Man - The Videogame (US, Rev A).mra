@@ -4,10 +4,9 @@
   <parent>spidman</parent>
   <year>1991</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>SegaS32</rbf>
-  <buttons names="Attack,Jump,-,-,-,-,Start,Coin,Test,Service" default="A,B,-,-,-,-,Start,Select,R,L" count="10"/>
-  <rom index="0" zip="spidman.zip|spidmanu.zip" md5="none">
-    <part>20000081000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  <rbf>SegaSystem32</rbf>
+  <buttons names="Attack,Jump,-,-,-,-,Start,Coin,Test,Service" default="A,B,Start,Select,R,L" count="2"/>
+  <rom index="4" zip="spidman.zip|spidmanu.zip" md5="none">
     <part name="epr-14303a.ic13" crc="7f1bd28f"/>
     <part name="epr-14303a.ic13" crc="7f1bd28f"/>
     <part name="epr-14303a.ic13" crc="7f1bd28f"/>
@@ -32,6 +31,8 @@
       <part name="epr-14281.ic14" crc="8a746c42" map="01"/>
       <part name="epr-14280.ic6" crc="3c8148f7" map="10"/>
     </interleave>
+  </rom>
+  <rom index="5" zip="spidman.zip|spidmanu.zip" md5="none">
     <part name="epr-14285.ic35" crc="25aefad6"/>
     <part name="epr-14285.ic35" crc="25aefad6"/>
     <part name="epr-14285.ic35" crc="25aefad6"/>
@@ -42,14 +43,16 @@
     <part name="mpr-14283.ic26" crc="c863a91c"/>
     <part name="mpr-14282.ic22" crc="ea20979e"/>
     <part name="mpr-14282.ic22" crc="ea20979e"/>
+  </rom>
+  <rom index="6" zip="spidman.zip|spidmanu.zip" md5="none">
     <interleave output="32">
       <part name="mpr-14291-s.ic38" crc="490f95a1" map="0001"/>
       <part name="mpr-14289-s.ic29" crc="38570582" map="0010"/>
       <part name="mpr-14290-s.ic34" crc="a144162d" map="0100"/>
       <part name="mpr-14288-s.ic25" crc="3188b636" map="1000"/>
     </interleave>
-    <part repeat="4194304">FF</part>
-    <part repeat="65536">FF</part>
+  </rom>
+  <rom index="9" zip="spidman.zip|spidmanu.zip" md5="none">
     <interleave output="64">
       <part name="mpr-14299-h.ic36" crc="ce59231b" map="00000001"/>
       <part name="mpr-14298-h.ic32" crc="2745c84c" map="00000010"/>
@@ -60,7 +63,9 @@
       <part name="mpr-14293-s.ic28" crc="52899269" map="01000000"/>
       <part name="mpr-14292-s.ic24" crc="41f71443" map="10000000"/>
     </interleave>
-    <part repeat="8388608">FF</part>
   </rom>
   <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>20000081000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
 </misterromdescription>

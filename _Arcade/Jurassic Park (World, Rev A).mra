@@ -1,0 +1,50 @@
+<misterromdescription>
+  <name>Jurassic Park (World, Rev A)</name>
+  <setname>jpark</setname>
+  <year>1993</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>SegaSystem32</rbf>
+  <buttons names="Shoot,-,-,-,-,-,Start,Coin,Test,Service" default="A,Start,Select,R,L" count="1"/>
+  <rom index="4" zip="jpark.zip" md5="none">
+    <part name="epr-16402a.ic8" crc="c70db239"/>
+    <part name="epr-16402a.ic8" crc="c70db239"/>
+    <interleave output="16">
+      <part name="epr-16395.ic18" crc="ac5a01d6" map="01"/>
+      <part name="epr-16394.ic9" crc="c08c3a8a" map="10"/>
+    </interleave>
+    <patch offset="0xC15A8">70 CD CD D8</patch>
+  </rom>
+  <rom index="5" zip="jpark.zip" md5="none">
+    <part name="epr-16399.ic36" crc="b09b2fe3"/>
+    <part name="epr-16399.ic36" crc="b09b2fe3"/>
+    <part name="epr-16399.ic36" crc="b09b2fe3"/>
+    <part name="epr-16399.ic36" crc="b09b2fe3"/>
+    <part name="mpr-16398.ic35" crc="fa710ca6"/>
+    <part name="mpr-16397.ic34" crc="6e96e0be"/>
+    <part name="mpr-16396.ic24" crc="f69a2dc4"/>
+  </rom>
+  <rom index="6" zip="jpark.zip" md5="none">
+    <interleave output="16">
+      <part name="mpr-16404.ic14" crc="11283807" map="01"/>
+      <part name="mpr-16403.ic5" crc="02530a9b" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="9" zip="jpark.zip" md5="none">
+    <interleave output="64">
+      <part name="mpr-16405.ic32" crc="b425f182" map="00000021"/>
+      <part name="mpr-16407.ic30" crc="bc49ffd9" map="00002100"/>
+      <part name="mpr-16409.ic28" crc="fe73660d" map="00210000"/>
+      <part name="mpr-16411.ic26" crc="71cabbc5" map="21000000"/>
+    </interleave>
+    <interleave output="64">
+      <part name="mpr-16406.ic31" crc="b9ed73d6" map="00000021"/>
+      <part name="mpr-16408.ic29" crc="7b2f476b" map="00002100"/>
+      <part name="mpr-16410.ic27" crc="49c8f952" map="00210000"/>
+      <part name="mpr-16412.ic25" crc="105dc26e" map="21000000"/>
+    </interleave>
+  </rom>
+  <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>08040083000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
+</misterromdescription>

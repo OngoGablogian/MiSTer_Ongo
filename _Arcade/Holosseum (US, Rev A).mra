@@ -3,9 +3,9 @@
   <setname>holo</setname>
   <year>1992</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>SegaS32</rbf>
-  <rom index="0" zip="holo.zip" md5="none">
-    <part>00020081000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  <rbf>SegaSystem32</rbf>
+  <buttons names="Light Attack,Heavy Attack,-,-,-,-,Start,Coin,Test,Service" default="A,B,Start,Select,R,L" count="2"/>
+  <rom index="4" zip="holo.zip" md5="none">
     <part name="epr-14977a" crc="e0d7e288"/>
     <part name="epr-14977a" crc="e0d7e288"/>
     <part name="epr-14977a" crc="e0d7e288"/>
@@ -30,6 +30,8 @@
       <part name="epr-15011" crc="b9f59f59" map="01"/>
       <part name="epr-15010" crc="0c09c57b" map="10"/>
     </interleave>
+  </rom>
+  <rom index="5" zip="holo.zip" md5="none">
     <part name="epr-14965" crc="3a918cfe"/>
     <part name="epr-14965" crc="3a918cfe"/>
     <part name="epr-14965" crc="3a918cfe"/>
@@ -41,9 +43,8 @@
     <part name="mpr-14964" crc="7ff581d5"/>
     <part name="mpr-14963" crc="0974a60e"/>
     <part name="mpr-14962" crc="6b2e694e"/>
-    <part repeat="4194304">FF</part>
-    <part repeat="4194304">FF</part>
-    <part repeat="65536">FF</part>
+  </rom>
+  <rom index="9" zip="holo.zip" md5="none">
     <interleave output="64">
       <part name="mpr-14973" crc="b3c3ff6b" map="00000001"/>
       <part name="mpr-14972" crc="0c161374" map="00000010"/>
@@ -54,7 +55,9 @@
       <part name="mpr-14967" crc="5377fce0" map="01000000"/>
       <part name="mpr-14966" crc="dffba2e9" map="10000000"/>
     </interleave>
-    <part repeat="8388608">FF</part>
   </rom>
   <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>00020081000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
 </misterromdescription>

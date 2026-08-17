@@ -1,0 +1,51 @@
+<misterromdescription>
+  <name>Dark Edge (Japan)</name>
+  <setname>darkedgej</setname>
+  <parent>darkedge</parent>
+  <year>1992</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>SegaSystem32</rbf>
+  <buttons names="Light Punch,Heavy Punch,Jump,Light Kick,Heavy Kick,-,Start,Coin,Test,Service" default="A,B,R,X,Y,Start,Select,L" count="5"/>
+  <rom index="4" zip="darkedge.zip|darkedgej.zip" md5="none">
+    <part name="epr-15244.ic8" crc="0db138cb"/>
+    <part name="epr-15244.ic8" crc="0db138cb"/>
+    <part repeat="1048576">FF</part>
+  </rom>
+  <rom index="5" zip="darkedge.zip|darkedgej.zip" md5="none">
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="epr-15243.ic36" crc="08ca5f11"/>
+    <part name="mpr-15242.ic35" crc="ffb7d917"/>
+    <part name="mpr-15241.ic34" crc="8eccc4fe"/>
+    <part name="mpr-15240.ic24" crc="867d59e8"/>
+  </rom>
+  <rom index="6" zip="darkedge.zip|darkedgej.zip" md5="none">
+    <interleave output="16">
+      <part name="mpr-15248.ic14" crc="185b308b" map="01"/>
+      <part name="mpr-15247.ic5" crc="be21548c" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="9" zip="darkedge.zip|darkedgej.zip" md5="none">
+    <interleave output="64">
+      <part name="mpr-15249.ic32" crc="2b4371a8" map="00000021"/>
+      <part name="mpr-15251.ic30" crc="efe2d689" map="00002100"/>
+      <part name="mpr-15253.ic28" crc="8356ed01" map="00210000"/>
+      <part name="mpr-15255.ic26" crc="ff04a5b0" map="21000000"/>
+    </interleave>
+    <interleave output="64">
+      <part name="mpr-15250.ic31" crc="c5cab71a" map="00000021"/>
+      <part name="mpr-15252.ic29" crc="f8885fea" map="00002100"/>
+      <part name="mpr-15254.ic27" crc="7765424b" map="00210000"/>
+      <part name="mpr-15256.ic25" crc="44c36b62" map="21000000"/>
+    </interleave>
+  </rom>
+  <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>20000383000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
+</misterromdescription>
