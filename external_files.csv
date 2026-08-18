@@ -30,6 +30,11 @@ games/TOWNS/boot.rom,https://archive.org/download/OngoFiles/TOWNS/boot.rom,"2097
 games/Uneon/UNEON.VHD,https://archive.org/download/OngoFiles/Uneon/UNEON.VHD,"33554432",b953b5c105f3935f1d474f7499637a34,,,
 games/Zet98/boot.rom,https://archive.org/download/OngoFiles/Zet98/boot.rom,"550912",73fcde408c51bea3b23ba5b7c66be37d,,,
 
+games/kinst/kinst.img,https://archive.org/download/OngoFiles/KillerInstinct/kinst.img,"131076608",6d4c2f152c9a18ab3a9b05b8804306a8,,,
+games/kinst2/kinst2.img,https://archive.org/download/OngoFiles/KillerInstinct/kinst2.img,"457673216",2563b089b316f2c8636d78af661ac656,,,
+games/mame/kinst.zip,https://archive.org/download/OngoFiles/KillerInstinct/kinst.zip,"5843251",4bb48f2ea2091e45b6f14cf3689b7986,,,
+games/mame/kinst2.zip,https://archive.org/download/OngoFiles/KillerInstinct/kinst2.zip,"7479079",d20251e2d55f397d210199a632286c65,,,
+
 games/mame/agalletd.zip,https://archive.org/download/OngoFiles/mame/agalletd.zip,"870549",744fdfd5c32557a7835fad616ffa1bea,,,
 games/mame/asterix.zip,https://archive.org/download/OngoFiles/mame/asterix.zip,"4205033",dc616e8ef001635b99ee90ed38501c8f,,,
 games/mame/atarisy1.zip,https://archive.org/download/OngoFiles/mame/atarisy1.zip,"57375",f4a3c76103d9a5e50de8fac468e835c8,,,
