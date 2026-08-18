@@ -80,6 +80,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                              |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                             |
 | [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                          |
+| [Superman](https://www.patreon.com/bazset/posts/superman-taito-166783356?pr=true)                                                 |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                         |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                       |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                             |

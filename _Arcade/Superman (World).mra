@@ -1,0 +1,78 @@
+<!--
+Superman (Taito, 1988). Taito X System with the C-Chip daughter card.
+
+Requires superman.zip + cchip.zip.
+
+Stream layout (core splits by address):
+    0x000000  68000 program    512KB
+    0x080000  Z80 program       64KB
+    0x090000  X1-001 tile ROM    2MB
+    0x290000  ADPCM-A samples  512KB
+    0x310000  C-Chip ROMs       12KB
+
+68000 INTERLEAVE (hardware-verified 2026-08-15):
+  map polarity that produces correct vectors with this core's
+  {dl_even, ioctl_dout} packing:
+    a10/a8  map="01"   a5/a3  map="10"
+  Vector strip must read:
+    V:00F0 3FFE 0000 3EF0 4BF9 ....
+    A:...... s:1 p:1 o:1
+  SSP=$00F03FFE  PC=$00003EF0  opcode=4BF9 (LEA $F00000,A5)
+
+  The opposite maps (10/01) produce V:F000 FE3F 0000 F03E — do not use.
+-->
+<misterromdescription>
+    <rbf>Superman</rbf>
+    <name>Superman (World)</name>
+    <setname>superman</setname>
+    <year>1988</year>
+    <manufacturer>Taito</manufacturer>
+    <about author="bazset" source="https://github.com/bazset" patreon="https://www.patreon.com/cw/bazset"/>
+    <players>2</players>
+    <joystick>8way</joystick>
+    <buttons count="2"/>
+    <rotation>horizontal</rotation>
+    <region>World</region>
+
+    <rom index="0" zip="superman.zip|cchip.zip" type="merged" md5="none">
+
+        <interleave output="16">
+            <part name="b61_09.a10" crc="640f1d58" map="01"/>
+            <part name="b61_07.a5"  crc="fddb9953" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="b61_08.a8"  crc="79fc028e" map="01"/>
+            <part name="b61_13.a3"  crc="9f446a44" map="10"/>
+        </interleave>
+
+        <part name="b61_10.d18" crc="6efe79e8"/>
+
+        <interleave output="32">
+            <part name="b61-16.j1" crc="3622ed2f" map="0012"/>
+            <part name="b61-14.f1" crc="89368c3e" map="1200"/>
+        </interleave>
+        <interleave output="32">
+            <part name="b61-17.k1" crc="c34f27e0" map="0012"/>
+            <part name="b61-15.h1" crc="910cc4f9" map="1200"/>
+        </interleave>
+
+        <part name="b61-01.e18" crc="3cf99786"/>
+
+        <part name="cchip_upd78c11.bin" crc="43021521"/>
+        <part name="b61_11.m11" crc="3bc5d44b"/>
+
+    </rom>
+
+    <switches default="ff,ff" base="16">
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="4C 1C,3C 1C,2C 1C,1C 1C"/>
+        <dip name="Coin B" bits="6,7" ids="1C 6C,1C 4C,1C 3C,1C 2C"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Lives" bits="12,13" ids="5,4,2,3"/>
+    </switches>
+
+    <buttons names="Punch,Jump,Start 1P,Start 2P,Coin,Service,Pause"
+             default="A,B,Start,Select,R,L,X" count="7"/>
+</misterromdescription>
