@@ -1,0 +1,54 @@
+<misterromdescription>
+	<name>Aqua Rush (Japan, AQ1/VER.A1)</name>
+	<setname>aquarush</setname>
+	<rbf>SYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1999</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Puzzle</category>
+	<platform>Namco System 12</platform>
+
+	<!-- Same SDRAM layout as Tekken 3 (see that MRA). Aqua Rush is a lighter
+	     title: 16 MB banked ROM (two unified 8 MB dumps, no L/U split), one
+	     8 MB wave ROM. -->
+
+	<!-- ioctl 0: main program (2x 2MB, 16-bit interleaved: 2l=low bytes, 2p=high). -->
+	<rom index="0" zip="aquarush.zip" md5="none">
+		<interleave output="16">
+			<part name="aq1vera.2l" crc="91eb9258" map="01"/>
+			<part name="aq1vera.2p" crc="a92f21aa" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte (System 12 = bit5) + protection id (none). -->
+	<rom index="1"><part>24 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 16 MB. MAME loads these with plain ROM_LOAD
+	     (unified dumps), so no interleave. -->
+	<rom index="3" zip="aquarush.zip" md5="none">
+		<part name="aq1rom0.7" crc="3e64dd33"/>
+		<part name="aq1rom1.8" crc="e4d415cf"/>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program. -->
+	<rom index="6" zip="aquarush.zip" md5="none">
+		<part name="aq1vera.11s" crc="78277e02"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
+	<rom index="7" zip="aquarush.zip" md5="none">
+		<part name="aq1wave0.2" crc="0cf7278d"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM, blank (all-FF). -->
+	<rom index="9">
+		<part repeat="4096">FF</part>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file.
+	     Especially useful for Aqua Rush: its first boot bulk-writes the EEPROM
+	     (timestamp/ID/settings); with persistence, later boots skip that init. -->
+	<nvram index="9" size="2048"/>
+
+	<buttons names="Left,Center,Right,-,-,-,Start,Coin,Pause" default="A,B,X,,,,Start,Select,L3" count="3"/>
+</misterromdescription>

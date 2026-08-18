@@ -1,32 +1,38 @@
 <misterromdescription>
     <!-- *** REQUIRES THE coh700b BOOT-SIGNATURE MECHANISM (core build 2026-08-01 or later): this is a MAME coh700b machine, whose boot ROM spins forever unless main RAM 0x80010000 holds the 12 signature bytes 4E 61 6D 63 6F 20 4C 74 64 2E 2D 2D (ASCII "Namco Ltd." followed by two dashes) taken from program ROM +0x20280, as MAME namcos12_state::driver_reset does when m_boot_hack is set. Platform byte 0xA4 (bit7 set) tells the core to copy those 12 bytes into RAM after every reset. On an older core build (platform byte 0x24, no bit7 handling) this title will not boot. *** -->
-	<name>Fighting Layer (Asia, FTL3/VER.A)</name>
-	<setname>fgtlayer</setname>
+	<name>Paca Paca Passion 2 (Japan, PKS1/VER.A)</name>
+	<setname>pacapp2</setname>
 	<rbf>SYSTEM12</rbf>
 	<mameversion>0277</mameversion>
-	<year>1998</year>
-	<manufacturer>Arika / Namco</manufacturer>
-	<category>Fighting</category>
+	<year>1999</year>
+	<manufacturer>Produce / Namco</manufacturer>
+	<category>Rhythm</category>
 	<platform>Namco System 12</platform>
 
 	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
 	     0x0000000  Main RAM      4 MB  (COH-700)
 	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
-	     0x0800000  Banked ROM   32 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x0800000  Banked ROM   24 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
 	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
 	     0x2880000  C352 wave    16 MB  ioctl 7                        (S12_WAVE_START)
 	     top of image 0x3880000 (56.5 MB) - fits a 64 MB module.
 
-	     32 MB banked ROM - the exact size of the core's banked region
-	     (0x0800000..0x2800000), zero slack. coh700b machine config.
+	     INPUT NOTE: MAME's pacapp port set puts the four coloured game buttons on the
+	     JVS *direction* bits, not the button bits:
+	       UP = Yellow, DOWN = Red, LEFT = Blue, RIGHT = Green
+	     so the primary way to play on MiSTer is the D-PAD / stick.
+	     MAME marks JVS BUTTON1-4 IPT_UNUSED but notes in-source that 'these work
+	     too', so the four <buttons> slots below are wired to BUTTON1-4 as a
+	     convenience (believed to mirror Yellow/Red/Blue/Green in that order).
+	     No new platform bit was invented - the stock 0x24 map is byte-correct.
 	-->
 
 	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
 	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
-	<rom index="0" zip="fgtlayer.zip" md5="none">
+	<rom index="0" zip="pacapp2.zip" md5="none">
 		<interleave output="16">
-			<part name="ftl3vera.2e" crc="17c23471" map="01"/>
-			<part name="ftl3vera.2j" crc="1626465d" map="10"/>
+			<part name="pks1vera.2l" crc="aec428d3" map="01"/>
+			<part name="pks1vera.2p" crc="289e6e8a" map="10"/>
 		</interleave>
 	</rom>
 
@@ -38,32 +44,24 @@
 	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00. -->
 	<rom index="1"><part>A4 00</part></rom>
 
-	<!-- ioctl 3: banked data ROM, 32 MB. Concatenated in MAME "bankedroms" region
+	<!-- ioctl 3: banked data ROM, 24 MB. Concatenated in MAME "bankedroms" region
 	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
-	<rom index="3" zip="fgtlayer.zip" md5="none">
-		<part name="ftl1rom0.9" crc="e33ce365"/>
-		<part name="ftl1rom1.10" crc="a1ec7d08"/>
-		<part name="ftl1rom2.11" crc="204be858"/>
-		<interleave output="16">
-			<part name="ftl1fl3l.7" crc="e4fb01e1" map="01"/>
-			<part name="ftl1fl3h.8" crc="67a5c56f" map="10"/>
-		</interleave>
-		<interleave output="16">
-			<part name="ftl1fl4l.5" crc="8039242c" map="01"/>
-			<part name="ftl1fl4h.6" crc="5ad59726" map="10"/>
-		</interleave>
+	<rom index="3" zip="pacapp2.zip" md5="none">
+		<part name="pks1rom0.ic7" crc="91f151fc"/>
+		<part name="pks1rom1.ic8" crc="8195f981"/>
+		<part name="pks1rom2.ic9" crc="fea93ddc"/>
 	</rom>
 
 	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
 	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
-	<rom index="6" zip="fgtlayer.zip" md5="none">
-		<part name="ftl1vera.11s" crc="e3f957cd"/>
+	<rom index="6" zip="pacapp2.zip" md5="none">
+		<part name="pks1vera.11s" crc="4942b588"/>
 	</rom>
 
 	<!-- ioctl 7: C352 wave ROM, 16 MB. -->
-	<rom index="7" zip="fgtlayer.zip" md5="none">
-		<part name="ftl1wave0.2" crc="ee009a2b"/>
-		<part name="ftl1wave1.1" crc="a54a89cd"/>
+	<rom index="7" zip="pacapp2.zip" md5="none">
+		<part name="pks1wave0.ic2" crc="3ebd27c3"/>
+		<part name="pks1wave1.ic1" crc="07e426b7"/>
 	</rom>
 
 	<!-- ioctl 9: settings EEPROM, blank (all-FF). No proprietary nvram ships. -->
@@ -71,5 +69,5 @@
 		<part repeat="4096">FF</part>
 	</rom>
 
-	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin" default="A,B,X,Y,L,R,Start,Select" count="6"/>
+	<buttons names="Yellow,Red,Blue,Green,-,-,Start,Coin" default="A,B,X,Y,,,Start,Select" count="4"/>
 </misterromdescription>

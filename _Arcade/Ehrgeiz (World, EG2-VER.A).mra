@@ -1,7 +1,7 @@
 <misterromdescription>
 	<name>Ehrgeiz (World, EG2/VER.A)</name>
 	<setname>ehrgeiz</setname>
-	<rbf>XNSYSTEM12</rbf>
+	<rbf>SYSTEM12</rbf>
 	<mameversion>0277</mameversion>
 	<year>1998</year>
 	<manufacturer>Square / Namco</manufacturer>
@@ -67,8 +67,10 @@
 		<part name="eg1wave0.2" crc="961fe69f"/>
 	</rom>
 
-	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file. -->
-	<nvram index="9" size="2048"/>
+	<!-- ioctl 9: settings EEPROM, blank (all-FF). No proprietary nvram ships. -->
+	<rom index="9">
+		<part repeat="4096">FF</part>
+	</rom>
 
-	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin" default="A,B,X,Y,L,R,Start,Select" count="6"/>
 </misterromdescription>

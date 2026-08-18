@@ -1,0 +1,82 @@
+<misterromdescription>
+	<name>Tekken Tag Tournament (World, TEG2/VER.C1)</name>
+	<setname>tektagt</setname>
+	<rbf>SYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1999</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Fighting</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB   (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (this IS the boot rom; no BIOS)
+	     0x0800000  Banked ROM   56 MB   ioctl 3 -> DMA-5 source / CPU window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB   ioctl 7                     (S12_WAVE_START)
+	     top of image 0x5080000 (80.5 MB) - REQUIRES the 128MB SDRAM module (core relocates H8 program/wave above the 56MB banked ROM).
+	-->
+
+	<!-- ioctl 0: main program (2x 2MB, 16-bit interleaved). Boots directly from here. -->
+	<rom index="0" zip="tektagt.zip" md5="none">
+		<interleave output="16">
+			<part name="teg2verc1.2e" crc="c6da0717" map="01"/>
+			<part name="teg2verc1.2j" crc="25a1d2ff" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (System 11 = bit4, must stay CLEAR).
+	     0x24 = plain System 12 mode, no button remap (unlike Tekken 3's 0x64).
+	     Second byte = KEYCUS id. 0x44 = KC044: enables the HLE Tekken Tag Tournament
+	     protection + alternate-DMA path in memorymux (s12_tektagt gate). Tekken 3 /
+	     Soul Calibur keep 0x00 and are unaffected. -->
+	<rom index="1"><part>A4 44</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 56 MB total. ROM pairs delivered byte-interleaved (output="16" single-bit maps - the only idiom the MiSTer built-in MRA loader assembles correctly); the core swaps the middle bytes of each 32-bit word to restore the ROM_LOAD32_WORD layout.
+	     Fetched by the CPU through the 2 MB window AND by the DMA-5 ROM reader.
+
+	     Layout (MAME region "bankedroms", size 0x3800000):
+	     0x0000000: teg1_rom0e (8MB) + teg1_rom0o (8MB) = 16 MB (ROM_LOAD32_WORD pairs at 0x0, 0x2)
+	     0x1000000: teg1_rom1e (8MB) + teg1_rom1o (8MB) = 16 MB (ROM_LOAD32_WORD pairs)
+	     0x2000000: teg1_rom2e (8MB) + teg1_rom2o (8MB) = 16 MB (ROM_LOAD32_WORD pairs)
+	     0x3000000: flel (2MB) + fleu (2MB) + flol (2MB) + flou (2MB) = 8 MB (ROM_LOAD32_BYTE at offsets 0,1,2,3)
+	-->
+	<rom index="3" zip="tektagt.zip" md5="none">
+		<interleave output="16">
+			<part name="teg1_rom0e.ic9"  crc="c962a373" map="01"/>
+			<part name="teg1_rom0o.ic13" crc="badb7dcf" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="teg1_rom1e.ic10" crc="b3d56124" map="01"/>
+			<part name="teg1_rom1o.ic14" crc="2434ceb6" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="teg1_rom2e.ic11" crc="6e5c3428" map="01"/>
+			<part name="teg1_rom2o.ic15" crc="21ce9dfa" map="10"/>
+		</interleave>
+		<interleave output="32">
+			<part name="flel.ic4"  crc="88b3823c" map="0001"/>
+			<part name="fleu.ic5"  crc="36df0867" map="0010"/>
+			<part name="flol.ic6"  crc="03a76765" map="0100"/>
+			<part name="flou.ic7"  crc="6d6947d1" map="1000"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     The H8 execution engine is implemented and runs this program; sound works.
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="tektagt.zip" md5="none">
+		<part name="teg1.11s" crc="67d0c469"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 16 MB (2x 8MB files); core relocates it to SDRAM 0x4080000 (above the 56MB banked image). -->
+	<rom index="7" zip="tektagt.zip" md5="none">
+		<part name="teg1_wave0.ic1" crc="4bd99104"/>
+		<part name="teg1_wave1.ic12" crc="dbc74fff"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes). Persisted as .nvram save file. -->
+	<nvram index="9" size="2048"/>
+
+	<buttons names="LP,RP,Tag,LK,RK,-,Start,Coin,Pause" default="A,B,R,X,Y,,Start,Select,L3" count="5"/>
+</misterromdescription>
