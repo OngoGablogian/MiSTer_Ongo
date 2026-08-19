@@ -1,0 +1,55 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>teljan</setname>
+	<description>Tel Jan</description>
+	<rotation>horizontal</rotation>
+	<year>1999</year>
+	<manufacturer>Electro Design</manufacturer>
+	<buttons names="Button 1,Button 2,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="teljan.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="810144f1" name="tj100-00.u24" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="82f570e1" name="tj101-00.u20" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="ace875dc" name="tj102-00.u17" map="12345678" />
+		</interleave>
+		<part repeat="0x400000">00</part>
+
+		<interleave output="64">
+			<part crc="be0f90b2" name="tj200-00.u16" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<part repeat="0x1000000">00</part>
+
+		<interleave output="64">
+			<part crc="685495c4" name="tj300-00.u4" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="7e2b836c" name="sknsj1.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="09b552fe" name="tel1j.u10" map="13570" />
+			<part crc="070b4345" name="tel1j.u8" map="1357" />
+		</interleave>
+		<part repeat="0x100000">00</part>
+	</rom>
+	<rom index="2" md5="" >
+		<part>10 4A 00 00 05 00</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>

@@ -1,0 +1,63 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>galpansua</setname>
+	<description>Gals Panic SU (Korea)</description>
+	<rotation>horizontal</rotation>
+	<year>1999</year>
+	<manufacturer>Kaneko</manufacturer>
+	<buttons names="Button 1,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="galpansua.zip|galpans2.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="294b2f14" name="24" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="f75c5a9a" name="20" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="25b4f56b" name="17" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="db6d4424" name="32" map="12345678" />
+		</interleave>
+
+		<interleave output="64">
+			<part crc="5caae1c0" name="16" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="8d51f197" name="13" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<part repeat="0x400000">00</part>
+		<interleave output="64">
+			<part crc="58800a18" name="7" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<interleave output="64">
+			<part crc="0348e8e1" name="4" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="ff1c9f79" name="sknsk1.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="5ae66218" name="su.u10" map="13570" />
+			<part crc="10977a03" name="su.u8" map="1357" />
+		</interleave>
+	</rom>
+	<rom index="2" md5="" >
+		<part>00 4B FF FF FF FF</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>

@@ -1,0 +1,49 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>gutsn</setname>
+	<description>Guts'n (Japan)</description>
+	<rotation>horizontal</rotation>
+	<year>2000</year>
+	<manufacturer>Kaneko</manufacturer>
+	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="gutsn.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="1959979e" name="gts10000.u24" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="c443aac3" name="gts20000.u16" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<part repeat="0x1000000">00</part>
+
+		<interleave output="64">
+			<part crc="8c169141" name="gts30000.u4" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="7e2b836c" name="sknsj1.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="8ee91310" name="gts000j0.u6" map="13570" />
+			<part crc="80b8ee66" name="gts001j0.u4" map="1357" />
+		</interleave>
+		<part repeat="0x100000">00</part>
+	</rom>
+	<rom index="2" md5="" >
+		<part>20 4A 00 00 00 00</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>

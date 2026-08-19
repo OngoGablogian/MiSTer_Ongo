@@ -1,0 +1,52 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>vblokbrk</setname>
+	<description>VS Block Breaker (Europe)</description>
+	<rotation>horizontal</rotation>
+	<year>1997</year>
+	<manufacturer>Kaneko</manufacturer>
+	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="vblokbrk.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="151dd88a" name="sk-100-00.u24" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="779cce23" name="sk-101.u20" map="12345678" />
+		</interleave>
+		<part repeat="0xD00000">00</part>
+
+		<interleave output="64">
+			<part crc="2e297c61" name="sk-200-00.u16" map="12345678" />
+		</interleave>
+		<part repeat="0xE00000">00</part>
+
+		<part repeat="0x1000000">00</part>
+
+		<interleave output="64">
+			<part crc="e6535c05" name="sk-300-00.u4" map="12345678" />
+		</interleave>
+		<part repeat="0xE00000">00</part>
+
+		<interleave output="64">
+			<part crc="e2b9d7d1" name="sknse2.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="5a278f10" name="sk000e2-e.u10" map="13570" />
+			<part crc="aecf0647" name="sk000e-o.u8" map="1357" />
+		</interleave>
+		<part repeat="0x100000">00</part>
+	</rom>
+	<rom index="2" md5="" >
+		<part>60 45 FF FF FF FF</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>

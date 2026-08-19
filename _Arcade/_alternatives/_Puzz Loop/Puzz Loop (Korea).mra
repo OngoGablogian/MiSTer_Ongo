@@ -1,0 +1,53 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>puzzloopk</setname>
+	<description>Puzz Loop (Korea)</description>
+	<rotation>horizontal</rotation>
+	<year>1998</year>
+	<manufacturer>Mitchell</manufacturer>
+	<buttons names="Button 1,Button 2,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="puzzloopk.zip|puzzloop.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="35bf6897" name="pzl10000.u24" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="ff558e68" name="pzl20000.u16" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<part repeat="0x400000">00</part>
+		<interleave output="64">
+			<part crc="c8b3be64" name="pzl21000.u18" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<interleave output="64">
+			<part crc="38604b8d" name="pzl30000.u4" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="ff1c9f79" name="sknsk1.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="8d81f20c" name="pl0k4.u6" map="13570" />
+			<part crc="17c78e41" name="pl0k4.u4" map="1357" />
+		</interleave>
+		<part repeat="0x100000">00</part>
+	</rom>
+	<rom index="2" md5="" >
+		<part>50 4B FF FF FB FF</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>

@@ -1,0 +1,64 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>sengekis</setname>
+	<description>Sengeki Striker (Asia)</description>
+	<rotation>vertical</rotation>
+	<year>1997</year>
+	<manufacturer>Kaneko</manufacturer>
+	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="sengekis.zip|sengekisj.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="bc7b3dfa" name="ss100-00.u21" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="ab2df280" name="ss101-00.u20" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="0845eafe" name="ss102-00.u8" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="ee451ac9" name="ss103-00.u32" map="12345678" />
+		</interleave>
+
+		<interleave output="64">
+			<part crc="cd773976" name="ss200-00.u17" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="301fad4c" name="ss201-00.u9" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<part repeat="0x400000">00</part>
+		<interleave output="64">
+			<part crc="c3697805" name="ss210-00.u3" map="12345678" />
+		</interleave>
+		<part repeat="0xA00000">00</part>
+
+		<interleave output="64">
+			<part crc="35b04b18" name="ss300-00.u1" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="745e5212" name="sknsa1.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="962fe857" name="ss01a.u6" map="13570" />
+			<part crc="ee853c23" name="ss01a.u4" map="1357" />
+		</interleave>
+		<part repeat="0x100000">00</part>
+	</rom>
+	<rom index="2" md5="" >
+		<part>20 41 00 00 00 00</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>

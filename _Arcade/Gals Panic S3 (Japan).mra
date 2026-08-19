@@ -1,0 +1,48 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>galpans3</setname>
+	<description>Gals Panic S3 (Japan)</description>
+	<rotation>horizontal</rotation>
+	<year>2002</year>
+	<manufacturer>Kaneko</manufacturer>
+	<buttons names="Button 1,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="galpans3.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="70613168" name="u24.bin" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<interleave output="64">
+			<part crc="a96daf2a" name="u16.bin" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<part repeat="0x1000000">00</part>
+
+		<interleave output="64">
+			<part crc="bf5736c6" name="u4.bin" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="7e2b836c" name="sknsj1.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="c1449a72" name="gpss3.u10" map="13570" />
+			<part crc="11eb44cf" name="gpss3.u8" map="1357" />
+		</interleave>
+	</rom>
+	<rom index="2" md5="" >
+		<part>00 4A 00 00 00 00</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>

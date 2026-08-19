@@ -1,0 +1,59 @@
+<misterromdescription>
+	<rbf>SKNS</rbf>
+	<mameversion>0289</mameversion>
+	<setname>senknow</setname>
+	<description>Sen-Know (Japan)</description>
+	<rotation>horizontal</rotation>
+	<year>1999</year>
+	<manufacturer>Kaneko</manufacturer>
+	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" />
+
+	<switches default="01">
+		<dip bits="1" name="Flip" ids="On,Off"/>
+		<dip bits="6" name="Use Backup Ram" ids="No,Yes"/>
+		<dip bits="7" name="Freeze" ids="Yes,No"/>
+	</switches>
+
+	<rom index="0" md5="" zip="senknow.zip|skns.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="5133c69c" name="snw10000.u21" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="9dafe03f" name="snw10100.u20" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<interleave output="64">
+			<part crc="d5fe5f8c" name="snw20000.u17" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="c0037846" name="snw20100.u9" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<part repeat="0x400000">00</part>
+		<interleave output="64">
+			<part crc="f5c23e79" name="snw21000.u3" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+
+		<interleave output="64">
+			<part crc="ec9eef40" name="snw30000.u1" map="12345678" />
+		</interleave>
+		<part repeat="0xC00000">00</part>
+
+		<interleave output="64">
+			<part crc="7e2b836c" name="sknsj1.u10" map="12345678" />
+		</interleave>
+		<part repeat="0x180000">00</part>
+		<interleave output="64">
+			<part crc="0d6136f6" name="snw000j1.u6" map="13570" />
+			<part crc="4a10ec3d" name="snw001j1.u4" map="1357" />
+		</interleave>
+		<part repeat="0x100000">00</part>
+	</rom>
+	<rom index="2" md5="" >
+		<part>20 4A 00 00 00 00</part>
+	</rom>
+	<nvram index="4" size="0x2000" />
+</misterromdescription>
