@@ -58,6 +58,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)    |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                  |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                     |
+| [Paperboy](https://misterfpga.org/viewtopic.php?t=10510)                                                                          |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                         |
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                                |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
