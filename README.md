@@ -33,7 +33,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                           |
 | [JTSDRAM 48](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram48_20210108.rbf)                                       |
 | [JTSDRAM 96](https://github.com/jotego/jtbin/blob/master/deprecated/jtsdram96_20210108.rbf)                                       |
-| [Killer Instinct](https://discord.com/channels/647909397477195803/737506076806611064/1539048060800471201)                         |
+| [Killer Instinct](https://discord.com/channels/647909397477195803/737506076806611064/1539408927681417347)                         |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                       |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                               |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                                |
@@ -62,7 +62,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                                |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
 | [Raiden II](https://github.com/spacestate1/Arcade-Raiden2_MiSTer)                                                                 |
-| [RCA Studio II](https://github.com/JasonA-dev/RCAStudioII_Mister)                                                                 |
+| [RCA Studio II](https://discord.com/channels/647909397477195803/737506076806611064/1539407161665523763)                           |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                       |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                      |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                    |
