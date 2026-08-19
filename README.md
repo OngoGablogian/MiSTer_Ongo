@@ -63,13 +63,14 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                                |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
 | [Raiden II](https://github.com/spacestate1/Arcade-Raiden2_MiSTer)                                                                 |
-| [RCA Studio II](https://discord.com/channels/647909397477195803/737506076806611064/1539407161665523763)                           |
+| [RCA Studio II](https://discord.com/channels/647909397477195803/737506076806611064/1539696937543012445)                           |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                       |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                      |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                    |
 | [SEGA System 24](https://github.com/meathax/s24)                                                                                  |
 | [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                      |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                     |
+| [Seibu SPI](https://discord.com/channels/647909397477195803/1047332718674968617/1539526330952060998)                              |
 | [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                     |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                      |

@@ -1,0 +1,132 @@
+<!--            FPGA compatible core for Seibu SPI / SXX2E hardware        -->
+<!--                                                                     -->
+<!-- This file is part of SeibuSPI.                                      -->
+<!--                                                                     -->
+<!-- SeibuSPI is free software: you can redistribute it and/or modify    -->
+<!-- it under the terms of the GNU General Public License as published   -->
+<!-- by the Free Software Foundation, either version 3 of the License,   -->
+<!-- or (at your option) any later version.                              -->
+
+<misterromdescription>
+    <name>Raiden Fighters (Taiwan, single board)</name>
+    <setname>rdfts</setname>
+    <rbf>SeibuSPI</rbf>
+    <mameversion>0277</mameversion>
+    <year>1996</year>
+    <manufacturer>Seibu Kaihatsu (Explorer System Corp. license)</manufacturer>
+    <players>2</players>
+    <joystick>8</joystick>
+    <rotation>vertical (cw)</rotation>
+    <region>Taiwan</region>
+    <category>Shooter</category>
+
+    <!--
+      Part order is significant. rtl/rom_loader.sv walks this list with a fixed
+      table and performs MAME's ROM_LOAD24_* / ROM_LOAD32_* byte scatter in
+      hardware, because MRA <interleave> cannot express the 3-byte period the
+      Seibu "D + P" graphics ROM pairs need. Do not reorder or insert parts
+      without updating the table in rom_loader.sv to match.
+
+      Layout produced in SDRAM (see rtl/spi_defs.vh):
+        0x0000000  2 MB   386 program
+        0x0200000  256 KB Z80 program
+        0x0240000  192 KB text tiles
+        0x0280000  2 MB   YMF271 samples
+        0x0480000  6 MB   background tiles
+        0x0A80000  12 MB  sprites, three 4 MB plane-pair chunks
+    -->
+    <!--
+      These are MAME's rdfts filenames. rdfts is a clone of rdft, so in a merged
+      set most of these files are stored under the PARENT's names. That is fine:
+      MiSTer matches parts by the crc= attribute first (zip_search_by_crc in
+      Main_MiSTer's FileOpenZip) and only falls back to the filename, so every
+      part below resolves out of rdft.zip regardless of how it is named there.
+      Keep the CRCs correct - they are load-bearing, not documentation.
+    -->
+    <!--
+      Config blob, index 1. Byte 0 is the mod byte and 0x00 is what rdfts wants:
+      the SXX2E single board, part table 0, every part copied rather than
+      decoded. That is also the core's power-up state, so this element changes
+      nothing on a fresh load -- it is here so that loading rdfts AFTER a set
+      that does set something (rdft's 0x01, rdft2's 0x03 plus a codec) cannot
+      leave a stale value behind if the RBF is not reloaded in between.
+
+      It must precede the index-0 ROM: Main_MiSTer sends <rom> elements in file
+      order, and the loader has to know its table before the image starts.
+    -->
+    <rom index="1"><part>00</part></rom>
+
+    <rom index="0" address="0x30000000" zip="rdfts.zip|rdft.zip" md5="none">
+        <!-- 386 program -->
+        <part name="seibu_1.u0259"        crc="e278dddd"/>
+        <part name="raiden-f_prg2.u0258"  crc="58ccb10c"/>
+        <part name="raiden-f_prg34.u0262" crc="63f01d17"/>
+
+        <!-- Z80 program -->
+        <part name="seibu_zprg.u1139"     crc="c1fda3e8"/>
+
+        <!-- text layer -->
+        <part name="raiden-f_fix.u0535"   crc="2be2936b"/>
+        <part name="seibu_fix2.u0528"     crc="4d87e1ea"/>
+
+        <!-- background tiles -->
+        <part name="gun_dogs_bg1-d.u0526" crc="6a68054c"/>
+        <part name="gun_dogs_bg1-p.u0531" crc="3400794a"/>
+        <part name="gun_dogs_bg2-d.u0534" crc="61cd2991"/>
+        <part name="gun_dogs_bg2-p.u0530" crc="502d5799"/>
+
+        <!-- sprites -->
+        <part name="gun_dogs_obj-1.u0322" crc="59d86c99"/>
+        <part name="gun_dogs_obj-2.u0324" crc="1ceb0b6f"/>
+        <part name="gun_dogs_obj-3.u0323" crc="36e93234"/>
+
+        <!-- YMF271 samples -->
+        <part name="raiden-f_pcm2.u0975"  crc="3f8d4a48"/>
+    </rom>
+
+    <!--
+      The save file, in /media/fat/config/nvram/. 512 bytes: the DS2404's
+      bookkeeping SRAM, and nothing else.
+
+      The cartridge MRAs declare 516 here -- the sample flash's four-byte region
+      stamp, then these same 512 bytes as the tail. SXX2E's samples are a real
+      ROM, so there is no stamp to keep and the tail sits at offset 0 instead. rom_loader's
+      mod byte is what tells the core which of the two shapes to expect
+      (spi_nvram.sv's `has_flash`), and `make check-mra` holds the size here
+      against it.
+
+      It is byte-for-byte MAME's own ~/.mame/nvram/rdfts/ds2404, which is the
+      only nvram file MAME writes for this set.
+    -->
+    <nvram index="2" size="512"/>
+
+    <!--
+      INPUTS (0x604) and SYSTEM (0x60C) are active low on hardware; the core
+      inverts them.
+
+      The names below map to joystick bits 4 upwards IN ORDER, and SeibuSPI.sv
+      decodes them at exactly those positions - bit 4 Shot ... bit 10 Test.
+      Change one and you must change the other.
+
+      Test is MAME's PORT_SERVICE_NO_TOGGLE: a momentary panel button, held
+      down rather than latched. It is also on the DIP page below for setups
+      with no spare pad button.
+    -->
+    <buttons names="Shot,Bomb,Button 3,Start,Coin,Service Coin,Test,Pause"
+             default="A,B,X,Start,Select,R,L,Y" count="3"/>
+
+    <!--
+      SW1:1 is the board's only DIP. The game reads it from INPUTS bit 15 and
+      flips its own rendering; the core just presents the bit.
+
+      Note the polarity: MAME's PORT_SPECIAL_ONOFF_DIPLOC(0x8000, 0x0000, ...)
+      makes Off = bit clear and On = bit set, and a DIPSWITCH field is NOT
+      subject to the port's IP_ACTIVE_LOW inversion the way the buttons are. So
+      unlike most arcade MRAs this one defaults to 00, not ff, and the core
+      passes bit 15 straight through instead of inverting it.
+    -->
+    <switches default="00" base="0">
+        <dip name="Flip Screen"  bits="0" ids="Off,On"/>
+        <dip name="Service Mode" bits="1" ids="Off,On"/>
+    </switches>
+</misterromdescription>

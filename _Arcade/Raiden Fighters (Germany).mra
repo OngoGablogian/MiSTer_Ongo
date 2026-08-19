@@ -1,0 +1,210 @@
+<!--            FPGA compatible core for Seibu SPI / SXX2C hardware        -->
+<!--                                                                     -->
+<!-- This file is part of SeibuSPI.                                      -->
+<!--                                                                     -->
+<!-- SeibuSPI is free software: you can redistribute it and/or modify    -->
+<!-- it under the terms of the GNU General Public License as published   -->
+<!-- by the Free Software Foundation, either version 3 of the License,   -->
+<!-- or (at your option) any later version.                              -->
+
+<misterromdescription>
+    <name>Raiden Fighters (Germany)</name>
+    <setname>rdft</setname>
+    <rbf>SeibuSPI</rbf>
+    <mameversion>0277</mameversion>
+    <year>1996</year>
+    <manufacturer>Seibu Kaihatsu</manufacturer>
+    <players>2</players>
+    <joystick>8</joystick>
+    <rotation>vertical (cw)</rotation>
+    <region>Germany</region>
+    <category>Shooter</category>
+
+    <!--
+      THE SAMPLE FLASH. The SXX2C cartridge has no sample ROM: the YMF271 reads
+      two flash chips the game programs itself, and this MRA ships them BLANK
+      along with the ROMs the game's updater reads to fill them. What fills
+      them is an OSD option, "Sample Flash":
+
+      BOTH settings derive the 2 MB payload out of SDRAM in about a third of a
+      second. What the option picks is whether the region STAMP goes with it,
+      because that is the only thing the game tests:
+
+        Pre-built (default)  Payload and stamp. The game finds a programmed
+                             flash and plays at once. Same job table, same
+                             sources, same bytes as the game's own updater --
+                             checked against the image MAME's flash devices
+                             hold, on all seven sets.
+
+        Cart copy            Payload only. The game finds a blank stamp and
+                             spends about six minutes programming a flash whose
+                             contents are already correct, the way the real
+                             cartridge does at first boot. It ends on "UPDATE
+                             COMPLETED. PLEASE TURN THE POWER BACK ON".
+
+                             SWITCHING to it blanks the stamp and restarts the
+                             board, because boot is the only moment the game
+                             looks -- so the copy can always be seen again.
+                             Switching back does nothing: Pre-built writes the
+                             real stamp at the next boot anyway.
+
+      Pre-built ignores the stamp in the save file, deliberately: it writes the
+      real one from the program image a moment later, so a stored copy could only
+      be the same bytes or a stale set. Cart copy uses it, and that is the whole
+      mechanism -- a restored stamp means the copy has been done and the game
+      skips its updater. The DS2404's 512-byte tail is live either way.
+    -->
+
+    <!--
+      Part order is significant. rtl/rom_loader.sv walks this list with a fixed
+      table -- selected by the mod byte below -- and performs MAME's
+      ROM_LOAD24_* / ROM_LOAD32_* byte scatter in hardware. `make check-mra`
+      holds this file, that table and MAME's ROM_START against each other.
+
+      The tail is where this differs from the pre-flashed MRA, and it is in
+      MAME's own region order: sound01's two ROMs, then soundflash1's blank.
+
+        part 14  the PCM source ROM      -> 0x1D00000, the source window
+        part 15  the second sound ROM    -> 0x0480000, source AND Z80 program
+        part 16  a BLANK 2 MB flash      -> 0x0280000, what the game programs
+
+      Layout produced in SDRAM (see rtl/spi_defs.vh):
+        0x0000000  2 MB   386 program
+        0x0200000  256 KB Z80 program -- RAM, NOT loaded here. The 386 fills it
+                          through port 0x688 and releases the Z80 with 0x68C.
+        0x0240000  192 KB text tiles
+        0x0280000  2 MB   YMF271 sample flash, blank at boot
+        0x0480000  512 KB the second sound ROM, packed one byte per 386 dword
+        0x0500000  6 MB   background tiles
+        0x1100000  12 MB  sprites, three 4 MB plane-pair chunks
+        0x1D00000  2 MB   the PCM source ROM, read through the sound01 window
+                          -- PER-SET, immediately above this set's own sprites,
+                          which is what keeps the map inside 32 MB (31 MB top)
+    -->
+
+    <!--
+      Index 1 is the core's config blob. Byte 0 is the mod byte: bit 0 selects
+      the SXX2C board wiring, bits 3:1 the set, and BIT 4 the authentic-flash
+      tail of that set's part table plus the 386's sound01 source window. Bit 4
+      alone does nothing -- it is ANDed with bit 0 in SeibuSPI.sv, because on
+      SXX2E it would open a window with nothing behind it.
+
+      IT MUST COME BEFORE THE index="0" ROM. Main_MiSTer sends <rom> elements in
+      file order, and an index-1 that follows the image arrives after the loader
+      has already walked its table.
+    -->
+    <rom index="1">
+      <!--
+        Byte 0 is the mod byte. Bytes 1-15 are the {part index, codec}
+        pairs, all FF here because this variant decodes nothing on the
+        way in -- FF is the documented terminator.
+
+        Bytes 16-24 are the sample-flash derivation's constants, read
+        at fixed offsets by SeibuSPI.sv. They are in the MRA and not in
+        the RTL because a CLONE has its own job-table address: its
+        program differs, so the table moves. senkyu is 0x00302324 and
+        batlball 0x00302290, same game, same graphics, same everything
+        else. In the RTL that would be a core rebuild per clone.
+
+          job table  0x0020174d
+          stamp      0x003ffffc   written to flash[0..3] LAST
+          generation 1            B0
+
+        All three come out of tools/build_soundflash.py's GAMES table,
+        which read them out of the game's own program image; make
+        check-mra holds this block against it.
+      -->
+      <part>11</part>
+      <part>FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF</part>
+      <part>4D 17 20 00</part>
+      <part>FC FF 3F 00</part>
+      <part>01</part>
+    </rom>
+
+    <rom index="0" address="0x30000000" zip="rdft.zip" md5="none">
+        <!-- 386 program: four byte lanes, unlike rdfts's two bytes + one word -->
+        <part name="raiden-fi_prg0_121196.u0211" crc="adcb5dbc"/>
+        <part name="raiden-fi_prg1_121196.u0212" crc="60c5b92e"/>
+        <part name="raiden-fi_prg2_121196.u0210" crc="44b86db5"/>
+        <part name="raiden-fi_prg3_121196.u029"  crc="e70727ce"/>
+
+        <!-- text layer: three byte lanes -->
+        <part name="seibu_5.u0423" crc="8f8d4e14"/>
+        <part name="seibu_6.u0424" crc="6ac64968"/>
+        <part name="seibu_7.u048"  crc="4d87e1ea"/>
+
+        <!-- background tiles -->
+        <part name="gun_dogs_bg1-d.u0415" crc="6a68054c"/>
+        <part name="gun_dogs_bg1-p.u0410" crc="3400794a"/>
+        <part name="gun_dogs_bg2-d.u0424" crc="61cd2991"/>
+        <part name="gun_dogs_bg2-p.u049"  crc="502d5799"/>
+
+        <!-- sprites -->
+        <part name="gun_dogs_obj-1.u0322" crc="59d86c99"/>
+        <part name="gun_dogs_obj-2.u0324" crc="1ceb0b6f"/>
+        <part name="gun_dogs_obj-3.u0323" crc="36e93234"/>
+
+        <!--
+          Parts 14 and 15: MAME's sound01 region, whole, as two files. The
+          pre-flashed MRA slices these same two ROMs into a finished image; here
+          they are carried intact, because the game reads them itself. Both are
+          scattered across the 386's address space rather than contiguous, which
+          spi_cpu.sv rebuilds on the fly -- see PLAN.md 17.2.
+        -->
+        <part name="gun_dogs_pcm.u0217" crc="31253ad7"/>
+        <part name="seibu_8.u0216"      crc="f88cb6e4"/>
+
+        <!--
+          Part 16: the sample flash, BLANK. flash0_blank_regionXX.u1053 is a
+          real dump and it carries the region ID in byte 0 -- an erased or
+          mismatched one is the "hardware error 81" the MAME driver header
+          describes. MAME has no dump for the second E28F008SA because an
+          erased chip has nothing to dump, so it is a megabyte of FF here.
+        -->
+        <part name="flash0_blank_region80.u1053" crc="e2adaff5"/>
+        <part repeat="0x100000">FF</part>
+    </rom>
+
+    <!--
+      The save file, in /media/fat/config/nvram/. Index 2 because 0 is the ROM
+      image, 1 the core's config blob and 254 the DIP switches.
+
+      ONE element, because an MRA gets one, so what the board remembers is
+      concatenated into it -- and it is 516 bytes, not two megabytes:
+
+        0x000..0x003   the sample flash's REGION STAMP, and nothing else of it
+        0x004..0x203   the DS2404's 512 bytes of bookkeeping SRAM
+
+      Those four bytes are what the game tests to decide the flash is already
+      programmed, so they are the whole flag that says whether its own updater
+      runs. The two megabytes behind them are DERIVED at every boot in a third of
+      a second, which made storing them pointless twice over -- and expensive:
+      Main reads the save file back every time it polls, so a 2 MB one made the
+      OSD visibly unresponsive on every open.
+
+      The stamp comes first so that the tail is what moves on a set with no flash
+      at all: SXX2E's samples are a real ROM, so its file is those 512 bytes and
+      nothing else. The tail is byte-for-byte MAME's own `ds2404` nvram file.
+
+      Main_MiSTer sends this file AFTER the index-0 image, which is what lets it
+      land on top of the blank flash that image carries, so it must stay below
+      the <rom> element here.
+    -->
+    <nvram index="2" size="516"/>
+
+    <!--
+      The names map to joystick bits 4 upwards IN ORDER and SeibuSPI.sv decodes
+      them at exactly those positions, so this list and that decode change
+      together. Pause is the eighth, bit 11, and is not a board input at all --
+      it gates the 386 while the video engines keep running, so the frozen frame
+      stays on screen. It is not on button 3 because four of the seven sets are
+      MAME's spi_3button and use that as a game button.
+    -->
+    <buttons names="Shot,Bomb,Button 3,Start,Coin,Service Coin,Test,Pause"
+             default="A,B,X,Start,Select,R,L,Y" count="3"/>
+
+    <switches default="00" base="0">
+        <dip name="Flip Screen"  bits="0" ids="Off,On"/>
+        <dip name="Service Mode" bits="1" ids="Off,On"/>
+    </switches>
+</misterromdescription>
