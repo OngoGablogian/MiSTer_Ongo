@@ -3,7 +3,7 @@
 	<setname>starswep</setname>
 	<year>1997</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 
 	<!-- NOTE: no banked-ROM windows in the MAME map for this game -->
 	<!-- NOTE: KEYCUS C442 implemented (keycus_id 0x08) -->

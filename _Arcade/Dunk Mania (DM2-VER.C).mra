@@ -3,7 +3,7 @@
 	<setname>dunkmnia</setname>
 	<year>1995</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 
 	<!-- NOTE: KEYCUS C410 implemented (keycus_id 0x03) -->
 	<!-- NOTE: wave ROM 4MB - needs the >=4MB wave window core build -->

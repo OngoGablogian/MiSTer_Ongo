@@ -3,7 +3,7 @@
 	<setname>ptblank2a</setname>
 	<year>1999</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 
 	<!-- ROM8/64 PCB: two-level rom8_64 banking (upper latch @0x1F080000), supported by the core -->
 	<!-- NOTE: KEYCUS C443 implemented (keycus_id 0x09) -->
@@ -42,7 +42,7 @@
 	</rom>
 	<rom index="8" zip="namcoc76.zip" md5="none">
 		<!-- C76 internal BIOS (16KB) - loaded into the sound MCU at core start -->
-		<part name="c76.bin" crc="399faac7">
+		<part name="c76.bin"/>
 	</rom>
 	<!-- ioctl_index 9: EEPROM (AT28C16, 2KB). All-FF blank fill (4096 bytes -> 1024 words). -->
 	<!-- No proprietary nvram ships; the game writes its own defaults on first boot.      -->

@@ -7,7 +7,7 @@
 	<players>2</players>
 	<joystick>8-way</joystick>
 	<rotation>horizontal</rotation>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 
 	<!-- ioctl_index 0: 4MB game program -> SDRAM 0x400000, CPU 0x1FC00000.    -->
 	<!-- System 11 has NO separate Sony BIOS; the program IS the boot code.     -->

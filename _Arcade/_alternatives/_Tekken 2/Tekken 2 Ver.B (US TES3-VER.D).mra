@@ -3,7 +3,7 @@
 	<setname>tekken2ud</setname>
 	<year>1996</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 
 	<!-- NOTE: KEYCUS C406 not implemented in the core; game may or may not check it -->
 	<!-- NOTE: wave ROM 4MB - needs the >=4MB wave window core build -->

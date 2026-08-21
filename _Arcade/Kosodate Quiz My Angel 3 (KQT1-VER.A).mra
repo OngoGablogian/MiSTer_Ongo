@@ -3,7 +3,7 @@
 	<setname>myangel3</setname>
 	<year>1998</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 
 	<!-- ROM8/64 PCB: two-level rom8_64 banking (upper latch @0x1F080000), supported by the core -->
 	<!-- NOTE: KEYCUS C443 implemented (keycus_id 0x09) -->

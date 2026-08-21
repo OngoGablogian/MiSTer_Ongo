@@ -3,7 +3,7 @@
 	<setname>pocketrc</setname>
 	<year>1996</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 
 	<!-- NOTE: KEYCUS C432 implemented (keycus_id 0x07) -->
 	<!-- NOTE: wave ROM 4MB - needs the >=4MB wave window core build -->
