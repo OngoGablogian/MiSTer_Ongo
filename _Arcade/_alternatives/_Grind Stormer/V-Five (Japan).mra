@@ -1,0 +1,51 @@
+<misterromdescription>
+    <name>V-Five (Japan)</name>
+    <setname>vfive</setname>
+    <rbf>GrindStormer</rbf>
+    <mameversion>0288</mameversion>
+    <year>1993</year>
+    <manufacturer>Toaplan</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Vertical (CCW)</rotation>
+    <region>Japan</region>
+    <platform>Toaplan TP-027</platform>
+    <category>Shoot'em up</category>
+
+    <buttons names="Shot,Bomb,Start,Coin,Pause"
+             default="A,B,Start,Select,L" count="2"/>
+
+    <switches default="00,00,00">
+        <!-- DSW A -->
+        <dip name="Cabinet" bits="0" ids="Upright,Cocktail"/>
+        <dip name="Flip Screen" bits="1" ids="Off,On"/>
+        <dip name="Service Mode" bits="2" ids="Off,On"/>
+        <dip name="Demo Sounds" bits="3" ids="On,Off"/>
+        <dip name="Coin A" bits="4,5" ids="1/1,1/2,2/1,2/3"/>
+        <dip name="Coin B" bits="6,7" ids="1/1,1/2,2/1,2/3"/>
+        <!-- DSW B -->
+        <dip name="Difficulty" bits="8,9"
+             ids="Normal,Easy,Hard,Very Hard"/>
+        <dip name="Bonus Life" bits="10,11"
+             ids="300k and 800k,300k and every 800k,200k only,None"/>
+        <dip name="Lives" bits="12,13" ids="3,5,2,1"/>
+        <dip name="Invulnerability (Cheat)" bits="14" ids="Off,On"/>
+        <dip name="Allow Continue" bits="15" ids="Yes,No"/>
+        <!-- JMPR -->
+        <dip name="Copyright" bits="20,21" values="0,3"
+             ids="All Rights Reserved,Licensed to Taito Corp."/>
+        <dip name="Unused" bits="22" ids="Off,On"/>
+        <dip name="Unknown" bits="23" ids="Off,On"/>
+    </switches>
+
+    <rom index="0" zip="grindstm.zip" md5="None"
+         address="0x30000000">
+        <part name="tp027_01.bin" crc="731d50f4"/>
+        <part name="tp027_02.bin" crc="877b45e8"/>
+        <part name="tp027_03.bin" crc="b1fc6362"/>
+    </rom>
+
+    <rom index="1">
+        <part>05 80</part>
+    </rom>
+</misterromdescription>

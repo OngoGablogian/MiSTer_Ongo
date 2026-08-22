@@ -1,0 +1,76 @@
+<misterromdescription>
+    <about author="javi" webpage="https://github.com/javi-ivaj" twitter="-" source="https://github.com/javi-ivaj"/>
+    <rotation>horizontal</rotation>
+    <name>Momoko 120% (bootleg)</name>
+    <setname>momokob</setname>
+    <mameversion>0282</mameversion>
+    <year>1986</year>
+    <manufacturer>bootleg</manufacturer>
+    <players>2</players>
+    <rbf>jvmomoko</rbf>
+    <joystick>4</joystick>
+    <region>World</region>
+    <rom index="0" zip="momokob.zip|momoko.zip" md5="None">
+        <!-- maincpu - starts at 0x0 - length 0xC000 (16 bits) -->
+        <part name="3.bin" crc="a18d7e78"/>
+        <part name="2.bin" crc="2dcf50ed"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- audiocpu - starts at 0xC000 - length 0x8000 (15 bits) -->
+        <part name="momoko01.u4" crc="e8a6673c"/>
+        <!-- MOMOKO_BGMAP -->
+        <!-- JTFRAME_BA2_START -->
+        <!-- bg_map - starts at 0x14000 - length 0x20000 (17 bits) -->
+        <part name="4.bin" crc="1f0226d5"/>
+        <part name="momoko05.p8" crc="757cdd2b"/>
+        <part name="momoko06.n8" crc="20cacf8b"/>
+        <part name="momoko07.l8" crc="b94b38db"/>
+        <!-- MOMOKO_BGGFX -->
+        <!-- bg_gfx - starts at 0x34000 - length 0x20000 (17 bits) -->
+        <interleave output="16">
+            <part name="momoko09.e8" crc="9f5847c7" map="01"/>
+            <part name="momoko11.c8" crc="9c9fbd43" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="10.bin" crc="68b9156d" map="01"/>
+            <part name="12.bin" crc="c32f5e19" map="10"/>
+        </interleave>
+        <!-- MOMOKO_OBJGFX -->
+        <!-- spr_gfx - starts at 0x54000 - length 0x10000 (16 bits) -->
+        <interleave output="16">
+            <part name="16.bin" crc="49de49a1" map="01"/>
+            <part name="17.bin" crc="f06a3d1a" map="10"/>
+        </interleave>
+        <!-- MOMOKO_FGMAP -->
+        <!-- fg_map - starts at 0x64000 - length 0x4000 (14 bits) -->
+        <part name="momoko15.k2" crc="8028f806"/>
+        <!-- MOMOKO_CHGFX -->
+        <!-- text - starts at 0x68000 - length 0x2000 (13 bits) -->
+        <part name="momoko13.u4" crc="2745cf5a"/>
+        <!-- MOMOKO_FGGFX -->
+        <!-- fg_gfx - starts at 0x6A000 - length 0x2000 (13 bits) -->
+        <part name="momoko14.p2" crc="cfccca05"/>
+        <!-- MOMOKO_BGATR -->
+        <!-- bg_col_map - starts at 0x6C000 - length 0x2000 (13 bits) -->
+        <part name="momoko08.h8" crc="69b41702"/>
+        <!-- MOMOKO_PROM -->
+        <!-- proms - starts at 0x6E000 - length 0x120 (9 bits) -->
+        <part name="momoko-c.bin" crc="f35ccae0"/>
+        <part name="momoko-b.bin" crc="427b0e5c"/>
+        <!-- Total 0x6E120 bytes - 440 kBytes -->
+    </rom>
+    <nvram index="2" size="6416"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ef">
+        <DSW0/>
+        <dip name="Lives" bits="0,1" ids="255,5,4,3"/>
+        <dip name="Coinage" bits="2,4" ids="Free Play,2/5,1/5,1/2,5/1,3/1,2/1,1/1"/>
+        <dip name="Difficulty" bits="5,6" ids="Hardest,Hard,Easy,Normal"/>
+        <DSW1/>
+        <dip name="Bonus Life" bits="8,9" ids="100k,20k,50k,30k"/>
+        <dip name="Cabinet" bits="12" ids="Upright,Cocktail"/>
+        <dip name="Demo Sounds" bits="13" ids="Off,On"/>
+    </switches>
+    <buttons names="Attack,Jump,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>

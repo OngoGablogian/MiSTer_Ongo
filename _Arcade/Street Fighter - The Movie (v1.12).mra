@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<misterromdescription>
+    <name>Street Fighter: The Movie (v1.12)</name>
+    <setname>sftm</setname>
+    <rbf>ITech32</rbf>
+    <mameversion>0288</mameversion>
+    <year>1995</year>
+    <manufacturer>Capcom / Incredible Technologies</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>World</region>
+    <platform>Incredible Technologies 32-bit</platform>
+    <category>Fighting</category>
+
+    <switches default="00">
+        <dip name="Video Sync" bits="0" ids="-,+"/>
+        <dip name="Flip Screen" bits="1" ids="Off,On"/>
+        <dip name="Unknown (SW1:2)" bits="2" ids="On,Off"/>
+        <dip name="Service Mode" bits="3" ids="Off,On"/>
+    </switches>
+
+    <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin,Pause" default="Y,X,L,B,A,R,Start,Select,L3" count="6"/>
+
+    <!--
+        One byte-addressed stream staged at DDR 0x30000000.  Every fill is
+        explicit because an MRA part stream has no destination seek.
+    -->
+    <rom index="0" zip="sftm.zip" address="0x30000000">
+        <!-- 0x0000000: 68EC020 ROM_LOAD32_BYTE lanes, byte 0 first. -->
+        <interleave output="32">
+            <part name="sfm_prom0_v1.12.prom0" crc="9d09355c" map="0001"/>
+            <part name="sfm_prom1_v1.12.prom1" crc="a58ac6a9" map="0010"/>
+            <part name="sfm_prom2_v1.12.prom2" crc="2f21a4f6" map="0100"/>
+            <part name="sfm_prom3_v1.12.prom3" crc="d26648d9" map="1000"/>
+        </interleave>
+        <!-- Reserve the rest of the 4 MiB 68EC020 ROM window. -->
+        <part repeat="0x300000">00</part>
+
+        <!--
+            0x0400000: MAME soundcpu logical image.  ROM_LOAD consumes file
+            bytes 0x00000..0x37fff at 0x10000; ROM_CONTINUE then consumes
+            0x38000..0x3ffff at 0x08000.
+        -->
+        <part repeat="0x08000">00</part>
+        <part name="sfm_snd_v1.u23" crc="10d85366" offset="0x38000" length="0x08000"/>
+        <part name="sfm_snd_v1.u23" crc="10d85366" offset="0x00000" length="0x38000"/>
+        <!-- Pad from soundcpu 0x48000 to GROM base 0x0500000. -->
+        <part repeat="0x0b8000">00</part>
+
+        <!-- 0x0500000: GROM0, 16 MiB after ROM_LOAD32_BYTE interleave. -->
+        <interleave output="32">
+            <part name="rm0-0.grm0_0" crc="09ef29cb" map="0001"/>
+            <part name="rm0-1.grm0_1" crc="6f5910fa" map="0010"/>
+            <part name="rm0-2.grm0_2" crc="b8a2add5" map="0100"/>
+            <part name="rm0-3.grm0_3" crc="6b6ff867" map="1000"/>
+        </interleave>
+
+        <!-- 0x1500000: GROM1, 16 MiB after interleave. -->
+        <interleave output="32">
+            <part name="rm1-0.grm1_0" crc="d5d65f77" map="0001"/>
+            <part name="rm1-1.grm1_1" crc="90467e27" map="0010"/>
+            <part name="rm1-2.grm1_2" crc="903e56c2" map="0100"/>
+            <part name="rm1-3.grm1_3" crc="fac35686" map="1000"/>
+        </interleave>
+
+        <!-- 0x2500000: small GROM3 set; GROM2 sockets are unpopulated. -->
+        <interleave output="32">
+            <part name="sfm_grm3_0.grm3_0" crc="3e1f76f7" map="0001"/>
+            <part name="sfm_grm3_1.grm3_1" crc="578054b6" map="0010"/>
+            <part name="sfm_grm3_2.grm3_2" crc="9af2f698" map="0100"/>
+            <part name="sfm_grm3_3.grm3_3" crc="cd38d1d6" map="1000"/>
+        </interleave>
+        <!-- Pad the 0x2080000-byte GROM region to SAMPLE0 at 0x2600000. -->
+        <part repeat="0x080000">00</part>
+
+        <!--
+            0x2600000: ES5506 region 0, ROM_LOAD16_BYTE at even addresses in
+            a ROMREGION_ERASE00 region.  The odd byte lane is therefore zero.
+        -->
+        <interleave output="16">
+            <part name="sfm_srom0.srom0" crc="6ca1d3fc" map="01"/>
+            <part repeat="0x200000" map="10">00</part>
+        </interleave>
+
+        <!--
+            0x2a00000: ES5506 region 3.  The first 1 MiB contains the even-lane
+            512 KiB ROM; the remaining 3 MiB of the 4 MiB region is erase-zero.
+        -->
+        <interleave output="16">
+            <part name="sfm_srom3.srom3" crc="4f181534" map="01"/>
+            <part repeat="0x080000" map="10">00</part>
+        </interleave>
+        <part repeat="0x300000">00</part>
+
+        <!-- Stream ends at 0x2e00000.  Writable VRAM is never downloaded. -->
+    </rom>
+</misterromdescription>

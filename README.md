@@ -27,6 +27,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                               |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                       |
 | [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-1-165050191)                         |
+| [Grind Stormer](https://github.com/TheJesusFish/Arcade-GrindStormer_MiSTer)                                                       |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                     |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                         |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                           |
@@ -44,6 +45,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Midway Y Unit](https://www.patreon.com/blahm1d/posts/system-warning-164511442?collection=2278348)                                |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                         |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                               |
+| [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                        |
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                       |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                   |
 | [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-166884433)                                              |
@@ -81,6 +83,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                   |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                              |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                             |
+| [Street Fighter: The Movie](https://discord.com/channels/647909397477195803/1047333006555217991/1537829622371061781)              |
 | [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                          |
 | [Superman](https://www.patreon.com/bazset/posts/superman-taito-166783356?pr=true)                                                 |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                         |
