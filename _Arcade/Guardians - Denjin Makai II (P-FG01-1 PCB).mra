@@ -1,6 +1,6 @@
 <misterromdescription>
   <name>Guardians / Denjin Makai II (P-FG01-1 PCB)</name>
-  <mratimestamp>202608090000</mratimestamp>
+  <mratimestamp>202608220000</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>grdians</setname>
   <rbf>Guardians</rbf>
@@ -16,7 +16,7 @@
     <dip bits="8,9,10,11" name="Coin A" ids="Free Play,4C/3C,4C/1C,3C/4C,3C/2C,3C/1C,2C/5C,2C/3C,2C/1C,1C/7C,1C/6C,1C/5C,1C/4C,1C/3C,1C/2C,1C/1C" />
     <dip bits="12,13,14,15" name="Coin B" ids="Free Play,4C/3C,4C/1C,3C/4C,3C/2C,3C/1C,2C/5C,2C/3C,2C/1C,1C/7C,1C/6C,1C/5C,1C/4C,1C/3C,1C/2C,1C/1C" />
   </switches>
-  <rom index="0" zip="grdians.zip" md5="580dde95d937dc00f9c32c3f7548ca7d">
+  <rom index="0" zip="grdians.zip" md5="None">
     <!-- 2 MiB TMP68301 program, byte-interleaved big-endian. -->
     <interleave output="16">
       <part name="u2.bin" crc="36adc6f2" map="01" />

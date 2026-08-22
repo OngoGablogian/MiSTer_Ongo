@@ -1,0 +1,83 @@
+<misterromdescription>
+	<name>Arm Wrestling</name>
+	<setname>armwrest</setname>
+	<year>1985</year>
+	<manufacturer>Nintendo</manufacturer>
+	<rbf>Punchout_test</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<!--buttons default="B,A,Y,X,Select" names="Left Punch,Right Punch,Pull,Power,Coin"></buttons-->
+	<!--buttons default="Y,X,Select" names="-,-,Pull,Power,Coin"></buttons-->
+	<!--buttons default="X,Select,Y" names="-,-,-,Pull,Coin,Power"></buttons-->
+	<buttons default="A,Select,B" names="-,-,-,Pull,Coin,Power"></buttons>
+	<switches default="ff,0f">
+		<!-- SW2 -->
+		<dip name="Difficulty" bits="0,1" ids="Easy,Medium,Hard,Hardest" values="3,2,1,0"/>
+		<dip name="Coinage Table" bits="5" ids="A (listed below),B (see .mra comment)" values="1,0"/>
+		<dip name="Rematches" bits="6" ids="3,7"/>
+		<dip name="Service Mode" bits="7" ids="On,Off"/>
+		<!-- SW1 -->
+		<dip name="Coinage" bits="8,11" ids="1 Coin/1 Credit,2 Coins/1 Credit,3 Coins/1 Credit,4 Coins/1 Credit,5 Coins/1 Credit,6 Coins/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,1 Coin/3 Cr 2/Play,1 Coin/5 Cr 2/Play,1 Coin/4 Cr 3/Play,1 Coin/5 Cr 5/Play,Free Play" values="15,14,3,12,11,7,13,10,9,5,8,4,2,1,6,0"/>
+		<!--dip name="Coin Slots (R18)" bits="14" ids="1,2"/-->
+		<!--dip name="R19 (unused)" bits="15" ids="Fitted,Not Fitted"/-->
+	</switches>
+	<rom index="0" zip="armwrest.zip|punchout.zip">
+		<!--Region: maincpu, Size: 0xC000 bytes-->
+		<part crc="b09764c1" name="chv1-c.8l"/>
+		<part crc="0e147ff7" name="chv1-c.8k"/>
+		<part crc="e7365289" name="chv1-c.8j"/>
+		<part crc="a2118eec" name="chv1-c.8h"/>
+		<part crc="664a07c4" name="chpv-c.8f"/>
+		
+		<!--Region: audiocpu, Size: 0x2000 bytes-->
+		<part crc="cb6ef376" name="chp1-c.4k"/>
+		
+		<!--Region: vlm, Size: 0x4000 bytes-->
+		<part crc="31b52896" name="chv1-c.6p"/>
+		
+		<!--Region: gfx3, Size: 0x28000 bytes-->
+		<part crc="d86056d9" name="chv1-v.2r"/>
+		<part crc="5ad77059" name="chv1-v.2t"/>
+		<part repeat="16384">00</part>
+		<part crc="a0fd7338" name="chv1-v.2v"/>
+		
+		<part crc="690e26fb" name="chv1-v.3r"/>
+		<part crc="ea5d7759" name="chv1-v.3t"/>
+		<part repeat="16384">00</part>
+		<part crc="ceb37c05" name="chv1-v.3v"/>
+		
+		<part crc="e291cba0" name="chv1-v.4r"/>
+		<part crc="e01f3b59" name="chv1-v.4t"/>
+
+		<part repeat="16384">00</part>
+		
+		<!--Region: gfx4, Size: 0x000 bytes-->
+		<part crc="d834e142" name="chv1-v.6p"/>
+		<part repeat="8192">00</part>
+		<part crc="a2f531db" name="chv1-v.8p"/>
+		<part repeat="8192">00</part>
+		
+		<!--Region: gfx1, Size: 0x8000 bytes-->
+		<part crc="8b45f365" name="chpv-b.2e"/>
+		<part crc="b1a2850c" name="chpv-b.2d"/>
+		
+		<!--Region: gfx2, Size: 0xA000 bytes-->
+		<part crc="19245b37" name="chpv-b.2m"/>
+		<part crc="46797941" name="chpv-b.2l"/>
+		<part crc="de189b00" name="chpv-b.2k"/>
+		
+		<!--Region: paltop, Size: 0x600 bytes-->
+		<part crc="df6fdeb3" name="chpv-b.7b"/>
+		<part crc="b1da5f42" name="chpv-b.7c"/>
+		<part crc="4ede813e" name="chpv-b.7d"/>
+		
+		<!--Region: palbot, Size: 0x600 bytes-->
+		<part crc="9d51416e" name="chpv-b.4b"/>
+		<part crc="b8a25795" name="chpv-b.4c"/>
+		<part crc="474fc3b1" name="chpv-b.4d"/>
+	</rom>
+	<rom index="1">
+		<part>02</part>
+	</rom>
+	<nvram index="4" size="1024"></nvram>
+</misterromdescription>

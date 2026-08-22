@@ -1,0 +1,78 @@
+<misterromdescription>
+	<name>Super Punch-Out!! (Rev B)</name>
+	<setname>spnchout</setname>
+	<year>1984</year>
+	<manufacturer>Nintendo</manufacturer>
+	<rbf>Punchout_test</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<buttons default="B,A,Y,X,Select" names="Left Punch,Right Punch,Duck,KOBlow,Coin"></buttons>
+	<switches default="ef,0f">
+		<!-- SW2 -->
+		<dip name="Difficulty" bits="0,1" ids="Easy,Medium,Hard,Hardest" values="3,2,1,0"/>
+		<dip name="Time" bits="2,3" ids="Longest,Long,Short,Shortest" values="3,2,1,0"/>
+		<dip name="Demo Sounds" bits="4" ids="On,Off"/>
+		<dip name="Rematch At A Discount" bits="5" ids="On,Off"/>
+		<dip name="Service Mode" bits="7" ids="On,Off"/>
+		<!-- SW1 -->
+		<dip name="Coinage" bits="8,11" ids="1 Coin/1 Credit,2 Coins/1 Credit,3 Coins/1 Credit,4 Coins/1 Credit,5 Coins/1 Credit,6 Coins/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,1 Coin/2 Cr 3/Play,1 Coin/3 Cr 2/Play,Free Play" values="15,14,3,12,11,7,13,10,9,5,8,4,2,0"/>
+		<!--dip name="R18 (unused)" bits="14" ids="Fitted,Not Fitted"/-->
+		<dip name="Copyright (R19)" bits="15" ids="America,Japan"/>
+	</switches>
+	<rom index="0" zip="spnchout.zip|punchout.zip">
+		<!--Region: maincpu, Size: 0xC000 bytes-->
+		<part crc="703b9780" name="chs1-c.8l"/>
+		<part crc="e13719f6" name="chs1-c.8k"/>
+		<part crc="1fa629e8" name="chs1-c.8j"/>
+		<part crc="15a6c068" name="chs1-c.8h"/>
+		<part crc="4ff3cdd9" name="chs1-c.8f"/>
+		<!--Region: audiocpu, Size: 0x2000 bytes-->
+		<part crc="cb6ef376" name="chp1-c.4k"/>
+		<!--Region: vlm, Size: 0x4000 bytes-->
+		<part crc="ad8b64b8" name="chs1-c.6p"/>
+		<!--Region: gfx3, Size: 0x2C000 bytes-->
+		<part crc="ff33405d" name="chs1-v.2r"/>
+		<part crc="f507818b" name="chs1-v.2t"/>
+		<part crc="0995fc95" name="chs1-v.2u"/>
+		<part crc="f44d9878" name="chs1-v.2v"/>
+		<part repeat="8192">00</part>
+		<part crc="09570945" name="chs1-v.3r"/>
+		<part crc="42c6861c" name="chs1-v.3t"/>
+		<part crc="bf5d02dd" name="chs1-v.3u"/>
+		<!--part repeat="8192">00</part-->
+		<part crc="5673f4fc" name="chs1-v.3v"/>
+		<part repeat="8192">00</part> 
+		<part crc="8e155758" name="chs1-v.4r"/>
+		<part crc="b4e43448" name="chs1-v.4t"/>
+		<part crc="74e0d956" name="chs1-v.4u"/>
+		<!--part repeat="8192">00</part-->
+		<!--Region: gfx4, Size: 0x8000 bytes-->
+		<part crc="75be7aae" name="chp1-v.6p"/> 
+		<part crc="daf74de0" name="chp1-v.6n"/> 
+		<part crc="4cb7ea82" name="chp1-v.8p"/> 
+		<part crc="1c0d09aa" name="chp1-v.8n"/> 
+		<!--Region: gfx1, Size: 0x8000 bytes-->
+		<part crc="9f2ede2d" name="chs1-b.4c"/>
+		<part repeat="8192">00</part> 
+		<part crc="143ae5c6" name="chs1-b.4d"/>
+		<part repeat="8192">00</part> 
+		<!--Region: gfx2, Size: 0xA000 bytes-->
+		<part crc="c075f831" name="chp1-b.4a"/>
+		<part repeat="8192">00</part> 
+		<part crc="c4cc2b5a" name="chp1-b.4b"/>
+		<part repeat="8192">00</part>
+		<part repeat="8192">00</part>
+		<!--Region: paltop, Size: 0x600 bytes-->
+		<part crc="0ad4d727" name="chs1-b-6e_pink.6e"/> 
+		<part crc="86f5cfdb" name="chs1-b-6f_pink.6f"/> 
+		<part crc="8bd406f8" name="chs1-b-7f_pink.7f"/> 
+		<!--Region: palbot, Size: 0x600 bytes-->
+		<part crc="9e170f64" name="chs1-b-7e_white.7e"/> 
+		<part crc="3a2e333b" name="chs1-b-8e_white.8e"/> 
+		<part crc="1663eed7" name="chs1-b-8f_white.8f"/>
+	</rom>
+	<rom index="1">
+		<part>01</part>
+	</rom>
+	<nvram index="4" size="1024"></nvram>
+</misterromdescription>
