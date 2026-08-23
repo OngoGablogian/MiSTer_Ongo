@@ -1,0 +1,62 @@
+<misterromdescription>
+  <name>OutRunners (Japan)</name>
+  <setname>orunnersj</setname>
+  <parent>orunners</parent>
+  <year>1992</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>SegaSystem32Multi</rbf>
+  <buttons names="Shift Up,Shift Down,DJ/Music,Music Prev,Music Next,Accelerate,Brake,Start,Coin,Test,Service" default="A,B,X,Y,R,-,-,Start,Select,L" count="7"/>
+  <rom index="4" zip="orunners.zip|orunnersj.zip" md5="none">
+    <interleave output="32">
+      <part name="epr-15616.ic37" crc="fb550545" map="0021"/>
+      <part name="epr-15617.ic40" crc="6bb741e0" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-15616.ic37" crc="fb550545" map="0021"/>
+      <part name="epr-15617.ic40" crc="6bb741e0" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-15616.ic37" crc="fb550545" map="0021"/>
+      <part name="epr-15617.ic40" crc="6bb741e0" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-15616.ic37" crc="fb550545" map="0021"/>
+      <part name="epr-15617.ic40" crc="6bb741e0" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="mpr-15538.ic36" crc="93958820" map="0021"/>
+      <part name="mpr-15539.ic39" crc="219760fa" map="2100"/>
+    </interleave>
+  </rom>
+  <rom index="5" zip="orunners.zip|orunnersj.zip" md5="none">
+    <part name="epr-15550.ic31" crc="0205d2ed"/>
+  </rom>
+  <rom index="6" zip="orunners.zip|orunnersj.zip" md5="none">
+    <interleave output="16">
+      <part name="mpr-15548.ic3" crc="b6470a66" map="01"/>
+      <part name="mpr-15549.ic11" crc="81d12520" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="7" zip="orunners.zip|orunnersj.zip" md5="none">
+    <part name="mpr-15551.ic1" crc="4894bc73"/>
+    <part name="mpr-15552.ic2" crc="1c4b5e73"/>
+  </rom>
+  <rom index="9" zip="orunners.zip|orunnersj.zip" md5="none">
+    <interleave output="64">
+      <part name="mpr-15540.ic14" crc="a10d72b4" map="00000021"/>
+      <part name="mpr-15542.ic15" crc="40952374" map="00002100"/>
+      <part name="mpr-15544.ic10" crc="39e3df45" map="00210000"/>
+      <part name="mpr-15546.ic38" crc="e3fcc12c" map="21000000"/>
+    </interleave>
+    <interleave output="64">
+      <part name="mpr-15541.ic22" crc="a2003c2d" map="00000021"/>
+      <part name="mpr-15543.ic23" crc="933e8e7b" map="00002100"/>
+      <part name="mpr-15545.ic18" crc="53dd0235" map="00210000"/>
+      <part name="mpr-15547.ic41" crc="edcb2a43" map="21000000"/>
+    </interleave>
+  </rom>
+  <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>09100083000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
+</misterromdescription>
