@@ -32,7 +32,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                         |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                           |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                          |
-| [Killer Instinct](https://discord.com/channels/647909397477195803/737506076806611064/1539408927681417347)                         |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1541094427534041139)                   |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                       |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                               |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                                |
