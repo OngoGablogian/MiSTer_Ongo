@@ -18,7 +18,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                                  |
 | [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                  |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                   |
-| [Elan Enterprise](https://github.com/Kyp069/ep)                                                                                   |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                   |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                   |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                    |
@@ -73,7 +72,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                      |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                     |
 | [Seibu SPI](https://discord.com/channels/647909397477195803/1047332718674968617/1539526330952060998)                              |
-| [Sharp X68000](https://github.com/MiSTer-devel/X68000_MiSTer)                                                                     |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                      |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                      |
