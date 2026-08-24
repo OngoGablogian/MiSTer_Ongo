@@ -57,7 +57,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)    |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                  |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                     |
-| [OutRunners](https://www.patreon.com/Meathax/posts/outrunners-1993-167420740)                                                     |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                         |
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                                |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
@@ -70,6 +69,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                    |
 | [SEGA System 24](https://github.com/meathax/s24)                                                                                  |
 | [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                      |
+| [SEGA System 32 Multi](https://www.patreon.com/Meathax/posts/sega-system-32-167523530)                                            |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                     |
 | [Seibu SPI](https://discord.com/channels/647909397477195803/1047332718674968617/1539526330952060998)                              |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |

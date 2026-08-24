@@ -1,0 +1,62 @@
+<misterromdescription>
+  <name>Title Fight (US)</name>
+  <setname>titlefu</setname>
+  <parent>titlef</parent>
+  <year>1992</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>SegaSystem32Multi</rbf>
+  <joystick>Dual analog sticks (left hand / right hand)</joystick>
+  <buttons names="Right Stick Left,Right Stick Right,Right Stick Up,Right Stick Down,-,-,-,Start,Coin,Test,Service" default="A,B,X,Y,Start,Select,R,L" count="4"/>
+  <rom index="4" zip="titlef.zip|titlefu.zip" md5="none">
+    <interleave output="32">
+      <part name="epr-15386.ic37" crc="e36e2516" map="0021"/>
+      <part name="epr-15387.ic40" crc="e63406d3" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-15386.ic37" crc="e36e2516" map="0021"/>
+      <part name="epr-15387.ic40" crc="e63406d3" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-15386.ic37" crc="e36e2516" map="0021"/>
+      <part name="epr-15387.ic40" crc="e63406d3" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-15386.ic37" crc="e36e2516" map="0021"/>
+      <part name="epr-15387.ic40" crc="e63406d3" map="2100"/>
+    </interleave>
+  </rom>
+  <rom index="5" zip="titlef.zip|titlefu.zip" md5="none">
+    <part name="epr-15384.ic31" crc="0f7d208d"/>
+    <part name="epr-15384.ic31" crc="0f7d208d"/>
+    <part name="epr-15384.ic31" crc="0f7d208d"/>
+    <part name="epr-15384.ic31" crc="0f7d208d"/>
+  </rom>
+  <rom index="6" zip="titlef.zip|titlefu.zip" md5="none">
+    <interleave output="16">
+      <part name="mpr-15381.ic3" crc="162cc4d6" map="01"/>
+      <part name="mpr-15382.ic11" crc="fd03a130" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="7" zip="titlef.zip|titlefu.zip" md5="none">
+    <part name="mpr-15385.ic1" crc="5a9b0aa0"/>
+    <part repeat="2097152">FF</part>
+  </rom>
+  <rom index="9" zip="titlef.zip|titlefu.zip" md5="none">
+    <interleave output="64">
+      <part name="mpr-15379.ic14" crc="e5c74b11" map="00000021"/>
+      <part name="mpr-15375.ic15" crc="046a9b50" map="00002100"/>
+      <part name="mpr-15371.ic10" crc="999046c6" map="00210000"/>
+      <part name="mpr-15373.ic38" crc="9b3294d9" map="21000000"/>
+    </interleave>
+    <interleave output="64">
+      <part name="mpr-15380.ic22" crc="6ea0e58d" map="00000021"/>
+      <part name="mpr-15376.ic23" crc="de3e05c5" map="00002100"/>
+      <part name="mpr-15372.ic18" crc="c187c36a" map="00210000"/>
+      <part name="mpr-15374.ic41" crc="e026aab0" map="21000000"/>
+    </interleave>
+  </rom>
+  <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>01000083040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
+</misterromdescription>

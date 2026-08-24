@@ -1,0 +1,55 @@
+<misterromdescription>
+  <name>Hard Dunk (Japan)</name>
+  <setname>harddunkj</setname>
+  <parent>harddunk</parent>
+  <year>1994</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>SegaSystem32Multi</rbf>
+  <joystick>Six digital joysticks (3 vs 3)</joystick>
+  <buttons names="Pass / Steal,Shoot / Dunk / Block,-,-,-,-,-,Start,Coin,Test,Service" default="A,B,Start,Select,R,L" count="2"/>
+  <rom index="4" zip="harddunk.zip|harddunkj.zip" md5="none">
+    <interleave output="32">
+      <part name="epr-16508.ic37" crc="b3713be5" map="0021"/>
+      <part name="epr-16509.ic40" crc="603dee75" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-16508.ic37" crc="b3713be5" map="0021"/>
+      <part name="epr-16509.ic40" crc="603dee75" map="2100"/>
+    </interleave>
+    <part repeat="1048576">FF</part>
+  </rom>
+  <rom index="5" zip="harddunk.zip|harddunkj.zip" md5="none">
+    <part name="epr-16505.ic31" crc="eeb90a07"/>
+    <part name="epr-16505.ic31" crc="eeb90a07"/>
+    <part name="epr-16505.ic31" crc="eeb90a07"/>
+    <part name="epr-16505.ic31" crc="eeb90a07"/>
+  </rom>
+  <rom index="6" zip="harddunk.zip|harddunkj.zip" md5="none">
+    <interleave output="16">
+      <part name="mpr-16503.ic3" crc="ac1b6f1a" map="01"/>
+      <part name="mpr-16504.ic11" crc="7c61fcd8" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="7" zip="harddunk.zip|harddunkj.zip" md5="none">
+    <part name="mpr-16506.ic1" crc="e779f5ed"/>
+    <part name="mpr-16507.ic2" crc="31e068d3"/>
+  </rom>
+  <rom index="9" zip="harddunk.zip|harddunkj.zip" md5="none">
+    <interleave output="64">
+      <part name="mpr-16495.ic14" crc="6e5f26be" map="00000021"/>
+      <part name="mpr-16497.ic15" crc="42ab5859" map="00002100"/>
+      <part name="mpr-16499.ic10" crc="a290ea36" map="00210000"/>
+      <part name="mpr-16501.ic38" crc="f1566620" map="21000000"/>
+    </interleave>
+    <interleave output="64">
+      <part name="mpr-16496.ic22" crc="d9d27247" map="00000021"/>
+      <part name="mpr-16498.ic23" crc="c022a991" map="00002100"/>
+      <part name="mpr-16500.ic18" crc="452c0be3" map="00210000"/>
+      <part name="mpr-16502.ic41" crc="ffc3147e" map="21000000"/>
+    </interleave>
+  </rom>
+  <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>21000083080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
+</misterromdescription>

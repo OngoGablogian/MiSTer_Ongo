@@ -1,0 +1,62 @@
+<misterromdescription>
+  <name>Stadium Cross (World)</name>
+  <setname>scross</setname>
+  <year>1992</year>
+  <manufacturer>Sega</manufacturer>
+  <rbf>SegaSystem32Multi</rbf>
+  <joystick>Left-stick steering / Y-axis handlebar pitch / D-pad pitch fallback</joystick>
+  <buttons names="Attack,Wheelie,Brake,Accelerate,Handlebar Forward,Handlebar Back,-,Start,Coin,Test,Service" default="A,B,X,Y,L,R,Start,Select,R,L" count="6"/>
+  <rom index="4" zip="scross.zip" md5="none">
+    <interleave output="32">
+      <part name="epr-15093.ic37" crc="2adc7a4b" map="0021"/>
+      <part name="epr-15094.ic40" crc="bbb0ae73" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="epr-15093.ic37" crc="2adc7a4b" map="0021"/>
+      <part name="epr-15094.ic40" crc="bbb0ae73" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="mpr-15018.ic36" crc="3a98385e" map="0021"/>
+      <part name="mpr-15019.ic39" crc="8bf4ac83" map="2100"/>
+    </interleave>
+  </rom>
+  <rom index="5" zip="scross.zip" md5="none">
+    <part name="epr-15192.ic31" crc="7524290b"/>
+    <part name="epr-15192.ic31" crc="7524290b"/>
+    <part name="epr-15192.ic31" crc="7524290b"/>
+    <part name="epr-15192.ic31" crc="7524290b"/>
+  </rom>
+  <rom index="6" zip="scross.zip" md5="none">
+    <interleave output="16">
+      <part name="mpr-15020.ic3" crc="de47006a" map="01"/>
+      <part name="mpr-15021.ic11" crc="3677db02" map="10"/>
+    </interleave>
+    <part repeat="2097152">FF</part>
+  </rom>
+  <rom index="7" zip="scross.zip" md5="none">
+    <part name="mpr-15031.ic1" crc="6af139dc"/>
+    <part repeat="1048576">FF</part>
+    <part name="mpr-15032.ic2" crc="915d6096"/>
+    <part repeat="1048576">FF</part>
+  </rom>
+  <rom index="9" zip="scross.zip" md5="none">
+    <interleave output="64">
+      <part name="mpr-15022.ic14" crc="baee6fd5" map="00000021"/>
+      <part name="mpr-15024.ic15" crc="b9f339e2" map="00002100"/>
+      <part name="mpr-15026.ic10" crc="b72e8df6" map="00210000"/>
+      <part name="mpr-15028.ic38" crc="183f6eb0" map="21000000"/>
+    </interleave>
+    <part repeat="4194304">FF</part>
+    <interleave output="64">
+      <part name="mpr-15023.ic22" crc="230735ed" map="00000021"/>
+      <part name="mpr-15025.ic23" crc="da4315cb" map="00002100"/>
+      <part name="mpr-15027.ic18" crc="b765efb8" map="00210000"/>
+      <part name="mpr-15029.ic41" crc="cf8e3b2b" map="21000000"/>
+    </interleave>
+    <part repeat="4194304">FF</part>
+  </rom>
+  <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>091000830C0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
+</misterromdescription>
