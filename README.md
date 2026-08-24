@@ -75,7 +75,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                      |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                      |
-| [SNK Neo Geo Pocket Color (Kitrinx WIP)](https://discord.com/channels/647909397477195803/1537223715622887454/1538033018017681418) |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                  |
 | [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                              |
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                   |
