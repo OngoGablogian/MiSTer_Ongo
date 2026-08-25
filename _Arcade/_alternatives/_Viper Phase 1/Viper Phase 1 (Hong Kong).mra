@@ -129,8 +129,14 @@
       it gates the 386 while the video engines keep running.  It is not on
       button 3 because four of the seven sets are MAME's spi_3button and use
       that as a game button.
+
+      Savestate (SS) is the ninth, bit 12, and is also not a board input: it is
+      the modifier the savestate d-pad combinations are built on -- SS+Left/Right
+      picks the slot, SS+Down saves, SS+Up loads.  It has no entry in default=
+      because Main only accepts the eight base pad names there and the first
+      eight buttons use all of them, so it must be bound by hand.
     -->
-    <buttons names="Shot,Bomb,Button 3,Start,Coin,Service Coin,Test,Pause"
+    <buttons names="Shot,Bomb,Button 3,Start,Coin,Service Coin,Test,Pause,Savestate (SS)"
              default="A,B,X,Start,Select,R,L,Y" count="3"/>
 
     <switches default="00" base="0">

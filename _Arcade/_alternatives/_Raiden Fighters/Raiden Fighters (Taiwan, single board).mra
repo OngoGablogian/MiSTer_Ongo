@@ -111,8 +111,15 @@
       Test is MAME's PORT_SERVICE_NO_TOGGLE: a momentary panel button, held
       down rather than latched. It is also on the DIP page below for setups
       with no spare pad button.
+
+      The last two names are not board inputs: Pause (bit 11) gates the 386
+      while the video engines keep running, and Savestate (bit 12) is the
+      modifier the savestate d-pad combinations are built on -- SS+Left/Right
+      picks the slot, SS+Down saves, SS+Up loads. Savestate has no default=
+      entry, because Main only accepts the eight base pad names there and the
+      first eight buttons use all of them, so it must be bound by hand.
     -->
-    <buttons names="Shot,Bomb,Button 3,Start,Coin,Service Coin,Test,Pause"
+    <buttons names="Shot,Bomb,Button 3,Start,Coin,Service Coin,Test,Pause,Savestate (SS)"
              default="A,B,X,Start,Select,R,L,Y" count="3"/>
 
     <!--
