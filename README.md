@@ -62,7 +62,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)         |
 | [Raiden II](https://github.com/spacestate1/Arcade-Raiden2_MiSTer)                                                                 |
-| [RCA Studio II](https://discord.com/channels/647909397477195803/1346599128343253032)                                              |
 | [Sammy Seta Visco SSV](https://www.patreon.com/Meathax/posts/sammy-seta-visco-167087644)                                          |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                       |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                      |
