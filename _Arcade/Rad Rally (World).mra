@@ -4,7 +4,7 @@
   <year>1991</year>
   <manufacturer>Sega</manufacturer>
   <rbf>SegaSystem32</rbf>
-  <buttons names="Accelerate,Brake,Gear Change,-,-,-,Start,Coin,Test,Service" default="A,B,X,Start,Select,R,L" count="3"/>
+  <buttons names="Accelerate,Brake,Gear Change,-,-,-,Start,Coin,Test,Service,Pause" default="A,B,X,Start,Select,R,L,Y" count="3"/>
   <rom index="4" zip="radr.zip" md5="none">
     <part name="epr-14241.ic21" crc="59a5f63d"/>
     <part name="epr-14241.ic21" crc="59a5f63d"/>

@@ -5,7 +5,7 @@
   <year>1995</year>
   <manufacturer>Capcom</manufacturer>
   <rbf>SegaSystem32</rbf>
-  <buttons names="Accelerate,Brake,Gear Change,-,-,-,Start,Coin,Test,Service" default="A,B,X,Start,Select,R,L" count="3"/>
+  <buttons names="Accelerate,Brake,Gear Change,-,-,-,Start,Coin,Test,Service,Pause" default="A,B,X,Start,Select,R,L,Y" count="3"/>
   <rom index="4" zip="slipstrm.zip|slipstrmh.zip" md5="none">
     <part name="s32h_prg01.ic6" crc="ab778297"/>
     <part name="s32h_prg01.ic6" crc="ab778297"/>
@@ -49,6 +49,6 @@
   </rom>
   <nvram index="3" size="128"/>
   <rom index="0">
-    <part>08900080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+    <part>08900080040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
   </rom>
 </misterromdescription>

@@ -5,7 +5,7 @@
   <year>1992</year>
   <manufacturer>Sega</manufacturer>
   <rbf>SegaSystem32</rbf>
-  <buttons names="Attack,Jump,-,-,-,-,Start,Coin,Test,Service,Pause" default="A,B,Start,Select,R,L,Y" count="2"/>
+  <buttons names="Attack,Jump,Magic,-,-,-,Start,Coin,Test,Service,Pause" default="A,B,X,Start,Select,R,L,Y" count="3"/>
   <rom index="4" zip="ga2.zip|ga2j.zip" md5="none">
     <part name="epr-14959.ic17" crc="f1929177"/>
     <part name="epr-14959.ic17" crc="f1929177"/>

@@ -25,7 +25,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameKing](https://discord.com/channels/647909397477195803/1046941428758102086/1536851511965917204)                               |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                               |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                       |
-| [Golden Axe: The Revenge of Death Adder](https://www.patreon.com/Meathax/posts/golden-axe-of-1-165050191)                         |
 | [Grind Stormer](https://github.com/TheJesusFish/Arcade-GrindStormer_MiSTer)                                                       |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                     |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                         |
@@ -66,8 +65,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                      |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                    |
 | [SEGA System 24](https://github.com/meathax/s24)                                                                                  |
-| [SEGA System 32](https://www.patreon.com/Meathax/posts/spider-man-164612719)                                                      |
-| [SEGA System 32 Multi](https://www.patreon.com/Meathax/posts/sega-system-32-167523530)                                            |
+| [SEGA System 32](https://github.com/meathax/s32)                                                                                  |
+| [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                       |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                     |
 | [Seibu SPI](https://discord.com/channels/647909397477195803/1047332718674968617/1539526330952060998)                              |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |

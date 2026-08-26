@@ -5,7 +5,7 @@
   <year>1993</year>
   <manufacturer>Sega</manufacturer>
   <rbf>SegaSystem32</rbf>
-  <buttons names="Trigger,Button,-,-,-,-,Start,Coin,Test,Service" default="A,B,Start,Select,R,L" count="2"/>
+  <buttons names="Trigger,Button,-,-,-,-,Start,Coin,Test,Service,Pause" default="A,B,Start,Select,R,L,Y" count="2"/>
   <rom index="4" zip="alien3.zip|alien3j.zip" md5="none">
     <part name="epr-15861.ic17" crc="e970603f"/>
     <part name="epr-15861.ic17" crc="e970603f"/>

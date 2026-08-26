@@ -4,7 +4,7 @@
   <year>1992</year>
   <manufacturer>Sega</manufacturer>
   <rbf>SegaSystem32</rbf>
-  <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin,Test,Service" default="A,B,X,Y,R,L,Start,Select" count="6"/>
+  <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin,Test,Service,Pause" default="A,B,X,Y,R,L,Start,Select,-" count="6"/>
   <rom index="4" zip="brival.zip" md5="none">
     <part name="epr-15722.ic8" crc="138141c0"/>
     <part name="epr-15722.ic8" crc="138141c0"/>
