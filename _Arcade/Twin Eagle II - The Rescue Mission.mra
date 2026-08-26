@@ -15,7 +15,10 @@
   <rom index="1">
     <part>53030218100103440F0A110608A8F0000300003000000035</part>
   </rom>
-  <rom index="0" zip="twineag2.zip">
+  <rom index="3">
+    <part>00000000FFFF004001000001000F04000000E20803400F00000155722F400A00</part>
+  </rom>
+  <rom index="0" zip="twineag2.zip" address="0x30000000">
     <!-- program -->
     <part name="sx002-12.u22" crc="846044dc"/>
     <!-- graphics -->
@@ -38,6 +41,7 @@
     <!-- st010 -->
     <part name="st010.bin" crc="aa11ee2d"/>
   </rom>
+  <nvram index="4" size="50"/>
   <switches default="FF,FF" base="16">
     <!-- DSW1 -->
     <dip bits="0,3" name="Coin A" ids="4C/1C,3C/1C,2C/1C,1C/1C,2C/3C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C,Multi A,Multi B,Multi C,Multi D,Multi E" values="7,8,9,15,6,14,13,12,11,10,5,4,3,2,1"/>

@@ -14,7 +14,7 @@
   <rom index="1">
     <part>53030420120004040318440408A8EE00000000000000006B</part>
   </rom>
-  <rom index="0" zip="drifto94.zip">
+  <rom index="0" zip="drifto94.zip" address="0x30000000">
     <!-- program -->
     <part name="vg003-19.u26" crc="238e5e2b"/>
     <interleave output="16">

@@ -16,7 +16,10 @@
   <rom index="1">
     <part>5303020C0F0103440F02110708A8F000000000000000007C</part>
   </rom>
-  <rom index="0" zip="ultrax.zip">
+  <rom index="3">
+    <part>00000000FFFF004001000001000F04000001AC8E284004000000E23C03400F00</part>
+  </rom>
+  <rom index="0" zip="ultrax.zip" address="0x30000000">
     <!-- program -->
     <interleave output="16">
       <part name="71047-11.u64" crc="593b2678" map="01"/>
@@ -41,6 +44,7 @@
       <part name="71047-08.u60" crc="30ebff6d" map="01"/>
     </interleave>
   </rom>
+  <nvram index="4" size="43"/>
   <switches default="FF,EF" base="16">
     <!-- DSW1 -->
     <dip bits="0,3" name="Coin A" ids="3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C" values="8,9,15,14,13,12,11,10"/>

@@ -14,7 +14,10 @@
   <rom index="1">
     <part>53030420120004040300220308A8F000000000080000009C</part>
   </rom>
-  <rom index="0" zip="vasara2.zip">
+  <rom index="3">
+    <part>00000000FFFF004001000001000F040000005302EB010A00</part>
+  </rom>
+  <rom index="0" zip="vasara2.zip" address="0x30000000">
     <!-- program -->
     <part name="data.u34" crc="493d0103"/>
     <interleave output="16">
@@ -38,6 +41,7 @@
       <part name="s1.u37" crc="11cd7098" map="01"/>
     </interleave>
   </rom>
+  <nvram index="4" size="235"/>
   <switches default="FF,FF" base="16">
     <!-- DSW1 -->
     <dip bits="0" name="Free Play" ids="Off,On" values="1,0"/>

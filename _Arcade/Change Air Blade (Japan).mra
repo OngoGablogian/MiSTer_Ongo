@@ -14,7 +14,7 @@
   <rom index="1">
     <part>53030220120003000121850104A9F000000000000000002E</part>
   </rom>
-  <rom index="0" zip="cairblad.zip">
+  <rom index="0" zip="cairblad.zip" address="0x30000000">
     <!-- program -->
     <part name="ac1810e0.u32" crc="13a0b4c2"/>
     <!-- graphics -->

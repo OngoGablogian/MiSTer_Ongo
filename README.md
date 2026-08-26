@@ -60,7 +60,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Pinball Action](https://github.com/net-beui/Arcade-PinballAction)                                                                |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)         |
-| [Sammy Seta Visco SSV](https://www.patreon.com/Meathax/posts/sammy-seta-visco-167087644)                                          |
+| [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                            |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                       |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                      |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                    |

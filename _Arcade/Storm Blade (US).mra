@@ -12,9 +12,12 @@
   <bootleg>no</bootleg>
   <rotation>vertical (ccw)</rotation>
   <rom index="1">
-    <part>53030418100103000118440504B0F0000000000000000074</part>
+    <part>53030418100103000118440504B0F000000000080000006C</part>
   </rom>
-  <rom index="0" zip="stmblade.zip">
+  <rom index="3">
+    <part>00000000FFFF004001000001000F0400000028D380150000</part>
+  </rom>
+  <rom index="0" zip="stmblade.zip" address="0x30000000">
     <!-- program -->
     <part name="sb-pd0.u26" crc="91c4fbf7"/>
     <part repeat="0x100000">00</part>
@@ -46,7 +49,7 @@
     <!-- st010 -->
     <part name="st010.bin" crc="aa11ee2d"/>
   </rom>
-  <nvram index="8" size="2048"/>
+  <nvram index="4" size="128"/>
   <switches default="FF,FE" base="16">
     <!-- DSW1 -->
     <dip bits="0,2" name="Coin A" ids="3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C" values="5,6,7,4,3,2,1,0"/>
@@ -61,5 +64,5 @@
     <dip bits="14" name="Bonus Life" ids="600000,800000" values="1,0"/>
     <dip bits="15" name="Service Mode" ids="Off,On" values="1,0"/>
   </switches>
-  <buttons names="Fire,Bomb,-,-,-,-,Coin,Start,Service,Test" default="A,B,Select,Start,R,L" count="2"/>
+  <buttons names="Fire,Bomb,Rapid Fire,-,-,-,Coin,Start,Service,Test" default="A,B,X,Select,Start,R,L" count="3"/>
 </misterromdescription>

@@ -65,5 +65,15 @@
         <dip name="Coin Mechanism" bits="5" ids="Independent,Common"/>
         <dip name="Number of Players" bits="6,7" ids="-,3,4,2"/>
     </switches>
-    <buttons names="Shoot,Jump,Special,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+    <!-- Pause/Service/Test occupy bits 9/10/11 of the MRA button word by POSITION (jtframe assigns
+         bits sequentially: 3 counted fire buttons at 4-6, then Start=7, Coin=8, Pause=9, then the two
+         added here). Pause is named here only to keep Service/Test bit-aligned with jtframe_inputs.v's
+         SERVICE_BIT/TEST_BIT (=10/11) - jtframe wires Pause generically for every core already. Service
+         is a momentary SERVICE-credit button (GX173 has one); Test is the momentary cabinet TEST switch,
+         OR'd with the existing OSD "Service mode" toggle so either can assert it. -->
+    <!-- The last two labels are positional jtframe inputs (bits 10/11).  Main_MiSTer's
+         MRA mapper only understands the virtual SNES names in `default`; mapping
+         Service to L and Test to R therefore makes both cabinet controls available
+         on a normal gamepad instead of leaving both slots at the unmapped '-'. -->
+    <buttons names="Shoot,Jump,Special,Start,Coin,Pause,Service,Test" default="A,B,X,Start,Select,-,L,R" count="3"/>
 </misterromdescription>

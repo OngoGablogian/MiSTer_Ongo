@@ -14,7 +14,10 @@
   <rom index="1">
     <part>53030110110003000440090004A8F000000000000000009C</part>
   </rom>
-  <rom index="0" zip="dynagear.zip">
+  <rom index="3">
+    <part>00000000FFFF004001000001000F0400000000AF2C805000000000FD01040400</part>
+  </rom>
+  <rom index="0" zip="dynagear.zip" address="0x30000000">
     <!-- program -->
     <interleave output="16">
       <part name="si002-prl.u4" crc="71ba29c6" map="01"/>
@@ -41,6 +44,7 @@
       <part name="si002-10.u6" crc="e369c177" map="12"/>
     </interleave>
   </rom>
+  <nvram index="4" size="45"/>
   <switches default="FF,FD" base="16">
     <!-- DSW1 -->
     <dip bits="0,3" name="Coin A" ids="4C/1C,3C/1C,2C/1C,1C/1C,2C/3C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C,Multi A,Multi B,Multi C,Multi D,Multi E" values="7,8,9,15,6,14,13,12,11,10,5,4,3,2,1"/>
