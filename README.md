@@ -68,7 +68,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System 32](https://github.com/meathax/s32)                                                                                  |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                       |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                     |
-| [Seibu SPI](https://discord.com/channels/647909397477195803/1047332718674968617/1539526330952060998)                              |
+| [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                      |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                      |
