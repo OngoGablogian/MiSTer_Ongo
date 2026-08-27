@@ -6,7 +6,7 @@
   <manufacturer>Sega</manufacturer>
   <rbf>SegaSystem32Multi</rbf>
   <joystick>Six digital joysticks (3 vs 3)</joystick>
-  <buttons names="Pass / Steal,Shoot / Dunk / Block,-,-,-,-,-,Start,Coin,Test,Service" default="A,B,Start,Select,R,L" count="2"/>
+  <buttons names="Pass / Steal,Shoot / Block,Special/Turbo/Screen,-,-,-,-,Start,Coin,Test,Service" default="A,B,X,Start,Select,R,L" count="3"/>
   <rom index="4" zip="harddunk.zip|harddunkj.zip" md5="none">
     <interleave output="32">
       <part name="epr-16508.ic37" crc="b3713be5" map="0021"/>
