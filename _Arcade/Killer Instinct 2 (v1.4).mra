@@ -1,6 +1,6 @@
 <misterromdescription>
-  <name>Killer Instinct 2</name>
-  <mratimestamp>20260815</mratimestamp>
+  <name>Killer Instinct 2 (v1.4)</name>
+  <mratimestamp>20260825</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>kinst2</setname>
   <year>1996</year>
@@ -16,12 +16,15 @@
     <dip bits="3" name="Finishing Moves" ids="Off,On"/>
     <dip bits="4" name="Display Warning" ids="Off,On"/>
     <dip bits="8" name="Coinage Source" ids="Disk,Dipswitch"/>
+    <dip bits="9,10,11" name="Coin Setting" ids="Free Play,10,9,ECA,4,3,2,1"/>
+    <dip bits="12,13" name="Country" ids="Not Used,France,Germany,USA"/>
     <dip bits="14" name="Coin Counters" ids="2,1"/>
     <dip bits="15" name="Test Switch" ids="On,Off"/>
   </switches>
 
   <remark>
-    Convert kinst2.chd to a raw .img with chdman.
+    Killer Instinct 2 dedicated-board ROM v1.4. Convert kinst2.chd to a raw
+    .img with chdman.
   </remark>
 
   <rom index="0"><part>01</part></rom>

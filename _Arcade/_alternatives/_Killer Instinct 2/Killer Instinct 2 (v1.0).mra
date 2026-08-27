@@ -1,0 +1,40 @@
+<misterromdescription>
+  <name>Killer Instinct 2 (v1.0)</name>
+  <mratimestamp>20260825</mratimestamp>
+  <mameversion>0287</mameversion>
+  <setname>kinst2</setname>
+  <year>1996</year>
+  <manufacturer>Rare / Nintendo (Midway license)</manufacturer>
+  <category>Fighter</category>
+  <rbf>KillerInstinct</rbf>
+
+  <buttons names="High Quick,High Medium,High Fierce,Low Quick,Low Medium,Low Fierce,Start,Coin,Service,Test,-,-,-,-,-,-" default="A,B,X,Y,R,L,Start,Select"/>
+
+  <switches default="FF,FF">
+    <dip bits="0,1" name="Blood Level" ids="None,Low,Medium,High"/>
+    <dip bits="2" name="Demo Sounds" ids="Off,On"/>
+    <dip bits="3" name="Finishing Moves" ids="Off,On"/>
+    <dip bits="4" name="Display Warning" ids="Off,On"/>
+    <dip bits="8" name="Coinage Source" ids="Disk,Dipswitch"/>
+    <dip bits="9,10,11" name="Coin Setting" ids="Free Play,10,9,ECA,4,3,2,1"/>
+    <dip bits="12,13" name="Country" ids="Not Used,France,Germany,USA"/>
+    <dip bits="14" name="Coin Counters" ids="2,1"/>
+    <dip bits="15" name="Test Switch" ids="On,Off"/>
+  </switches>
+
+  <remark>
+    Killer Instinct 2 dedicated-board ROM v1.0. Convert kinst2.chd to a raw
+    .img with chdman.
+  </remark>
+
+  <rom index="0"><part>01</part></rom>
+  <rom index="1" zip="kinst2.zip"><part name="ki2-l10.u98" crc="b17b4b3d"/></rom>
+  <rom index="2" zip="kinst2.zip"><part name="ki2_l1.u10" crc="fdf6ed51"/></rom>
+  <rom index="3" zip="kinst2.zip"><part name="ki2_l1.u11" crc="f9e70024"/></rom>
+  <rom index="4" zip="kinst2.zip"><part name="ki2_l1.u12" crc="2994c199"/></rom>
+  <rom index="5" zip="kinst2.zip"><part name="ki2_l1.u13" crc="3fe6327b"/></rom>
+  <rom index="6" zip="kinst2.zip"><part name="ki2_l1.u33" crc="6f4dcdcf"/></rom>
+  <rom index="7" zip="kinst2.zip"><part name="ki2_l1.u34" crc="5db48206"/></rom>
+  <rom index="8" zip="kinst2.zip"><part name="ki2_l1.u35" crc="7245ce69"/></rom>
+  <rom index="9" zip="kinst2.zip"><part name="ki2_l1.u36" crc="8920acbb"/></rom>
+</misterromdescription>

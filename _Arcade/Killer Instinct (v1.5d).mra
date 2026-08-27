@@ -1,0 +1,40 @@
+<misterromdescription>
+  <name>Killer Instinct (v1.5d)</name>
+  <mratimestamp>20260825</mratimestamp>
+  <mameversion>0287</mameversion>
+  <setname>kinst</setname>
+  <year>1994</year>
+  <manufacturer>Rare / Nintendo (Midway license)</manufacturer>
+  <category>Fighter</category>
+  <rbf>KillerInstinct</rbf>
+
+  <buttons names="High Quick,High Medium,High Fierce,Low Quick,Low Medium,Low Fierce,Start,Coin,Service,Test,-,-,-,-,-,-" default="A,B,X,Y,R,L,Start,Select"/>
+
+  <switches default="FF,FF">
+    <dip bits="0,1" name="Blood Level" ids="None,Low,Medium,High"/>
+    <dip bits="2" name="Demo Sounds" ids="Off,On"/>
+    <dip bits="3" name="Finishing Moves" ids="Off,On"/>
+    <dip bits="4" name="Display Warning" ids="Off,On"/>
+    <dip bits="5" name="Blood Color" ids="White,Red"/>
+    <dip bits="8" name="Coinage Source" ids="Disk,Dipswitch"/>
+    <dip bits="9,10,11" name="Coin Setting" ids="Free Play,10,9,ECA,4,3,2,1"/>
+    <dip bits="12,13" name="Country" ids="Not Used,France,Germany,USA"/>
+    <dip bits="14" name="Coin Counters" ids="2,1"/>
+    <dip bits="15" name="Test Switch" ids="On,Off"/>
+  </switches>
+
+  <remark>
+    Killer Instinct ROM v1.5d. Convert kinst.chd to a raw .img with chdman.
+  </remark>
+
+  <rom index="0"><part>00</part></rom>
+  <rom index="1" zip="kinst.zip"><part name="ki-l15d.u98" crc="7b65ca3d"/></rom>
+  <rom index="2" zip="kinst.zip"><part name="u10-l1" crc="b6cc155f"/></rom>
+  <rom index="3" zip="kinst.zip"><part name="u11-l1" crc="0b5e05df"/></rom>
+  <rom index="4" zip="kinst.zip"><part name="u12-l1" crc="d05ce6ad"/></rom>
+  <rom index="5" zip="kinst.zip"><part name="u13-l1" crc="7d0954ea"/></rom>
+  <rom index="6" zip="kinst.zip"><part name="u33-l1" crc="8bbe4f0c"/></rom>
+  <rom index="7" zip="kinst.zip"><part name="u34-l1" crc="b2e73603"/></rom>
+  <rom index="8" zip="kinst.zip"><part name="u35-l1" crc="0aaef4fc"/></rom>
+  <rom index="9" zip="kinst.zip"><part name="u36-l1" crc="0577bb60"/></rom>
+</misterromdescription>

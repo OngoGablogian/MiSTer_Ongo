@@ -1,6 +1,6 @@
 <misterromdescription>
-  <name>Killer Instinct</name>
-  <mratimestamp>20260815</mratimestamp>
+  <name>Killer Instinct (v1.4)</name>
+  <mratimestamp>20260825</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>kinst</setname>
   <year>1994</year>
@@ -17,16 +17,18 @@
     <dip bits="4" name="Display Warning" ids="Off,On"/>
     <dip bits="5" name="Blood Color" ids="White,Red"/>
     <dip bits="8" name="Coinage Source" ids="Disk,Dipswitch"/>
+    <dip bits="9,10,11" name="Coin Setting" ids="Free Play,10,9,ECA,4,3,2,1"/>
+    <dip bits="12,13" name="Country" ids="Not Used,France,Germany,USA"/>
     <dip bits="14" name="Coin Counters" ids="2,1"/>
     <dip bits="15" name="Test Switch" ids="On,Off"/>
   </switches>
 
   <remark>
-    Convert kinst1.chd to a raw .img with chdman.
+    Killer Instinct ROM v1.4. Convert kinst.chd to a raw .img with chdman.
   </remark>
 
   <rom index="0"><part>00</part></rom>
-  <rom index="1" zip="kinst.zip"><part name="ki-l15d.u98" crc="7b65ca3d"/></rom>
+  <rom index="1" zip="kinst.zip"><part name="ki-l14.u98" crc="afedb75f"/></rom>
   <rom index="2" zip="kinst.zip"><part name="u10-l1" crc="b6cc155f"/></rom>
   <rom index="3" zip="kinst.zip"><part name="u11-l1" crc="0b5e05df"/></rom>
   <rom index="4" zip="kinst.zip"><part name="u12-l1" crc="d05ce6ad"/></rom>
