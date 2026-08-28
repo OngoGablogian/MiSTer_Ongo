@@ -1,0 +1,50 @@
+<misterromdescription>
+  <name>Dragon Ball Z: V.R. V.S. (Japan, Rev A)</name>
+  <setname>dbzvrvs</setname>
+  <year>1994</year>
+  <manufacturer>Sega / Banpresto</manufacturer>
+  <rbf>Arcade-SegaSystem32</rbf>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <buttons names="Left Punch,Right Punch,Jump,-,-,-,Start,Coin,Test,Service,Pause" default="A,B,X,Start,Select,R,L,Y" count="3"/>
+  <rom index="4" zip="dbzvrvs.zip" md5="none">
+    <part name="epr-16543" crc="7b9bc6f5"/>
+    <part name="epr-16542a" crc="6449ab22"/>
+    <part repeat="1048576">FF</part>
+  </rom>
+  <rom index="5" zip="dbzvrvs.zip" md5="none">
+    <part name="epr-16541" crc="1d61d836"/>
+    <part name="epr-16541" crc="1d61d836"/>
+    <part name="epr-16541" crc="1d61d836"/>
+    <part name="epr-16541" crc="1d61d836"/>
+    <part name="mpr-16540" crc="b6f9bb43"/>
+    <part name="mpr-16539" crc="38c26418"/>
+    <part name="mpr-16538" crc="4d402c31"/>
+  </rom>
+  <rom index="6" zip="dbzvrvs.zip" md5="none">
+    <interleave output="16">
+      <part name="mpr-16545" crc="51748bac" map="01"/>
+      <part name="mpr-16544" crc="f6c93dfc" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="9" zip="dbzvrvs.zip" md5="none">
+    <interleave output="64">
+      <part name="mpr-16546" crc="96f4be31" map="00000021"/>
+      <part name="mpr-16548" crc="00377f59" map="00002100"/>
+      <part name="mpr-16550" crc="168e8966" map="00210000"/>
+      <part name="mpr-16552" crc="a31dae31" map="21000000"/>
+    </interleave>
+    <interleave output="64">
+      <part name="mpr-16547" crc="50d328ed" map="00000021"/>
+      <part name="mpr-16549" crc="a5802e9f" map="00002100"/>
+      <part name="mpr-16551" crc="dede05fc" map="00210000"/>
+      <part name="mpr-16553" crc="c0a43009" map="21000000"/>
+    </interleave>
+  </rom>
+  <nvram index="3" size="128"/>
+  <rom index="0">
+    <part>08200583000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+  </rom>
+</misterromdescription>
