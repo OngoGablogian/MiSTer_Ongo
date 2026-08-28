@@ -12,6 +12,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                        |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                              |
 | [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                        |
+| [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                          |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                                |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                       |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                           |

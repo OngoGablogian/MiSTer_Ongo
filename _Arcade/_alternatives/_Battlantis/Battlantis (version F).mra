@@ -1,0 +1,23 @@
+<misterromdescription>
+    <name>Battlantis (version F)</name>
+    <mameversion>0220</mameversion>
+    <setname>battlntsa</setname>
+    <year>1987</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Shooter</category>
+    <rbf>Battlantis</rbf>
+
+    <rom index="0" zip="battlnts.zip" md5="none">
+        <!-- Main CPU (96KB) -->
+        <part name="battlntsa/777_f03.8e" /> <!-- 64KB Banked ROM (0x00000 - 0x0FFFF) -->
+        <part name="battlntsa/777_f02.7e" /> <!-- 32KB Fixed ROM (0x10000 - 0x17FFF) -->
+
+        <!-- Audio CPU (32KB) -->
+        <part name="777_c01.10a" />
+        <!-- Sprites (256KB) -->
+        <part name="777c05.13e" />
+
+        <!-- Tiles (256KB) -->
+        <part name="777c04.13a" />
+    </rom>
+</misterromdescription>
