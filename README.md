@@ -35,7 +35,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                       |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                               |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                                |
-| [Marble Madness II](https://github.com/kandowontu/MarbleMadness2_MiSTer)                                                          |
 | [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                       |
 | [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-t-unit-167880978)                                                   |
 | [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                          |

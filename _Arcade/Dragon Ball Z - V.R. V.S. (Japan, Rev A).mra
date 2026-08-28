@@ -3,7 +3,7 @@
   <setname>dbzvrvs</setname>
   <year>1994</year>
   <manufacturer>Sega / Banpresto</manufacturer>
-  <rbf>Arcade-SegaSystem32</rbf>
+  <rbf>SegaSystem32</rbf>
   <homebrew>no</homebrew>
   <bootleg>no</bootleg>
   <resolution>15kHz</resolution>
