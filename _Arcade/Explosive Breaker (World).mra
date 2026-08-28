@@ -1,0 +1,26 @@
+<misterromdescription>
+    <name>Explosive Breaker (World)</name>
+    <setname>explbrkr</setname>
+    <rbf>Kaneko16</rbf>
+    <year>1992</year>
+    <manufacturer>Kaneko</manufacturer>
+    <category>Shooter / Flying Vertical</category>
+    <nvram index="2" size="128" />
+    <rom index="0" zip="explbrkr.zip" md5="none">
+        <interleave output="16">
+            <part name="ts100e.u18" crc="cc84a985" map="01" />
+            <part name="ts101e.u19" crc="88f4afb7" map="10" />
+        </interleave>
+        <part name="ts010.u4" crc="df935324" />
+        <part name="ts020.u33" crc="eb58c35d" />
+        <part name="ts001e.u37" crc="70b66e7e" />
+        <part name="ts000e.u38" crc="a7a94143" />
+        <part name="ts001e.u37" crc="70b66e7e" />
+        <part name="ts000e.u38" crc="a7a94143" />
+        <part name="ts002e.u36" crc="611271e6" />
+        <part name="ts030.u5" crc="1d68e9d1" />
+    </rom>
+    <rom index="1" md5="none">
+        <part>00 00</part>
+    </rom>
+</misterromdescription>

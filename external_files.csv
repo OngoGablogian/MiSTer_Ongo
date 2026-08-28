@@ -36,7 +36,7 @@ games/mame/kinst.zip,https://archive.org/download/OngoFiles/KillerInstinct/kinst
 games/mame/kinst2.zip,https://archive.org/download/OngoFiles/KillerInstinct/kinst2.zip,"7479079",d20251e2d55f397d210199a632286c65,,,
 
 games/mame/agalletd.zip,https://archive.org/download/OngoFiles/mame/agalletd.zip,"870549",744fdfd5c32557a7835fad616ffa1bea,,,
-games/mame/armwrest.zip,https://archive.org/download/OngoFiles/mame/armwrest.zip,"149347",9c823f6ab6fc9ce4279a80c956686a70
+games/mame/armwrest.zip,https://archive.org/download/OngoFiles/mame/armwrest.zip,"149347",9c823f6ab6fc9ce4279a80c956686a70,,,
 games/mame/asterix.zip,https://archive.org/download/OngoFiles/mame/asterix.zip,"4205033",dc616e8ef001635b99ee90ed38501c8f,,,
 games/mame/atarisy1.zip,https://archive.org/download/OngoFiles/mame/atarisy1.zip,"57375",f4a3c76103d9a5e50de8fac468e835c8,,,
 games/mame/batsugun.zip,https://archive.org/download/OngoFiles/mame/batsugun.zip,"5745057",759d120801d19d2ed8ce330f35a48493,,,
@@ -62,6 +62,7 @@ games/mame/hvymetal.zip,https://archive.org/download/OngoFiles/mame/hvymetal.zip
 games/mame/hyprduel.zip,https://archive.org/download/OngoFiles/mame/hyprduel.zip,"1532542",d46af9ab922fd7149344f0e85ba87232,,,
 games/mame/ikki.zip,https://archive.org/download/OngoFiles/mame/ikki.zip,"376875",5bd9e5ba82403cefb4d1395627072abc,,,
 games/mame/kamikcab.zip,https://archive.org/download/OngoFiles/mame/kamikcab.zip,"109175",91b18a4e34ad8a6bcf0f836b9b945517,,,
+games/mame/kbash.zip,https://archive.org/download/OngoFiles/mame/kbash.zip,"6682794",41fec70c70ca73ca1ecbfdc815e5f2f4,,,
 games/mame/lkage.zip,https://archive.org/download/OngoFiles/mame/lkage.zip,"373959",2b204fe6200ec7c318c926f9d0d99aef,,,
 games/mame/magerror.zip,https://archive.org/download/OngoFiles/mame/magerror.zip,"1604200",c6b61974c7534970034de0bc8500b156,,,
 games/mame/marblmd2.zip,https://archive.org/download/OngoFiles/mame/marblmd2.zip,"909281",c48c3bd379bbc501fce94aafe2725dbb,,,
@@ -76,11 +77,11 @@ games/mame/offroadt.zip,https://archive.org/download/OngoFiles/mame/offroadt.zip
 games/mame/pacupacu.zip,https://archive.org/download/OngoFiles/mame/pacupacu.zip,"8718",9e3b03176cb39becea1227b3b4428c15,,,
 games/mame/pbaction.zip,https://archive.org/download/OngoFiles/mame/pbaction.zip,"273423",f55dc6b9e4be24ea87a4f9161df510aa,,,
 games/mame/pigout.zip,https://archive.org/download/OngoFiles/mame/pigout.zip,"592894",159b31ad1f0e6698bc5cd02eb00b615d,,,
-games/mame/punchout.zip,https://archive.org/download/OngoFiles/mame/punchout.zip,"297969",22ec2846eebd3c67e897801fd602f667
+games/mame/punchout.zip,https://archive.org/download/OngoFiles/mame/punchout.zip,"297969",22ec2846eebd3c67e897801fd602f667,,,
 games/mame/sailormnd.zip,https://archive.org/download/OngoFiles/mame/sailormnd.zip,"6634482",a02c707df4e854353dfd1d376fb35f24,,,
 games/mame/sftm.zip,https://archive.org/download/OngoFiles/mame/sftm.zip,"34891729",bf9ee7e28cd826012029174d53aafa2f,,,
 games/mame/spclone.zip,https://archive.org/download/OngoFiles/mame/spclone.zip,"162398",8767f5b2bbffb14fa9437caaa3d3e3e5,,,
-games/mame/spnchout.zip,https://archive.org/download/OngoFiles/mame/spnchout.zip,"247903",18e538d7c44c1a5fac34bc3c7f0de46e
+games/mame/spnchout.zip,https://archive.org/download/OngoFiles/mame/spnchout.zip,"247903",18e538d7c44c1a5fac34bc3c7f0de46e,,,
 games/mame/superman.zip,https://archive.org/download/OngoFiles/mame/superman.zip,"1265419",7a951c8dea7f85ea06d87c7b1eda7ea7,,,
 games/mame/twincobr_patched.zip,https://archive.org/download/OngoFiles/mame/twincobr_patched.zip,"698012",8ed9652edd88b2cf9e6a6233d9beb7c8,,,
 games/mame/twinhawk.zip,https://archive.org/download/OngoFiles/mame/twinhawk.zip,"957157",b3d6e25b150e2c83061c85c845eab73d,,,
@@ -92,9 +93,15 @@ games/mame/destryer.zip,https://archive.org/download/OngoFiles/mame-jlrh/destrye
 games/mame/empcity.zip,https://archive.org/download/OngoFiles/mame-jlrh/empcity.zip,"528771",d9e0cb3c0de98452b1a71c4ed7a425fd,,,
 games/mame/glass.zip,https://archive.org/download/OngoFiles/mame-jlrh/glass.zip,"10746392",3e4add06a1c35103668c4a524d5e5212,,,
 games/mame/moomesa.zip,https://archive.org/download/OngoFiles/mame-jlrh/moomesa.zip,"6673967",c13ccddaa02f6bb2d8e94a9966043eac,,,
+games/mame/mtlchamp.zip,https://archive.org/download/OngoFiles/mame-jlrh/mtlchamp.zip,"8240099",34d2756eddd188ba3f7c87534b87b8a2,,,
 games/mame/thoop2.zip,https://archive.org/download/OngoFiles/mame-jlrh/thoop2.zip,"10454670",0e451c91784870c355aba14460a03a8f,,,
 games/mame/wrally.zip,https://archive.org/download/OngoFiles/mame-jlrh/wrally.zip,"8431601",99fc3677f583ade3dbea46d998f5a71e,,,
 games/mame/wrally2.zip,https://archive.org/download/OngoFiles/mame-jlrh/wrally2.zip,"13294768",4063ddff3df7fe1e12eecbd87a2dec3e,,,
+
+games/mame/blazeon.zip,https://archive.org/download/OngoFiles/mame-kaneko16/blazeon.zip,"1906474",9df9c22b3575a2b6c9d0ba37fb1d6888,,,
+games/mame/explbrkr.zip,https://archive.org/download/OngoFiles/mame-kaneko16/explbrkr.zip,"2457212",b9b897930b383401df0d6f63aefa5fb7,,,
+games/mame/mgcrystl.zip,https://archive.org/download/OngoFiles/mame-kaneko16/mgcrystl.zip,"1267269",3e3755ba29f6ac934de0eac1491af7c8,,,
+games/mame/wingforc.zip,https://archive.org/download/OngoFiles/mame-kaneko16/wingforc.zip,"2334971",925795cbed561f2a8e0fc40c792d51be,,,
 
 Games/mame/docastle.zip,https://archive.org/download/OngoFiles/mame-mrdo/docastle.zip,"108719",dc0e6a8a46aff4ca204d07ab50636359,,,
 Games/mame/dorunrun.zip,https://archive.org/download/OngoFiles/mame-mrdo/dorunrun.zip,"169184",ec8735bc15fe1397295903808640fbdd,,,

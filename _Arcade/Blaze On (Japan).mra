@@ -1,0 +1,23 @@
+<misterromdescription>
+    <name>Blaze On (Japan)</name>
+    <setname>blazeonj</setname>
+    <rbf>Kaneko16</rbf>
+    <year>1992</year>
+    <manufacturer>A.I (Atlus license)</manufacturer>
+    <category>Shooter / Flying Horizontal</category>
+    <nvram index="2" size="128" />
+    <rom index="0" zip="blazeon.zip" md5="none">
+        <interleave output="16">
+            <part name="bz_prg1.u80" crc="8409e31d" map="01" />
+            <part name="bz_prg2.u81" crc="b8a0a08b" map="10" />
+        </interleave>
+        <part repeat="524288">FF</part>
+        <part name="bz_bg.u2" crc="fc67f19f" />
+        <part name="bz_sp1.u20" crc="0d5809a1" />
+        <part name="bz_sp2.u21" crc="56ead2bd" />
+        <part name="3.u45" crc="52fe4c94" />
+    </rom>
+    <rom index="1" md5="none">
+        <part>02 02</part>
+    </rom>
+</misterromdescription>

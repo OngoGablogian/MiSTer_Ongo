@@ -48,4 +48,15 @@
     <rom index="1">
         <part>05 80</part>
     </rom>
+
+    <!-- MAME 0.288 vfive hiscore ranges, 149 payload bytes. -->
+    <rom index="4">
+        <part>
+            00 10 04 fa 00 90 00 00
+            00 10 04 36 00 04 00 00
+            00 10 05 79 00 01 2d 2d
+        </part>
+    </rom>
+
+    <nvram index="2" size="264" />
 </misterromdescription>

@@ -30,8 +30,10 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                     |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                         |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                           |
+| [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                          |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                          |
-| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1541094427534041139)                   |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1542299576906555472)                   |
+| [Knuckle Bash](https://discord.com/channels/647909397477195803/1047333006555217991/1542988902439194665)                           |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                       |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                               |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                                |

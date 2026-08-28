@@ -1,0 +1,32 @@
+<misterromdescription>
+    <name>Wing Force (Japan, prototype)</name>
+    <setname>wingforc</setname>
+    <rbf>Kaneko16</rbf>
+    <year>1993</year>
+    <manufacturer>A.I (Atlus license)</manufacturer>
+    <category>Shooter / Flying Vertical</category>
+    <nvram index="2" size="128" />
+    <rom index="0" zip="wingforc.zip" md5="none">
+        <interleave output="16">
+            <part name="e_2.24.u80" crc="837e0726" map="01" />
+            <part name="o_2.24.u81" crc="b6983437" map="10" />
+        </interleave>
+        <interleave output="16">
+            <part name="bg0am.u2" crc="f4276860" map="01" />
+            <part name="bg0bm.u2" crc="9df92283" map="10" />
+        </interleave>
+        <interleave output="16">
+            <part name="bg1am.u3" crc="a44fdebb" map="01" />
+            <part name="bg1bm.u3" crc="a9b9fc5d" map="10" />
+        </interleave>
+        <part name="sp0m.u69" crc="8be26a05" />
+        <part name="sp1m.u1" crc="ad8c5b68" />
+        <part name="sp2m.u20" crc="b5994bda" />
+        <part name="sp3m.u20" crc="889ddf72" />
+        <part name="pcm.u5" crc="233569fd" />
+        <part name="s-drv_2.22.u45" crc="ccdc2758" />
+    </rom>
+    <rom index="1" md5="none">
+        <part>03 03</part>
+    </rom>
+</misterromdescription>

@@ -1,0 +1,44 @@
+<misterromdescription>
+    <name>Knuckle Bash</name>
+    <setname>kbash</setname>
+    <rbf>KnuckleBash</rbf>
+    <mameversion>0288</mameversion>
+    <year>1993</year>
+    <manufacturer>Toaplan</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <platform>Toaplan TP-023</platform>
+    <category>Beat 'em up</category>
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin,Pause" default="A,B,X,Start,Select,L" count="3" />
+    <switches default="00,00,20">
+        <dip name="Continue Price" bits="0" ids="Normal,Discount" />
+        <dip name="Flip Screen" bits="1" ids="Off,On" />
+        <dip name="Service Mode" bits="2" ids="Off,On" />
+        <dip name="Demo Sounds" bits="3" ids="On,Off" />
+        <dip name="Coin A" bits="4,5" ids="1/1,2/1,3/1,4/1" />
+        <dip name="Coin B" bits="6,7" ids="1/2,1/3,1/4,1/6" />
+        <dip name="Difficulty" bits="8,9" ids="Normal,Easy,Hard,Very Hard" />
+        <dip name="Bonus Life" bits="10,11" ids="100k and 400k,100k only,200k only,None" />
+        <dip name="Lives" bits="12,13" ids="2,4,3,1" />
+        <dip name="Invulnerability (Cheat)" bits="14" ids="Off,On" />
+        <dip name="Allow Continue" bits="15" ids="Yes,No" />
+        <dip name="Region" bits="20,23" ids="Japan,USA Europe (Atari Games),Europe USA (Atari Games),Korea,Hong Kong,Taiwan,Southeast Asia,Unused,Unused,USA,Europe,Unused,Unused,Unused,Unused,Unused" values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" />
+    </switches>
+    <rom index="0" zip="kbash.zip" md5="None">
+        <part name="tp023_01.bin" crc="2965f81d" />
+        <part name="tp023_02.bin" crc="4cd882a1" />
+        <part name="tp023_3.bin" crc="32ad508b" />
+        <part name="tp023_5.bin" crc="b84c90eb" />
+        <part name="tp023_4.bin" crc="e493c077" />
+        <part name="tp023_6.bin" crc="9084b50a" />
+        <part name="tp023_7.bin" crc="3732318f" />
+    </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <rom index="4">
+        <part>00 10 00 80 00 3C 00 30</part>
+    </rom>
+    <nvram index="2" size="264" />
+</misterromdescription>

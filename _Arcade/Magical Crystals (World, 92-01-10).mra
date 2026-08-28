@@ -1,0 +1,32 @@
+<misterromdescription>
+    <name>Magical Crystals (World, 92/01/10)</name>
+    <setname>mgcrystl</setname>
+    <rbf>Kaneko16</rbf>
+    <year>1991</year>
+    <manufacturer>Kaneko</manufacturer>
+    <category>Platform</category>
+    <nvram index="2" size="128" />
+    <rom index="0" zip="mgcrystl.zip" md5="none">
+        <interleave output="16">
+            <part name="mc100e02.u18" crc="246a1335" map="01" />
+            <part name="mc101e02.u19" crc="708ea1dc" map="10" length="0x20000" />
+        </interleave>
+        <interleave output="16">
+            <part repeat="131072" map="01">00</part>
+            <part name="mc101e02.u19" crc="708ea1dc" offset="0x20000" length="0x20000" map="10" />
+        </interleave>
+        <part name="mc010.u04" crc="85072772" />
+        <part name="mc020.u34" crc="1ea92ff1" />
+        <part name="mc000.u38" crc="28acf6f4" />
+        <part name="mc001.u37" crc="005bc43d" />
+        <part name="mc001.u37" crc="005bc43d" />
+        <part name="mc002e02.u36" crc="27ac1056" />
+        <part name="mc002e02.u36" crc="27ac1056" />
+        <part name="mc002e02.u36" crc="27ac1056" />
+        <part name="mc002e02.u36" crc="27ac1056" />
+        <part name="mc030.u32" crc="c165962e" />
+    </rom>
+    <rom index="1" md5="none">
+        <part>01 01</part>
+    </rom>
+</misterromdescription>
