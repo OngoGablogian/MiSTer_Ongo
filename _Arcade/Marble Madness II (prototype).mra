@@ -6,7 +6,7 @@
 	<rbf>MarbleMadness2</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>288</mameversion>
-	<buttons default="A,Start,Select" names="Action/Start,-,-,-,-,Service/Test,Start,Coin,Pause"/>
+	<buttons default="A,Start,Select" names="Action/Start,-,-,-,-,-,Start,Coin,Pause"/>
 	<switches default="00ff">
 		<dip name="Number of Players (Test Mode)" bits="5" values="0,1" ids="2,3"/>
 		<dip name="Number of Players (Game)" bits="7" values="0,1" ids="2,3"/>
