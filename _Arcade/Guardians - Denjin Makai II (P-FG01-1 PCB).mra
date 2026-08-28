@@ -1,11 +1,11 @@
 <misterromdescription>
   <name>Guardians / Denjin Makai II (P-FG01-1 PCB)</name>
-  <mratimestamp>202608240000</mratimestamp>
+  <mratimestamp>202608280000</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>grdians</setname>
   <rbf>Guardians</rbf>
-  <about author="OpenAI Codex and kandowontu" webpage="https://github.com/kandowontu/Guardians_MiSTer" />
-  <buttons names="Attack,Jump,Special,Unused,Start,Coin,Service" default="A,B,X,Y,Start,Select,R" />
+  <about author="kandowontu and OpenAI Codex" webpage="https://github.com/kandowontu/Arcade-Guardians_MiSTer" />
+  <buttons names="Attack,Jump,Special,Pause,Start,Coin,Service" default="A,B,X,Y,Start,Select,R" />
   <switches default="ff,ff" base="8">
     <dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Easy,Normal" />
     <dip bits="2" name="Bonus Life" ids="500000,300000" />
