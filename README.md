@@ -34,7 +34,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                           |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                          |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                          |
-| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1542299576906555472)                   |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1543359831912616007)                   |
 | [Knuckle Bash](https://github.com/TheJesusFish/Arcade-KnuckleBash_MiSTer)                                                         |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                       |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                               |
