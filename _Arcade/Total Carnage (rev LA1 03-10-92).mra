@@ -1,0 +1,44 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Total Carnage (rev LA1 03/10/92)</name>
+    <setname>totcarn</setname>
+    <mameversion>0280</mameversion>
+    <year>1992</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>TotalCarnage</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>07</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="totcarn.zip">
+        <part name="la1_total_carnage_game_rom_u111.u111" crc="13f3f231"/>
+        <part name="la1_total_carnage_game_rom_u112.u112" crc="72e45007"/>
+        <part name="la1_total_carnage_game_rom_u113.u113" crc="2c8ec753"/>
+        <part name="la1_total_carnage_game_rom_u114.u114" crc="6210c36c"/>
+        <part name="la1_total_carnage_game_rom_u95.u95" crc="579caeba"/>
+        <part name="la1_total_carnage_game_rom_u96.u96" crc="f43f1ffe"/>
+        <part name="la1_total_carnage_game_rom_u97.u97" crc="1675e50d"/>
+        <part name="la1_total_carnage_game_rom_u98.u98" crc="ab06c885"/>
+        <part name="la1_total_carnage_game_rom_u106.u106" crc="146e3863"/>
+        <part name="la1_total_carnage_game_rom_u107.u107" crc="95323320"/>
+        <part name="la1_total_carnage_game_rom_u108.u108" crc="ed152acc"/>
+        <part name="la1_total_carnage_game_rom_u109.u109" crc="80715252"/>
+    </rom>
+    <rom index="1" zip="totcarn.zip">
+        <part repeat="0x40000">00</part>
+        <part name="la1_total_carnage_game_rom_u105.u105" crc="7c651047"/>
+        <part repeat="0x40000">00</part>
+        <part name="la1_total_carnage_game_rom_u89.u89" crc="6761daf3"/>
+    </rom>
+    <rom index="2" zip="totcarn.zip">
+        <part name="sl1_total_carnage_sound_rom_u3.u3" crc="5bdb4665"/>
+        <part name="sl1_total_carnage_sound_rom_u3.u3" crc="5bdb4665"/>
+        <part name="sl1_total_carnage_sound_rom_u12.u12" crc="d0000ac7"/>
+        <part name="sl1_total_carnage_sound_rom_u12.u12" crc="d0000ac7"/>
+        <part name="sl1_total_carnage_sound_rom_u13.u13" crc="e48e6f0c"/>
+        <part name="sl1_total_carnage_sound_rom_u13.u13" crc="e48e6f0c"/>
+    </rom>
+    <switches default="BF,FF"><dip name="Test Switch" bits="8" ids="On,Off"/></switches>
+    <buttons names="Fire Up,Fire Down,Fire Left,Fire Right,Start,Coin" default="X,B,Y,A,Start,Select" count="4"/>
+</misterromdescription>
