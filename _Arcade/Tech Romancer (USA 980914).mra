@@ -1,0 +1,45 @@
+<misterromdescription>
+	<name>Tech Romancer (USA 980914)</name>
+	<setname>techromnu</setname>
+	<year>1998</year>
+	<manufacturer>Capcom</manufacturer>
+	<category>Fighting</category>
+	<players>2</players>
+	<rotation>horizontal</rotation>
+	<rbf>ZN2Capcom</rbf>
+
+	<!-- idx0 BIOS coh3002c -->
+	<rom index="0" zip="coh3002c.zip" md5="none"><part name="m534002c-59.ic353" crc="e860ea8b"/></rom>
+	<!-- idx1 platform byte 15 (Capcom+2MB-VRAM) -->
+	<rom index="1"><part>15</part></rom>
+	<!-- idx2 countryrom -->
+	<rom index="2" zip="techromnu.zip|techromn.zip" md5="none"><part name="kiou_04.2h" crc="08aca34a"/></rom>
+	<!-- idx3 bankedroms -->
+	<rom index="3" zip="techromnu.zip|techromn.zip" md5="none">
+		<part name="kio-05m.3h" crc="98e9eb24"/>
+		<part name="kio-06m.4h" crc="be8d7d73"/>
+		<part name="kio-07m.5h" crc="ffd81f18"/>
+		<part name="kio-08m.2k" crc="17302226"/>
+		<part name="kio-09m.3k" crc="a34f2119"/>
+		<part name="kio-10m.4k" crc="7400037a"/>
+	</rom>
+	<!-- idx4 mobo CAT702 key cp10 -->
+	<rom index="4" zip="coh3002c.zip" md5="none"><part name="cp10.ic652" crc="7808fcef"/></rom>
+	<!-- idx5 game CAT702 key -->
+	<rom index="5" zip="techromnu.zip|techromn.zip" md5="none"><part name="cp09" crc="02939f83"/></rom>
+	<!-- idx6 Z80 -->
+	<rom index="6" zip="techromnu.zip|techromn.zip" md5="none">
+		<part name="kio_02.2e" crc="174309b3"/>
+		<part name="kio_03.3e" crc="0b313ae5"/>
+	</rom>
+	<!-- idx7 QSound samples -->
+	<rom index="7" zip="techromnu.zip|techromn.zip" md5="none">
+		<part name="kio-01m.3a" crc="6dc5bd07"/>
+	</rom>
+	<!-- idx8 DSP microcode -->
+	<rom index="8" zip="qsound_hle.zip" md5="none"><part name="dl-1425.bin" crc="d6cf5ef5"/></rom>
+
+	<nvram index="9" size="2048"/>
+	<switches base="96" default="00"><dip name="Service Mode" bits="1" ids="Off,On"/></switches>
+	<buttons names="LP,MP,HP,LK,MK,HK,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+</misterromdescription>

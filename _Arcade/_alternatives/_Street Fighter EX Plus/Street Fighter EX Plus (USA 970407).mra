@@ -1,0 +1,77 @@
+<misterromdescription>
+	<name>Street Fighter EX Plus (USA 970407)</name>
+	<setname>sfexp</setname>
+	<year>1997</year>
+	<manufacturer>Capcom / Arika</manufacturer>
+	<category>Fighting</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>USA</region>
+	<rbf>ZN1Capcom</rbf>
+
+	<!-- BIOS: Capcom ZN-1 BIOS (coh1000c), 512KB, ioctl_index 0. Japanese mask ROM. -->
+	<rom index="0" zip="coh1000c.zip" md5="none">
+		<part name="m534002c-13.ic353" crc="50033af6"/>
+	</rom>
+
+	<!-- Platform: Capcom ZN-1 (0x05), ioctl_index 1. Bit4 (0x10) tags the coh1002c
+	     2MB-VRAM board so boardconfig returns 0x69 (not coh1000c's 0x61) -> 0x15. -->
+	<rom index="1">
+		<part>15</part>
+	</rom>
+
+	<!-- Country/program ROM: 512KB, ioctl_index 2, CPU 0x1FB80000 (MAME region "countryrom") -->
+	<rom index="2" zip="sfexp.zip" md5="none">
+		<part name="sfpu_04a.2h" crc="4617adc2"/>
+	</rom>
+
+	<!-- Banked ROM: 6x4MB = 24MB, ioctl_index 3 (MAME region "bankedroms").          -->
+	<!-- CPU fixed window 0x1F000000-0x1F3FFFFF = ofs 0 (sfp-05m).                     -->
+	<!-- CPU banked window 0x1F400000-0x1F7FFFFF, bank N = ofs (N+1)*4MB via 0x1FB00000.-->
+	<!--   bank 0=sfp-06m, 1=sfp-07m, 2=sfp-08m, 3=sfp-09m, 4=sfp-10m.                  -->
+	<rom index="3" zip="sfexp.zip" md5="none">
+		<part name="sfp-05m.3h" crc="ac7dcc5e"/>
+		<part name="sfp-06m.4h" crc="1d504758"/>
+		<part name="sfp-07m.5h" crc="0f585f30"/>
+		<part name="sfp-08m.2k" crc="65eabc61"/>
+		<part name="sfp-09m.3k" crc="15f8b71e"/>
+		<part name="sfp-10m.4k" crc="c1ecf652"/>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (cp01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1000c.zip" md5="none">
+		<part name="cp01.ic652" crc="bb7ba033"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (cp04, shared with sfex), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="sfex.zip" md5="none">
+		<part name="cp04" crc="e0dc24ae"/>
+	</rom>
+
+	<!-- QSound: Z80 sound program (audiocpu, shared with sfex), 256KB, ioctl_index 6 -> SDRAM ch5 -->
+	<rom index="6" zip="sfex.zip" md5="none">
+		<part name="sfe_02.2e" crc="1908475c"/>
+		<part name="sfe_03.3e" crc="95c1e2e0"/>
+	</rom>
+
+	<!-- QSound: DL-1425 sample ROM (shared with sfex), 4MB (ROM_LOAD16_WORD_SWAP), ioctl_index 7 -> SDRAM ch4.
+	     Loaded STRAIGHT; the core inverts the ch4 byte-select to reproduce the word swap. -->
+	<rom index="7" zip="sfex.zip" md5="none">
+		<part name="sfe-01m.3b" crc="f5afff0d"/>
+	</rom>
+
+	<!-- QSound: DL-1425 DSP microcode, 24KB (first 8KB used), ioctl_index 8 -> DSP prog ROM.
+	     Game-independent QSound firmware, streamed into the jtdsp16 internal ROM. -->
+	<rom index="8" zip="qsound_hle.zip" md5="none">
+		<part name="dl-1425.bin" crc="d6cf5ef5"/>
+	</rom>
+
+	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
+	     From MAME zn.cpp DSW: bit 0x02 = Service Mode (bios testmode). -->
+	<nvram index="9" size="2048"/>
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+	<buttons names="LP,MP,HP,LK,MK,HK,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+</misterromdescription>

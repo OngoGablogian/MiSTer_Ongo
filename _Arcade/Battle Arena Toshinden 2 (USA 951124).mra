@@ -1,0 +1,69 @@
+<misterromdescription>
+	<name>Battle Arena Toshinden 2 (USA 951124)</name>
+	<setname>ts2u</setname>
+	<year>1995</year>
+	<manufacturer>Capcom / Takara</manufacturer>
+	<category>Fighting</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>USA</region>
+	<rbf>ZN1Capcom</rbf>
+
+	<!-- BIOS: Capcom ZN-1 BIOS (coh1000c), 512KB, ioctl_index 0. Japanese mask ROM. -->
+	<rom index="0" zip="coh1000c.zip" md5="none">
+		<part name="m534002c-13.ic353" crc="50033af6"/>
+	</rom>
+
+	<!-- Platform: Capcom ZN-1 coh1000c (0x05, 1MB VRAM), ioctl_index 1 -->
+	<rom index="1">
+		<part>05</part>
+	</rom>
+
+	<!-- Country/program ROM: 512KB, ioctl_index 2, CPU 0x1FB80000 (region "countryrom") -->
+	<rom index="2" zip="ts2.zip" md5="none">
+		<part name="ts2u/ts2u_04.2h" crc="ddb52e7c"/>
+	</rom>
+
+	<!-- Banked ROM: 14MB contiguous in MAME order, ioctl_index 3 (region "bankedroms"). -->
+	<rom index="3" zip="ts2.zip" md5="none">
+		<part name="ts2-05m.3h" crc="7f4228e2"/>
+		<part name="ts2-06m.4h" crc="67be6797"/>
+		<part name="ts2-07m.5h" crc="db73e2b8"/>
+		<part name="ts2-08m.2k" crc="01a48431"/>
+		<part name="ts2-09m.3k" crc="83f408de"/>
+		<part name="ts2-10m.4k" crc="ad90679a"/>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (cp01), 8 bytes, ioctl_index 4 -->
+	<rom index="4" zip="coh1000c.zip" md5="none">
+		<part name="cp01.ic652" crc="bb7ba033"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (cp02), 8 bytes, ioctl_index 5 -->
+	<rom index="5" zip="ts2.zip" md5="none">
+		<part name="cp02" crc="40b0b697"/>
+	</rom>
+
+	<!-- QSound: Z80 sound program (audiocpu), 256KB, ioctl_index 6 -> SDRAM ch5.
+	     ts2_02.2e is 128KB; MAME ROM_FILLs the upper 128KB with 0xFF. -->
+	<rom index="6" zip="ts2.zip" md5="none">
+		<part name="ts2_02.2e" crc="2f45c461"/>
+		<part repeat="131072">FF</part>
+	</rom>
+
+	<!-- QSound: DL-1425 sample ROM, 4MB (ROM_LOAD16_WORD_SWAP), ioctl_index 7 -> SDRAM ch4. -->
+	<rom index="7" zip="ts2.zip" md5="none">
+		<part name="ts2-01m.3b" crc="d7a505e0"/>
+	</rom>
+
+	<!-- QSound: DL-1425 DSP microcode, ioctl_index 8 -> DSP prog ROM. -->
+	<rom index="8" zip="qsound_hle.zip" md5="none">
+		<part name="dl-1425.bin" crc="d6cf5ef5"/>
+	</rom>
+
+	<nvram index="9" size="2048"/>
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+</misterromdescription>

@@ -1,0 +1,44 @@
+<misterromdescription>
+	<name>Star Gladiator 2: Nightmare of Bilstein (Japan 980316)</name>
+	<setname>stargld2</setname>
+	<year>1998</year>
+	<manufacturer>Capcom</manufacturer>
+	<category>Fighting</category>
+	<players>2</players>
+	<rotation>horizontal</rotation>
+	<rbf>ZN2Capcom</rbf>
+
+	<!-- idx0 BIOS coh3002c -->
+	<rom index="0" zip="coh3002c.zip" md5="none"><part name="m534002c-59.ic353" crc="e860ea8b"/></rom>
+	<!-- idx1 platform byte 15 (Capcom+2MB-VRAM) -->
+	<rom index="1"><part>15</part></rom>
+	<!-- idx2 countryrom -->
+	<rom index="2" zip="stargld2.zip|plsmaswd.zip" md5="none"><part name="sg2j_04.2h" crc="cf4ce6ac"/></rom>
+	<!-- idx3 bankedroms -->
+	<rom index="3" zip="stargld2.zip|plsmaswd.zip" md5="none">
+		<part name="sg2-05m.3h" crc="f1759236"/>
+		<part name="sg2-06m.4h" crc="33de4f72"/>
+		<part name="sg2-07m.5h" crc="72f724ba"/>
+		<part name="sg2-08m.2k" crc="9e169eee"/>
+		<part name="sg2-09m.3k" crc="33f73d4c"/>
+	</rom>
+	<!-- idx4 mobo CAT702 key cp10 -->
+	<rom index="4" zip="coh3002c.zip" md5="none"><part name="cp10.ic652" crc="7808fcef"/></rom>
+	<!-- idx5 game CAT702 key -->
+	<rom index="5" zip="stargld2.zip|plsmaswd.zip" md5="none"><part name="cp07" crc="4c1acdc2"/></rom>
+	<!-- idx6 Z80 -->
+	<rom index="6" zip="stargld2.zip|plsmaswd.zip" md5="none">
+		<part name="sg2_02.2e" crc="415ee138"/>
+		<part name="sg2_03.3e" crc="43806735"/>
+	</rom>
+	<!-- idx7 QSound samples -->
+	<rom index="7" zip="stargld2.zip|plsmaswd.zip" md5="none">
+		<part name="sg2-01m.3a" crc="643ea27b"/>
+	</rom>
+	<!-- idx8 DSP microcode -->
+	<rom index="8" zip="qsound_hle.zip" md5="none"><part name="dl-1425.bin" crc="d6cf5ef5"/></rom>
+
+	<nvram index="9" size="2048"/>
+	<switches base="96" default="00"><dip name="Service Mode" bits="1" ids="Off,On"/></switches>
+	<buttons names="LP,MP,HP,LK,MK,HK,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+</misterromdescription>

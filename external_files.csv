@@ -88,6 +88,23 @@ games/mame/twinhawk.zip,https://archive.org/download/OngoFiles/mame/twinhawk.zip
 games/mame/wbml.zip,https://archive.org/download/OngoFiles/mame/wbml.zip,"1165828",a5da561949f02ac1545212f8b4e0ab12,,,
 games/mame/wwfwfest.zip,https://archive.org/download/OngoFiles/mame/wwfwfest.zip,"18362114",89ac53e111430c73d13522238b56d920,,,
 
+games/mame/coh1000c.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/coh1000c.zip,"278492",a77a0ea2ab5d8678e6b8ba1304fb6cf5,,,
+games/mame/glpracr.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/glpracr.zip,"4418784",b5b2172ed6cf5a89bcb98220f84887c1,,,
+games/mame/qsound_hle.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/qsound_hle.zip,"2676",758388893761ea3ff0d820f60344a38e,,,
+games/mame/sfex.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/sfex.zip,"10964167",17714cfe220fecfe2e0616e574aa44c6,,,
+games/mame/sfexp.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/sfexp.zip,"11240185",8593825de9ed69eb5f2bafa2f8503cab,,,
+games/mame/starglad.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/starglad.zip,"11235620",3951217070cfda0e0b7618e12697963f,,,
+games/mame/ts2.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/ts2.zip,"12308764",cc4a147c18e650fd2f17286a6263abd6,,,
+
+games/mame/coh3002c.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/coh3002c.zip,"137963",7564fc1ea9b44b5d4436631e399d0c3e,,,
+games/mame/plsmaswd.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/plsmaswd.zip,"24348697",f240a51fc43f3fcc34d68c1f25c7b444,,,
+games/mame/rvschool.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/rvschool.zip,"28611176",485e0b002c3162ab8ee5ec8be9d1fddd,,,
+games/mame/sfex2.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/sfex2.zip,"16982187",1994bcbde7c2535af7b3d9b42b21ea30,,,
+games/mame/sfex2p.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/sfex2p.zip,"25620875",36c60123df77dded982df45fbbf6c5f5,,,
+games/mame/strider2.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/strider2.zip,"21408994",151fd5321ca37c61440420efb5b344c5,,,
+games/mame/techromn.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/techromn.zip,"39102489",903f3f17839278abcd6e7fbd703e399b,,,
+games/mame/tgmj.zip,https://archive.org/download/OngoFiles/mame-capcomzn2/tgmj.zip,"2731246",7fcc8a72b4bc1f3340e1db4724b0628d,,,
+
 games/mame/aligator.zip,https://archive.org/download/OngoFiles/mame-jlrh/aligator.zip,"18344791",6168a6478e62ed4956799b662c1f9663,,,
 games/mame/destryer.zip,https://archive.org/download/OngoFiles/mame-jlrh/destryer.zip,"14070",3f3340ec37d60737aa39c083f349a3e0,,,
 games/mame/empcity.zip,https://archive.org/download/OngoFiles/mame-jlrh/empcity.zip,"528771",d9e0cb3c0de98452b1a71c4ed7a425fd,,,
@@ -156,6 +173,7 @@ games/mame/sspirits.zip,https://archive.org/download/OngoFiles/mame-segas24/sspi
 
 games/mame/alien3.zip,https://archive.org/download/OngoFiles/mame-segas32/alien3.zip,"10212851",655750570ba5291943b1d82ba84d6e26,,,
 games/mame/arabfgt.zip,https://archive.org/download/OngoFiles/mame-segas32/arabfgt.zip,"9180295",ced2530f3f79c88727028ef5e1a1047a,,,
+games/mame/arescue.zip,https://archive.org/download/OngoFiles/mame-segas32/arescue.zip,"5235972",8047da908f7cea0d072236f2d0cb1587,,,
 games/mame/brival.zip,https://archive.org/download/OngoFiles/mame-segas32/brival.zip,"12176412",d39fd33f2d27e314041f1b60faa218e3,,,
 games/mame/darkedge.zip,https://archive.org/download/OngoFiles/mame-segas32/darkedge.zip,"38233765",1537451eb1348ce5c8f962b116fc5217,,,
 games/mame/dbzvrvs.zip,https://archive.org/download/OngoFiles/mame-segas32/dbzvrvs.zip,"8140032",c92ac93c71ac53125230f3264244c946,,,

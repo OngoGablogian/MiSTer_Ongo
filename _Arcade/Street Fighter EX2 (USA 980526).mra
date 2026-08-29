@@ -1,0 +1,43 @@
+<misterromdescription>
+	<name>Street Fighter EX2 (USA 980526)</name>
+	<setname>sfex2u</setname>
+	<year>1998</year>
+	<manufacturer>Capcom / Arika</manufacturer>
+	<category>Fighting</category>
+	<players>2</players>
+	<rotation>horizontal</rotation>
+	<rbf>ZN2Capcom</rbf>
+
+	<!-- idx0 BIOS coh3002c -->
+	<rom index="0" zip="coh3002c.zip" md5="none"><part name="m534002c-59.ic353" crc="e860ea8b"/></rom>
+	<!-- idx1 platform byte 15 (Capcom+2MB-VRAM) -->
+	<rom index="1"><part>15</part></rom>
+	<!-- idx2 countryrom -->
+	<rom index="2" zip="sfex2u.zip|sfex2.zip" md5="none"><part name="ex2u_04a.2h" crc="8dc5317f"/></rom>
+	<!-- idx3 bankedroms -->
+	<rom index="3" zip="sfex2u.zip|sfex2.zip" md5="none">
+		<part name="ex2-05m.3h" crc="78726b17"/>
+		<part name="ex2-06m.4h" crc="be1075ed"/>
+		<part name="ex2-07m.5h" crc="6496c6ed"/>
+		<part name="ex2-08m.2k" crc="3194132e"/>
+		<part name="ex2-09m.3k" crc="075ae585"/>
+	</rom>
+	<!-- idx4 mobo CAT702 key cp10 -->
+	<rom index="4" zip="coh3002c.zip" md5="none"><part name="cp10.ic652" crc="7808fcef"/></rom>
+	<!-- idx5 game CAT702 key -->
+	<rom index="5" zip="sfex2u.zip|sfex2.zip" md5="none"><part name="cp08" crc="a63d6fa6"/></rom>
+	<!-- idx6 Z80 -->
+	<rom index="6" zip="sfex2u.zip|sfex2.zip" md5="none">
+		<part name="ex2_02.2e" crc="9489875e"/>
+	</rom>
+	<!-- idx7 QSound samples -->
+	<rom index="7" zip="sfex2u.zip|sfex2.zip" md5="none">
+		<part name="ex2-01m.3a" crc="14a5bb0e"/>
+	</rom>
+	<!-- idx8 DSP microcode -->
+	<rom index="8" zip="qsound_hle.zip" md5="none"><part name="dl-1425.bin" crc="d6cf5ef5"/></rom>
+
+	<nvram index="9" size="2048"/>
+	<switches base="96" default="00"><dip name="Service Mode" bits="1" ids="Off,On"/></switches>
+	<buttons names="LP,MP,HP,LK,MK,HK,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+</misterromdescription>

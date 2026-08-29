@@ -1,0 +1,75 @@
+<misterromdescription>
+	<name>Strider 2 (Europe 991213)</name>
+	<setname>strider2</setname>
+	<year>1999</year>
+	<manufacturer>Capcom</manufacturer>
+	<category>Platform</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<rotation>horizontal</rotation>
+	<region>Europe</region>
+	<rbf>ZN2Capcom</rbf>
+
+	<!-- BIOS: Capcom ZN-2 BIOS (coh3002c), 512KB, ioctl_index 0. English mask ROM m534002c-59. -->
+	<rom index="0" zip="coh3002c.zip" md5="none">
+		<part name="m534002c-59.ic353" crc="e860ea8b"/>
+	</rom>
+
+	<!-- Platform: Capcom (0x05) + bit4 2MB-VRAM (0x10) = 0x15, ioctl_index 1.
+	     ZN-2 (coh3002c) board-config is 0x69 — IDENTICAL to ZN-1 Capcom coh1002c (verified vs MAME:
+	     same 2MB VRAM + 4MB RAM), so no ZN-2 tag is needed. The ZN-2 deltas (4-bit ROM banking for
+	     44MB, and the 0x1FA60000 SPU-hack + 0x1FA51C00 benign-read registers) are handled in RTL
+	     unconditionally and are benign for ZN-1. -->
+	<rom index="1">
+		<part>15</part>
+	</rom>
+
+	<!-- Country/program ROM: 512KB, ioctl_index 2 (MAME region "countryrom", hr2e_04 = Europe). -->
+	<rom index="2" zip="strider2.zip" md5="none">
+		<part name="hr2e_04.2h" crc="32d89b1c"/>
+	</rom>
+
+	<!-- Banked ROM: 44MB (5x8MB + 1x4MB), ioctl_index 3 (MAME region "bankedroms").
+	     Fixed 4MB window @0x1F000000 (ofs 0) + banked 4MB window @0x1F400000 (bank N -> ofs (N+1)*4MB, 11 banks). -->
+	<rom index="3" zip="strider2.zip" md5="none">
+		<part name="hr2-05m.3h" crc="18716fe8"/>
+		<part name="hr2-06m.4h" crc="6f13b69c"/>
+		<part name="hr2-07m.5h" crc="3925701b"/>
+		<part name="hr2-08m.2k" crc="d844c0dc"/>
+		<part name="hr2-09m.3k" crc="cdd43e6b"/>
+		<part name="hr2-10m.4k" crc="d95b3f37"/>
+	</rom>
+
+	<!-- CAT702 key A: motherboard key (cp10), 8 bytes, ioctl_index 4 (from ZN-2 BIOS zip). -->
+	<rom index="4" zip="coh3002c.zip" md5="none">
+		<part name="cp10.ic652" crc="7808fcef"/>
+	</rom>
+
+	<!-- CAT702 key B: game key (cp13), 8 bytes, ioctl_index 5. -->
+	<rom index="5" zip="strider2.zip" md5="none">
+		<part name="cp13" crc="606edf50"/>
+	</rom>
+
+	<!-- QSound: Z80 sound program (audiocpu), 128KB, ioctl_index 6. -->
+	<rom index="6" zip="strider2.zip" md5="none">
+		<part name="hr2_02.2e" crc="acd8d385"/>
+	</rom>
+
+	<!-- QSound: DL-1425 sample ROM, 2MB mirrored to 4MB (MAME ROM_RELOAD), ioctl_index 7.
+	     NOTE: MAME loads this WORD_SWAP; FPGA sample-path byte order is a post-boot audio follow-up. -->
+	<rom index="7" zip="strider2.zip" md5="none">
+		<part name="hr2-01m.3a" crc="510a16d1"/>
+		<part name="hr2-01m.3a" crc="510a16d1"/>
+	</rom>
+
+	<!-- QSound: DL-1425 DSP microcode, ioctl_index 8 (user's own qsound_hle.zip; no firmware in core). -->
+	<rom index="8" zip="qsound_hle.zip" md5="none">
+		<part name="dl-1425.bin" crc="d6cf5ef5"/>
+	</rom>
+
+	<nvram index="9" size="2048"/>
+	<switches base="96" default="00">
+		<dip name="Service Mode" bits="1" ids="Off,On"/>
+	</switches>
+	<buttons names="Attack,Jump,Dash,-,-,-,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="3"/>
+</misterromdescription>

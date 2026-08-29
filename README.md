@@ -17,6 +17,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                       |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                           |
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                                  |
+| [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                     |
+| [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                     |
 | [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                  |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                   |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                   |
