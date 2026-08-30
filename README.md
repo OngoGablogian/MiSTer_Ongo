@@ -62,6 +62,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                     |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                         |
 | [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
+| [Psikyo](https://github.com/ppriest/Arcade-Psikyo_MiSTer)                                                                         |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)         |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                            |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                       |
