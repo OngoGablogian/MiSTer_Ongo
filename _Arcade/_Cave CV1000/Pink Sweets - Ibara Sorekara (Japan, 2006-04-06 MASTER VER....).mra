@@ -1,0 +1,22 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Pink Sweets: Ibara Sorekara (Japan, 2006/04/06 MASTER VER....)</name>
+    <setname>pinkswts</setname>
+    <mameversion>0289</mameversion>
+    <year>2006</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="pinkswts.zip" md5="none">
+        <part name="pinkswts_u4" crc="5d812c9e"/>
+        <part name="pinkswts_u4" crc="5d812c9e"/>
+        <part name="pinkswts_u2" crc="a2fa5363"/>
+        <part name="u23" crc="4b82d250"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="e93f0627"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

@@ -12,6 +12,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                        |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                              |
 | [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                        |
+| [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                          |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                          |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                                |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                       |
@@ -19,6 +20,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                                  |
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                     |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                     |
+| [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                          |
 | [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                  |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                   |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                   |
@@ -109,12 +111,38 @@ file_checking = 'exhaustive'
 ```
 
 > [!IMPORTANT]
+> The included MRA files for the Cave CV1000 games requires the user to obtain the core seperatly from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.  
+> The ROMs for this core are also not included at this time. The MRAs are based on MAME 0.289 merged sets. The list of the required ROMs are noted below.
+
+```
+akatana.zip
+ddpdfk.zip
+ddpsdoj.zip
+deathsml.zip
+dfkbl.zip
+dsmbl.zip
+espgal2.zip
+futari15.zip
+futaribl.zip
+ibara.zip
+ibarablk.zip
+matsuri15.zip
+mmmbanc.zip
+mmpork.zip
+mushisam.zip
+mushitam.zip
+pinkswts.zip
+```
+
+> [!IMPORTANT]
 > For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
 
 ```
 [Uneon]
 main=MiSTer_Uneon
 ```
+
+----
 
 > [!IMPORTANT]
 > The CD-i core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.

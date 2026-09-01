@@ -1,0 +1,21 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Akai Katana (2010/ 8/13 MASTER VER.)</name>
+    <setname>akatana</setname>
+    <mameversion>0289</mameversion>
+    <year>2010</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="akatana.zip" md5="none">
+        <part name="u4" crc="613fd380"/>
+        <part name="u2" crc="89a2e1a5"/>
+        <part name="u23" crc="34a67e24"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="10760fed"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

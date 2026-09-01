@@ -1,0 +1,21 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Deathsmiles MegaBlack Label (Japan, 2008/10/06 MEGABLACK LABEL VER)</name>
+    <setname>dsmbl</setname>
+    <mameversion>0289</mameversion>
+    <year>2008</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="dsmbl.zip" md5="none">
+        <part name="u4" crc="77fc5ad1"/>
+        <part name="u2" crc="d6b85b7a"/>
+        <part name="u23" crc="a9536a6a"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="3b673326"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

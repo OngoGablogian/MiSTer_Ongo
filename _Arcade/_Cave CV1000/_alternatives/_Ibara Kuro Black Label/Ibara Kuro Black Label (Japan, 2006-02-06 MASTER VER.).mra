@@ -1,0 +1,22 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Ibara Kuro Black Label (Japan, 2006/02/06 MASTER VER.)</name>
+    <setname>ibarablka</setname>
+    <mameversion>0289</mameversion>
+    <year>2006</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="ibarablka.zip|ibarablk.zip" md5="none">
+        <part name="ibarablka_u4" crc="a9d43839"/>
+        <part name="ibarablka_u4" crc="a9d43839"/>
+        <part name="ibarablka_u2" crc="33400d96"/>
+        <part name="u23" crc="a436bb22"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="d11ab6b6"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

@@ -1,0 +1,56 @@
+<misterromdescription>
+  <name>Pigskin 621AD (rev 1.1K 8/01/90)</name>
+  <region></region>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <year>1990</year>
+  <manufacturer>Midway</manufacturer>
+  <platform>Bally/Midway MCR-68k</platform>
+  <setname>pigskin</setname>
+  <rbf>MCR68</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>49-way</joystick>
+  <num_buttons>3</num_buttons>
+  <buttons names="Strategy,Punch,Pass,Start,Coin,Tilt,Service,Test" default="A,B,X,Start,Select,-,R,L"/>
+  <switches default="FF">
+    <dip bits="0,1" name="Game Time" ids="Shortest,Short,Medium,Long" values="0,2,3,1"/>
+    <dip bits="2,3" name="Coinage" ids="2 Coins/1 Credit,1 Coin/1 Credit,Free Play,Set Your Own" values="2,3,0,1"/>
+    <dip bits="4" name="Demo Sounds" ids="Off,On" values="0,1"/>
+    <dip bits="5" name="Test Switch" ids="Off,On" values="1,0"/>
+    <dip bits="6" name="Coin Chutes" ids="Individual,Common" values="0,1"/>
+    <dip bits="7" name="Joystick" ids="Standard,Rotated" values="1,0"/>
+  </switches>
+  <rom index="8"><part>04</part></rom>
+  <rom index="0" zip="pigskin.zip" md5="none">
+    <interleave output="16">
+      <part name="pigskin-k_a5_la1.a5" crc="ab61c29b" map="01"/>
+      <part name="pigskin-k_b5_la1.b5" crc="55a802aa" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="pigskin-k_a6_la1.a6" crc="4d8b7e50" map="01"/>
+      <part name="pigskin-k_b6_la1.b6" crc="1194f187" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="1" zip="pigskin.zip" md5="none">
+    <part name="pigskin_u4_sl1.u4" crc="6daf2d37"/>
+    <part name="pigskin_u4_sl1.u4" crc="6daf2d37"/>
+    <part name="pigskin_u19_sl1.u19" crc="56fd16a3"/>
+    <part name="pigskin_u19_sl1.u19" crc="56fd16a3"/>
+    <part name="pigskin_u20_sl1.u20" crc="5d032fb8"/>
+    <part name="pigskin_u20_sl1.u20" crc="5d032fb8"/>
+    <part repeat="196608">00</part>
+  </rom>
+  <rom index="2" zip="pigskin.zip" md5="none">
+    <!-- ROMREGION_INVERT (mcr68.cpp): bytes here are the raw dump, matching MAME's CRC. RTL must XOR every byte with 0xFF at the point of tile decode; do not invert at load time. -->
+    <part name="pigskin_e2_la1.e2" crc="12d5737b"/>
+    <part name="pigskin_e1_la1.e1" crc="460202a9"/>
+  </rom>
+  <rom index="3" zip="pigskin.zip" md5="none">
+    <part name="pigskin_h15_la3.h15" crc="2655d03f"/>
+    <part name="pigskin_h17_la3.h17" crc="31c52ea7"/>
+    <part name="pigskin_h18_la3.h18" crc="b36c4109"/>
+    <part name="pigskin_h14_la3.h14" crc="09c87104"/>
+  </rom>
+</misterromdescription>

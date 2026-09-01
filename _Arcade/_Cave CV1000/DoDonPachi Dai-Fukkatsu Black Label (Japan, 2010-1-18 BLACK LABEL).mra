@@ -1,0 +1,21 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>DoDonPachi Dai-Fukkatsu Black Label (Japan, 2010/1/18 BLACK LABEL)</name>
+    <setname>dfkbl</setname>
+    <mameversion>0289</mameversion>
+    <year>2010</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="dfkbl.zip" md5="none">
+        <part name="u4" crc="8092ca9d"/>
+        <part name="u2" crc="29f9d73a"/>
+        <part name="u23" crc="36d4093b"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="31f9eb0a"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

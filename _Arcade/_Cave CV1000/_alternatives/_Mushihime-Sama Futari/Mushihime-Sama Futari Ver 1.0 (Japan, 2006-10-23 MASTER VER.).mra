@@ -1,0 +1,22 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Mushihime-Sama Futari Ver 1.0 (Japan, 2006/10/23 MASTER VER.)</name>
+    <setname>futari10</setname>
+    <mameversion>0289</mameversion>
+    <year>2006</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="futari10.zip|futari15.zip" md5="none">
+        <part name="futari10_u4" crc="b127dca7"/>
+        <part name="futari10_u4" crc="b127dca7"/>
+        <part name="futari10_u2" crc="78ffcd0c"/>
+        <part name="u23" crc="39f1e1f4"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="c631a766"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

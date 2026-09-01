@@ -1,0 +1,56 @@
+<misterromdescription>
+  <name>Blasted</name>
+  <region></region>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <year>1988</year>
+  <manufacturer>Bally Midway</manufacturer>
+  <platform>Bally/Midway MCR-68k</platform>
+  <setname>blasted</setname>
+  <rbf>MCR68</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <num_buttons>1</num_buttons>
+  <buttons names="Fire,Coin,Tilt,Service,Test" default="A,Select,-,R,L"/>
+  <switches default="F3">
+    <dip bits="0,1" name="Coinage" ids="2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1C/2C (duplicate)" values="2,3,1,0"/>
+    <dip bits="2,3" name="Difficulty" ids="Easy,Medium,Hard,Medium (duplicate)" values="2,0,1,3"/>
+    <dip bits="5" name="Dollar Receptor" ids="Off,On" values="1,0"/>
+    <dip bits="6" name="Demo Sounds" ids="Off,On" values="0,1"/>
+    <dip bits="7" name="Rack Advance (Cheat)" ids="Off,On" values="1,0"/>
+  </switches>
+  <rom index="8"><part>01</part></rom>
+  <rom index="0" zip="blasted.zip" md5="none">
+    <interleave output="16">
+      <part name="3c" crc="b243b7df" map="01"/>
+      <part name="3b" crc="627e30d3" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="2c" crc="026f30bf" map="01"/>
+      <part name="2b" crc="8e0e91a9" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="1" zip="blasted.zip" md5="none">
+    <interleave output="16">
+      <part name="blasted.u7" crc="8d7c8ef6" map="01"/>
+      <part name="blasted.u17" crc="c79040b9" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="blasted.u8" crc="c53094c0" map="01"/>
+      <part name="blasted.u18" crc="85688160" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="2" zip="blasted.zip" md5="none">
+    <!-- ROMREGION_INVERT (mcr68.cpp): bytes here are the raw dump, matching MAME's CRC. RTL must XOR every byte with 0xFF at the point of tile decode; do not invert at load time. -->
+    <part name="11d" crc="d8ed5cbc"/>
+    <part name="12d" crc="60d00c69"/>
+  </rom>
+  <rom index="3" zip="blasted.zip" md5="none">
+    <part name="fg0" crc="5034ae8a"/>
+    <part name="fg1" crc="4fbdba58"/>
+    <part name="fg2" crc="8891f6f8"/>
+    <part name="fg3" crc="18e4a130"/>
+  </rom>
+</misterromdescription>

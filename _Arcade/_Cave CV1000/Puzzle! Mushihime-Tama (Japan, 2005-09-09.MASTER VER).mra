@@ -1,0 +1,22 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Puzzle! Mushihime-Tama (Japan, 2005/09/09.MASTER VER)</name>
+    <setname>mushitam</setname>
+    <mameversion>0289</mameversion>
+    <year>2005</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Puzzle</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="mushitam.zip" md5="none">
+        <part name="mushitam_u4" crc="c49eb6b1"/>
+        <part name="mushitam_u4" crc="c49eb6b1"/>
+        <part name="mushitam_u2" crc="8ba498ab"/>
+        <part name="u23" crc="701a912a"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="6feeb9a1"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

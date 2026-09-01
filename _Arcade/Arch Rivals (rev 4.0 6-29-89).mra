@@ -1,0 +1,66 @@
+<misterromdescription>
+  <name>Arch Rivals (rev 4.0 6/29/89)</name>
+  <region></region>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <year>1989</year>
+  <manufacturer>Bally Midway</manufacturer>
+  <platform>Bally/Midway MCR-68k</platform>
+  <setname>archrivl</setname>
+  <rbf>MCR68</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>49-way</joystick>
+  <num_buttons>2</num_buttons>
+  <buttons names="Pass / Punch,Shoot / Block,Start,Coin,Tilt,Service,Test" default="A,B,Start,Select,-,R,L"/>
+  <switches default="FF">
+    <dip bits="0,1" name="Game Time" ids="Preset Time,Preset + 10sec,Preset + 20sec,Preset + 30sec" values="3,2,1,0"/>
+    <dip bits="2,3,4" name="Coinage" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,2 Coins/3 Credits,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="5,6,7,4,3,2,1,0"/>
+    <dip bits="5" name="Team Names" ids="Default,Hometown Heroes" values="1,0"/>
+    <dip bits="6" name="Demo Sounds" ids="Off,On" values="0,1"/>
+    <dip bits="7" name="Free Play" ids="Off,On" values="1,0"/>
+  </switches>
+  <rom index="8"><part>03</part></rom>
+  <!-- Battery-backed work-RAM low byte (4B, schematic sheet 2 of manual
+       16-4001-K-101): persists Hometown Heroes custom team rosters and high
+       scores, matching the "Team Names" DIP above. See
+       rtl/mcr68_mem_hw.sv and rtl/mem/mcr68_nvram_bridge.sv. -->
+  <nvram index="9" size="8192"/>
+  <rom index="0" zip="archrivl.zip" md5="none">
+    <interleave output="16">
+      <part name="arch_rivals_3c_rev4.3c" crc="60d4b760" map="01"/>
+      <part name="arch_rivals_3b_rev4.3b" crc="e0c07a8d" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="arch_rivals_2c_rev4.2c" crc="cc2893f7" map="01"/>
+      <part name="arch_rivals_2b_rev4.2b" crc="fa977050" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="1" zip="archrivl.zip" md5="none">
+    <part name="arch_rivals_u4_rev1.u4" crc="96b3c652"/>
+    <part name="arch_rivals_u4_rev1.u4" crc="96b3c652"/>
+    <part name="arch_rivals_u4_rev1.u4" crc="96b3c652"/>
+    <part name="arch_rivals_u4_rev1.u4" crc="96b3c652"/>
+    <part name="arch_rivals_u19_rev1.u19" crc="c4b3dc23"/>
+    <part name="arch_rivals_u19_rev1.u19" crc="c4b3dc23"/>
+    <part name="arch_rivals_u19_rev1.u19" crc="c4b3dc23"/>
+    <part name="arch_rivals_u19_rev1.u19" crc="c4b3dc23"/>
+    <part name="arch_rivals_u20_rev1.u20" crc="f7907a02"/>
+    <part name="arch_rivals_u20_rev1.u20" crc="f7907a02"/>
+    <part name="arch_rivals_u20_rev1.u20" crc="f7907a02"/>
+    <part name="arch_rivals_u20_rev1.u20" crc="f7907a02"/>
+    <part repeat="196608">00</part>
+  </rom>
+  <rom index="2" zip="archrivl.zip" md5="none">
+    <!-- ROMREGION_INVERT (mcr68.cpp): bytes here are the raw dump, matching MAME's CRC. RTL must XOR every byte with 0xFF at the point of tile decode; do not invert at load time. -->
+    <part name="arch_rivals_11d_rev1.11d" crc="7eb3d7c6"/>
+    <part name="arch_rivals_12d_rev1.12d" crc="31e68050"/>
+  </rom>
+  <rom index="3" zip="archrivl.zip" md5="none">
+    <part name="arch_rivals_7j_rev1.7j" crc="148ce28c"/>
+    <part name="arch_rivals_8j_rev1.8j" crc="58187ac2"/>
+    <part name="arch_rivals_9j_rev1.9j" crc="0dd1204e"/>
+    <part name="arch_rivals_10j_rev1.10j" crc="eb3d0344"/>
+  </rom>
+</misterromdescription>

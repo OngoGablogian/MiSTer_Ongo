@@ -1,0 +1,56 @@
+<misterromdescription>
+  <name>Xenophobe</name>
+  <region></region>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <year>1987</year>
+  <manufacturer>Bally Midway</manufacturer>
+  <platform>Bally/Midway MCR-68k</platform>
+  <setname>xenophob</setname>
+  <rbf>MCR68</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <players>3</players>
+  <joystick>8-way</joystick>
+  <num_buttons>3</num_buttons>
+  <buttons names="Fire,Left Button,Right Button,Coin,Tilt,Service,Test" default="A,B,X,Select,-,R,L"/>
+  <switches default="3C">
+    <dip bits="2" name="Free Play" ids="Off,On" values="1,0"/>
+    <dip bits="3" name="Coins per Life Unit" ids="1,2" values="1,0"/>
+    <dip bits="4" name="Life Unit" ids="1000,2000" values="1,0"/>
+    <dip bits="5" name="Demo Sounds" ids="Off,On" values="0,1"/>
+    <dip bits="6,7" name="Difficulty" ids="Easy,Medium,Hard,Medium (duplicate)" values="1,0,2,3"/>
+  </switches>
+  <rom index="8"><part>00</part></rom>
+  <rom index="0" zip="xenophob.zip" md5="none">
+    <interleave output="16">
+      <part name="xeno_pro.3c" crc="f44c2e60" map="01"/>
+      <part name="xeno_pro.3b" crc="01609a3b" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="xeno_pro.2c" crc="e45bf669" map="01"/>
+      <part name="xeno_pro.2b" crc="da5d39d5" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="1" zip="xenophob.zip" md5="none">
+    <interleave output="16">
+      <part name="xeno_snd.u7" crc="77561d15" map="01"/>
+      <part name="xeno_snd.u17" crc="837a1a71" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="xeno_snd.u8" crc="6e2915c7" map="01"/>
+      <part name="xeno_snd.u18" crc="12492145" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="2" zip="xenophob.zip" md5="none">
+    <!-- ROMREGION_INVERT (mcr68.cpp): bytes here are the raw dump, matching MAME's CRC. RTL must XOR every byte with 0xFF at the point of tile decode; do not invert at load time. -->
+    <part name="xeno_bg.11d" crc="3d2cf284"/>
+    <part name="xeno_bg.12d" crc="c32288b1"/>
+  </rom>
+  <rom index="3" zip="xenophob.zip" md5="none">
+    <part name="xeno_fg.7j" crc="b12eddb2"/>
+    <part name="xeno_fg.8j" crc="20e682f5"/>
+    <part name="xeno_fg.9j" crc="82fb3e09"/>
+    <part name="xeno_fg.10j" crc="6a7a3516"/>
+  </rom>
+</misterromdescription>

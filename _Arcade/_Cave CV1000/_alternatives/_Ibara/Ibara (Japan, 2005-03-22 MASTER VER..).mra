@@ -1,0 +1,22 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Ibara (Japan, 2005/03/22 MASTER VER..)</name>
+    <setname>ibarao</setname>
+    <mameversion>0289</mameversion>
+    <year>2005</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="ibarao.zip|ibara.zip" md5="none">
+        <part name="ibarao_u4" crc="8e6c155d"/>
+        <part name="ibarao_u4" crc="8e6c155d"/>
+        <part name="u2" crc="55840976"/>
+        <part name="u23" crc="ee5e585d"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="f0aa3cb6"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

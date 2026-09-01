@@ -1,0 +1,22 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Mushihime-Sama (Japan, 2004/10/12 MASTER VER.)</name>
+    <setname>mushisama</setname>
+    <mameversion>0289</mameversion>
+    <year>2004</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="mushisama.zip|mushisam.zip" md5="none">
+        <part name="mushisama_u4" crc="0b5b30b2"/>
+        <part name="mushisama_u4" crc="0b5b30b2"/>
+        <part name="mushisam_u2" crc="4f0a842a"/>
+        <part name="u23" crc="138e2050"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="e3d05c9f"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

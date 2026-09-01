@@ -1,0 +1,22 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>Medal Mahjong Moukari Bancho (Japan, 2007/06/05 MASTER VER.)</name>
+    <setname>mmmbanc</setname>
+    <mameversion>0289</mameversion>
+    <year>2007</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="mmmbanc.zip" md5="none">
+        <part name="u4" crc="5589d8c6"/>
+        <part name="u4" crc="5589d8c6"/>
+        <part name="u2" crc="2e38965a"/>
+        <part name="u23" crc="4caaa1bf"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="8e3a51ba"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

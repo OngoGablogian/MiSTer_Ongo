@@ -1,0 +1,21 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>DoDonPachi Dai-Fukkatsu Ver 1.5 (Japan, 2008/06/23 MASTER VER 1.5)</name>
+    <setname>ddpdfk</setname>
+    <mameversion>0289</mameversion>
+    <year>2008</year>
+    <manufacturer>Cave</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="0" zip="ddpdfk.zip" md5="none">
+        <part name="ddpdfk_u4" crc="9976d699"/>
+        <part name="ddpdfk_u2" crc="84a51a4f"/>
+        <part name="u23" crc="27032cde"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="a6178c2c"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>
