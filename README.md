@@ -4,6 +4,10 @@
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
 ```
+
+> **This database can also be installed by following the link below and download the linked ZIP file. Then extract the 'MiSTer_Ongo.ini' file, and copy it to the root of your SD card.**
+* [theypsilon Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip#install)
+
 ----
 
 # Included Cores:
