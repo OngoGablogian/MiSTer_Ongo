@@ -1,0 +1,53 @@
+<misterromdescription>
+    <name>Syvalion (US, PS2 Taito Legends 2)</name>
+    <setname>syvalionu</setname>
+    <year>1988</year>
+    <manufacturer>Taito America</manufacturer>
+    <rbf>Syvalion</rbf>
+    <region>US</region>
+
+    <!-- Layout must match tools/mkrom.py LAYOUT and the core's ROM
+         decode. All three come from the same table; change one,
+         change all. Byte order in the interleaved regions is
+         UNVERIFIED for output="64" - see mkrom.py and BUGS INF-003. -->
+    <rom index="0" zip="syvalionu.zip|syvalion.zip" type="merged" md5="none">
+        <!-- maincpu @ 0x000000 -->
+        <interleave output="16">
+            <part name="eng-20.bin" crc="6c1db526" map="01"/>
+            <part name="eng-22.bin" crc="d386b5dd" map="10"/>
+        </interleave>
+        <!-- maincpu @ 0x040000 -->
+        <interleave output="16">
+            <part name="eng-19.bin" crc="57fa3905" map="01"/>
+            <part name="usa-21.bin" crc="ed27edf7" map="10"/>
+        </interleave>
+        <!-- audiocpu @ 0x080000 -->
+        <part name="b51-23.bin" crc="734662de"/>
+        <!-- tc0080vco @ 0x090000 -->
+        <interleave output="64">
+            <part name="b51-16.bin" crc="c0fcf7a5" map="10000000"/>
+            <part name="b51-12.bin" crc="6b36d358" map="01000000"/>
+            <part name="b51-08.bin" crc="9f6a535c" map="00100000"/>
+            <part name="b51-04.bin" crc="03aea658" map="00010000"/>
+            <part name="b51-14.bin" crc="dea7216e" map="00001000"/>
+            <part name="b51-10.bin" crc="6aa97fbc" map="00000100"/>
+            <part name="b51-06.bin" crc="81bef4f0" map="00000010"/>
+            <part name="b51-02.bin" crc="906ba440" map="00000001"/>
+        </interleave>
+        <!-- tc0080vco @ 0x190000 -->
+        <interleave output="64">
+            <part name="b51-15.bin" crc="30b2ee02" map="10000000"/>
+            <part name="b51-11.bin" crc="ae9a9ac5" map="01000000"/>
+            <part name="b51-07.bin" crc="764d4dc8" map="00100000"/>
+            <part name="b51-03.bin" crc="8fd9b299" map="00010000"/>
+            <part name="b51-13.bin" crc="dab28958" map="00001000"/>
+            <part name="b51-09.bin" crc="cbb4f33d" map="00000100"/>
+            <part name="b51-05.bin" crc="47976ae9" map="00000010"/>
+            <part name="b51-01.bin" crc="8dab004a" map="00000001"/>
+        </interleave>
+        <!-- adpcma @ 0x290000 -->
+        <part name="b51-17.bin" crc="d85096aa"/>
+        <!-- adpcmb @ 0x310000 -->
+        <part name="b51-18.bin" crc="8b23ac83"/>
+    </rom>
+</misterromdescription>

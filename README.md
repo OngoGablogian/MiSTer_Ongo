@@ -8,6 +8,9 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > **This database can also be installed by following the link below and download the linked ZIP file. Then extract the 'MiSTer_Ongo.ini' file, and copy it to the root of your SD card.**
 * [theypsilon Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip#install)
 
+> [!IMPORTANT]
+> * If there are any cores or files from this repository that you don't want downloaded when running update_all, please refer to the [Downloader_MiSter documentation](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md) on how to use the download filter options.
+
 ----
 
 # Included Cores:
@@ -117,27 +120,6 @@ file_checking = 'exhaustive'
 
 > [!IMPORTANT]
 > * The included MRA files for the Cave CV1000 games requires the user to obtain the core seperatly from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
-> * The ROMs for this core are also not included at this time. The MRAs are based on MAME 0.289 merged sets. The list of the required ROMs are noted below.
-
-```
-akatana.zip
-ddpdfk.zip
-ddpsdoj.zip
-deathsml.zip
-dfkbl.zip
-dsmbl.zip
-espgal2.zip
-futari15.zip
-futaribl.zip
-ibara.zip
-ibarablk.zip
-matsuri15.zip
-mmmbanc.zip
-mmpork.zip
-mushisam.zip
-mushitam.zip
-pinkswts.zip
-```
 
 > [!IMPORTANT]
 > * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
@@ -280,7 +262,7 @@ db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-syncthing/db/db
 ```
 [jlrh/jlrh-misterfpga-db]
 db_url = https://raw.githubusercontent.com/jlrh/jlrh-misterfpga-db/db/db.json.zip
-filter = !arcade-opwolf !arcade-thoop !arcade-ssriders
+filter = !arcade-bigkarnk !arcade-biomtoy !arcade-opwolf !arcade-ssriders !arcade-thoop
 ```
 
 [Arcade_HyperDuel_MiSTer](https://github.com/searchsolved/Arcade_HyperDuel_MiSTer)
