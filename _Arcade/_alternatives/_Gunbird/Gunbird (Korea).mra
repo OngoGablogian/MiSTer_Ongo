@@ -54,7 +54,7 @@
 
 	<rom index="3">
 		<part>
-		00 00 00 00 3F FF 00 02 00 02 00 01 00 0F 10 00
+		19 9A 57 EF 3F FF 00 02 00 02 00 01 00 0F 10 00
 		00 FE 3D D0 75 00 2D 00
 		</part>
 	</rom>
@@ -63,7 +63,7 @@
 
 	<buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause" default="Y,B,A,Start,Select,R" count="3"/>
 
-	<switches default="FF,FF,FD,FF">
+	<switches default="FD,FF,0F">
 
 		<dip name="Flip Screen" bits="0" ids="On,Off"/>
 		<dip name="Demo Sounds" bits="1" ids="On,Off"/>
@@ -77,5 +77,5 @@
 		<dip name="2 Coins Start, 1 Coin Continue" bits="15" ids="On (Free Play),Off"/>
 	</switches>
 
-	<mratimestamp>20260830211239</mratimestamp>
+	<mratimestamp>20260901000922</mratimestamp>
 </misterromdescription>

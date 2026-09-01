@@ -51,7 +51,7 @@
 
 	<rom index="3">
 		<part>
-		00 00 00 00 3F FF 00 02 00 02 00 01 00 0F 10 00
+		19 9A 57 EF 3F FF 00 02 00 02 00 01 00 0F 10 00
 		00 FE 1A F4 4E 00 04 00
 		</part>
 	</rom>
@@ -60,7 +60,7 @@
 
 	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Pause" default="Y,B,A,X,L,R,Start,Select" count="6"/>
 
-	<switches default="FF,FF,FD,FF,0C">
+	<switches default="FD,FF,0C">
 
 		<dip name="Flip Screen" bits="0" ids="On,Off"/>
 		<dip name="Demo Sounds" bits="1" ids="On,Off"/>
@@ -79,5 +79,5 @@
 		<dip name="Region" bits="16,17,18,19" ids="World,Taiwan,Hong Kong,Korea,USA and Canada (Jaleco license),Japan" values="0x0,0x6,0xa,0xc,0xe,0xf"/>
 	</switches>
 
-	<mratimestamp>20260830211239</mratimestamp>
+	<mratimestamp>20260901000922</mratimestamp>
 </misterromdescription>

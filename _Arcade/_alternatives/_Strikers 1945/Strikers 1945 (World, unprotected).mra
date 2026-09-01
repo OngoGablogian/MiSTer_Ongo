@@ -50,7 +50,7 @@
 
 	<rom index="3">
 		<part>
-		00 00 00 00 3F FF 00 02 00 02 00 01 00 0F 10 00
+		19 9A 57 EF 3F FF 00 02 00 02 00 01 00 0F 10 00
 		00 FE 2A F8 78 2D F8 00
 		</part>
 	</rom>
@@ -74,5 +74,5 @@
 		<dip name="Region" bits="16,17,18,19" ids="Taiwan,Hong Kong,Korea,USA and Canada,World" values="0x7,0xb,0xd,0xe,0xf"/>
 	</switches>
 
-	<mratimestamp>20260830211239</mratimestamp>
+	<mratimestamp>20260901000922</mratimestamp>
 </misterromdescription>
