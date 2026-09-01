@@ -91,6 +91,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Street Fighter: The Movie](https://discord.com/channels/647909397477195803/1047333006555217991/1537829622371061781)              |
 | [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                          |
 | [Superman](https://www.patreon.com/bazset/posts/superman-taito-166783356?pr=true)                                                 |
+| [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                          |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                         |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                       |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                             |
@@ -107,7 +108,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 # Important Info:
 
 > [!IMPORTANT]
-> Since the release of Downloader v2.3, I'd recommended adding the lines below to your 'downloader.ini' file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
+> * Since the release of Downloader v2.3, I'd recommended adding the lines below to your 'downloader.ini' file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
 
 ```
 [MiSTer]
@@ -115,8 +116,8 @@ file_checking = 'exhaustive'
 ```
 
 > [!IMPORTANT]
-> The included MRA files for the Cave CV1000 games requires the user to obtain the core seperatly from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.  
-> The ROMs for this core are also not included at this time. The MRAs are based on MAME 0.289 merged sets. The list of the required ROMs are noted below.
+> * The included MRA files for the Cave CV1000 games requires the user to obtain the core seperatly from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
+> * The ROMs for this core are also not included at this time. The MRAs are based on MAME 0.289 merged sets. The list of the required ROMs are noted below.
 
 ```
 akatana.zip
@@ -139,7 +140,7 @@ pinkswts.zip
 ```
 
 > [!IMPORTANT]
-> For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
+> * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
 
 ```
 [Uneon]
@@ -149,7 +150,7 @@ main=MiSTer_Uneon
 ----
 
 > [!IMPORTANT]
-> The CD-i core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
+> * The CD-i core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
 
 ```
 [CD-i]
@@ -157,7 +158,7 @@ main=MiSTer_CDi
 ```
 
 > [!IMPORTANT]
-> The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
+> * The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
 
 ```
 [N64DD]
@@ -165,7 +166,7 @@ main=MiSTer_N64DD
 ```
 
 > [!IMPORTANT]
-> Jotego's Neo Geo Pocket Color is out of beta. If you previously symlinked your **_Arcade/Cores** folder to **_Console/cores**, it can now be removed.
+> * Jotego's Neo Geo Pocket Color is out of beta. If you previously symlinked your **_Arcade/Cores** folder to **_Console/cores**, it can now be removed.
 
 ----
 
@@ -225,7 +226,7 @@ main=MiSTer_N64DD
 ----
 
 > [!TIP]
-> Here are some other recommended repositories you can add to your 'downloader.ini' file.
+> **Here are some other recommended repositories you can add to your 'downloader.ini' file.**
 
 [MiSTer Unstable Nightlies](https://github.com/MiSTer-unstable-nightlies)
 ```
@@ -297,6 +298,6 @@ db_url = https://raw.githubusercontent.com/TheJesusFish/Slop-Core/db/db.json.zip
 ----
 
 > [!NOTE]
-> If you run into any issues or you are a developer of one of the cores included in this repository and would like it removed, please create an issue on the [GitHub page](https://github.com/OngoGablogian/MiSTer_Ongo/issues).
+> * If you run into any issues or you are a developer of one of the cores included in this repository and would like it removed, please create an issue on the [GitHub page](https://github.com/OngoGablogian/MiSTer_Ongo/issues).
 
 ----

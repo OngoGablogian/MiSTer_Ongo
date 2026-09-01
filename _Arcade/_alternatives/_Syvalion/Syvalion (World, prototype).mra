@@ -1,0 +1,65 @@
+<misterromdescription>
+    <name>Syvalion (World, prototype)</name>
+    <setname>syvalionp</setname>
+    <year>1988</year>
+    <manufacturer>Taito</manufacturer>
+    <rbf>Syvalion</rbf>
+    <region>World</region>
+
+    <!-- Layout must match tools/mkrom.py LAYOUT and the core's ROM
+         decode. All three come from the same table; change one,
+         change all. Byte order in the interleaved regions is
+         UNVERIFIED for output="64" - see mkrom.py and BUGS INF-003. -->
+    <rom index="0" zip="syvalionp.zip|syvalion.zip" type="merged" md5="none">
+        <!-- maincpu @ 0x000000 -->
+        <interleave output="16">
+            <part name="prg-1e.ic28" crc="c778005b" map="01"/>
+            <part name="prg-0e.ic31" crc="5a484040" map="10"/>
+        </interleave>
+        <!-- maincpu @ 0x040000 -->
+        <interleave output="16">
+            <part name="prg-3e.ic27" crc="0babb15b" map="01"/>
+            <part name="prg-2e.ic30" crc="f4aacaa9" map="10"/>
+        </interleave>
+        <!-- audiocpu @ 0x080000 -->
+        <part name="c69b.ic58" crc="07d3d789"/>
+        <!-- tc0080vco @ 0x090000 -->
+        <interleave output="64">
+            <part name="chr-00.ic16" crc="b0c66db7" map="10000000"/>
+            <part name="chr-01.ic12" crc="dd07db12" map="01000000"/>
+            <part name="chr-02.ic8" crc="323a9ad9" map="00100000"/>
+            <part name="chr-03.ic4" crc="5ab28400" map="00010000"/>
+            <part name="chr-04.ic14" crc="dd2ea978" map="00001000"/>
+            <part name="chr-05.ic10" crc="1c305d4e" map="00000100"/>
+            <part name="chr-06.ic6" crc="00cd0493" map="00000010"/>
+            <part name="chr-07.ic2" crc="58fb0f65" map="00000001"/>
+        </interleave>
+        <!-- tc0080vco @ 0x190000 -->
+        <interleave output="64">
+            <part name="chr-10.ic15" crc="c8942dde" map="10000000"/>
+            <part name="chr-11.ic11" crc="fdaa72f5" map="01000000"/>
+            <part name="chr-12.ic7" crc="094a5e0b" map="00100000"/>
+            <part name="chr-13.ic3" crc="cf39cf1d" map="00010000"/>
+            <part name="chr-14.ic13" crc="083806c3" map="00001000"/>
+            <part name="chr-15.ic9" crc="6afb076e" map="00000100"/>
+            <part name="chr-16.ic5" crc="a169194e" map="00000010"/>
+            <part name="chr-17.ic7" crc="c259bd61" map="00000001"/>
+        </interleave>
+        <!-- adpcma @ 0x290000 -->
+        <part name="sa-00.ic1" crc="27a97abc"/>
+        <!-- adpcma @ 0x2B0000 -->
+        <part name="sa-01.ic2" crc="0140452b"/>
+        <!-- adpcma @ 0x2D0000 -->
+        <part name="sa-02.ic3" crc="970cd4ee"/>
+        <!-- adpcma @ 0x2F0000 -->
+        <part name="sa-03.ic4" crc="936cd1b5"/>
+        <!-- adpcmb @ 0x310000 -->
+        <part name="sb-00.ic6" crc="5188f459"/>
+        <!-- adpcmb @ 0x330000 -->
+        <part name="sb01.ic8" crc="4dab7a6b"/>
+        <!-- adpcmb @ 0x350000 -->
+        <part name="sb-02.ic7" crc="8f5cc936"/>
+        <!-- adpcmb @ 0x370000 -->
+        <part name="sb-03-e66a.ic9" crc="9013b407"/>
+    </rom>
+</misterromdescription>
