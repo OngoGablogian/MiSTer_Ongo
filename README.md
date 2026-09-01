@@ -8,8 +8,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > **This database can also be installed by following the link below and download the linked ZIP file. Then extract the 'MiSTer_Ongo.ini' file, and copy it to the root of your SD card.**
 * [theypsilon Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip#install)
 
-> [!IMPORTANT]
-> * If there are any cores or files from this repository that you don't want downloaded when running update_all, please refer to the [Downloader_MiSter documentation](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md) on how to use the download filter options.
+> [!NOTE]
+> * If there are any cores or files from this repository that you don't want downloaded when running update_all, please refer to the [Downloader_MiSTer documentation](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md) on how to use the download filter options.
 
 ----
 
