@@ -1,0 +1,71 @@
+<misterromdescription>
+	<name>Silent Dragon (World)</name>
+	<setname>silentd</setname>
+	<year>1992</year>
+	<manufacturer>Taito Corporation Japan</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Start,Select,L" names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="silentd.zip">
+		<!--Board config: game_t index 13 (silentd)-->
+		<part>0D 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="8c0a72ae" name="east-15-1.ic10" map="01"/>
+			<part crc="5883d362" name="east-12-1.ic32" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="2f05b14a" name="east-09.ic9" map="01"/>
+			<part crc="35da4428" name="east-11.ic31" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 4194304 bytes-->
+		<part>01400000</part>
+		<interleave output="32">
+			<part crc="53237217" name="east-04.ic28" map="0021"/>
+			<part crc="1b9b2846" name="east-03.ic39" map="2100"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="e6e6dfa7" name="east-06.ic29" map="0021"/>
+			<part crc="e02472c5" name="east-05.ic40" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="651861ab" name="east-13.ic15"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="b41fff1a" name="east-01.ic1"/>
+
+		<!--Region 4: ymsnd:adpcmb, 524288 bytes-->
+		<part>04080000</part>
+		<part crc="e0de5c39" name="east-02.ic3"/>
+	</rom>
+
+	<switches default="bfff">
+		<dip name="Unused" bits="0" values="0,1" ids="On,Off"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coinage" bits="4,5" values="0,1,2,3" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Unused" bits="6" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="7" values="0,1" ids="On,Off"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Friendly Fire" bits="10" values="0,1" ids="On,Off"/>
+		<dip name="Power-Up at Stage Clear" bits="11" values="0,1" ids="Off,On"/>
+		<dip name="Regain Power buy-in" bits="12" values="0,1" ids="Off,On"/>
+		<dip name="Credits" bits="13" values="0,1" ids="Separate,Combined"/>
+		<dip name="Cabinet Style" bits="14,15" values="0,1,2,3" ids="4 Players/2 Machines,4 Players/1 Machine,2 Players,3 Players"/>
+	</switches>
+</misterromdescription>

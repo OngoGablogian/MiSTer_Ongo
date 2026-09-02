@@ -16,11 +16,16 @@
     <switches default="00">
         <dip name="Video Sync" bits="0" ids="-,+"/>
         <dip name="Flip Screen" bits="1" ids="Off,On"/>
-        <dip name="Unknown (SW1:2)" bits="2" ids="On,Off"/>
+        <dip name="Freeze Screen" bits="2" ids="Off,On"/>
         <dip name="Service Mode" bits="3" ids="Off,On"/>
     </switches>
 
-    <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin,Pause" default="Y,X,L,B,A,R,Start,Select,L3" count="6"/>
+    <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin" default="Y,X,L,B,A,R,Start,Select" count="6"/>
+
+    <!-- Board selector must precede the bulk DDR stream. -->
+    <rom index="1">
+        <part>00</part>
+    </rom>
 
     <!--
         One byte-addressed stream staged at DDR 0x30000000.  Every fill is

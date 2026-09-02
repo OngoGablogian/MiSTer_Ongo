@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+    <name>BloodStorm (v2.22)</name>
+    <setname>bloodstm</setname>
+    <rbf>ITech32</rbf>
+    <mameversion>0288</mameversion>
+    <year>1994</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>World</region>
+    <platform>Incredible Technologies 16-bit</platform>
+    <category>Fighting</category>
+    <!--Compact Blood DIP bits0..3 map to native masks10/20/40/80, physical SW1:4/3/2/1.-->
+    <switches default="00">
+        <dip name="Video Sync" bits="0" ids="-,+" />
+        <dip name="Flip Screen" bits="1" ids="Off,On" />
+        <dip name="Violence" bits="2" ids="On,Off" />
+        <dip name="Service Mode" bits="3" ids="Off,On" />
+    </switches>
+    <!--Keep '-' at B6; Start/Coin remain joystick bits10/11. No Pause or save-state binding.-->
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,-,Start,Coin" default="Y,X,L,B,A,Start,Select" count="5" />
+    <!--Game02 must precede the address30000000 bulk stream.-->
+    <rom index="1">
+        <part>02</part>
+    </rom>
+    <rom index="0" zip="bloodstm.zip" address="0x30000000" md5="None">
+        <interleave output="16">
+            <part name="bld00_v2.22_u83.u83" crc="95f36db6" map="01" />
+            <part name="bld01_v2.22_u88.u88" crc="fcc04b93" map="10" />
+        </interleave>
+        <part repeat="0x380000">00</part>
+        <part repeat="0x8000">00</part>
+        <part name="bldsnd_v2.01_u17.u17" crc="5aa452ee" offset="0x18000" length="0x8000" />
+        <part name="bldsnd_v2.01_u17.u17" crc="5aa452ee" offset="0x0" length="0x18000" />
+        <part repeat="0xd8000">00</part>
+        <interleave output="32">
+            <part name="bldstorm_grom0_v1.grom0" crc="4e10b8c1" map="0001" />
+            <part name="bldstorm_grom5_v1.grom5" crc="6333b6ce" map="0010" />
+            <part name="bldstorm_grom10_v1.grom10" crc="a972a65c" map="0100" />
+            <part name="bldstorm_grom15_v1.grom15" crc="9a8f54aa" map="1000" />
+        </interleave>
+        <interleave output="32">
+            <part name="bldstorm_grom1_v1.grom1" crc="10abf660" map="0001" />
+            <part name="bldstorm_grom6_v1.grom6" crc="06a260d5" map="0010" />
+            <part name="bldstorm_grom11_v1.grom11" crc="f2cab3c7" map="0100" />
+            <part name="bldstorm_grom16_v1.grom16" crc="403aef7b" map="1000" />
+        </interleave>
+        <interleave output="32">
+            <part name="bldstorm_grom2_v1.grom2" crc="488200b1" map="0001" />
+            <part name="bldstorm_grom7_v1.grom7" crc="5bb19727" map="0010" />
+            <part name="bldstorm_grom12_v1.grom12" crc="b10d674f" map="0100" />
+            <part name="bldstorm_grom17_v1.grom17" crc="7119df7e" map="1000" />
+        </interleave>
+        <interleave output="32">
+            <part name="bldstorm_grom3_v1.grom3" crc="2378792e" map="0001" />
+            <part name="bldstorm_grom8_v1.grom8" crc="3640ca2e" map="0010" />
+            <part name="bldstorm_grom13_v1.grom13" crc="bd4a071d" map="0100" />
+            <part name="bldstorm_grom18_v1.grom18" crc="12959bb8" map="1000" />
+        </interleave>
+        <part repeat="0x80000">FF</part>
+        <part repeat="0x1880000">00</part>
+        <interleave output="16">
+            <part name="ensoniq.2m" crc="9fdc4825" map="01" />
+            <part map="10" repeat="0x200000">00</part>
+        </interleave>
+        <interleave output="16">
+            <part name="bldstorm_srom0_v1.srom0" crc="ee4570c8" map="01" />
+            <part map="10" repeat="0x80000">00</part>
+        </interleave>
+        <interleave output="16">
+            <part name="bldstorm_srom1_v1.srom1" crc="b0f32ec5" map="01" />
+            <part map="10" repeat="0x80000">00</part>
+        </interleave>
+        <part repeat="0x100000">00</part>
+        <interleave output="16">
+            <part name="bldstorm_srom2_v1.srom2" crc="8aee1e77" map="01" />
+            <part map="10" repeat="0x40000">00</part>
+        </interleave>
+        <part repeat="0x80000">00</part>
+    </rom>
+</misterromdescription>

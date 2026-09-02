@@ -1,0 +1,68 @@
+<misterromdescription>
+	<name>Sonic Blast Man (US)</name>
+	<setname>sbm</setname>
+	<year>1990</year>
+	<manufacturer>Taito Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Start,Select,L" names="Pad Sensor 1,Pad Sensor 2,Pad Sensor 3,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="sbm.zip">
+		<!--Board config: game_t index 14 (sbm)-->
+		<part>0E 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="d900ce83" name="c69-22-2.ic12" map="01"/>
+			<part crc="225952a3" name="c69-20-2.ic10" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="70903898" name="c69-25-2.ic11" map="01"/>
+			<part crc="d6cfacfb" name="c69-19-2.ic9" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 4194304 bytes-->
+		<part>01400000</part>
+		<interleave output="32">
+			<part crc="521fabe3" name="c69-01.ic5" map="0021"/>
+			<part crc="f0e20d35" name="c69-02.ic6" map="2100"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="d1550884" name="c69-13.ic2" map="0001"/>
+			<part crc="eb56582c" name="c69-12.ic1" map="0010"/>
+			<part crc="9761d316" name="c69-15.ic4" map="0100"/>
+			<part crc="0ed0272a" name="c69-14.ic3" map="1000"/>
+		</interleave>
+		<part repeat="1572864">00</part>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="c999f753" name="c69-31.ic28"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="8784058b" name="c69-26.ic36"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Tickets" bits="0" values="0,1" ids="Off,On"/>
+		<dip name="Win Bonus Tickets" bits="1" values="0,1" ids="Off,On"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coinage" bits="4,5" values="0,1,2,3" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Unknown" bits="6" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="7" values="0,1" ids="On,Off"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Punch Power" bits="10,11" values="0,1,2,3" ids="Highest,Higher,Lower,Medium"/>
+		<dip name="Tickets Payout" bits="12,13" values="0,1,2,3" ids="Total Power / 120,Total Power / 80,Total Power / 40,Total Power / 50"/>
+		<dip name="Win Bonus Tickets Payout" bits="14,15" values="0,1,2,3" ids="2/4/8/16/32,3/4/5/6/7,2/4/6/8/10,1/2/3/4/5"/>
+	</switches>
+</misterromdescription>

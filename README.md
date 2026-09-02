@@ -12,103 +12,101 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > * If there are any cores or files from this repository that you don't want downloaded when running update_all, please refer to the [Downloader_MiSTer documentation](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md) on how to use the download filter options.
 
 > [!NOTE]
-> * In its current state, this repo totals about 6GB of files.
+> * In its current state, this repo totals a lttle over 6GB of files.
 
 ----
 
 # Included Cores:
 | Core |
 | :---: |
-| [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                        |
-| [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                              |
-| [Air Gallet (Coin-Op Collection)](https://www.patreon.com/posts/135641029)                                                        |
-| [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                          |
-| [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                          |
-| [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                                |
-| [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                       |
-| [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                           |
-| [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                                  |
-| [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                     |
-| [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                     |
-| [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                          |
-| [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                  |
-| [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                   |
-| [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                   |
-| [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                   |
-| [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                    |
-| [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                       |
-| [GameKing](https://discord.com/channels/647909397477195803/1046941428758102086/1536851511965917204)                               |
-| [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                               |
-| [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                       |
-| [Grind Stormer](https://github.com/TheJesusFish/Arcade-GrindStormer_MiSTer)                                                       |
-| [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                     |
-| [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                         |
-| [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                           |
-| [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                          |
-| [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                          |
-| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1543359831912616007)                   |
-| [Knuckle Bash](https://github.com/TheJesusFish/Arcade-KnuckleBash_MiSTer)                                                         |
-| [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                       |
-| [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                               |
-| [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                                |
-| [Mazinger Z (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-124883899)                                       |
-| [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-t-unit-167880978)                                                   |
-| [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                          |
-| [Midway Y Unit](https://www.patreon.com/blahm1d/posts/system-warning-164511442?collection=2278348)                                |
-| [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                         |
-| [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                               |
-| [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                        |
-| [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                       |
-| [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                   |
-| [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-166884433)                                              |
-| [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                    |
-| [NARC (blahm1d)](https://www.patreon.com/blahm1d/posts/blahm1d-coaxes-164867975)                                                  |
-| [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-v1-0-165736329)                                                  |
-| [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                              |
-| [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                        |
-| [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                           |
-| [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                    |
-| [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                   |
-| [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)    |
-| [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                  |
-| [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                     |
-| [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                         |
-| [Pretty Soldier Sailor Moon (Coin-OpCollection)](https://www.patreon.com/posts/coin-op-presents-132165001)                        |
-| [Psikyo](https://github.com/ppriest/Arcade-Psikyo_MiSTer)                                                                         |
-| [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)         |
-| [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                            |
-| [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                       |
-| [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                      |
-| [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                    |
-| [SEGA System 24](https://github.com/meathax/s24)                                                                                  |
-| [SEGA System 32](https://github.com/meathax/s32)                                                                                  |
-| [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                       |
-| [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                     |
-| [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                               |
-| [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                   |
-| [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |
-| [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                      |
-| [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                      |
-| [Sony PocketStation](https://discord.com/channels/647909397477195803/1543102626265174146)                                         |
-| [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                  |
-| [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                              |
-| [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                   |
-| [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                              |
-| [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                             |
-| [Street Fighter: The Movie](https://discord.com/channels/647909397477195803/1047333006555217991/1537829622371061781)              |
-| [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                          |
-| [Superman](https://www.patreon.com/bazset/posts/superman-taito-166783356?pr=true)                                                 |
-| [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                          |
-| [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                         |
-| [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                       |
-| [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                             |
-| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578/1528901089796034600)                       |
-| [Total Carnage](https://www.patreon.com/blahm1d/posts/total-carnage-y-167995231)                                                  |
-| [Twin Hawk](https://www.patreon.com/bazset/posts/new-beta-release-166341563)                                                      |
-| [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                          |
-| [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                    |
-| [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                      |
-| [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                   |
+| [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                         |
+| [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                               |
+| [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                           |
+| [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                           |
+| [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                                 |
+| [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                        |
+| [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                            |
+| [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                                   |
+| [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                      |
+| [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                      |
+| [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                           |
+| [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                   |
+| [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                    |
+| [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                    |
+| [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                    |
+| [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                     |
+| [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                        |
+| [GameKing](https://discord.com/channels/647909397477195803/1046941428758102086/1536851511965917204)                                |
+| [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                                |
+| [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                        |
+| [Grind Stormer](https://github.com/TheJesusFish/Arcade-GrindStormer_MiSTer)                                                        |
+| [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                      |
+| [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                          |
+| [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                            |
+| [Incredible Technologies 32-Bit Hardware](https://discord.com/channels/647909397477195803/1047333006555217991/1544554911457607731) |
+| [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                           |
+| [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                           |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1543359831912616007)                    |
+| [Knuckle Bash](https://github.com/TheJesusFish/Arcade-KnuckleBash_MiSTer)                                                          |
+| [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                        |
+| [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                                |
+| [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                                 |
+| [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-t-unit-167880978)                                                    |
+| [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                           |
+| [Midway Y Unit](https://www.patreon.com/blahm1d/posts/system-warning-164511442?collection=2278348)                                 |
+| [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                          |
+| [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                                |
+| [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                         |
+| [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                        |
+| [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                    |
+| [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-166884433)                                               |
+| [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                     |
+| [NARC (blahm1d)](https://www.patreon.com/blahm1d/posts/blahm1d-coaxes-164867975)                                                   |
+| [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-v1-0-165736329)                                                   |
+| [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                               |
+| [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                         |
+| [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                            |
+| [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                     |
+| [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                    |
+| [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781)     |
+| [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                                   |
+| [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                      |
+| [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                          |
+| [Psikyo](https://github.com/ppriest/Arcade-Psikyo_MiSTer)                                                                          |
+| [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)          |
+| [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                             |
+| [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                        |
+| [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                       |
+| [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                     |
+| [SEGA System 24](https://github.com/meathax/s24)                                                                                   |
+| [SEGA System 32](https://github.com/meathax/s32)                                                                                   |
+| [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                        |
+| [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                      |
+| [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                                |
+| [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                    |
+| [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                          |
+| [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                       |
+| [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                       |
+| [Sony PocketStation](https://discord.com/channels/647909397477195803/1543102626265174146)                                          |
+| [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                                   |
+| [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                               |
+| [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                    |
+| [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                               |
+| [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                              |
+| [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                           |
+| [Superman](https://www.patreon.com/bazset/posts/superman-taito-166783356?pr=true)                                                  |
+| [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                           |
+| [Taito B System](https://github.com/Mezzow/Arcade-TaitoB_MiSTer)                                                                   |
+| [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                          |
+| [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                        |
+| [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                              |
+| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578/1528901089796034600)                        |
+| [Total Carnage](https://www.patreon.com/blahm1d/posts/total-carnage-y-167995231)                                                   |
+| [Twin Hawk](https://www.patreon.com/bazset/posts/new-beta-release-166341563)                                                       |
+| [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                           |
+| [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                     |
+| [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                       |
+| [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                    |
 
 ----
 

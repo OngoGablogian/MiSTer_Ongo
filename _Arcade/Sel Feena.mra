@@ -1,0 +1,57 @@
+<misterromdescription>
+	<name>Sel Feena</name>
+	<setname>selfeena</setname>
+	<year>1991</year>
+	<manufacturer>East Technology</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Start,Select,L" names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="selfeena.zip">
+		<!--Board config: game_t index 12 (selfeena)-->
+		<part>0C 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 262144 bytes-->
+		<part>00040000</part>
+		<interleave output="16">
+			<part crc="a06ca64b" name="se-01.26" map="01"/>
+			<part crc="08f0c8e3" name="se-02.27" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes-->
+		<part>01100000</part>
+		<interleave output="32">
+			<part crc="920ad100" name="se-04.2" map="0021"/>
+			<part crc="d297c995" name="se-05.1" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="675998be" name="se-03.39"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="80d5e772" name="se-06.11"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Unused" bits="0" values="0,1" ids="On,Off"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Bonus Life" bits="10,11" values="0,1,2,3" ids="400k only,300k only,200k only,100k only"/>
+		<dip name="Lives" bits="12,13" values="0,1,2,3" ids="1,2,4,3"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>

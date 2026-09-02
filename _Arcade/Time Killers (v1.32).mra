@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<misterromdescription>
+    <name>Time Killers (v1.32)</name>
+    <setname>timekill</setname>
+    <rbf>ITech32</rbf>
+    <mameversion>0288</mameversion>
+    <year>1992</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Horizontal</rotation>
+    <region>World</region>
+    <platform>Incredible Technologies 16-bit</platform>
+    <category>Fighting</category>
+
+    <!-- These are the physical SW1 bits in the 68000 DIPS byte. -->
+    <switches default="00">
+        <dip name="Video Sync" bits="4" ids="-,+"/>
+        <dip name="Flip Screen" bits="5" ids="Off,On"/>
+        <dip name="Violence" bits="6" ids="On,Off"/>
+        <dip name="Service Mode" bits="7" ids="Off,On"/>
+    </switches>
+
+    <!--
+        MAME numbers the cabinet limb switches Button 1 through Button 5.
+        Keep the unused B6 slot explicit so Start/Coin remain in the fixed
+        CONF_STR J positions (joystick bits 10/11); Main_MiSTer skips a "-"
+        name without consuming an entry from the seven-item default list.
+    -->
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,-,Start,Coin" default="Y,X,L,B,A,Start,Select" count="5"/>
+
+    <!-- Board selector must precede the bulk DDR stream. -->
+    <rom index="1">
+        <part>01</part>
+    </rom>
+
+    <rom index="0" zip="timekill.zip" md5="None" address="0x30000000">
+        <!-- 0x0000000: 68000 big-endian program ROM, 512 KiB. -->
+        <interleave output="16">
+            <part name="tk00_v1.32_u54.u54" crc="68c74b81" map="01"/>
+            <part name="tk01_v1.32_u53.u53" crc="2158d8ef" map="10"/>
+        </interleave>
+        <part repeat="0x380000">00</part>
+
+        <!-- 0x0400000: MAME soundcpu region, including ROM_CONTINUE. -->
+        <part repeat="0x08000">00</part>
+        <part name="tk_snd_v_4.1_u17.u17" crc="c699af7b" offset="0x18000" length="0x08000"/>
+        <part name="tk_snd_v_4.1_u17.u17" crc="c699af7b" offset="0x00000" length="0x18000"/>
+        <part repeat="0x0d8000">00</part>
+
+        <!-- 0x0500000: eight-megabyte GROM0 plus 512 KiB small tail. -->
+        <interleave output="32">
+            <part name="time_killers_0.rom0" crc="94cbf6f8" map="0001"/>
+            <part name="time_killers_1.rom1" crc="c07dea98" map="0010"/>
+            <part name="time_killers_2.rom2" crc="183eed2a" map="0100"/>
+            <part name="time_killers_3.rom3" crc="b1da1058" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="timekill_grom01.grom1" crc="b030c3d9" map="0001"/>
+            <part name="timekill_grom02.grom2" crc="e98492a4" map="0010"/>
+            <part name="timekill_grom03.grom3" crc="6088fa64" map="0100"/>
+            <part name="timekill_grom04.grom4" crc="95be2318" map="1000"/>
+        </interleave>
+        <part repeat="0x1880000">00</part>
+
+        <!-- 0x2600000: ES5506 region 2, three populated even byte lanes. -->
+        <interleave output="16">
+            <part name="tksrom00_u18.u18" crc="79d8b83a" map="01"/>
+            <part repeat="0x080000" map="10">00</part>
+        </interleave>
+        <interleave output="16">
+            <part name="tksrom01_u20.u20" crc="ec01648c" map="01"/>
+            <part repeat="0x080000" map="10">00</part>
+        </interleave>
+        <interleave output="16">
+            <part name="tksrom02_u26.u26" crc="051ced3e" map="01"/>
+            <part repeat="0x080000" map="10">00</part>
+        </interleave>
+        <part repeat="0x100000">00</part>
+
+        <!-- Reserve unused ES region 3; writable VRAM begins at 0x2e00000. -->
+        <part repeat="0x400000">00</part>
+    </rom>
+</misterromdescription>

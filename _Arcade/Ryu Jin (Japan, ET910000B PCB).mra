@@ -1,0 +1,62 @@
+<misterromdescription>
+	<name>Ryu Jin (Japan, ET910000B PCB)</name>
+	<setname>ryujin</setname>
+	<year>1993</year>
+	<manufacturer>Taito Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>vertical</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Start,Select,L" names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="ryujin.zip">
+		<!--Board config: game_t index 13 (silentd)-->
+		<part>0D 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="f775e4b6" name="rjn_01.ic10" map="01"/>
+			<part crc="5fd353d5" name="rjn_02.ic32" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="7695f89c" name="ruj_03.ic9" map="01"/>
+			<part crc="0c153cab" name="ruj_04.ic31" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 2097152 bytes-->
+		<part>01200000</part>
+		<interleave output="32">
+			<part crc="34f50980" name="ryujin-07.ic28" map="0021"/>
+			<part crc="1b85ff34" name="ryujin-06.ic39" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="95270b16" name="ruj_05.ic15"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="480d040d" name="ryujin-08.ic1"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Unused" bits="0" values="0,1" ids="On,Off"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Lives" bits="10,11" values="0,1,2,3" ids="1,2,4,3"/>
+		<dip name="Unused" bits="12" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="13" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>
