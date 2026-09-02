@@ -1,0 +1,88 @@
+<misterromdescription>
+  <name>Rail Chase (Japan)</name>
+  <setname>rchasej</setname>
+  <rbf>SegaYBoard</rbf>
+  <mameversion>0289</mameversion>
+  <year>1991</year>
+  <manufacturer>Sega</manufacturer>
+  <category>Shooter / Gun</category>
+  <rom index="0" zip="rchasej.zip|rchase.zip" md5="None">
+    <part>03 00 18 04 00 f8 03 aa 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <!-- main -->
+      <interleave output="16">
+        <part name="epr-13986.25" crc="388b2365" map="10"/>
+        <part name="epr-13985.24" crc="14dba5d4" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-13988.27" crc="dc1cd5a4" map="10"/>
+        <part name="epr-13987.26" crc="43be9e60" map="01"/>
+      </interleave>
+    <!-- subx -->
+      <interleave output="16">
+        <part name="epr-13992a.81" crc="c5d525b6" map="10"/>
+        <part name="epr-13991a.80" crc="299e3c7c" map="01"/>
+      </interleave>
+    <!-- suby -->
+      <interleave output="16">
+        <part name="epr-13990.54" crc="18eb23c5" map="10"/>
+        <part name="epr-13989.53" crc="8f4f824e" map="01"/>
+      </interleave>
+    <!-- z80 -->
+      <part name="epr-13993.102" crc="7cc3b543"/>
+    <!-- pcm -->
+      <part name="mpr-13996.107" crc="345f5a41"/>
+      <part name="mpr-13995.106" crc="f604c270"/>
+      <part name="mpr-13994.105" crc="76095538"/>
+      <part repeat="524288">FF</part>
+    <!-- bsprite -->
+      <interleave output="16">
+        <part name="mpr-13999.16" crc="9a1dd53c" map="10"/>
+        <part name="mpr-13997.14" crc="1fdf1b87" map="01"/>
+      </interleave>
+      <part repeat="1572864">00</part>
+    <!-- ysprite -->
+      <interleave output="64">
+        <part name="mpr-14021.67" crc="9fa88781" map="00000010"/>
+        <part name="mpr-14022.75" crc="49e824bb" map="00000001"/>
+        <part name="mpr-14009.63" crc="35b5187e" map="00001000"/>
+        <part name="mpr-14010.71" crc="9a538b9b" map="00000100"/>
+        <part name="mpr-14023.86" crc="e11c6c67" map="00100000"/>
+        <part name="mpr-14024.114" crc="16344535" map="00010000"/>
+        <part name="mpr-14011.82" crc="78e9983b" map="10000000"/>
+        <part name="mpr-14012.110" crc="e9daa1a4" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="mpr-14017.66" crc="b83df159" map="00000010"/>
+        <part name="mpr-14018.74" crc="76dbe9ce" map="00000001"/>
+        <part name="mpr-14005.62" crc="9e998209" map="00001000"/>
+        <part name="mpr-14006.70" crc="2caddf1a" map="00000100"/>
+        <part name="mpr-14019.85" crc="b15e19ff" map="00100000"/>
+        <part name="mpr-14020.113" crc="84c7008f" map="00010000"/>
+        <part name="mpr-14007.81" crc="c3cf5faa" map="10000000"/>
+        <part name="mpr-14008.109" crc="7e91beb2" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="mpr-14013.65" crc="31dbb2c3" map="00000010"/>
+        <part name="mpr-14014.73" crc="7e68257d" map="00000001"/>
+        <part name="mpr-14001.61" crc="71031ad0" map="00001000"/>
+        <part name="mpr-14002.69" crc="27e70a5e" map="00000100"/>
+        <part name="mpr-14015.84" crc="7540bf85" map="00100000"/>
+        <part name="mpr-14016.112" crc="7d87b94d" map="00010000"/>
+        <part name="mpr-14003.80" crc="87725d74" map="10000000"/>
+        <part name="mpr-14004.108" crc="73477291" map="01000000"/>
+      </interleave>
+  </rom>
+  <nvram index="3" size="16384"/>
+  <switches default="FF,73" base="0">
+    <dip bits="0,1" name="Coin to Credit" ids="4C/1C,3C/1C,2C/1C,1C/1C"/>
+    <dip bits="2" name="Coin 1 Multiplier" ids="x2,x1"/>
+    <dip bits="3,4" name="Coin 2 Multiplier" ids="x6,x5,x4,x1"/>
+    <dip bits="5,7" name="Bonus Adder" ids="Error,7 gives +1,6 gives +1,5 gives +1,4 gives +1,3 gives +1,2 gives +1,None"/>
+    <dip bits="8,9" name="Credits" ids="4 to Start 3 to Continue,3 to Start 2 to Continue,2 to Start 1 to Continue,1 to Start 1 to Continue"/>
+    <dip bits="10" name="Coin Chute" ids="Twin,Single"/>
+    <dip bits="11" name="Cabinet" ids="Upright,Moving"/>
+    <dip bits="13,14" name="Difficulty" ids="Hardest,Hard,Easy,Normal"/>
+    <dip bits="15" name="Demo Sounds" ids="On,Off"/>
+  </switches>
+  <buttons names="Trigger,Start,Coin,Pause,Test,Service" default="A,Start,R,X,L,Select"/>
+</misterromdescription>

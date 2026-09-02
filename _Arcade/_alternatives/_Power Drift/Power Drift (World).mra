@@ -1,0 +1,106 @@
+<misterromdescription>
+  <name>Power Drift (World)</name>
+  <setname>pdrifta</setname>
+  <rbf>SegaYBoard</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>Sega</manufacturer>
+  <category>Racing / Driving</category>
+  <rom index="0" zip="pdrifta.zip|pdrift.zip" md5="None">
+    <part>01 00 08 04 00 f8 02 aa 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <!-- main -->
+      <interleave output="16">
+        <part name="epr-12017.25" crc="31190322" map="10"/>
+        <part name="epr-12016.24" crc="499f64a6" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-11748.27" crc="82a76cab" map="10"/>
+        <part name="epr-11747.26" crc="9796ece5" map="01"/>
+      </interleave>
+    <!-- subx -->
+      <interleave output="16">
+        <part name="epr-11905.81" crc="1cf68109" map="10"/>
+        <part name="epr-11904.80" crc="bb993681" map="01"/>
+      </interleave>
+    <!-- suby -->
+      <interleave output="16">
+        <part name="epr-12019.54" crc="e514d7b6" map="10"/>
+        <part name="epr-12018.53" crc="0a3f7faf" map="01"/>
+      </interleave>
+    <!-- z80 -->
+      <part name="epr-11899.102" crc="ed9fa889"/>
+    <!-- pcm -->
+      <part name="mpr-11754.107" crc="ebeb8484"/>
+      <part name="epr-11756.106" crc="12e43f8a"/>
+      <part name="epr-11756.106" crc="12e43f8a"/>
+      <part name="epr-11756.106" crc="12e43f8a"/>
+      <part name="epr-11756.106" crc="12e43f8a"/>
+      <part name="epr-11755.105" crc="c2db1244"/>
+      <part name="epr-11755.105" crc="c2db1244"/>
+      <part name="epr-11755.105" crc="c2db1244"/>
+      <part name="epr-11755.105" crc="c2db1244"/>
+      <part repeat="524288">FF</part>
+    <!-- bsprite -->
+      <interleave output="16">
+        <part name="epr-11789.16" crc="b86f8d2b" map="10"/>
+        <part name="epr-11791.14" crc="36b2910a" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-11790.17" crc="2a564e66" map="10"/>
+        <part name="epr-11792.15" crc="c85caf6e" map="01"/>
+      </interleave>
+      <part repeat="1572864">00</part>
+    <!-- ysprite -->
+      <interleave output="64">
+        <part name="epr-11757.67" crc="e46dc478" map="00000010"/>
+        <part name="epr-11758.75" crc="5b435c87" map="00000001"/>
+        <part name="epr-11773.63" crc="1b5d5758" map="00001000"/>
+        <part name="epr-11774.71" crc="2ca0c170" map="00000100"/>
+        <part name="epr-11759.86" crc="ac8111f6" map="00100000"/>
+        <part name="epr-11760.114" crc="91282af9" map="00010000"/>
+        <part name="epr-11775.82" crc="48225793" map="10000000"/>
+        <part name="epr-11776.110" crc="78c46198" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="epr-11761.66" crc="baa5d065" map="00000010"/>
+        <part name="epr-11762.74" crc="1d1af7a5" map="00000001"/>
+        <part name="epr-11777.62" crc="9662dd32" map="00001000"/>
+        <part name="epr-11778.70" crc="2dfb7494" map="00000100"/>
+        <part name="epr-11763.85" crc="1ee23407" map="00100000"/>
+        <part name="epr-11764.113" crc="e859305e" map="00010000"/>
+        <part name="epr-11779.81" crc="a49cd793" map="10000000"/>
+        <part name="epr-11780.109" crc="d514ed81" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="epr-11765.65" crc="649e2dff" map="00000010"/>
+        <part name="epr-11766.73" crc="d92fb7fc" map="00000001"/>
+        <part name="epr-11781.61" crc="9692d4cd" map="00001000"/>
+        <part name="epr-11782.69" crc="c913bb43" map="00000100"/>
+        <part name="epr-11767.84" crc="1f8ad054" map="00100000"/>
+        <part name="epr-11768.112" crc="db2c4053" map="00010000"/>
+        <part name="epr-11783.80" crc="6d189007" map="10000000"/>
+        <part name="epr-11784.108" crc="57f5fd64" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="epr-11769.64" crc="28f0ab51" map="00000010"/>
+        <part name="epr-11770.72" crc="d7557ea9" map="00000001"/>
+        <part name="epr-11785.60" crc="e6ef32c4" map="00001000"/>
+        <part name="epr-11786.68" crc="2066b49d" map="00000100"/>
+        <part name="epr-11771.83" crc="67635618" map="00100000"/>
+        <part name="epr-11772.111" crc="0f798d3a" map="00010000"/>
+        <part name="epr-11787.79" crc="e631dc12" map="10000000"/>
+        <part name="epr-11788.107" crc="8464c66e" map="01000000"/>
+      </interleave>
+  </rom>
+  <nvram index="3" size="16384"/>
+  <switches default="FF,EA" base="0">
+    <dip bits="0,3" name="Coin A" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="4,7" name="Coin B" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="8,9" name="Cabinet" ids="Unused,Mini Upright,Upright/Sit Down,Moving"/>
+    <dip bits="10" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="11,12" name="Credits" ids="2 to Start 2 to Continue,1 to Start 1 to Continue,3 to Start 2 to Continue,2 to Start 1 to Continue"/>
+    <dip bits="13" name="Allow Continue" ids="No,Yes"/>
+    <dip bits="14,15" name="Difficulty" ids="Hardest,Hard,Easy,Normal"/>
+  </switches>
+  <buttons names="Gas,Brake,Gear Shift,Start,Coin,Pause,Test,Service" default="Y,L2,A,Start,R,X,L,Select"/>
+</misterromdescription>

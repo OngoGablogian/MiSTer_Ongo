@@ -1,0 +1,103 @@
+<misterromdescription>
+  <name>Galaxy Force 2 (Japan)</name>
+  <setname>gforce2j</setname>
+  <rbf>SegaYBoard</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>Sega</manufacturer>
+  <category>Shooter / Flight</category>
+  <rom index="0" zip="gforce2j.zip|gforce2.zip" md5="None">
+    <part>00 00 08 04 02 f8 00 aa 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <!-- main -->
+      <interleave output="16">
+        <part name="epr-11511.25" crc="d80a86d6" map="10"/>
+        <part name="epr-11510.24" crc="d2b1bef4" map="01"/>
+      </interleave>
+      <part repeat="262144">00</part>
+    <!-- subx -->
+      <interleave output="16">
+        <part name="epr-11515.81" crc="d85875cf" map="10"/>
+        <part name="epr-11514.80" crc="3dcc6919" map="01"/>
+      </interleave>
+    <!-- suby -->
+      <interleave output="16">
+        <part name="epr-11513.54" crc="e18bc177" map="10"/>
+        <part name="epr-11512.53" crc="6010e63e" map="01"/>
+      </interleave>
+    <!-- z80 -->
+      <part name="epr-11693.102" crc="0497785c"/>
+    <!-- pcm -->
+      <part name="mpr-11465.107" crc="e1436dab"/>
+      <part name="epr-11516.106" crc="19d0e17f"/>
+      <part name="epr-11516.106" crc="19d0e17f"/>
+      <part name="epr-11516.106" crc="19d0e17f"/>
+      <part name="epr-11516.106" crc="19d0e17f"/>
+      <part name="epr-11814.105" crc="0b05d376"/>
+      <part name="epr-11814.105" crc="0b05d376"/>
+      <part name="epr-11814.105" crc="0b05d376"/>
+      <part name="epr-11814.105" crc="0b05d376"/>
+      <part repeat="524288">FF</part>
+    <!-- bsprite -->
+      <interleave output="16">
+        <part name="mpr-11467.16" crc="6e60e736" map="10"/>
+        <part name="mpr-11468.14" crc="74ca9ca5" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-11694.17" crc="7e297b84" map="10"/>
+        <part name="epr-11695.15" crc="38a864be" map="01"/>
+      </interleave>
+      <part repeat="1572864">00</part>
+    <!-- ysprite -->
+      <interleave output="64">
+        <part name="mpr-11469.67" crc="ed7a2299" map="00000010"/>
+        <part name="mpr-11470.75" crc="34dea550" map="00000001"/>
+        <part name="mpr-11477.63" crc="a2784653" map="00001000"/>
+        <part name="mpr-11478.71" crc="8b778993" map="00000100"/>
+        <part name="mpr-11471.86" crc="f1974069" map="00100000"/>
+        <part name="mpr-11472.114" crc="0d24409a" map="00010000"/>
+        <part name="mpr-11479.82" crc="ecd6138a" map="10000000"/>
+        <part name="mpr-11480.110" crc="64ad66c5" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="mpr-11473.66" crc="0538c6ec" map="00000010"/>
+        <part name="mpr-11474.74" crc="eb923c50" map="00000001"/>
+        <part name="mpr-11481.62" crc="78e652b6" map="00001000"/>
+        <part name="mpr-11482.70" crc="2f879766" map="00000100"/>
+        <part name="mpr-11475.85" crc="69cfec89" map="00100000"/>
+        <part name="mpr-11476.113" crc="a60b9b79" map="00010000"/>
+        <part name="mpr-11483.81" crc="d5d3a505" map="10000000"/>
+        <part name="mpr-11484.109" crc="b8a56a50" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="epr-11696.65" crc="99e8e49e" map="00000010"/>
+        <part name="epr-11697.73" crc="7545c52e" map="00000001"/>
+        <part name="epr-11700.61" crc="e13839c1" map="00001000"/>
+        <part name="epr-11701.69" crc="9fb3d365" map="00000100"/>
+        <part name="epr-11698.84" crc="cfeba3e2" map="00100000"/>
+        <part name="epr-11699.112" crc="4a00534a" map="00010000"/>
+        <part name="epr-11702.80" crc="2a09c627" map="10000000"/>
+        <part name="epr-11703.108" crc="43bb7d9f" map="01000000"/>
+      </interleave>
+      <interleave output="64">
+        <part name="epr-11524.64" crc="5d35849f" map="00000010"/>
+        <part name="epr-11525.72" crc="9ae47552" map="00000001"/>
+        <part name="epr-11532.60" crc="b3565ddb" map="00001000"/>
+        <part name="epr-11533.68" crc="f5d16e8a" map="00000100"/>
+        <part name="epr-11526.83" crc="094cb3f0" map="00100000"/>
+        <part name="epr-11527.111" crc="e821a144" map="00010000"/>
+        <part name="epr-11534.79" crc="b7f0ad7c" map="10000000"/>
+        <part name="epr-11535.107" crc="95da7a46" map="01000000"/>
+      </interleave>
+  </rom>
+  <nvram index="3" size="16384"/>
+  <switches default="FF,7E" base="0">
+    <dip bits="0,3" name="Coin A" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="4,7" name="Coin B" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="8" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="9,10" name="Energy Timer" ids="Hardest,Hard,Easy,Normal"/>
+    <dip bits="11" name="Shield Strength" ids="Strong,Weak"/>
+    <dip bits="12,13" name="Difficulty" ids="Hardest,Hard,Easy,Normal"/>
+    <dip bits="14,15" name="Cabinet" ids="City,Upright,Deluxe,Super Deluxe"/>
+  </switches>
+  <buttons names="Shoot,Missile,Speed Up,Slow Down,Start,Coin,Pause,Test,Service" default="A,B,R2,L2,Start,R,X,L,Select"/>
+</misterromdescription>

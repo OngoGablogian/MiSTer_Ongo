@@ -11,6 +11,9 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > [!NOTE]
 > * If there are any cores or files from this repository that you don't want downloaded when running update_all, please refer to the [Downloader_MiSTer documentation](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md) on how to use the download filter options.
 
+> [!NOTE]
+> * In its current state, this repo totals about 6GB of files.
+
 ----
 
 # Included Cores:
@@ -81,6 +84,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System 32](https://github.com/meathax/s32)                                                                                  |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                       |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                     |
+| [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                               |
 | [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                   |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                         |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                      |
@@ -119,7 +123,7 @@ file_checking = 'exhaustive'
 ```
 
 > [!IMPORTANT]
-> * The included MRA files for the Cave CV1000 games requires the user to obtain the core seperatly from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
+> * The included MRA files for the Cave CV1000 games require the user to obtain the core separately from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
 
 > [!IMPORTANT]
 > * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
