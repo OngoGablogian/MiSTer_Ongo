@@ -12,7 +12,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > * If there are any cores or files from this repository that you don't want downloaded when running update_all, please refer to the [Downloader_MiSTer documentation](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md) on how to use the download filter options.
 
 > [!NOTE]
-> * In its current state, this repo totals a lttle over 6GB of files.
+> * In its current state, this repo totals about 6GB of files.
 
 ----
 
