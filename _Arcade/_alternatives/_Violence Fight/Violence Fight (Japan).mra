@@ -1,0 +1,68 @@
+<misterromdescription>
+	<name>Violence Fight (Japan)</name>
+	<setname>viofightj</setname>
+	<year>1989</year>
+	<manufacturer>Taito Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Start,Select,L" names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="viofightj.zip|viofight.zip">
+		<!--Board config: game_t index 11 (viofight)-->
+		<part>0B 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="329d2e46" name="c16-10.23" map="01"/>
+			<part crc="23dbd388" name="c16-11.42" map="10"/>
+		</interleave>
+		<part repeat="131072">00</part>
+		<interleave output="16">
+			<part crc="043761d8" name="c16-06.22" map="01"/>
+			<part crc="64d1d059" name="c16-07.41" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 2097152 bytes-->
+		<part>01200000</part>
+		<interleave output="32">
+			<part crc="7059ce83" name="c16-01.1" map="0021"/>
+			<part crc="515a9431" name="c16-03.3" map="2100"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="b458e905" name="c16-02.2" map="0021"/>
+			<part crc="ebf285e2" name="c16-04.4" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="6fb028c7" name="c16-12.32"/>
+
+		<!--Region 5: oki samples, 524288 bytes-->
+		<part>05080000</part>
+		<part crc="a49d064a" name="c16-05.47"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Unused" bits="0" values="0,1" ids="On,Off"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Unused" bits="10" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="11" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="12" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="13" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>

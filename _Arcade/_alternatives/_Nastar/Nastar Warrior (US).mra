@@ -1,0 +1,65 @@
+<misterromdescription>
+	<name>Nastar Warrior (US)</name>
+	<setname>nastarw</setname>
+	<year>1988</year>
+	<manufacturer>Taito America Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,Start,Select,L" names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="nastarw.zip|nastar.zip">
+		<!--Board config: game_t index 0 (rastsag2)-->
+		<part>00 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="f9d82741" name="b81-12.31" map="01"/>
+			<part crc="d6da9169" name="b81-08.50" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="630d34af" name="b81-09.30" map="01"/>
+			<part crc="53f34344" name="b81-10.49" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes-->
+		<part>01100000</part>
+		<interleave output="32">
+			<part crc="551b75e6" name="b81-03.14" map="0021"/>
+			<part crc="cf734e12" name="b81-04.15" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="3704bf09" name="b81-11.37"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="20ec3b86" name="b81-02.2"/>
+
+		<!--Region 4: ymsnd:adpcmb, 524288 bytes-->
+		<part>04080000</part>
+		<part crc="b33f796b" name="b81-01.1"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Unused" bits="0" values="0,1" ids="On,Off"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coinage" bits="4,5" values="0,1,2,3" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Price to Continue" bits="6,7" values="0,1,2,3" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,Same as Start"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Bonus Life" bits="10,11" values="0,1,2,3" ids="250k only,200k only,150k only,100k only"/>
+		<dip name="Lives" bits="12,13" values="0,1,2,3" ids="5,2,1,3"/>
+		<dip name="Allow Continue" bits="14" values="0,1" ids="Off,On"/>
+		<dip name="Unused" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>

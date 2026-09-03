@@ -1,0 +1,61 @@
+<misterromdescription>
+	<name>Real Puncher (Japan, v2.12J)</name>
+	<setname>realpuncj</setname>
+	<year>1994</year>
+	<manufacturer>Taito Corporation Japan</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Y,Start,Select,L" names="Safety Switch,Pad Sensor 1,Pad Sensor 2,Pad Sensor 3,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="realpuncj.zip|realpunc.zip">
+		<!--Board config: game_t index 15 (realpunc)-->
+		<part>0F 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 1048576 bytes-->
+		<part>00100000</part>
+		<interleave output="16">
+			<part crc="bb8ab32d" name="d76_04.48" map="01"/>
+			<part crc="879b7e6a" name="d76_05.47" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 4194304 bytes-->
+		<part>01400000</part>
+		<interleave output="32">
+			<part crc="57691b93" name="d76_02.76" map="0021"/>
+			<part crc="9f0aefd8" name="d76_03.45" map="2100"/>
+		</interleave>
+		<part repeat="2097152">00</part>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="72c799fd" name="d76_06.106"/>
+
+		<!--Region 3: ymsnd:adpcma, 2097152 bytes-->
+		<part>03200000</part>
+		<part crc="2bc265f2" name="d76_01.93"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Demo Sounds" bits="0" values="0,1" ids="Off,On"/>
+		<dip name="Unknown" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Coin A" bits="2,3" values="0,1,2,3" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="4,5" values="0,1,2,3" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Unknown" bits="6" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="7" values="0,1" ids="On,Off"/>
+		<dip name="Difficulty 1" bits="8" values="0,1" ids="On,Off"/>
+		<dip name="Difficulty 2" bits="9" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="10" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="11" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="12" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="13" values="0,1" ids="On,Off"/>
+		<dip name="Difficulty 3" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>

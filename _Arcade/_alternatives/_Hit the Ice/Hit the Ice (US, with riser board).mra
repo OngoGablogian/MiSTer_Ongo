@@ -1,0 +1,70 @@
+<misterromdescription>
+	<name>Hit the Ice (US, with riser board)</name>
+	<setname>hiticerb</setname>
+	<year>1990</year>
+	<manufacturer>Taito Corporation (Williams license)</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Start,Select,L" names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="hiticerb.zip|hitice.zip">
+		<!--Board config: game_t index 4 (hitice)-->
+		<part>04 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 393216 bytes-->
+		<part>00060000</part>
+		<interleave output="16">
+			<part crc="a080d7af" name="c59-12.64" map="01"/>
+			<part crc="e4ffad15" name="c59-10.42" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="4d4dfa52" name="c59-11.63" map="01"/>
+			<part crc="e243e3b0" name="c59-09.41" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes-->
+		<part>01100000</part>
+		<interleave output="32">
+			<part crc="55698bbc" name="ic5.bin" map="0001"/>
+			<part crc="a7cb863f" name="ic6.bin" map="0010"/>
+			<part crc="7cd3aa29" name="ic8.bin" map="0100"/>
+			<part crc="6b2979c7" name="ic7.bin" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="fca01c22" name="ic1.bin" map="0001"/>
+			<part crc="f1c09244" name="ic2.bin" map="0010"/>
+			<part crc="d0f2fd35" name="ic4.bin" map="0100"/>
+			<part crc="51621004" name="ic3.bin" map="1000"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="d3cbc10b" name="c59-08.50"/>
+
+		<!--Region 5: oki samples, 131072 bytes-->
+		<part>05020000</part>
+		<part crc="46ae291d" name="c59-01.30"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Cabinet Style" bits="0" values="0,1" ids="2 Players,4 Players"/>
+		<dip name="Unused" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coinage" bits="4,5,6" values="0,1,2,3,4,5,6,7" ids="1 Coin/6 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/2 Credits,1 Coin/3 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Unused" bits="7" values="0,1" ids="On,Off"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Timer count" bits="10,11" values="0,1,2,3" ids="1 sec = 45/60,1 sec = 56/60,1 sec = 62/60,1 sec = 58/60"/>
+		<dip name="Unused" bits="12" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="13" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Maximum credits" bits="15" values="0,1" ids="99,9"/>
+	</switches>
+</misterromdescription>

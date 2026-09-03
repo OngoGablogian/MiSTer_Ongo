@@ -1,0 +1,57 @@
+<misterromdescription>
+	<name>Master of Weapon (Japan)</name>
+	<setname>masterwj</setname>
+	<year>1989</year>
+	<manufacturer>Taito Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>vertical</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,Start,Select,L" names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="masterwj.zip|masterw.zip">
+		<!--Board config: game_t index 1 (masterw)-->
+		<part>01 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="9f78af5c" name="b72_05.24" map="01"/>
+			<part crc="ae848eff" name="b72_06.33" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="f4523496" name="b72_03.25" map="01"/>
+			<part crc="141e964c" name="b72_04.34" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes-->
+		<part>01100000</part>
+		<interleave output="32">
+			<part crc="843444eb" name="b72-02.6" map="0021"/>
+			<part crc="a24ac26e" name="b72-01.5" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="2b1a946f" name="b72_07.30"/>
+	</rom>
+
+	<switches default="fffe">
+		<dip name="Cabinet" bits="0" values="0,1" ids="Upright,Cocktail"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Bonus Life" bits="10,11" values="0,1,2,3" ids="None,500k only,500k/1000k and 1500k,500k and 1000k"/>
+		<dip name="Lives" bits="12,13" values="0,1,2,3" ids="6,5,4,3"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Ship Type" bits="15" values="0,1" ids="Hover Cycle,Space Ship"/>
+	</switches>
+</misterromdescription>

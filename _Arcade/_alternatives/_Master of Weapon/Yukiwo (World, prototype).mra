@@ -1,0 +1,66 @@
+<misterromdescription>
+	<name>Yukiwo (World, prototype)</name>
+	<setname>yukiwo</setname>
+	<year>1989</year>
+	<manufacturer>Taito Corporation Japan</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>vertical</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,Start,Select,L" names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="yukiwo.zip|masterw.zip">
+		<!--Board config: game_t index 1 (masterw)-->
+		<part>01 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 393216 bytes-->
+		<part>00060000</part>
+		<interleave output="16">
+			<part crc="d66f29d4" name="ic24-e882.bin" map="01"/>
+			<part crc="a0dd51d9" name="ic33-rom0e.bin" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="0571b986" name="ic25-rom10.bin" map="01"/>
+			<part crc="5ab7bc95" name="ic34-rom1e.bin" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes-->
+		<part>01100000</part>
+		<interleave output="32">
+			<part crc="0507b908" name="ic5-9df1.bin" map="0001"/>
+			<part crc="0030dce2" name="ic1-a010.bin" map="0010"/>
+			<part crc="a366bffd" name="ic7-7c16.bin" map="0100"/>
+			<part crc="8772b1a6" name="ic3-1305.bin" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="77afcf80" name="ic6-6f3f.bin" map="0001"/>
+			<part crc="25e79bc2" name="ic2-6588.bin" map="0010"/>
+			<part crc="1b3db354" name="ic8-e28a.bin" map="0100"/>
+			<part crc="3b30166b" name="ic4-9e5e.bin" map="1000"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="8632adb7" name="ic30-snd.bin"/>
+		<part crc="8632adb7" name="ic30-snd.bin"/>
+	</rom>
+
+	<switches default="fffe">
+		<dip name="Cabinet" bits="0" values="0,1" ids="Upright,Cocktail"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="1 Coin/6 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Bonus Life" bits="10,11" values="0,1,2,3" ids="None,500k only,500k/1000k and 1500k,500k and 1000k"/>
+		<dip name="Lives" bits="12,13" values="0,1,2,3" ids="6,5,4,3"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>

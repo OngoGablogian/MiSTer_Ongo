@@ -1,0 +1,46 @@
+<misterromdescription>
+	<name>Quiz Sekai wa SHOW by shobai (Japan)</name>
+	<setname>qzshowby</setname>
+	<year>1993</year>
+	<manufacturer>Taito Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Y,Start,Select,L" names="Answer 1,Answer 2,Answer 3,Answer 4,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="qzshowby.zip">
+		<!--Board config: game_t index 10 (qzshowby)-->
+		<part>0A 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 1048576 bytes-->
+		<part>00100000</part>
+		<interleave output="16">
+			<part crc="522c09a7" name="d72-12.bin" map="01"/>
+			<part crc="a867759f" name="d72-13.bin" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 4194304 bytes-->
+		<part>01400000</part>
+		<interleave output="32">
+			<part crc="1de257d0" name="d72-03.bin" map="0021"/>
+			<part crc="bf0da640" name="d72-02.bin" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 131072 bytes-->
+		<part>02020000</part>
+		<part crc="2ca046e2" name="d72-11.bin"/>
+
+		<!--Region 3: ymsnd:adpcma, 2097152 bytes-->
+		<part>03200000</part>
+		<part crc="b82b8830" name="d72-01.bin"/>
+	</rom>
+
+	<!--93C46 EEPROM, 128 bytes. Saved and restored by the firmware at index 2.-->
+	<nvram index="2" size="128"/>
+</misterromdescription>

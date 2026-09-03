@@ -1,0 +1,48 @@
+<misterromdescription>
+    <about author="meathax" source="https://github.com/meathax/escapekids"/>
+    <resolution>15kHz</resolution>
+    <rotation>horizontal</rotation>
+    <homebrew>no</homebrew>
+    <bootleg>no</bootleg>
+    <name>Escape Kids (Asia, 4 Players)</name>
+    <setname>esckids</setname>
+    <year>1991</year>
+    <manufacturer>Konami</manufacturer>
+    <players>4</players>
+    <rbf>EscapeKids</rbf>
+    <joystick>8</joystick>
+    <region>Asia</region>
+    <rom index="0" zip="esckids.zip" md5="none">
+        <!-- Escape Kids loader header: GX975 profile, Asia four-player cabinet. -->
+        <part>03 00 00 00</part>
+        <!-- Main 053248 program: stream 0x000000-0x01ffff. -->
+        <part name="17c.bin" crc="9dfba99c"/>
+        <!-- deterministic gap to BA1_START 0x080000. -->
+        <part repeat="0x60000">00</part>
+        <!-- Z80 program: stream 0x080000-0x08ffff. -->
+        <part name="975f02" crc="994fb229"/>
+        <part repeat="0x10000">00</part>
+        <!-- K053260: 0x080000 supplied bytes followed by zero-filled upper half. -->
+        <part name="975c03" crc="dc4a1707"/>
+        <part repeat="0x80000">00</part>
+        <part repeat="0x40000">00</part>
+        <!-- K052109 32-bit word interleave at 0x1e0000. -->
+        <interleave output="32">
+            <part name="975c09" crc="bc52210e" map="0021"/>
+            <part name="975c08" crc="fcff9256" map="2100"/>
+        </interleave>
+        <!-- K053246 64-bit word interleave at 0x2e0000. -->
+        <interleave output="64">
+            <part name="975c04" crc="15688a6f" map="00000021"/>
+            <part name="975c05" crc="1ff33bb7" map="00002100"/>
+            <part name="975c06" crc="36d410f9" map="00210000"/>
+            <part name="975c07" crc="97ec541e" map="21000000"/>
+        </interleave>
+    </rom>
+    <!-- Default 93C46 image; persistent NVRAM remains at MiSTer index 2. -->
+    <rom index="2" zip="esckids.zip" md5="none">
+        <part name="esckids.nv" crc="a8522e1f"/>
+    </rom>
+    <nvram index="2" size="128"/>
+    <buttons names="Run,Super Jump,Auto Run,Start,Coin,Service,Test" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>

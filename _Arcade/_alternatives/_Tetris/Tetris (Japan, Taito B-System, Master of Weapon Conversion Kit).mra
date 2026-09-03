@@ -1,0 +1,56 @@
+<misterromdescription>
+	<name>Tetris (Japan, Taito B-System, Master of Weapon Conversion Kit)</name>
+	<setname>tetrista</setname>
+	<year>1988</year>
+	<manufacturer>Sega</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,Start,Select,L" names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="tetrista.zip">
+		<!--Board config: game_t index 17 (tetrista)-->
+		<part>11 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="aebd8539" name="c35-03.24" map="01"/>
+			<part crc="fa6e42ff" name="c35-04.33" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part crc="5da7a319" name="c35-01.25" map="01"/>
+			<part crc="128e9927" name="c35-02.34" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes. MAME declares this region ROMREGION_ERASE00 with no ROM_LOAD, so the core fills it with zeros.-->
+		<part>01100000</part>
+		<part repeat="1048576">00</part>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="785c63fb" name="c35-05.30"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Unused" bits="0" values="0,1" ids="On,Off"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Unused" bits="10" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="11" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="12" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="13" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>

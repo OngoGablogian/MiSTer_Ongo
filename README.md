@@ -33,6 +33,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                   |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                    |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                    |
+| [Escape Kids](https://www.patreon.com/Meathax/posts/escape-kids-1991-168479204)                                                    |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                    |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                     |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                        |

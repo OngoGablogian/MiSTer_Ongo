@@ -1,0 +1,48 @@
+<misterromdescription>
+	<name>Bubble Buster (USA, B-System)</name>
+	<setname>bublbust</setname>
+	<year>1994</year>
+	<manufacturer>Taito America Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,Start,Select,L" names="Shoot,-,-,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="bublbust.zip|pbobble.zip">
+		<!--Board config: game_t index 7 (pbobble)-->
+		<part>07 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="a12cb3f2" name="p.bobble_prg_l_usa_6-15_e9e1.ic2" map="01"/>
+			<part crc="ba83e398" name="p.bobble_prg_h_kyotsu_6-15_c681.ic18" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes-->
+		<part>01100000</part>
+		<interleave output="32">
+			<part crc="8d3fa2f0" name="p.bobble_chr-1l_6-14_eaa0.ic11_ch_1_0l" map="0001"/>
+			<part crc="a2eb4d32" name="p.bobble_chr-1h_6-14_1515.ic12_ch_1_0h" map="0010"/>
+			<part crc="80f1aab0" name="p.bobble_chr-0l_6-14_86d5.ic7_ch_0_0l" map="0100"/>
+			<part crc="d773cac8" name="p.bobble_chr-0h_6-14_d180.ic8_ch_0_0h" map="1000"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 131072 bytes-->
+		<part>02020000</part>
+		<part crc="2f288fe0" name="prg_snd.ic27"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="f203ae52" name="cr40-kaigai-7bec.ic15_ach_0"/>
+	</rom>
+
+	<!--93C46 EEPROM, 128 bytes. Saved and restored by the firmware at index 2.-->
+	<nvram index="2" size="128"/>
+</misterromdescription>

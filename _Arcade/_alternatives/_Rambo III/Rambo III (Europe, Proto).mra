@@ -1,0 +1,87 @@
+<misterromdescription>
+	<name>Rambo III (Europe, Proto?)</name>
+	<setname>rambo3p</setname>
+	<year>1989</year>
+	<manufacturer>Taito Europe Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,Start,Select,L" names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="rambo3p.zip|rambo3.zip">
+		<!--Board config: game_t index 5 (rambo3p)-->
+		<part>05 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
+		<part>00080000</part>
+		<interleave output="16">
+			<part crc="55c38d92" name="r3-0o.rom" map="01"/>
+			<part crc="3efa4177" name="r3-0e.rom" map="10"/>
+		</interleave>
+		<part repeat="131072">00</part>
+		<interleave output="16">
+			<part crc="7f1fe6ab" name="r3-1o.rom" map="01"/>
+			<part crc="40e363c7" name="r3-1e.rom" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 2097152 bytes-->
+		<part>01200000</part>
+		<interleave output="32">
+			<part crc="c86ea5fc" name="r3-ch1ll.rom" map="0001"/>
+			<part crc="75568cf0" name="r3-ch1lh.rom" map="0010"/>
+			<part crc="b416f1bf" name="r3-ch0ll.rom" map="0100"/>
+			<part crc="76a330a2" name="r3-ch0lh.rom" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="7525eb92" name="r3-ch1hl.rom" map="0001"/>
+			<part crc="e39cff37" name="r3-ch1hh.rom" map="0010"/>
+			<part crc="a4cad36d" name="r3-ch0hl.rom" map="0100"/>
+			<part crc="4dc69751" name="r3-ch0hh.rom" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="abe54b1e" name="r3-ch3ll.rom" map="0001"/>
+			<part crc="5a155c04" name="r3-ch3lh.rom" map="0010"/>
+			<part crc="d0ce3051" name="r3-ch2ll.rom" map="0100"/>
+			<part crc="df3bc48f" name="r3-ch2lh.rom" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="80e5647e" name="r3-ch3hl.rom" map="0001"/>
+			<part crc="abe58fdb" name="r3-ch3hh.rom" map="0010"/>
+			<part crc="837d8677" name="r3-ch2hl.rom" map="0100"/>
+			<part crc="bf37dfac" name="r3-ch2hh.rom" map="1000"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="df7a6ed6" name="r3-00.rom"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="4396fa19" name="r3-a1.rom"/>
+		<part crc="41fe53a8" name="r3-a2.rom"/>
+		<part crc="e89249ba" name="r3-a3.rom"/>
+		<part crc="9cf4c21b" name="r3-a4.rom"/>
+	</rom>
+
+	<switches default="ffff">
+		<dip name="Unused" bits="0" values="0,1" ids="On,Off"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="1 Coin/6 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Unused" bits="10" values="0,1" ids="On,Off"/>
+		<dip name="Unknown" bits="11" values="0,1" ids="On,Off"/>
+		<dip name="Allow Continue" bits="12" values="0,1" ids="Off,On"/>
+		<dip name="Unused" bits="13" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="14" values="0,1" ids="On,Off"/>
+		<dip name="Unused" bits="15" values="0,1" ids="On,Off"/>
+	</switches>
+</misterromdescription>

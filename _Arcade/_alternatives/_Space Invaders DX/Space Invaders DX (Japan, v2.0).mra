@@ -1,0 +1,57 @@
+<misterromdescription>
+	<name>Space Invaders DX (Japan, v2.0)</name>
+	<setname>spacedxo</setname>
+	<year>1994</year>
+	<manufacturer>Taito Corporation</manufacturer>
+	<rbf>TaitoB</rbf>
+	<rotation>horizontal</rotation>
+	<mameversion>277</mameversion>
+	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
+	<buttons default="A,B,X,Start,Select,L" names="Shoot,Button 2,Button 3,-,-,-,Start,Coin,Pause"/>
+
+	<!--
+	  Generated from MAME's ROM data and verified byte-for-byte against the
+	  core's ROM image. Do not hand-edit the ROM stream.
+	-->
+
+	<rom index="0" address="0x30000000" zip="spacedxo.zip|spacedx.zip">
+		<!--Board config: game_t index 9 (spacedxo)-->
+		<part>09 00</part>
+
+		<!--Region 0: maincpu, 68000 program, 262144 bytes-->
+		<part>00040000</part>
+		<interleave output="16">
+			<part crc="7f0a0ba4" name="d89-09.bin" map="01"/>
+			<part crc="0c2fe7f9" name="d89-08.bin" map="10"/>
+		</interleave>
+
+		<!--Region 1: tc0180vcu graphics, 1048576 bytes-->
+		<part>01100000</part>
+		<interleave output="32">
+			<part crc="53df86f1" name="d89-12.bin" map="0021"/>
+			<part crc="c44c1352" name="d89-13.bin" map="2100"/>
+		</interleave>
+
+		<!--Region 2: audiocpu, Z80 program, 65536 bytes-->
+		<part>02010000</part>
+		<part crc="bd743401" name="d89-07.ic27"/>
+
+		<!--Region 3: ymsnd:adpcma, 524288 bytes-->
+		<part>03080000</part>
+		<part crc="218f31a4" name="d89-03.ic15"/>
+	</rom>
+
+	<switches default="fffe">
+		<dip name="Cabinet" bits="0" values="0,1" ids="Upright,Cocktail"/>
+		<dip name="Flip Screen" bits="1" values="0,1" ids="On,Off"/>
+		<dip name="Service Mode" bits="2" values="0,1" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="3" values="0,1" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" values="0,1,2,3" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Coin B" bits="6,7" values="0,1,2,3" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip name="Difficulty" bits="8,9" values="0,1,2,3" ids="Hardest,Hard,Easy,Medium"/>
+		<dip name="Match Point" bits="10,11" values="0,1,2,3" ids="2,5,4,3"/>
+		<dip name="Lives" bits="12,13" values="0,1,2,3" ids="6,5,4,3"/>
+		<dip name="Bonus Life" bits="14" values="0,1" ids="1000 Points,1500 Points"/>
+		<dip name="Game Type" bits="15" values="0,1" ids="Single Company,Double Company"/>
+	</switches>
+</misterromdescription>
