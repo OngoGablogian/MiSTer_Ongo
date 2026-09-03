@@ -1,0 +1,52 @@
+<misterromdescription>
+   <name>Print Club (Japan Vol.1)</name>
+   <setname>pclubj</setname>
+   <rbf>SystemC2</rbf>
+   <mameversion>0276</mameversion>
+   <year>1995</year>
+   <manufacturer>Atlus</manufacturer>
+   <category>Arcade</category>
+
+   <rom index="0" zip="pclubj.zip" md5="none">
+      <!-- board config header -->
+      <part>00 00</part>
+      <!-- region 0: 68000 program, 2097152 bytes -->
+      <part>00 20 00 00</part>
+      <interleave output="16">
+        <part name="epr18171.32" map="10"/>
+        <part name="epr18170.31" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr18173.34" map="10"/>
+        <part name="epr18172.33" map="01"/>
+      </interleave>
+      <!-- region 1: uPD7759 samples, 524288 bytes -->
+      <part>01 08 00 00</part>
+      <part name="epr18169.4"/>
+      <!-- region 2: 317-xxxx protection table -->
+      <part>02 00 01 00</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+      <part>0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F 0F</part>
+   </rom>
+
+   <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
+
+   <switches default="FF,FF" base="0">
+      <dip name="Coinage" bits="0,1,2" ids="7 Coins/1 Credit,6 Coins/1 Credit,5 Coins/1 Credit,4 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,Free Play,3 Coins/1 Credit"/>   <!-- 0,1,2,3,4,5,6,7 -->
+      <dip name="Demo Sounds" bits="13" ids="Off,On"/>   <!-- 0,32 -->
+   </switches>
+</misterromdescription>

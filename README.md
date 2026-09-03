@@ -82,6 +82,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System 24](https://github.com/meathax/s24)                                                                                   |
 | [SEGA System 32](https://github.com/meathax/s32)                                                                                   |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                        |
+| [SEGA System C / C-2](https://github.com/Mezzow/Arcade-SystemC2_MiSTer)                                                            |
 | [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                      |
 | [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                                |
 | [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                    |

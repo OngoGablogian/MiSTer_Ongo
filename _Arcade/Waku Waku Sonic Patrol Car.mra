@@ -1,0 +1,52 @@
+<misterromdescription>
+   <name>Waku Waku Sonic Patrol Car</name>
+   <setname>soniccar</setname>
+   <rbf>SystemC2</rbf>
+   <mameversion>0276</mameversion>
+   <year>1991</year>
+   <manufacturer>Sega</manufacturer>
+   <category>Arcade</category>
+
+   <rom index="0" zip="soniccar.zip" md5="none">
+      <!-- board config header -->
+      <part>00 00</part>
+      <!-- region 0: 68000 program, 524288 bytes -->
+      <part>00 08 00 00</part>
+      <interleave output="16">
+        <part name="epr-14369.ic32" map="10"/>
+        <part name="epr-14395.ic31" map="01"/>
+      </interleave>
+      <!-- region 1: uPD7759 samples, 262144 bytes -->
+      <part>01 04 00 00</part>
+      <part name="epr-14394.ic4"/>
+      <!-- region 2: 317-xxxx protection table -->
+      <part>02 00 01 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+      <part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+   </rom>
+
+   <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
+
+   <switches default="FF,FF" base="0">
+      <dip name="Coin A" bits="0,1,2,3" ids="Free Play (if Coin B too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 -->
+      <dip name="Coin B" bits="4,5,6,7" ids="Free Play (if Coin A too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,16,32,48,64,80,96,112,128,144,160,176,192,208,224,240 -->
+      <dip name="Demo Sound Interval" bits="8,9" ids="Off,Every 4 Minutes,Every 2 Minutes,On"/>   <!-- 0,1,2,3 -->
+      <dip name="Lighting Time" bits="10" ids="Playtime Only,Advertise &amp; Playtime"/>   <!-- 0,4 -->
+      <dip name="Light" bits="11" ids="Off,On"/>   <!-- 0,8 -->
+      <dip name="Screen Display" bits="12" ids="Insert Money,Insert 100-400 Yen"/>   <!-- 0,16 -->
+   </switches>
+</misterromdescription>

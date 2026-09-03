@@ -1,0 +1,54 @@
+<misterromdescription>
+   <name>Puzzle &amp; Action: Tant-R (Japan)</name>
+   <setname>tantr</setname>
+   <rbf>SystemC2</rbf>
+   <mameversion>0276</mameversion>
+   <year>1992</year>
+   <manufacturer>Sega</manufacturer>
+   <category>Arcade</category>
+
+   <rom index="0" zip="tantr.zip" md5="none">
+      <!-- board config header -->
+      <part>00 00</part>
+      <!-- region 0: 68000 program, 2097152 bytes -->
+      <part>00 20 00 00</part>
+      <interleave output="16">
+        <part name="epr-15614.ic32" map="10"/>
+        <part name="epr-15613.ic31" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="mpr-15616.ic34" map="10"/>
+        <part name="mpr-15615.ic33" map="01"/>
+      </interleave>
+      <!-- region 1: uPD7759 samples, 262144 bytes -->
+      <part>01 04 00 00</part>
+      <part name="epr-15617.ic4"/>
+      <!-- region 2: 317-xxxx protection table -->
+      <part>02 00 01 00</part>
+      <part>09 01 0D 0D 0D 01 09 0D 09 01 0D 0D 0D 01 09 0D</part>
+      <part>0D 04 0D 0C 09 04 09 0C 0F 06 0F 0E 0B 06 0B 0E</part>
+      <part>09 01 0B 0B 0D 01 0F 0B 09 01 0B 0B 0D 01 0F 0B</part>
+      <part>0D 04 0F 0E 09 04 0B 0E 0F 06 0F 0E 0B 06 0B 0E</part>
+      <part>08 00 0C 0C 0E 02 0A 0E 08 08 0C 0C 0E 0A 0A 0E</part>
+      <part>0C 05 0C 0D 0A 07 0A 0F 0E 0F 0E 0F 08 0D 08 0D</part>
+      <part>09 01 0B 0B 0F 03 0D 09 09 09 0B 0B 0F 0B 0D 09</part>
+      <part>0D 04 0F 0E 0B 06 09 0C 0F 0E 0F 0E 09 0C 09 0C</part>
+      <part>05 0D 05 05 09 05 09 0D 05 0D 05 05 09 05 09 0D</part>
+      <part>05 0C 05 04 09 04 09 0C 07 0E 07 06 0B 06 0B 0E</part>
+      <part>05 0D 07 07 09 05 0B 0F 05 0D 07 07 09 05 0B 0F</part>
+      <part>05 0C 07 06 09 04 0B 0E 07 0E 07 06 0B 06 0B 0E</part>
+      <part>05 0D 05 05 0B 07 0B 0F 04 04 04 04 0A 0E 0A 0E</part>
+      <part>05 0C 05 04 0B 06 0B 0E 06 07 06 07 08 0D 08 0D</part>
+      <part>05 0D 07 07 0B 07 09 0D 05 05 07 07 0B 0F 09 0D</part>
+      <part>05 0C 07 06 0B 06 09 0C 07 06 07 06 09 0C 09 0C</part>
+   </rom>
+
+   <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
+
+   <switches default="FF,FE" base="0">
+      <dip name="Coin A" bits="0,1,2,3" ids="Free Play (if Coin B too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 -->
+      <dip name="Coin B" bits="4,5,6,7" ids="Free Play (if Coin A too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,16,32,48,64,80,96,112,128,144,160,176,192,208,224,240 -->
+      <dip name="Demo Sounds" bits="8" ids="On,Off"/>   <!-- 0,1 -->
+      <dip name="Difficulty" bits="9,10" ids="Hardest,Hard,Easy,Medium"/>   <!-- 0,2,4,6 -->
+   </switches>
+</misterromdescription>

@@ -1,0 +1,55 @@
+<misterromdescription>
+   <name>Stack Columns (World)</name>
+   <setname>stkclmns</setname>
+   <rbf>SystemC2</rbf>
+   <mameversion>0276</mameversion>
+   <year>1994</year>
+   <manufacturer>Sega</manufacturer>
+   <category>Arcade</category>
+
+   <rom index="0" zip="stkclmns.zip" md5="none">
+      <!-- board config header -->
+      <part>00 00</part>
+      <!-- region 0: 68000 program, 2097152 bytes -->
+      <part>00 20 00 00</part>
+      <interleave output="16">
+        <part name="epr-16874.ic32" map="10"/>
+        <part name="epr-16873.ic31" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="mpr-16797.ic34" map="10"/>
+        <part name="mpr-16796.ic33" map="01"/>
+      </interleave>
+      <!-- region 1: uPD7759 samples, 131072 bytes -->
+      <part>01 02 00 00</part>
+      <part name="epr-16793.ic4"/>
+      <!-- region 2: 317-xxxx protection table -->
+      <part>02 00 01 00</part>
+      <part>01 0D 05 09 01 0D 05 09 00 0C 05 09 00 0C 05 09</part>
+      <part>01 0D 05 09 00 0C 04 08 00 0C 05 09 01 0D 04 08</part>
+      <part>01 0F 05 0B 01 0F 05 0B 00 0E 05 0B 00 0E 05 0B</part>
+      <part>01 0F 05 0B 00 0E 04 0A 00 0E 05 0B 01 0F 04 0A</part>
+      <part>09 01 05 0D 09 01 05 0D 08 00 05 0D 08 00 05 0D</part>
+      <part>09 01 05 0D 08 00 04 0C 08 00 05 0D 09 01 04 0C</part>
+      <part>09 03 05 0F 09 03 05 0F 08 02 05 0F 08 02 05 0F</part>
+      <part>09 03 05 0F 08 02 04 0E 08 02 05 0F 09 03 04 0E</part>
+      <part>01 05 01 05 03 07 03 07 00 04 01 05 02 06 03 07</part>
+      <part>01 05 01 05 02 06 02 06 00 04 01 05 03 07 02 06</part>
+      <part>01 07 01 07 03 05 03 05 00 06 01 07 02 04 03 05</part>
+      <part>01 07 01 07 02 04 02 04 00 06 01 07 03 05 02 04</part>
+      <part>09 09 01 01 0B 0B 03 03 08 08 01 01 0A 0A 03 03</part>
+      <part>09 09 01 01 0A 0A 02 02 08 08 01 01 0B 0B 02 02</part>
+      <part>09 0B 01 03 0B 09 03 01 08 0A 01 03 0A 08 03 01</part>
+      <part>09 0B 01 03 0A 08 02 00 08 0A 01 03 0B 09 02 00</part>
+   </rom>
+
+   <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
+
+   <switches default="FF,FB" base="0">
+      <dip name="Coin A" bits="0,1,2,3" ids="Free Play (if Coin B too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 -->
+      <dip name="Coin B" bits="4,5,6,7" ids="Free Play (if Coin A too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,16,32,48,64,80,96,112,128,144,160,176,192,208,224,240 -->
+      <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>   <!-- 0,1,2,3 -->
+      <dip name="Demo Sounds" bits="10" ids="On,Off"/>   <!-- 0,4 -->
+      <dip name="Match Mode Price" bits="11" ids="2,1"/>   <!-- 0,8 -->
+   </switches>
+</misterromdescription>

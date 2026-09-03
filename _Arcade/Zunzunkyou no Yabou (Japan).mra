@@ -1,0 +1,56 @@
+<misterromdescription>
+   <name>Zunzunkyou no Yabou (Japan)</name>
+   <setname>zunkyou</setname>
+   <rbf>SystemC2</rbf>
+   <mameversion>0276</mameversion>
+   <year>1994</year>
+   <manufacturer>Sega</manufacturer>
+   <category>Arcade</category>
+
+   <rom index="0" zip="zunkyou.zip" md5="none">
+      <!-- board config header -->
+      <part>00 00</part>
+      <!-- region 0: 68000 program, 2097152 bytes -->
+      <part>00 20 00 00</part>
+      <interleave output="16">
+        <part name="epr-16812.ic32" map="10"/>
+        <part name="epr-16811.ic31" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-16814.ic34" map="10"/>
+        <part name="epr-16813.ic33" map="01"/>
+      </interleave>
+      <!-- region 1: uPD7759 samples, 524288 bytes -->
+      <part>01 08 00 00</part>
+      <part name="epr-16810.ic4"/>
+      <!-- region 2: 317-xxxx protection table -->
+      <part>02 00 01 00</part>
+      <part>0A 00 0A 00 06 0C 06 0C 08 02 08 02 00 0A 00 0A</part>
+      <part>0E 0C 0E 0C 02 00 02 00 0E 0C 0E 0C 06 04 06 04</part>
+      <part>0A 02 0A 02 06 0E 06 0E 08 00 08 00 00 08 00 08</part>
+      <part>0A 0A 0A 0A 06 06 06 06 0A 0A 0A 0A 02 02 02 02</part>
+      <part>03 09 02 08 07 0D 06 0C 01 0B 00 0A 01 0B 00 0A</part>
+      <part>07 05 06 04 03 01 02 00 07 05 06 04 07 05 06 04</part>
+      <part>03 0B 02 0A 07 0F 06 0E 01 09 00 08 01 09 00 08</part>
+      <part>03 03 02 02 07 07 06 06 03 03 02 02 03 03 02 02</part>
+      <part>0B 01 0B 01 07 0D 07 0D 09 03 09 03 01 0B 01 0B</part>
+      <part>0F 0D 0F 0D 03 01 03 01 0F 0D 0F 0D 07 05 07 05</part>
+      <part>0A 02 0A 02 06 0E 06 0E 08 00 08 00 00 08 00 08</part>
+      <part>0A 0A 0A 0A 06 06 06 06 0A 0A 0A 0A 02 02 02 02</part>
+      <part>02 08 03 09 06 0C 07 0D 00 0A 01 0B 00 0A 01 0B</part>
+      <part>06 04 07 05 02 00 03 01 06 04 07 05 06 04 07 05</part>
+      <part>03 0B 02 0A 07 0F 06 0E 01 09 00 08 01 09 00 08</part>
+      <part>03 03 02 02 07 07 06 06 03 03 02 02 03 03 02 02</part>
+   </rom>
+
+   <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
+
+   <switches default="FF,EF" base="0">
+      <dip name="Coin A" bits="0,1,2,3" ids="Free Play (if Coin B too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 -->
+      <dip name="Coin B" bits="4,5,6,7" ids="Free Play (if Coin A too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,16,32,48,64,80,96,112,128,144,160,176,192,208,224,240 -->
+      <dip name="Game Difficulty 1" bits="8" ids="Hard,Medium"/>   <!-- 0,1 -->
+      <dip name="Game Difficulty 2" bits="9" ids="Hard,Medium"/>   <!-- 0,2 -->
+      <dip name="Lives" bits="10,11" ids="5,2,1,3"/>   <!-- 0,4,8,12 -->
+      <dip name="Demo Sounds" bits="12" ids="On,Off"/>   <!-- 0,16 -->
+   </switches>
+</misterromdescription>

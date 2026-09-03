@@ -1,0 +1,57 @@
+<misterromdescription>
+   <name>Puyo Puyo (World)</name>
+   <setname>puyo</setname>
+   <rbf>SystemC2</rbf>
+   <mameversion>0276</mameversion>
+   <year>1992</year>
+   <manufacturer>Compile / Sega</manufacturer>
+   <category>Arcade</category>
+
+   <rom index="0" zip="puyo.zip" md5="none">
+      <!-- board config header -->
+      <part>00 00</part>
+      <!-- region 0: 68000 program, 1310720 bytes -->
+      <part>00 14 00 00</part>
+      <interleave output="16">
+        <part name="epr-15198.ic32" map="10"/>
+        <part name="epr-15197.ic31" map="01"/>
+      </interleave>
+      <part repeat="786432">00</part>
+      <interleave output="16">
+        <part name="epr-15200.ic34" map="10"/>
+        <part name="epr-15199.ic33" map="01"/>
+      </interleave>
+      <!-- region 1: uPD7759 samples, 131072 bytes -->
+      <part>01 02 00 00</part>
+      <part name="epr-15196.ic4"/>
+      <!-- region 2: 317-xxxx protection table -->
+      <part>02 00 01 00</part>
+      <part>03 03 0A 0A 05 05 0C 0C 03 03 0A 0A 05 05 0C 0C</part>
+      <part>0B 0A 02 02 0F 0E 06 06 0B 0A 02 02 0F 0E 06 06</part>
+      <part>07 07 0E 0E 05 05 0C 0C 05 05 0C 0C 07 07 0E 0E</part>
+      <part>0F 0E 06 06 0F 0E 06 06 0D 0C 04 04 0D 0C 04 04</part>
+      <part>03 03 0A 0A 07 07 0E 0E 07 07 0A 0A 03 03 0E 0E</part>
+      <part>0B 0A 02 02 0F 0E 06 06 0F 0E 02 02 0B 0A 06 06</part>
+      <part>07 07 0E 0E 07 07 0E 0E 01 01 0C 0C 01 01 0C 0C</part>
+      <part>0F 0E 06 06 0F 0E 06 06 09 08 04 04 09 08 04 04</part>
+      <part>02 02 0B 0B 04 04 0D 0D 03 0B 0A 02 05 0D 0C 04</part>
+      <part>0A 0B 03 03 0E 0F 07 07 0B 0A 02 02 0F 0E 06 06</part>
+      <part>06 06 0F 0F 04 04 0D 0D 05 0D 0C 04 07 0F 0E 06</part>
+      <part>0E 0F 07 07 0E 0F 07 07 0D 0C 04 04 0D 0C 04 04</part>
+      <part>02 02 0B 0B 06 06 0F 0F 07 0F 0A 02 03 0B 0E 06</part>
+      <part>0A 0B 03 03 0E 0F 07 07 0F 0E 02 02 0B 0A 06 06</part>
+      <part>06 06 0F 0F 06 06 0F 0F 01 09 0C 04 01 09 0C 04</part>
+      <part>0E 0F 07 07 0E 0F 07 07 09 08 04 04 09 08 04 04</part>
+   </rom>
+
+   <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
+
+   <switches default="FF,FD" base="0">
+      <dip name="Coin A" bits="0,1,2,3" ids="Free Play (if Coin B too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 -->
+      <dip name="Coin B" bits="4,5,6,7" ids="Free Play (if Coin A too) or 1/1,1 Coin/1 Credit  2/3,1 Coin/1 Credit  4/5,1 Coin/1 Credit  5/6,2 Coins/1 Credit  4/3,2 Coins/1 Credit  5/3  6/4,2 Coins/3 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>   <!-- 0,16,32,48,64,80,96,112,128,144,160,176,192,208,224,240 -->
+      <dip name="Demo Sounds" bits="9" ids="On,Off"/>   <!-- 0,2 -->
+      <dip name="VS. Mode Credits/Match" bits="10" ids="3,1"/>   <!-- 0,4 -->
+      <dip name="1P Mode Difficulty" bits="11,12" ids="Hardest,Hard,Easy,Medium"/>   <!-- 0,8,16,24 -->
+      <dip name="Moving Seat" bits="15" ids="In Use,No Use"/>   <!-- 0,128 -->
+   </switches>
+</misterromdescription>
