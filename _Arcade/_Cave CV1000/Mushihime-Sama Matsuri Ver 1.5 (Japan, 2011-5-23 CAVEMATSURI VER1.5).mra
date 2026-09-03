@@ -1,21 +1,27 @@
 <misterromdescription>
     <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
-    <name>Mushihime-Sama Matsuri Ver 1.5 (2011/5/23 CAVEMATSURI VER1.5)</name>
+    <name>Mushihime-Sama Matsuri Ver 1.5 (Japan, 2011/5/23 CAVEMATSURI VER1.5)</name>
     <setname>matsuri15</setname>
     <mameversion>0289</mameversion>
     <year>2011</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="matsuri15.zip" md5="none">
-        <part name="matsuri15_u4" crc="6af99f0e"/>
-        <part name="matsuri15_u4" crc="6af99f0e"/>
+    <rom index="1" address="0x34000000" zip="matsuri15.zip" md5="none">
         <part name="matsuri15_u2" crc="fbc6f3c1"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="matsuri15.zip" md5="none">
         <part name="u23" crc="6dff634f"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="f228b801"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="matsuri15.zip" md5="none">
+        <part name="matsuri15_u4" crc="6af99f0e"/>
+        <part name="matsuri15_u4" crc="6af99f0e"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

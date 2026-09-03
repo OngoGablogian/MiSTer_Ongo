@@ -8,13 +8,19 @@
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="dfkbl.zip" md5="none">
-        <part name="u4" crc="8092ca9d"/>
+    <rom index="1" address="0x34000000" zip="dfkbl.zip" md5="none">
         <part name="u2" crc="29f9d73a"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="dfkbl.zip" md5="none">
         <part name="u23" crc="36d4093b"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="31f9eb0a"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="dfkbl.zip" md5="none">
+        <part name="u4" crc="8092ca9d"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

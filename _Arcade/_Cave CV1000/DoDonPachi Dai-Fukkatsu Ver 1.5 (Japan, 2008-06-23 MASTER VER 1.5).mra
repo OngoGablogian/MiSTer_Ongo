@@ -4,17 +4,23 @@
     <setname>ddpdfk</setname>
     <mameversion>0289</mameversion>
     <year>2008</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="ddpdfk.zip" md5="none">
-        <part name="ddpdfk_u4" crc="9976d699"/>
+    <rom index="1" address="0x34000000" zip="ddpdfk.zip" md5="none">
         <part name="ddpdfk_u2" crc="84a51a4f"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="ddpdfk.zip" md5="none">
         <part name="u23" crc="27032cde"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="a6178c2c"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="ddpdfk.zip" md5="none">
+        <part name="ddpdfk_u4" crc="9976d699"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

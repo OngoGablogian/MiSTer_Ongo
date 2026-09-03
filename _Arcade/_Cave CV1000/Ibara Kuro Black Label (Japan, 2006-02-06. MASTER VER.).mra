@@ -4,18 +4,24 @@
     <setname>ibarablk</setname>
     <mameversion>0289</mameversion>
     <year>2006</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="ibarablk.zip" md5="none">
-        <part name="ibarablk_u4" crc="ee1f1f77"/>
-        <part name="ibarablk_u4" crc="ee1f1f77"/>
+    <rom index="1" address="0x34000000" zip="ibarablk.zip" md5="none">
         <part name="ibarablk_u2" crc="5e46be44"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="ibarablk.zip" md5="none">
         <part name="u23" crc="a436bb22"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="d11ab6b6"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="ibarablk.zip" md5="none">
+        <part name="ibarablk_u4" crc="ee1f1f77"/>
+        <part name="ibarablk_u4" crc="ee1f1f77"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

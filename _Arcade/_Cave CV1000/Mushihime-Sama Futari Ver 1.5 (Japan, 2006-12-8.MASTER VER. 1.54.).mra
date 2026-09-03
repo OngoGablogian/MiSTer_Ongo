@@ -4,18 +4,24 @@
     <setname>futari15</setname>
     <mameversion>0289</mameversion>
     <year>2006</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="futari15.zip" md5="none">
-        <part name="futari15_u4" crc="e8c5f128"/>
-        <part name="futari15_u4" crc="e8c5f128"/>
+    <rom index="1" address="0x34000000" zip="futari15.zip" md5="none">
         <part name="futari15_u2" crc="b9eae1fc"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="futari15.zip" md5="none">
         <part name="u23" crc="39f1e1f4"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="c631a766"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="futari15.zip" md5="none">
+        <part name="futari15_u4" crc="e8c5f128"/>
+        <part name="futari15_u4" crc="e8c5f128"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

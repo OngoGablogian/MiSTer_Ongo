@@ -4,18 +4,24 @@
     <setname>mushitama</setname>
     <mameversion>0289</mameversion>
     <year>2005</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Puzzle</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="mushitama.zip|mushitam.zip" md5="none">
-        <part name="mushitama_u4" crc="4a23e6c8"/>
-        <part name="mushitama_u4" crc="4a23e6c8"/>
+    <rom index="1" address="0x34000000" zip="mushitama.zip|mushitam.zip" md5="none">
         <part name="mushitam_u2" crc="8ba498ab"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="mushitama.zip|mushitam.zip" md5="none">
         <part name="u23" crc="701a912a"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="6feeb9a1"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="mushitama.zip|mushitam.zip" md5="none">
+        <part name="mushitama_u4" crc="4a23e6c8"/>
+        <part name="mushitama_u4" crc="4a23e6c8"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

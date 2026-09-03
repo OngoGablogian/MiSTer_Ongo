@@ -4,18 +4,24 @@
     <setname>ibara</setname>
     <mameversion>0289</mameversion>
     <year>2005</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="ibara.zip" md5="none">
-        <part name="ibara_u4" crc="d5fb6657"/>
-        <part name="ibara_u4" crc="d5fb6657"/>
+    <rom index="1" address="0x34000000" zip="ibara.zip" md5="none">
         <part name="u2" crc="55840976"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="ibara.zip" md5="none">
         <part name="u23" crc="ee5e585d"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="f0aa3cb6"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="ibara.zip" md5="none">
+        <part name="ibara_u4" crc="d5fb6657"/>
+        <part name="ibara_u4" crc="d5fb6657"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

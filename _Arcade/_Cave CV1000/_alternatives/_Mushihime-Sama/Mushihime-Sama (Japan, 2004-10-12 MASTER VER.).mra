@@ -4,18 +4,24 @@
     <setname>mushisama</setname>
     <mameversion>0289</mameversion>
     <year>2004</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="mushisama.zip|mushisam.zip" md5="none">
-        <part name="mushisama_u4" crc="0b5b30b2"/>
-        <part name="mushisama_u4" crc="0b5b30b2"/>
+    <rom index="1" address="0x34000000" zip="mushisama.zip|mushisam.zip" md5="none">
         <part name="mushisam_u2" crc="4f0a842a"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="mushisama.zip|mushisam.zip" md5="none">
         <part name="u23" crc="138e2050"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="e3d05c9f"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="mushisama.zip|mushisam.zip" md5="none">
+        <part name="mushisama_u4" crc="0b5b30b2"/>
+        <part name="mushisama_u4" crc="0b5b30b2"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

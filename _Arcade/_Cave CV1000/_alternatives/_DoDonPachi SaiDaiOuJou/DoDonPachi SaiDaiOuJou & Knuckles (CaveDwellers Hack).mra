@@ -1,0 +1,27 @@
+<misterromdescription>
+    <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
+    <name>DoDonPachi SaiDaiOuJou & Knuckles (CaveDwellers Hack)</name>
+    <setname>sdojak</setname>
+    <mameversion>0289</mameversion>
+    <year>2021</year>
+    <manufacturer>bootleg (CaveDwellers)</manufacturer>
+    <category>Shooter</category>
+    <rbf>ikacore_CV1k</rbf>
+
+    <rom index="1" address="0x34000000" zip="sdojak.zip|ddpsdoj.zip" md5="none">
+        <part name="sdojak.u2" crc="54353425"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="sdojak.zip|ddpsdoj.zip" md5="none">
+        <part name="u23" crc="32b91544" length="0x400000"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="7b9e749f" length="0x400000"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="sdojak.zip|ddpsdoj.zip" md5="none">
+        <part name="sdojak.u4" crc="a878ff4c" length="0x400000"/>
+    </rom>
+
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+</misterromdescription>

@@ -4,18 +4,24 @@
     <setname>espgal2b</setname>
     <mameversion>0289</mameversion>
     <year>2005</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="espgal2b.zip|espgal2.zip" md5="none">
-        <part name="espgal2b_u4" crc="09c908bb"/>
-        <part name="espgal2b_u4" crc="09c908bb"/>
+    <rom index="1" address="0x34000000" zip="espgal2b.zip|espgal2.zip" md5="none">
         <part name="u2" crc="222f58c7"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="espgal2b.zip|espgal2.zip" md5="none">
         <part name="u23" crc="b9a10c22"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="c76b1ec4"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="espgal2b.zip|espgal2.zip" md5="none">
+        <part name="espgal2b_u4" crc="09c908bb"/>
+        <part name="espgal2b_u4" crc="09c908bb"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

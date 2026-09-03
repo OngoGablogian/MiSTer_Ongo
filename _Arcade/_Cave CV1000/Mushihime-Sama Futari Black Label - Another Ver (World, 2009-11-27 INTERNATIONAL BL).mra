@@ -4,18 +4,24 @@
     <setname>futaribl</setname>
     <mameversion>0289</mameversion>
     <year>2007</year>
-    <manufacturer>Cave</manufacturer>
+    <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="0" zip="futaribl.zip" md5="none">
-        <part name="futaribli_u4" crc="1971dd16"/>
-        <part name="futaribli_u4" crc="1971dd16"/>
+    <rom index="1" address="0x34000000" zip="futaribl.zip" md5="none">
         <part name="futariblk_u2" crc="08c6fd62"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="futaribl.zip" md5="none">
         <part name="u23" crc="39f1e1f4"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="c631a766"/>
         <part repeat="0x400000">00</part>
+    </rom>
+
+    <rom index="0" zip="futaribl.zip" md5="none">
+        <part name="futaribli_u4" crc="1971dd16"/>
+        <part name="futaribli_u4" crc="1971dd16"/>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>

@@ -1,6 +1,6 @@
 <misterromdescription>
     <about author="ika-musume" source="https://github.com/ika-musume/ikacore_CV1k"/>
-    <name>DoDonPachi SaiDaiOuJou (2012/ 4/20)</name>
+    <name>DoDonPachi SaiDaiOuJou (Japan, 2012/ 4/20)</name>
     <setname>ddpsdoj</setname>
     <mameversion>0289</mameversion>
     <year>2012</year>
@@ -8,13 +8,19 @@
     <category>Shooter</category>
     <rbf>ikacore_CV1k</rbf>
 
+    <rom index="1" address="0x34000000" zip="ddpsdoj.zip" md5="none">
+        <part name="u2" crc="668e4cd6"/>
+    </rom>
+
+    <rom index="2" address="0x3D000000" zip="ddpsdoj.zip" md5="none">
+        <part name="u23" crc="ac94801c" length="0x400000"/>
+        <part repeat="0x400000">00</part>
+        <part name="u24" crc="f593045b" length="0x400000"/>
+        <part repeat="0x400000">00</part>
+    </rom>
+
     <rom index="0" zip="ddpsdoj.zip" md5="none">
         <part name="u4" crc="e2a4411c" length="0x400000"/>
-        <part name="u2" crc="668e4cd6"/>
-        <part name="u23" crc="ac94801c"/>
-        <part repeat="0x400000">00</part>
-        <part name="u24" crc="f593045b"/>
-        <part repeat="0x400000">00</part>
     </rom>
 
     <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
