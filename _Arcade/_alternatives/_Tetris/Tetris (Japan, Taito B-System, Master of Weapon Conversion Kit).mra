@@ -14,7 +14,7 @@
 	  core's ROM image. Do not hand-edit the ROM stream.
 	-->
 
-	<rom index="0" address="0x30000000" zip="tetrista.zip">
+	<rom index="0" address="0x30000000" zip="tetrista.zip|tetris.zip">
 		<!--Board config: game_t index 17 (tetrista)-->
 		<part>11 00</part>
 
