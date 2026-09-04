@@ -1,6 +1,6 @@
 <misterromdescription>
-	<name>Tekken Tag Tournament (US, TEG3/VER.B)</name>
-	<setname>tektagtub</setname>
+	<name>Tekken Tag Tournament (Japan, TEG1/VER.C1)</name>
+	<setname>tektagtjc1</setname>
 	<rbf>SYSTEM12</rbf>
 	<mameversion>0277</mameversion>
 	<year>1999</year>
@@ -20,8 +20,8 @@
 	<!-- ioctl 0: main program (2x 2MB, 16-bit interleaved). Boots directly from here. -->
 	<rom index="0" zip="tektagt.zip" md5="none">
 		<interleave output="16">
-			<part name="tektagtub/teg3verb.2l" crc="97df2855" map="01"/>
-			<part name="tektagtub/teg3verb.2p" crc="1dbe7591" map="10"/>
+			<part name="teg1verc1.2e" crc="adbdfc2e" map="01"/>
+			<part name="teg1verc1.2j" crc="2fa33418" map="10"/>
 		</interleave>
 	</rom>
 

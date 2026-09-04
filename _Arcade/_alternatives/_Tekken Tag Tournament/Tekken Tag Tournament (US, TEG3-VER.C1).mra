@@ -20,8 +20,8 @@
 	<!-- ioctl 0: main program (2x 2MB, 16-bit interleaved). Boots directly from here. -->
 	<rom index="0" zip="tektagt.zip" md5="none">
 		<interleave output="16">
-			<part name="tektagtuc1/teg3verc1.2l" crc="1efb7b85" map="01"/>
-			<part name="tektagtuc1/teg3verc1.2p" crc="7caef9b2" map="10"/>
+			<part name="teg3verc1.2l" crc="1efb7b85" map="01"/>
+			<part name="teg3verc1.2p" crc="7caef9b2" map="10"/>
 		</interleave>
 	</rom>
 
