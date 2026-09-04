@@ -20,7 +20,7 @@
 		<dip name="Unused 2" bits="6" ids="On,Off"/>
 		<dip name="Debug" bits="7" ids="On,Off"/>
 	</switches>
-	<rom index="0" address="0x30000000" zip="pgm.zip|dwpc101j|dwpc.zip.zip">
+	<rom index="0" address="0x30000000" zip="pgm.zip|dwpc101j|dwpc.zip">
 		<!-- SYSTEM INFO (game = GAME_DWPC = 18) -->
 		<part>11 00</part>
 
