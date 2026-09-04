@@ -2,10 +2,10 @@
 	<rbf>SKNS</rbf>
 	<mameversion>0289</mameversion>
 	<setname>vblokbrk</setname>
-	<description>VS Block Breaker (Europe)</description>
+	<name>VS Block Breaker (Europe)</name>
 	<rotation>horizontal</rotation>
 	<year>1997</year>
-	<manufacturer>Kaneko</manufacturer>
+	<manufacturer>Kaneko / Mediaworks</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" />
 
 	<switches default="01">

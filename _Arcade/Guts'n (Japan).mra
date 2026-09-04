@@ -2,10 +2,10 @@
 	<rbf>SKNS</rbf>
 	<mameversion>0289</mameversion>
 	<setname>gutsn</setname>
-	<description>Guts'n (Japan)</description>
+	<name>Guts'n (Japan)</name>
 	<rotation>horizontal</rotation>
 	<year>2000</year>
-	<manufacturer>Kaneko</manufacturer>
+	<manufacturer>Kaneko / Kouyousha</manufacturer>
 	<buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" />
 
 	<switches default="01">
