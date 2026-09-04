@@ -2,7 +2,7 @@
 	<name>Hit the Ice (US)</name>
 	<setname>hitice</setname>
 	<year>1990</year>
-	<manufacturer>Taito Corporation (Williams license)</manufacturer>
+	<manufacturer>Taito (Williams license)</manufacturer>
 	<rbf>TaitoB</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>277</mameversion>

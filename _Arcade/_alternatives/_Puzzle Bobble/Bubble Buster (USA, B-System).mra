@@ -2,7 +2,7 @@
 	<name>Bubble Buster (USA, B-System)</name>
 	<setname>bublbust</setname>
 	<year>1994</year>
-	<manufacturer>Taito America Corporation</manufacturer>
+	<manufacturer>Taito America</manufacturer>
 	<rbf>TaitoB</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>277</mameversion>

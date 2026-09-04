@@ -2,7 +2,7 @@
 	<name>Puzzle Bobble (Japan, B-System)</name>
 	<setname>pbobble</setname>
 	<year>1994</year>
-	<manufacturer>Taito Corporation</manufacturer>
+	<manufacturer>Taito</manufacturer>
 	<rbf>TaitoB</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>277</mameversion>

@@ -2,7 +2,7 @@
 	<name>Space Invaders DX (Japan, v2.0)</name>
 	<setname>spacedxo</setname>
 	<year>1994</year>
-	<manufacturer>Taito Corporation</manufacturer>
+	<manufacturer>Taito</manufacturer>
 	<rbf>TaitoB</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>277</mameversion>

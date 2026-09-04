@@ -2,7 +2,7 @@
 	<name>Nastar (World)</name>
 	<setname>nastar</setname>
 	<year>1988</year>
-	<manufacturer>Taito Corporation Japan</manufacturer>
+	<manufacturer>Taito</manufacturer>
 	<rbf>TaitoB</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>277</mameversion>

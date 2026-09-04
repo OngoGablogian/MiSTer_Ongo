@@ -2,7 +2,7 @@
 	<name>Rambo III (Europe, Proto?)</name>
 	<setname>rambo3p</setname>
 	<year>1989</year>
-	<manufacturer>Taito Europe Corporation</manufacturer>
+	<manufacturer>Taito Europe</manufacturer>
 	<rbf>TaitoB</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>277</mameversion>

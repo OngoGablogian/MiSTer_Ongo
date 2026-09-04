@@ -2,7 +2,7 @@
 	<name>Ryu Jin (Japan, ET910000B PCB)</name>
 	<setname>ryujin</setname>
 	<year>1993</year>
-	<manufacturer>Taito Corporation</manufacturer>
+	<manufacturer>Taito</manufacturer>
 	<rbf>TaitoB</rbf>
 	<rotation>vertical</rotation>
 	<mameversion>277</mameversion>
