@@ -1,8 +1,8 @@
 <misterromdescription>
-	<name>Star Sweep (STP1/VER.A)</name>
+	<name>Star Sweep (World, STP2/VER.A)</name>
 	<setname>starswep</setname>
 	<year>1997</year>
-	<manufacturer>Namco</manufacturer>
+	<manufacturer>Axela / Namco</manufacturer>
 	<rbf>SYSTEM11</rbf>
 
 	<!-- NOTE: no banked-ROM windows in the MAME map for this game -->

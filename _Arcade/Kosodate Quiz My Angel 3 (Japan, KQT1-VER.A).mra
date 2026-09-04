@@ -1,8 +1,8 @@
 <misterromdescription>
-	<name>Kosodate Quiz My Angel 3 (KQT1/VER.A)</name>
+	<name>Kosodate Quiz My Angel 3 (Japan, KQT1/VER.A)</name>
 	<setname>myangel3</setname>
 	<year>1998</year>
-	<manufacturer>Namco</manufacturer>
+	<manufacturer>MOSS / Namco</manufacturer>
 	<rbf>SYSTEM11</rbf>
 
 	<!-- ROM8/64 PCB: two-level rom8_64 banking (upper latch @0x1F080000), supported by the core -->
