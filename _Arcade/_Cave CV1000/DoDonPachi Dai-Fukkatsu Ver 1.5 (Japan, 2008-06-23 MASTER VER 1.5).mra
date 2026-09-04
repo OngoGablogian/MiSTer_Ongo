@@ -6,6 +6,7 @@
     <year>2008</year>
     <manufacturer>Cave (AMI license)</manufacturer>
     <category>Shooter</category>
+    <rotation>vertical (CCW)</rotation>
     <rbf>ikacore_CV1k</rbf>
 
     <rom index="1" address="0x34000000" zip="ddpdfk.zip" md5="none">
