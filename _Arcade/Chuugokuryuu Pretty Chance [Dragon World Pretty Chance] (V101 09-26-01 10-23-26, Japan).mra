@@ -6,6 +6,8 @@
 	     it BAD_DUMP for the CN set; init_dwpc patches armrom[0x3c8]=0x01 for region). -->
 	<name>Chuugokuryuu Pretty Chance [Dragon World Pretty Chance] (V101 09/26/01 10:23:26, Japan)</name>
 	<setname>dwpc101j</setname>
+	<year>2001</year>
+	<manufacturer>IGS</manufacturer>
 	<rbf>IGSPGM</rbf>
 	<rotation>horizontal</rotation>
 	<mameversion>288</mameversion>
@@ -46,12 +48,12 @@
 
 		<!-- A ROM (sprite colour) -->
 		<part>06 00400000 00000000</part>
-		<part name="dwpc_v101xx_u2.u2" crc="e7115763"/>
-		<part name="dwpc_v101xx_u3.u3" crc="49c184a4"/>
+		<part name="dwpc_v100jp_u2.u2" crc="e7115763"/>
+		<part name="dwpc_v100jp_u3.u3" crc="49c184a4"/>
 
 		<!-- B ROM (sprite mask) -->
 		<part>07 00200000 00000000</part>
-		<part name="dwpc_v101xx_u9.u9" crc="412b9913"/>
+		<part name="dwpc_v100jp_u9.u9" crc="412b9913"/>
 
 		<!-- IGS027A INTERNAL ARM ROM -->
 		<part>09 00004000 00000000</part>
@@ -59,7 +61,7 @@
 
 		<!-- IGS027A EXTERNAL ARM ROM (encrypted; RTL-decrypted) -->
 		<part>0a 00080000 00000000</part>
-		<part name="dwpc_v110cn_u12.u12" crc="0d112126"/>
+		<part name="dwpc_v100jp_u12.u12" crc="0d112126"/>
 	</rom>
 	<nvram index="8" size="131072"/>
 </misterromdescription>
