@@ -1,6 +1,6 @@
 <misterromdescription>
-    <name>Vs. Pinball (Japan)</name>
-    <setname>vspinbalj</setname>
+    <name>Vs. Pinball (US, set PN4 E-1)</name>
+    <setname>vspinbal</setname>
     <year>1984</year>
     <manufacturer>Nintendo</manufacturer>
     <rbf>VSnes</rbf>
@@ -20,34 +20,34 @@
         <dip bits="13,14" name="Balls" ids="3,5,4,2"/>
         <dip bits="15" name="Ball Speed" ids="Slow,Fast"/>
     </switches>
-    <rom index="0" zip="vspinbalj.zip|vspinbal.zip">
+    <rom index="0" zip="vspinbal.zip">
         <!--Region: prg, Size: 0x8000 bytes-->
-        <part crc="fd50c42e" name="mds-pn3 b.6d"/>
-        <part crc="59beb9e5" name="mds-pn3 b.6c"/>
-        <part crc="ce7f47ce" name="mds-pn3 b.6b"/>
-        <part crc="5685e2ee" name="mds-pn3 b.6a"/>
+        <part crc="69fc575e" name="mds-pn4_1__6d_e.6d"/>
+        <part crc="fa9472d2" name="mds-pn4_1__6c_e.6c"/>
+        <part crc="f57d89c5" name="mds-pn4_1__6b_e.6b"/>
+        <part crc="640c4741" name="mds-pn4_1__6a_e.6a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="1e3fec3e" name="mds-pn3 b.8b"/>
-        <part crc="6f963a65" name="mds-pn3 b.8a"/>
+        <part crc="8822ee9e" name="mds-pn4_1__8b_e.8b"/>
+        <part crc="cbe98a28" name="mds-pn4_1__8a_e.8a"/>
         <part repeat="114688">00</part>
         <!--NES2-->
         <!--Region: prg, Size: 0x8000 bytes-->
-        <part crc="fd50c42e" name="mds-pn3 b.6d"/>
-        <part crc="59beb9e5" name="mds-pn3 b.6c"/>
-        <part crc="ce7f47ce" name="mds-pn3 b.6b"/>
-        <part crc="5685e2ee" name="mds-pn3 b.6a"/>
+        <part crc="69fc575e" name="mds-pn4_1__6d_e.6d"/>
+        <part crc="fa9472d2" name="mds-pn4_1__6c_e.6c"/>
+        <part crc="f57d89c5" name="mds-pn4_1__6b_e.6b"/>
+        <part crc="640c4741" name="mds-pn4_1__6a_e.6a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="1e3fec3e" name="mds-pn3 b.8b"/>
-        <part crc="6f963a65" name="mds-pn3 b.8a"/>
+        <part crc="8822ee9e" name="mds-pn4_1__8b_e.8b"/>
+        <part crc="cbe98a28" name="mds-pn4_1__8a_e.8a"/>
         <part repeat="114688">00</part>
     </rom>
     <rom index="1">
-        <part>01</part>
+        <part>03</part>
     </rom>
     <rom index="2">
-        <part>01</part>
+        <part>03</part>
     </rom>
 	<nvram index="4" size="4096"></nvram>
 </misterromdescription>

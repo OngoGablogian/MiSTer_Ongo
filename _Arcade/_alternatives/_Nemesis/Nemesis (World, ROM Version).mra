@@ -33,7 +33,7 @@ https://opensource.org/licenses/gpl-2.0.php
         twitter="@LmnSama @oscherler @RCAVictorCo"
     />
     <mratimestamp>202309290000</mratimestamp>
-    <name>Nemesis (World, ROM version)</name>
+    <name>Nemesis (World?, ROM version)</name>
     <setname>nemesisuk</setname>
     <rbf>nemesis</rbf>
     <mameversion>0240</mameversion>
@@ -45,7 +45,7 @@ https://opensource.org/licenses/gpl-2.0.php
     <rotation>Horizontal</rotation>
     <region>World</region>
 
-    <rom index="0" zip="nemesisuk.zip|nemesuk.zip|nemesis.zip" md5="None" type="merged|nonmerged|split">
+    <rom index="0" zip="nemesisuk.zip|nemesis.zip|nemesuk.zip" md5="None" type="merged|nonmerged|split">
         <!-- maincpu - starts at 0x00000 -->
         <interleave output="16">
             <part name="456-e01.12a" crc="e1993f91" map="01"/>

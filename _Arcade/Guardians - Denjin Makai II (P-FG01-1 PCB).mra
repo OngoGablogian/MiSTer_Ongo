@@ -3,6 +3,8 @@
   <mratimestamp>202608280000</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>grdians</setname>
+  <year>1995</year>
+  <manufacturer>Winkysoft (Banpresto license)</manufacturer>
   <rbf>Guardians</rbf>
   <about author="kandowontu and OpenAI Codex" webpage="https://github.com/kandowontu/Arcade-Guardians_MiSTer" />
   <buttons names="Attack,Jump,Special,Pause,Start,Coin,Service" default="A,B,X,Y,Start,Select,R" />

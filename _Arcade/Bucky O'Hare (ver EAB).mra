@@ -3,6 +3,8 @@
     <resolution>15kHz</resolution>
     <name>Bucky O'Hare (ver EAB)</name>
     <setname>bucky</setname>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
     <rbf>Bucky</rbf>
     <joystick>8</joystick>
     <rom index="0" zip="bucky.zip" address="0x30000000">

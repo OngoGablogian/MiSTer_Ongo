@@ -1,14 +1,14 @@
 <misterromdescription>
-	<name>Kyoukou Toppa (Japan)</name>
-	<setname>brkthruj</setname>
+	<name>Break Thru (Tecfri license)</name>
+	<setname>brkthrut</setname>
 	<rbf>xnbrkthru</rbf>
 	<mameversion>0262</mameversion>
 	<year>1986</year>
-	<manufacturer>Data East</manufacturer>
+	<manufacturer>Data East Corporation (Tecfri license)</manufacturer>
 	<players>2</players>
 	<buttons names="Fire/Button1,Accelerate/Button2,-,-,-,-,Coin,Start,Pause" default="A,B,R,Start,Select" count="2"/>
 
-	<rom index="0" zip="brkthruj.zip|brkthru.zip" md5="none">
+	<rom index="0" zip="brkthrut.zip|brkthru.zip" md5="none">
 		<!-- maincpu region 0x20000: 16K lead gap (pause assets), then program ROMs -->
 		<!-- 16K lead gap: PAUSE-SCREEN ASSETS (logo@0x0000, font@0x2000, text@0x2400);
 		     packed by sim/tools/pack_pause.py; game ROMs still start at 0x4000 -->
@@ -447,34 +447,34 @@
 		20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 00 00 00 00 00 00 00 00 00 00 00 00 00
 		</part>
 		<part repeat="0xA00"> 00 </part>   <!-- pad assets (0x3600) up to 0x4000 -->
-		<part name="1" crc="09bd60ee"/>   <!-- 0x04000 -->
-		<part name="2" crc="f2b2cd1c"/>   <!-- 0x08000 -->
-		<part name="4" crc="b42b3359"/>   <!-- 0x10000 -->
+		<part name="5_de-0230-2_27128.f9" crc="158e660a"/>   <!-- 0x04000 -->
+		<part name="6_de-0230-2_27256.f11" crc="62dbe49e"/>   <!-- 0x08000 -->
+		<part name="8_de-0230-2_27256.f13" crc="8cabf252"/>   <!-- 0x10000 -->
 		<part name="3.f12" crc="2f2c40c2"/>   <!-- 0x18000 -->
 
 		<!-- chars region 0x2000 -->
-		<part name="12" crc="3d9a7003"/>
+		<part name="12.bin" crc="58c0b29b"/>
 
 		<!-- tiles region 0x20000 : MAME scatter -->
 		<part name="7.b6" crc="920cc56a" offset="0x0000" length="0x4000"/>  <!-- 0x00000 -->
-		<part name="8" crc="5e5a2cd7" offset="0x0000" length="0x1000"/>  <!-- 0x04000 -->
+		<part name="8.b7" crc="f67ee64e" offset="0x0000" length="0x1000"/>  <!-- 0x04000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="8" offset="0x1000" length="0x1000"/>  <!-- 0x06000 -->
+		<part name="8.b7" offset="0x1000" length="0x1000"/>  <!-- 0x06000 -->
 		<part repeat="0x1000"> 00 </part>
 		<part name="7.b6" offset="0x4000" length="0x4000"/>  <!-- 0x08000 -->
-		<part name="8" offset="0x2000" length="0x1000"/>  <!-- 0x0C000 -->
+		<part name="8.b7" offset="0x2000" length="0x1000"/>  <!-- 0x0C000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="8" offset="0x3000" length="0x1000"/>  <!-- 0x0E000 -->
+		<part name="8.b7" offset="0x3000" length="0x1000"/>  <!-- 0x0E000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="6" crc="cb47b395" offset="0x0000" length="0x4000"/>  <!-- 0x10000 -->
-		<part name="8" offset="0x4000" length="0x1000"/>  <!-- 0x14000 -->
+		<part name="6.b4" crc="fd3cee40" offset="0x0000" length="0x4000"/>  <!-- 0x10000 -->
+		<part name="8.b7" offset="0x4000" length="0x1000"/>  <!-- 0x14000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="8" offset="0x5000" length="0x1000"/>  <!-- 0x16000 -->
+		<part name="8.b7" offset="0x5000" length="0x1000"/>  <!-- 0x16000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="6" offset="0x4000" length="0x4000"/>  <!-- 0x18000 -->
-		<part name="8" offset="0x6000" length="0x1000"/>  <!-- 0x1C000 -->
+		<part name="6.b4" offset="0x4000" length="0x4000"/>  <!-- 0x18000 -->
+		<part name="8.b7" offset="0x6000" length="0x1000"/>  <!-- 0x1C000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="8" offset="0x7000" length="0x1000"/>  <!-- 0x1E000 -->
+		<part name="8.b7" offset="0x7000" length="0x1000"/>  <!-- 0x1E000 -->
 		<part repeat="0x1000"> 00 </part>
 
 		<!-- sprites region 0x18000 -->

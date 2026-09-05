@@ -1,8 +1,8 @@
 <misterromdescription>
-    <name>Vs. Tennis (Japan USA, set 3)</name>
+    <name>Vs. Tennis (Japan/USA, set 3)</name>
     <setname>vstennisb</setname>
     <year>1984</year>
-    <manufacturer>Nintendo</manufacturer>
+    <manufacturer>Nintendo Co., Ltd.</manufacturer>
     <rbf>VSnes</rbf>
     <rotation>horizontal</rotation>
     <mameversion>277</mameversion>

@@ -4,7 +4,7 @@
 	<rbf>xnbrkthru</rbf>
 	<mameversion>0262</mameversion>
 	<year>1986</year>
-	<manufacturer>Data East</manufacturer>
+	<manufacturer>Data East Corporation</manufacturer>
 	<players>2</players>
 	<buttons names="Fire/Button1,Accelerate/Button2,-,-,-,-,Coin,Start,Pause" default="A,B,R,Start,Select" count="2"/>
 

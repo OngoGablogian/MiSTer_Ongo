@@ -20,14 +20,14 @@
     </switches>
     <rom index="0" zip="vsfdf.zip">
         <!--Region: prg, Size: 0x20000 bytes-->
-        <part crc="3bce8f0f" name="prg0"/>
+        <part crc="3bce8f0f" name="prg2"/>
         <part crc="c74499ce" name="prg1"/>
         <!--Region: gfx1, Size: 0x10000 bytes-->
         <part crc="a2f88df0" name="cha2.1"/>
         <part repeat="0x10000">00</part>
         <!--NES2-->
         <!--Region: prg, Size: 0x20000 bytes-->
-        <part crc="3bce8f0f" name="prg0"/>
+        <part crc="3bce8f0f" name="prg2"/>
         <part crc="c74499ce" name="prg1"/>
         <!--Region: gfx1, Size: 0x10000 bytes-->
         <part crc="a2f88df0" name="cha2.1"/>
