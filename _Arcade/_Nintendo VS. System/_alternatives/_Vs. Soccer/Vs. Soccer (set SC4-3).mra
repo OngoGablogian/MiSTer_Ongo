@@ -27,7 +27,7 @@
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
         <part crc="307b19ab" name="mds-sc4-2 a.2b or 8b"/>
-        <part crc="307b19ab" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="7263613a" name="mds-sc4-2 a.2b or 8b"/>
         <part repeat="114688">00</part>
         <!--NES2-->
         <!--Region: prg, Size: 0x8000 bytes-->
@@ -38,7 +38,7 @@
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
         <part crc="307b19ab" name="mds-sc4-2 a.2b or 8b"/>
-        <part crc="307b19ab" name="mds-sc4-2 a.2b or 8b"/>
+        <part crc="7263613a" name="mds-sc4-2 a.2b or 8b"/>
         <part repeat="114688">00</part>
     </rom>
     <rom index="1">
