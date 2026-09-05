@@ -47,7 +47,7 @@
       Config blob, index 1. Byte 0 is the mod byte and 0x00 is what rdfts wants:
       the SXX2E single board, part table 0, every part copied rather than
       decoded. That is also the core's power-up state, so this element changes
-      nothing on a fresh load -- it is here so that loading rdfts AFTER a set
+      nothing on a fresh load - it is here so that loading rdfts AFTER a set
       that does set something (rdft's 0x01, rdft2's 0x03 plus a codec) cannot
       leave a stale value behind if the RBF is not reloaded in between.
 
@@ -88,7 +88,7 @@
       The save file, in /media/fat/config/nvram/. 512 bytes: the DS2404's
       bookkeeping SRAM, and nothing else.
 
-      The cartridge MRAs declare 516 here -- the sample flash's four-byte region
+      The cartridge MRAs declare 516 here - the sample flash's four-byte region
       stamp, then these same 512 bytes as the tail. SXX2E's samples are a real
       ROM, so there is no stamp to keep and the tail sits at offset 0 instead. rom_loader's
       mod byte is what tells the core which of the two shapes to expect
@@ -114,7 +114,7 @@
 
       The last two names are not board inputs: Pause (bit 11) gates the 386
       while the video engines keep running, and Savestate (bit 12) is the
-      modifier the savestate d-pad combinations are built on -- SS+Left/Right
+      modifier the savestate d-pad combinations are built on - SS+Left/Right
       picks the slot, SS+Down saves, SS+Up loads. Savestate has no default=
       entry, because Main only accepts the eight base pad names there and the
       first eight buttons use all of them, so it must be bound by hand.

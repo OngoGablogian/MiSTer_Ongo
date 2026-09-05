@@ -13,7 +13,7 @@
     <rbf>SeibuSPI</rbf>
     <mameversion>0277</mameversion>
     <year>1997</year>
-    <manufacturer>Seibu Kaihatsu</manufacturer>
+    <manufacturer>Seibu Kaihatsu (Tuning license)</manufacturer>
     <players>2</players>
     <joystick>8</joystick>
     <rotation>vertical (cw)</rotation>
@@ -32,7 +32,7 @@
 
         Pre-built (default)  Payload and stamp. The game finds a programmed
                              flash and plays at once. Same job table, same
-                             sources, same bytes as the game's own updater --
+                             sources, same bytes as the game's own updater -
                              checked against the image MAME's flash devices
                              hold, on all seven sets.
 
@@ -44,20 +44,20 @@
 
                              SWITCHING to it blanks the stamp and restarts the
                              board, because boot is the only moment the game
-                             looks -- so the copy can always be seen again.
+                             looks - so the copy can always be seen again.
                              Switching back does nothing: Pre-built writes the
                              real stamp at the next boot anyway.
 
       Pre-built ignores the stamp in the save file, deliberately: it writes the
       real one from the program image a moment later, so a stored copy could only
       be the same bytes or a stale set. Cart copy uses it, and that is the whole
-      mechanism -- a restored stamp means the copy has been done and the game
+      mechanism - a restored stamp means the copy has been done and the game
       skips its updater. The DS2404's 512-byte tail is live either way.
     -->
 
     <!--
       Part order is significant. rtl/rom_loader.sv walks this list with a fixed
-      table -- selected by the mod byte below -- and performs MAME's
+      table - selected by the mod byte below - and performs MAME's
       ROM_LOAD24_* / ROM_LOAD32_* byte scatter in hardware. `make check-mra`
       holds this file, that table and MAME's ROM_START against each other.
 
@@ -70,7 +70,7 @@
 
       Layout produced in SDRAM (see rtl/spi_defs.vh):
         0x0000000  2 MB   386 program
-        0x0200000  256 KB Z80 program -- RAM, NOT loaded here. The 386 fills it
+        0x0200000  256 KB Z80 program - RAM, NOT loaded here. The 386 fills it
                           through port 0x688 and releases the Z80 with 0x68C.
         0x0240000  192 KB text tiles
         0x0280000  2 MB   YMF271 sample flash, blank at boot
@@ -78,7 +78,7 @@
         0x0500000  12 MB  background tiles
         0x1100000  18 MB  sprites, three 6 MB plane-pair chunks
         0x2300000  2 MB   the PCM source ROM, read through the sound01 window
-                          -- PER-SET, immediately above this set's own 18 MB of
+                          - PER-SET, immediately above this set's own 18 MB of
                           sprites; 37 MB top, so this one needs 64 MB either way
     -->
 
@@ -86,7 +86,7 @@
       Index 1 is the core's config blob. Byte 0 is the mod byte: bit 0 selects
       the SXX2C board wiring, bits 3:1 the set, and BIT 4 the authentic-flash
       tail of that set's part table plus the 386's sound01 source window. Bit 4
-      alone does nothing -- it is ANDed with bit 0 in SeibuSPI.sv, because on
+      alone does nothing - it is ANDed with bit 0 in SeibuSPI.sv, because on
       SXX2E it would open a window with nothing behind it.
 
       IT MUST COME BEFORE THE index="0" ROM. Main_MiSTer sends <rom> elements in
@@ -97,7 +97,7 @@
       <!--
         Byte 0 is the mod byte. Bytes 1-15 are the {part index, codec}
         pairs, all FF here because this variant decodes nothing on the
-        way in -- FF is the documented terminator.
+        way in - FF is the documented terminator.
 
         Bytes 16-24 are the sample-flash derivation's constants, read
         at fixed offsets by SeibuSPI.sv. They are in the MRA and not in
@@ -124,7 +124,7 @@
     <!--
       Worth noting what this variant costs rdft2 and rfjet nothing: their
       pre-flashed images are DERIVED by a decompressor (CODEC_BPE_DPCM) whose
-      format had to be cracked. Here there is no derived image and no codec --
+      format had to be cracked. Here there is no derived image and no codec -
       the game's own 386 does the decompression, as it does on hardware.
     -->
 
@@ -156,7 +156,7 @@
 
         <!--
           Parts 14 and 15: MAME's sound01 region, whole. sound1.u0222 is the
-          same ROM the pre-flashed MRA carries twice -- once sliced and
+          same ROM the pre-flashed MRA carries twice - once sliced and
           compressed into the flash image, once whole for the Z80 program. Here
           it is carried once, whole, and serves both purposes: the updater reads
           its compressed half through the sound01 window and the 386 reads the
@@ -167,7 +167,7 @@
 
         <!--
           Part 16: the sample flash, BLANK. flash0_blank_regionXX.u1053 is a
-          real dump and it carries the region ID in byte 0 -- an erased or
+          real dump and it carries the region ID in byte 0 - an erased or
           mismatched one is the "hardware error 81" the MAME driver header
           describes. MAME has no dump for the second E28F008SA because an
           erased chip has nothing to dump, so it is a megabyte of FF here.
@@ -181,7 +181,7 @@
       image, 1 the core's config blob and 254 the DIP switches.
 
       ONE element, because an MRA gets one, so what the board remembers is
-      concatenated into it -- and it is 516 bytes, not two megabytes:
+      concatenated into it - and it is 516 bytes, not two megabytes:
 
         0x000..0x003   the sample flash's REGION STAMP, and nothing else of it
         0x004..0x203   the DS2404's 512 bytes of bookkeeping SRAM
@@ -189,7 +189,7 @@
       Those four bytes are what the game tests to decide the flash is already
       programmed, so they are the whole flag that says whether its own updater
       runs. The two megabytes behind them are DERIVED at every boot in a third of
-      a second, which made storing them pointless twice over -- and expensive:
+      a second, which made storing them pointless twice over - and expensive:
       Main reads the save file back every time it polls, so a 2 MB one made the
       OSD visibly unresponsive on every open.
 
@@ -206,13 +206,13 @@
     <!--
       The names map to joystick bits 4 upwards IN ORDER and SeibuSPI.sv decodes
       them at exactly those positions, so this list and that decode change
-      together. Pause is the eighth, bit 11, and is not a board input at all --
+      together. Pause is the eighth, bit 11, and is not a board input at all -
       it gates the 386 while the video engines keep running, so the frozen frame
       stays on screen. It is not on button 3 because four of the seven sets are
       MAME's spi_3button and use that as a game button.
 
       Savestate (SS) is the ninth, bit 12, and is also not a board input: it is
-      the modifier the savestate d-pad combinations are built on -- SS+Left/Right
+      the modifier the savestate d-pad combinations are built on - SS+Left/Right
       picks the slot, SS+Down saves, SS+Up loads.  It has no entry in default=
       because Main only accepts the eight base pad names there and the first
       eight buttons use all of them, so it must be bound by hand.

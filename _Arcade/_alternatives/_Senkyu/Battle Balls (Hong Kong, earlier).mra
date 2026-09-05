@@ -26,7 +26,7 @@
 
       A clone of senkyu, part for part: the same ROM layout, the same
       decryption (MAME's init_batlball against the parent's init_senkyu), and a
-      program of its own -- which is why the job table below is not the
+      program of its own - which is why the job table below is not the
       parent's address.
 
       make check-mra holds every part here against MAME's ROM_START and
@@ -48,7 +48,7 @@
       Main_MiSTer sends <rom> elements in file order and the loader has to know
       its table before the bytes start.
 
-        byte 0     mod byte 0x19 -- cartridge board, set 4, authentic-flash tail
+        byte 0     mod byte 0x19 - cartridge board, set 4, authentic-flash tail
         1..15      {part, codec} pairs; FF terminates, nothing here is decoded
         16..19     job table  0x0030228c
         20..23     stamp      0x003ffffc
@@ -59,7 +59,7 @@
       second; what the option picks is whether the region STAMP goes with it.
       Pre-built writes it and the game plays at once.  Cart copy leaves it
       blank, so the game spends about six minutes programming a flash that is
-      already correct -- and SWITCHING to Cart copy blanks the stamp and
+      already correct - and SWITCHING to Cart copy blanks the stamp and
       restarts the board, because boot is the only moment the game looks.
     -->
     <rom index="1">
@@ -96,15 +96,15 @@
         <!-- sound01: the ROMs the updater reads, carried whole -->
         <part name="fb_pcm-1.215"                crc="1d83891c"/>
         <part name="fb_7.216"                    crc="874d7b59"/>
-        <!-- soundflash1: the sample flash, BLANK -- byte 0 is the region lock -->
+        <!-- soundflash1: the sample flash, BLANK - byte 0 is the region lock -->
         <part name="flash0_blank_region22.u1053" crc="5fee8413"/>
-        <!-- the second E28F008SA, erased -- MAME has no dump for it -->
+        <!-- the second E28F008SA, erased - MAME has no dump for it -->
         <part repeat="0x100000">FF</part>
     </rom>
 
     <!--
       The save file, in /media/fat/config/nvram/.  ONE element, because an MRA
-      gets one, so what the board remembers is concatenated into it -- and it
+      gets one, so what the board remembers is concatenated into it - and it
       is 516 bytes, not two megabytes:
 
         0x000..0x003   the sample flash's REGION STAMP, and nothing else of it
@@ -114,7 +114,7 @@
       programmed, so they are the whole flag that says whether its six-minute
       updater runs.  The two megabytes behind them are DERIVED at every boot in
       a third of a second, so storing them bought nothing and cost a visibly
-      unresponsive OSD -- Main reads the file back every time it polls.
+      unresponsive OSD - Main reads the file back every time it polls.
 
       The tail is byte-for-byte MAME's own `ds2404` file.
 
@@ -126,13 +126,13 @@
     <!--
       The names map to joystick bits 4 UPWARDS IN ORDER and SeibuSPI.sv decodes
       them at exactly those positions, so this list and that decode change
-      together.  Pause is the eighth, bit 11, and is not a board input at all --
+      together.  Pause is the eighth, bit 11, and is not a board input at all -
       it gates the 386 while the video engines keep running.  It is not on
       button 3 because four of the seven sets are MAME's spi_3button and use
       that as a game button.
 
       Savestate (SS) is the ninth, bit 12, and is also not a board input: it is
-      the modifier the savestate d-pad combinations are built on -- SS+Left/Right
+      the modifier the savestate d-pad combinations are built on - SS+Left/Right
       picks the slot, SS+Down saves, SS+Up loads.  It has no entry in default=
       because Main only accepts the eight base pad names there and the first
       eight buttons use all of them, so it must be bound by hand.
