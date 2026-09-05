@@ -24,8 +24,8 @@
         <part crc="63d6490a" name="wr.1a"/>
         <part repeat="98304">00</part>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="455d77ac" name="wr.2b"/>
-        <part crc="653350d8" name="wr.2a"/>
+        <part crc="e27c7434" name="wr.2b"/>
+        <part crc="f8b8f3c4" name="wr.2a"/>
         <part repeat="114688">00</part>
         <!--NES2-->
         <!--Region: prg, Size: 0x8000 bytes-->

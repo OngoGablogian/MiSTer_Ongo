@@ -34,8 +34,8 @@
         EA EA
         </patch>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="192c3360" name="mds-gm5.2b"/>
-        <part crc="823dd178" name="mds-gm5.2a"/>
+        <part crc="f3c2bfb2" name="mds-gm5.2b"/>
+        <part crc="f8b8f3c4" name="mds-gm5.2a"/>
         <part repeat="114688">00</part>
         <!--NES2-->
         <!--Region: prg, Size: 0xA000 bytes-->
@@ -51,8 +51,8 @@
         EA EA
         </patch>
         <!--Region: gfx1, Size: 0x4000 bytes-->
-        <part crc="192c3360" name="mds-gm5.2b"/>
-        <part crc="823dd178" name="mds-gm5.2a"/>
+        <part crc="f3c2bfb2" name="mds-gm5.2b"/>
+        <part crc="f8b8f3c4" name="mds-gm5.2a"/>
         <part repeat="114688">00</part>
     </rom>
     <rom index="1">
