@@ -8,7 +8,7 @@
 	<joystick>8-way</joystick>
 	<rotation>horizontal</rotation>
 	<region>Asia</region>
-	<rbf>XNZN1</rbf>
+	<rbf>XNZN1TaitoFX1B</rbf>
 
 	<!-- BIOS: Taito FX-1 BIOS, 512KB, ioctl_index 0 -->
 	<rom index="0" zip="coh1000t.zip" md5="none">
@@ -44,9 +44,27 @@
 		<part name="tt04" crc="013363df"/>
 	</rom>
 
+	<!-- Taito Zoom sound board (MAME "taito_zoom:mn10200" region):               -->
+	<!-- MN10200 program ROM, 512KB, ioctl_index 6 -> DDR3 0x32000000             -->
+	<rom index="6" zip="raystorm.zip" md5="none">
+		<part name="e24-09.14" crc="808589e1"/>
+	</rom>
+
+	<!-- Taito Zoom ZSG-2 sample ROM (MAME "taito_zoom:zsg2" region):             -->
+	<!-- 4MB, ioctl_index 7 -> DDR3 0x32100000                                    -->
+	<rom index="7" zip="raystorm.zip" md5="none">
+		<part name="e24-04.27" crc="f403493a"/>
+	</rom>
+
 	<!-- DIP switches map to zn_dsw via ~status[103:96] (base=96, 1 byte; ZN1.sv inverts).
 	     status_bit=0 (default) -> zn_dsw bit=1 = MAME "Off"; status_bit=1 -> zn_dsw bit=0 = MAME "On".
 	     From MAME zn.cpp INPUT_PORTS_START(znt2p) DSW. -->
+
+	<!-- AT28C16 operator settings / high scores. MiSTer loads <mra>.nvm at ioctl index 9
+	     on launch and writes it back when the core requests an upload, so a one-time
+	     FACTORY SETTING in the test menu survives a power cycle, as on a real cabinet. -->
+	<nvram index="9" size="2048"/>
+
 	<switches base="96" default="00">
 		<dip name="Service Mode" bits="1" ids="Off,On"/>
 		<dip name="Test Mode"    bits="3" ids="Off,On"/>

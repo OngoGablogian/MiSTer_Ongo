@@ -37,7 +37,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                    |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                     |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                        |
-| [GameKing](https://discord.com/channels/647909397477195803/1046941428758102086/1536851511965917204)                                |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                                |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                        |
 | [Grind Stormer](https://github.com/TheJesusFish/Arcade-GrindStormer_MiSTer)                                                        |
@@ -98,10 +97,10 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                           |
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                           |
 | [Taito B System](https://github.com/Mezzow/Arcade-TaitoB_MiSTer)                                                                   |
+| [Taito FX-1B “Taito Zoom”](https://github.com/XelaNotPu/ZN1-TaitoFX1B_MiSTer)                                                      |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                          |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                        |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                              |
-| [Tiger - Game.com](https://discord.com/channels/647909397477195803/1056022299234541578/1528901089796034600)                        |
 | [Total Carnage](https://www.patreon.com/blahm1d/posts/total-carnage-y-167995231)                                                   |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                           |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                     |

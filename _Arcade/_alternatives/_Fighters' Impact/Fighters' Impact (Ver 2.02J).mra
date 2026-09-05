@@ -8,7 +8,7 @@
 	<joystick>8-way</joystick>
 	<rotation>horizontal</rotation>
 	<region>Japan</region>
-	<rbf>XNZN1</rbf>
+	<rbf>XNZN1TaitoFX1B</rbf>
 
 	<!-- BIOS: Taito FX-1 BIOS, 512KB, ioctl_index 0 -->
 	<rom index="0" zip="coh1000t.zip" md5="none">
@@ -33,6 +33,20 @@
 		<part name="e25-02.2" crc="8e8b4c82"/>
 		<part name="e25-03.12" crc="43b1c085"/>
 	</rom>
+
+	<!-- Taito Zoom sound board (music): MN10200 program ROM, 512KB,             -->
+	<!-- ioctl_index 6 -> DDR3 0x32000000 (MAME "taito_zoom:mn10200" region)     -->
+	<rom index="6" zip="ftimpactj.zip|ftimpcta.zip|ftimpact.zip" md5="none">
+		<part name="e25-10.14" crc="2b2ad1b1"/>
+	</rom>
+
+	<!-- Taito Zoom ZSG-2 sample ROM (MAME "taito_zoom:zsg2" region): 6MB total, -->
+	<!-- ioctl_index 7 -> DDR3 0x32100000 (e25-04 4MB + e25-05 2MB concatenated) -->
+	<rom index="7" zip="ftimpactj.zip|ftimpcta.zip|ftimpact.zip" md5="none">
+		<part name="e25-04.27" crc="09a66d35"/>
+		<part name="e25-05.28" crc="3fb57636"/>
+	</rom>
+
 
 	<!-- CAT702 key A: motherboard key (tt01), 8 bytes, ioctl_index 4 -->
 	<rom index="4" zip="coh1000t.zip" md5="none">
