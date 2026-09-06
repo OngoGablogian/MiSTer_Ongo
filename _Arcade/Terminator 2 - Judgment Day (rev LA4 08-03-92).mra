@@ -1,0 +1,42 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Terminator 2 - Judgment Day (rev LA4 08/03/92)</name>
+    <setname>term2</setname>
+    <mameversion>0280</mameversion>
+    <year>1991</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>YUnitADPCM</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>06</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="term2.zip">
+        <part name="la1_terminator_2_game_rom_u111.u111" crc="916d0197"/>
+        <part name="la1_terminator_2_game_rom_u112.u112" crc="39ae1c87"/>
+        <part name="la1_terminator_2_game_rom_u113.u113" crc="cb5084e5"/>
+        <part name="la1_terminator_2_game_rom_u114.u114" crc="53c516ec"/>
+        <part name="la1_terminator_2_game_rom_u95.u95" crc="dd39cf73"/>
+        <part name="la1_terminator_2_game_rom_u96.u96" crc="31f4fd36"/>
+        <part name="la1_terminator_2_game_rom_u97.u97" crc="7f72e775"/>
+        <part name="la1_terminator_2_game_rom_u98.u98" crc="1a20ce29"/>
+        <part name="la1_terminator_2_game_rom_u106.u106" crc="f08a9536"/>
+        <part name="la1_terminator_2_game_rom_u107.u107" crc="268d4035"/>
+        <part name="la1_terminator_2_game_rom_u108.u108" crc="379fdaed"/>
+        <part name="la1_terminator_2_game_rom_u109.u109" crc="306a9366"/>
+    </rom>
+    <rom index="1" zip="term2.zip">
+        <part name="la4_terminator_2_game_rom_u105.u105" crc="d4d8d884"/>
+        <part name="la4_terminator_2_game_rom_u89.u89" crc="25359415"/>
+    </rom>
+    <rom index="2" zip="term2.zip">
+        <part name="sl1_terminator_2_u3_sound_rom.u3" crc="73c3f5c4"/>
+        <part name="sl1_terminator_2_u3_sound_rom.u3" crc="73c3f5c4"/>
+        <part name="sl1_terminator_2_u12_sound_rom.u12" crc="e192a40d"/>
+        <part name="sl1_terminator_2_u12_sound_rom.u12" crc="e192a40d"/>
+        <part name="sl1_terminator_2_u13_sound_rom.u13" crc="956fa80b"/>
+        <part name="sl1_terminator_2_u13_sound_rom.u13" crc="956fa80b"/>
+    </rom>
+    <switches default="FB,DF"><dip name="Test Switch" bits="8" ids="On,Off"/></switches>
+    <buttons names="Trigger,Bomb,P2 Trigger,P2 Bomb,Start,Coin" default="B,A,X,Y,Start,Select" count="4"/>
+</misterromdescription>

@@ -1,0 +1,44 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Strike Force (rev 1 02/25/91)</name>
+    <setname>strkforc</setname>
+    <mameversion>0280</mameversion>
+    <year>1991</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>YUnit</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>04</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="strkforc.zip">
+        <part name="la1_strike_force_game_rom_u111.u111" crc="878efc80"/>
+        <part name="la1_strike_force_game_rom_u112.u112" crc="93394399"/>
+        <part name="la1_strike_force_game_rom_u113.u113" crc="9565a79b"/>
+        <part name="la1_strike_force_game_rom_u114.u114" crc="b71152da"/>
+        <part name="la1_strike_force_game_rom_u106.u106" crc="a394d4cf"/>
+        <part name="la1_strike_force_game_rom_u107.u107" crc="edef1419"/>
+        <part name="la1_strike_force_game_rom_u95.u95" crc="519cb2b4"/>
+        <part name="la1_strike_force_game_rom_u96.u96" crc="61214796"/>
+        <part name="la1_strike_force_game_rom_u97.u97" crc="eb5dee5f"/>
+        <part name="la1_strike_force_game_rom_u98.u98" crc="c5c079e7"/>
+        <part name="la1_strike_force_game_rom_u90.u90" crc="607bcdc0"/>
+        <part name="la1_strike_force_game_rom_u91.u91" crc="da02547e"/>
+    </rom>
+    <rom index="1" zip="strkforc.zip">
+        <part repeat="0x60000">00</part>
+        <part name="la1_strike_force_game_rom_u105.u105" crc="7895e0e3"/>
+        <part repeat="0x60000">00</part>
+        <part name="la1_strike_force_game_rom_u89.u89" crc="26114d9e"/>
+    </rom>
+    <rom index="2" zip="strkforc.zip">
+        <part name="sl1_strike_force_sound_rom_u4.u4" crc="8f747312"/>
+        <part name="sl1_strike_force_sound_rom_u4.u4" crc="8f747312"/>
+        <part name="sl1_strike_force_sound_rom_u19.u19" crc="afb29926"/>
+        <part name="sl1_strike_force_sound_rom_u19.u19" crc="afb29926"/>
+        <part name="sl1_strike_force_sound_rom_u20.u20" crc="1bc9b746"/>
+        <part name="sl1_strike_force_sound_rom_u20.u20" crc="1bc9b746"/>
+    </rom>
+    <switches default="FF,FF"><dip name="Test Switch" bits="15" ids="On,Off"/></switches>
+    <buttons names="Fire,Weapon,Weapon Select,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+</misterromdescription>

@@ -1,0 +1,41 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Mortal Kombat (rev 4.0 09/28/92)</name>
+    <setname>mkla4</setname>
+    <mameversion>0280</mameversion>
+    <year>1992</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>YUnitADPCM</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>05</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="mkla4.zip|mk.zip">
+        <part name="l1_mortal_kombat_game_rom_u-111.u111" crc="d17096c4"/>
+        <part name="l1_mortal_kombat_game_rom_u-112.u112" crc="993bc2e4"/>
+        <part name="l1_mortal_kombat_game_rom_u-113.u113" crc="6fb91ede"/>
+        <part name="l1_mortal_kombat_game_rom_u-114.u114" crc="ed1ff88a"/>
+        <part name="l1_mortal_kombat_game_rom_u-95.u95" crc="a002a155"/>
+        <part name="l1_mortal_kombat_game_rom_u-96.u96" crc="dcee8492"/>
+        <part name="l1_mortal_kombat_game_rom_u-97.u97" crc="de88caef"/>
+        <part name="l1_mortal_kombat_game_rom_u-98.u98" crc="37eb01b4"/>
+        <part name="l1_mortal_kombat_game_rom_u-106.u106" crc="45acaf21"/>
+        <part name="l1_mortal_kombat_game_rom_u-107.u107" crc="2a6c10a0"/>
+        <part name="l1_mortal_kombat_game_rom_u-108.u108" crc="23308979"/>
+        <part name="l1_mortal_kombat_game_rom_u-109.u109" crc="cafc47bb"/>
+    </rom>
+    <rom index="1" zip="mkla4.zip|mk.zip">
+        <part name="l4_mortal_kombat_game_rom_u-105.u105" crc="29af348f"/>
+        <part name="l4_mortal_kombat_game_rom_u-89.u89" crc="1ad76662"/>
+    </rom>
+    <rom index="2" zip="mkla4.zip|mk.zip">
+        <part name="sl1_mortal_kombat_u3_sound_rom.u3" crc="c615844c"/>
+        <part name="sl1_mortal_kombat_u12_sound_rom.u12" crc="258bd7f9"/>
+        <part name="sl1_mortal_kombat_u12_sound_rom.u12" crc="258bd7f9"/>
+        <part name="sl1_mortal_kombat_u13_sound_rom.u13" crc="7b7ec3b6"/>
+        <part name="sl1_mortal_kombat_u13_sound_rom.u13" crc="7b7ec3b6"/>
+    </rom>
+    <switches default="FF,DF"><dip name="Test Switch" bits="8" ids="On,Off"/></switches>
+    <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Block 2,Start,Coin" default="Y,B,L,X,A,R,Start,Select" count="6"/>
+</misterromdescription>

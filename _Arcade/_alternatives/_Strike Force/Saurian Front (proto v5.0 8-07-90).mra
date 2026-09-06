@@ -1,0 +1,44 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Saurian Front (proto v5.0 8/07/90)</name>
+    <setname>saurnfrnt</setname>
+    <mameversion>0280</mameversion>
+    <year>1991</year>
+    <manufacturer>Williams</manufacturer>
+    <players>2</players>
+    <rbf>YUnit</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>09</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="saurnfrnt.zip|strkforc.zip">
+        <part name="pa1_saurian_front_game_rom_u111.u111" crc="ee7a733d"/>
+        <part name="pa1_saurian_front_game_rom_u112.u112" crc="3a1a0656"/>
+        <part name="pa1_saurian_front_game_rom_u113.u113" crc="0cba3a22"/>
+        <part name="pa1_saurian_front_game_rom_u114.u114" crc="1cce75a8"/>
+        <part name="pa1_saurian_front_game_rom_u106.u106" crc="5d6a6c39"/>
+        <part name="pa1_saurian_front_game_rom_u107.u107" crc="5d178b62"/>
+        <part name="pa1_saurian_front_game_rom_u95.u95" crc="8918d0c3"/>
+        <part name="pa1_saurian_front_game_rom_u96.u96" crc="6de6e648"/>
+        <part name="pa1_saurian_front_game_rom_u97.u97" crc="6fba9290"/>
+        <part name="pa1_saurian_front_game_rom_u98.u98" crc="298939f9"/>
+        <part name="pa1_saurian_front_game_rom_u90.u90" crc="ff87ab13"/>
+        <part name="pa1_saurian_front_game_rom_u91.u91" crc="67bd128a"/>
+    </rom>
+    <rom index="1" zip="saurnfrnt.zip|strkforc.zip">
+        <part repeat="0x60000">00</part>
+        <part name="pa1_saurian_front_game_rom_u105.u105" crc="6cd469f3"/>
+        <part repeat="0x60000">00</part>
+        <part name="pa1_saurian_front_game_rom_u89.u89" crc="bf5188df"/>
+    </rom>
+    <rom index="2" zip="saurnfrnt.zip|strkforc.zip">
+        <part name="pa1_saurian_front_sound_rom_u4.u4" crc="f22a09b8"/>
+        <part name="pa1_saurian_front_sound_rom_u4.u4" crc="f22a09b8"/>
+        <part name="pa1_saurian_front_sound_rom_u19.u19" crc="a2dfce0f"/>
+        <part name="pa1_saurian_front_sound_rom_u19.u19" crc="a2dfce0f"/>
+        <part name="pa1_saurian_front_sound_rom_u20.u20" crc="b0e8f6fd"/>
+        <part name="pa1_saurian_front_sound_rom_u20.u20" crc="b0e8f6fd"/>
+    </rom>
+    <switches default="FF,36"><dip name="Test Switch" bits="14" ids="Off,On"/></switches>
+    <buttons names="Fire,Weapon,Weapon Select,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+</misterromdescription>

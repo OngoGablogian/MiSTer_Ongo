@@ -1,0 +1,41 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>High Impact Football (rev LA5 02/15/91)</name>
+    <setname>hiimpact</setname>
+    <mameversion>0280</mameversion>
+    <year>1990</year>
+    <manufacturer>Williams</manufacturer>
+    <players>4</players>
+    <rbf>YUnit</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>02</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="hiimpact.zip">
+        <part name="la1_high_impact_game_rom_u111.u111" crc="49560560"/>
+        <part name="la1_high_impact_game_rom_u112.u112" crc="4dd879dc"/>
+        <part name="la1_high_impact_game_rom_u113.u113" crc="b67aeb70"/>
+        <part name="la1_high_impact_game_rom_u114.u114" crc="9a4bc44b"/>
+        <part name="la1_high_impact_game_rom_u95.u95" crc="e1352dc0"/>
+        <part name="la1_high_impact_game_rom_u96.u96" crc="197d0f34"/>
+        <part name="la1_high_impact_game_rom_u97.u97" crc="908ea575"/>
+        <part name="la1_high_impact_game_rom_u98.u98" crc="6dcbab11"/>
+        <part name="la1_high_impact_game_rom_u106.u106" crc="7d0ead0d"/>
+        <part name="la1_high_impact_game_rom_u107.u107" crc="ef48e8fa"/>
+        <part name="la1_high_impact_game_rom_u108.u108" crc="5f363e12"/>
+        <part name="la1_high_impact_game_rom_u109.u109" crc="3689fbbc"/>
+    </rom>
+    <rom index="1" zip="hiimpact.zip">
+        <part repeat="0x60000">00</part>
+        <part name="la5_high_impact_game_rom_u105.u105" crc="104c30e7"/>
+        <part repeat="0x60000">00</part>
+        <part name="la5_high_impact_game_rom_u89.u89" crc="07aa0010"/>
+    </rom>
+    <rom index="2" zip="hiimpact.zip">
+        <part name="sl1_high_impact_sound_u4.u4" crc="28effd6a"/>
+        <part name="sl1_high_impact_sound_u19.u19" crc="0ea22c89"/>
+        <part name="sl1_high_impact_sound_u20.u20" crc="4e747ab5"/>
+    </rom>
+    <switches default="FF,FF"><dip name="Test Switch" bits="8" ids="On,Off"/></switches>
+    <buttons names="Action,Start,Coin" default="A,Start,Select" count="1"/>
+</misterromdescription>

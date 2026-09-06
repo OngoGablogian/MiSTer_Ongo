@@ -1,0 +1,28 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Y-Unit Test ROM (v1.40)</name>
+    <setname>yunittst</setname>
+    <mameversion>0280</mameversion>
+    <year>199?</year>
+    <manufacturer>Midway</manufacturer>
+    <players>2</players>
+    <rbf>YUnit</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>08</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="yunittst.zip">
+        <part repeat="0x120000">00</part>
+    </rom>
+    <rom index="1" zip="yunittst.zip">
+        <part repeat="0x60000">00</part>
+        <part name="y_unit_test_u105.u105" crc="bd29a7d1"/>
+        <part repeat="0x60000">00</part>
+        <part name="y_unit_test_u89.u89" crc="6db6e0cd"/>
+    </rom>
+    <rom index="2" zip="yunittst.zip">
+        <part repeat="0x60000">00</part>
+    </rom>
+    <switches default="FF,FF"/>
+    <buttons names="Action,Start,Coin" default="A,Start,Select" count="1"/>
+</misterromdescription>

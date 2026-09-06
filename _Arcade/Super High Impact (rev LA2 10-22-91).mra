@@ -1,0 +1,41 @@
+<misterromdescription>
+    <about author="rejectedcoins"/>
+    <rotation>horizontal</rotation>
+    <name>Super High Impact (rev LA2 10/22/91)</name>
+    <setname>shimpact</setname>
+    <mameversion>0280</mameversion>
+    <year>1991</year>
+    <manufacturer>Midway</manufacturer>
+    <players>4</players>
+    <rbf>YUnit</rbf>
+    <joystick>8</joystick>
+    <rom index="3"><part>03</part></rom>
+    <nvram index="4" size="32768"></nvram>
+    <rom index="0" zip="shimpact.zip">
+        <part name="la1_super_high_impact_game_rom_u111.u111" crc="80ae2a86"/>
+        <part name="la1_super_high_impact_game_rom_u112.u112" crc="3ffc27e9"/>
+        <part name="la1_super_high_impact_game_rom_u113.u113" crc="01549d00"/>
+        <part name="la1_super_high_impact_game_rom_u114.u114" crc="a68af319"/>
+        <part name="la1_super_high_impact_game_rom_u95.u95" crc="e8f56ef5"/>
+        <part name="la1_super_high_impact_game_rom_u96.u96" crc="24ed04f9"/>
+        <part name="la1_super_high_impact_game_rom_u97.u97" crc="dd7f41a9"/>
+        <part name="la1_super_high_impact_game_rom_u98.u98" crc="23ef65dd"/>
+        <part name="la1_super_high_impact_game_rom_u106.u106" crc="6f5bf337"/>
+        <part name="la1_super_high_impact_game_rom_u107.u107" crc="a8815dad"/>
+        <part name="la1_super_high_impact_game_rom_u108.u108" crc="d39685a3"/>
+        <part name="la1_super_high_impact_game_rom_u109.u109" crc="36e0b2b2"/>
+    </rom>
+    <rom index="1" zip="shimpact.zip">
+        <part repeat="0x60000">00</part>
+        <part name="la2_super_high_impact_game_rom_u105.u105" crc="7f1a1d1c"/>
+        <part repeat="0x60000">00</part>
+        <part name="la2_super_high_impact_game_rom_u89.u89" crc="a348fcb9"/>
+    </rom>
+    <rom index="2" zip="shimpact.zip">
+        <part name="sl1_super_high_impact_u4_sound_rom.u4" crc="1e5a012c"/>
+        <part name="sl1_super_high_impact_u19_sound_rom.u19" crc="10f9684e"/>
+        <part name="sl1_super_high_impact_u20_sound_rom.u20" crc="1b4a71c1"/>
+    </rom>
+    <switches default="FE,FF"><dip name="Test Switch" bits="8" ids="On,Off"/></switches>
+    <buttons names="Action,Start,Coin" default="A,Start,Select" count="1"/>
+</misterromdescription>

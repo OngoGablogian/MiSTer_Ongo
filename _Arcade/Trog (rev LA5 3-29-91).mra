@@ -7,7 +7,7 @@
     <year>1990</year>
     <manufacturer>Midway</manufacturer>
     <players>4</players>
-    <rbf>SmashTV</rbf>
+    <rbf>YUnit</rbf>
     <joystick>8</joystick>
     <rom index="3"><part>01</part></rom>
     <nvram index="4" size="32768"></nvram>
