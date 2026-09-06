@@ -39,6 +39,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                     |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                        |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                                |
+| [Gigandes](https://www.patreon.com/bazset/posts/gigandes-east-167076685)                                                           |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                        |
 | [Grind Stormer](https://github.com/TheJesusFish/Arcade-GrindStormer_MiSTer)                                                        |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                      |
@@ -103,6 +104,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                              |
 | [Total Carnage](https://www.patreon.com/blahm1d/posts/total-carnage-y-167995231)                                                   |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                           |
+| [Xybots](https://misterfpga.org/viewtopic.php?f=25&p=113906)                                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                     |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                       |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                    |
