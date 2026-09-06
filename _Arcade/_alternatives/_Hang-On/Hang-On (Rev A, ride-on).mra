@@ -1,0 +1,84 @@
+<misterromdescription>
+  <name>Hang-On (Rev A, ride-on)</name>
+  <setname>hangon2</setname>
+  <rbf>SegaSpaceHarrier</rbf>
+  <mameversion>0289</mameversion>
+  <year>1985</year>
+  <manufacturer>Sega</manufacturer>
+  <category>Racing / Driving</category>
+  <rom index="0" zip="hangon2.zip|hangon.zip" md5="None">
+    <part>00 00 00 08 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <!-- main -->
+      <interleave output="16">
+        <part name="epr-6851a.ic22" crc="1e4d2217" map="10"/>
+        <part name="epr-6849a.ic8" crc="3793e50e" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-6850a.ic20" crc="5d715e3b" map="10"/>
+        <part name="epr-6848a.ic6" crc="f1439a30" map="01"/>
+      </interleave>
+      <part repeat="131072">00</part>
+    <!-- sub -->
+      <interleave output="16">
+        <part name="epr-6839.ic63" crc="2747b794" map="10"/>
+        <part name="epr-6838.ic51" crc="73e9fa6e" map="01"/>
+      </interleave>
+      <part repeat="196608">00</part>
+    <!-- z80 -->
+      <part name="epr-6833.ic73" crc="3b942f5f"/>
+      <part repeat="49152">00</part>
+    <!-- pcm -->
+      <part name="epr-6831.ic5" crc="cfef5481"/>
+      <part name="epr-6832.ic6" crc="4165aea5"/>
+      <part repeat="65536">00</part>
+    <!-- mainops -->
+      <part repeat="262144">00</part>
+    <!-- sprite -->
+      <interleave output="16">
+        <part name="epr-6820.ic34" crc="87cbc6de" map="10"/>
+        <part name="epr-6819.ic27" crc="469dad07" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-6822.ic35" crc="e9718de5" map="10"/>
+        <part name="epr-6821.ic28" crc="15792969" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-6824.ic36" crc="701deaa4" map="10"/>
+        <part name="epr-6823.ic29" crc="49422691" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-6826.ic37" crc="77d0de2c" map="10"/>
+        <part name="epr-6825.ic30" crc="6e23c8b4" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-6828.ic38" crc="8e880c93" map="10"/>
+        <part name="epr-6827.ic31" crc="7fa1bfb6" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-6830.ic39" crc="b1a63aef" map="10"/>
+        <part name="epr-6829.ic32" crc="7ca0952d" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-6846.ic25" crc="f21e57a3" map="10"/>
+        <part name="epr-6845.ic18" crc="ba08c9b8" map="01"/>
+      </interleave>
+      <part repeat="589824">00</part>
+    <!-- tile -->
+      <part name="epr-6841.ic38" crc="54d295dc"/>
+      <part name="epr-6842.ic23" crc="f677b568"/>
+      <part name="epr-6843.ic7" crc="a257f0da"/>
+    <!-- road -->
+      <part name="epr-6840.ic108" crc="581230e3"/>
+    <!-- zoom -->
+      <part name="epr-6844.ic123" crc="e3ec7bd6"/>
+  </rom>
+  <switches default="FF,FE" base="0">
+    <dip bits="0,3" name="Coin A" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="4,7" name="Coin B" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="8" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="9,10" name="Difficulty" ids="Hardest,Hard,Easy,Medium"/>
+    <dip bits="11,12" name="Time Adj." ids="Hardest,Hard,Medium,Normal"/>
+    <dip bits="13" name="Play Music" ids="Off,On"/>
+  </switches>
+  <buttons names="Gas,Brake,Start,Coin,Pause,Test,Service,Foot SW L,Foot SW R" default="A,B,Start,R,L,X,Y,-,-"/>
+</misterromdescription>

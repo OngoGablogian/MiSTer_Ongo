@@ -1,0 +1,115 @@
+<misterromdescription>
+  <name>Space Harrier (Rev A, 8751 315-5163A)</name>
+  <setname>sharrier</setname>
+  <rbf>SegaSpaceHarrier</rbf>
+  <mameversion>0289</mameversion>
+  <year>1985</year>
+  <manufacturer>Sega</manufacturer>
+  <category>Shooter / 3rd Person</category>
+  <rom index="0" zip="sharrier.zip" md5="None">
+    <part>01 07 00 08 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <!-- main -->
+      <interleave output="16">
+        <part name="epr-7188a.ic97" crc="45e173c3" map="10"/>
+        <part name="epr-7184a.ic84" crc="e1934a51" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-7189.ic98" crc="40b1309f" map="10"/>
+        <part name="epr-7185.ic85" crc="ce78045c" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-7190.ic99" crc="f6391091" map="10"/>
+        <part name="epr-7186.ic86" crc="79b367d7" map="01"/>
+      </interleave>
+      <interleave output="16">
+        <part name="epr-7191.ic100" crc="6171e9d3" map="10"/>
+        <part name="epr-7187.ic87" crc="70cb72ef" map="01"/>
+      </interleave>
+    <!-- sub -->
+      <interleave output="16">
+        <part name="epr-7182.ic54" crc="d7c535b6" map="10"/>
+        <part name="epr-7183.ic67" crc="a6153af8" map="01"/>
+      </interleave>
+      <part repeat="196608">00</part>
+    <!-- z80 -->
+      <part name="epr-7234.ic73" crc="d6397933"/>
+      <part name="epr-7233.ic72" crc="504e76d9"/>
+      <part repeat="32768">00</part>
+    <!-- pcm -->
+      <part name="epr-7231.ic5" crc="871c6b14"/>
+      <part name="epr-7232.ic6" crc="4b59340c"/>
+      <part repeat="65536">00</part>
+    <!-- mainops -->
+      <part repeat="262144">00</part>
+    <!-- sprite -->
+      <interleave output="32">
+        <part name="epr-7230.ic36" crc="93e2d264" map="0001"/>
+        <part name="epr-7222.ic28" crc="edbf5fc3" map="0010"/>
+        <part name="epr-7214.ic18" crc="e8c537d8" map="0100"/>
+        <part name="epr-7206.ic8" crc="22844fa4" map="1000"/>
+      </interleave>
+      <interleave output="32">
+        <part name="epr-7229.ic35" crc="cd6e7500" map="0001"/>
+        <part name="epr-7221.ic27" crc="41f25a9c" map="0010"/>
+        <part name="epr-7213.ic17" crc="5bb09a67" map="0100"/>
+        <part name="epr-7205.ic7" crc="dcaa2ebf" map="1000"/>
+      </interleave>
+      <interleave output="32">
+        <part name="epr-7228.ic34" crc="d5e15e66" map="0001"/>
+        <part name="epr-7220.ic26" crc="ac62ae2e" map="0010"/>
+        <part name="epr-7212.ic16" crc="9c782295" map="0100"/>
+        <part name="epr-7204.ic6" crc="3711105c" map="1000"/>
+      </interleave>
+      <interleave output="32">
+        <part name="epr-7227.ic33" crc="60d7c1bb" map="0001"/>
+        <part name="epr-7219.ic25" crc="f6330038" map="0010"/>
+        <part name="epr-7211.ic15" crc="60737b98" map="0100"/>
+        <part name="epr-7203.ic5" crc="70fb5ebb" map="1000"/>
+      </interleave>
+      <interleave output="32">
+        <part name="epr-7226.ic32" crc="6d7b5c97" map="0001"/>
+        <part name="epr-7218.ic24" crc="cebf797c" map="0010"/>
+        <part name="epr-7210.ic14" crc="24596a8b" map="0100"/>
+        <part name="epr-7202.ic4" crc="b537d082" map="1000"/>
+      </interleave>
+      <interleave output="32">
+        <part name="epr-7225.ic31" crc="5e784271" map="0001"/>
+        <part name="epr-7217.ic23" crc="510e5e10" map="0010"/>
+        <part name="epr-7209.ic13" crc="7a2dad15" map="0100"/>
+        <part name="epr-7201.ic3" crc="f5ba4e08" map="1000"/>
+      </interleave>
+      <interleave output="32">
+        <part name="epr-7224.ic30" crc="ec42c9ef" map="0001"/>
+        <part name="epr-7216.ic22" crc="6d4a7d7a" map="0010"/>
+        <part name="epr-7208.ic12" crc="0f732717" map="0100"/>
+        <part name="epr-7200.ic2" crc="fc3bf8f3" map="1000"/>
+      </interleave>
+      <interleave output="32">
+        <part name="epr-7223.ic29" crc="ed51fdc4" map="0001"/>
+        <part name="epr-7215.ic21" crc="dfe75f3d" map="0010"/>
+        <part name="epr-7207.ic11" crc="a2c07741" map="0100"/>
+        <part name="epr-7199.ic1" crc="b191e22f" map="1000"/>
+      </interleave>
+    <!-- tile -->
+      <part name="epr-7196.ic31" crc="347fa325"/>
+      <part name="epr-7197.ic46" crc="39d98bd1"/>
+      <part name="epr-7198.ic60" crc="3da3ea6b"/>
+    <!-- road -->
+      <part name="epr-7181.ic2" crc="b4740419"/>
+    <!-- zoom -->
+      <part name="epr-6844.ic123" crc="e3ec7bd6"/>
+    <!-- mcu -->
+      <part name="315-5163a.ic32" crc="203dffeb"/>
+  </rom>
+  <switches default="FF,FC" base="0">
+    <dip bits="0,3" name="Coin A" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="4,7" name="Coin B" ids="Free Play (if both) or 1C/1C,1C/1C 2/3,1C/1C 4/5,1C/1C 5/6,2C/1C 4/3,2C/1C 3/2 5/3 6/4,2C/3C,4C/1C,3C/1C,2C/1C,7C/1C,6C/1C,5C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="8" name="Cabinet" ids="Upright,Moving"/>
+    <dip bits="9" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="10,11" name="Lives" ids="5,4,2,3"/>
+    <dip bits="12" name="Bonus Life" ids="7000000,5000000"/>
+    <dip bits="13" name="Trial Time" ids="On,Off"/>
+    <dip bits="14,15" name="Difficulty" ids="Hardest,Hard,Easy,Medium"/>
+  </switches>
+  <buttons names="Fire 1,Fire 2,Fire 3,Start,Coin,Pause,Test,Service" default="A,B,X,Start,R,L,Y,Select"/>
+</misterromdescription>

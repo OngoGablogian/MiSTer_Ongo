@@ -31,7 +31,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                      |
 | [Casio Loopy](https://discord.com/channels/647909397477195803/1545809249391878414)                                                 |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                           |
-| [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                   |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                    |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                    |
 | [Escape Kids](https://github.com/meathax/escapekids)                                                                               |
@@ -41,15 +40,12 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                                |
 | [Gigandes](https://www.patreon.com/bazset/posts/gigandes-east-167076685)                                                           |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                        |
-| [Grind Stormer](https://github.com/TheJesusFish/Arcade-GrindStormer_MiSTer)                                                        |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                      |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                          |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                            |
-| [Incredible Technologies 32-Bit Hardware](https://discord.com/channels/647909397477195803/1047333006555217991/1544554911457607731) |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                           |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                           |
 | [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1543359831912616007)                    |
-| [Knuckle Bash](https://github.com/TheJesusFish/Arcade-KnuckleBash_MiSTer)                                                          |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                        |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                                |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                                 |
@@ -79,6 +75,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                        |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                       |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                     |
+| [SEGA Space Harrier / Hang-On](https://github.com/rossops/Arcade-SegaSpaceHarrier_MiSTer)                                          |
 | [SEGA System 24](https://github.com/meathax/s24)                                                                                   |
 | [SEGA System 32](https://github.com/meathax/s32)                                                                                   |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                        |
