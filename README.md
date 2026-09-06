@@ -29,6 +29,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                                   |
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                      |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                      |
+| [Casio Loopy](https://discord.com/channels/647909397477195803/1545809249391878414)                                                 |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                           |
 | [Dogyuun](https://github.com/TheJesusFish/Arcade-Dogyuun_MiSTer)                                                                   |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                    |
