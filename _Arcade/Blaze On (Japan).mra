@@ -6,7 +6,7 @@
     <manufacturer>A.I (Atlus license)</manufacturer>
     <category>Shooter / Flying Horizontal</category>
     <nvram index="2" size="128" />
-    <rom index="0" zip="blazeon.zip" md5="none">
+    <rom index="0" zip="blazeonj.zip|blazeon.zip" md5="none">
         <interleave output="16">
             <part name="bz_prg1.u80" crc="8409e31d" map="01" />
             <part name="bz_prg2.u81" crc="b8a0a08b" map="10" />

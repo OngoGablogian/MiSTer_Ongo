@@ -22,7 +22,7 @@
 
 	<!-- Country/program ROM: 512KB, ioctl_index 2, CPU 0x1FB80000 (region "countryrom").
 	     Identical to ts2u; stored under the ts2u/ subdir of the merged ts2 set. -->
-	<rom index="2" zip="ts2.zip" md5="none">
+	<rom index="2" zip="ts2ua.zip|ts2.zip" md5="none">
 		<part name="ts2u_04.2h" crc="ddb52e7c"/>
 	</rom>
 
@@ -34,7 +34,7 @@
 	       0x0800000 ts2-08m    (4MB)
 	       0x0C00000 ts2-10m.4k (2MB)
 	     The 4MB parts live under the ts2ja/ subdir of the merged ts2 set. -->
-	<rom index="3" zip="ts2.zip" md5="none">
+	<rom index="3" zip="ts2ua.zip|ts2.zip" md5="none">
 		<part name="ts2-05m.3h" crc="7f4228e2"/>
 		<part name="ts2-06m" crc="cd7e0a27"/>
 		<part name="ts2-08m" crc="b1f7f115"/>
@@ -47,19 +47,19 @@
 	</rom>
 
 	<!-- CAT702 key B: game key (cp02), 8 bytes, ioctl_index 5 -->
-	<rom index="5" zip="ts2.zip" md5="none">
+	<rom index="5" zip="ts2ua.zip|ts2.zip" md5="none">
 		<part name="cp02" crc="40b0b697"/>
 	</rom>
 
 	<!-- QSound: Z80 sound program (audiocpu), 256KB, ioctl_index 6 -> SDRAM ch5.
 	     ts2_02.2e is 128KB; MAME ROM_FILLs the upper 128KB with 0xFF. -->
-	<rom index="6" zip="ts2.zip" md5="none">
+	<rom index="6" zip="ts2ua.zip|ts2.zip" md5="none">
 		<part name="ts2_02.2e" crc="2f45c461"/>
 		<part repeat="131072">FF</part>
 	</rom>
 
 	<!-- QSound: DL-1425 sample ROM, 4MB (ROM_LOAD16_WORD_SWAP), ioctl_index 7 -> SDRAM ch4. -->
-	<rom index="7" zip="ts2.zip" md5="none">
+	<rom index="7" zip="ts2ua.zip|ts2.zip" md5="none">
 		<part name="ts2-01m.3b" crc="d7a505e0"/>
 	</rom>
 

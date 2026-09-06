@@ -22,7 +22,7 @@
 
 	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
 	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
-	<rom index="0" zip="ehrgeiz.zip" md5="none">
+	<rom index="0" zip="ehrgeizja.zip|ehrgeiz.zip" md5="none">
 		<interleave output="16">
 			<part name="eg1vera.2l" crc="302d62cf" map="01"/>
 			<part name="eg1vera.2p" crc="1d7fb3a1" map="10"/>
@@ -37,7 +37,7 @@
 
 	<!-- ioctl 3: banked data ROM, 28 MB. Concatenated in MAME "bankedroms" region
 	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
-	<rom index="3" zip="ehrgeiz.zip" md5="none">
+	<rom index="3" zip="ehrgeizja.zip|ehrgeiz.zip" md5="none">
 		<interleave output="16">
 			<part name="eg1rom0l.12" crc="fe11a48e" map="01"/>
 			<part name="eg1rom0u.11" crc="7cb90c25" map="10"/>
@@ -58,12 +58,12 @@
 
 	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
 	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
-	<rom index="6" zip="ehrgeiz.zip" md5="none">
+	<rom index="6" zip="ehrgeizja.zip|ehrgeiz.zip" md5="none">
 		<part name="eg1vera.11s" crc="9e44645e"/>
 	</rom>
 
 	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
-	<rom index="7" zip="ehrgeiz.zip" md5="none">
+	<rom index="7" zip="ehrgeizja.zip|ehrgeiz.zip" md5="none">
 		<part name="eg1wave0.2" crc="961fe69f"/>
 	</rom>
 

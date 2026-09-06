@@ -23,7 +23,7 @@
 
 	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
 	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
-	<rom index="0" zip="fgtlayer.zip" md5="none">
+	<rom index="0" zip="fgtlayerja.zip|fgtlayer.zip" md5="none">
 		<interleave output="16">
 			<part name="ftl0vera.2e" crc="f4156e79" map="01"/>
 			<part name="ftl0vera.2j" crc="c65b57c0" map="10"/>
@@ -40,7 +40,7 @@
 
 	<!-- ioctl 3: banked data ROM, 32 MB. Concatenated in MAME "bankedroms" region
 	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
-	<rom index="3" zip="fgtlayer.zip" md5="none">
+	<rom index="3" zip="fgtlayerja.zip|fgtlayer.zip" md5="none">
 		<part name="ftl1rom0.9" crc="e33ce365"/>
 		<part name="ftl1rom1.10" crc="a1ec7d08"/>
 		<part name="ftl1rom2.11" crc="204be858"/>
@@ -56,12 +56,12 @@
 
 	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
 	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
-	<rom index="6" zip="fgtlayer.zip" md5="none">
+	<rom index="6" zip="fgtlayerja.zip|fgtlayer.zip" md5="none">
 		<part name="ftl1vera.11s" crc="e3f957cd"/>
 	</rom>
 
 	<!-- ioctl 7: C352 wave ROM, 16 MB. -->
-	<rom index="7" zip="fgtlayer.zip" md5="none">
+	<rom index="7" zip="fgtlayerja.zip|fgtlayer.zip" md5="none">
 		<part name="ftl1wave0.2" crc="ee009a2b"/>
 		<part name="ftl1wave1.1" crc="a54a89cd"/>
 	</rom>

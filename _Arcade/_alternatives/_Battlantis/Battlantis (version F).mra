@@ -7,7 +7,7 @@
     <category>Shooter</category>
     <rbf>Battlantis</rbf>
 
-    <rom index="0" zip="battlnts.zip" md5="none">
+    <rom index="0" zip="battlntsa.zip|battlnts.zip" md5="none">
         <!-- Main CPU (96KB) -->
         <part name="battlntsa/777_f03.8e" /> <!-- 64KB Banked ROM (0x00000 - 0x0FFFF) -->
         <part name="battlntsa/777_f02.7e" /> <!-- 32KB Fixed ROM (0x10000 - 0x17FFF) -->

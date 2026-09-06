@@ -23,7 +23,7 @@
 
 	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
 	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
-	<rom index="0" zip="mrdrillr.zip" md5="none">
+	<rom index="0" zip="mrdrillrja2.zip|mrdrillr.zip" md5="none">
 		<interleave output="16">
 			<part name="dri1vera2.2l" crc="751ca21d" map="01"/>
 			<part name="dri1vera2.2p" crc="2a2b0704" map="10"/>
@@ -40,7 +40,7 @@
 
 	<!-- ioctl 3: banked data ROM, 8 MB. Concatenated in MAME "bankedroms" region
 	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
-	<rom index="3" zip="mrdrillr.zip" md5="none">
+	<rom index="3" zip="mrdrillrja2.zip|mrdrillr.zip" md5="none">
 		<interleave output="16">
 			<part name="dri1rom0l.6" crc="021bb2fa" map="01"/>
 			<part name="dri1rom0u.9" crc="5aae85ea" map="10"/>
@@ -49,12 +49,12 @@
 
 	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
 	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
-	<rom index="6" zip="mrdrillr.zip" md5="none">
+	<rom index="6" zip="mrdrillrja2.zip|mrdrillr.zip" md5="none">
 		<part name="dri1vera.11s" crc="33ea9c0e"/>
 	</rom>
 
 	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
-	<rom index="7" zip="mrdrillr.zip" md5="none">
+	<rom index="7" zip="mrdrillrja2.zip|mrdrillr.zip" md5="none">
 		<part name="dri1wave0.5" crc="32928df1"/>
 	</rom>
 

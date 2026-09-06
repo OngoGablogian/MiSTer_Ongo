@@ -18,7 +18,7 @@
 	-->
 
 	<!-- ioctl 0: main program (2x 2MB, 16-bit interleaved). Boots directly from here. -->
-	<rom index="0" zip="tektagt.zip" md5="none">
+	<rom index="0" zip="tektagtuc1.zip|tektagt.zip" md5="none">
 		<interleave output="16">
 			<part name="teg3verc1.2l" crc="1efb7b85" map="01"/>
 			<part name="teg3verc1.2p" crc="7caef9b2" map="10"/>
@@ -35,7 +35,7 @@
 	<!-- ioctl 3: banked data ROM, 56 MB total (same ROM set as tektagt).
 	     ROM pairs delivered byte-interleaved (output="16" single-bit maps - the only idiom the MiSTer built-in MRA loader assembles correctly); the core swaps the middle bytes of each 32-bit word to restore the ROM_LOAD32_WORD layout.
 	     Fetched by the CPU through the 2 MB window AND by the DMA-5 ROM reader. -->
-	<rom index="3" zip="tektagt.zip" md5="none">
+	<rom index="3" zip="tektagtuc1.zip|tektagt.zip" md5="none">
 		<interleave output="16">
 			<part name="teg1_rom0e.ic9"  crc="c962a373" map="01"/>
 			<part name="teg1_rom0o.ic13" crc="badb7dcf" map="10"/>
@@ -57,12 +57,12 @@
 	</rom>
 
 	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless). -->
-	<rom index="6" zip="tektagt.zip" md5="none">
+	<rom index="6" zip="tektagtuc1.zip|tektagt.zip" md5="none">
 		<part name="teg1.11s" crc="67d0c469"/>
 	</rom>
 
 	<!-- ioctl 7: C352 wave ROM, 16 MB (2x 8MB files); core relocates it to SDRAM 0x4080000 (above the 56MB banked image). -->
-	<rom index="7" zip="tektagt.zip" md5="none">
+	<rom index="7" zip="tektagtuc1.zip|tektagt.zip" md5="none">
 		<part name="teg1_wave0.ic1" crc="4bd99104"/>
 		<part name="teg1_wave1.ic12" crc="dbc74fff"/>
 	</rom>

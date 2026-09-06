@@ -26,7 +26,7 @@
 	</rom>
 
 	<!-- Banked ROM: 3x4MB = 12MB, ioctl_index 3 (MAME region "bankedroms"). -->
-	<rom index="3" zip="glpracr.zip" md5="none">
+	<rom index="3" zip="glpracrj.zip|glpracr.zip" md5="none">
 		<part name="gra-05m.3h" crc="78053700"/>
 		<part name="gra-06m.4h" crc="d73b392b"/>
 		<part name="gra-07m.5h" crc="acaefe3a"/>
@@ -38,7 +38,7 @@
 	</rom>
 
 	<!-- CAT702 key B: game key (cp05), 8 bytes, ioctl_index 5 -->
-	<rom index="5" zip="glpracr.zip" md5="none">
+	<rom index="5" zip="glpracrj.zip|glpracr.zip" md5="none">
 		<part name="cp05" crc="ae930900"/>
 	</rom>
 

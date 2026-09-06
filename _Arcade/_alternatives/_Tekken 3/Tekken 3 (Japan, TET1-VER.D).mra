@@ -22,7 +22,7 @@
 
 	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
 	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
-	<rom index="0" zip="tekken3.zip" md5="none">
+	<rom index="0" zip="tekken3jd.zip|tekken3.zip" md5="none">
 		<interleave output="16">
 			<part name="tet1verd.2e" crc="8a2e5ed5" map="01"/>
 			<part name="tet1verd.2j" crc="fd2128f7" map="10"/>
@@ -36,7 +36,7 @@
 
 	<!-- ioctl 3: banked data ROM, 28 MB. Concatenated in MAME "bankedroms" region
 	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
-	<rom index="3" zip="tekken3.zip" md5="none">
+	<rom index="3" zip="tekken3jd.zip|tekken3.zip" md5="none">
 		<interleave output="16">
 			<part name="tet1rom0l.6" crc="2886bb32" map="01"/>
 			<part name="tet1rom0u.9" crc="c5705b92" map="10"/>
@@ -57,12 +57,12 @@
 
 	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
 	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
-	<rom index="6" zip="tekken3.zip" md5="none">
+	<rom index="6" zip="tekken3jd.zip|tekken3.zip" md5="none">
 		<part name="tet1verb.11s" crc="b13d88a9"/>
 	</rom>
 
 	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
-	<rom index="7" zip="tekken3.zip" md5="none">
+	<rom index="7" zip="tekken3jd.zip|tekken3.zip" md5="none">
 		<part name="tet1wave0.5" crc="77ba7975"/>
 		<part name="tet1wave1.4" crc="ffeba79f"/>
 	</rom>

@@ -22,7 +22,7 @@
 
 	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
 	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
-	<rom index="0" zip="soulclbr.zip" md5="none">
+	<rom index="0" zip="soulclbruc.zip|soulclbr.zip" md5="none">
 		<interleave output="16">
 			<part name="soc13verc.2l" crc="4ba962fb" map="01"/>
 			<part name="soc13verc.2p" crc="140c40de" map="10"/>
@@ -37,7 +37,7 @@
 
 	<!-- ioctl 3: banked data ROM, 32 MB. Concatenated in MAME "bankedroms" region
 	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
-	<rom index="3" zip="soulclbr.zip" md5="none">
+	<rom index="3" zip="soulclbruc.zip|soulclbr.zip" md5="none">
 		<part name="soc1rom0.7" crc="cdc47b55"/>
 		<part name="soc1rom1.8" crc="30d2dd5a"/>
 		<part name="soc1rom2.9" crc="dbb93955"/>
@@ -47,12 +47,12 @@
 
 	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
 	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
-	<rom index="6" zip="soulclbr.zip" md5="none">
+	<rom index="6" zip="soulclbruc.zip|soulclbr.zip" md5="none">
 		<part name="soc1vera.11s" crc="52aa206a"/>
 	</rom>
 
 	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
-	<rom index="7" zip="soulclbr.zip" md5="none">
+	<rom index="7" zip="soulclbruc.zip|soulclbr.zip" md5="none">
 		<part name="soc1wave0.2" crc="c100618d"/>
 	</rom>
 
