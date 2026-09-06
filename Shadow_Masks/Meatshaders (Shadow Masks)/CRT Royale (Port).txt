@@ -2,7 +2,7 @@
 # Name: CRT Royale (Port)
 # Source-preserving colour calibration (light-linear)
 # Equal mean R/G/B energy at 31/16 selected, 15/16 other
-# Fitted against the light-linear spatial mean at 240p -> 1080p
+# Fitted against light-linear means for 1080p integer/full-height and TATE
 ####
 v2
 6,12

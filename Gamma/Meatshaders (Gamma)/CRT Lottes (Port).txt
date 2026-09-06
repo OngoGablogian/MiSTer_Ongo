@@ -1,8 +1,8 @@
 # Name: CRT Lottes (Port)
 # Source-preserving colour calibration (light-linear)
 # One shared monotone RGB curve; no channel tint
-# Inverts the light-linear 240p-to-1080p spatial mean of this
-# family's exact mask + scanline block (see tools/color_match.py)
+# Fits light-linear means across 1080p integer/full-height and TATE modes
+# Monotone optimum of exact mask + FIR arithmetic (tools/color_match.py)
 0
 3
 4
@@ -48,8 +48,8 @@
 39
 40
 41
+41
 42
-43
 43
 44
 45
@@ -61,7 +61,7 @@
 50
 51
 52
-52
+53
 53
 54
 55
@@ -78,13 +78,13 @@
 64
 65
 66
+67
 68
-69
 69
 70
 71
 72
-72
+73
 73
 74
 75
@@ -99,11 +99,11 @@
 83
 84
 85
-86
+85
 86
 87
 88
-89
+88
 89
 90
 91
@@ -112,7 +112,7 @@
 94
 95
 96
-97
+96
 97
 98
 99
@@ -134,13 +134,13 @@
 113
 114
 115
+115
 116
-117
 117
 118
 119
 120
-121
+120
 121
 122
 123
@@ -161,7 +161,7 @@
 136
 137
 138
-139
+138
 139
 140
 141
@@ -188,8 +188,8 @@
 168
 169
 171
-173
-175
+172
+174
 176
 179
 181
@@ -199,27 +199,27 @@
 192
 195
 197
-200
-203
+199
+202
 205
 207
 210
-212
+213
 215
 217
-220
+219
 222
 225
 227
 229
-233
+232
 234
 236
 238
 241
 243
 245
-248
+247
 250
 252
 254
