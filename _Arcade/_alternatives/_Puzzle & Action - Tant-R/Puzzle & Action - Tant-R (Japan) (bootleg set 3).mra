@@ -1,20 +1,20 @@
 <misterromdescription>
-   <name>Puzzle &amp; Action: Tant-R (Japan) (bootleg set 2)</name>
-   <setname>tantrbl2</setname>
+   <name>Puzzle &amp; Action: Tant-R (Japan) (bootleg set 3)</name>
+   <setname>tantrbl3</setname>
    <rbf>SystemC2</rbf>
    <mameversion>0276</mameversion>
    <year>1994</year>
    <manufacturer>bootleg</manufacturer>
    <category>Arcade</category>
 
-   <rom index="0" zip="tantrbl2.zip|tantr.zip" md5="none">
+   <rom index="0" zip="tantrbl3.zip|tantr.zip" md5="none">
       <!-- board config header -->
       <part>00 00</part>
       <!-- region 0: 68000 program, 2097152 bytes -->
       <part>00 20 00 00</part>
       <interleave output="16">
-        <part name="trb2_2.32" map="10"/>
-        <part name="trb2_1.31" map="01"/>
+        <part name="2.u29" map="10"/>
+        <part name="1.u28" map="01"/>
       </interleave>
       <interleave output="16">
         <part name="mpr-15616.ic34" map="10"/>
@@ -41,6 +41,8 @@
       <part>05 0D 07 07 0B 07 09 0D 05 05 07 07 0B 0F 09 0D</part>
       <part>05 0C 07 06 0B 06 09 0C 07 06 07 06 09 0C 09 0C</part>
    </rom>
+
+   <nvram index="2" size="65536"/>
 
    <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
 

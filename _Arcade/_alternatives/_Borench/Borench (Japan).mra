@@ -9,7 +9,7 @@
 
    <rom index="0" zip="borenchj.zip|borench.zip" md5="none">
       <!-- board config header -->
-      <part>00 00</part>
+      <part>02 00</part>
       <!-- region 0: 68000 program, 524288 bytes -->
       <part>00 08 00 00</part>
       <interleave output="16">
@@ -38,6 +38,8 @@
       <part>0D 07 07 0F 0D 07 07 0F 0F 05 05 0D 0D 07 06 0E</part>
       <part>0D 05 07 0F 0D 05 07 0F 07 0F 05 0D 05 0D 06 0E</part>
    </rom>
+
+   <nvram index="2" size="65536"/>
 
    <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
 

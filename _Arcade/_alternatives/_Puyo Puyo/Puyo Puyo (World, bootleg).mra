@@ -44,6 +44,8 @@
       <part>0E 0F 07 07 0E 0F 07 07 09 08 04 04 09 08 04 04</part>
    </rom>
 
+   <nvram index="2" size="65536"/>
+
    <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
 
    <switches default="FF,FD" base="0">

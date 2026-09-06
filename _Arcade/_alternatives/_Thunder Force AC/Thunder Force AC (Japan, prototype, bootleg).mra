@@ -9,7 +9,7 @@
 
    <rom index="0" zip="tfrceacjpb.zip|tfrceac.zip" md5="none">
       <!-- board config header -->
-      <part>00 00</part>
+      <part>01 0F</part>
       <!-- region 0: 68000 program, 2097152 bytes -->
       <part>00 20 00 00</part>
       <interleave output="16">
@@ -44,6 +44,8 @@
       <part>05 0D 01 09 00 08 04 0C 05 0D 01 09 00 08 04 0C</part>
       <part>05 0D 09 01 00 08 0C 04 04 0C 08 00 01 09 0D 05</part>
    </rom>
+
+   <nvram index="2" size="65536"/>
 
    <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,Test" default="A,B,X,Start,Select,R,L" count="7"/>
 
