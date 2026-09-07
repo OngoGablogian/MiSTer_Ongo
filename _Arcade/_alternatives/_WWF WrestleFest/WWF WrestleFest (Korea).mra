@@ -33,7 +33,7 @@
         <dip name="Championship Game" bits="15" ids="4th,5th"/>
     </switches>
 
-    <rom index="0" zip="wwfwfestk.zip|wwfwfest.zip" md5="None" address="0x30000000">
+    <rom index="0" zip="wwfwfestk.zip|wwfwfest.zip|technos16-coc.zip" md5="None" address="0x30000000">
         <part name="wwfwfestk.rom" crc="896aac20"/>
     </rom>
 </misterromdescription>

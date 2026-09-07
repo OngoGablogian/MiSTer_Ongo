@@ -33,7 +33,7 @@
         <dip name="Players" bits="25" ids="3,2"/>
     </switches>
 
-    <rom index="0" zip="ctribej.zip|ctribe.zip" md5="None" address="0x30000000">
+    <rom index="0" zip="ctribej.zip|ctribe.zip|technos16-coc.zip" md5="None" address="0x30000000">
         <part name="ctribej.rom" crc="291a2c37"/>
     </rom>
 </misterromdescription>

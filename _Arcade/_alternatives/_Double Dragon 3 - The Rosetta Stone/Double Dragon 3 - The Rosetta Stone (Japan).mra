@@ -32,7 +32,7 @@
         <dip name="Players" bits="15" ids="3,2"/>
     </switches>
 
-    <rom index="0" zip="ddragon3j.zip|ddragon3.zip" md5="None" address="0x30000000">
+    <rom index="0" zip="ddragon3j.zip|ddragon3.zip|technos16-coc.zip" md5="None" address="0x30000000">
         <part name="ddragon3j.rom" crc="1e724436"/>
     </rom>
 </misterromdescription>
