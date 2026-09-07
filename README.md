@@ -77,7 +77,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
-| [SEGA Space Harrier / Hang-On](https://github.com/rossops/Arcade-SegaSpaceHarrier_MiSTer)                                      |
 | [SEGA System 24](https://github.com/meathax/s24)                                                                               |
 | [SEGA System 32](https://github.com/meathax/s32)                                                                               |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                    |
