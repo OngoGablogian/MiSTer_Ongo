@@ -43,6 +43,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                  |
+| [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                        |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
@@ -95,6 +96,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                          |
 | [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                       |
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                       |
+| [Taito Air System](https://github.com/retrogarage/tas-mister)                                                                  |
 | [Taito B System](https://github.com/Mezzow/Arcade-TaitoB_MiSTer)                                                               |
 | [Taito FX-1B “Taito Zoom”](https://github.com/XelaNotPu/ZN1-TaitoFX1B_MiSTer)                                                  |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |

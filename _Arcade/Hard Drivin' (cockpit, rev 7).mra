@@ -1,0 +1,63 @@
+<misterromdescription>
+  <name>Hard Drivin' (cockpit, rev 7)</name>
+  <setname>harddriv</setname>
+  <year>1988</year>
+  <manufacturer>Atari Games</manufacturer>
+  <category>Racing</category>
+  <rbf>HardDrivin_cockpit</rbf>
+  <rotation>horizontal</rotation>
+  <buttons default="A,B,X,Y,L,R,Start,Select" names="Gas,Brake,Clutch,Abort,Gear Down,Gear Up,Key,Coin,Gear 1,Gear 2,Gear 3,Gear 4"/>
+  <switches default="FF 01">
+    <dip bits="0" name="SW1:8" ids="On,Off"/>
+    <dip bits="1" name="SW1:7" ids="On,Off"/>
+    <dip bits="2" name="SW1:6" ids="On,Off"/>
+    <dip bits="3" name="SW1:5" ids="On,Off"/>
+    <dip bits="4" name="SW1:4" ids="On,Off"/>
+    <dip bits="5" name="SW1:3" ids="On,Off"/>
+    <dip bits="6" name="SW1:2" ids="On,Off"/>
+    <dip bits="7" name="SW1:1" ids="On,Off"/>
+    <dip bits="8" name="Diagnostic jumper" ids="On,Off"/>
+  </switches>
+  <rom index="0" address="0x30000000" zip="harddriv.zip" md5="none">
+    <interleave output="16">
+      <part name="136052-7105.200r" crc="af5d5c3e" map="01"/>
+      <part name="136052-7113.210r" crc="3330a942" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136052-2106.200s" crc="a668db0e" map="01"/>
+      <part name="136052-2114.210s" crc="ab689a94" map="10"/>
+    </interleave>
+    <part repeat="0x60000">ff</part>
+    <interleave output="16">
+      <part name="136052-1110.200w" crc="908ccbbe" map="01"/>
+      <part name="136052-1118.210w" crc="5b25023c" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136052-1111.200x" crc="e1f455a3" map="01"/>
+      <part name="136052-1119.210x" crc="a7fc3aaa" map="10"/>
+    </interleave>
+    <part repeat="0x20000">ff</part>
+    <interleave output="16">
+      <part name="136052-1101.10h" crc="1b77f171" map="01"/>
+      <part name="136052-1103.10k" crc="e50bec32" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136052-1102.10j" crc="998d3da2" map="01"/>
+      <part name="136052-1104.10l" crc="bc59a2b7" map="10"/>
+    </interleave>
+    <part repeat="0x10000">ff</part>
+    <part name="136052-1123.65a" crc="a88411dc"/>
+    <part name="136052-1124.55a" crc="071a4309"/>
+    <part name="136052-1125.45a" crc="ebf391af"/>
+    <part name="136052-1126.30a" crc="f46ef09c"/>
+  </rom>
+  <rom index="1" zip="harddriv.zip" md5="none">
+    <interleave output="16">
+      <part name="136052-1122.70n" crc="0c446eec" map="01"/>
+      <part name="136052-1121.45n" crc="04316e6f" map="10"/>
+    </interleave>
+  </rom>
+  <nvram index="2" size="4096"/>
+
+  <remark>Uses stock MiSTer Main. Default gamepad controls: left-stick steering, right-stick up for gas and down for brake, mapped Clutch, Gear Down/Up, Key and Coin. Pedals: Buttons disables stick pedals and uses mapped Gas/Brake buttons. Gearbox: H-pattern uses maintained Gear 1-4 buttons and neutral when released. Wheel mode uses MiSTer's standard wheel axes. Calibration remains user-driven.</remark>
+</misterromdescription>

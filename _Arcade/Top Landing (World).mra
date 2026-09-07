@@ -1,0 +1,70 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Top Landing (World)</name>
+    <setname>topland</setname>
+    <year>1988</year>
+    <manufacturer>Taito</manufacturer>
+    <players>1</players>
+    <rbf>TaitoAir</rbf>
+    <joystick>analog</joystick>
+    <region>World</region>
+    <!-- Assemble the DDR image directly from the unmodified MAME set. -->
+    <rom index="0" zip="topland.zip" address="0x30000000" md5="none">
+        <interleave output="16">
+            <part name="b62_41.43" crc="28264798" map="01"/>
+            <part name="b62_40.14" crc="db872f7d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="b62_25.42" crc="1bd53a72" map="01"/>
+            <part name="b62_24.13" crc="845026c5" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="b62_23.41" crc="ef3a971c" map="01"/>
+            <part name="b62_22.12" crc="94279201" map="10"/>
+        </interleave>
+
+        <part name="b62-42.34" crc="389230e0"/>
+
+        <interleave output="16">
+            <part name="b62-21.35" crc="5f38460d" offset="0x0000" length="0x1000" map="01"/>
+            <part name="b62-20.6"  crc="a4afe958" offset="0x0000" length="0x1000" map="10"/>
+        </interleave>
+        <part repeat="0x2e000">FF</part>
+
+        <interleave output="64">
+            <part name="b62-32.30" crc="66806646" map="00000001"/>
+            <part name="b62-31.29" crc="3feebfe3" map="00000010"/>
+            <part name="b62-30.28" crc="30e37cb8" map="00000100"/>
+            <part name="b62-35.47" crc="cba7bac5" map="00001000"/>
+            <part name="b62-34.40" crc="a7e10ca4" map="00010000"/>
+            <part name="b62-29.27" crc="efdd5c51" map="00100000"/>
+            <part name="b62-36.48" crc="4259e76a" map="01000000"/>
+            <part name="b62-33.39" crc="38786867" map="10000000"/>
+        </interleave>
+
+        <part name="b62-17.5"  crc="36447066"/>
+        <part name="b62-16.4"  crc="203a5c27"/>
+        <part name="b62-15.3"  crc="e35ffe81"/>
+        <part name="b62-14.2"  crc="617948a3"/>
+        <part name="b62-13.1"  crc="b37dc3ea"/>
+        <part name="b62-18.31" crc="3a4e687a"/>
+        <part name="b09_37.13" crc="4bdf15ed"/>
+        <part name="b62-28.22" crc="c4be68a6"/>
+    </rom>
+    <!-- The C25 program is also streamed through ioctl index 1. -->
+    <rom index="1" zip="topland.zip" md5="none">
+        <interleave output="16">
+            <part name="b62-21.35" crc="5f38460d" offset="0x0000" length="0x1000" map="01"/>
+            <part name="b62-20.6"  crc="a4afe958" offset="0x0000" length="0x1000" map="10"/>
+        </interleave>
+    </rom>
+    <buttons names="Start,Coin,Service,Throttle Up,Throttle Down"
+             default="Start,Select,-,-,-" count="1"/>
+    <switches default="FF,FF" base="8">
+        <dip bits="2" name="Test Mode" ids="On,Off"/>
+        <dip bits="3" name="Demo Sounds" ids="Off,On"/>
+        <dip bits="4,5" name="Coin A" ids="4 Coins/1 Play,3 Coins/1 Play,2 Coins/1 Play,1 Coin/1 Play"/>
+        <dip bits="6,7" name="Coin B" ids="1 Coin/6 Plays,1 Coin/4 Plays,1 Coin/3 Plays,1 Coin/2 Plays"/>
+        <dip bits="8,9" name="Difficulty" ids="Hardest,Hard,Easy,Medium"/>
+    </switches>
+</misterromdescription>
