@@ -31,6 +31,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                  |
 | [Casio Loopy](https://discord.com/channels/647909397477195803/1545809249391878414)                                             |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                       |
+| [Chiller](https://www.patreon.com/blahm1d/posts/project-overview-168821459)                                                    |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
 | [Escape Kids](https://github.com/meathax/escapekids)                                                                           |
