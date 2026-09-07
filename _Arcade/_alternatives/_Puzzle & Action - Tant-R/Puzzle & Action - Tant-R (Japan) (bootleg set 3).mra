@@ -13,12 +13,12 @@
       <!-- region 0: 68000 program, 2097152 bytes -->
       <part>00 20 00 00</part>
       <interleave output="16">
-        <part name="2.u29" map="10"/>
-        <part name="1.u28" map="01"/>
+        <part name="2.u29" crc="faecb7b1" map="10"/>
+        <part name="1.u28" crc="3304556d" map="01"/>
       </interleave>
       <interleave output="16">
-        <part name="mpr-15616.ic34" map="10"/>
-        <part name="mpr-15615.ic33" map="01"/>
+        <part name="mpr-15616.ic34" crc="17b80202" map="10"/>
+        <part name="mpr-15615.ic33" crc="36a88bd4" map="01"/>
       </interleave>
       <!-- region 1: uPD7759 samples, 0 bytes -->
       <part>01 00 00 00</part>

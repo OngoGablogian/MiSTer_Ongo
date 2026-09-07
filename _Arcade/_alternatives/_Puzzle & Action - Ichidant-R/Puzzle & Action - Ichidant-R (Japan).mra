@@ -13,16 +13,16 @@
       <!-- region 0: 68000 program, 2097152 bytes -->
       <part>00 20 00 00</part>
       <interleave output="16">
-        <part name="epr-16886.ic32" map="10"/>
-        <part name="epr-16885.ic31" map="01"/>
+        <part name="epr-16886.ic32" crc="38208e28" map="10"/>
+        <part name="epr-16885.ic31" crc="1ce4e837" map="01"/>
       </interleave>
       <interleave output="16">
-        <part name="epr-16888.ic34" map="10"/>
-        <part name="epr-16887.ic33" map="01"/>
+        <part name="epr-16888.ic34" crc="85d73722" map="10"/>
+        <part name="epr-16887.ic33" crc="bc3bbf25" map="01"/>
       </interleave>
       <!-- region 1: uPD7759 samples, 524288 bytes -->
       <part>01 08 00 00</part>
-      <part name="epr-16884.ic4"/>
+      <part name="epr-16884.ic4" crc="fd9dcdd6"/>
       <!-- region 2: 317-xxxx protection table -->
       <part>02 00 01 00</part>
       <part>05 05 01 01 06 06 02 02 05 05 01 01 06 06 02 02</part>

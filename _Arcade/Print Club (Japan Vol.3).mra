@@ -13,16 +13,16 @@
       <!-- region 0: 68000 program, 2097152 bytes -->
       <part>00 20 00 00</part>
       <interleave output="16">
-        <part name="ic32-p3jsp.ic32" map="10"/>
-        <part name="ic31-p3jsp.ic31" map="01"/>
+        <part name="ic32-p3jsp.ic32" crc="cb5b6221" map="10"/>
+        <part name="ic31-p3jsp.ic31" crc="cdec8418" map="01"/>
       </interleave>
       <interleave output="16">
-        <part name="ic34-p3jsp.ic34" map="10"/>
-        <part name="ic33-p3jsp.ic33" map="01"/>
+        <part name="ic34-p3jsp.ic34" crc="c33f71a3" map="10"/>
+        <part name="ic33-p3jsp.ic33" crc="c8da13e4" map="01"/>
       </interleave>
       <!-- region 1: uPD7759 samples, 524288 bytes -->
       <part>01 08 00 00</part>
-      <part name="epr18169.4"/>
+      <part name="epr18169.4" crc="5c00ccfb"/>
       <!-- region 2: 317-xxxx protection table -->
       <part>02 00 01 00</part>
       <part>05 05 04 04 0F 0F 0E 0E 04 04 05 05 0E 0E 0F 0F</part>

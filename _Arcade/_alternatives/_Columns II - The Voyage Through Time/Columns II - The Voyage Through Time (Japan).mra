@@ -13,8 +13,8 @@
       <!-- region 0: 68000 program, 262144 bytes -->
       <part>00 04 00 00</part>
       <interleave output="16">
-        <part name="epr-13361.ic32" map="10"/>
-        <part name="epr-13360.ic31" map="01"/>
+        <part name="epr-13361.ic32" crc="b54b5f12" map="10"/>
+        <part name="epr-13360.ic31" crc="a59b1d4f" map="01"/>
       </interleave>
       <!-- region 1: uPD7759 samples, 0 bytes -->
       <part>01 00 00 00</part>
