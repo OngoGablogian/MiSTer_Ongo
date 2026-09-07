@@ -13,11 +13,11 @@
         <part name="battlntsa/777_f02.7e" /> <!-- 32KB Fixed ROM (0x10000 - 0x17FFF) -->
 
         <!-- Audio CPU (32KB) -->
-        <part name="777_c01.10a" />
+        <part name="777_c01.10a" crc="c21206e9" />
         <!-- Sprites (256KB) -->
-        <part name="777c05.13e" />
+        <part name="777c05.13e" crc="aeee778c" />
 
         <!-- Tiles (256KB) -->
-        <part name="777c04.13a" />
+        <part name="777c04.13a" crc="45d92347" />
     </rom>
 </misterromdescription>

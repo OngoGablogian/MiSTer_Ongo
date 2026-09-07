@@ -459,22 +459,22 @@
 		<part name="7.b6" crc="920cc56a" offset="0x0000" length="0x4000"/>  <!-- 0x00000 -->
 		<part name="forcebrk8" crc="a3a1131e" offset="0x0000" length="0x1000"/>  <!-- 0x04000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="forcebrk8" offset="0x1000" length="0x1000"/>  <!-- 0x06000 -->
+		<part name="forcebrk8" crc="a3a1131e" offset="0x1000" length="0x1000"/>  <!-- 0x06000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="7.b6" offset="0x4000" length="0x4000"/>  <!-- 0x08000 -->
-		<part name="forcebrk8" offset="0x2000" length="0x1000"/>  <!-- 0x0C000 -->
+		<part name="7.b6" crc="920cc56a" offset="0x4000" length="0x4000"/>  <!-- 0x08000 -->
+		<part name="forcebrk8" crc="a3a1131e" offset="0x2000" length="0x1000"/>  <!-- 0x0C000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="forcebrk8" offset="0x3000" length="0x1000"/>  <!-- 0x0E000 -->
+		<part name="forcebrk8" crc="a3a1131e" offset="0x3000" length="0x1000"/>  <!-- 0x0E000 -->
 		<part repeat="0x1000"> 00 </part>
 		<part name="forcebrk6" crc="08bca16a" offset="0x0000" length="0x4000"/>  <!-- 0x10000 -->
-		<part name="forcebrk8" offset="0x4000" length="0x1000"/>  <!-- 0x14000 -->
+		<part name="forcebrk8" crc="a3a1131e" offset="0x4000" length="0x1000"/>  <!-- 0x14000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="forcebrk8" offset="0x5000" length="0x1000"/>  <!-- 0x16000 -->
+		<part name="forcebrk8" crc="a3a1131e" offset="0x5000" length="0x1000"/>  <!-- 0x16000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="forcebrk6" offset="0x4000" length="0x4000"/>  <!-- 0x18000 -->
-		<part name="forcebrk8" offset="0x6000" length="0x1000"/>  <!-- 0x1C000 -->
+		<part name="forcebrk6" crc="08bca16a" offset="0x4000" length="0x4000"/>  <!-- 0x18000 -->
+		<part name="forcebrk8" crc="a3a1131e" offset="0x6000" length="0x1000"/>  <!-- 0x1C000 -->
 		<part repeat="0x1000"> 00 </part>
-		<part name="forcebrk8" offset="0x7000" length="0x1000"/>  <!-- 0x1E000 -->
+		<part name="forcebrk8" crc="a3a1131e" offset="0x7000" length="0x1000"/>  <!-- 0x1E000 -->
 		<part repeat="0x1000"> 00 </part>
 
 		<!-- sprites region 0x18000 -->

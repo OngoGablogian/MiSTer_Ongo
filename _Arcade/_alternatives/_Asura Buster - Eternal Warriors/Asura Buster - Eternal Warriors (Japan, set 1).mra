@@ -16,54 +16,54 @@
 
 	<rom index="0" zip="asurabusj.zip|asurabus.zip" md5="none" address="0x30000000">
 		<interleave output="32">
-			<part name="pgm3.u1" map="0001"/>
-			<part name="pgm2.u2" map="0010"/>
-			<part name="pgm1.u3" map="0100"/>
-			<part name="pgm0.u4" map="1000"/>
+			<part name="pgm3.u1" crc="2c6b5271" map="0001"/>
+			<part name="pgm2.u2" crc="8f8694ec" map="0010"/>
+			<part name="pgm1.u3" crc="0a040f0f" map="0100"/>
+			<part name="pgm0.u4" crc="9b71e9d8" map="1000"/>
 		</interleave>
 
-		<part name="srom.u7"/>
-
-		<interleave output="32">
-			<part name="bg1113.u23" map="0012"/>
-			<part name="bg1012.u22" map="1200"/>
-		</interleave>
+		<part name="srom.u7" crc="368da389"/>
 
 		<interleave output="32">
-			<part name="bg2123.u24" map="0012"/>
-			<part name="bg2022.u25" map="1200"/>
+			<part name="bg1113.u23" crc="5f8657e6" map="0012"/>
+			<part name="bg1012.u22" crc="e3fb9af0" map="1200"/>
+		</interleave>
+
+		<interleave output="32">
+			<part name="bg2123.u24" crc="c4ebb86b" map="0012"/>
+			<part name="bg2022.u25" crc="f46eda52" map="1200"/>
 		</interleave>
 
 		<interleave output="16">
-			<part name="map.u5" map="12"/>
+			<part name="map.u5" crc="bd179dc5" map="12"/>
 		</interleave>
 
 		<interleave output="16">
-			<part name="sp01.u13" map="12"/>
+			<part name="sp01.u13" crc="5edea463" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="sp23.u14" map="12"/>
+			<part name="sp23.u14" crc="91b1b0de" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="sp45.u15" map="12"/>
+			<part name="sp45.u15" crc="96c69aac" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="sp67.u16" map="12"/>
+			<part name="sp67.u16" crc="7c3d83bf" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="sp89.u17" map="12"/>
+			<part name="sp89.u17" crc="cb1e14f8" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="spab.u18" map="12"/>
+			<part name="spab.u18" crc="e5a4608d" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="spcd.u19" map="12"/>
+			<part name="spcd.u19" crc="99bfbe32" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="spef.u20" map="12"/>
+			<part name="spef.u20" crc="c9c799cc" map="12"/>
 		</interleave>
 
-		<part name="opm.u6"/>
+		<part name="opm.u6" crc="31b05be4"/>
 	</rom>
 
 	<buttons names="Button 1,Button 2,Button 3,-,Start,Coin,Pause" default="Y,B,A,Start,Select,R" count="3"/>

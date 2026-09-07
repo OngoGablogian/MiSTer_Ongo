@@ -16,36 +16,36 @@
 
 	<rom index="0" zip="gogomile.zip" md5="none" address="0x30000000">
 		<interleave output="16">
-			<part name="fp2n.rom2" map="01"/>
-			<part name="fp1n.rom1" map="10"/>
+			<part name="fp2n.rom2" crc="e73583a0" map="01"/>
+			<part name="fp1n.rom1" crc="7b110824" map="10"/>
 		</interleave>
 
 		<part repeat="0x100000">FF</part>
-		<part name="fs1.rom24"/>
+		<part name="fs1.rom24" crc="4e4bd371"/>
 
 		<part repeat="0x60000">FF</part>
 		<interleave output="16">
-			<part name="lh5370h6.rom3" map="12"/>
+			<part name="lh5370h6.rom3" crc="e2ca7107" map="12"/>
 		</interleave>
 
 		<interleave output="32">
-			<part name="lh5370h7.rom15" map="0012"/>
-			<part name="lh5370h8.rom11" map="1200"/>
+			<part name="lh5370h7.rom15" crc="34921680" map="0012"/>
+			<part name="lh5370h8.rom11" crc="9961c925" map="1200"/>
 		</interleave>
 		<interleave output="32">
-			<part name="lh5370h9.rom16" map="0012"/>
-			<part name="lh5370ha.rom12" map="1200"/>
+			<part name="lh5370h9.rom16" crc="e0118483" map="0012"/>
+			<part name="lh5370ha.rom12" crc="5f2a87de" map="1200"/>
 		</interleave>
 
 		<interleave output="16">
-			<part name="lh5370hb.rom19" map="12"/>
+			<part name="lh5370hb.rom19" crc="bd1e896f" map="12"/>
 		</interleave>
 
 		<interleave output="16">
-			<part name="lh537k2r.rom20" map="12"/>
+			<part name="lh537k2r.rom20" crc="525dbf51" map="12"/>
 		</interleave>
 
-		<part name="lh538n1d.rom25"/>
+		<part name="lh538n1d.rom25" crc="01622a95"/>
 	</rom>
 
 	<buttons names="Button 1,-,-,-,Start,Coin,Pause" default="Y,Start,Select,R" count="1"/>

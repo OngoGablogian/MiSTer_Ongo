@@ -12,8 +12,8 @@
     <rom index="0" zip="lkagebl1.zip|lkage.zip">
         <part name="lkagebl1/ic37_1" />
         <part name="lkagebl1/ic38_2" />
-        <part name="a54-04.54" />
-        <part name="a54-03.51" />
+        <part name="a54-04.54" crc="541faf9a" />
+        <part name="a54-03.51" crc="493e76d8" />
         <part name="lkageb/a54-05.84" />
         <part name="lkageb/a54-06.85" />
         <part name="lkageb/a54-07.86" />

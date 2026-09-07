@@ -9,15 +9,15 @@
     
     <rom index="0" zip="battlnts.zip" md5="none">
         <!-- Main CPU (96KB) -->
-        <part name="777_g03.8e" /> <!-- 64KB Banked ROM (0x00000 - 0x0FFFF) -->
-        <part name="777_g02.7e" /> <!-- 32KB Fixed ROM (0x10000 - 0x17FFF) -->
+        <part name="777_g03.8e" crc="7bd44fef" /> <!-- 64KB Banked ROM (0x00000 - 0x0FFFF) -->
+        <part name="777_g02.7e" crc="dbd8e17e" /> <!-- 32KB Fixed ROM (0x10000 - 0x17FFF) -->
         
         <!-- Audio CPU (32KB) -->
-        <part name="777_c01.10a" />
+        <part name="777_c01.10a" crc="c21206e9" />
         <!-- Sprites (256KB) -->
-        <part name="777c05.13e" />
+        <part name="777c05.13e" crc="aeee778c" />
         
         <!-- Tiles (256KB) -->
-        <part name="777c04.13a" />
+        <part name="777c04.13a" crc="45d92347" />
     </rom>
 </misterromdescription>

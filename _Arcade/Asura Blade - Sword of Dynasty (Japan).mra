@@ -16,50 +16,50 @@
 
 	<rom index="0" zip="asurabld.zip" md5="none" address="0x30000000">
 		<interleave output="32">
-			<part name="pgm3.u1" map="0001"/>
-			<part name="pgm2.u2" map="0010"/>
-			<part name="pgm1.u3" map="0100"/>
-			<part name="pgm0.u4" map="1000"/>
+			<part name="pgm3.u1" crc="053e9758" map="0001"/>
+			<part name="pgm2.u2" crc="16b656ca" map="0010"/>
+			<part name="pgm1.u3" crc="35104452" map="0100"/>
+			<part name="pgm0.u4" crc="68615497" map="1000"/>
 		</interleave>
 
-		<part name="srom.u7"/>
+		<part name="srom.u7" crc="bb1deb89"/>
 
 		<interleave output="32">
-			<part name="bg1113.u23" map="0012"/>
-			<part name="bg1012.u22" map="1200"/>
+			<part name="bg1113.u23" crc="94338267" map="0012"/>
+			<part name="bg1012.u22" crc="d717a0a1" map="1200"/>
 		</interleave>
 
 		<interleave output="32">
-			<part name="bg2123.u24" map="0012"/>
-			<part name="bg2022.u25" map="1200"/>
+			<part name="bg2123.u24" crc="4acfc469" map="0012"/>
+			<part name="bg2022.u25" crc="ee312cd3" map="1200"/>
 		</interleave>
 
 		<interleave output="16">
-			<part name="map.u5" map="12"/>
+			<part name="map.u5" crc="e681155e" map="12"/>
 		</interleave>
 
 		<part repeat="0x400000">00</part>
 		<interleave output="16">
-			<part name="sp23.u14" map="12"/>
+			<part name="sp23.u14" crc="7df492eb" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="sp45.u15" map="12"/>
+			<part name="sp45.u15" crc="1890f42a" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="sp67.u16" map="12"/>
+			<part name="sp67.u16" crc="a48f1ef0" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="sp89.u17" map="12"/>
+			<part name="sp89.u17" crc="6b024362" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="spab.u18" map="12"/>
+			<part name="spab.u18" crc="803d2d8c" map="12"/>
 		</interleave>
 		<interleave output="16">
-			<part name="spcd.u19" map="12"/>
+			<part name="spcd.u19" crc="42e5c26e" map="12"/>
 		</interleave>
 		<part repeat="0x400000">00</part>
 
-		<part name="pcm.u6"/>
+		<part name="pcm.u6" crc="ac72225a"/>
 	</rom>
 
 	<buttons names="Button 1,Button 2,Button 3,-,Start,Coin,Pause" default="Y,B,A,Start,Select,R" count="3"/>
