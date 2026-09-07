@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Dr. Micro</name>
+  <setname>drmicro</setname>
+  <rbf>DrMicro</rbf>
+  <year>1983</year>
+  <manufacturer>Sanritsu</manufacturer>
+  <category>Platform</category>
+  <rotation>vertical</rotation>
+  <mameversion>0289</mameversion>
+  <players>2</players>
+  <joystick>4-way</joystick>
+  <num_buttons>1</num_buttons>
+  <!--ROM metadata extracted from MAME 5fdbebde74ce2cb4db89ae615860c51a1bbf1f38; corroborated with MAME 0.289.-->
+  <switches default="4d,00" base="0">
+    <dip name="Lives" bits="0,1" ids="2,3,4,5" />
+    <dip name="Demo Sounds" bits="2" ids="Off,On" />
+    <dip name="Bonus Life" bits="3,4" ids="30000 100000,50000 150000,70000 200000,100000 300000" />
+    <dip name="Service Mode" bits="5" ids="Off,On" />
+    <dip name="Cabinet" bits="6" ids="Cocktail,Upright" />
+    <dip name="Flip Screen" bits="7" ids="Off,On" />
+    <dip name="Coinage" bits="8,9,10" ids="1C 1C,1C 2C,1C 3C,1C 4C,1C 5C,2C 1C,3C 1C,4C 1C" />
+    <dip name="Unused SW2:4" bits="11" ids="Off,On" />
+    <dip name="Unused SW2:5" bits="12" ids="Off,On" />
+    <dip name="Unused SW2:6" bits="13" ids="Off,On" />
+    <dip name="Unused SW2:7" bits="14" ids="Off,On" />
+    <dip name="Unused SW2:8" bits="15" ids="Off,On" />
+  </switches>
+  <buttons names="Action,Start 1,Start 2,Coin,Service" default="A,Start,Select,R1,L1" count="5" />
+  <rom index="0" zip="drmicro.zip">
+    <part name="dm-00.13b" crc="270f2145" />
+    <part name="dm-01.14b" crc="bba30c80" />
+    <part name="dm-02.15b" crc="d9e4ca6b" />
+    <part name="dm-03.13d" crc="b7bcb45b" />
+    <part name="dm-04.14d" crc="071db054" />
+    <part name="dm-05.15d" crc="f41b8d8a" />
+    <part name="dm-23.5l" crc="279a76b8" />
+    <part name="dm-24.5n" crc="ee8ed1ec" />
+    <part name="dm-20.4a" crc="6f5dbf22" />
+    <part name="dm-21.4c" crc="8b17ff47" />
+    <part name="dm-22.4d" crc="84daf771" />
+    <part name="dm-40.12m" crc="3d080af9" />
+    <part name="dm-41.13m" crc="ddd7bda2" />
+    <part name="dm-62.9h" crc="e3e36eaf" />
+    <part name="dm-61.4m" crc="0dd8e365" />
+    <part name="dm-60.6e" crc="540a3953" />
+  </rom>
+</misterromdescription>

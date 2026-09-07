@@ -32,6 +32,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Casio Loopy](https://discord.com/channels/647909397477195803/1545809249391878414)                                             |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                       |
 | [Chiller](https://www.patreon.com/blahm1d/posts/project-overview-168821459)                                                    |
+| [Dr. Micro](https://www.patreon.com/Meathax/posts/meatcores-dr-168827574)                                                      |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
 | [Escape Kids](https://github.com/meathax/escapekids)                                                                           |
