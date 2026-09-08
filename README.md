@@ -39,6 +39,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
+| [Funtech Super A'Can](https://discord.com/channels/647909397477195803/1101525238874910841)                                     |
 | [Fuuki FG-2 / FG-3](https://github.com/ppriest/Arcade-Fuuki_MiSTer)                                                            |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
