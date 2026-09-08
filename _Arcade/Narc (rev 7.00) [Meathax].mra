@@ -1,5 +1,5 @@
 <misterromdescription>
-    <name>Narc (rev 7.00)</name>
+    <name>Narc (rev 7.00) [Meathax]</name>
     <setname>narc</setname>
     <rbf>NARC_Meathax</rbf>
     <mameversion>0287</mameversion>
@@ -15,30 +15,105 @@
 
         <!-- Populated 512 KB of the 1 MB TMS34010 ROM window. -->
         <interleave output="16">
-            <part name="rev7_narc_game_rom_u42.u42" map="01"/>
-            <part name="rev7_narc_game_rom_u24.u24" map="10"/>
+            <part name="rev7_narc_game_rom_u42.u42" crc="d1111b76" map="01"/>
+            <part name="rev7_narc_game_rom_u24.u24" crc="aa0d3082" map="10"/>
         </interleave>
         <interleave output="16">
-            <part name="rev7_narc_game_rom_u41.u41" map="01"/>
-            <part name="rev7_narc_game_rom_u23.u23" map="10"/>
+            <part name="rev7_narc_game_rom_u41.u41" crc="3903191f" map="01"/>
+            <part name="rev7_narc_game_rom_u23.u23" crc="7a316582" map="10"/>
         </interleave>
 
         <!-- MAME init_gfxrom(8): one byte from each 2 MB quarter. -->
-        <interleave output="32"><part name="rev2_narc_image_rom_u94.u94" map="0001"/><part name="rev2_narc_image_rom_u76.u76" map="0010"/><part name="rev2_narc_image_rom_u58.u58" map="0100"/><part name="rev2_narc_image_rom_u40.u40" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u93.u93" map="0001"/><part name="rev2_narc_image_rom_u75.u75" map="0010"/><part name="rev2_narc_image_rom_u57.u57" map="0100"/><part name="rev2_narc_image_rom_u39.u39" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u92.u92" map="0001"/><part name="rev2_narc_image_rom_u74.u74" map="0010"/><part name="rev2_narc_image_rom_u56.u56" map="0100"/><part name="rev2_narc_image_rom_u38.u38" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u91.u91" map="0001"/><part name="rev2_narc_image_rom_u73.u73" map="0010"/><part name="rev2_narc_image_rom_u55.u55" map="0100"/><part name="rev2_narc_image_rom_u37.u37" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u90.u90" map="0001"/><part name="rev2_narc_image_rom_u72.u72" map="0010"/><part name="rev2_narc_image_rom_u54.u54" map="0100"/><part name="rev2_narc_image_rom_u36.u36" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u89.u89" map="0001"/><part name="rev2_narc_image_rom_u71.u71" map="0010"/><part name="rev2_narc_image_rom_u53.u53" map="0100"/><part name="rev2_narc_image_rom_u35.u35" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u88.u88" map="0001"/><part name="rev2_narc_image_rom_u70.u70" map="0010"/><part name="rev2_narc_image_rom_u52.u52" map="0100"/><part name="rev2_narc_image_rom_u34.u34" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u87.u87" map="0001"/><part name="rev2_narc_image_rom_u69.u69" map="0010"/><part name="rev2_narc_image_rom_u51.u51" map="0100"/><part name="rev2_narc_image_rom_u33.u33" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u86.u86" map="0001"/><part name="rev2_narc_image_rom_u68.u68" map="0010"/><part name="rev2_narc_image_rom_u50.u50" map="0100"/><part name="rev2_narc_image_rom_u32.u32" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u85.u85" map="0001"/><part name="rev2_narc_image_rom_u67.u67" map="0010"/><part name="rev2_narc_image_rom_u49.u49" map="0100"/><part name="rev2_narc_image_rom_u31.u31" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u84.u84" map="0001"/><part name="rev2_narc_image_rom_u66.u66" map="0010"/><part name="rev2_narc_image_rom_u48.u48" map="0100"/><part name="rev2_narc_image_rom_u30.u30" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u83.u83" map="0001"/><part name="rev2_narc_image_rom_u65.u65" map="0010"/><part name="rev2_narc_image_rom_u47.u47" map="0100"/><part name="rev2_narc_image_rom_u29.u29" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u82.u82" map="0001"/><part name="rev2_narc_image_rom_u64.u64" map="0010"/><part name="rev2_narc_image_rom_u46.u46" map="0100"/><part name="rev2_narc_image_rom_u28.u28" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u81.u81" map="0001"/><part name="rev2_narc_image_rom_u63.u63" map="0010"/><part name="rev2_narc_image_rom_u45.u45" map="0100"/><part name="rev2_narc_image_rom_u27.u27" map="1000"/></interleave>
-        <interleave output="32"><part name="rev2_narc_image_rom_u80.u80" map="0001"/><part name="rev2_narc_image_rom_u62.u62" map="0010"/><part name="rev2_narc_image_rom_u44.u44" map="0100"/><part name="rev2_narc_image_rom_u26.u26" map="1000"/></interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u94.u94" crc="ca3194e4" map="0001"/>
+            <part name="rev2_narc_image_rom_u76.u76" crc="1cd897f4" map="0010"/>
+            <part name="rev2_narc_image_rom_u58.u58" crc="8a7501e3" map="0100"/>
+            <part name="rev2_narc_image_rom_u40.u40" crc="7fcaebc7" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u93.u93" crc="0ed7f7f5" map="0001"/>
+            <part name="rev2_narc_image_rom_u75.u75" crc="78abfa01" map="0010"/>
+            <part name="rev2_narc_image_rom_u57.u57" crc="a504735f" map="0100"/>
+            <part name="rev2_narc_image_rom_u39.u39" crc="7db5cf52" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u92.u92" crc="40d2fc66" map="0001"/>
+            <part name="rev2_narc_image_rom_u74.u74" crc="66d2a234" map="0010"/>
+            <part name="rev2_narc_image_rom_u56.u56" crc="55f8cca7" map="0100"/>
+            <part name="rev2_narc_image_rom_u38.u38" crc="3f9f3ef7" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u91.u91" crc="f39325e0" map="0001"/>
+            <part name="rev2_narc_image_rom_u73.u73" crc="efa5cd4e" map="0010"/>
+            <part name="rev2_narc_image_rom_u55.u55" crc="d3c932c1" map="0100"/>
+            <part name="rev2_narc_image_rom_u37.u37" crc="ed81826c" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u90.u90" crc="0132aefa" map="0001"/>
+            <part name="rev2_narc_image_rom_u72.u72" crc="70638eb5" map="0010"/>
+            <part name="rev2_narc_image_rom_u54.u54" crc="c7f4134b" map="0100"/>
+            <part name="rev2_narc_image_rom_u36.u36" crc="e5d855c0" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u89.u89" crc="f7260c9e" map="0001"/>
+            <part name="rev2_narc_image_rom_u71.u71" crc="61226883" map="0010"/>
+            <part name="rev2_narc_image_rom_u53.u53" crc="6be4da56" map="0100"/>
+            <part name="rev2_narc_image_rom_u35.u35" crc="3a7b1329" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u88.u88" crc="edc19f42" map="0001"/>
+            <part name="rev2_narc_image_rom_u70.u70" crc="c808849f" map="0010"/>
+            <part name="rev2_narc_image_rom_u52.u52" crc="1ea36a4a" map="0100"/>
+            <part name="rev2_narc_image_rom_u34.u34" crc="fe982b0e" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u87.u87" crc="d9b42ff9" map="0001"/>
+            <part name="rev2_narc_image_rom_u69.u69" crc="e7f9c34f" map="0010"/>
+            <part name="rev2_narc_image_rom_u51.u51" crc="9d4b0324" map="0100"/>
+            <part name="rev2_narc_image_rom_u33.u33" crc="6bc7eb0f" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u86.u86" crc="af7daad3" map="0001"/>
+            <part name="rev2_narc_image_rom_u68.u68" crc="88a634d5" map="0010"/>
+            <part name="rev2_narc_image_rom_u50.u50" crc="6f9f0c26" map="0100"/>
+            <part name="rev2_narc_image_rom_u32.u32" crc="5875a6d3" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u85.u85" crc="095fae6b" map="0001"/>
+            <part name="rev2_narc_image_rom_u67.u67" crc="4ab8b69e" map="0010"/>
+            <part name="rev2_narc_image_rom_u49.u49" crc="80386fce" map="0100"/>
+            <part name="rev2_narc_image_rom_u31.u31" crc="2fa4b8e5" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u84.u84" crc="3fdf2057" map="0001"/>
+            <part name="rev2_narc_image_rom_u66.u66" crc="e1da4b25" map="0010"/>
+            <part name="rev2_narc_image_rom_u48.u48" crc="05c16185" map="0100"/>
+            <part name="rev2_narc_image_rom_u30.u30" crc="7e4bb8ee" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u83.u83" crc="f2d27c9f" map="0001"/>
+            <part name="rev2_narc_image_rom_u65.u65" crc="6df0d125" map="0010"/>
+            <part name="rev2_narc_image_rom_u47.u47" crc="4c0151f1" map="0100"/>
+            <part name="rev2_narc_image_rom_u29.u29" crc="45136fd9" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u82.u82" crc="962ce47c" map="0001"/>
+            <part name="rev2_narc_image_rom_u64.u64" crc="abab1b16" map="0010"/>
+            <part name="rev2_narc_image_rom_u46.u46" crc="5670bfcb" map="0100"/>
+            <part name="rev2_narc_image_rom_u28.u28" crc="d6cdac24" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u81.u81" crc="00fe59ec" map="0001"/>
+            <part name="rev2_narc_image_rom_u63.u63" crc="80602f31" map="0010"/>
+            <part name="rev2_narc_image_rom_u45.u45" crc="27f10d98" map="0100"/>
+            <part name="rev2_narc_image_rom_u27.u27" crc="4d33bbec" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="rev2_narc_image_rom_u80.u80" crc="147ba8e9" map="0001"/>
+            <part name="rev2_narc_image_rom_u62.u62" crc="c2a476d1" map="0010"/>
+            <part name="rev2_narc_image_rom_u44.u44" crc="93b8eaa4" map="0100"/>
+            <part name="rev2_narc_image_rom_u26.u26" crc="cb19f784" map="1000"/>
+        </interleave>
         <!-- MAME allocates an 8 MiB zero-filled GFX region; 15 ROM groups populate 3.75 MiB. -->
         <part repeat="0x440000">00</part>
     </rom>
@@ -46,14 +121,20 @@
     <rom index="1" zip="narc.zip" md5="none">
         <!-- Master 6809 region, 0x90000 bytes. -->
         <part repeat="0x50000">00</part>
-        <part name="rev2_narc_sound_rom_u4.u4"/><part name="rev2_narc_sound_rom_u4.u4"/>
-        <part name="rev2_narc_sound_rom_u5.u5"/><part name="rev2_narc_sound_rom_u5.u5"/>
+        <part name="rev2_narc_sound_rom_u4.u4" crc="450a591a"/>
+        <part name="rev2_narc_sound_rom_u4.u4" crc="450a591a"/>
+        <part name="rev2_narc_sound_rom_u5.u5" crc="e551e5e3"/>
+        <part name="rev2_narc_sound_rom_u5.u5" crc="e551e5e3"/>
         <!-- Slave 6809 region, 0x90000 bytes. -->
         <part repeat="0x10000">00</part>
-        <part name="rev2_narc_sound_rom_u35.u35"/><part name="rev2_narc_sound_rom_u35.u35"/>
-        <part name="rev2_narc_sound_rom_u36.u36"/><part name="rev2_narc_sound_rom_u36.u36"/>
-        <part name="rev2_narc_sound_rom_u37.u37"/><part name="rev2_narc_sound_rom_u37.u37"/>
-        <part name="rev2_narc_sound_rom_u38.u38"/><part name="rev2_narc_sound_rom_u38.u38"/>
+        <part name="rev2_narc_sound_rom_u35.u35" crc="81295892"/>
+        <part name="rev2_narc_sound_rom_u35.u35" crc="81295892"/>
+        <part name="rev2_narc_sound_rom_u36.u36" crc="16cdbb13"/>
+        <part name="rev2_narc_sound_rom_u36.u36" crc="16cdbb13"/>
+        <part name="rev2_narc_sound_rom_u37.u37" crc="29dbeffd"/>
+        <part name="rev2_narc_sound_rom_u37.u37" crc="29dbeffd"/>
+        <part name="rev2_narc_sound_rom_u38.u38" crc="09b03b80"/>
+        <part name="rev2_narc_sound_rom_u38.u38" crc="09b03b80"/>
     </rom>
 
     <nvram index="3" size="32768"/>
