@@ -1,0 +1,91 @@
+<misterromdescription>
+  <name>Puzzle Bobble 4 (Ver 2.04O 1997/12/19)</name>
+  <setname>pbobble4</setname>
+  <year>1997</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. Horizontal (MAME ROT0), extend=0. Same 16 MB sample region and 3-bit otisbank mask as Puzzle Bobble 3; see that MRA for the detail. Streams 22.5 MB.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="pbobble4.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e49-12.20" crc="fffea203" map="0001"/>
+      <part name="e49-11.19" crc="bf69a087" map="0010"/>
+      <part name="e49-10.18" crc="0307460b" map="0100"/>
+      <part name="e49-16.17" crc="0a021624" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e49-13.32" crc="83536f7f" map="01"/>
+      <part name="e49-14.33" crc="19815bdb" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e49-02" crc="c7d2f40b" map="01"/>
+      <part name="e49-01" crc="a3dd5f85" map="10"/>
+    </interleave>
+    <!-- pad sprites to 4096 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- sprites_hi: no ROM in this set -->
+    <!-- pad sprites_hi to 2048 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e49-08" crc="87408106" map="0021"/>
+      <part name="e49-07" crc="1e1e8e1c" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 4096 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e49-06" crc="ec85f7ce"/>
+    <!-- pad tilemap_hi to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq -->
+    <!-- ensoniq bank 0 is empty in MAME -->
+    <part repeat="2097152">00</part>
+    <part name="e49-03" crc="f64303e0"/>
+    <part name="e49-04" crc="09be229c"/>
+    <part name="e49-05" crc="5ce90ee2"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x87, index 2 = 0x01
+           visarea 3, extend 0, zone injector off
+           (so it starts on level 1), game id 10.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>87</part>
+  </rom>
+  <rom index="2">
+    <part>01</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shoot,-,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

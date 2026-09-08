@@ -1,0 +1,110 @@
+<misterromdescription>
+  <name>Kaiser Knuckle (Ver 2.1O 1994/07/29)</name>
+  <setname>kaiserkn</setname>
+  <year>1994</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. USES SDRAM MAP PROFILE 1 (index 2 bit [4]), the 42 MB layout, because its sprites do not fit profile 0's 4 MB. Profile 1 gives sprites 13 MB, sprites_hi 7 MB, tilemap 6 MB and tilemap_hi 3 MB. Global Champion outside Japan. THE LARGEST SET IN THE LIBRARY BAR ONE at 36 MB: 13 MB of sprites, 6.5 MB of sprites_hi and 3 MB of tilemap_hi, which is what sized profile 1. Its ensoniq region is 16 MB in MAME, so taito_en's otisbank mask is 7 - three bank bits, like Puzzle Bobble 3/4 - and bank 0 is empty, so it is padded to land the samples on their boundaries. Its bank 1 is empty too, and the third sample ROM sits at bank 7.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="kaiserkn.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="d84-25.20" crc="2840893f" map="0001"/>
+      <part name="d84-24.19" crc="bf20c755" map="0010"/>
+      <part name="d84-23.18" crc="39f12a9b" map="0100"/>
+      <part name="d84-29.17" crc="9821f17a" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="d84-26.32" crc="4f5b8563" map="01"/>
+      <part name="d84-27.33" crc="fb0cb1ba" map="10"/>
+    </interleave>
+    <!-- pad audiocpu to 3072 KB -->
+    <part repeat="2621440">00</part>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="d84-03.rom" crc="d786f552" map="01"/>
+      <part name="d84-04.rom" crc="d1f32b5d" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="d84-06.rom" crc="fa924dab" map="01"/>
+      <part name="d84-07.rom" crc="54517a6b" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="d84-09.rom" crc="faa78d98" map="01"/>
+      <part name="d84-10.rom" crc="b84b7320" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="d84-19.rom" crc="6ddf77e5" map="01"/>
+      <part name="d84-20.rom" crc="f85041e5" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi -->
+    <part name="d84-05.rom" crc="31a3c75d"/>
+    <part name="d84-08.rom" crc="07347bf1"/>
+    <part name="d84-11.rom" crc="a062c1d4"/>
+    <part name="d84-21.rom" crc="89f68b66"/>
+    <!-- pad sprites_hi to 7168 KB -->
+    <part repeat="524288">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="d84-12.rom" crc="66a7a9aa" map="0021"/>
+      <part name="d84-13.rom" crc="ae125516" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="d84-16.rom" crc="bcff9b2d" map="0021"/>
+      <part name="d84-17.rom" crc="0be37cc3" map="2100"/>
+    </interleave>
+
+    <!-- tilemap_hi -->
+    <part name="d84-14.rom" crc="2b2e693e"/>
+    <part name="d84-18.rom" crc="e812bcc5"/>
+
+    <!-- ensoniq -->
+    <!-- ensoniq bank 0 is empty in MAME -->
+    <part repeat="2097152">00</part>
+    <part name="d84-01.rom" crc="9ad22149"/>
+    <part name="d84-02.rom" crc="9e1827e4"/>
+    <!-- 1 MB hole before the last sample ROM (MAME 0xC00000-0xDFFFFF) -->
+    <part repeat="1048576">00</part>
+    <part name="d84-15.rom" crc="31ceb152"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x84, index 2 = 0x14
+           visarea 0, extend 0, zone injector off
+           (so it starts on level 1), game id 34.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>84</part>
+  </rom>
+  <rom index="2">
+    <part>14</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Punch,Kick,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

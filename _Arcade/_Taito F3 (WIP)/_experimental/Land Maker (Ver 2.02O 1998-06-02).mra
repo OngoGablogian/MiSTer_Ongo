@@ -1,0 +1,84 @@
+<misterromdescription>
+  <name>Land Maker (Ver 2.02O 1998/06/02)</name>
+  <setname>landmakr</setname>
+  <year>1998</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. Horizontal (MAME ROT0). It fits PROFILE 0 - it was listed as blocked on ensoniq, and stopped being so when that region grew 4 MB to 8 MB for Puzzle Bobble 3/4. Its region is 16 MB in MAME, so the otisbank mask is 7 and it needs three bank bits, like those two. Banks 1-3 hold the samples and bank 0 is empty, so the hole is padded.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="landmakr.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e61-19.20" crc="f92eccd0" map="0001"/>
+      <part name="e61-18.19" crc="5a26c9e0" map="0010"/>
+      <part name="e61-17.18" crc="710776a8" map="0100"/>
+      <part name="e61-16.17" crc="b073cda9" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e61-14.32" crc="18961bbb" map="01"/>
+      <part name="e61-15.33" crc="2c64557a" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e61-03.12" crc="e8abfc46" map="01"/>
+      <part name="e61-02.08" crc="1dc4a164" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi -->
+    <part name="e61-01.04" crc="6cdd8311"/>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e61-09.47" crc="6ba29987" map="0021"/>
+      <part name="e61-08.45" crc="76c98e14" map="2100"/>
+    </interleave>
+
+    <!-- tilemap_hi -->
+    <part name="e61-07.43" crc="4a57965d"/>
+
+    <!-- ensoniq -->
+    <!-- ensoniq bank 0 is empty in MAME -->
+    <part repeat="2097152">00</part>
+    <part name="e61-04.38" crc="c27aec0c"/>
+    <part name="e61-05.39" crc="83920d9d"/>
+    <part name="e61-06.40" crc="2e717bfe"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0xE3, index 2 = 0x02
+           visarea 3, extend 1, zone injector off
+           (so it starts on level 1), game id 23.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>E3</part>
+  </rom>
+  <rom index="2">
+    <part>02</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

@@ -1,0 +1,118 @@
+<misterromdescription>
+  <name>Bubble Memories: The Story Of Bubble Bobble III (Ver 2.4O 1996/02/15)</name>
+  <setname>bubblem</setname>
+  <year>1995</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       UNTESTED. The ROM set has never been loaded by this core and
+       none of the self-test expectations for it are measured, so the
+       checksum rows report what they find rather than pass or fail.
+       See PREP-BUBBLE.md for what must be measured first.
+
+       Taito F3, the same board Ray Force runs on. Like Bubble Bobble
+       II this set uses f3_224a - 224 lines from line 31, exactly Ray
+       Force's crop - and extend 1, which the renderer is hardwired
+       to. It is HORIZONTAL (MAME ROT0): set Rotate to None.
+       MAME's sprite lag is 1, not Ray Force's 2.
+
+       THE ONE STRUCTURAL DIFFERENCE FROM EVERY SET THE CORE HAS RUN:
+       this game has NO sprites_hi ROM. MAME declares the region with
+       EMPTY_SPRITE_HIDATA(0x200000), i.e. 2 MB of zeros, so its
+       sprites are effectively 4bpp where every other set is 6bpp.
+       That looked like the risk in this set and it is NOT: with that
+       region all zeros, the reference model renders frames 900, 1200
+       and 1800 of this game pixel-identical to MAME. The 4bpp path
+       is correct. See PREP-BUBBLE.md for the gap that IS open (a
+       sprite block/multi case, in the model, affecting both games).
+
+       Sizes: this set FILLS maincpu (2 MB) and sprites (4 MB)
+       exactly, where Ray Force pads both to half. Any future set
+       larger than these needs the universal map extended.
+
+       The universal F3 SDRAM map:
+
+         0x0000000  maincpu    2 MB   4-way byte interleave (exact)
+         0x0200000  audiocpu 512 KB   16-bit interleave (68000)
+         0x0280000  sprites    4 MB   16-bit interleave (exact)
+         0x0680000  sprites_hi 2 MB   ZEROS - no ROM in this set
+         0x0880000  tilemap    4 MB   LOAD32_WORD pair (2 MB + pad)
+         0x0C80000  tilemap_hi 2 MB   (1 MB + pad)
+         0x0E80000  ensoniq    4 MB   2x 2 MB, plain
+         0x1280000             = 18.5 MB total
+       ============================================================ -->
+  <rom index="0" zip="bubblem.zip" md5="None">
+
+    <!-- maincpu: ROM_LOAD32_BYTE x4, 512 KB each - fills 2 MB -->
+    <interleave output="32">
+      <part name="e21-21.20" crc="cac4169c" map="0001"/>
+      <part name="e21-20.19" crc="7727c673" map="0010"/>
+      <part name="e21-19.18" crc="be0b907d" map="0100"/>
+      <part name="e21-18.17" crc="d14e313a" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu 68000: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="e21-12.32" crc="34093de1" map="01"/>
+      <part name="e21-13.33" crc="9e9ec437" map="10"/>
+    </interleave>
+
+    <!-- sprites: ROM_LOAD16_BYTE pair, 2 MB each - fills 4 MB -->
+    <interleave output="16">
+      <part name="e21-02.rom" crc="b7cb9232" map="01"/>
+      <part name="e21-01.rom" crc="a11f2f99" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi: THIS SET HAS NONE. MAME's EMPTY_SPRITE_HIDATA
+         is an ERASE00 region, so the slot is 2 MB of zeros. -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap: ROM_LOAD32_WORD pair -->
+    <interleave output="32">
+      <part name="e21-07.rom" crc="7789bf7c" map="0021"/>
+      <part name="e21-06.rom" crc="997fc0d7" map="2100"/>
+    </interleave>
+
+    <!-- pad: tilemap 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e21-05.rom" crc="07eab58f"/>
+
+    <!-- pad: tilemap_hi 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq sample ROMs, plain (MAME 0x000000 and 0x400000;
+         the lane spread is the core's job) -->
+    <part name="e21-03.rom" crc="54c5f83d"/>
+    <part name="e21-04.rom" crc="e5af2a2d"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         bit [1:0] = 0  visarea f3_224a (224 lines from 31), as Ray Force
+         bit [7:6] = 3  game id: expectations for this set are not
+                        measured yet. NOTE that this is the LAST id the
+                        field can hold - cfg_game is 2 bits, and
+                        0/1/2/3 are Ray Force, Elevator Action Returns,
+                        Bubble Bobble II and this. A fifth game needs
+                        the field widened in Rayforce.sv.
+         bits [2] and [4:3] (extend, sprite lag) are reserved and not
+         read; left 0 as in the other MRAs. True values: extend 1,
+         lag 1. -->
+  <rom index="1">
+    <part>C0</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, plus the 128-byte high
+       score snapshot = 256. MAME ships a default EEPROM for this set
+       (bubblem.nv, crc 9a59326e) which this MRA does NOT supply; the
+       first boot writes its own defaults instead. -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Jump,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

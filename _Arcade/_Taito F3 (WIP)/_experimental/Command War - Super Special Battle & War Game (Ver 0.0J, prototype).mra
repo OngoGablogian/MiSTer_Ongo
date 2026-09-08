@@ -1,0 +1,104 @@
+<misterromdescription>
+  <name>Command War - Super Special Battle &amp; War Game (Ver 0.0J, prototype)</name>
+  <setname>commandw</setname>
+  <year>1992</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. USES SDRAM MAP PROFILE 1 (index 2 bit [4]), the 42 MB layout, because its sprites do not fit profile 0's 4 MB. Profile 1 gives sprites 13 MB, sprites_hi 7 MB, tilemap 6 MB and tilemap_hi 3 MB. Horizontal (MAME ROT0), visarea f3_224b. A PROTOTYPE. Its sound ROM is half size and is streamed TWICE, because taito_en maps a 0x140000 region as set_entry(i % 2) = 0,1,0 and this core maps that window linearly; zero padding would put silence where the game expects code.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="commandw.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="cw_mpr3.bin" crc="636944fc" map="0001"/>
+      <part name="cw_mpr2.bin" crc="1151a42b" map="0010"/>
+      <part name="cw_mpr1.bin" crc="93669389" map="0100"/>
+      <part name="cw_mpr0.bin" crc="0468df52" map="1000"/>
+    </interleave>
+    <!-- pad maincpu to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="cw_spr1.bin" crc="c8f81c25" map="01"/>
+      <part name="cw_spr0.bin" crc="2aaa9dfb" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="cw_spr1.bin" crc="c8f81c25" map="01"/>
+      <part name="cw_spr0.bin" crc="2aaa9dfb" map="10"/>
+    </interleave>
+    <!-- pad audiocpu to 3072 KB -->
+    <part repeat="2621440">00</part>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="cw_objl0.bin" crc="9822102e" map="01"/>
+      <part name="cw_objm0.bin" crc="f7687684" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="cw_objl1.bin" crc="ca3ad7f6" map="01"/>
+      <part name="cw_objm1.bin" crc="504b1bf5" map="10"/>
+    </interleave>
+    <!-- pad sprites to 13312 KB -->
+    <part repeat="5242880">00</part>
+
+    <!-- sprites_hi -->
+    <part name="cw_objh0.bin" crc="83d7e0ae"/>
+    <part name="cw_objh1.bin" crc="324f5832"/>
+    <!-- pad sprites_hi to 7168 KB -->
+    <part repeat="3145728">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="cw_scr_l.bin" crc="4d202323" map="0021"/>
+      <part name="cw_scr_m.bin" crc="537b1c7d" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 6144 KB -->
+    <part repeat="4194304">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="cw_scr_h.bin" crc="001f85dd"/>
+    <!-- pad tilemap_hi to 3072 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- ensoniq -->
+    <part name="cw_pcm_0.bin" crc="a1e26629"/>
+    <part name="cw_pcm_1.bin" crc="39fc6cf4"/>
+    <!-- pad ensoniq to 8192 KB -->
+    <part repeat="4194304">00</part>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x61, index 2 = 0x13
+           visarea 1, extend 1, zone injector off
+           (so it starts on level 1), game id 29.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>61</part>
+  </rom>
+  <rom index="2">
+    <part>13</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

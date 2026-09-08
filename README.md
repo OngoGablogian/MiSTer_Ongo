@@ -99,6 +99,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                       |
 | [Taito Air System](https://github.com/retrogarage/tas-mister)                                                                  |
 | [Taito B System](https://github.com/Mezzow/Arcade-TaitoB_MiSTer)                                                               |
+| [Taito F3 (WIP)](https://github.com/spacestate1/Arcade-taitoF3_MiSTer)                                                         |
 | [Taito FX-1B “Taito Zoom”](https://github.com/XelaNotPu/ZN1-TaitoFX1B_MiSTer)                                                  |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |

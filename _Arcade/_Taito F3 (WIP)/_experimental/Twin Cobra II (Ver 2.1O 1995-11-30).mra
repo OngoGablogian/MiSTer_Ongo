@@ -1,0 +1,103 @@
+<misterromdescription>
+  <name>Twin Cobra II (Ver 2.1O 1995/11/30)</name>
+  <setname>tcobra2</setname>
+  <year>1995</year>
+  <manufacturer>Takumi / Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>vertical</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. USES SDRAM MAP PROFILE 1 (index 2 bit [4]), the 42 MB layout, because its sprites do not fit profile 0's 4 MB. Profile 1 gives sprites 13 MB, sprites_hi 7 MB, tilemap 6 MB and tilemap_hi 3 MB. A VERTICAL game (MAME ROT270), so Rotate CW or CCW in the OSD - the only one of the fourteen that is. Kyukyoku Tiger II in Japan. It has NEITHER sprites_hi NOR tilemap_hi. Its sound ROM is half size and is streamed TWICE, because taito_en maps a 0x140000 region as set_entry(i % 2) = 0,1,0 and this core maps that window linearly; zero padding would put silence where the game expects code.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="tcobra2.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e15-14.ic20" crc="b527b733" map="0001"/>
+      <part name="e15-13.ic19" crc="0f03daf7" map="0010"/>
+      <part name="e15-12.ic18" crc="59d832f2" map="0100"/>
+      <part name="e15-18.ic17" crc="4908c3aa" map="1000"/>
+    </interleave>
+    <!-- pad maincpu to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e15-15.ic32" crc="22126dfb" map="01"/>
+      <part name="e15-16.ic33" crc="f8b58ea0" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="e15-15.ic32" crc="22126dfb" map="01"/>
+      <part name="e15-16.ic33" crc="f8b58ea0" map="10"/>
+    </interleave>
+    <!-- pad audiocpu to 3072 KB -->
+    <part repeat="2621440">00</part>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e15-04.ic12" crc="6ea8d9bd" map="01"/>
+      <part name="e15-02.ic8" crc="bf1232aa" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="e15-03.ic11" crc="be45a52f" map="01"/>
+      <part name="e15-01.ic7" crc="85421aac" map="10"/>
+    </interleave>
+    <!-- pad sprites to 13312 KB -->
+    <part repeat="7340032">00</part>
+
+    <!-- sprites_hi: no ROM in this set -->
+    <!-- pad sprites_hi to 7168 KB -->
+    <part repeat="7340032">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e15-10.ic47" crc="d8c96b00" map="0021"/>
+      <part name="e15-08.ic45" crc="4bdb2bf3" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="e15-09.ic46" crc="07c29f60" map="0021"/>
+      <part name="e15-07.ic44" crc="8164f7ee" map="2100"/>
+    </interleave>
+
+    <!-- tilemap_hi: no ROM in this set -->
+    <!-- pad tilemap_hi to 3072 KB -->
+    <part repeat="3145728">00</part>
+
+    <!-- ensoniq -->
+    <part name="e15-05.ic38" crc="3e5da5f6"/>
+    <part name="e15-06.ic41" crc="b182a3e1"/>
+    <!-- pad ensoniq to 8192 KB -->
+    <part repeat="4194304">00</part>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x07, index 2 = 0x14
+           visarea 3, extend 0, zone injector off
+           (so it starts on level 1), game id 32.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>07</part>
+  </rom>
+  <rom index="2">
+    <part>14</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

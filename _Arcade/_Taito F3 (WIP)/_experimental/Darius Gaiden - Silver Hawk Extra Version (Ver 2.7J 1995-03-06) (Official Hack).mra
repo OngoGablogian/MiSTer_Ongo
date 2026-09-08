@@ -1,0 +1,81 @@
+<misterromdescription>
+  <name>Darius Gaiden - Silver Hawk Extra Version (Ver 2.7J 1995/03/06) (Official Hack)</name>
+  <setname>dariusgx</setname>
+  <year>1994</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. The Extra Version of Darius Gaiden, which already runs here. Horizontal (MAME ROT0), extend=0. Like the parent it uses the pixel (pivot) layer, which this core only MIRRORS as an 8 KB window, so expect the same rendering gap the parent has.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="dariusgx.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="dge_mpr3.bin" crc="1c1e24a7" map="0001"/>
+      <part name="dge_mpr2.bin" crc="7be23e23" map="0010"/>
+      <part name="dge_mpr1.bin" crc="bc030f6f" map="0100"/>
+      <part name="dge_mpr0.bin" crc="c5bd135c" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="d87-13.bin" crc="15b1fff4" map="01"/>
+      <part name="d87-14.bin" crc="eecda29a" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="d87-03.bin" crc="4be1666e" map="01"/>
+      <part name="d87-04.bin" crc="2616002c" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi -->
+    <part name="d87-05.bin" crc="4e5891a9"/>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="d87-06.bin" crc="3b97a07c" map="0021"/>
+      <part name="d87-17.bin" crc="e601d63e" map="2100"/>
+    </interleave>
+
+    <!-- tilemap_hi -->
+    <part name="d87-08.bin" crc="76d23602"/>
+
+    <!-- ensoniq -->
+    <part name="d87-01.bin" crc="3848a110"/>
+    <part name="d87-02.bin" crc="9250abae"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0xC7, index 2 = 0x02
+           visarea 3, extend 0, zone injector off
+           (so it starts on level 1), game id 19.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>C7</part>
+  </rom>
+  <rom index="2">
+    <part>02</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

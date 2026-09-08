@@ -1,0 +1,123 @@
+<misterromdescription>
+  <name>Puzzle Bobble 2 (Ver 2.2J 1995/07/20)</name>
+  <setname>pbobble2j</setname>
+  <year>1995</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>Japan</region>
+
+  <!-- ============================================================
+       UNTESTED, AND EXPECTED TO RENDER WRONG. Read this before
+       filing a bug against it.
+
+       This game is extend=0 (512x512 playfields). The renderer is
+       HARDWIRED to extend=1 (1024x512), so the tilemap stride is
+       wrong for this set and the backgrounds should come out
+       scrambled while the sprites look about right. That is the
+       expected result, not a defect in this MRA. It is here to
+       show exactly what extend=0 costs, because implementing it
+       unlocks the most games of any single change: all three
+       Puzzle Bobbles plus Darius Gaiden, Cleopatra Fortune, Grid
+       Seeker, Space Invaders '95 and Gekirindan.
+
+       WHY THE JAPANESE SET AND NOT THE PARENT: MAME's parent
+       pbobble2 (Ver 2.3O) runs init_pbobbl2p, which PATCHES the
+       program ROM at 0x40090/0x40094, NOPping a branch its own
+       comment calls "protection check?? or some kind of checksum
+       fail?" that otherwise crashes the game. No such patch can
+       exist here, and real hardware presumably ran the ROM as
+       dumped. pbobble2j (Ver 2.2J) uses init_pbobble2, which
+       patches nothing, so it is the honest target. If the parent
+       is ever wanted, it needs that question answered first.
+
+       Sizes fit the universal map with room to spare; this set has
+       NO sprites_hi (EMPTY_SPRITE_HIDATA, so 4bpp sprites like
+       Bubble Memories) but DOES have tilemap_hi.
+
+         0x0000000  maincpu    2 MB   4-way byte interleave (1 MB + pad)
+         0x0200000  audiocpu 512 KB   16-bit interleave (68000)
+         0x0280000  sprites    4 MB   16-bit interleave (2 MB + pad)
+         0x0680000  sprites_hi 2 MB   ZEROS - no ROM in this set
+         0x0880000  tilemap    4 MB   LOAD32_WORD pair (2 MB + pad)
+         0x0C80000  tilemap_hi 2 MB   (1 MB + pad)
+         0x0E80000  ensoniq    4 MB   2x 2 MB, plain
+         0x1280000             = 18.5 MB total
+       ============================================================ -->
+  <rom index="0" zip="pbobble2j.zip|pbobble2.zip" md5="None">
+
+    <!-- maincpu: ROM_LOAD32_BYTE x4 -->
+    <interleave output="32">
+      <part name="e10-11.20" crc="b82f81da" map="0001"/>
+      <part name="e10-10.19" crc="f432267a" map="0010"/>
+      <part name="e10-09.18" crc="e0b1b599" map="0100"/>
+      <part name="e10-08.17" crc="4ccec344" map="1000"/>
+    </interleave>
+
+    <!-- pad: maincpu 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu 68000: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="e10-12.32" crc="b92dc8ad" map="01"/>
+      <part name="e10-13.33" crc="87842c13" map="10"/>
+    </interleave>
+
+    <!-- sprites: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="e10-02.rom" crc="c0564490" map="01"/>
+      <part name="e10-01.rom" crc="8c26ff49" map="10"/>
+    </interleave>
+
+    <!-- pad: sprites 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- sprites_hi: none in this set (EMPTY_SPRITE_HIDATA) -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap: ROM_LOAD32_WORD pair -->
+    <interleave output="32">
+      <part name="e10-07.rom" crc="dcb3c29b" map="0021"/>
+      <part name="e10-06.rom" crc="1b0f20e2" map="2100"/>
+    </interleave>
+
+    <!-- pad: tilemap 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e10-05.rom" crc="81266151"/>
+
+    <!-- pad: tilemap_hi 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq sample ROMs, plain (MAME 0x000000 and 0x400000) -->
+    <part name="e10-04.rom" crc="5c0862a6"/>
+    <part name="e10-03.rom" crc="46d68ac8"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         bit [1:0] = 3  visarea f3 (232 lines from line 24), as EAR
+         bit [5], [7:6] = id 5. The game id is {bit 5, bits 7:6} since the
+                        field was widened past four games. This set used to
+                        sit on id 2, which is Bubble Bobble II's, and would
+                        have been judged against that game's checksums the
+                        moment those arms came back. It now has its own id
+                        and its own title row. No expectations are measured
+                        for it yet, so id 5 lands on the case default and the
+                        checksum rows REPORT what they find.
+         bit [2] = 1 asks for NON-extend (eight 32x32 playfields), which is
+                        what this game is. Note the inverted sense against
+                        MAME's "extend" naming: every MRA written before this
+                        bit went live carries 0 there and every one of those
+                        games is extend=1, so 0 has to keep meaning extend=1.
+                        0x67 = game id 5, visarea f3, non-extend. -->
+  <rom index="1">
+    <part>67</part>
+  </rom>
+
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,-,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

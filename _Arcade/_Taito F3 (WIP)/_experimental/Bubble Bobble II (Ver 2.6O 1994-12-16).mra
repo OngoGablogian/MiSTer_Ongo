@@ -1,0 +1,134 @@
+<misterromdescription>
+  <name>Bubble Bobble II (Ver 2.6O 1994/12/16)</name>
+  <setname>bublbob2</setname>
+  <year>1994</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       UNTESTED. The ROM set has never been loaded by this core and
+       none of the self-test expectations for it are measured, so the
+       checksum rows report what they find rather than pass or fail.
+       See PREP-BUBBLE.md for what must be measured before this set
+       can be called supported.
+
+       Taito F3, the same board Ray Force runs on. What this set
+       shares with Ray Force, which is more than Elevator Action
+       Returns does:
+
+         - the SAME visible raster: MAME runs it on f3_224a, 224
+           lines from line 31, exactly Ray Force's crop
+         - the same playfield "extend" bit (1), which the renderer
+           is hardwired to
+         - the same universal SDRAM map and the SAME padding: this
+           set is Ray Force's size in every region
+
+       What differs:
+
+         - it is a HORIZONTAL game (MAME ROT0), so set Rotate to
+           None in the OSD
+         - MAME's f3_config_table declares sprite lag 1, not Ray
+           Force's 2. MEASURED, THAT TABLE VALUE DOES NOT DESCRIBE
+           THE DUMP PIPELINE: comparing the model against MAME's own
+           frames, depth 2 wins decisively over depth 1 (two frames
+           pixel-identical, the rest under 1.3%, where depth 1 is off
+           by 6-84%). So the existing lag-2 tooling is correct for
+           this game as it stands. Do not "fix" the lag.
+
+       The universal F3 SDRAM map:
+
+         0x0000000  maincpu    2 MB   4-way byte interleave (1 MB + pad)
+         0x0200000  audiocpu 512 KB   16-bit interleave (68000)
+         0x0280000  sprites    4 MB   16-bit interleave (2 MB + pad)
+         0x0680000  sprites_hi 2 MB   (1 MB + pad)
+         0x0880000  tilemap    4 MB   LOAD32_WORD pair (2 MB + pad)
+         0x0C80000  tilemap_hi 2 MB   (1 MB + pad)
+         0x0E80000  ensoniq    4 MB   2x 2 MB, plain
+         0x1280000             = 18.5 MB total
+
+       The zip is the parent bublbob2 set (Ver 2.6O). The Bubble
+       Symphony sets (bubsymphe/u/j) are clones that differ only in
+       the four program ROMs; a separate MRA can select them by CRC.
+       ============================================================ -->
+  <rom index="0" zip="bublbob2.zip" md5="None">
+
+    <!-- maincpu: ROM_LOAD32_BYTE x4 -->
+    <interleave output="32">
+      <part name="d90-21.ic20" crc="2a2b771a" map="0001"/>
+      <part name="d90-20.ic19" crc="f01f63b6" map="0010"/>
+      <part name="d90-19.ic18" crc="86eef19a" map="0100"/>
+      <part name="d90-18.ic17" crc="f5b8cdce" map="1000"/>
+    </interleave>
+
+    <!-- pad: maincpu 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu 68000: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="d90-13.ic32" crc="6762bd90" map="01"/>
+      <part name="d90-14.ic33" crc="8e33357e" map="10"/>
+    </interleave>
+
+    <!-- sprites: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="d90-03" crc="6fa894a1" map="01"/>
+      <part name="d90-02" crc="5ab04ca2" map="10"/>
+    </interleave>
+
+    <!-- pad: sprites 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- sprites_hi -->
+    <part name="d90-01" crc="8aedb9e5"/>
+
+    <!-- pad: sprites_hi 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- tilemap: ROM_LOAD32_WORD pair -->
+    <interleave output="32">
+      <part name="d90-08" crc="25a4fb2c" map="0021"/>
+      <part name="d90-07" crc="b436b42d" map="2100"/>
+    </interleave>
+
+    <!-- pad: tilemap 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="d90-06" crc="166a72b8"/>
+
+    <!-- pad: tilemap_hi 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq sample ROMs, plain (MAME 0x000000 and 0x400000;
+         the lane spread is the core's job) -->
+    <part name="d90-04" crc="feee5fda"/>
+    <part name="d90-05" crc="c192331f"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         bit [1:0] = 0  visarea f3_224a (224 lines from 31) - same as
+                        Ray Force, so this field is Ray Force's value
+         bit [7:6] = 2  game id: expectations for this set are not
+                        measured yet, so the ROM-checksum rows of the
+                        self-test report what they find instead of
+                        failing against another game's numbers.
+                        Rayforce.sv must gain a 2'd2 case before this
+                        byte means anything.
+         bits [2] and [4:3] (extend, sprite lag) are reserved and not
+         read; left 0 as in the other MRAs. The true values for this
+         game are extend 1 and lag 1. -->
+  <rom index="1">
+    <part>80</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, plus the 128-byte high
+       score snapshot = 256. No default EEPROM exists in MAME for
+       this set, so the first boot writes its own. -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Jump,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

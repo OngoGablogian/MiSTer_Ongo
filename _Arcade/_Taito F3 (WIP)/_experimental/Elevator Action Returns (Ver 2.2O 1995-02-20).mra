@@ -1,0 +1,90 @@
+<misterromdescription>
+  <name>Elevator Action Returns (Ver 2.2O 1995/02/20)</name>
+  <setname>elvactr</setname>
+  <year>1994</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       Taito F3, the same board Ray Force runs on. What differs is
+       data, not silicon:
+
+         - the visible raster is the base f3 one, 232 lines from
+           line 24, where Ray Force uses f3_224a's 224 from 31
+         - twice the graphics ROM
+         - it is a HORIZONTAL game (MAME ROT0), so set Rotate to
+           None in the OSD
+
+       and what does NOT differ: the playfield "extend" bit (1 for
+       both), the sprite lag (2 for both), sprite trails (neither
+       game sets them), and the whole Taito EN sound board.
+
+       The universal F3 SDRAM map, which this set fills exactly:
+
+         0x0000000  maincpu    2 MB   4-way byte interleave
+         0x0200000  audiocpu 512 KB   16-bit interleave (68000)
+         0x0280000  sprites    4 MB   16-bit interleave
+         0x0680000  sprites_hi 2 MB
+         0x0880000  tilemap    4 MB   LOAD32_WORD pair
+         0x0C80000  tilemap_hi 2 MB
+         0x0E80000  ensoniq    4 MB   2x 2 MB, plain
+         0x1280000             = 18.5 MB total
+       ============================================================ -->
+  <rom index="0" zip="elvactr.zip" md5="None">
+
+    <!-- maincpu: ROM_LOAD32_BYTE x4 -->
+    <interleave output="32">
+      <part name="e02-12.20" crc="ea5f5a32" map="0001"/>
+      <part name="e02-11.19" crc="bcced8ff" map="0010"/>
+      <part name="e02-10.18" crc="72f1b952" map="0100"/>
+      <part name="e02-16.17" crc="cd97182b" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu 68000: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="e02-13.32" crc="80932702" map="01"/>
+      <part name="e02-14.33" crc="706671a5" map="10"/>
+    </interleave>
+
+    <!-- sprites: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="e02-03.12" crc="c884ebb5" map="01"/>
+      <part name="e02-02.8"  crc="c8e06cfb" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi -->
+    <part name="e02-01.4" crc="2ba94726"/>
+
+    <!-- tilemap: ROM_LOAD32_WORD pair -->
+    <interleave output="32">
+      <part name="e02-08.47" crc="29c9bd02" map="0021"/>
+      <part name="e02-07.45" crc="5eeee925" map="2100"/>
+    </interleave>
+
+    <!-- tilemap_hi -->
+    <part name="e02-06.43" crc="4c8726e9"/>
+
+    <!-- ensoniq sample ROMs, plain -->
+    <part name="e02-04.38" crc="b74307af"/>
+    <part name="e02-05.39" crc="eb729855"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         bit [1:0] = 3  visarea f3 (232 lines from line 24)
+         bit [7:6] = 1  game id: expectations for this set are not
+                        measured yet, so the ROM-checksum rows of the
+                        self-test report what they find instead of
+                        failing against Ray Force's numbers -->
+  <rom index="1">
+    <part>43</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Jump,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

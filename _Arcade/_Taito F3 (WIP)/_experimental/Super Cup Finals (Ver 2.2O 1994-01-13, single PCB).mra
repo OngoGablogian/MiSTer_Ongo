@@ -1,0 +1,106 @@
+<misterromdescription>
+  <name>Super Cup Finals (Ver 2.2O 1994/01/13, single PCB)</name>
+  <setname>scfinals</setname>
+  <year>1993</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. USES SDRAM MAP PROFILE 1 (index 2 bit [4]), the 42 MB layout, because its sprites do not fit profile 0's 4 MB. Profile 1 gives sprites 13 MB, sprites_hi 7 MB, tilemap 6 MB and tilemap_hi 3 MB. Horizontal (MAME ROT0). Shares Taito Cup Finals' graphics and samples. Its sound ROM is half size and is streamed TWICE, because taito_en maps a 0x140000 region as set_entry(i % 2) = 0,1,0 and this core maps that window linearly; zero padding would put silence where the game expects code. Its ensoniq banks are sparse: the first ROM fills banks 0 and 1, bank 2 is empty, and the second sits in bank 3 (MAME offset 0x600000), so the hole is padded to land bank 3 on its boundary.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="scfinals.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="d68-09.ic40" crc="28193b3f" map="0001"/>
+      <part name="d68-10.ic38" crc="67481bad" map="0010"/>
+      <part name="d68-11.ic36" crc="d456c124" map="0100"/>
+      <part name="d68-12.ic34" crc="dec41397" map="1000"/>
+    </interleave>
+    <!-- pad maincpu to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="d49-17.ic5" crc="f2058eba" map="01"/>
+      <part name="d49-18.ic6" crc="a0fdd270" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="d49-17.ic5" crc="f2058eba" map="01"/>
+      <part name="d49-18.ic6" crc="a0fdd270" map="10"/>
+    </interleave>
+    <!-- pad audiocpu to 3072 KB -->
+    <part repeat="2621440">00</part>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="d49-01.12" crc="1dc89f1c" map="01"/>
+      <part name="d49-02.8" crc="1e4c374f" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="d49-06.11" crc="71ef4ee1" map="01"/>
+      <part name="d49-07.7" crc="e5655b8f" map="10"/>
+    </interleave>
+    <!-- pad sprites to 13312 KB -->
+    <part repeat="7340032">00</part>
+
+    <!-- sprites_hi -->
+    <part name="d49-03.4" crc="cf9a8727"/>
+    <part name="d49-08.3" crc="7d3c6536"/>
+    <!-- pad sprites_hi to 7168 KB -->
+    <part repeat="4194304">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="d49-09.47" crc="257ede01" map="0021"/>
+      <part name="d49-10.45" crc="f587b787" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 6144 KB -->
+    <part repeat="5242880">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="d49-11.43" crc="11318b26"/>
+    <!-- pad tilemap_hi to 3072 KB -->
+    <part repeat="2621440">00</part>
+
+    <!-- ensoniq -->
+    <part name="d49-04.38" crc="44b365a9"/>
+    <!-- ensoniq bank 2 is empty in MAME -->
+    <part repeat="1048576">00</part>
+    <part name="d49-05.41" crc="ed894fe1"/>
+    <!-- pad ensoniq to 8192 KB -->
+    <part repeat="4194304">00</part>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x83, index 2 = 0x13
+           visarea 3, extend 1, zone injector off
+           (so it starts on level 1), game id 26.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>83</part>
+  </rom>
+  <rom index="2">
+    <part>13</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shoot,Pass,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

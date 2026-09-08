@@ -1,0 +1,83 @@
+<misterromdescription>
+  <name>Quiz Theater - 3tsu no Monogatari (Ver 2.3J 1994/11/10)</name>
+  <setname>qtheater</setname>
+  <year>1994</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. Horizontal (MAME ROT0). This is the ONLY set here using visarea f3_224c (224 lines from line 24); the core implements all four crops.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="qtheater.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="d95-12.20" crc="fcee76ee" map="0001"/>
+      <part name="d95-11.19" crc="b3c2b8d5" map="0010"/>
+      <part name="d95-10.18" crc="85236e40" map="0100"/>
+      <part name="d95-09.17" crc="f456519c" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="d95-07.32" crc="3c201d70" map="01"/>
+      <part name="d95-08.33" crc="01c23354" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="d95-02.12" crc="74ce6f3e" map="01"/>
+      <part name="d95-01.8" crc="141beb7d" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi: no ROM in this set -->
+    <!-- pad sprites_hi to 2048 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="d95-06.47" crc="70a0dcbb" map="0021"/>
+      <part name="d95-05.45" crc="1a1a852b" map="2100"/>
+    </interleave>
+
+    <!-- tilemap_hi: no ROM in this set -->
+    <!-- pad tilemap_hi to 2048 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- ensoniq -->
+    <part name="d95-03.38" crc="4149ea67"/>
+    <part name="d95-04.41" crc="e9049d16"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x02, index 2 = 0x02
+           visarea 2, extend 1, zone injector off
+           (so it starts on level 1), game id 16.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>02</part>
+  </rom>
+  <rom index="2">
+    <part>02</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

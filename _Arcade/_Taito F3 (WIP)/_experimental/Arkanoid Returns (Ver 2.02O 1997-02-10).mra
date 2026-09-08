@@ -1,0 +1,131 @@
+<misterromdescription>
+  <name>Arkanoid Returns (Ver 2.02O 1997/02/10)</name>
+  <setname>arkretrn</setname>
+  <year>1997</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. This is the
+       SMALLEST set in the whole F3 library - 5.75 MB of real ROM
+       against an 18.5 MB map - and every parameter it needs is one
+       the core has already proven on another game:
+
+         - visarea f3 (232 lines from 24), same as Elevator Action
+           Returns
+         - extend = 1, same as Ray Force
+         - sprite lag 1 in MAME's table; the engine is structurally
+           lag 2, which is what Bubble Bobble II and Puzzle Bobble 2
+           already run with
+         - horizontal (MAME ROT0), so set Rotate to None in the OSD
+
+       So no RTL change was needed: an MRA and a config byte, which
+       is what the universal map and the game-config byte are for.
+
+       Its ensoniq region is 0x400000 in MAME ("only 1 populated"),
+       which makes MAME's otisbank mask 1 - ONE bank bit, where the
+       core always uses two. A voice asking for bank 2 or 3 reads the
+       padding rather than wrapping to bank 0 as the real board would,
+       so if a sound is MISSING rather than wrong, that is the first
+       place to look. It cannot corrupt anything: the padding is zeros.
+
+       The universal F3 SDRAM map, and where this set pads:
+
+         0x0000000  maincpu    2 MB   4x 256 KB + 1 MB pad
+         0x0200000  audiocpu 512 KB   16-bit interleave (exact)
+         0x0280000  sprites    4 MB   512 KB + 3.5 MB pad
+         0x0680000  sprites_hi 2 MB   256 KB + 1.75 MB pad
+         0x0880000  tilemap    4 MB   1 MB + 3 MB pad
+         0x0C80000  tilemap_hi 2 MB   512 KB + 1.5 MB pad
+         0x0E80000  ensoniq    4 MB   2 MB + 2 MB pad
+         0x1280000             = 18.5 MB total
+       ============================================================ -->
+  <rom index="0" zip="arkretrn.zip" md5="None">
+
+    <!-- maincpu: ROM_LOAD32_BYTE x4 -->
+    <interleave output="32">
+      <part name="e36-11.20" crc="b50cfb92" map="0001"/>
+      <part name="e36-10.19" crc="c940dba1" map="0010"/>
+      <part name="e36-09.18" crc="f16985e0" map="0100"/>
+      <part name="e36-15.17" crc="4467ff37" map="1000"/>
+    </interleave>
+
+    <!-- pad: maincpu 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu 68000: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="e36-12.32" crc="3bae39be" map="01"/>
+      <part name="e36-13.33" crc="94448e82" map="10"/>
+    </interleave>
+
+    <!-- sprites: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="e36-03.12" crc="1ea8558b" map="01"/>
+      <part name="e36-02.8"  crc="694eda31" map="10"/>
+    </interleave>
+
+    <!-- pad: sprites 512 KB -> 4 MB -->
+    <part repeat="3670016">00</part>
+
+    <!-- sprites_hi -->
+    <part name="e36-01.4" crc="54b9b2cd"/>
+
+    <!-- pad: sprites_hi 256 KB -> 2 MB -->
+    <part repeat="1835008">00</part>
+
+    <!-- tilemap: ROM_LOAD32_WORD pair -->
+    <interleave output="32">
+      <part name="e36-07.47" crc="266bf1c1" map="0021"/>
+      <part name="e36-06.45" crc="110ab729" map="2100"/>
+    </interleave>
+
+    <!-- pad: tilemap 1 MB -> 4 MB -->
+    <part repeat="3145728">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e36-05.43" crc="db18bce2"/>
+
+    <!-- pad: tilemap_hi 512 KB -> 2 MB -->
+    <part repeat="1572864">00</part>
+
+    <!-- ensoniq sample ROM, plain (MAME loads only bank 0) -->
+    <part name="e36-04.38" crc="2250959b"/>
+
+    <!-- pad: ensoniq 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x03
+           bit [1:0] = 3  visarea f3 (232 lines from line 24), as EAR
+           bit [2]   = 0  extend = 1 (four 64x32 playfields), as Ray Force
+           bit [4:3] = 0  zone injector off - starts on level 1
+         index 2 = 0x01
+           game id = {index2[2:0], index1[5], index1[7:6]} = 8.
+           Ids 0-7 are taken; 8 is the first free one. No expectations
+           are measured for this set yet, so it lands on the case
+           default in Rayforce.sv and the ROM CHECKSUM / SDRAM BIST /
+           WRITE HASH rows REPORT what they find instead of failing
+           against another game's numbers. The self-test TITLE row
+           clamps (rf_selftest.sv:329) and will read "RAY FORCE
+           (JAPAN)" until a build adds row 36 for this game - the
+           page only, not the game. -->
+  <rom index="1">
+    <part>03</part>
+  </rom>
+  <rom index="2">
+    <part>01</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Fire,Slow,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

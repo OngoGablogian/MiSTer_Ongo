@@ -1,0 +1,91 @@
+<misterromdescription>
+  <name>Space Invaders '95: The Attack Of Lunar Loonies (Ver 2.5O 1995/06/14)</name>
+  <setname>spcinv95</setname>
+  <year>1995</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>vertical</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. A VERTICAL game (MAME ROT270), so Rotate CW or CCW in the OSD. extend=0, as Puzzle Bobble 2.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="spcinv95.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e06-14.20" crc="71ba7f00" map="0001"/>
+      <part name="e06-13.19" crc="f506ba4b" map="0010"/>
+      <part name="e06-12.18" crc="06cbd72b" map="0100"/>
+      <part name="e06-16.17" crc="d1eb3195" map="1000"/>
+    </interleave>
+    <!-- pad maincpu to 2048 KB -->
+    <part repeat="1572864">00</part>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e06-09.32" crc="9bcafc87" map="01"/>
+      <part name="e06-10.33" crc="b752b61f" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e06-03" crc="a24070ef" map="01"/>
+      <part name="e06-02" crc="8f646dea" map="10"/>
+    </interleave>
+    <!-- pad sprites to 4096 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- sprites_hi -->
+    <part name="e06-01" crc="51721b15"/>
+    <!-- pad sprites_hi to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e06-08" crc="72ae2fbf" map="0021"/>
+      <part name="e06-07" crc="4b02e8f5" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 4096 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e06-06" crc="9380db3c"/>
+    <!-- pad tilemap_hi to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq -->
+    <part name="e06-04" crc="1dac29df"/>
+    <part name="e06-05" crc="f370ff15"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x24, index 2 = 0x01
+           visarea 0, extend 0, zone injector off
+           (so it starts on level 1), game id 12.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>24</part>
+  </rom>
+  <rom index="2">
+    <part>01</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

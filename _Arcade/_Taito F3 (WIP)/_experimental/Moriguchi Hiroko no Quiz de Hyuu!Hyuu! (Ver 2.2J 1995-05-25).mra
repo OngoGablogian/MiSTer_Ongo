@@ -1,0 +1,103 @@
+<misterromdescription>
+  <name>Moriguchi Hiroko no Quiz de Hyuu!Hyuu! (Ver 2.2J 1995/05/25)</name>
+  <setname>quizhuhu</setname>
+  <year>1995</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. USES SDRAM MAP PROFILE 1 (index 2 bit [4]), the 42 MB layout, because its sprites do not fit profile 0's 4 MB. Profile 1 gives sprites 13 MB, sprites_hi 7 MB, tilemap 6 MB and tilemap_hi 3 MB. Moriguchi Hiroko no Quiz de Hyuuhyuu. Horizontal (MAME ROT0). Its ensoniq region is 16 MB in MAME, so taito_en's otisbank mask is 7 - three bank bits, like Puzzle Bobble 3/4 - and bank 0 is empty, so it is padded to land the samples on their boundaries. Its sound ROM is half size and is streamed TWICE, because taito_en maps a 0x140000 region as set_entry(i % 2) = 0,1,0 and this core maps that window linearly; zero padding would put silence where the game expects code.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="quizhuhu.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e08-16.20" crc="faa8f373" map="0001"/>
+      <part name="e08-15.19" crc="23acf231" map="0010"/>
+      <part name="e08-14.18" crc="33a4951d" map="0100"/>
+      <part name="e08-13.17" crc="0936fd2a" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e08-18.32" crc="e695497e" map="01"/>
+      <part name="e08-17.33" crc="fafc7e4e" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="e08-18.32" crc="e695497e" map="01"/>
+      <part name="e08-17.33" crc="fafc7e4e" map="10"/>
+    </interleave>
+    <!-- pad audiocpu to 3072 KB -->
+    <part repeat="2621440">00</part>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e08-06.12" crc="8dadc9ac" map="01"/>
+      <part name="e08-04.8" crc="5423721d" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="e08-05.11" crc="79d2e516" map="01"/>
+      <part name="e08-03.7" crc="07b9ab6a" map="10"/>
+    </interleave>
+    <!-- pad sprites to 13312 KB -->
+    <part repeat="7340032">00</part>
+
+    <!-- sprites_hi -->
+    <part name="e08-02.4" crc="d89eb067"/>
+    <part name="e08-01.3" crc="90223c06"/>
+    <!-- pad sprites_hi to 7168 KB -->
+    <part repeat="4194304">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e08-12.47" crc="6c711d36" map="0021"/>
+      <part name="e08-11.45" crc="56775a60" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 6144 KB -->
+    <part repeat="4194304">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e08-10.43" crc="60abc71b"/>
+    <!-- pad tilemap_hi to 3072 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- ensoniq -->
+    <!-- ensoniq bank 0 is empty in MAME -->
+    <part repeat="2097152">00</part>
+    <part name="e08-07.38" crc="c05dc85b"/>
+    <part name="e08-08.39" crc="3eb94a99"/>
+    <part name="e08-09.41" crc="200b26ee"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0xE3, index 2 = 0x13
+           visarea 3, extend 1, zone injector off
+           (so it starts on level 1), game id 31.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>E3</part>
+  </rom>
+  <rom index="2">
+    <part>13</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

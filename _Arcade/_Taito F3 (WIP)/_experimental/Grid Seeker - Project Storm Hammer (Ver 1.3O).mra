@@ -1,0 +1,158 @@
+<misterromdescription>
+  <name>Grid Seeker: Project Storm Hammer (Ver 1.3O)</name>
+  <setname>gseeker</setname>
+  <year>1992</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>vertical</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on, and like Ray Force
+       a VERTICAL shooter (MAME ROT90), so Rotate CW or CCW in the
+       OSD rather than None.
+
+         - visarea f3_224b (224 lines from 32), one line down from
+           Ray Force's f3_224a. Implemented already.
+         - extend = 0 (eight 32x32 playfields), as Puzzle Bobble 2
+         - sprite lag 1 in MAME's table; the engine is structurally
+           lag 2, as for every other game here bar Ray Force
+
+       THREE THINGS THIS SET DOES THAT NO EARLIER MRA HERE HAD TO:
+
+       1. THE SPRITE ROMs CARRY A FACTORY PATCH. MAME's comment says
+          it plainly: "Taito manufactured mask roms 3 + 4 wrong, and
+          later added 15 + 16 as a patch". So d40_03/04 are loaded
+          and then d40_15/16 are loaded OVER the bottom 1 MB of them.
+          An MRA concatenates and cannot overwrite, so the patch is
+          applied here by hand: the bottom megabyte comes from the
+          patch ROMs, the top from the upper halves of the originals
+          (offset 0x80000). The bottom halves of d40_03/04 and the
+          ROM_CONTINUE that placed them are dead data in MAME too;
+          nothing reads them once the patch has landed.
+
+       2. THE SOUND ROM IS HALF SIZE, AND IS MIRRORED HERE. MAME's
+          audiocpu region is 0x140000 against Ray Force's 0x180000,
+          so taito_en computes two bank entries where Ray Force has
+          four, and its reset mapping is set_entry(i % max) = 0,1,0.
+          This core maps the sound 68000's C00000-C7FFFF LINEARLY to
+          SDRAM 0x200000 and does not bank, which is correct only
+          while the map is linear. Streaming the 256 KB TWICE makes
+          the third window read the first bank again, which is
+          exactly what "i % 2" does on the real board. Padding with
+          zeros instead would put silence where the game expects
+          code.
+
+       3. THE ENSONIQ BANKS ARE SPARSE. d40_01 fills banks 0 and 1,
+          bank 2 is empty, and d40_02 sits in bank 3 (MAME offset
+          0x600000). The 1 MB hole is padded so bank 3 lands on a
+          bank boundary. The region is 8 MB, so the otisbank mask is
+          3, the same as Ray Force.
+
+       The universal F3 SDRAM map, and where this set pads:
+
+         0x0000000  maincpu    2 MB   4x 256 KB + 1 MB pad
+         0x0200000  audiocpu 512 KB   256 KB, streamed twice
+         0x0280000  sprites    4 MB   2 MB patched + 2 MB pad
+         0x0680000  sprites_hi 2 MB   ZEROS, no ROM in this set
+         0x0880000  tilemap    4 MB   2 MB + 2 MB pad
+         0x0C80000  tilemap_hi 2 MB   ZEROS, no ROM in this set
+         0x0E80000  ensoniq    4 MB   2 MB + 1 MB hole + 1 MB
+         0x1280000             = 18.5 MB total
+       ============================================================ -->
+  <rom index="0" zip="gseeker.zip" md5="None">
+
+    <!-- maincpu: ROM_LOAD32_BYTE x4 -->
+    <interleave output="32">
+      <part name="d40_12.rom" crc="884055fb" map="0001"/>
+      <part name="d40_11.rom" crc="85e701d2" map="0010"/>
+      <part name="d40_10.rom" crc="1e659ac5" map="0100"/>
+      <part name="d40_14.rom" crc="d9a76bd9" map="1000"/>
+    </interleave>
+
+    <!-- pad: maincpu 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu 68000: 256 KB, then the SAME 256 KB again. See note 2. -->
+    <interleave output="16">
+      <part name="d40_07.rom" crc="7e9b26c2" map="01"/>
+      <part name="d40_08.rom" crc="9c926a28" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="d40_07.rom" crc="7e9b26c2" map="01"/>
+      <part name="d40_08.rom" crc="9c926a28" map="10"/>
+    </interleave>
+
+    <!-- sprites 0x000000-0x0FFFFF: the PATCH ROMs. See note 1. -->
+    <interleave output="16">
+      <part name="d40_15.rom" crc="50555125" map="01"/>
+      <part name="d40_16.rom" crc="3f9bbe1e" map="10"/>
+    </interleave>
+
+    <!-- sprites 0x100000-0x1FFFFF: upper halves of the original masks -->
+    <interleave output="16">
+      <part name="d40_03.rom" crc="bcd70efc" offset="0x80000" length="0x80000" map="01"/>
+      <part name="d40_04.rom" crc="cd2ac666" offset="0x00000" length="0x80000" map="10"/>
+    </interleave>
+
+    <!-- pad: sprites 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- sprites_hi: none in this set (EMPTY_SPRITE_HIDATA) -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap: ROM_LOAD32_WORD pair -->
+    <interleave output="32">
+      <part name="d40_05.rom" crc="be6eec8f" map="0021"/>
+      <part name="d40_06.rom" crc="a822abe4" map="2100"/>
+    </interleave>
+
+    <!-- pad: tilemap 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi: none in this set (EMPTY_TILEMAP_HIDATA) -->
+    <part repeat="2097152">00</part>
+
+    <!-- ensoniq: banks 0 and 1 -->
+    <part name="d40_01.rom" crc="ee312e95"/>
+
+    <!-- ensoniq bank 2: empty in MAME, so a 1 MB hole -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq bank 3 (MAME offset 0x600000) -->
+    <part name="d40_02.rom" crc="ed894fe1"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0xC5
+           bit [1:0] = 1  visarea f3_224b (224 lines from line 32)
+           bit [2]   = 1  asks for NON-extend (eight 32x32 playfields).
+                          Inverted sense against MAME's "extend" naming,
+                          because every MRA written before this bit went
+                          live carries 0 there and all of those are
+                          extend=1.
+           bit [4:3] = 0  zone injector off, so it starts on level 1
+         index 2 = 0x01
+           game id = {index2[2:0], index1[5], index1[7:6]} = 11.
+           No expectations are measured for this set yet, so it lands on
+           the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+           BIST / WRITE HASH rows REPORT what they find rather than
+           failing against another game's numbers. The self-test TITLE
+           row clamps (rf_selftest.sv:329) until a build gives this game
+           its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>C5</part>
+  </rom>
+  <rom index="2">
+    <part>01</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

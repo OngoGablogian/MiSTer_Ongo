@@ -1,0 +1,83 @@
+<misterromdescription>
+  <name>Gekirindan (Ver 2.3O 1995/09/21)</name>
+  <setname>gekiridn</setname>
+  <year>1995</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>vertical</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. A VERTICAL game (MAME ROT270), so Rotate CW or CCW in the OSD. extend=0. It fills every region of the map exactly, with no padding at all.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="gekiridn.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e11-12.ic20" crc="6a7aaacf" map="0001"/>
+      <part name="e11-11.ic19" crc="2284a08e" map="0010"/>
+      <part name="e11-10.ic18" crc="8795e6ba" map="0100"/>
+      <part name="e11-15.ic17" crc="5aef1fd8" map="1000"/>
+    </interleave>
+    <!-- pad maincpu to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e11-13.ic32" crc="f5c5486a" map="01"/>
+      <part name="e11-14.ic33" crc="7fa10f96" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e11-03.ic12" crc="f73877c5" map="01"/>
+      <part name="e11-02.ic8" crc="5722a83b" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi -->
+    <part name="e11-01.ic4" crc="c2cd1069"/>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e11-08.ic47" crc="907f69d3" map="0021"/>
+      <part name="e11-07.ic45" crc="ef018607" map="2100"/>
+    </interleave>
+
+    <!-- tilemap_hi -->
+    <part name="e11-06.ic43" crc="200ce305"/>
+
+    <!-- ensoniq -->
+    <part name="e11-04.ic38" crc="e0ff4fb1"/>
+    <part name="e11-05.ic41" crc="a4d08cf1"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x87, index 2 = 0x02
+           visarea 3, extend 0, zone injector off
+           (so it starts on level 1), game id 18.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>87</part>
+  </rom>
+  <rom index="2">
+    <part>02</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

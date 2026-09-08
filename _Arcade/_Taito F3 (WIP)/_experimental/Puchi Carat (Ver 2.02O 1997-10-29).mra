@@ -1,0 +1,99 @@
+<misterromdescription>
+  <name>Puchi Carat (Ver 2.02O 1997/10/29)</name>
+  <setname>puchicar</setname>
+  <year>1997</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. USES SDRAM MAP PROFILE 1 (index 2 bit [4]), the 42 MB layout, because its sprites do not fit profile 0's 4 MB. Profile 1 gives sprites 13 MB, sprites_hi 7 MB, tilemap 6 MB and tilemap_hi 3 MB. Horizontal (MAME ROT0). Its ensoniq region is 16 MB in MAME, so taito_en's otisbank mask is 7 - three bank bits, like Puzzle Bobble 3/4 - and bank 0 is empty, so it is padded to land the samples on their boundaries. 
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="puchicar.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e46-16.ic20" crc="cf2accdf" map="0001"/>
+      <part name="e46-15.ic19" crc="c32c6ed8" map="0010"/>
+      <part name="e46-14.ic18" crc="a154c300" map="0100"/>
+      <part name="e46-18.ic17" crc="396e3122" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e46-21.ic32" crc="b466cff6" map="01"/>
+      <part name="e46-22.ic33" crc="c67b767e" map="10"/>
+    </interleave>
+    <!-- pad audiocpu to 3072 KB -->
+    <part repeat="2621440">00</part>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e46-06.ic12" crc="b74336f2" map="01"/>
+      <part name="e46-04.ic8" crc="463ecc4c" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="e46-05.ic11" crc="83a32eee" map="01"/>
+      <part name="e46-03.ic7" crc="eb768193" map="10"/>
+    </interleave>
+    <!-- pad sprites to 13312 KB -->
+    <part repeat="5242880">00</part>
+
+    <!-- sprites_hi -->
+    <part name="e46-02.ic4" crc="fb046018"/>
+    <part name="e46-01.ic3" crc="34fc2103"/>
+    <!-- pad sprites_hi to 7168 KB -->
+    <part repeat="3145728">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e46-12.ic47" crc="1f3a9851" map="0021"/>
+      <part name="e46-11.ic45" crc="e9f10bf1" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 6144 KB -->
+    <part repeat="4194304">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e46-10.ic43" crc="1999b76a"/>
+    <!-- pad tilemap_hi to 3072 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- ensoniq -->
+    <!-- ensoniq bank 0 is empty in MAME -->
+    <part repeat="2097152">00</part>
+    <part name="e46-07.ic38" crc="f20af91e"/>
+    <part name="e46-08.ic39" crc="f7f96e1d"/>
+    <part name="e46-09.ic40" crc="824135f8"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x43, index 2 = 0x14
+           visarea 3, extend 1, zone injector off
+           (so it starts on level 1), game id 33.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>43</part>
+  </rom>
+  <rom index="2">
+    <part>14</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

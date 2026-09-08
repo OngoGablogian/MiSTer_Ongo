@@ -1,0 +1,114 @@
+<misterromdescription>
+  <name>RayForce (Ver 2.3J 1994/01/20)</name>
+  <setname>rayforcej</setname>
+  <mameversion>0288</mameversion>
+  <rbf>TaitoF3</rbf>
+  <year>1993</year>
+  <manufacturer>Taito</manufacturer>
+  <category>Shoot</category>
+  <rotation>vertical</rotation>
+  <resolution>15kHz</resolution>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <num_buttons>2</num_buttons>
+
+  <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Service,Pause"
+           default="A,B,R,L,Start"/>
+
+  <!-- No DIP switches: F3 boards are configured from the service menu. -->
+
+  <!-- ============================================================
+       Download stream, in region order, 0xB80000 bytes total. The
+       skeleton core only counts and checksums this; the offsets below
+       are the SDRAM map the real core will use, fixed now so the MRA
+       does not change when the core grows.
+
+         The UNIVERSAL Taito F3 map: every region sits at a fixed offset
+         sized for the largest game the core targets, so a second title is
+         an MRA and a config byte rather than a re-fit. Ray Force fills
+         half of it and pads the rest.
+
+         0x0000000  maincpu    2 MB   4-way byte interleave (1 MB + pad)
+         0x0200000  audiocpu 512 KB   16-bit interleave (68000)
+         0x0280000  sprites    4 MB   16-bit interleave (2 MB + pad)
+         0x0680000  sprites_hi 2 MB   (1 MB + pad)
+         0x0880000  tilemap    4 MB   LOAD32_WORD pair (2 MB + pad)
+         0x0C80000  tilemap_hi 2 MB   (1 MB + pad)
+         0x0E80000  ensoniq    4 MB   2x 2 MB, plain (lane spread is the
+                                      core's job; MAME loads them
+                                      LOAD16_BYTE into an 8 MB region)
+         0x1280000             = 18.5 MB total
+
+       The zip is the MERGED gunlock set; this MRA is the Ray Force (Japan)
+       version: the region variants differ by exactly one program ROM
+       (ic35: d66-24 Gunlock, d66-25 Ray Force US, d66-20 Ray Force Japan). Parts match by CRC, so the
+       subfolder layout inside the zip does not matter.
+       ============================================================ -->
+  <rom index="0" zip="rayforcej.zip|gunlock.zip|rayforce.zip" md5="None">
+
+    <!-- maincpu: ROM_LOAD32_BYTE x4 -->
+    <interleave output="32">
+      <part name="d66-18.ic24" crc="8418513e" map="0001"/>
+      <part name="d66-19.ic26" crc="95731473" map="0010"/>
+      <part name="d66-21.ic37" crc="bd0d60f2" map="0100"/>
+      <part name="d66-20.ic35" crc="798f0254" map="1000"/>
+    </interleave>
+
+    <!-- pad: maincpu 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu 68000: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="d66-23.ic10" crc="57fb7c49" map="01"/>
+      <part name="d66-22.ic23" crc="83dd7f9b" map="10"/>
+    </interleave>
+
+    <!-- sprites: ROM_LOAD16_BYTE pair -->
+    <interleave output="16">
+      <part name="d66-03.ic45" crc="e7a4a491" map="01"/>
+      <part name="d66-04.ic46" crc="c1c7aaa7" map="10"/>
+    </interleave>
+
+    <!-- pad: sprites 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- sprites_hi -->
+    <part name="d66-05.ic47" crc="a3cefe04"/>
+
+    <!-- pad: sprites_hi 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- tilemap: ROM_LOAD32_WORD pair -->
+    <interleave output="32">
+      <part name="d66-06.ic48" crc="b3d8126d" map="0021"/>
+      <part name="d66-07.ic49" crc="a6da9be7" map="2100"/>
+    </interleave>
+
+    <!-- pad: tilemap 2 MB -> 4 MB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="d66-08.ic50" crc="9959f30b"/>
+
+    <!-- pad: tilemap_hi 1 MB -> 2 MB -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq sample ROMs, plain -->
+    <part name="d66-01.ic2" crc="58c92efa"/>
+    <part name="d66-02.ic3" crc="dcdafaab"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"): game id 7, visarea f3_224a,
+       extend=1. This set differs from Ray Force (US) by exactly one program
+       ROM, so its download stream differs and it needs an expectation of its
+       own. Sharing Ray Force's id 0, as it did until 2026-09-01, made the
+       ROM CHECKSUM row compare this stream against the US set's sum and
+       report FAIL on a perfectly good ROM set.
+       0xE0 = game id 7 ({bit 5, bits 7:6}), visarea 0, extend. -->
+  <rom index="1">
+    <part>E0</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+</misterromdescription>

@@ -1,0 +1,93 @@
+<misterromdescription>
+  <name>Ring Rage (Ver 2.3O 1992/08/09)</name>
+  <setname>ringrage</setname>
+  <year>1992</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. A 12-BIT PALETTE GAME. MAME stores this set's colours as RRRRGGGGBBBB0000 in the low word and scales each nibble by 16, selected by game rather than by register (taito_f3_v.cpp palette_24bit_w). The core does the same, from the game id, and MRA index 2 bit [5] also turns it on. Horizontal (MAME ROT0), extend=0. Its ensoniq banks are sparse: the first ROM fills banks 0 and 1, bank 2 is empty, and the second sits in bank 3 (MAME offset 0x600000), so the hole is padded to land bank 3 on its boundary. Its sound ROM is half size and is streamed TWICE, because taito_en maps a 0x140000 region as set_entry(i % 2) = 0,1,0 and this core maps that window linearly.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="ringrage.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="d21-23.40" crc="14e9ed65" map="0001"/>
+      <part name="d21-22.38" crc="6f8b65b0" map="0010"/>
+      <part name="d21-21.36" crc="bf7234bc" map="0100"/>
+      <part name="d21-25.34" crc="aeff6e19" map="1000"/>
+    </interleave>
+    <!-- pad maincpu to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="d21-18.5" crc="133b55d0" map="01"/>
+      <part name="d21-19.6" crc="1f98908f" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="d21-18.5" crc="133b55d0" map="01"/>
+      <part name="d21-19.6" crc="1f98908f" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="d21-02.66" crc="facd3a02" map="01"/>
+      <part name="d21-03.67" crc="6f653e68" map="10"/>
+    </interleave>
+
+    <!-- sprites_hi -->
+    <part name="d21-04.68" crc="9dcdceca"/>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="d21-06.49" crc="92d4a720" map="0021"/>
+      <part name="d21-07.50" crc="6da696e9" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 4096 KB -->
+    <part repeat="3145728">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="d21-08.51" crc="a0d95be9"/>
+    <!-- pad tilemap_hi to 2048 KB -->
+    <part repeat="1572864">00</part>
+
+    <!-- ensoniq -->
+    <part name="d21-01.17" crc="1fb6f07d"/>
+    <!-- ensoniq bank 2 is empty in MAME -->
+    <part repeat="1048576">00</part>
+    <part name="d21-05.18" crc="ed894fe1"/>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0xA4, index 2 = 0x02
+           visarea 0, extend 0, zone injector off
+           (so it starts on level 1), game id 22.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>A4</part>
+  </rom>
+  <rom index="2">
+    <part>02</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Punch,Kick,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>

@@ -1,0 +1,93 @@
+<misterromdescription>
+  <name>Cleopatra Fortune (Ver 2.1J 1996/09/05)</name>
+  <setname>cleopatr</setname>
+  <year>1996</year>
+  <manufacturer>Taito</manufacturer>
+  <rbf>TaitoF3</rbf>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+
+  <!-- ============================================================
+       NEVER LOADED ON A BOARD. Written 2026-09-08.
+
+       Taito F3, the same board Ray Force runs on. Horizontal (MAME ROT0), so Rotate None. extend=0. Its sound ROM is half size; streamed TWICE so the third bank window reads bank 0, which is what taito_en's set_entry(i % max) does with a 0x140000 region. Its ensoniq region is 4 MB, so MAME's otisbank mask is 1 where the core uses 3 until the next build.
+
+       Region pads are computed from the real ROM sizes, and the
+       assembled stream is 0x01280000 bytes (18.5 MB) exactly, which
+       is what proves the regions land on the RTL's base addresses.
+       ============================================================ -->
+  <rom index="0" zip="cleopatr.zip" md5="None">
+
+    <!-- maincpu -->
+    <interleave output="32">
+      <part name="e28-10.bin" crc="013fbc39" map="0001"/>
+      <part name="e28-09.bin" crc="1c48a1f9" map="0010"/>
+      <part name="e28-08.bin" crc="7564f199" map="0100"/>
+      <part name="e28-07.bin" crc="a507797b" map="1000"/>
+    </interleave>
+
+    <!-- audiocpu -->
+    <interleave output="16">
+      <part name="e28-11.bin" crc="01a06950" map="01"/>
+      <part name="e28-12.bin" crc="dc19260f" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="e28-11.bin" crc="01a06950" map="01"/>
+      <part name="e28-12.bin" crc="dc19260f" map="10"/>
+    </interleave>
+
+    <!-- sprites -->
+    <interleave output="16">
+      <part name="e28-02.bin" crc="b20d47cb" map="01"/>
+      <part name="e28-01.bin" crc="4440e659" map="10"/>
+    </interleave>
+    <!-- pad sprites to 4096 KB -->
+    <part repeat="3145728">00</part>
+
+    <!-- sprites_hi: no ROM in this set -->
+    <!-- pad sprites_hi to 2048 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap -->
+    <interleave output="32">
+      <part name="e28-06.bin" crc="21d0c454" map="0021"/>
+      <part name="e28-05.bin" crc="2870dbbc" map="2100"/>
+    </interleave>
+    <!-- pad tilemap to 4096 KB -->
+    <part repeat="2097152">00</part>
+
+    <!-- tilemap_hi -->
+    <part name="e28-04.bin" crc="57aef029"/>
+    <!-- pad tilemap_hi to 2048 KB -->
+    <part repeat="1048576">00</part>
+
+    <!-- ensoniq -->
+    <part name="e28-03.bin" crc="15c7989d"/>
+    <!-- pad ensoniq to 4096 KB -->
+    <part repeat="2097152">00</part>
+  </rom>
+
+  <!-- Game config (Rayforce.sv "GAME CONFIG"):
+         index 1 = 0x64, index 2 = 0x01
+           visarea 0, extend 0, zone injector off
+           (so it starts on level 1), game id 13.
+         No expectations are measured for this set yet, so it lands on
+         the case default in Rayforce.sv and the ROM CHECKSUM / SDRAM
+         BIST / WRITE HASH rows REPORT what they find rather than
+         failing against another game's numbers. The self-test TITLE
+         row clamps (rf_selftest.sv:329) until a build gives this game
+         its own row. That is the page, not the game. -->
+  <rom index="1">
+    <part>64</part>
+  </rom>
+  <rom index="2">
+    <part>01</part>
+  </rom>
+
+  <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
+  <nvram index="254" size="256"/>
+
+  <buttons names="Rotate,Drop,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+</misterromdescription>
