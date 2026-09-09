@@ -5,11 +5,14 @@
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
 ```
 
-> **This database can also be installed by following the link below and download the linked ZIP file. Then extract the 'MiSTer_Ongo.ini' file, and copy it to the root of your SD card.**
-* [theypsilon Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip#install)
+> **This database can also be installed by downloading the linked file below and copying it to the root of your SD card.**
+* https://github.com/OngoGablogian/MiSTer_Ongo/releases/download/1.0.0/downloader_OngoGablogian_MiSTer_Ongo.ini
 
 > [!NOTE]
 > * If there are any cores or files from this repository that you don't want downloaded when running update_all, please refer to the [Downloader_MiSTer documentation](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md) on how to use the download filter options.
+
+> [!NOTE]
+> * You can easily check out the files included with this database by using theypsilon's [Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip)
 
 > [!NOTE]
 > * In its current state, this repo totals around 6.4 GB of files.
