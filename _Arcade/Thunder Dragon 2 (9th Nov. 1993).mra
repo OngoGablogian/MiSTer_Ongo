@@ -1,0 +1,110 @@
+<!--
+  Thunder Dragon 2 (NMK, 1993) — Family C ("Macross2" rbf) pilot game.
+
+  Transcribed directly from mame/src/mame/nmk/nmk16.cpp:
+    - ROM_START(tdragon2)      lines 8331-8359
+    - GAME(... tdragon2 ...)   line 10740
+    - INPUT_PORTS_START(tdragon2) lines 2890-2976
+
+  ROM region -> byte offset mapping matches docs/hw-bringup.md's own
+  table exactly (that table was itself derived from this same
+  ROM_START block) and tools/mk_ioctl_stream.py's own region list for
+  this game, both already used to build and verify the hardware-mode
+  Verilator testbench this core's own quartus_map/fit/asm run was
+  checked against. No byte reordering is needed for the
+  ROM_LOAD16_WORD_SWAP regions (maincpu, sprites) despite the .mra
+  format's inability to reorder bytes within a <part> — the core's own
+  ioctl-download write logic reconstructs 16-bit words by byte parity
+  (even ioctl_addr -> low byte, odd -> high byte), which reproduces
+  ROM_LOAD16_WORD_SWAP's own byte order automatically (verified
+  directly against mkrom_wordswap.py's own formula — see
+  tools/mk_ioctl_stream.py's own header comment).
+
+  Game select: this Macross2.rbf is now SHARED between tdragon2 and
+  macross2 (rtl/tdragon2/tdragon2_core.sv was merged to serve both games
+  at runtime — see that file's own header). <switches default="F7,FF,00">
+  below's third byte sets status[16]=0 (tdragon2) — a HIDDEN bit, no
+  corresponding <dip> entry, so it never appears in the OSD and can't be
+  accidentally toggled (see docs/mra-workflow.md's own Donkey Kong
+  reference example for the precedent: an undeclared bit in a <switches
+  default="..."> byte just stays fixed at that raw value). This is bit0
+  of status[16] specifically because Macross2.sv reads status[16] as
+  game_macross2 — see that file's own header.
+
+  Known limitations, not yet resolved (see Macross2.sv's own header):
+    - HSync/VSync timing is a documented placeholder, not yet tuned
+      against real hardware.
+    - Player input bit mapping (joystick_0/1 -> IN0/IN1) is now
+      cross-checked bit-for-bit against the INPUT_PORTS block below
+      (see Macross2.sv's own in0_i/in1_i comment) — not yet confirmed
+      against real hardware, only that it compiles.
+    - dsw1_i/dsw2_i are now wired to status[7:0]/status[15:8] in
+      Macross2.sv, matching this file's own <dip bits="N"> bit
+      positions (the MiSTer .mra loader writes each dip's configured
+      value directly into status[] at that same bit index — no
+      CONF_STR reservation needed). Not yet confirmed against real
+      hardware (no JTAG/SD-card access in this environment), only that
+      it compiles and the bit-position math is internally consistent
+      with this file's own <switches> byte order.
+    - <rotation> below is this project's best understanding of the
+      MiSTer .mra convention for a MAME ROT270 flag (see
+      docs/game-inventory.md's own "vertical" orientation note for this
+      game) — not independently confirmed against a known-working
+      NMK16-family MiSTer core, since none exists in this project yet.
+-->
+<misterromdescription>
+  <name>Thunder Dragon 2 (9th Nov. 1993)</name>
+  <mratimestamp>202609060000</mratimestamp>
+  <mameversion>0270</mameversion>
+  <setname>tdragon2</setname>
+  <year>1993</year>
+  <manufacturer>NMK</manufacturer>
+  <category>Shooter</category>
+  <rbf>Macross2</rbf>
+
+  <!-- ROT270 in nmk16.cpp (docs/game-inventory.md: "vertical") — see
+       this file's own header note on the rotation-convention caveat. -->
+  <rotation>1</rotation>
+
+  <!-- DSW1 default 0xF7, DSW2 default 0xFF — see individual <dip>
+       entries below for the bit-by-bit derivation. Byte order matches
+       tdragon2_core.sv's own address decode (sel_dsw1 at 0x100008,
+       sel_dsw2 at 0x10000A — DSW1 first). Third byte 0x00 sets the
+       HIDDEN game-select bit (status[16]=0 -> tdragon2, no <dip> entry
+       declares it — see this file's own header). -->
+  <switches default="F7,FF,00">
+    <dip bits="0" name="Service Mode" ids="On,Off"/> <!-- PORT_SERVICE_DIPLOC, active low: bit clear = service mode ON -->
+    <dip bits="1" name="Demo Sounds" ids="Off,On"/>
+    <dip bits="2" name="Flip Screen" ids="On,Off"/>
+    <dip bits="3" name="Unused" ids="Off,On"/>
+    <dip bits="4,5" name="Difficulty" ids="Hardest,Easy,Hard,Normal"/>
+    <dip bits="6,7" name="Lives" ids="1,2,4,3"/>
+    <dip bits="8,11" name="Coin B" ids="5C_3C,2C_1C,3C_2C,1C_4C,4C_1C,1C_6C,2C_5C,1C_2C,4C_3C,1C_7C,3C_1C,1C_3C,3C_4C,1C_5C,2C_3C,1C_1C"/>
+    <dip bits="12,15" name="Coin A" ids="Free_Play,2C_1C,3C_2C,1C_4C,4C_1C,1C_6C,2C_5C,1C_2C,4C_3C,1C_7C,3C_1C,1C_3C,3C_4C,1C_5C,2C_3C,1C_1C"/>
+  </switches>
+
+  <!-- IN1: 3 buttons/player (nmk16.cpp:2906-2908, 2914-2916). IN0 also
+       has COIN1/COIN2/SERVICE1/START1/START2 but no independent
+       "Service" button beyond the DSW1 Service Mode toggle above. -->
+  <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
+
+  <!-- One <rom> per ROM_REGION in ROM_START(tdragon2), same order as
+       docs/hw-bringup.md's own offset table. -->
+  <rom index="0" zip="tdragon2.zip" md5="none">
+    <!-- maincpu, 0x080000 @ 0x000000 -->
+    <part crc="ca348caf" name="6.rom"/>
+    <!-- audiocpu, 0x020000 @ 0x080000 -->
+    <part crc="b870be61" name="5.bin"/>
+    <!-- fgtile, 0x020000 @ 0x0A0000 -->
+    <part crc="d488aafa" name="1.bin"/>
+    <!-- bgtile, 0x200000 @ 0x0C0000 -->
+    <part crc="f968c65d" name="ww930914.2"/>
+    <!-- sprites, 0x400000 @ 0x2C0000 (2 files, ROM_LOAD16_WORD_SWAP) -->
+    <part crc="b98873cb" name="ww930917.7"/>
+    <part crc="baee84b2" name="ww930918.8"/>
+    <!-- oki1, 0x200000 @ 0x6C0000 -->
+    <part crc="07c35fe6" name="ww930916.4"/>
+    <!-- oki2, 0x200000 @ 0x8C0000 -->
+    <part crc="82025bab" name="ww930915.3"/>
+  </rom>
+</misterromdescription>

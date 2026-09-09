@@ -1,0 +1,59 @@
+<misterromdescription>
+	<name>I, Robot</name>
+	<setname>irobot</setname>
+	<rbf>I-Robot</rbf>
+	<mameversion>0289</mameversion>
+	<year>1983</year>
+	<manufacturer>Atari</manufacturer>
+	<category>Arcade</category>
+	<players>2</players>
+	<joystick>analog</joystick>
+	<resolution>15kHz</resolution>
+	<rotation>horizontal</rotation>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<buttons names="Fire,View,Start 1P,Start 2P,Coin 1,Coin 2,Coin 3,Service,Pause" default="A,B,Start,Select,R,L,X,Y,-" />
+	<switches default="ff,00" base="16">
+		<dip bits="0" name="Language" ids="German,English" />
+		<dip bits="1" name="Minimum Game Time" ids="90 Seconds on Level 1,3 Lives (Limited Game Time)" />
+		<dip bits="2,3" name="Bonus Life" ids="30000,50000,None,20000" />
+		<dip bits="4,5" name="Lives" ids="4,5,2,3" />
+		<dip bits="6" name="Difficulty" ids="Easy,Medium" />
+		<dip bits="7" name="Demo Mode" ids="On,Off" />
+		<dip bits="8,9" name="Coins Per Credit" ids="1 Coin 1 Credit,2 Coins 1 Credit,3 Coins 1 Credit,4 Coins 1 Credit" />
+		<dip bits="10,11" name="Right Coin" ids="1 Coin for 1 Coin Unit,1 Coin for 4 Coin Units,1 Coin for 5 Coin Units,1 Coin for 6 Coin Units" />
+		<dip bits="12" name="Left Coin" ids="1 Coin for 1 Coin Unit,1 Coin for 2 Coin Units" />
+		<dip bits="13,14,15" name="Bonus Adder" ids="None,1 Credit for 2 Coin Units,1 Credit for 4 Coin Units,2 Credits for 4 Coin Units,1 Credit for 5 Coin Units,1 Credit for 3 Coin Units,No Bonus,Free Play" />
+	</switches>
+	<!-- Xicor X2212 non-volatile RAM: MiSTer Main streams and stores this
+	     back through ioctl index 1 with an 8-bit host address, i.e. 256
+	     nibble-bytes (Arcade-I-Robot.sv lines ~97-110 and ~218). -->
+	<nvram index="1" size="256"/>
+	<rom index="0" zip="irobot.zip" md5="none">
+		<part name="136029-208.bin" crc="b4d0be59"/>
+		<part name="136029-209.bin" crc="f6be3cd0"/>
+		<part name="136029-210.bin" crc="c0eb2133"/>
+		<part name="136029-405.bin" crc="9163efe4"/>
+		<part name="136029-206.bin" crc="e114a526"/>
+		<part name="136029-207.bin" crc="b4556cb0"/>
+		<part name="136029-104.bin" crc="0a6cdcca"/>
+		<part name="136029-103.bin" crc="0c83296d"/>
+		<part name="136029-102.bin" crc="9d588f22"/>
+		<part name="136029-101.bin" crc="62a38c08"/>
+		<part name="136029-124.bin" crc="848948b6"/>
+		<part name="136029-125.bin" crc="446335ba"/>
+		<part name="136029-111.bin" crc="9fbc9bf3"/>
+		<part name="136029-112.bin" crc="b2713214"/>
+		<part name="136029-113.bin" crc="7875930a"/>
+		<part name="136029-114.bin" crc="51d29666"/>
+		<part name="136029-115.bin" crc="00f9b304"/>
+		<part name="136029-116.bin" crc="326aba54"/>
+		<part name="136029-117.bin" crc="98efe8d0"/>
+		<part name="136029-118.bin" crc="4a6aa7f9"/>
+		<part name="136029-119.bin" crc="a5a13ad8"/>
+		<part name="136029-120.bin" crc="2a083465"/>
+		<part name="136029-121.bin" crc="adebcb99"/>
+		<part name="136029-122.bin" crc="da7b6f79"/>
+		<part name="136029-123.bin" crc="39fff18f"/>
+	</rom>
+</misterromdescription>

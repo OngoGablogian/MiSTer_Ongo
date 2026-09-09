@@ -1,0 +1,102 @@
+<!--
+  Super Spacefortress Macross II (Banpresto, 1993) — Family C, the
+  hardware family's own namesake game (shares tdragon2's own machine
+  config byte-for-byte except two documented differences — see
+  rtl/tdragon2/tdragon2_core.sv's own header: mainram address-line
+  swap, oki2 ROM size).
+
+  Transcribed directly from mame/src/mame/nmk/nmk16.cpp:
+    - ROM_START(macross2)      lines 8241-8269
+    - GAME(... macross2 ...)   line 10736
+    - INPUT_PORTS_START(macross2) lines 2801-2888
+
+  All 8 ROM part CRC32s and sizes cross-checked directly against
+  mame_roms/macross2.zip's own actual member data — exact match on
+  every file. Byte offsets use the SAME scheme as releases/tdragon2.mra
+  (docs/hw-bringup.md's table, "chosen to leave headroom for bigger
+  games later" — tdragon2's own oki2 is double this game's own
+  0x100000, hence the gap between this game's own oki2 part and the
+  region's own 0x200000-sized slot in that shared map); every ROM part
+  is still listed in ROM_START's own order, so the ioctl download
+  stream this produces is correct regardless of that internal gap
+  (nothing reads the unused tail).
+
+  Hardware status: rtl/tdragon2/tdragon2_core.sv is now a SHARED Family C
+  core serving both tdragon2 and macross2 at runtime (merged rather than
+  built as two separate cores — a real ALM-budget constraint: two nearly-
+  identical ~60%-utilization cores could not both fit as separate
+  instances in one bitstream — see that file's own header for the full
+  derivation, including why the V-PROM and NMK112 sizing turned out not
+  to need per-game switching at all, and why the mainram address-line
+  swap does). This Macross2.rbf is selected per-game by a HIDDEN
+  status[16] bit (game_macross2) this .mra's own <switches default="...">
+  third byte sets below — see Macross2.sv's own header for the full
+  mechanism. Verified in simulation: HW_ROMS=0 against the pre-merge RTL
+  (bit-identical trace files — zero regression) and HW_ROMS=1 against a
+  real sdram.sv+sdram_model.sv harness (sim/rtl/macross2_hw/, mirroring
+  sim/rtl/tdragon2_hw/'s own) — a full 10.2MB ioctl-download completes
+  and both CPUs execute real, varied instructions afterward. Not yet
+  confirmed against real hardware (no JTAG/SD-card access in this
+  environment).
+
+  Other known limitations, not yet resolved:
+    - <rotation> — macross2 is ROT0 (horizontal), unlike tdragon2's own
+      ROT270, so this omits the <rotation> tag entirely (matching
+      docs/mra-workflow.md's own Donkey Kong reference example, which
+      also omits it for a horizontal game).
+-->
+<misterromdescription>
+  <name>Super Spacefortress Macross II / Chou-Jikuu Yousai Macross II</name>
+  <mratimestamp>202609060000</mratimestamp>
+  <mameversion>0270</mameversion>
+  <setname>macross2</setname>
+  <year>1993</year>
+  <manufacturer>Banpresto</manufacturer>
+  <category>Shooter</category>
+  <rbf>Macross2</rbf>
+
+  <!-- DSW1 default 0xF7, DSW2 default 0xFF — see individual <dip>
+       entries below. Byte order matches the shared core's own address
+       decode (sel_dsw1 at 0x100008, sel_dsw2 at 0x10000A — DSW1
+       first), same convention as tdragon2.mra's own. Third byte 0x01
+       sets the HIDDEN game-select bit (status[16]=1 -> macross2, no
+       <dip> entry declares it — see this file's own header and
+       Macross2.sv's own header for the mechanism). -->
+  <switches default="F7,FF,01">
+    <dip bits="0" name="Service Mode" ids="On,Off"/> <!-- PORT_SERVICE_DIPLOC, active low: bit clear = service mode ON -->
+    <dip bits="1" name="Demo Sounds" ids="Off,On"/>
+    <dip bits="2" name="Flip Screen" ids="On,Off"/>
+    <dip bits="3" name="Language" ids="English,Japanese"/>
+    <dip bits="4,5" name="Difficulty" ids="Hardest,Easy,Hard,Normal"/>
+    <dip bits="6" name="Unknown (SW1:2)" ids="On,Off"/>
+    <dip bits="7" name="Unknown (SW1:1)" ids="On,Off"/>
+    <dip bits="8,11" name="Coin B" ids="5C_3C,2C_1C,3C_2C,1C_4C,4C_1C,1C_6C,2C_5C,1C_2C,4C_3C,1C_7C,3C_1C,1C_3C,3C_4C,1C_5C,2C_3C,1C_1C"/>
+    <dip bits="12,15" name="Coin A" ids="Free_Play,2C_1C,3C_2C,1C_4C,4C_1C,1C_6C,2C_5C,1C_2C,4C_3C,1C_7C,3C_1C,1C_3C,3C_4C,1C_5C,2C_3C,1C_1C"/>
+  </switches>
+
+  <!-- IN1: 2 buttons/player only (nmk16.cpp:2817-2818, 2825-2826) —
+       unlike tdragon2's own 3. -->
+  <buttons names="Button 1,Button 2,Start,Coin" default="Y,B,Start,R"/>
+
+  <!-- One <rom> per ROM_REGION in ROM_START(macross2), same order as
+       ROM_START's own regions (see this file's own header note on the
+       oki2-size gap vs. tdragon2.mra's shared offset scheme). -->
+  <rom index="0" zip="macross2.zip" md5="none">
+    <!-- maincpu, 0x080000 @ 0x000000 -->
+    <part crc="36a618fe" name="mcrs2j.3"/>
+    <!-- audiocpu, 0x020000 @ 0x080000 -->
+    <part crc="b4aa8ac7" name="mcrs2j.2"/>
+    <!-- fgtile, 0x020000 @ 0x0A0000 -->
+    <part crc="c7417410" name="mcrs2j.1"/>
+    <!-- bgtile, 0x200000 @ 0x0C0000 -->
+    <part crc="c4d77ff0" name="bp932an.a04"/>
+    <!-- sprites, 0x400000 @ 0x2C0000 (2 files, ROM_LOAD16_WORD_SWAP) -->
+    <part crc="aa1b21b9" name="bp932an.a07"/>
+    <part crc="67eb2901" name="bp932an.a08"/>
+    <!-- oki1, 0x200000 @ 0x6C0000 -->
+    <part crc="ef0ffec0" name="bp932an.a06"/>
+    <!-- oki2, 0x100000 (game's own size; shared map's own slot here is
+         0x200000, tdragon2-sized — the unused tail is never read) -->
+    <part crc="b5335abb" name="bp932an.a05"/>
+  </rom>
+</misterromdescription>
