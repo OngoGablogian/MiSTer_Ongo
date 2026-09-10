@@ -75,8 +75,23 @@
   </switches>
 
   <!-- IN1: 2 buttons/player only (nmk16.cpp:2817-2818, 2825-2826) —
-       unlike tdragon2's own 3. -->
-  <buttons names="Button 1,Button 2,Start,Coin" default="Y,B,Start,R"/>
+       unlike tdragon2's own 3 — but this <buttons> list still declares
+       a placeholder "Button 3" (unread by macross2's own game logic,
+       same as Macross2.sv's own in0_i/in1_i comment already notes)
+       to keep 5 entries matching the shared core's fixed CONF_STR
+       "J1,Button 1,Button 2,Button 3,Start,Coin;" (Macross2.sv), which
+       tdragon2.mra's own 5-entry list also matches. MiSTer's default
+       gamepad button mapping is positional against THIS list, not the
+       core's CONF_STR — a 4-entry list here shifts Start/Coin's
+       default gamepad assignment one bit position earlier than what
+       the core actually decodes as Start/Coin, so gamepad Coin lands
+       on the bit the core reads as Start and nothing reaches the
+       bit the core reads as Coin at all (keyboard is unaffected: it
+       decodes PS/2 scancodes directly in the core, bypassing this
+       positional mapping entirely). Found and fixed 2026-09-10 as the
+       root cause of "coin doesn't work with a gamepad, only keyboard,
+       on macross2 specifically (not tdragon2/gunnail/raphero)". -->
+  <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
 
   <!-- One <rom> per ROM_REGION in ROM_START(macross2), same order as
        ROM_START's own regions (see this file's own header note on the
