@@ -1,0 +1,44 @@
+<misterromdescription>
+  <name>Brick Zone (v6.0, Joystick)</name>
+  <setname>brickzn</setname>
+  <year>1992</year>
+  <manufacturer>SunA</manufacturer>
+  <parent>brickzn</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Suna8bit</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>vertical (cw)</rotation>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <about author="Suna8bit" source="MAME suna8.cpp/suna8_v.cpp"/>
+  <switches default="7F,FF">
+    <dip bits="0,1,2" name="Coinage" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="3,4,5" name="Difficulty" ids="Hardest,Very Hard,Harder,Normal,Moderate,Easy,Very Easy,Easiest"/>
+    <dip bits="6" name="Service / Invulnerability" ids="On,Off"/>
+    <dip bits="7" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off"/>
+    <dip bits="9" name="Cabinet" ids="Cocktail,Upright"/>
+    <dip bits="10" name="Play Together" ids="No,Yes"/>
+    <dip bits="11,12" name="Bonus Life" ids="50K,30K,10K,None"/>
+    <dip bits="13" name="Display" ids="No,Yes"/>
+    <dip bits="14,15" name="Lives" ids="5,4,2,3"/>
+  </switches>
+  <!-- Sequential destination image: gaps are explicit zero fills; offset/length select source-ROM slices only. -->
+  <rom index="0" zip="brickzn.zip" md5="a5f455089d25090dddbadeed44055ae9">
+    <part name="p9.m7" crc="bd7a3c01"/>
+    <part repeat="0x8000">00</part>
+    <part name="p8.k7" crc="ec3e266d"/>
+    <part name="p7.i7" crc="4dd88631"/>
+    <part repeat="0x30000">00</part>
+    <part name="10.o8" crc="4eba8178"/>
+    <part name="11.n10" crc="6c54161a"/>
+    <part name="p5.m5" crc="ca59e2f7"/>
+    <part name="p4.l5" crc="cc8fb330"/>
+    <part name="p3.k5" crc="2e4f194b"/>
+    <part name="p2.i5" crc="592d45ce"/>
+    <part name="p1.h5" crc="7a6bb583"/>
+    <part name="p6.h7" crc="bbf31081"/>
+  </rom>
+  <rom index="1"><part>05</part></rom>
+  <buttons names="Fire,Slow,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
+</misterromdescription>

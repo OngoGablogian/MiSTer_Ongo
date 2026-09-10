@@ -1,0 +1,48 @@
+<misterromdescription>
+  <name>Hard Head 2 (v2.0, Music Program v2.4)</name>
+  <setname>hardhea2</setname>
+  <year>1991</year>
+  <manufacturer>SunA</manufacturer>
+  <parent>hardhea2</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Suna8bit</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <about author="Suna8bit" source="MAME suna8.cpp/suna8_v.cpp"/>
+  <switches default="5F,F7">
+    <dip bits="0,1,2" name="Coinage" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="3,4,5" name="Difficulty" ids="Hardest,Very Hard,Harder,Normal,Moderate,Easy,Very Easy,Easiest"/>
+    <dip bits="6" name="Service Mode" ids="On,Off"/>
+    <dip bits="7" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off"/>
+    <dip bits="9" name="Cabinet" ids="Cocktail,Upright"/>
+    <dip bits="10" name="Play Together" ids="No,Yes"/>
+    <dip bits="11,12,13" name="Bonus Life" ids="200K/Every 100K,100K/Every 100K,100K/Every 50K,50K/Every 50K,50K,30K,10K,None"/>
+    <dip bits="14,15" name="Lives" ids="5,4,2,3"/>
+  </switches>
+  <!-- Sequential destination image: gaps are explicit zero fills; offset/length select source-ROM slices only. -->
+  <rom index="0" zip="hardhea2.zip" md5="86d15d24d06c2252e6f940cd6e32d888">
+    <part name="hrd-hd9" crc="69c4c307"/>
+    <part repeat="0x8000">00</part>
+    <part name="hrd-hd10" crc="77ec5b0a"/>
+    <part name="hrd-hd11" crc="12af8f8e"/>
+    <part name="hrd-hd12" crc="35d13212"/>
+    <part name="hrd-hd13" crc="3225e7d7"/>
+    <part repeat="0x30000">00</part>
+    <part name="hrd-hd14" crc="79a3be51"/>
+    <part repeat="0x8000">00</part>
+    <part name="hrd-hd15" crc="bcbd88c3"/>
+    <part name="hrd-hd1" crc="7e7b7a58"/>
+    <part name="hrd-hd2" crc="303ec802"/>
+    <part name="hrd-hd3" crc="3353b2c7"/>
+    <part name="hrd-hd4" crc="dbc1f9c1"/>
+    <part name="hrd-hd5" crc="f738c0af"/>
+    <part name="hrd-hd6" crc="bf90d3ca"/>
+    <part name="hrd-hd7" crc="992ce8cb"/>
+    <part name="hrd-hd8" crc="359597a4"/>
+  </rom>
+  <rom index="1"><part>04</part></rom>
+  <buttons names="Attack,Jump,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
+</misterromdescription>

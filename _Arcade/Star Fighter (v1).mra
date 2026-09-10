@@ -1,0 +1,54 @@
+<misterromdescription>
+  <name>Star Fighter (v1)</name>
+  <setname>starfigh</setname>
+  <year>1990</year>
+  <manufacturer>SunA</manufacturer>
+  <parent>starfigh</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Suna8bit</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>vertical (cw)</rotation>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <about author="Suna8bit" source="MAME suna8.cpp/suna8_v.cpp"/>
+  <switches default="5F,DF">
+    <dip bits="0,1,2" name="Coinage" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="3,4,5" name="Difficulty" ids="Hardest,Very Hard,Harder,Moderate,Normal,Easy,Very Easy,Easiest"/>
+    <dip bits="6" name="Service Mode" ids="On,Off"/>
+    <dip bits="7" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off"/>
+    <dip bits="9" name="Cabinet" ids="Cocktail,Upright"/>
+    <dip bits="10" name="Play Together" ids="No,Yes"/>
+    <dip bits="11,12,13" name="Bonus Life" ids="200K/Every 100K,100K/Every 100K,100K/Every 50K,50K/Every 50K,50K,30K,10K,None"/>
+    <dip bits="14,15" name="Lives" ids="5,4,2,3"/>
+  </switches>
+  <!-- Sequential destination image: gaps are explicit zero fills; offset/length select source-ROM slices only. -->
+  <rom index="0" zip="starfigh.zip" md5="fb0fed2f1959ccb34cc1a03fabfdd789">
+    <part name="starfgtr.l1" crc="f93802c6"/>
+    <part repeat="0x8000">00</part>
+    <part name="starfgtr.j1" crc="fcfcf08a"/>
+    <part name="starfgtr.i1" crc="6935fcdb"/>
+    <part name="starfgtr.l3" crc="50c072a4"/>
+    <part name="starfgtr.j3" crc="3fe3c714"/>
+    <part repeat="0x30000">00</part>
+    <part name="starfgtr.m8" crc="ae3b0691"/>
+    <part repeat="0x18000">00</part>
+    <part name="starfgtr.e4" crc="54c0ca3d"/>
+    <part name="starfgtr.d4" crc="4313ba40"/>
+    <part repeat="0x20000">00</part>
+    <part name="starfgtr.b4" crc="ad8d0f21"/>
+    <part name="starfgtr.a4" crc="6d8f74c8"/>
+    <part repeat="0x20000">00</part>
+    <part name="starfgtr.e6" crc="ceff00ff"/>
+    <part name="starfgtr.d6" crc="7aaa358a"/>
+    <part repeat="0x20000">00</part>
+    <part name="starfgtr.b6" crc="47d6049c"/>
+    <part name="starfgtr.a6" crc="4a33f6f3"/>
+    <part repeat="0x120000">00</part>
+    <part name="starfgtr.q10" crc="fa510e94"/>
+    <part repeat="0x8000">00</part>
+    <part name="82s129.5q" crc="10bfcebb"/>
+  </rom>
+  <rom index="1"><part>03</part></rom>
+  <buttons names="Shot,Bomb,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
+</misterromdescription>

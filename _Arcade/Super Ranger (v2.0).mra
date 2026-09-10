@@ -1,0 +1,52 @@
+<misterromdescription>
+  <name>Super Ranger (v2.0)</name>
+  <setname>sranger</setname>
+  <year>1988</year>
+  <manufacturer>SunA</manufacturer>
+  <parent>sranger</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Suna8bit</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <about author="Suna8bit" source="MAME suna8.cpp/suna8_v.cpp"/>
+  <switches default="E7,AF">
+    <dip bits="0,1,2" name="Coinage" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="3,4,5" name="Bonus Life" ids="100K/Every 200K,100K/Every 100K,100K/Every 50K,50K/Every 50K,50K,30K,10K,None"/>
+    <dip bits="6,7" name="Difficulty" ids="Hardest,Harder,Hard,Normal"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off"/>
+    <dip bits="9" name="Cabinet" ids="Cocktail,Upright"/>
+    <dip bits="10" name="Play Together" ids="No,Yes"/>
+    <dip bits="11" name="Allow Continue" ids="No,Yes"/>
+    <dip bits="12,13" name="Lives" ids="5,4,3,2"/>
+    <dip bits="14" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="15" name="Invulnerability" ids="On,Off"/>
+  </switches>
+  <!-- Sequential destination image: gaps are explicit zero fills; offset/length select source-ROM slices only. -->
+  <rom index="0" zip="sranger.zip" md5="c2993f40d904a801b14676a1423147dc">
+    <part name="1.e2" crc="4eef1ede"/>
+    <part repeat="0x8000">00</part>
+    <part name="2.f2" crc="ff65af29"/>
+    <part name="3.h2" crc="64e09436"/>
+    <part name="4.i2" crc="4346fae6" offset="0x8000" length="0x8000"/>
+    <part name="5.j2" crc="6a7ca1c3" offset="0x8000" length="0x8000"/>
+    <part name="4.i2" crc="4346fae6" offset="0x0000" length="0x8000"/>
+    <part name="5.j2" crc="6a7ca1c3" offset="0x0000" length="0x8000"/>
+    <part repeat="0x40000">00</part>
+    <part name="14.j13" crc="11c83aa1"/>
+    <part repeat="0x18000">00</part>
+    <part name="6.p5" crc="4f11fef3"/>
+    <part name="7.p6" crc="9f35dbfa"/>
+    <part name="8.p7" crc="f400db89"/>
+    <part name="9.p8" crc="fa2a11ea"/>
+    <part name="10.p9" crc="1b204d6b"/>
+    <part name="11.p10" crc="19037a7b"/>
+    <part name="12.p11" crc="c59c0ec7"/>
+    <part name="13.p12" crc="9809fee8"/>
+    <part repeat="0x1c0000">00</part>
+    <part name="15.e13" crc="28c2c87e"/>
+  </rom>
+  <rom index="1"><part>01</part></rom>
+  <buttons names="Jump,Shoot,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
+</misterromdescription>

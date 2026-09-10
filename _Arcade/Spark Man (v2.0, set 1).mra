@@ -1,0 +1,55 @@
+<misterromdescription>
+  <name>Spark Man (v2.0, set 1)</name>
+  <setname>sparkman</setname>
+  <year>1989</year>
+  <manufacturer>SunA</manufacturer>
+  <parent>sparkman</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Suna8bit</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <about author="Suna8bit" source="MAME suna8.cpp/suna8_v.cpp"/>
+  <switches default="5F,FF">
+    <dip bits="0,1,2" name="Coinage" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="3,4,5" name="Difficulty" ids="Hardest,Very Hard,Harder,Normal,Easiest,Easy,Very Easy,Moderate"/>
+    <dip bits="6" name="Service Mode" ids="On,Off"/>
+    <dip bits="7" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off"/>
+    <dip bits="9" name="Cabinet" ids="Cocktail,Upright"/>
+    <dip bits="10" name="Play Together" ids="No,Yes"/>
+    <dip bits="11,12,13" name="Bonus Life" ids="200K/Every 100K,100K/Every 100K,100K/Every 50K,50K/Every 50K,50K,30K,None,10K"/>
+    <dip bits="14,15" name="Lives" ids="5,4,2,3"/>
+  </switches>
+  <!-- Sequential destination image: gaps are explicit zero fills; offset/length select source-ROM slices only. -->
+  <rom index="0" zip="sparkman.zip" md5="b9dbbf159328c3ace3479716423d674b">
+    <part name="sparkman.e7" crc="d89c5780"/>
+    <part repeat="0x8000">00</part>
+    <part name="10.g7" crc="48b4a31e"/>
+    <part name="12.g8" crc="b8a4a557"/>
+    <part name="11.i7" crc="f5f38e1f"/>
+    <part name="13.i8" crc="e54eea25"/>
+    <part repeat="0x30000">00</part>
+    <part name="14.h11" crc="06822f3d"/>
+    <part repeat="0x18000">00</part>
+    <part name="p3.u1" crc="39dbd414"/>
+    <part name="p2.t1" crc="2e474203"/>
+    <part repeat="0x20000">00</part>
+    <part name="p1.r1" crc="7115cfe7"/>
+    <part repeat="0x38000">00</part>
+    <part name="p6.u2" crc="e6551db9"/>
+    <part name="p5.t2" crc="0df5da2a"/>
+    <part repeat="0x20000">00</part>
+    <part name="p4.r2" crc="6904bde2"/>
+    <part repeat="0x38000">00</part>
+    <part name="p7.u4" crc="17c16ce4"/>
+    <part repeat="0x70000">00</part>
+    <part name="p8.u6" crc="414222ea"/>
+    <part repeat="0x70000">00</part>
+    <part name="15.b10" crc="46c7d4d8"/>
+    <part name="16.b11" crc="d6823a62"/>
+  </rom>
+  <rom index="1"><part>02</part></rom>
+  <buttons names="Attack,Jump,Start 1P,Start 2P,Coin,Coin 2,Bomb" default="A,B,Start,R,Select,L,X"/>
+</misterromdescription>

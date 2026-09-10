@@ -1,0 +1,52 @@
+<misterromdescription>
+  <name>Hard Head</name>
+  <setname>hardhead</setname>
+  <year>1988</year>
+  <manufacturer>SunA</manufacturer>
+  <parent>hardhead</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Suna8bit</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <about author="Suna8bit" source="MAME suna8.cpp/suna8_v.cpp"/>
+  <switches default="FC,77">
+    <dip bits="0" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="1,2,3" name="Bonus Life" ids="200K/Every 100K,100K/Every 100K,100K/Every 50K,50K/Every 50K,50K,20K,10K,None"/>
+    <dip bits="4,5,6" name="Coinage" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="7" name="Invulnerability" ids="On,Off"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off"/>
+    <dip bits="9" name="Cabinet" ids="Cocktail,Upright"/>
+    <dip bits="10" name="Play Together" ids="No,Yes"/>
+    <dip bits="11,12" name="Lives" ids="5,4,3,2"/>
+    <dip bits="13,14,15" name="Difficulty" ids="Hardest,Very Hard,Harder,Normal,Moderate,Easy,Very Easy,Easiest"/>
+  </switches>
+  <!-- Sequential destination image: gaps are explicit zero fills; offset/length select source-ROM slices only. -->
+  <rom index="0" zip="hardhead.zip" md5="ea8f593b49422abad538c7a957f875e7">
+    <part name="p1" crc="c6147926"/>
+    <part repeat="0x8000">00</part>
+    <part name="p2" crc="faa2cf9a"/>
+    <part name="p3" crc="3d24755e"/>
+    <part name="p4" crc="0241ac79"/>
+    <part name="p7" crc="beba8313"/>
+    <part name="p8" crc="211a9342"/>
+    <part name="p9" crc="2ad430c4"/>
+    <part name="p10" crc="b6894517"/>
+    <part repeat="0x38000">00</part>
+    <part name="p13" crc="493c0b41"/>
+    <part repeat="0x18000">00</part>
+    <part name="p5" crc="e9aa6fba"/>
+    <part name="p5" crc="e9aa6fba"/>
+    <part name="p6" crc="15d5f5dd"/>
+    <part name="p6" crc="15d5f5dd"/>
+    <part name="p11" crc="055f4c29"/>
+    <part name="p11" crc="055f4c29"/>
+    <part name="p12" crc="9582e6db"/>
+    <part name="p12" crc="9582e6db"/>
+    <part repeat="0x1c0000">00</part>
+    <part name="p14" crc="41314ac1"/>
+  </rom>
+  <rom index="1"><part>00</part></rom>
+  <buttons names="Jump,Attack,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
+</misterromdescription>
