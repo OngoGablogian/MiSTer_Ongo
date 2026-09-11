@@ -86,7 +86,7 @@
   <!-- IN1: 3 buttons/player (nmk16.cpp:2906-2908, 2914-2916). IN0 also
        has COIN1/COIN2/SERVICE1/START1/START2 but no independent
        "Service" button beyond the DSW1 Service Mode toggle above. -->
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
+  <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="Y,B,A,X,Start,R"/>
 
   <!-- One <rom> per ROM_REGION in ROM_START(tdragon2), same order as
        docs/hw-bringup.md's own offset table. -->

@@ -12,31 +12,31 @@
   <rom index="0" zip="ddonpach.zip|ddonpachj.zip" md5="none" address="0x30000000">
     <!-- prog ROM -->
     <interleave output="16">
-      <part name="u27.bin" crc="2432ff9b" map="01" />
-      <part name="u26.bin" crc="4f3a914a" map="10" />
+      <part name="u27.bin" crc="2432ff9b" map="01"/>
+      <part name="u26.bin" crc="4f3a914a" map="10"/>
     </interleave>
 
     <!-- EEPROM -->
-    <part name="eeprom-ddonpach.bin" crc="315fb546" />
+    <part name="eeprom-ddonpach.bin" crc="315fb546"/>
 
     <!-- sound ROM -->
-    <part name="u6.bin" crc="9dfdafaf" />
-    <part name="u7.bin" crc="795b17d5" />
+    <part name="u6.bin" crc="9dfdafaf"/>
+    <part name="u7.bin" crc="795b17d5"/>
 
     <!-- layer 0 -->
-    <part name="u60.bin" crc="903096a7" />
+    <part name="u60.bin" crc="903096a7"/>
 
     <!-- layer 1 -->
-    <part name="u61.bin" crc="d89b7631" />
+    <part name="u61.bin" crc="d89b7631"/>
 
     <!-- layer 2 -->
-    <part name="u62.bin" crc="292bfb6b" />
+    <part name="u62.bin" crc="292bfb6b"/>
 
     <!-- sprites -->
-    <part name="u50.bin" crc="14b260ec" />
-    <part name="u51.bin" crc="e7ba8cce" />
-    <part name="u52.bin" crc="02492ee0" />
-    <part name="u53.bin" crc="cb4c10f0" />
+    <part name="u50.bin" crc="14b260ec"/>
+    <part name="u51.bin" crc="e7ba8cce"/>
+    <part name="u52.bin" crc="02492ee0"/>
+    <part name="u53.bin" crc="cb4c10f0"/>
 
     <!-- skip CRC -->
     <patch offset="0x00005410">60 00 00 0C</patch>
@@ -76,7 +76,7 @@
   </rom>
 
   <!-- NVRAM -->
-  <nvram index="2" size="128" />
+  <nvram index="2" size="128"/>
 
-  <buttons names="Shots/Laser,Spread/Laser Bomber,Full-Auto,-,Start,Coin,Pause" default="A,B,X,R,L,Start" />
+  <buttons names="Shots/Laser,Spread/Laser Bomber,Full-Auto,-,Start,Coin,Pause" default="A,B,X,R,L,Start"/>
 </misterromdescription>

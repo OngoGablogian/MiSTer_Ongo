@@ -12,25 +12,25 @@
   <rom index="0" zip="dfeveron.zip|feversos.zip" md5="none" address="0x30000000">
     <!-- prog ROM -->
     <interleave output="16">
-      <part name="cv01-u34.bin" crc="be87f19d" map="01" />
-      <part name="cv01-u33.bin" crc="e53a7db3" map="10" />
+      <part name="cv01-u34.bin" crc="be87f19d" map="01"/>
+      <part name="cv01-u33.bin" crc="e53a7db3" map="10"/>
     </interleave>
 
     <!-- EEPROM -->
-    <part name="eeprom-dfeveron.bin" crc="c3174959" />
+    <part name="eeprom-dfeveron.bin" crc="c3174959"/>
 
     <!-- sound ROM -->
-    <part name="cv01-u19.bin" crc="5f5514da" />
+    <part name="cv01-u19.bin" crc="5f5514da"/>
 
     <!-- layer 0 -->
-    <part name="cv01-u50.bin" crc="7a344417" />
+    <part name="cv01-u50.bin" crc="7a344417"/>
 
     <!-- layer 1 -->
-    <part name="cv01-u49.bin" crc="d21cdda7" />
+    <part name="cv01-u49.bin" crc="d21cdda7"/>
 
     <!-- sprites -->
-    <part name="cv01-u25.bin" crc="a6f6a95d" />
-    <part name="cv01-u26.bin" crc="32edb62a" />
+    <part name="cv01-u25.bin" crc="a6f6a95d"/>
+    <part name="cv01-u26.bin" crc="32edb62a"/>
 
     <!-- skip CRC -->
     <patch offset="0x00008d94">60 00 00 ce</patch>
@@ -61,7 +61,7 @@
   </rom>
 
   <!-- NVRAM -->
-  <nvram index="2" size="128" />
+  <nvram index="2" size="128"/>
 
-  <buttons names="Normal/Powerful Shot,Bomber,Full-Auto,-,Start,Coin,Pause" default="A,B,X,R,L,Start" />
+  <buttons names="Normal/Powerful Shot,Bomber,Full-Auto,-,Start,Coin,Pause" default="A,B,X,R,L,Start"/>
 </misterromdescription>

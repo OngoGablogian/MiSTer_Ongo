@@ -91,7 +91,7 @@
        positional mapping entirely). Found and fixed 2026-09-10 as the
        root cause of "coin doesn't work with a gamepad, only keyboard,
        on macross2 specifically (not tdragon2/gunnail/raphero)". -->
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
+  <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="Y,B,A,X,Start,R"/>
 
   <!-- One <rom> per ROM_REGION in ROM_START(macross2), same order as
        ROM_START's own regions (see this file's own header note on the

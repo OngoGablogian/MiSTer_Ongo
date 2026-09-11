@@ -1,0 +1,103 @@
+<!--
+  Power Instinct (Atlus, 1993) — the third game on the shared Family C
+  "Macross2" rbf (rtl/tdragon2/tdragon2_core.sv with game_powerins=1,
+  video_macross2.sv's powerins mode; see docs/hw-bringup.md "Power
+  Instinct").
+
+  Transcribed from mame/src/mame/nmk/nmk16.cpp:
+    - ROM_START(powerins)             lines 8994-9036
+    - GAME(... powerins ...)          line 10764 (ROT0, MACHINE_SUPPORTS_SAVE)
+    - INPUT_PORTS_START(powerins)     lines 3375-3465
+    - powerins(machine_config)        lines 5732-5758 (12 MHz 68000, 6 MHz
+      Z80, YM2203 1.5 MHz, 2x OKIM6295 4 MHz pin7 low, set_screen_midres)
+
+  ROM region -> SDRAM byte offset: the <part> order below IS the layout
+  the core expects when game_powerins=1 (tdragon2_core.sv BASE_WORD_*):
+    maincpu  0x000000 (0x100000, two ROM_LOAD16_WORD_SWAP files)
+    audiocpu 0x100000 (0x020000)
+    fgtile   0x120000 (0x020000 — MAME's region is 0x100000, the file 0x20000)
+    bgtile   0x140000 (0x280000, three files)
+    sprites  0x3C0000 (0x800000, eight ROM_LOAD16_WORD_SWAP files)
+    oki1     0xBC0000 (0x200000, two files)
+    oki2     0xDC0000 (0x200000, two files)
+  end 0xFC0000. Word-swapped regions need no reordering: the core rebuilds
+  16-bit words from the raw byte stream by parity (see tools/
+  mk_ioctl_stream.py). The two nmk_irq PROMs are fixed at synthesis
+  (powerins' 21.u71 is table 1 of roms/tdragon2_powerins_vtiming.hex).
+
+  Game select: <switches default="FF,FB,02"> — the third byte's bit 1
+  is the hidden game_powerins select (bit 0 = macross2, both clear =
+  tdragon2), read from the ioctl index-254 block by Macross2.sv. No
+  <dip> declares it, so it never appears in the OSD.
+
+  Buttons: P1_P2 has four buttons per player (bits 4-7). The shared
+  core's CONF_STR is "J1,Button 1,Button 2,Button 3,Button 4,Start,Coin",
+  and MiSTer maps a gamepad positionally against THIS list, so every
+  Macross2.rbf .mra declares the same six entries in the same order
+  (docs/hw-bringup.md, "gamepad Coin").
+
+  Horizontal (ROT0): no <rotation> tag. Picture: 320x224, the midres
+  window (visible x 60..379 of a 448-pixel 7 MHz line, MAME
+  set_screen_midres) — the core draws it inside its 512 x 8 MHz raster at
+  hcount 60..379, the same line period.
+-->
+<misterromdescription>
+  <name>Power Instinct (USA)</name>
+  <mratimestamp>202609110000</mratimestamp>
+  <mameversion>0270</mameversion>
+  <setname>powerins</setname>
+  <year>1993</year>
+  <manufacturer>Atlus</manufacturer>
+  <category>Fighting</category>
+  <rbf>Macross2</rbf>
+
+  <!-- DSW1 default 0xFF, DSW2 default 0xFB (nmk16.cpp defaults: Free Play
+       off, coinage 1C/1C, flip off; 1 chute, Join In off, Demo Sounds ON
+       (bit clear), Allow Continue on, blood red, normal time, difficulty
+       normal). Byte 0 = DSW1 at 0x100008 -> status[7:0], byte 1 = DSW2 at
+       0x10000A -> status[15:8]. Values are listed in bit-value order. -->
+  <switches default="FF,FB,02">
+    <dip bits="0" name="Free Play" ids="On,Off"/>
+    <dip bits="1,3" name="Coin B" ids="2C_1C (1 to cont.),1C_4C,3C_1C,1C_2C,4C_1C,1C_3C,2C_1C,1C_1C"/>
+    <dip bits="4,6" name="Coin A" ids="2C_1C (1 to cont.),1C_4C,3C_1C,1C_2C,4C_1C,1C_3C,2C_1C,1C_1C"/>
+    <dip bits="7" name="Flip Screen" ids="On,Off"/>
+    <dip bits="8" name="Coin Chutes" ids="2 Chutes,1 Chute"/>
+    <dip bits="9" name="Join In Mode" ids="On,Off"/>
+    <dip bits="10" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="11" name="Allow Continue" ids="Off,On"/>
+    <dip bits="12" name="Blood Color" ids="Blue,Red"/>
+    <dip bits="13" name="Game Time" ids="Short,Normal"/>
+    <dip bits="14,15" name="Difficulty" ids="Hardest,Easy,Hard,Normal"/>
+  </switches>
+
+  <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="Y,B,A,X,Start,R"/>
+
+  <rom index="0" zip="powerins.zip" md5="none">
+    <!-- maincpu, 0x100000 @ 0x000000 (2 files, ROM_LOAD16_WORD_SWAP) -->
+    <part crc="9825ea3d" name="93095-3a.u108"/>
+    <part crc="d3d7a782" name="93095-4.u109"/>
+    <!-- audiocpu, 0x020000 @ 0x100000 -->
+    <part crc="4b123cc6" name="93095-2.u90"/>
+    <!-- fgtile, 0x020000 @ 0x120000 -->
+    <part crc="6a579ee0" name="93095-1.u15"/>
+    <!-- bgtile, 0x280000 @ 0x140000 (3 files) -->
+    <part crc="b1371808" name="93095-5.u16"/>
+    <part crc="29c85d80" name="93095-6.u17"/>
+    <part crc="2dd76149" name="93095-7.u18"/>
+    <!-- sprites, 0x800000 @ 0x3C0000 (8 files, ROM_LOAD16_WORD_SWAP) -->
+    <part crc="35f3c2a3" name="93095-12.u116"/>
+    <part crc="1ebd45da" name="93095-13.u117"/>
+    <part crc="760d871b" name="93095-14.u118"/>
+    <part crc="d011be88" name="93095-15.u119"/>
+    <part crc="a9c16c9c" name="93095-16.u120"/>
+    <part crc="51b57288" name="93095-17.u121"/>
+    <part crc="b135e3f2" name="93095-18.u122"/>
+    <part crc="67695537" name="93095-19.u123"/>
+    <!-- oki1, 0x200000 @ 0xBC0000 (2 files) -->
+    <part crc="329ac6c5" name="93095-10.u48"/>
+    <part crc="75d6097c" name="93095-11.u49"/>
+    <!-- oki2, 0x200000 @ 0xDC0000 (2 files) -->
+    <part crc="f019bedb" name="93095-8.u46"/>
+    <part crc="adc83765" name="93095-9.u47"/>
+  </rom>
+</misterromdescription>
