@@ -55,6 +55,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
 | [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1543359831912616007)                |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
+| [Krull](https://www.patreon.com/bazset/posts/krull-1983-d-co-169209991)                                                        |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
 | [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-t-unit-167880978)                                                |

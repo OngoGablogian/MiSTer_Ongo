@@ -1,0 +1,54 @@
+
+<misterromdescription>
+	<name>Krull</name>
+	<mameversion>0228</mameversion>
+	<setname>krull</setname>
+	<mratimestamp>20201231150731</mratimestamp>
+	<year>1983</year>
+	<manufacturer>Gottlieb</manufacturer>
+	<category>Platform</category>
+	<rbf>Krull</rbf>
+	<buttons names="Service Select,Start 2P,Start 1P,Coin,Move Right,Move Left,Move Down,Move Up" default="A,Start,Select,R,X,Y,L,B"/>
+	<switches default="00">
+		<dip bits="0" name="Demo Sounds" ids="On,Off"></dip>
+		<dip bits="1" name="Difficulty" ids="Normal,Hard"></dip>
+		<dip bits="3" name="Lives" ids="3,5"></dip>
+		<dip bits="2,4" name="Coinage" ids="2C_1C,1C_1C,1C_2C,Free_Play"></dip>
+		<dip bits="5" name="Hexagon" ids="Roving,Stationary"></dip>
+		<dip bits="6,7" name="Bonus Life" ids="30k_60k,30k_80k,40k_90k,50k_125k"></dip>
+	</switches>
+	<rom index="1">
+		<part>3</part>
+	</rom>
+	<rom index="0" zip="krull.zip" md5="none">
+		<!-- no bg, used as ram -->
+		<part repeat="8192">00</part>
+
+		<!-- 4/5 roms, 8k each -->
+		<part name="gv-105_rom_0.c11-12" crc="a466afae"/>
+		<part name="gv-105_rom_1.c12-13" crc="1ad956a3"/>
+		<part name="gv-105_rom_2.c13-14" crc="b5fad94a"/>
+		<part name="gv-105_rom_3.c14-15" crc="14b0ee42"/>
+		<part name="gv-105_rom_4.c16" crc="2b696394"/>
+
+		<!-- foreground roms -->
+		<part name="gv-105_fg_0.k4" crc="7402dc19"/>
+		<part name="gv-105_fg_0.k4" crc="7402dc19"/>
+		<part name="gv-105_fg_1.k5" crc="7e3ad7b0"/>
+		<part name="gv-105_fg_1.k5" crc="7e3ad7b0"/>
+		<part name="gv-105_fg_2.k6" crc="25a24317"/>
+		<part name="gv-105_fg_2.k6" crc="25a24317"/>
+		<part name="gv-105_fg_3.k7-8" crc="82d77a45"/>
+		<part name="gv-105_fg_3.k7-8" crc="82d77a45"/>
+
+		<!-- sound -->
+		<part name="snd1.bin" crc="dd2b30b4"/>
+		<part name="snd2.bin" crc="8cab901b"/>
+
+		<!-- ram section used as rom (x2 to avoid additional jumper logic) -->
+		<part name="gv-105_ram_2.c7" crc="302feadf"/>
+		<part name="gv-105_ram_2.c7" crc="302feadf"/>
+		<part name="gv-105_ram_4.c9-10" crc="79355a60"/>
+		<part name="gv-105_ram_4.c9-10" crc="79355a60"/>
+	</rom>
+</misterromdescription>
