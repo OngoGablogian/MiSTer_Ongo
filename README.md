@@ -27,6 +27,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
+| [Blasteroids](https://misterfpga.org/viewtopic.php?t=10781)                                                                    |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                               |
