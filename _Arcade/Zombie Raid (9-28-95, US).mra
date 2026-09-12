@@ -1,0 +1,55 @@
+<misterromdescription>
+    <name>Zombie Raid (9/28/95, US)</name>
+    <setname>zombraid</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1995</year>
+    <manufacturer>American Sammy</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>1C</part></rom>
+
+    <rom index="0" zip="zombraid.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fy001003.3" crc="0b34b8f7" map="01"/>
+            <part name="fy001004.4" crc="71bfeb1a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="fy001002.103" crc="313fd68f" map="01"/>
+            <part name="fy001001.102" crc="a0f61f13" map="10"/>
+        </interleave>
+        <!-- gfx1 -->
+        <part name="fy001006.200" crc="e9ae99f7"/>
+        <!-- gfx2 -->
+        <interleave output="24">
+            <part name="fy001007.65" crc="b2fc2c81" offset="0x0" length="0x100000" map="001"/>
+            <part name="fy001008.66" crc="73d7b0e1" offset="0x0" length="0x200000" map="120"/>
+        </interleave>
+        <!-- gfx3 -->
+        <interleave output="24">
+            <part name="fy001009.67" crc="6bcca641" offset="0x0" length="0x100000" map="001"/>
+            <part name="fy001010.68" crc="8b40ed7a" offset="0x0" length="0x200000" map="120"/>
+        </interleave>
+        <!-- x1snd -->
+        <part name="fy001012.b" crc="fd30e102"/>
+        <part name="fy001011.a" crc="e3c431de"/>
+    </rom>
+
+    <switches default="FF,FD,FF" base="0">
+        <dip name="Coin A" bits="0,1,2" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="3,4,5" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="2 Coins to Start/1 to Continue" bits="6" ids="Yes,No"/>
+        <dip name="Vertical Screen Flip" bits="8" ids="On,Off"/>
+        <dip name="Horizontal Screen Flip" bits="9" ids="Off,On"/>
+        <dip name="Demo Sounds" bits="10" ids="Off,On"/>
+        <dip name="Difficulty" bits="11,12" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Allow Continue" bits="13" ids="Off,On"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Trigger,Reload,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+    <nvram index="4" size="256"/>
+</misterromdescription>
