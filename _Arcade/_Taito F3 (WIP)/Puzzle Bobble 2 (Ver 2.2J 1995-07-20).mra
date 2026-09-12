@@ -119,5 +119,5 @@
 
   <nvram index="254" size="256"/>
 
-  <buttons names="Shot,-,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+  <buttons names="Shot,Button 2,Button 3,Button 4,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,R,Select,L" count="4"/>
 </misterromdescription>

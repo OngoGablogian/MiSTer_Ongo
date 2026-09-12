@@ -106,5 +106,5 @@
   <!-- the 93C46 settings EEPROM: 64 words, saved to config/nvram/<mra>.nvm -->
   <nvram index="254" size="256"/>
 
-  <buttons names="Punch,Kick,-,-,-,-,Start,Coin,Service,Pause" default="A,B,R,L,Select,Start" count="2"/>
+  <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin,Service,Pause" default="Y,X,L,B,A,R,Start,Select,-" count="6"/>
 </misterromdescription>

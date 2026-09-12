@@ -12,8 +12,7 @@
   <joystick>8-way</joystick>
   <num_buttons>2</num_buttons>
 
-  <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Service,Pause"
-           default="A,B,R,L,Select,Start" count="2"/>
+  <buttons names="Shot,Bomb,Button 3,Button 4,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,R,Select,L" count="4"/>
 
   <!-- No DIP switches: F3 boards are configured from the service menu. -->
 
