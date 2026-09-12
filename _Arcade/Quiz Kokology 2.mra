@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Quiz Kokology 2</name>
+    <setname>qzkklgy2</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Tecmo</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>0B</part></rom>
+
+    <rom index="0" zip="qzkklgy2.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fn001001.106" crc="7bf8eb17" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="fn001003.107" crc="ee6ef111" map="12"/>
+        </interleave>
+        <!-- pad to 0x100000 -->
+        <part repeat="262144">00</part>
+        <!-- gfx1 -->
+        <part name="fn001004.100" crc="5ba139a2"/>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="fn001005.104" crc="95726a63" map="12"/>
+        </interleave>
+        <!-- x1snd -->
+        <part name="fn001006.105" crc="83f201e6"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Coin A" bits="0,1,2" ids="Free Play,2 Coins/3 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Unused" bits="3" ids="On,Off"/>
+        <dip name="Difficulty" bits="4,5" ids="Very Hard,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="6,7" ids="5,4,2,3"/>
+        <dip name="DS2-1&amp;2*" bits="8,9" ids="0,1,2,3"/>
+        <dip name="Highlight Right Answer (Cheat)" bits="10" ids="On,Off"/>
+        <dip name="DSW2-4" bits="11" ids="On,Off"/>
+        <dip name="DSW2-5" bits="12" ids="On,Off"/>
+        <dip name="Service Mode" bits="13" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+        <dip name="Flip Screen" bits="15" ids="On,Off"/>
+        <dip name="Skip Real DAT Rom Check?" bits="11" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,Start,Select,L,R" count="4"/>
+</misterromdescription>

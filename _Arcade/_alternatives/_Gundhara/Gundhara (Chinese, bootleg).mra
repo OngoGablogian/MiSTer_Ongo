@@ -1,0 +1,95 @@
+<misterromdescription>
+    <name>Gundhara (Chinese, bootleg?)</name>
+    <setname>gundharac</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1995</year>
+    <manufacturer>Banpresto</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>14</part></rom>
+
+    <rom index="0" zip="gundharac.zip|gundhara.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="bpgh-003.u3" crc="14e9970a" map="01"/>
+            <part name="bpgh-004.u4" crc="96dfc658" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="bpgh-002.103" crc="312f58e2" map="01"/>
+            <part name="bpgh-001.102" crc="8d23a23c" map="10"/>
+        </interleave>
+        <!-- gfx1 -->
+        <interleave output="16">
+            <part name="19.u140" crc="32d92c28" map="01"/>
+            <part name="23.u142" crc="ff44db9b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="21.u141" crc="1901dc08" map="01"/>
+            <part name="25.u143" crc="877289a2" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="18.u140-b" crc="4f023fb0" map="01"/>
+            <part name="22.u142-b" crc="6f3fe7e7" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="20.u141-b" crc="7f1932e0" map="01"/>
+            <part name="24.u143-b" crc="066a2e2b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="9.u144" crc="6b4a531f" map="01"/>
+            <part name="13.u146" crc="45be3df4" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="11.u145" crc="f5210aa5" map="01"/>
+            <part name="15.u147" crc="17003119" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="8.u144-b" crc="ad9d9338" map="01"/>
+            <part name="12.u146-b" crc="0fd4c062" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="10.u145-b" crc="7c5d12b9" map="01"/>
+            <part name="14.u147-b" crc="5a8af50f" map="10"/>
+        </interleave>
+        <!-- gfx2 -->
+        <interleave output="24">
+            <part name="bpgh-009.u65" crc="b768e666" map="001"/>
+            <part name="6.u150" crc="ba60eb98" map="010"/>
+            <part name="5.u148" crc="0c740f9b" map="100"/>
+        </interleave>
+        <!-- pad to 0xc00000 -->
+        <part repeat="524288">00</part>
+        <!-- gfx3 -->
+        <interleave output="24">
+            <part name="16.u152" crc="5ccc500b" map="001"/>
+            <part name="28.u166" crc="8a650a4e" map="010"/>
+            <part name="26.u164" crc="be3ccaba" map="100"/>
+        </interleave>
+        <interleave output="24">
+            <part name="17.u153" crc="5586d086" map="001"/>
+            <part name="29.u167" crc="453c3d3f" map="010"/>
+            <part name="27.u165" crc="47994ff0" map="100"/>
+        </interleave>
+        <!-- pad to 0x1000000 -->
+        <part repeat="1048576">00</part>
+        <!-- x1snd -->
+        <part name="30.u69" crc="3111a98a"/>
+        <part name="31.u70" crc="30cb2524"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="2,3" ids="5,4,2,3"/>
+        <dip name="Bonus Life" bits="4,5" ids="None,400K,200K/Every 200K,200K"/>
+        <dip name="Demo Sounds" bits="6" ids="Off,On"/>
+        <dip name="Service Mode" bits="7" ids="On,Off"/>
+        <dip name="Coin A" bits="8,9,10,11" ids="Free Play,4 Coins/3 Credits,4 Coins/1 Credit,3 Coins/4 Credits,3 Coins/2 Credits,3 Coins/1 Credit,2C_5C,2 Coins/3 Credits,2 Coins/1 Credit,1C_7C,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="12,13" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Language" bits="14,15" ids="English,-,-,Japanese"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>

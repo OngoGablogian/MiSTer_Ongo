@@ -1,0 +1,55 @@
+<misterromdescription>
+    <name>Mad Shark</name>
+    <setname>madshark</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Allumer</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>19</part></rom>
+
+    <rom index="0" zip="madshark.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fq001002.201" crc="4286a811" map="01"/>
+            <part name="fq001001.200" crc="38bfa0ad" map="10"/>
+        </interleave>
+        <!-- pad to 0x200000 -->
+        <part repeat="1048576">00</part>
+        <!-- gfx1 -->
+        <part name="fq001004.202" crc="e56a1b5e" offset="0x100000" length="0x100000"/>
+        <part name="fq001004.202" crc="e56a1b5e" offset="0x0" length="0x100000"/>
+        <!-- gfx2 -->
+        <interleave output="24">
+            <part name="fq001005.205" crc="5f6c6d4a" offset="0x0" length="0x80000" map="001"/>
+            <part name="fq001006.152" crc="3bc5e8e4" offset="0x0" length="0x100000" map="120"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="2621440">00</part>
+        <!-- gfx3 -->
+        <interleave output="24">
+            <part name="fq001005.205" crc="5f6c6d4a" offset="0x80000" length="0x80000" map="001"/>
+            <part name="fq001006.152" crc="3bc5e8e4" offset="0x100000" length="0x100000" map="120"/>
+        </interleave>
+        <!-- pad to 0xa00000 -->
+        <part repeat="524288">00</part>
+        <!-- x1snd -->
+        <part name="fq001007.26" crc="e4b33c13"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Lives" bits="0,1" ids="5,4,2,3"/>
+        <dip name="Coin A" bits="2,3,4" ids="1 Coin/4 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="5,6,7" ids="1 Coin/4 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="9" ids="Off,On"/>
+        <dip name="Bonus Life" bits="11,12" ids="No,1000k 2000k,1500k 3000k,1000k"/>
+        <dip name="Difficulty" bits="13,14" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

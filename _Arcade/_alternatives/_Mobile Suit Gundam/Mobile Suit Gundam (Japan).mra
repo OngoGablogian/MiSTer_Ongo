@@ -1,0 +1,59 @@
+<misterromdescription>
+    <name>Mobile Suit Gundam (Japan)</name>
+    <setname>msgundam1</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Banpresto / Allumer</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>0F</part></rom>
+
+    <rom index="0" zip="msgundam1.zip|msgundam.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fa002002.u25" crc="dee3b083" map="12"/>
+        </interleave>
+        <part repeat="524288">00</part>
+        <interleave output="16">
+            <part name="fa001001.u20" crc="fca139d0" map="12"/>
+        </interleave>
+        <!-- gfx1 -->
+        <part name="fa001008.u21" crc="e7accf48"/>
+        <part name="fa001007.u22" crc="793198a6"/>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="fa001006.u23" crc="3b60365c" map="12"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="1048576">00</part>
+        <!-- gfx3 -->
+        <interleave output="16">
+            <part name="fa001005.u24" crc="8cd7ff86" map="12"/>
+        </interleave>
+        <!-- pad to 0xa00000 -->
+        <part repeat="1572864">00</part>
+        <!-- x1snd -->
+        <part name="fa001004.u26" crc="b965f07c"/>
+    </rom>
+
+    <switches default="FF,FF,7F" base="0">
+        <dip name="Demo Sounds" bits="0" ids="Off,On"/>
+        <dip name="Difficulty" bits="1,2" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Unknown 1-4" bits="3" ids="On,Off"/>
+        <dip name="Flip Screen" bits="4" ids="On,Off"/>
+        <dip name="Memory Check" bits="5" ids="On,Off"/>
+        <dip name="Unknown 1-7" bits="6" ids="On,Off"/>
+        <dip name="Service Mode" bits="7" ids="On,Off"/>
+        <dip name="Coin A" bits="8,9,10" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="11,12,13" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Unknown 2-7" bits="14" ids="On,Off"/>
+        <dip name="Free Play" bits="15" ids="On,Off"/>
+        <dip name="Language" bits="23" ids="Japanese,English"/>
+        <dip name="Language" bits="23" ids="Japanese,-"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

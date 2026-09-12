@@ -1,0 +1,57 @@
+<misterromdescription>
+    <name>Eight Forces</name>
+    <setname>eightfrc</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1994</year>
+    <manufacturer>Tecmo</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>10</part></rom>
+
+    <rom index="0" zip="eightfrc.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="uy2-u4.u3" crc="f1f249c5" map="01"/>
+            <part name="uy2-u3.u4" crc="6f2d8618" map="10"/>
+        </interleave>
+        <part repeat="1572864">00</part>
+        <!-- gfx1 -->
+        <part name="u64.bin" crc="f561ff2e"/>
+        <part name="u63.bin" crc="4c3f8366"/>
+        <!-- pad to 0x600000 -->
+        <part repeat="3145728">00</part>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="u66.bin" crc="6fad2b7f" map="12"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="1048576">00</part>
+        <!-- gfx3 -->
+        <interleave output="16">
+            <part name="u68.bin" crc="c17aad22" map="12"/>
+        </interleave>
+        <!-- pad to 0xa00000 -->
+        <part repeat="1048576">00</part>
+        <!-- x1snd -->
+        <part name="u70.bin" crc="dfdb67a3"/>
+        <part name="u69.bin" crc="82ec08f1"/>
+    </rom>
+
+    <switches default="7B,FF,FF" base="0">
+        <dip name="Service Mode" bits="0" ids="On,Off"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="2" ids="On,Off"/>
+        <dip name="Difficulty" bits="3,4" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="5,6" ids="5,4,2,3"/>
+        <dip name="Language" bits="7" ids="English,Japanese"/>
+        <dip name="Coin A" bits="8,9,10" ids="Free Play,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="11,12,13" ids="Free Play,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Shared Credits" bits="14" ids="Off,On"/>
+        <dip name="Credits To Start" bits="15" ids="2,1"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

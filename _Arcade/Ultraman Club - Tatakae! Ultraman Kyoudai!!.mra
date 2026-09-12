@@ -1,0 +1,43 @@
+<misterromdescription>
+    <name>Ultraman Club - Tatakae! Ultraman Kyoudai!!</name>
+    <setname>umanclub</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1992</year>
+    <manufacturer>Banpresto</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>04</part></rom>
+
+    <rom index="0" zip="umanclub.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="uw001006.u48" crc="3dae1e9d" map="01"/>
+            <part name="uw001007.u49" crc="5c21e702" map="10"/>
+        </interleave>
+        <!-- pad to 0x100000 -->
+        <part repeat="786432">00</part>
+        <!-- gfx1 -->
+        <part name="bp-u-002.u2" crc="936cbaaa"/>
+        <part name="bp-u-001.u1" crc="87813c48"/>
+        <!-- pad to 0x300000 -->
+        <part repeat="1048576">00</part>
+        <!-- x1snd -->
+        <part name="uw003.u13" crc="e2f718eb"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Lives" bits="0,1" ids="4,3,1,2"/>
+        <dip name="Difficulty" bits="2,3" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Coinage" bits="4,5,6,7" ids="Free Play,8 Coins/3 Credits,5 Coins/3 Credits,3 Coins/2 Credits,2 Coins/3 Credits,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,6 Coins/1 Credit,5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="9" ids="Off,On"/>
+        <dip name="Unknown DSW2 - 3*" bits="10" ids="On,Off"/>
+        <dip name="Stage Select (Cheat)" bits="11" ids="On,Off"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

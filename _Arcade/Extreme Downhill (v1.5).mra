@@ -1,0 +1,57 @@
+<misterromdescription>
+    <name>Extreme Downhill (v1.5)</name>
+    <setname>extdwnhl</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1995</year>
+    <manufacturer>Sammy Industries Japan</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>17</part></rom>
+
+    <rom index="0" zip="extdwnhl.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fw001002.201" crc="24d21924" map="01"/>
+            <part name="fw001001.200" crc="fb12a28b" map="10"/>
+        </interleave>
+        <!-- pad to 0x200000 -->
+        <part repeat="1048576">00</part>
+        <!-- gfx1 -->
+        <part name="fw001003.202" crc="ac9b31d5"/>
+        <!-- gfx2 -->
+        <interleave output="24">
+            <part name="fw001005.205" crc="5c33b2f1" offset="0x0" length="0x100000" map="001"/>
+            <part name="fw001004.206" crc="0dcb1d72" offset="0x0" length="0x200000" map="120"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+        <!-- gfx3 -->
+        <interleave output="16">
+            <part name="fw001006.152" crc="d00e8ddd" map="12"/>
+        </interleave>
+        <!-- x1snd -->
+        <part name="fw001007.026" crc="16d84d7a" offset="0x80000" length="0x80000"/>
+        <part name="fw001007.026" crc="16d84d7a" offset="0x0" length="0x80000"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Coin A" bits="0,1,2" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="3,4,5" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Continue Coin" bits="6" ids="Half Continue: Start 2C / Continue 1C,Normal: Start 1C / Continue 1C"/>
+        <dip name="Game Mode" bits="7" ids="Semi-Finals &amp; Finals,Finals Only"/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="9" ids="Off,On"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Free Play" bits="12" ids="On,Off"/>
+        <dip name="Cabinet" bits="13" ids="Cocktail,Upright"/>
+        <dip name="Controls" bits="14" ids="1,2"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+        <dip name="Country" bits="20,21" ids="Japan,USA,-,World"/>
+        <dip name="Unused" bits="22" ids="On,Off"/>
+        <dip name="Unused" bits="23" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
+</misterromdescription>

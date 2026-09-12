@@ -1,0 +1,54 @@
+<misterromdescription>
+    <name>Magical Speed</name>
+    <setname>magspeed</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1994</year>
+    <manufacturer>Allumer</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>13</part></rom>
+
+    <rom index="0" zip="magspeed.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fu001002.201" crc="bdeb3fcc" map="01"/>
+            <part name="fu001001.200" crc="9b873d46" map="10"/>
+        </interleave>
+        <part repeat="524288">00</part>
+        <!-- pad to 0x200000 -->
+        <part repeat="1048576">00</part>
+        <!-- gfx1 -->
+        <part name="fu001004.21" crc="7582c5a8"/>
+        <part name="fu001005.22" crc="fd4b1ff6"/>
+        <!-- pad to 0x600000 -->
+        <part repeat="2097152">00</part>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="fu001006.152" crc="70855139" offset="0x0" length="0x80000" map="12"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="1572864">00</part>
+        <!-- gfx3 -->
+        <interleave output="16">
+            <part name="fu001006.152" crc="70855139" offset="0x80000" length="0x80000" map="12"/>
+        </interleave>
+        <!-- pad to 0xa00000 -->
+        <part repeat="1572864">00</part>
+        <!-- x1snd -->
+        <part name="fu001007.26" crc="173463c2"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Coinage" bits="0,1,2,3" ids="Free Play,1 Coin/3 Credits,2 Coins/3 Credits,4 Coins/1 Credit,5 Coins/3 Credits,6 Coins/1 Credit,1 Coin/5 Credits,2 Coins/1 Credit,8 Coins/3 Credits,1 Coin/2 Credits,1 Coin/6 Credits,3 Coins/1 Credit,3 Coins/2 Credits,5 Coins/1 Credit,1 Coin/4 Credits,1 Coin/1 Credit"/>
+        <dip name="Difficulty" bits="4,5" ids="Hardest,Easy,Hard,Normal"/>
+        <dip name="Number of Rounds" bits="6,7" ids="Unused,1,Unused,2"/>
+        <dip name="Service Mode" bits="8" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+        <dip name="Flip Screen" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Card 1,Card 2,Card 3,Card 4,Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select,L,R" count="6"/>
+</misterromdescription>

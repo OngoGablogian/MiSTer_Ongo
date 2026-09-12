@@ -1,0 +1,55 @@
+<misterromdescription>
+    <name>War of Aero - Project MEIOU</name>
+    <setname>wrofaero</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Yang Cheng</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>0E</part></rom>
+
+    <rom index="0" zip="wrofaero.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="u3.bin" crc="9b896a97" map="01"/>
+            <part name="u4.bin" crc="dda84846" map="10"/>
+        </interleave>
+        <part repeat="1572864">00</part>
+        <!-- gfx1 -->
+        <part name="u64.bin" crc="f06ccd78"/>
+        <part name="u63.bin" crc="2a602a1b"/>
+        <!-- pad to 0x600000 -->
+        <part repeat="3145728">00</part>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="u66.bin" crc="c9fc6a0c" map="12"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="1572864">00</part>
+        <!-- gfx3 -->
+        <interleave output="16">
+            <part name="u68.bin" crc="25c0c483" map="12"/>
+        </interleave>
+        <!-- pad to 0xa00000 -->
+        <part repeat="1572864">00</part>
+        <!-- x1snd -->
+        <part name="u69.bin" crc="957ecd41"/>
+        <part name="u70.bin" crc="8d756fdf"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Lives" bits="0,1" ids="5,4,2,3"/>
+        <dip name="Difficulty" bits="2,3" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Coinage" bits="4,5,6,7" ids="Free Play,8 Coins/3 Credits,5 Coins/3 Credits,3 Coins/2 Credits,2 Coins/3 Credits,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,6 Coins/1 Credit,5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="9" ids="Off,On"/>
+        <dip name="Unknown 1-3*" bits="10" ids="On,Off"/>
+        <dip name="Stage &amp; Weapon Select (Cheat)" bits="11" ids="On,Off"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>

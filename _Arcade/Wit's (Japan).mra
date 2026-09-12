@@ -1,0 +1,56 @@
+<misterromdescription>
+    <name>Wit's (Japan)</name>
+    <setname>wits</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1989</year>
+    <manufacturer>Athena (Visco license)</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>02</part></rom>
+
+    <rom index="0" zip="wits.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="un001001.u1" crc="416c567e" map="01"/>
+            <part name="un001002.u4" crc="497a3fa6" map="10"/>
+        </interleave>
+        <!-- pad to 0x100000 -->
+        <part repeat="983040">00</part>
+        <!-- gfx1 -->
+        <interleave output="16">
+            <part name="un001008.7l" crc="1d5d0b2b" map="01"/>
+            <part name="un001007.5l" crc="9e1e6d51" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="un001006.4l" crc="98a980d4" map="01"/>
+            <part name="un001005.2l" crc="6f2ce3c0" map="10"/>
+        </interleave>
+        <!-- pad to 0x300000 -->
+        <part repeat="1572864">00</part>
+        <!-- x1snd -->
+        <part name="un001004.12a" crc="a15ff938"/>
+        <part name="un001003.10a" crc="3f4b9e55"/>
+    </rom>
+
+    <switches default="FF,FF,7F" base="0">
+        <dip name="Cabinet" bits="0" ids="Cocktail,Upright"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="2" ids="Every 7th Loop,Every 3rd Loop"/>
+        <dip name="Service Mode" bits="3" ids="On,Off"/>
+        <dip name="Coin A" bits="4,5" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="6,7" ids="1 Coin/6 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Bonus Life" bits="10,11" ids="400k,300k/600k,150k/350k,200k/500k"/>
+        <dip name="Lives" bits="12,13" ids="1,2,5,3"/>
+        <dip name="Play Mode" bits="14" ids="4 Players,2 Players"/>
+        <dip name="CPU Player During Multi-Player Game" bits="15" ids="No,Yes"/>
+        <dip name="Unknown 3-4*" bits="20" ids="On,Off"/>
+        <dip name="Unknown 3-5*" bits="21" ids="On,Off"/>
+        <dip name="License" bits="22,23" ids="Athena (Japan Only),Visco (Japan Only),Seta U.S.A,Romstar"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

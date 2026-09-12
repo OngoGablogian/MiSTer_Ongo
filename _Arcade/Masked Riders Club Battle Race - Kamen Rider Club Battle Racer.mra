@@ -1,0 +1,62 @@
+<misterromdescription>
+    <name>Masked Riders Club Battle Race / Kamen Rider Club Battle Racer</name>
+    <setname>kamenrid</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Banpresto</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>12</part></rom>
+
+    <rom index="0" zip="kamenrid.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fj001003.25" crc="9b65d1b9" map="12"/>
+        </interleave>
+        <!-- pad to 0x200000 -->
+        <part repeat="1572864">00</part>
+        <!-- gfx1 -->
+        <part name="fj001005.21" crc="5d031333"/>
+        <part name="fj001006.22" crc="cf28eb78"/>
+        <!-- pad to 0x600000 -->
+        <part repeat="2097152">00</part>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="fj001007.152" crc="d9ffe80b" offset="0x0" length="0x40000" map="12"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="1835008">00</part>
+        <!-- gfx3 -->
+        <interleave output="16">
+            <part name="fj001007.152" crc="d9ffe80b" offset="0x40000" length="0x40000" map="12"/>
+        </interleave>
+        <!-- pad to 0xa00000 -->
+        <part repeat="1835008">00</part>
+        <!-- x1snd -->
+        <part name="fj001008.26" crc="45e2b329"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Coinage" bits="0,1,2,3" ids="Free Play,1 Coin/3 Credits,2 Coins/3 Credits,4 Coins/1 Credit,5 Coins/3 Credits,6 Coins/1 Credit,1 Coin/5 Credits,2 Coins/1 Credit,8 Coins/3 Credits,1 Coin/2 Credits,1 Coin/6 Credits,3 Coins/1 Credit,3 Coins/2 Credits,5 Coins/1 Credit,1 Coin/4 Credits,1 Coin/1 Credit"/>
+        <dip name="Difficulty" bits="4,5" ids="Hardest,Easy,Hard,Normal"/>
+        <dip name="Unused" bits="6" ids="On,Off"/>
+        <dip name="Unused" bits="7" ids="On,Off"/>
+        <dip name="Service Mode" bits="8" ids="On,Off"/>
+        <dip name="Unused" bits="9" ids="On,Off"/>
+        <dip name="Unused" bits="10" ids="On,Off"/>
+        <dip name="Unused" bits="11" ids="On,Off"/>
+        <dip name="Unused" bits="12" ids="On,Off"/>
+        <dip name="Unused" bits="13" ids="On,Off"/>
+        <dip name="Intro Music" bits="14" ids="Off,On"/>
+        <dip name="Flip Screen" bits="15" ids="On,Off"/>
+        <dip name="Unused" bits="20" ids="On,Off"/>
+        <dip name="Unused" bits="21" ids="On,Off"/>
+        <dip name="Unused" bits="22" ids="On,Off"/>
+        <dip name="Country" bits="23" ids="Japan,USA"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

@@ -1,0 +1,38 @@
+<misterromdescription>
+    <name>Athena no Hatena?</name>
+    <setname>atehate</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Athena</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>06</part></rom>
+
+    <rom index="0" zip="atehate.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fs001001.evn" crc="4af1f273" map="01"/>
+            <part name="fs001002.odd" crc="c7ca7a85" map="10"/>
+        </interleave>
+        <!-- gfx1 -->
+        <part name="fs001003.gfx" crc="8b17e431"/>
+        <!-- x1snd -->
+        <part name="fs001004.pcm" crc="f9344ce5"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Flip Screen" bits="0" ids="On,Off"/>
+        <dip name="Service Mode" bits="1" ids="On,Off"/>
+        <dip name="Difficulty" bits="2,3" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="4,5" ids="2,4,5,3"/>
+        <dip name="Bonus Life" bits="6,7" ids="20K Only,30K/Every 40K,20K/Every 30K,None"/>
+        <dip name="Coin A" bits="8,9,10" ids="Free Play,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="11,12,13" ids="Free Play,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,Start,Select,L,R" count="4"/>
+</misterromdescription>

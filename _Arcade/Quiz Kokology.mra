@@ -1,0 +1,57 @@
+<misterromdescription>
+    <name>Quiz Kokology</name>
+    <setname>qzkklogy</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1992</year>
+    <manufacturer>Tecmo</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>0A</part></rom>
+
+    <rom index="0" zip="qzkklogy.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="3.u27" crc="b8c27cde" map="01"/>
+            <part name="1.u9" crc="ce01cd54" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="4.u33" crc="4f5c554c" map="01"/>
+            <part name="2.u17" crc="65fa1b8d" map="10"/>
+        </interleave>
+        <part repeat="262144">00</part>
+        <!-- pad to 0x100000 -->
+        <part repeat="262144">00</part>
+        <!-- gfx1 -->
+        <part name="t2709u32.u32" crc="900f196c"/>
+        <part name="t2709u26.u26" crc="416ac849"/>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="t2709u42.u39" crc="194d5704" map="01"/>
+            <part name="t2709u39.u42" crc="6f95a76d" map="10"/>
+        </interleave>
+        <!-- pad to 0x400000 -->
+        <part repeat="1048576">00</part>
+        <!-- x1snd -->
+        <part name="t2709u47.u47" crc="0ebdad40"/>
+        <part name="t2709u55.u55" crc="43960c68"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Coin A" bits="0,1,2" ids="Free Play,2 Coins/3 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Unused" bits="3" ids="On,Off"/>
+        <dip name="Difficulty" bits="4,5" ids="Very Hard,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="6,7" ids="5,4,2,3"/>
+        <dip name="DS2-1&amp;2*" bits="8,9" ids="0,1,2,3"/>
+        <dip name="Highlight Right Answer (Cheat)" bits="10" ids="On,Off"/>
+        <dip name="DSW2-4" bits="11" ids="On,Off"/>
+        <dip name="DSW2-5" bits="12" ids="On,Off"/>
+        <dip name="Service Mode" bits="13" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+        <dip name="Flip Screen" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Pause (Cheat),-,Start,Coin,Pause,Service" default="A,B,X,Y,L,Start,Select,L,R" count="5"/>
+</misterromdescription>

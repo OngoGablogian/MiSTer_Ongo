@@ -1,0 +1,55 @@
+<misterromdescription>
+    <name>Sokonuke Taisen Game (Japan)</name>
+    <setname>sokonuke</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1995</year>
+    <manufacturer>Sammy Industries</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>18</part></rom>
+
+    <rom index="0" zip="sokonuke.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="001-001.bin" crc="9d0aa3ca" map="01"/>
+            <part name="001-002.bin" crc="96f2ef5f" map="10"/>
+        </interleave>
+        <!-- pad to 0x200000 -->
+        <part repeat="1048576">00</part>
+        <!-- gfx1 -->
+        <part name="001-003.bin" crc="ab9ba897"/>
+        <!-- gfx2 -->
+        <interleave output="24">
+            <part name="001-005.bin" crc="2b95d68d" offset="0x0" length="0x80000" map="001"/>
+            <part name="001-004.bin" crc="34ca3540" offset="0x0" length="0x100000" map="120"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="2621440">00</part>
+        <!-- gfx3 -->
+        <part repeat="256">00</part>
+        <!-- pad to 0xa00000 -->
+        <part repeat="2096896">00</part>
+        <!-- x1snd -->
+        <part name="001-006.bin" crc="ecfac767" offset="0x80000" length="0x80000"/>
+        <part name="001-006.bin" crc="ecfac767" offset="0x0" length="0x80000"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Coin A" bits="0,1,2" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="3,4,5" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Cheap Continue" bits="6" ids="Yes,No"/>
+        <dip name="Unknown" bits="7" ids="On,Off"/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="9" ids="Off,On"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Free Play" bits="12" ids="On,Off"/>
+        <dip name="DSW2 Switch 6*" bits="13" ids="On,Off"/>
+        <dip name="Unknown" bits="14" ids="On,Off"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
+</misterromdescription>

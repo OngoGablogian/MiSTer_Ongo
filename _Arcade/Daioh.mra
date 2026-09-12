@@ -1,0 +1,56 @@
+<misterromdescription>
+    <name>Daioh</name>
+    <setname>daioh</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Athena</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>0C</part></rom>
+
+    <rom index="0" zip="daioh.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fg001001.u3" crc="e1ef3007" map="01"/>
+            <part name="fg001002.u4" crc="5e3481f9" map="10"/>
+        </interleave>
+        <!-- pad to 0x200000 -->
+        <part repeat="1048576">00</part>
+        <!-- gfx1 -->
+        <part name="fg-001-004" crc="9ab0533e"/>
+        <part name="fg-001-003" crc="1c9d51e2"/>
+        <!-- pad to 0x600000 -->
+        <part repeat="2097152">00</part>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="fg-001-005" crc="c25159b9" map="12"/>
+        </interleave>
+        <!-- gfx3 -->
+        <interleave output="16">
+            <part name="fg-001-006" crc="2052c39a" map="12"/>
+        </interleave>
+        <!-- x1snd -->
+        <part name="fg-001-007" crc="4a2fe9e0"/>
+    </rom>
+
+    <switches default="FF,7F,FF" base="0">
+        <dip name="Flip Screen" bits="0" ids="On,Off"/>
+        <dip name="Service Mode" bits="1" ids="On,Off"/>
+        <dip name="Difficulty" bits="2,3" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="4,5" ids="1,2,5,3"/>
+        <dip name="Bonus Life" bits="6,7" ids="1000k Only,800k and 2000k only,300k and every 800k,500k and every 1000k"/>
+        <dip name="Coin A" bits="8,9,10" ids="Free Play,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="11,12,13" ids="Free Play,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+        <dip name="Auto Shot" bits="15" ids="On,Off"/>
+        <dip name="Unused" bits="20" ids="On,Off"/>
+        <dip name="Unused" bits="21" ids="On,Off"/>
+        <dip name="Unused" bits="22" ids="On,Off"/>
+        <dip name="Country" bits="23" ids="Japan (2 buttons),USA (6 buttons)"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select,L,R" count="6"/>
+</misterromdescription>

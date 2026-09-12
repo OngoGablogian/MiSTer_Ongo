@@ -1,0 +1,86 @@
+<misterromdescription>
+    <name>Dragon Unit / Castle of Dragon</name>
+    <setname>drgnunit</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1989</year>
+    <manufacturer>Athena / Seta</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>08</part></rom>
+
+    <rom index="0" zip="drgnunit.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="prg-e.bin" crc="728447df" map="01"/>
+            <part name="prg-o.bin" crc="b2f58ecf" map="10"/>
+        </interleave>
+        <part repeat="524288">00</part>
+        <!-- pad to 0x100000 -->
+        <part repeat="262144">00</part>
+        <!-- gfx1 -->
+        <interleave output="16">
+            <part name="obj-2.bin" crc="d7f6ab5a" map="01"/>
+            <part name="obj-1.bin" crc="53a95b13" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="obj-6.bin" crc="80b801f7" map="01"/>
+            <part name="obj-5.bin" crc="6b87bc20" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="obj-4.bin" crc="60d17771" map="01"/>
+            <part name="obj-3.bin" crc="0bccd4d5" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="obj-8.bin" crc="826c1543" map="01"/>
+            <part name="obj-7.bin" crc="cbaa7f6a" map="10"/>
+        </interleave>
+        <!-- gfx2 -->
+        <interleave output="16">
+            <part name="scr-1o.bin" crc="671525db" map="01"/>
+            <part name="scr-1e.bin" crc="dc9cd8c9" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="scr-2o.bin" crc="2a3f2ed8" map="01"/>
+            <part name="scr-2e.bin" crc="b6126b41" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="scr-3o.bin" crc="4d33a92d" map="01"/>
+            <part name="scr-3e.bin" crc="1592b8c2" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="scr-4o.bin" crc="79a0aa61" map="01"/>
+            <part name="scr-4e.bin" crc="8201681c" map="10"/>
+        </interleave>
+        <!-- pad to 0x400000 -->
+        <part repeat="1048576">00</part>
+        <!-- x1snd -->
+        <part name="snd-1.bin" crc="8f47bd0d"/>
+        <part name="snd-2.bin" crc="65c40ef5"/>
+        <part name="snd-3.bin" crc="71fbd54e"/>
+        <part name="snd-4.bin" crc="ac50133f"/>
+        <part name="snd-5.bin" crc="70652f2c"/>
+        <part name="snd-6.bin" crc="10a1039d"/>
+        <part name="snd-7.bin" crc="decbc8b0"/>
+        <part name="snd-8.bin" crc="3ac51bee"/>
+    </rom>
+
+    <switches default="FF,FE,FF" base="0">
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="2" ids="1 of 8 Scenes,1 of 4 Scenes"/>
+        <dip name="Service Mode" bits="3" ids="On,Off"/>
+        <dip name="Coin A" bits="4,5" ids="COINS,COINS,COINS,COINS"/>
+        <dip name="Coin B" bits="6,7" ids="COINS,COINS,COINS,COINS"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Normal,Easy"/>
+        <dip name="Bonus Life" bits="10,11" ids="400K Only,300K/Every 500K,150K/Every 300K,200K/Every 400K"/>
+        <dip name="Lives" bits="12,13" ids="1,2,5,3"/>
+        <dip name="Stage Time" bits="15" ids="Extra 20s,Normal"/>
+        <dip name="Coinage Type" bits="20" ids="Coin Mode 2,Coin Mode 1"/>
+        <dip name="Title" bits="21" ids="Castle of Dragon,Dragon Unit"/>
+        <dip name="(C) / License" bits="22,23" ids="Seta USA / Romstar,Seta USA / Taito America,Athena / Taito (Japan),Athena (Japan)"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>

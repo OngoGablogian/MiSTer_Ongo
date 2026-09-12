@@ -1,0 +1,71 @@
+<misterromdescription>
+    <name>J. J. Squawkers</name>
+    <setname>jjsquawk</setname>
+    <rbf>Seta</rbf>
+    <mameversion>0286</mameversion>
+    <year>1993</year>
+    <manufacturer>Athena / Able</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
+    <rom index="1"><part>16</part></rom>
+
+    <rom index="0" zip="jjsquawk.zip" md5="none">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="fe2002001.u3" crc="7b9af960" offset="0x0" length="0x40000" map="01"/>
+            <part name="fe2002002.u4" crc="47dd71a3" offset="0x0" length="0x40000" map="10"/>
+        </interleave>
+        <part repeat="524288">00</part>
+        <interleave output="16">
+            <part name="fe2002001.u3" crc="7b9af960" offset="0x40000" length="0x40000" map="01"/>
+            <part name="fe2002002.u4" crc="47dd71a3" offset="0x40000" length="0x40000" map="10"/>
+        </interleave>
+        <part repeat="524288">00</part>
+        <!-- gfx1 -->
+        <part name="fe2001009" crc="27441cd3"/>
+        <part name="fe2001010" crc="ca2b42c4"/>
+        <part name="fe2001007" crc="62c45658"/>
+        <part name="fe2001008" crc="2690c57b"/>
+        <!-- gfx2 -->
+        <interleave output="24">
+            <part name="fe2001003" crc="a5a35caf" offset="0x0" length="0x40000" map="001"/>
+            <part name="fe2001011" crc="98b9f4b4" offset="0x0" length="0x80000" map="120"/>
+        </interleave>
+        <interleave output="24">
+            <part name="fe2001003" crc="a5a35caf" offset="0x40000" length="0x40000" map="001"/>
+            <part name="fe2001012" crc="d4aa916c" offset="0x0" length="0x80000" map="120"/>
+        </interleave>
+        <!-- pad to 0x800000 -->
+        <part repeat="2621440">00</part>
+        <!-- gfx3 -->
+        <interleave output="24">
+            <part name="fe2001004" crc="a235488e" offset="0x0" length="0x40000" map="001"/>
+            <part name="fe2001014" crc="274bbb48" offset="0x0" length="0x80000" map="120"/>
+        </interleave>
+        <interleave output="24">
+            <part name="fe2001004" crc="a235488e" offset="0x40000" length="0x40000" map="001"/>
+            <part name="fe2001013" crc="51e29871" offset="0x0" length="0x80000" map="120"/>
+        </interleave>
+        <!-- pad to 0xa00000 -->
+        <part repeat="524288">00</part>
+        <!-- x1snd -->
+        <part name="fe2001005.u69" crc="d99f2879"/>
+        <part name="fe2001006.u70" crc="9df1e478"/>
+    </rom>
+
+    <switches default="EF,BF,FF" base="0">
+        <dip name="Flip Screen" bits="0" ids="On,Off"/>
+        <dip name="Service Mode" bits="1" ids="On,Off"/>
+        <dip name="Difficulty" bits="2,3" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Energy" bits="4,5" ids="5,4,2,3"/>
+        <dip name="Bonus Life" bits="6,7" ids="100K Only,70K/200K Only,20K/Every 100K,50K/Every 200K"/>
+        <dip name="Coin A" bits="8,9,10" ids="Free Play,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="11,12,13" ids="Free Play,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Demo Sounds" bits="14" ids="On,Off"/>
+        <dip name="Unknown 2-8" bits="15" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>
