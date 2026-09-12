@@ -44,5 +44,13 @@
     <part name="hrd-hd8" crc="359597a4"/>
   </rom>
   <rom index="1"><part>04</part></rom>
+  <rom index="3" md5="none">
+    <part>
+      00 40 00 00 3F FF 00 04 00 04 00 01 00 0F 08 00
+      00 00 CF 10 00 C8 00 48 00 00 C8 A0 00 02 00 03
+    </part>
+  </rom>
+  <rom index="4"></rom>
+  <nvram index="4" size="202"></nvram>
   <buttons names="Attack,Jump,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
 </misterromdescription>

@@ -48,5 +48,13 @@
     <part name="p14" crc="41314ac1"/>
   </rom>
   <rom index="1"><part>00</part></rom>
+  <rom index="3" md5="none">
+    <part>
+      00 40 00 00 3F FF 00 04 00 04 00 01 00 0F 08 00
+      00 00 CE 80 01 8E 03 3D 00 00 C0 51 00 03 00 00
+    </part>
+  </rom>
+  <rom index="4"></rom>
+  <nvram index="4" size="401"></nvram>
   <buttons names="Jump,Attack,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
 </misterromdescription>

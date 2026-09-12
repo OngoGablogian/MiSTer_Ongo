@@ -40,5 +40,13 @@
     <part name="p6.h7" crc="bbf31081"/>
   </rom>
   <rom index="1"><part>05</part></rom>
+  <rom index="3" md5="none">
+    <part>
+      00 40 00 00 3F FF 00 04 00 04 00 01 00 0F 08 00
+      00 00 CF 10 00 4E 23 4D 00 00 C8 A0 00 02 00 03
+    </part>
+  </rom>
+  <rom index="4"></rom>
+  <nvram index="4" size="80"></nvram>
   <buttons names="Fire,Slow,Start 1P,Start 2P,Coin,Coin 2" default="A,B,Start,R,Select,L"/>
 </misterromdescription>
