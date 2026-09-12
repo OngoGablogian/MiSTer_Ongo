@@ -3,7 +3,8 @@
 	<setname>ptblank2c</setname>
 	<year>1999</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>SYSTEM11</rbf>
+	<rbf>XNSYSTEM11</rbf>
+	<buttons names="Trigger,-,-,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,R,L,Start,Select"/>
 
 	<!-- ROM8/64 PCB: two-level rom8_64 banking (upper latch @0x1F080000), supported by the core -->
 	<!-- NOTE: KEYCUS C443 implemented (keycus_id 0x09) -->
@@ -20,7 +21,8 @@
 		</interleave>
 	</rom>
 	<!-- ioctl_index 1: platform byte: bit4=1 -> Namco System 11 -->
-	<rom index="1"><part>14 09</part></rom>
+	<!-- byte0=platform (bit4=Namco System 11), byte1=KEYCUS (09=C443), byte2 bit0=light-gun game -->
+	<rom index="1"><part>14 09 01 00</part></rom>
 	<!-- ioctl_index 3: banked data ROM (32MB region) -> SDRAM 0x800000, 8x1MB CPU windows -->
 	<rom index="3" zip="ptblank2c.zip|ptblank2.zip" md5="none">
 		<interleave output="16">

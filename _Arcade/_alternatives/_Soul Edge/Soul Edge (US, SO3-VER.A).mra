@@ -3,7 +3,8 @@
 	<setname>souledgeua</setname>
 	<year>1995</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>SYSTEM11</rbf>
+	<rbf>XNSYSTEM11</rbf>
+	<buttons names="Horizontal,Vertical,Kick,Guard,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,R,L,Start,Select"/>
 
 	<!-- NOTE: KEYCUS C409 implemented (keycus_id 0x02) -->
 	<!-- NOTE: wave ROM 4MB - needs the >=4MB wave window core build -->

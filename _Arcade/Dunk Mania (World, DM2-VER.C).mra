@@ -3,7 +3,8 @@
 	<setname>dunkmnia</setname>
 	<year>1995</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>SYSTEM11</rbf>
+	<rbf>XNSYSTEM11</rbf>
+	<buttons names="Shoot,Pass,-,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,R,L,Start,Select"/>
 
 	<!-- NOTE: KEYCUS C410 implemented (keycus_id 0x03) -->
 	<!-- NOTE: wave ROM 4MB - needs the >=4MB wave window core build -->

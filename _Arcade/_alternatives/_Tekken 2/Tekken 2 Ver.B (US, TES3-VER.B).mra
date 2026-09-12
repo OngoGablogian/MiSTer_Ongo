@@ -3,7 +3,8 @@
 	<setname>tekken2ub</setname>
 	<year>1995</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>SYSTEM11</rbf>
+	<rbf>XNSYSTEM11</rbf>
+	<buttons names="LP,RP,LK,RK,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,R,L,Start,Select"/>
 
 	<!-- NOTE: KEYCUS C406 not implemented in the core; game may or may not check it -->
 	<!-- NOTE: wave ROM 4MB - needs the >=4MB wave window core build -->
@@ -19,7 +20,8 @@
 		</interleave>
 	</rom>
 	<!-- ioctl_index 1: byte0=platform (bit4 = Namco System 11), byte1=KEYCUS type (01=C406) -->
-	<rom index="1"><part>14 01</part></rom>
+	<!-- byte0=platform (bit4=Namco System 11, bit5=coh100 board / CXD8538Q GPU type 1), byte1=KEYCUS (01=C406) -->
+	<rom index="1"><part>34 01</part></rom>
 	<!-- ioctl_index 3: banked data ROM (16MB region) -> SDRAM 0x800000, 8x1MB CPU windows -->
 	<rom index="3" zip="tekken2ub.zip|tekken2.zip" md5="none">
 		<interleave output="16">

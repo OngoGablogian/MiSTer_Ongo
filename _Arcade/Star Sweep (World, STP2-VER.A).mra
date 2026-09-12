@@ -3,7 +3,8 @@
 	<setname>starswep</setname>
 	<year>1997</year>
 	<manufacturer>Axela / Namco</manufacturer>
-	<rbf>SYSTEM11</rbf>
+	<rbf>XNSYSTEM11</rbf>
+	<buttons names="Rotate,-,-,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,R,L,Start,Select"/>
 
 	<!-- NOTE: no banked-ROM windows in the MAME map for this game -->
 	<!-- NOTE: KEYCUS C442 implemented (keycus_id 0x08) -->
