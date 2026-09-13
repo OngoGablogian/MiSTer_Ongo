@@ -11,7 +11,7 @@
     <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>16</part></rom>
 
-    <rom index="0" zip="jjsquawk.zip" md5="none">
+    <rom index="0" zip="jjsquawk.zip" md5="none" address="0x30000000">
         <!-- maincpu -->
         <interleave output="16">
             <part name="fe2002001.u3" crc="7b9af960" offset="0x0" length="0x40000" map="01"/>

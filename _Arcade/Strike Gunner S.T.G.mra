@@ -11,7 +11,7 @@
     <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>09</part></rom>
 
-    <rom index="0" zip="stg.zip" md5="none">
+    <rom index="0" zip="stg.zip" md5="none" address="0x30000000">
         <!-- maincpu -->
         <interleave output="16">
             <part name="att01003.u27" crc="7a640a93" map="01"/>

@@ -11,7 +11,7 @@
     <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>14</part></rom>
 
-    <rom index="0" zip="gundharac.zip|gundhara.zip" md5="none">
+    <rom index="0" zip="gundharac.zip|gundhara.zip" md5="none" address="0x30000000">
         <!-- maincpu -->
         <interleave output="16">
             <part name="bpgh-003.u3" crc="14e9970a" map="01"/>
