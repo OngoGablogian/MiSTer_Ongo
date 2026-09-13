@@ -3,7 +3,7 @@
 	<setname>tekken2a</setname>
 	<year>1995</year>
 	<manufacturer>Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 	<buttons names="LP,RP,LK,RK,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,R,L,Start,Select"/>
 
 	<!-- NOTE: KEYCUS C406 not implemented in the core; game may or may not check it -->

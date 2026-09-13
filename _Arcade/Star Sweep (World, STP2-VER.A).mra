@@ -3,7 +3,7 @@
 	<setname>starswep</setname>
 	<year>1997</year>
 	<manufacturer>Axela / Namco</manufacturer>
-	<rbf>XNSYSTEM11</rbf>
+	<rbf>SYSTEM11</rbf>
 	<buttons names="Rotate,-,-,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,R,L,Start,Select"/>
 
 	<!-- NOTE: no banked-ROM windows in the MAME map for this game -->
