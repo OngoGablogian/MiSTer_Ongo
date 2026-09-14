@@ -50,6 +50,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
 | [I, Robot](https://www.patreon.com/Meathax/posts/i-robot-1984-169005879)                                                       |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                        |
+| [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
 | [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1543359831912616007)                |
