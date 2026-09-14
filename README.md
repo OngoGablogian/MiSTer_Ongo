@@ -66,6 +66,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
 | [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-166884433)                                           |
+| [Namco System System 22 / Super System 22](https://www.patreon.com/XelaNotPu/posts/namco-system-22-169006058)                  |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |
 | [NARC (blahm1d)](https://www.patreon.com/blahm1d/posts/blahm1d-coaxes-164867975)                                               |
 | [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-v1-0-165736329)                                               |
