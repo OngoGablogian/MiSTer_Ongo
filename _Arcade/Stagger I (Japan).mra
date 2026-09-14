@@ -1,5 +1,5 @@
 <!--
-  Stagger I (Japan) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 23).
+  Stagger I (Japan) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 23).
   Parent set.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... stagger1 ...)
@@ -17,7 +17,7 @@
   <year>1998</year>
   <manufacturer>Afega</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Afega</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>

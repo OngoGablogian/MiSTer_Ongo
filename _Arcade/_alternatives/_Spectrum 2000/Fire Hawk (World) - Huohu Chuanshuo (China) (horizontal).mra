@@ -1,5 +1,5 @@
 <!--
-  Fire Hawk (World) / Huohu Chuanshuo (China) (horizontal) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 40).
+  Fire Hawk (World) / Huohu Chuanshuo (China) (horizontal) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 40).
   Clone of spec2k; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... firehawk ...)
@@ -17,7 +17,7 @@
   <year>2001</year>
   <manufacturer>ESD</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Afega</rbf>
 
   <!-- DSW1, DSW2 (defaults from the PORT_DIPNAME default values; ids in
        bit-value order, value 0 first), then the game-id byte the core

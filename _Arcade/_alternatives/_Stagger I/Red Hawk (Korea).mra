@@ -1,5 +1,5 @@
 <!--
-  Red Hawk (Korea) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 23).
+  Red Hawk (Korea) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 23).
   Clone of stagger1; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... redhawkk ...)
@@ -17,7 +17,7 @@
   <year>1997</year>
   <manufacturer>Afega</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Afega</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>

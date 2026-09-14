@@ -1,5 +1,5 @@
 <!--
-  Guardian Storm (Germany) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 33).
+  Guardian Storm (Germany) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 33).
   Clone of grdnstrm; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... grdnstrmg ...)
@@ -17,7 +17,7 @@
   <year>1998</year>
   <manufacturer>Afega</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Afega</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
