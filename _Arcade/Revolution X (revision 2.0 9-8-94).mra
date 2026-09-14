@@ -1,0 +1,129 @@
+<!--
+  Revolution X (rev 2.0 9/8/94) - Midway X-unit - MiSTer MRA
+  Source set: revx (MAME 0.289 midxunit.cpp:706-773). Loads from the user's revx.zip.
+
+  ioctl INDEX LAYOUT (defined by the BOARD lane; consumed by revx_top's loader):
+
+    index 0  main ROM download, concatenated in this order:
+      0x0000000  program ROM  0x200000 (2 MB)  34020 code, 32-bit LE interleave
+                                               (u51=b0,u52=b1,u53=b2,u54=b3;
+                                                ROM_LOAD32_BYTE midxunit.cpp:708-711)
+      0x0200000  gfx ROM      0xE00000 (14 MB) 7 groups of 4, 32-bit LE interleave
+                                               (midxunit.cpp:728-761; flat window,
+                                                midwunit_gfxrom_r, NO bank select)
+      0x1000000  DCS sound    0x400000 (4 MB raw; 8 MB packed window) u2..u9
+                                               (ROM_LOAD16_BYTE, dcs.cpp banking;
+                                                8-bit-in-16 expand done in the core)
+      0x1400000  PIC u444     0x002000 (8 KB)  security firmware image (midxunit.cpp:724)
+    index 4  nvram            0x2000 (8 KB)    CMOS (LH5268), byte-wide, saved/restored
+    index 3  profile byte     1 byte           X-unit game profile selector (=0x07)
+
+  NOTE: the MAME "video" region reloads the program ROMs at 0xe00000 (midxunit.cpp:
+  763-767 "TODO: Fix the need of reloading program ROMs... no duplicate ROMs on the
+  real PCB") - a MAME host workaround, NOT replicated here (gfx is fed by the blitter
+  from the flat 0xf8000000 window; the CPU fetches program from 0xff000000).
+-->
+<misterromdescription>
+  <name>Revolution X (revision 2.0 9/8/94)</name>
+  <setname>revx</setname>
+  <rbf>RevX</rbf>
+  <mameversion>0289</mameversion>
+  <year>1994</year>
+  <manufacturer>Midway</manufacturer>
+  <players>3</players>
+  <buttons>2</buttons>
+  <category>Shooter</category>
+
+  <rom index="0" zip="revx.zip" md5="none">
+
+    <!-- 0x0000000: 34020 program, 32-bit LE interleave (2 MB) -->
+    <interleave output="32">
+      <part name="revx_l2.0_u51.u51" crc="2c996003" map="0001"/>
+      <part name="revx_l2.0_u52.u52" crc="f1d4d6fb" map="0010"/>
+      <part name="revx_l2.0_u53.u53" crc="59ca7084" map="0100"/>
+      <part name="revx_l2.0_u54.u54" crc="4f577dd9" map="1000"/>
+    </interleave>
+
+    <!-- 0x0200000: gfx ROM, 7 groups x (32-bit LE interleave), 14 MB, flat window -->
+    <interleave output="32">
+      <part name="p5_revolution_x_game_rom_u120.u120" crc="523af1f0" map="0001"/>
+      <part name="p5_revolution_x_game_rom_u121.u121" crc="78201d93" map="0010"/>
+      <part name="p5_revolution_x_game_rom_u122.u122" crc="2cf36144" map="0100"/>
+      <part name="p5_revolution_x_game_rom_u123.u123" crc="6912e1fb" map="1000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="p5_revolution_x_game_rom_u110.u110" crc="e3f7f0af" map="0001"/>
+      <part name="p5_revolution_x_game_rom_u111.u111" crc="49fe1a69" map="0010"/>
+      <part name="p5_revolution_x_game_rom_u112.u112" crc="7e3ba175" map="0100"/>
+      <part name="p5_revolution_x_game_rom_u113.u113" crc="c0817583" map="1000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="p5_revolution_x_game_rom_u101.u101" crc="5a08272a" map="0001"/>
+      <part name="p5_revolution_x_game_rom_u102.u102" crc="11d567d2" map="0010"/>
+      <part name="p5_revolution_x_game_rom_u103.u103" crc="d338e63b" map="0100"/>
+      <part name="p5_revolution_x_game_rom_u104.u104" crc="f7b701ee" map="1000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="p5_revolution_x_game_rom_u91.u91" crc="52a63713" map="0001"/>
+      <part name="p5_revolution_x_game_rom_u92.u92" crc="fae3621b" map="0010"/>
+      <part name="p5_revolution_x_game_rom_u93.u93" crc="7065cf95" map="0100"/>
+      <part name="p5_revolution_x_game_rom_u94.u94" crc="600d5b98" map="1000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="p5_revolution_x_game_rom_u81.u81" crc="729eacb1" map="0001"/>
+      <part name="p5_revolution_x_game_rom_u82.u82" crc="19acb904" map="0010"/>
+      <part name="p5_revolution_x_game_rom_u83.u83" crc="0e223456" map="0100"/>
+      <part name="p5_revolution_x_game_rom_u84.u84" crc="d3de0192" map="1000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="p5_revolution_x_game_rom_u71.u71" crc="2b29fddb" map="0001"/>
+      <part name="p5_revolution_x_game_rom_u72.u72" crc="2680281b" map="0010"/>
+      <part name="p5_revolution_x_game_rom_u73.u73" crc="420bde4d" map="0100"/>
+      <part name="p5_revolution_x_game_rom_u74.u74" crc="26627410" map="1000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="p5_revolution_x_game_rom_u63.u63" crc="3066e3f3" map="0001"/>
+      <part name="p5_revolution_x_game_rom_u64.u64" crc="c33f5309" map="0010"/>
+      <part name="p5_revolution_x_game_rom_u65.u65" crc="6eee3e71" map="0100"/>
+      <part name="p5_revolution_x_game_rom_u66.u66" crc="b43d6fff" map="1000"/>
+    </interleave>
+
+    <!-- 0x1000000: DCS sound ROMs (u2..u9), 8-bit-in-16 (dcs.cpp), packed in core -->
+    <part name="l1_revolution_x_sound_rom_u2.u2" crc="d2ed9f5e"/>
+    <part name="l1_revolution_x_sound_rom_u3.u3" crc="af8f253b"/>
+    <part name="l1_revolution_x_sound_rom_u4.u4" crc="3ccce59c"/>
+    <part name="l1_revolution_x_sound_rom_u5.u5" crc="a0438006"/>
+    <part name="l1_revolution_x_sound_rom_u6.u6" crc="b7b34f60"/>
+    <part name="l1_revolution_x_sound_rom_u7.u7" crc="6795fd88"/>
+    <part name="l1_revolution_x_sound_rom_u8.u8" crc="793a7eb5"/>
+    <part name="l1_revolution_x_sound_rom_u9.u9" crc="14ddbea1"/>
+
+    <!-- 0x1400000: security PIC firmware (u444) -->
+    <part name="419_revolution-x_u444.u444" crc="7df57330"/>
+  </rom>
+
+  <!-- CMOS 8 KB, saved/restored via ioctl index 4 -->
+  <!-- index 4 = wolf_nvram_bridge.sv:42-43 (Wolf convention); index 2 is the emu's
+       dcs_download route (Arcade-RevX.sv:642) - a 2 here never reaches the bridge. -->
+  <nvram index="4" size="8192"/>
+
+  <!-- X-unit game-profile selector byte at ioctl index 3 -->
+  <rom index="3">
+    <part>07</part>
+  </rom>
+
+  <!-- Three-player light-gun shooter: Trigger + secondary per player. -->
+  <buttons names="Trigger,Action,Start,Coin" default="A,B,Start,Select" count="4"/>
+
+  <!-- DSW defaults (midxunit.cpp:574-618, active-low). -->
+  <switches default="fe,ff" base="0">
+    <dip name="Display"        bits="0"     ids="Normal,Mirror"/> <!-- midxunit.cpp:575-577: 0=Normal, 1=Mirror; cabinet 3 (2026-09-07) rendered mirrored with the old ff default -->
+    <dip name="Coinage Source" bits="1"     ids="CMOS,DIP Switch"/>
+    <dip name="Coinage"        bits="2,4"   ids="Free Play,USA-ECA,USA4,USA3,USA2,USA1"/>
+    <dip name="Country"        bits="8,9"   ids="Unused,French,German,USA"/>
+    <dip name="Players"        bits="12"    ids="2 Players,3 Players"/>
+    <dip name="Cabinet"        bits="13"    ids="T2 Retrofit,Rev X"/>
+    <dip name="Video Freeze"   bits="14"    ids="On,Off"/>
+    <dip name="Test Switch"    bits="15"    ids="On,Off"/>
+  </switches>
+</misterromdescription>

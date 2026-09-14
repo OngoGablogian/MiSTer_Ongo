@@ -81,6 +81,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [NMK16](https://github.com/kuzearcade/Arcade-NMK16_MiSTer)                                                                     |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
+| [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                         |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
