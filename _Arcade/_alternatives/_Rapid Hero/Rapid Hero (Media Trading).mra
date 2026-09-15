@@ -1,5 +1,5 @@
 <!--
-  Rapid Hero (Media Trading) — NMK16 "Raphero" rbf (arcadian/raphero/rapheroa share the
+  Rapid Hero (Media Trading) — NMK16 "NMK16_Raphero" rbf (arcadian/raphero/rapheroa share the
   raphero() machine config, nmk16.cpp). Clone of arcadian; files it shares with the parent are looked up in arcadian.zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp:
@@ -25,7 +25,7 @@
   <year>1994</year>
   <manufacturer>NMK (Media Trading license)</manufacturer>
   <category>Shooter</category>
-  <rbf>Raphero</rbf>
+  <rbf>NMK16_Raphero</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
@@ -73,4 +73,20 @@
     <part crc="f1a80e5a" name="rhp94099.6"/>
     <part crc="0d99547e" name="rhp94099.7"/>
   </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="rapheroa.zip|arcadian.zip" md5="none">
+    <part crc="e6ead349" name="prom2.u53"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for rapheroa, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 1F E6 00 00 60 00 01
+    </part>
+  </rom>
+  <nvram index="4" size="96"/>
 </misterromdescription>

@@ -1,5 +1,5 @@
 <!--
-  Air Attack (set 2) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 52).
+  Air Attack (set 2) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 52).
   Clone of airattck; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... airattcka ...)
@@ -17,7 +17,7 @@
   <year>1996</year>
   <manufacturer>Comad</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
@@ -64,4 +64,20 @@
     <part crc="93ab615b" name="2.su12"/>
     <part crc="09a836bb" name="1.su13"/>
   </rom>
+
+  <!-- nmk_irq:vtiming, 0x0200 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="airattcka.zip|airattck.zip|nmk004.zip" md5="none">
+    <part crc="ed0bd072" name="82s147.uh6"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for airattcka, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0B 91 00 00 80 00 6B
+    </part>
+  </rom>
+  <nvram index="4" size="128"/>
 </misterromdescription>

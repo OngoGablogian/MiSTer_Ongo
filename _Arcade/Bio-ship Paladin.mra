@@ -1,5 +1,5 @@
 <!--
-  Bio-ship Paladin — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 4).
+  Bio-ship Paladin — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 4).
   Parent set.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... bioship ...)
@@ -17,7 +17,7 @@
   <year>1990</year>
   <manufacturer>UPL (American Sammy license)</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- DSW1, DSW2 (defaults from the PORT_DIPNAME default values; ids in
        bit-value order, value 0 first), then the game-id byte the core
@@ -65,4 +65,21 @@
     <!-- oki2, 0x080000 -->
     <part crc="f0a782e3" name="sbs-g_05.ic160"/>
   </rom>
+
+  <!-- nmk_irq:vtiming -->
+  <rom index="1" zip="bioship.zip|nmk004.zip" md5="none">
+    <part crc="98ed1c97" name="82s135.ic94"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for bioship, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0F 01 50 00 08 00 00
+        00 0F 01 69 00 A3 00 00
+        00 0F 02 07 00 01 4C 4C
+    </part>
+  </rom>
+  <nvram index="4" size="172"/>
 </misterromdescription>

@@ -1,5 +1,5 @@
 <!--
-  GunNail (bootleg) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 50).
+  GunNail (bootleg) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 50).
   Clone of gunnail; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... gunnailb ...)
@@ -17,7 +17,7 @@
   <year>1992</year>
   <manufacturer>bootleg</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
@@ -58,4 +58,16 @@
     <!-- oki1, 0x040000 (3 MHz, unbanked, written by the 68000 at 0x194001) -->
     <part crc="c5f7c0d9" name="27c020.1c"/>
   </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for gunnailb, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0F AF 00 00 6E 00 49
+        00 0F A8 00 00 78 00 55
+        00 0F E0 04 0F 93 00 50
+    </part>
+  </rom>
+  <nvram index="4" size="4217"/>
 </misterromdescription>

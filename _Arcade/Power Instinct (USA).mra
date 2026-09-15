@@ -1,6 +1,6 @@
 <!--
   Power Instinct (Atlus, 1993) — the third game on the shared Family C
-  "Macross2" rbf (rtl/tdragon2/tdragon2_core.sv with game_powerins=1,
+  "NMK16_Macross2" rbf (rtl/tdragon2/tdragon2_core.sv with game_powerins=1,
   video_macross2.sv's powerins mode; see docs/hw-bringup.md "Power
   Instinct").
 
@@ -49,7 +49,7 @@
   <year>1993</year>
   <manufacturer>Atlus</manufacturer>
   <category>Fighting</category>
-  <rbf>Macross2</rbf>
+  <rbf>NMK16_Macross2</rbf>
 
   <!-- DSW1 default 0xFF, DSW2 default 0xFB (nmk16.cpp defaults: Free Play
        off, coinage 1C/1C, flip off; 1 chute, Join In off, Demo Sounds ON
@@ -70,7 +70,7 @@
     <dip bits="14,15" name="Difficulty" ids="Hardest,Easy,Hard,Normal"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="Y,B,A,X,Start,R"/>
+  <buttons names="LP,LK,HP,HK,Start,Coin" default="Y,B,A,X,Start,R"/>
 
   <rom index="0" zip="powerins.zip" md5="none">
     <!-- maincpu, 0x100000 @ 0x000000 (2 files, ROM_LOAD16_WORD_SWAP) -->
@@ -100,4 +100,20 @@
     <part crc="f019bedb" name="93095-8.u46"/>
     <part crc="adc83765" name="93095-9.u47"/>
   </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="powerins.zip" md5="none">
+    <part crc="182cd81f" name="21.u71"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for powerins, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 18 E8 00 00 28 00 05
+    </part>
+  </rom>
+  <nvram index="4" size="40"/>
 </misterromdescription>

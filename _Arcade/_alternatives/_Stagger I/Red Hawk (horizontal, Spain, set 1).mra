@@ -56,4 +56,14 @@
     <!-- oki1, 0x040000 -->
     <part crc="e911ce33" name="5"/>
   </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for redhawks, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 3C 03 00 00 3C 00 98
+    </part>
+  </rom>
+  <nvram index="4" size="60"/>
 </misterromdescription>

@@ -1,5 +1,5 @@
 <!--
-  GunNail (location test) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 0).
+  GunNail (location test) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 0).
   Clone of gunnail; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... gunnailp ...)
@@ -17,7 +17,7 @@
   <year>1992</year>
   <manufacturer>NMK</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
@@ -61,4 +61,22 @@
     <!-- oki2, 0x080000 -->
     <part crc="6d133f0d" name="92077-6.u57"/>
   </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="gunnailp.zip|gunnail.zip|nmk004.zip" md5="none">
+    <part crc="633ab1c9" name="9_82s135.u72"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for gunnailp, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0F AF 00 00 6E 00 49
+        00 0F AE 00 00 78 00 55
+        00 0F E0 04 0F 93 00 50
+    </part>
+  </rom>
+  <nvram index="4" size="4217"/>
 </misterromdescription>

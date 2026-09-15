@@ -1,5 +1,5 @@
 <!--
-  Task Force Harrier (US) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 20).
+  Task Force Harrier (US) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 20).
   Clone of tharrier; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... tharrieru ...)
@@ -17,7 +17,7 @@
   <year>1989</year>
   <manufacturer>UPL (American Sammy license)</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
@@ -60,5 +60,11 @@
     <part crc="11ee4c39" name="89050-8.4j"/>
     <!-- oki2, 0x080000 -->
     <part crc="893552ab" name="89050-10.14j"/>
+  </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="tharrieru.zip|tharrier.zip|nmk004.zip" md5="none">
+    <part crc="fcd5efea" name="21.bpr"/>
   </rom>
 </misterromdescription>

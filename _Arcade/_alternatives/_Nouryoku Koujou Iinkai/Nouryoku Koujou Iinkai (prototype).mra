@@ -1,5 +1,5 @@
 <!--
-  Nouryoku Koujou Iinkai (prototype) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 19).
+  Nouryoku Koujou Iinkai (prototype) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 19).
   Clone of nouryoku; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... nouryokup ...)
@@ -17,7 +17,7 @@
   <year>1995</year>
   <manufacturer>Tecmo</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- DSW1, DSW2 (defaults from the PORT_DIPNAME default values; ids in
        bit-value order, value 0 first), then the game-id byte the core
@@ -67,5 +67,11 @@
     <!-- oki2, 0x100000 (2 files) -->
     <part crc="29d0a15d" name="soundpcm2.top.ic27"/>
     <part crc="c764e749" name="soundpcm3.bottom.ic27"/>
+  </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="nouryokup.zip|nouryoku.zip|nmk004.zip" md5="none">
+    <part crc="633ab1c9" name="8.ic37"/>
   </rom>
 </misterromdescription>

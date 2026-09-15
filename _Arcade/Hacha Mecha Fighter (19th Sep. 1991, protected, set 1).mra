@@ -1,5 +1,5 @@
 <!--
-  Hacha Mecha Fighter (19th Sep. 1991, protected, set 1) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 9).
+  Hacha Mecha Fighter (19th Sep. 1991, protected, set 1) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 9).
   Parent set.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... hachamf ...)
@@ -17,7 +17,7 @@
   <year>1991</year>
   <manufacturer>NMK</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- DSW1, DSW2 (defaults from the PORT_DIPNAME default values; ids in
        bit-value order, value 0 first), then the game-id byte the core
@@ -60,4 +60,19 @@
     <!-- oki2, 0x080000 -->
     <part crc="b25ed93b" name="91076-3.45"/>
   </rom>
+
+  <!-- nmk_irq:vtiming -->
+  <rom index="1" zip="hachamf.zip|nmk004.zip" md5="none">
+    <part crc="633ab1c9" name="82s135.ic50"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for hachamf, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0F C0 00 03 F0 01 4E
+    </part>
+  </rom>
+  <nvram index="4" size="1008"/>
 </misterromdescription>

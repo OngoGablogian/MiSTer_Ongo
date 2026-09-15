@@ -1,5 +1,5 @@
 <!--
-  US AAF Mustang (TAB Austria bootleg) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 44).
+  US AAF Mustang (TAB Austria bootleg) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 44).
   Clone of mustang; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... mustangb2 ...)
@@ -17,7 +17,7 @@
   <year>1990</year>
   <manufacturer>bootleg (TAB Austria)</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- DSW1, DSW2 (defaults from the PORT_DIPNAME default values; ids in
        bit-value order, value 0 first), then the game-id byte the core
@@ -72,4 +72,14 @@
     <!-- oki1, 0x010000 (1.32 MHz, unbanked) -->
     <part crc="f6f6c4bf" name="02.bin"/>
   </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for mustangb2, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0F 90 90 00 04 00 10
+    </part>
+  </rom>
+  <nvram index="4" size="4"/>
 </misterromdescription>

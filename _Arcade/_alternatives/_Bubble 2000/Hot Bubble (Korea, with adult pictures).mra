@@ -62,4 +62,14 @@
     <!-- oki1, 0x040000 -->
     <part crc="401c980f" name="afega8.s2.uc18"/>
   </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for hotbubl, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 3C 06 00 00 50 00 20
+    </part>
+  </rom>
+  <nvram index="4" size="80"/>
 </misterromdescription>

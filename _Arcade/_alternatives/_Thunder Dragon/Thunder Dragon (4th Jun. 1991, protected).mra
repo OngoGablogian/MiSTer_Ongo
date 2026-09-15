@@ -1,5 +1,5 @@
 <!--
-  Thunder Dragon (4th Jun. 1991, protected) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 10).
+  Thunder Dragon (4th Jun. 1991, protected) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 10).
   Clone of tdragon; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... tdragon1 ...)
@@ -17,7 +17,7 @@
   <year>1991</year>
   <manufacturer>NMK (Tecmo license)</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
@@ -63,4 +63,20 @@
     <!-- oki2, 0x080000 -->
     <part crc="ecfea43e" name="91070.2"/>
   </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="tdragon1.zip|tdragon.zip|nmk004.zip" md5="none">
+    <part crc="e6ead349" name="91070.10"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for tdragon1, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0B 91 00 00 C0 00 20
+    </part>
+  </rom>
+  <nvram index="4" size="192"/>
 </misterromdescription>

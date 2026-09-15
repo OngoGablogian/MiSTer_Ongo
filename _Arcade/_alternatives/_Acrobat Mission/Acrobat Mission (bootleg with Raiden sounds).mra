@@ -1,5 +1,5 @@
 <!--
-  Acrobat Mission (bootleg with Raiden sounds) — NMK16 "Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 45).
+  Acrobat Mission (bootleg with Raiden sounds) — NMK16 "NMK16_Gunnail" rbf (rtl/gunnail/gunnail_core.sv game id 45).
   Clone of acrobatm; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... acrobatmbl ...)
@@ -17,7 +17,7 @@
   <year>1991</year>
   <manufacturer>bootleg</manufacturer>
   <category>Shooter</category>
-  <rbf>Gunnail</rbf>
+  <rbf>NMK16_Gunnail</rbf>
 
   <!-- ROT270 in nmk16.cpp -->
   <rotation>1</rotation>
@@ -57,4 +57,16 @@
     <!-- oki1, 0x010000 (1 MHz, unbanked) -->
     <part crc="f6f6c4bf" name="1.14y"/>
   </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for acrobatmbl, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 08 00 EA 00 8D 00 00
+        00 08 00 DA 00 04 00 00
+        00 08 00 21 00 01 48 48
+    </part>
+  </rom>
+  <nvram index="4" size="146"/>
 </misterromdescription>

@@ -1,5 +1,5 @@
 <!--
-  Thunder Dragon 2 (NMK, 1993) — Family C ("Macross2" rbf) pilot game.
+  Thunder Dragon 2 (NMK, 1993) — Family C ("NMK16_Macross2" rbf) pilot game.
 
   Transcribed directly from mame/src/mame/nmk/nmk16.cpp:
     - ROM_START(tdragon2)      lines 8331-8359
@@ -60,7 +60,7 @@
   <year>1993</year>
   <manufacturer>NMK</manufacturer>
   <category>Shooter</category>
-  <rbf>Macross2</rbf>
+  <rbf>NMK16_Macross2</rbf>
 
   <!-- ROT270 in nmk16.cpp (docs/game-inventory.md: "vertical") — see
        this file's own header note on the rotation-convention caveat. -->
@@ -107,4 +107,20 @@
     <!-- oki2, 0x200000 @ 0x8C0000 -->
     <part crc="82025bab" name="ww930915.3"/>
   </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="tdragon2.zip" md5="none">
+    <part crc="e6ead349" name="10.bpr"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for tdragon2, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 1F F1 01 00 6B 18 00
+    </part>
+  </rom>
+  <nvram index="4" size="107"/>
 </misterromdescription>
