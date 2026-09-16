@@ -1,0 +1,85 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>vertical (ccw)</rotation>
+    <name>Led Storm Rally 2011 (US, prototype 12)</name>
+    <setname>leds2011p</setname>
+    <mameversion>0282</mameversion>
+    <year>1988</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>madgear</rbf>
+    <joystick>8</joystick>
+    <region>US</region>
+    <rom index="0" zip="leds2011p.zip|leds2011.zip" md5="None" asm_md5="7c53b1bb89fa1d4344674114b0864e00">
+        <interleave output="16">
+            <part name="04.8d" crc="7a20bc60" map="10"/>
+            <part name="03.7d" crc="b6a20b12" map="01"/>
+        </interleave>
+        <interleave output="16">
+            <part name="02.6d" crc="c7e7f0bc" map="10"/>
+            <part name="01.5d" crc="01520af8" map="01"/>
+        </interleave>
+        <part name="07.14j" crc="742dc60e"/>
+        <part name="06.12e" crc="88d39a5b"/>
+        <part name="05.10e" crc="b06e03b5"/>
+        <part name="10k" crc="e2ecb7c6"/>
+        <interleave output="32">
+            <part name="09.rom0" crc="945aeded" map="0001"/>
+            <part name="11.rom0" crc="e34b20aa" map="0010"/>
+            <part name="10.rom1" crc="1ebd62b7" map="0100"/>
+            <part name="12.rom1" crc="c106d67c" map="1000"/>
+        </interleave>
+        <interleave output="16">
+            <part name="17.rom0" crc="078a11e7" map="01"/>
+            <part name="18.rom1" crc="2222130e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="13.rom0" crc="813e9775" map="01"/>
+            <part name="14.rom1" crc="8f1d3727" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="15.rom2" crc="b68ebcec" map="01"/>
+            <part name="16.rom3" crc="ccf22c41" map="10"/>
+        </interleave>
+        <part name="63s141an.15k" crc="7f862e1e"/>
+    </rom>
+    <nvram index="2" size="61440"/>
+    <rom index="1">
+        <part>05 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="3a,ff,ff,ff">
+        <DSW1/>
+        <dip name="Allow Continue" bits="0" ids="Yes,No"/>
+        <dip name="Flip Screen (Edge Trigger)" bits="1" ids="On,Off"/>
+        <dip name="Difficulty" bits="2,3" ids="Very Difficult,Difficult,Normal,Easy"/>
+        <dip name="Cabinet" bits="4,5" ids="Upright Two Players,Cocktail,Upright One Player,Upright One Player"/>
+        <dip name="Demo Sounds" bits="6" ids="On,Off"/>
+        <dip name="Demo Music" bits="7" ids="On,Off"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+        <DSW2/>
+        <dip name="Coin B" bits="24,27" ids="1 / 1,8/3,6/1,5/3,5/1,4/1,3/2,3/1,2/3,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+        <dip name="Coin A" bits="28,31" ids="Free Play,8/3,6/1,5/3,5/1,4/1,3/2,3/1,2/3,2/1,1/6,1/5,1/4,1/3,1/2,1/1"/>
+    </switches>
+    <buttons names="button 1,button 2,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>

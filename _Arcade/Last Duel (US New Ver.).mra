@@ -1,0 +1,93 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>vertical (ccw)</rotation>
+    <name>Last Duel (US New Ver.)</name>
+    <setname>lastduel</setname>
+    <mameversion>0282</mameversion>
+    <year>1988</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>lastduel</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="lastduel.zip" md5="None" asm_md5="ceecbdba87e41cc55c426ac6bdb939ba">
+        <!-- maincpu - starts at 0x0 - length 0x60000 (19 bits) -->
+        <interleave output="16">
+            <part name="ldu_05b.12k" crc="47a85bea" map="01"/>
+            <part name="ldu_06b.13k" crc="0e71acaf" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ldu_03b.9k" crc="bbaac8ab" map="01"/>
+            <part name="ldu_04b.11k" crc="aa4bf001" map="10"/>
+        </interleave>
+        <!-- JTFRAME_BA1_START -->
+        <!-- audiocpu - starts at 0x60000 - length 0x10000 (16 bits) -->
+        <part name="ld_02.16h" crc="91834d0c"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- gfx2 - starts at 0x70000 - length 0x8000 (15 bits) -->
+        <part name="ld_01.12f" crc="ad3c6f87"/>
+        <!-- OBJ_START -->
+        <!-- sprites - starts at 0x78000 - length 0x80000 (19 bits) -->
+        <interleave output="32">
+            <part name="ld-09.12a" crc="6efadb74" map="0001"/>
+            <part name="ld-10.17a" crc="b8d3b2e3" map="0010"/>
+            <part name="ld-11.12b" crc="49d4dbbd" map="0100"/>
+            <part name="ld-12.17b" crc="313e5338" map="1000"/>
+        </interleave>
+        <!-- JTFRAME_BA3_START -->
+        <!-- gfx3 - starts at 0xF8000 - length 0x40000 (18 bits) -->
+        <interleave output="16">
+            <part name="ld-13.6m" crc="bc25729f" map="01"/>
+            <part name="ld-15.6p" crc="d977a175" map="10"/>
+        </interleave>
+        <!-- FG_START -->
+        <!-- gfx4 - starts at 0x138000 - length 0x80000 (19 bits) -->
+        <part name="ld-14.15n" crc="d0653739"/>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0x1B8000 - length 0x100 (8 bits) -->
+        <part name="ld.3d" crc="729a1ddc"/>
+        <!-- Total 0x1B8100 bytes - 1760 kBytes -->
+    </rom>
+    <nvram index="2" size="45056"/>
+    <!-- Vertical screen. Orientation reversed. -->
+    <rom index="1">
+        <part>05 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff,ff,ff">
+        <DSW1/>
+        <dip name="Coin B" bits="0,2" ids="4/1,3/1,2/1,1/6,1/4,1/3,1/2,1/1"/>
+        <dip name="Coin A" bits="3,5" ids="4/1,3/1,2/1,1/6,1/4,1/3,1/2,1/1"/>
+        <dip name="Difficulty" bits="8,9" ids="Very Difficult,Difficult,Easy,Normal"/>
+        <dip name="Bonus Life" bits="12,13" ids="40k 80k 100k,40k 80k 80k,20k 60k 80k,30k 80k 80k"/>
+        <DSW2/>
+        <dip name="Lives" bits="16,17" ids="8,6,4,3"/>
+        <dip name="Stage select" bits="18" ids="Start from Plane Stage,Start from Auto Stage"/>
+        <dip name="Demo Sounds" bits="21" ids="Off,On"/>
+        <dip name="Allow Continue" bits="22" ids="No,Yes"/>
+        <dip name="Flip Screen" bits="23" ids="On,Off"/>
+        <SYSTEM/>
+        <dip name="Service Mode" bits="27" ids="On,Off"/>
+    </switches>
+    <buttons names="button 1,button 2,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>
