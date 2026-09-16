@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Appoooh</name>
+  <setname>appoooh</setname>
+  <rbf>Appoooh</rbf>
+  <year>1984</year>
+  <manufacturer>Sanritsu / Sega</manufacturer>
+  <category>Sports</category>
+  <rotation>horizontal</rotation>
+  <mameversion>0289</mameversion>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <num_buttons>3</num_buttons>
+  <!-- ROM order follows the populated MAME addresses with the unused 0x2000 hole removed. -->
+  <switches default="60,ff" base="0">
+    <dip name="Coin A" bits="0,1,2" ids="1C 1C,2C 1C,3C 1C,4C 1C,1C 2C,1C 3C,1C 4C,2C 3C"/>
+    <dip name="Coin B" bits="3,4" ids="1C 1C,1C 2C,2C 1C,3C 1C"/>
+    <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+    <dip name="Cabinet" bits="6" ids="Cocktail,Upright"/>
+    <dip name="Difficulty" bits="7" ids="Easy,Hard"/>
+  </switches>
+  <buttons names="Button 1,Button 2,Button 3,Start 1,Start 2,Coin 1,Coin 2,Service" default="A,B,X,Start,Select,R1,R2,L1" count="8"/>
+  <rom index="0" zip="appoooh.zip">
+    <part name="epr-5906.bin" crc="fffae7fe"/>
+    <part name="epr-5907.bin" crc="57696cd6"/>
+    <part name="epr-5908.bin" crc="4537cddc"/>
+    <part name="epr-5909.bin" crc="cf82718d"/>
+    <part name="epr-5910.bin" crc="312636da"/>
+    <part name="epr-5911.bin" crc="0bc2acaa"/>
+    <part name="epr-5913.bin" crc="f5a0e6a7"/>
+    <part name="epr-5912.bin" crc="3c3915ab"/>
+    <part name="epr-5914.bin" crc="58792d4a"/>
+    <part name="epr-5895.bin" crc="4b0d4294"/>
+    <part name="epr-5896.bin" crc="7bc84d75"/>
+    <part name="epr-5897.bin" crc="745f3ffa"/>
+    <part name="epr-5898.bin" crc="cf01644d"/>
+    <part name="epr-5899.bin" crc="885ad636"/>
+    <part name="epr-5900.bin" crc="a8ed13f3"/>
+    <part name="epr-5901.bin" crc="170a10a4"/>
+    <part name="epr-5902.bin" crc="f6981640"/>
+    <part name="epr-5903.bin" crc="0439df50"/>
+    <part name="epr-5904.bin" crc="9988f2ae"/>
+    <part name="epr-5905.bin" crc="fb5cd70e"/>
+    <part name="pr5921.prm" crc="f2437229"/>
+    <part name="pr5922.prm" crc="85c542bf"/>
+    <part name="pr5923.prm" crc="16acbd53"/>
+  </rom>
+</misterromdescription>

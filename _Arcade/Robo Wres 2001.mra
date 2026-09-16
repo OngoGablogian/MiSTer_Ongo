@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Robo Wres 2001</name>
+  <setname>robowres</setname>
+  <rbf>Appoooh</rbf>
+  <year>1986</year>
+  <manufacturer>Sanritsu / Sega</manufacturer>
+  <category>Sports</category>
+  <rotation>horizontal</rotation>
+  <mameversion>0289</mameversion>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <num_buttons>3</num_buttons>
+  <!-- Robo Wres inherits Appoooh's coinage and demo-sound settings; SW1:7 is unused. -->
+  <switches default="e0,ff" base="0">
+    <dip name="Coin A" bits="0,1,2" ids="1C 1C,2C 1C,3C 1C,4C 1C,1C 2C,1C 3C,1C 4C,2C 3C"/>
+    <dip name="Coin B" bits="3,4" ids="1C 1C,1C 2C,2C 1C,3C 1C"/>
+    <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+    <dip name="Language" bits="7" ids="Japanese,English"/>
+  </switches>
+  <buttons names="Punch,Grapple,Special,Start 1,Start 2,Coin 1,Coin 2,Service" default="A,B,X,Start,Select,R1,R2,L1" count="8"/>
+  <!-- Parent set only; bootleg-only files from robowres.zip are intentionally excluded. -->
+  <rom index="1" zip="robowres.zip">
+    <part name="epr-7540.13d" crc="a2a54237"/>
+    <part name="epr-7541.14d" crc="cbf7d1a8"/>
+    <part name="epr-7542.15d" crc="3475fbd4"/>
+    <part name="epr-7544.7h" crc="07b846ce"/>
+    <part name="epr-7545.6h" crc="e99897be"/>
+    <part name="epr-7546.5h" crc="1559235a"/>
+    <part name="epr-7547.7d" crc="b87ad4a4"/>
+    <part name="epr-7548.6d" crc="8b9c75b3"/>
+    <part name="epr-7549.5d" crc="f640afbb"/>
+    <part name="epr-7543.12b" crc="4d108c49"/>
+    <part name="pr7571.10a" crc="e82c6d5c"/>
+    <part name="pr7572.7f" crc="2b083d0c"/>
+    <part name="pr7573.7g" crc="2b083d0c"/>
+  </rom>
+</misterromdescription>
