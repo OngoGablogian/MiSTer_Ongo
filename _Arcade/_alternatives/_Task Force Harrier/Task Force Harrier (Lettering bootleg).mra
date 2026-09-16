@@ -119,4 +119,19 @@
   <rom index="1" zip="tharrierb.zip|tharrier.zip|nmk004.zip" md5="none">
     <part crc="fcd5efea" name="21.bpr"/>
   </rom>
+
+  <!-- Cheats (Pugsy's MAME cheat database). Slots in fixed order:
+       Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs.
+       This set provides: Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives. See tools/gen_cheats_mra.py. -->
+  <rom index="5" md5="none">
+    <part>
+        01 00 0F 90 19 00 00 63 00 00 00 00 00 00
+        01 00 0F 77 49 00 00 03 00 00 00 00 00 00
+        01 00 0F 7B 49 00 00 03 00 00 00 00 00 00
+        01 00 0F 77 51 00 00 0A 00 00 00 00 00 00
+        01 00 0F 7B 51 00 00 0A 00 00 00 00 00 00
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    </part>
+  </rom>
 </misterromdescription>

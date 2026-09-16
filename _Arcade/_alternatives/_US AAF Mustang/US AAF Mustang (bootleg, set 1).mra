@@ -67,4 +67,19 @@
     </part>
   </rom>
   <nvram index="4" size="4"/>
+
+  <!-- Cheats (Pugsy's MAME cheat database). Slots in fixed order:
+       Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs.
+       This set provides: Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs. See tools/gen_cheats_mra.py. -->
+  <rom index="5" md5="none">
+    <part>
+        01 00 0F 90 19 00 00 63 00 00 00 00 00 00
+        01 00 0F 50 2D 00 00 02 00 00 00 00 00 00
+        01 00 0F 51 2D 00 00 02 00 00 00 00 00 00
+        01 00 0F 50 29 00 00 0C 00 00 00 00 00 00
+        01 00 0F 51 29 00 00 0C 00 00 00 00 00 00
+        01 00 0F 50 2B 00 00 08 00 00 00 00 00 00
+        01 00 0F 51 2B 00 00 08 00 00 00 00 00 00
+    </part>
+  </rom>
 </misterromdescription>

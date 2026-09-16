@@ -63,4 +63,19 @@
   <rom index="1" zip="macross.zip|nmk004.zip" md5="none">
     <part crc="633ab1c9" name="921a09"/>
   </rom>
+
+  <!-- Cheats (Pugsy's MAME cheat database). Slots in fixed order:
+       Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs.
+       This set provides: Infinite Credits, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs. See tools/gen_cheats_mra.py. -->
+  <rom index="5" md5="none">
+    <part>
+        01 00 0F 90 03 00 00 09 00 00 00 00 00 00
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        01 00 0F 64 29 00 00 0A 00 00 00 00 00 00
+        01 00 0F 65 29 00 00 0A 00 00 00 00 00 00
+        01 00 0F 64 2F 00 00 07 00 00 00 00 00 00
+        01 00 0F 65 2F 00 00 07 00 00 00 00 00 00
+    </part>
+  </rom>
 </misterromdescription>
