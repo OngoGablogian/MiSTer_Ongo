@@ -56,28 +56,6 @@
     <part crc="e6ead349" name="mcrs2bpr.10"/>
   </rom>
 
-  <!-- High scores: MAME hiscore.dat entries for macross2k, and the
-       saved dump. See tools/gen_hiscore_mra.py. -->
-  <rom index="3" md5="none">
-    <part>
-        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
-        00 1F FA 00 00 80 00 50
-        00 1F FB 00 00 80 00 50
-        00 1F FC 00 00 80 00 50
-        00 1F C4 00 02 00 00 73
-        00 1F C6 00 02 00 00 73
-        00 1F C8 00 02 00 00 73
-        00 1F CA 00 02 00 00 73
-        00 1F CC 00 02 00 00 73
-        00 1F CE 00 02 00 00 73
-        00 1F D0 00 02 00 00 73
-        00 1F D2 00 02 00 00 73
-        00 1F D4 00 02 00 00 73
-        00 1F D6 00 02 00 00 73
-    </part>
-  </rom>
-  <nvram index="4" size="5504"/>
-
   <!-- Cheats (Pugsy's MAME cheat database). Slots in fixed order:
        Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs.
        This set provides: Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Bombs, P2 Infinite Bombs. See tools/gen_cheats_mra.py. -->

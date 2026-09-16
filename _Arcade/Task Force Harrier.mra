@@ -28,8 +28,6 @@
   <switches default="FF,FF,14">
     <dip bits="0" name="Unknown (SW2:8)" ids="On,Off"/>
     <dip bits="1" name="Demo Sounds" ids="Off,On"/>
-    <dip bits="2,4" name="Coin B" ids="Free_Play,1C_4C,3C_1C,1C_2C,4C_1C,1C_3C,2C_1C,1C_1C"/>
-    <dip bits="5,7" name="Coin A" ids="Free_Play,1C_4C,3C_1C,1C_2C,4C_1C,1C_3C,2C_1C,1C_1C"/>
     <dip bits="8" name="Cabinet" ids="Cocktail,Upright"/>
     <dip bits="9" name="Unknown (SW1:7)" ids="On,Off"/>
     <dip bits="10,11" name="Difficulty" ids="Hardest,Easy,Hard,Normal"/>
