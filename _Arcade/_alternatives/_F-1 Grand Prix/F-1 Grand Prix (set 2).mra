@@ -1,0 +1,117 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="jotego,andreabogazzi" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>vertical (cw)</rotation>
+    <name>F-1 Grand Prix (set 2)</name>
+    <setname>f1gpa</setname>
+    <mameversion>0282</mameversion>
+    <year>1991</year>
+    <manufacturer>Video System Co.</manufacturer>
+    <players>1</players>
+    <rbf>f1grpr</rbf>
+    <joystick>2</joystick>
+    <region>World</region>
+    <rom index="0" zip="f1gpa.zip|f1gp.zip" md5="None" address="0x30000000">
+        <!-- byte 1 bit 0 = f1gp hardware
+  1[0]: f1gp       F-1 Grand Prix hardware -->
+        <part>
+            00 01 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <part name="rom1-a.3" crc="2d8f785b"/>
+        <part repeat="0xE0000"> FF</part>
+        <!-- USER1_START -->
+        <!-- user1 - starts at 0x100000 - length 0x200000 (21 bits) -->
+        <interleave output="16">
+            <part name="rom11-a.2" crc="53df8ea1" map="01"/>
+            <part name="rom10-a.1" crc="46a289fb" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="rom13-a.4" crc="7d92e1fa" map="01"/>
+            <part name="rom12-a.3" crc="d8c1bcf4" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="rom6-a.6" crc="6d947a3f" map="01"/>
+            <part name="rom7-a.5" crc="7a014ba6" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="rom9-a.8" crc="49286572" map="01"/>
+            <part name="rom8-a.7" crc="0ed783c7" map="10"/>
+        </interleave>
+        <!-- FG_START -->
+        <!-- fg - starts at 0x300000 - length 0x200000 (21 bits) -->
+        <part name="rom3-b.07" crc="ffb1d489"/>
+        <part name="rom2-b.04" crc="d1b3471f"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- obj0 - starts at 0x500000 - length 0x100000 (20 bits) -->
+        <interleave output="32">
+            <part name="rom5-b.2" crc="17572b36" map="0021"/>
+            <part name="rom4-b.3" crc="72d12129" map="2100"/>
+        </interleave>
+        <!-- USER2_START -->
+        <!-- user2 - starts at 0x600000 - length 0x200000 (21 bits) -->
+        <part name="rom2-a.06" crc="747dd112"/>
+        <part name="rom3-a.05" crc="264aed13"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- obj1 - starts at 0x800000 - length 0x80000 (19 bits) -->
+        <interleave output="32">
+            <part name="rom7-b.17" crc="2aed9003" map="0021"/>
+            <part name="rom6-b.16" crc="6789ef12" map="2100"/>
+        </interleave>
+        <!-- SUB_START -->
+        <!-- sub - starts at 0x880000 - length 0x20000 (17 bits) -->
+        <part name="rom4-a.4" crc="8e811d36"/>
+        <!-- SND_START -->
+        <!-- snd - starts at 0x8A0000 - length 0x20000 (17 bits) -->
+        <part name="rom5-a.8" crc="9ea36e35"/>
+        <!-- JTFRAME_BA3_START -->
+        <!-- pcma - starts at 0x8C0000 - length 0x100000 (20 bits) -->
+        <part name="rom17-a.08" crc="ea70303d"/>
+        <!-- PCMB_START -->
+        <!-- pcmb - starts at 0x9C0000 - length 0x100000 (20 bits) -->
+        <part name="rom14-a.09" crc="b4c1ac31"/>
+        <!-- Total 0xAC0000 bytes - 11008 kBytes -->
+    </rom>
+    <!-- Vertical screen. -->
+    <rom index="1">
+        <part>01 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff,fb,f5">
+        <DSW1/>
+        <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Game Mode" bits="2" ids="Multiple,Single"/>
+        <dip name="Multi Play" bits="3" ids="Multi Player Off,Multi Player Off"/>
+        <dip name="Free Play" bits="8" ids="Yes,No"/>
+        <dip name="Coin A" bits="9,11" ids="1/6,1/5,1/4,1/3,1/2,3/1,2/1,1/1"/>
+        <dip name="Coin B" bits="12,14" ids="1/6,1/5,1/4,1/3,1/2,3/1,2/1,1/1"/>
+        <dip name="Cont. Coin" bits="15" ids="On,Normalage"/>
+        <DSW2/>
+        <dip name="Service Mode" bits="16" ids="On,Off"/>
+        <dip name="Flip Screen" bits="17" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="18" ids="On,Off"/>
+        <dip name="Input" bits="23" ids="Steering Wheel,Joystick"/>
+        <DSW3/>
+        <dip name="Region" ids="Japan,USA,Korea,Hong Kong,Taiwan,World" bits="24,26"/>
+    </switches>
+    <buttons names="button 1,button 2,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>

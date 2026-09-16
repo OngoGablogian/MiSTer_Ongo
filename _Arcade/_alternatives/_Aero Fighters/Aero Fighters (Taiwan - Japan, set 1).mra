@@ -1,0 +1,105 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="jotego,andreabogazzi" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>vertical (ccw)</rotation>
+    <name>Aero Fighters (Taiwan / Japan, set 1)</name>
+    <setname>aerofgtb</setname>
+    <mameversion>0282</mameversion>
+    <year>1992</year>
+    <manufacturer>Video System Co.</manufacturer>
+    <players>2</players>
+    <rbf>pspike</rbf>
+    <joystick>8</joystick>
+    <region>Japan</region>
+    <rom index="0" zip="aerofgtb.zip|aerofgt.zip" md5="None" address="0x30000000">
+        <!-- byte 1 bit 0 = pspikes  hardware
+             bit 1 = turbofrc hardware
+             bit 2 = aerofgt  hardware
+  1[0]: pspikes    Power Spikes hardware
+  1[1]: turbofrc   Turbo Force hardware: two tile layers, two sprite chips
+  1[3]: karatblz   Karate Blazers hardware: 4 players, Z80 at 4MHz
+  1[2]: aerofgt    Aero Fighters hardware: turbofrc map moved, 320x224 -->
+        <part>
+            00 04 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <interleave output="16">
+            <part name="v1" crc="89c1dcf4" map="01"/>
+            <part name="v2" crc="5c9de9f0" map="10"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <!-- SCR0_START -->
+        <!-- gfx1 - starts at 0x100000 - length 0x100000 (20 bits) -->
+        <part name="it-19-03" crc="85eba1a4"/>
+        <part repeat="0x80000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- gfx4 - starts at 0x200000 - length 0x100000 (20 bits) -->
+        <interleave output="32">
+            <part name="g27" crc="4d89cbc8" map="0012" length="0x40000"/>
+            <part name="g26" crc="8072c1d2" map="1200" length="0x40000"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <!-- SND_START -->
+        <!-- soundbank - starts at 0x300000 - length 0x100000 (20 bits) -->
+        <part name="v3" crc="cbb18cf4"/>
+        <part repeat="0xE0000"> FF</part>
+        <!-- JTFRAME_BA2_START -->
+        <!-- pcma - starts at 0x400000 - length 0x100000 (20 bits) -->
+        <part name="it-19-06" crc="cdbbdb1d"/>
+        <!-- OBJ0_START -->
+        <!-- spritegfx - starts at 0x500000 - length 0x300000 (22 bits) -->
+        <interleave output="32">
+            <part name="it-19-04" crc="3b329c1f" map="0012" length="0x80000"/>
+            <part name="it-19-05" crc="02b525af" map="1200" length="0x80000"/>
+        </interleave>
+        <part repeat="0x200000"> FF</part>
+        <!-- JTFRAME_BA3_START -->
+        <!-- gfx2 - starts at 0x800000 - length 0x100000 (20 bits) -->
+        <part name="it-19-02" crc="4f57f8ba"/>
+        <part repeat="0x80000"> FF</part>
+        <!-- PCMB_START -->
+        <!-- pcmb - starts at 0x900000 - length 0x40000 (18 bits) -->
+        <part name="it-19-01" crc="6d42723d"/>
+        <!-- Total 0x940000 bytes - 9472 kBytes -->
+    </rom>
+    <!-- Vertical screen. Orientation reversed. 16-pxl black frame on sides. 8-line black frame on top/bottom. -->
+    <rom index="1">
+        <part>6D 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,fd">
+        <DSW1/>
+        <dip name="Coin Slot" bits="0" ids="Individual,Same"/>
+        <dip name="Coin A" bits="1,3" ids="1/6,1/5,1/4,1/3,1/2,3/1,2/1,1/1"/>
+        <dip name="Coin B" bits="4,6" ids="1/6,1/5,1/4,1/3,1/2,3/1,2/1,1/1"/>
+        <dip name="Continue" bits="7" ids="Start 2/Cont 1,Start 1/Cont 1"/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="9" ids="On,Off"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="12,13" ids="4,2,1,3"/>
+        <dip name="Bonus Life" bits="14" ids="300k,200k"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+        <DSW2/>
+        <dip name="Region" bits="16" ids="Japan,Taiwan"/>
+    </switches>
+    <buttons names="button 1,button 2,-,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>

@@ -1,0 +1,108 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="jotego,andreabogazzi" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>vertical (ccw)</rotation>
+    <name>Turbo Force (World, set 2)</name>
+    <setname>turbofrco</setname>
+    <mameversion>0282</mameversion>
+    <year>1991</year>
+    <manufacturer>Video System Co.</manufacturer>
+    <players>3</players>
+    <rbf>pspike</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="turbofrco.zip|turbofrc.zip" md5="None" address="0x30000000">
+        <!-- byte 1 bit 0 = pspikes  hardware
+             bit 1 = turbofrc hardware
+             bit 2 = aerofgt  hardware
+  1[0]: pspikes    Power Spikes hardware
+  1[1]: turbofrc   Turbo Force hardware: two tile layers, two sprite chips
+  1[3]: karatblz   Karate Blazers hardware: 4 players, Z80 at 4MHz
+  1[2]: aerofgt    Aero Fighters hardware: turbofrc map moved, 320x224 -->
+        <part>
+            00 02 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <part name="3v2.subpcb.u2" crc="721300ee"/>
+        <part name="3v1.subpcb.u1" crc="71b6431b"/>
+        <part name="3v3.u14" crc="63f50557"/>
+        <part repeat="0x40000"> FF</part>
+        <!-- SCR0_START -->
+        <!-- gfx1 - starts at 0x100000 - length 0x100000 (20 bits) -->
+        <part name="lh534ggs.u94" crc="baa53978"/>
+        <part name="7.u95" crc="71a6c573"/>
+        <part repeat="0x60000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- gfx4 - starts at 0x200000 - length 0x100000 (20 bits) -->
+        <interleave output="32">
+            <part name="lh532a52.u134" crc="3c725a48" map="0021"/>
+            <part name="lh532a51.u135" crc="95c63559" map="2100"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <!-- SND_START -->
+        <!-- soundbank - starts at 0x300000 - length 0x100000 (20 bits) -->
+        <part name="6.u166" crc="2ca14a65"/>
+        <part repeat="0xE0000"> FF</part>
+        <!-- JTFRAME_BA2_START -->
+        <!-- pcma - starts at 0x400000 - length 0x100000 (20 bits) -->
+        <part name="lh538o7j.u179" crc="60ca0333"/>
+        <!-- OBJ0_START -->
+        <!-- spritegfx - starts at 0x500000 - length 0x300000 (22 bits) -->
+        <interleave output="32">
+            <part name="lh534gh2.u116" crc="df210f3b" map="0021"/>
+            <part name="lh534gh1.u117" crc="f70812fd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="5.u118" crc="f61d1d79" map="0021"/>
+            <part name="4.u119" crc="474ea716" map="2100"/>
+        </interleave>
+        <part repeat="0x180000"> FF</part>
+        <!-- JTFRAME_BA3_START -->
+        <!-- gfx2 - starts at 0x800000 - length 0x100000 (20 bits) -->
+        <part name="lh534ggy.u105" crc="4de4e59e"/>
+        <part name="8.u106" crc="c6479eb5"/>
+        <part repeat="0x60000"> FF</part>
+        <!-- PCMB_START -->
+        <!-- pcmb - starts at 0x900000 - length 0x40000 (18 bits) -->
+        <part name="lh532h74.u180" crc="a3d43254"/>
+        <!-- Total 0x940000 bytes - 9472 kBytes -->
+    </rom>
+    <!-- Vertical screen. Orientation reversed. -->
+    <rom index="1">
+        <part>05 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="8f,f9">
+        <DSW/>
+        <dip name="Coinage" bits="0,2" ids="1/6,1/5,1/3,1/2,4/1,3/1,2/1,1/1"/>
+        <dip name="Continue" bits="3" ids="Start 2/Cont 1,Start 1/Cont 1"/>
+        <dip name="Coin Slot" bits="4" ids="Individual,Same"/>
+        <dip name="Play Mode" bits="5" ids="3 Players,2 Players"/>
+        <dip name="Demo Sounds" bits="6" ids="On,Off"/>
+        <dip name="Service Mode" bits="7" ids="On,Off"/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Difficulty" bits="9,11" ids="8,7,6,5,4,3,2,1"/>
+        <dip name="Lives" bits="12" ids="2,3"/>
+        <dip name="Bonus Life" bits="13" ids="300k,200k"/>
+    </switches>
+    <buttons names="button 1,button 2,-,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>
