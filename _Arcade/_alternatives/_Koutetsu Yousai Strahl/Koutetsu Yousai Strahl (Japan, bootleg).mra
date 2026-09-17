@@ -71,4 +71,15 @@
         01 00 0F 0D 0F 00 00 1C 00 00 00 00 00 00
     </part>
   </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for strahljbl, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 0F 30 95 00 D9 55 2E
+        00 0F 0D 31 00 03 00 50
+    </part>
+  </rom>
+  <nvram index="4" size="220"/>
 </misterromdescription>
