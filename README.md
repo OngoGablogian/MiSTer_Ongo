@@ -119,7 +119,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
 | [Vindicators](https://misterfpga.org/viewtopic.php?t=10775)                                                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
-| [Xybots](https://misterfpga.org/viewtopic.php?f=25&p=113906)                                                                   |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                |
