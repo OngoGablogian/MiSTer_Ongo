@@ -295,6 +295,12 @@ db_url = https://raw.githubusercontent.com/searchsolved/Arcade_HyperDuel_MiSTer/
 db_url = https://raw.githubusercontent.com/TheJesusFish/Slop-Core/db/db.json.zip
 ```
 
+[rmonic79 Cores (rmcores)](https://github.com/rmonic79/rmcores)
+```
+[rmonic79/rmcores]
+db_url = https://raw.githubusercontent.com/rmonic79/rmcores/db/db.json.zip
+```
+
 ----
 
 > [!NOTE]
