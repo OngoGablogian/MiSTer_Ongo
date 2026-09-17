@@ -55,7 +55,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
-| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1543359831912616007)                |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1550283248138199193)                |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [Krull](https://www.patreon.com/bazset/posts/krull-1983-d-co-169209991)                                                        |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
