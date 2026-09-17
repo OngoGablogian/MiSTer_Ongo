@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+    <name>Intrepid (set 1)</name>
+    <setname>intrepid</setname>
+    <year>1983</year>
+    <manufacturer>Nova Games</manufacturer>
+    <category>Arcade</category>
+    <rbf>Intrepid</rbf>
+    <rotation>vertical (cw)</rotation>
+    <buttons names="Action,Start 1,Coin,Start 2" default="B,Start,R,Select"/>
+    <!--Production candidate. DIP settings are in the core OSD; defaults match pinned parent MAME. ROM stream unchanged.-->
+    <rom index="0" zip="intrepid.zip" md5="10289df13e432eeaaf65e8daef334c7f">
+        <!--maincpu: stream 0x0000, 4096 bytes-->
+        <part name="ic19.1" crc="7d927b23" length="0x1000"/>
+        <!--maincpu: stream 0x1000, 4096 bytes-->
+        <part name="ic18.2" crc="dcc22542" length="0x1000"/>
+        <!--maincpu: stream 0x2000, 4096 bytes-->
+        <part name="ic17.3" crc="fd11081e" length="0x1000"/>
+        <!--maincpu: stream 0x3000, 4096 bytes-->
+        <part name="ic16.4" crc="74a51841" length="0x1000"/>
+        <!--maincpu: stream 0x4000, 4096 bytes-->
+        <part name="ic15.5" crc="4fef643d" length="0x1000"/>
+        <!--audiocpu: stream 0x5000, 2048 bytes-->
+        <part name="ic22.7" crc="1a7cc392" length="0x800"/>
+        <!--audiocpu: stream 0x5800, 2048 bytes-->
+        <part name="ic23.6" crc="91ca7097" length="0x800"/>
+        <!--gfx: stream 0x6000, 4096 bytes-->
+        <part name="ic9.9" crc="8c70d18d" length="0x1000"/>
+        <!--gfx: stream 0x7000, 4096 bytes-->
+        <part name="ic8.8" crc="04d067d3" length="0x1000"/>
+        <!--proms: stream 0x8000, 32 bytes-->
+        <part name="ic3.prm" crc="927ff40a" length="0x20"/>
+    </rom>
+</misterromdescription>
