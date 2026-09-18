@@ -28,7 +28,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
-| [Blasteroids](https://misterfpga.org/viewtopic.php?t=10781)                                                                    |
 | [Bonze Adventure](https://www.patreon.com/bazset/posts/bonze-adventure-169827251)                                              |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
@@ -120,7 +119,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
-| [Vindicators](https://misterfpga.org/viewtopic.php?t=10775)                                                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
