@@ -42,6 +42,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Escape Kids](https://github.com/meathax/escapekids)                                                                           |
 | [Exidy 440](https://www.patreon.com/blahm1d/posts/exidy-to-your-168834272)                                                     |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
+| [FM Towns Marty](https://discord.com/channels/647909397477195803/1550527341237768235)                                          |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
 | [Fuuki FG-2 / FG-3](https://github.com/ppriest/Arcade-Fuuki_MiSTer)                                                            |
@@ -139,6 +140,14 @@ file_checking = 'exhaustive'
 
 > [!IMPORTANT]
 > * The included MRA files for the Cave CV1000 games require the user to obtain the core separately from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
+
+> [!IMPORTANT]
+> * For the FM Towns Marty core to function properly, you must add the lines below to your 'MiSTer.ini' file.
+
+```
+[Marty]
+main=MiSTer_Marty
+```
 
 > [!IMPORTANT]
 > * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
