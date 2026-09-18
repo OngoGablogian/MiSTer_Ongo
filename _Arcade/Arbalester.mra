@@ -1,0 +1,67 @@
+<misterromdescription>
+    <name>Arbalester</name>
+    <setname>arbalest</setname>
+    <rbf>SetaDowntown</rbf>
+    <mameversion>0286</mameversion>
+    <year>1989</year>
+    <manufacturer>Jordan I.S. / Seta</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <rom index="1"><part>06</part></rom>
+
+    <rom index="0" zip="arbalest.zip" md5="none" address="0x30000000">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="uk-001-003" crc="ee878a2c" map="01"/>
+            <part name="uk-001-004" crc="902bb4e3" map="10"/>
+        </interleave>
+        <part repeat="131072">00</part>
+        <!-- pad to 0x100000 -->
+        <part repeat="393216">00</part>
+        <!-- sprites -->
+        <interleave output="16">
+            <part name="uk001.06" crc="11c75746" map="01"/>
+            <part name="uk001.07" crc="01b166c7" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="uk001.08" crc="78d60ba3" map="01"/>
+            <part name="uk001.09" crc="b4748ae0" map="10"/>
+        </interleave>
+        <!-- pad to 0x300000 -->
+        <part repeat="1048576">00</part>
+        <!-- tiles -->
+        <interleave output="16">
+            <part name="uk-001-010-t26" crc="c1e2f823" map="01"/>
+            <part name="uk-001-012-t28" crc="818a4085" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="uk-001-011-t27" crc="09dfe56a" map="01"/>
+            <part name="uk-001-013-t29" crc="771fa164" map="10"/>
+        </interleave>
+        <!-- x1snd -->
+        <part name="uk-001-015-t31" crc="ce9df5dd"/>
+        <part name="uk-001-014-t30" crc="016b844a"/>
+        <!-- sub -->
+        <part repeat="24576">00</part>
+        <part name="uk6005" crc="48c73a4a"/>
+        <part name="uk6005" crc="48c73a4a" offset="0x0" length="0x4000"/>
+        <part name="uk6005" crc="48c73a4a" offset="0x0" length="0x2000"/>
+    </rom>
+
+    <switches default="FF,FF,FF" base="0">
+        <dip name="Difficulty" bits="0,1" ids="Hardest,Harder,Hard,Easy"/>
+        <dip name="Bonus Life" bits="2,3" ids="300k &amp; 600k,600k Only,300k Only,Never"/>
+        <dip name="Lives" bits="4,5" ids="2,1,5,3"/>
+        <dip name="Licensor Option" bits="6" ids="Option 2,Option 1"/>
+        <dip name="Coinage Type" bits="7" ids="Coin Mode 2,Coin Mode 1"/>
+        <dip name="Licensed To (Option 1|2)" bits="8" ids="Taito,Romstar|Jordan"/>
+        <dip name="Flip Screen" bits="9" ids="On,Off"/>
+        <dip name="Service Mode" bits="10" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="11" ids="Off,On"/>
+        <dip name="Coin A (Mode 1|2)" bits="12,13" ids="2C/3C|4C/1C,2C/1C|3C/1C,1C/2C|2C/1C,1C/1C"/>
+        <dip name="Coin B (Mode 1|2)" bits="14,15" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

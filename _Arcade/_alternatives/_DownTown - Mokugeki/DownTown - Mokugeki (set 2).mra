@@ -1,0 +1,66 @@
+<misterromdescription>
+    <name>DownTown / Mokugeki (set 2)</name>
+    <setname>downtown2</setname>
+    <rbf>SetaDowntown</rbf>
+    <mameversion>0286</mameversion>
+    <year>1989</year>
+    <manufacturer>Seta</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <rom index="1"><part>01</part></rom>
+
+    <rom index="0" zip="downtown2.zip|downtown.zip" md5="none" address="0x30000000">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="ud2-001-000.3c" crc="f1965260" map="01"/>
+            <part name="ud2-001-003.11c" crc="e7d5fa5f" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ud2000002.9b" crc="ca976b24" map="01"/>
+            <part name="ud2000001.8b" crc="1708aebd" map="10"/>
+        </interleave>
+        <!-- pad to 0x100000 -->
+        <part repeat="393216">00</part>
+        <!-- sprites -->
+        <interleave output="16">
+            <part name="ud2-001-005-t01.2n" crc="77e6d249" map="01"/>
+            <part name="ud2-001-006-t02.3n" crc="6e381bf2" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ud2-001-007-t03.5n" crc="737b4971" map="01"/>
+            <part name="ud2-001-008-t04.6n" crc="99b9d757" map="10"/>
+        </interleave>
+        <!-- tiles -->
+        <interleave output="16">
+            <part name="ud2-001-009-t05.8n" crc="aee6c581" map="01"/>
+            <part name="ud2-001-010-t06.9n" crc="3d399d54" map="10"/>
+        </interleave>
+        <!-- pad to 0x500000 -->
+        <part repeat="1048576">00</part>
+        <!-- x1snd -->
+        <part name="ud2-001-011-t07.14n" crc="9c9ff69f"/>
+        <!-- pad to 0x600000 -->
+        <part repeat="524288">00</part>
+        <!-- sub -->
+        <part repeat="16384">00</part>
+        <part name="ud2-002-004.17c" crc="bbd538b1" offset="0x0" length="0x8000"/>
+        <part name="ud2-002-004.17c" crc="bbd538b1" offset="0x0" length="0x40000"/>
+    </rom>
+
+    <switches default="BF,F6,FF" base="0">
+        <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Bonus Life" bits="2,3" ids="50K/Every 150K,100K Only,50K Only,Never"/>
+        <dip name="Lives" bits="4,5" ids="4,2,5,3"/>
+        <dip name="World License" bits="6" ids="Taito,Romstar"/>
+        <dip name="Coinage Type" bits="7" ids="2,1"/>
+        <dip name="Sales" bits="8" ids="World,Japan Only"/>
+        <dip name="Flip Screen" bits="9" ids="On,Off"/>
+        <dip name="Service Mode" bits="10" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="11" ids="On,Off"/>
+        <dip name="Coin A (1|2)" bits="12,13" ids="2C/3C|4C/1C,2C/1C|3C/1C,1C/2C|2C/1C,1C/1C"/>
+        <dip name="Coin B (1|2)" bits="14,15" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Rotate Left,Rotate Right,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,Start,Select,L,R" count="4"/>
+</misterromdescription>

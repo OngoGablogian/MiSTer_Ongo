@@ -1,0 +1,66 @@
+<misterromdescription>
+    <name>Twin Eagle - Revenge Joe's Brother</name>
+    <setname>twineagl</setname>
+    <rbf>SetaDowntown</rbf>
+    <mameversion>0286</mameversion>
+    <year>1988</year>
+    <manufacturer>Seta (Taito license)</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <rom index="1"><part>04</part></rom>
+
+    <rom index="0" zip="twineagl.zip" md5="none" address="0x30000000">
+        <!-- maincpu -->
+        <part name="ua2-1" crc="5c3fe531"/>
+        <part repeat="131072">00</part>
+        <!-- pad to 0x100000 -->
+        <part repeat="393216">00</part>
+        <!-- sprites -->
+        <interleave output="16">
+            <part name="ua2-4" crc="8b7532d6" map="01"/>
+            <part name="ua2-3" crc="1124417a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ua2-6" crc="99d8dbba" map="01"/>
+            <part name="ua2-5" crc="6e450d28" map="10"/>
+        </interleave>
+        <!-- pad to 0x300000 -->
+        <part repeat="1048576">00</part>
+        <!-- tiles -->
+        <interleave output="16">
+            <part name="ua2-8" crc="7d3a8d73" map="01"/>
+            <part name="ua2-7" crc="fce56907" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ua2-10" crc="5bbe1f56" map="01"/>
+            <part name="ua2-9" crc="a451eae9" map="10"/>
+        </interleave>
+        <!-- x1snd -->
+        <part name="ua2-11" crc="624e6057"/>
+        <part name="ua2-12" crc="3068ff64"/>
+        <!-- sub -->
+        <part repeat="24576">00</part>
+        <part name="ua2-2" crc="783ca84e"/>
+        <part name="ua2-2" crc="783ca84e" offset="0x0" length="0x2000"/>
+        <part name="ua2-2" crc="783ca84e" offset="0x0" length="0x2000"/>
+        <part name="ua2-2" crc="783ca84e" offset="0x0" length="0x2000"/>
+        <part name="ua2-2" crc="783ca84e" offset="0x0" length="0x2000"/>
+    </rom>
+
+    <switches default="BF,F7,FF" base="0">
+        <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Bonus Life" bits="2,3" ids="500K/Every 1500K,1000K Only,500K Only,Never"/>
+        <dip name="Lives" bits="4,5" ids="2,1,5,3"/>
+        <dip name="Licensor Option" bits="6" ids="Option 2,Option 1"/>
+        <dip name="Coinage Type" bits="7" ids="Coin Mode 2,Coin Mode 1"/>
+        <dip name="Copyright / License (Option 2|1)" bits="8" ids="Taito America / Romstar|Taito America,Taito Corp Japan|Seta / Taito"/>
+        <dip name="Flip Screen" bits="9" ids="On,Off"/>
+        <dip name="Service Mode" bits="10" ids="On,Off"/>
+        <dip name="Cabinet" bits="11" ids="Upright,Cocktail"/>
+        <dip name="Coin A (Mode 1|2)" bits="12,13" ids="2C/3C|4C/1C,2C/1C|3C/1C,1C/2C|2C/1C,1C/1C"/>
+        <dip name="Coin B (Mode 1|2)" bits="14,15" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

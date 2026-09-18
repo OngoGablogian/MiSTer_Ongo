@@ -1,0 +1,72 @@
+<misterromdescription>
+    <name>Meta Fox</name>
+    <setname>metafox</setname>
+    <rbf>SetaDowntown</rbf>
+    <mameversion>0286</mameversion>
+    <year>1989</year>
+    <manufacturer>Jordan I.S. / Seta</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <rom index="1"><part>05</part></rom>
+
+    <rom index="0" zip="metafox.zip" md5="none" address="0x30000000">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="p1003161" crc="4fd6e6a1" map="01"/>
+            <part name="p1004162" crc="b6356c9a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="up001002" crc="ce91c987" map="01"/>
+            <part name="up001001" crc="0db7a505" map="10"/>
+        </interleave>
+        <!-- pad to 0x100000 -->
+        <part repeat="393216">00</part>
+        <!-- sprites -->
+        <interleave output="16">
+            <part name="p1006163" crc="80f69c7c" map="01"/>
+            <part name="p1007164" crc="d137e1a3" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="p1008165" crc="57494f2b" map="01"/>
+            <part name="p1009166" crc="8344afd2" map="10"/>
+        </interleave>
+        <!-- pad to 0x300000 -->
+        <part repeat="1048576">00</part>
+        <!-- tiles -->
+        <interleave output="16">
+            <part name="up001010" crc="bfbab472" map="01"/>
+            <part name="up001012" crc="fed2c5f9" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="up001011" crc="26cea381" map="01"/>
+            <part name="up001013" crc="adabf9ea" map="10"/>
+        </interleave>
+        <!-- x1snd -->
+        <part name="up001015" crc="2e20e39f"/>
+        <part name="up001014" crc="fca6315e"/>
+        <!-- sub -->
+        <part repeat="24576">00</part>
+        <part name="up001005" crc="2ac5e3e3"/>
+        <part name="up001005" crc="2ac5e3e3" offset="0x0" length="0x2000"/>
+        <part name="up001005" crc="2ac5e3e3" offset="0x0" length="0x2000"/>
+        <part name="up001005" crc="2ac5e3e3" offset="0x0" length="0x2000"/>
+        <part name="up001005" crc="2ac5e3e3" offset="0x0" length="0x2000"/>
+    </rom>
+
+    <switches default="F1,FF,FF" base="0">
+        <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Bonus Life" bits="2,3" ids="600k &amp; 900k,900K Only,600K Only,None"/>
+        <dip name="Lives" bits="4,5" ids="2,1,5,3"/>
+        <dip name="Licensor Option" bits="6" ids="Option 2,Option 1"/>
+        <dip name="Coinage Type" bits="7" ids="Coin Mode 2,Coin Mode 1"/>
+        <dip name="Copyright / License (Option 1|2)" bits="8" ids="Seta / Taito|Seta USA / Taito America,Seta USA / Romstar|Seta / Jordan I.S."/>
+        <dip name="Flip Screen" bits="9" ids="On,Off"/>
+        <dip name="Service Mode" bits="10" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="11" ids="Off,On"/>
+        <dip name="Coin A (Mode 1|2)" bits="12,13" ids="2C/3C|4C/1C,2C/1C|3C/1C,1C/2C|2C/1C,1C/1C"/>
+        <dip name="Coin B (Mode 1|2)" bits="14,15" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>
