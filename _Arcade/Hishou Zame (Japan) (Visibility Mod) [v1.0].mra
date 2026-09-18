@@ -1,0 +1,97 @@
+<misterromdescription>
+    <name>Hishou Zame (Japan) (Visibility Mod) [v1.0]</name>
+    <setname>hishouza_v</setname>
+    <rbf>fshark_mister</rbf>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Toaplan / Taito Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>Vertical (CW)</rotation>
+    <region>Japan</region>
+    <platform>Toaplan GXL Hardware</platform>
+    <category>Shoot &apos;Em Up</category>
+    <catver>Shooter / Flying Vertical</catver>
+
+    <switches default="01,80">
+        <!-- DSWA -->
+        <dip name="Cabinet Type" bits="0" ids="Table,Upright"/>
+        <dip name="Screen Inversion" bits="1" ids="Normal,Invert"/>
+        <dip name="Service Mode" bits="2" ids="Normal,Screen Test"/>
+        <dip name="Advertise Sound" bits="3" ids="On,Off"/>
+        <dip name="Coin A" bits="4,5" ids="1/1,2/3,1/2"/>
+        <dip name="Coin B" bits="6,7" ids="1/1,2/3,1/2"/>
+        <!-- DSWB -->
+        <dip name="Game Difficulty" bits="8,9" ids="B,A,C,D"/>
+        <dip name="Extend" bits="10,11" ids="50k/150k,70k/200k,50k Only,100k Only"/>
+        <dip name="Fighter Counts" bits="12,13" ids="3,5,1,2"/>
+        <dip name="Dip Switch Display" bits="14" ids="Off,On"/>
+        <dip name="Continue Play" bits="15" ids="No,Yes"/>
+    </switches>
+
+    <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,-" count="6"/>
+
+    <rom index="1">
+        <part>01</part>
+    </rom>
+
+    <rom index="0" zip="hishouza.zip|fshark.zip" md5="None">
+        <!-- maincpu - starts at 0x0 -->
+        <interleave output="16">
+            <part name="b02_18.m8" crc="4444bb94" map="01"/>
+            <part name="b02_17.p8" crc="cdac7228" map="10"/>
+        </interleave>
+
+        <!-- audiocpu - starts at 0x20000 -->
+        <part name="b02_16.l5" crc="cdd1a153"/>
+
+        <!-- dsp - starts at 0x28000 -->
+        <part name="d70011u_gxc-01_mcu_64000" crc="1ca63774"/>
+
+        <!-- chars - starts at 0x28C00 -->
+        <interleave output="24">
+            <part name="b02-07.h11" crc="c13a775e" map="001"/>
+            <part name="b02-06.h10" crc="ad5f1371" map="010"/>
+            <part name="b02-05.h8"  crc="85a7bff6" map="100"/>
+        </interleave>
+
+        <!-- fg_tiles - starts at 0x34C00 -->
+        <interleave output="32">
+            <part name="b02_12.h20" crc="733b9997" map="0001"/>
+            <part name="b02_15.h24" crc="8b70ef32" map="0010"/>
+            <part name="b02_14.h23" crc="f711ba7d" map="0100"/>
+            <part name="b02_13.h21" crc="62532cd3" map="1000"/>
+        </interleave>
+
+        <!-- bg_tiles - starts at 0x54C00 -->
+        <interleave output="32">
+            <part name="b02_08.h13" crc="ef0cf49c" map="0001"/>
+            <part name="b02_11.h18" crc="f5799422" map="0010"/>
+            <part name="b02_10.h16" crc="4bd099ff" map="0100"/>
+            <part name="b02_09.h15" crc="230f1582" map="1000"/>
+        </interleave>
+
+        <!-- sprites - starts at 0x74C00 -->
+        <interleave output="32">
+            <part name="b02_01.d15" crc="2234b424" map="1000"/>
+            <part name="b02_02.d16" crc="30d4c9a8" map="0100"/>
+            <part name="b02_03.d17" crc="64f3d88f" map="0010"/>
+            <part name="b02_04.d20" crc="3b23a9fc" map="0001"/>
+        </interleave>
+        <!-- Total 0xB4C00 bytes - 723 kBytes -->
+
+        <!-- Hishou Zame (Japan) (Visibility Mod) [v1.0] -->
+        <patch offset="0x00081fa0">0001 0200 0080 4000 0406 0001 0020 00c0</patch>
+        <patch offset="0x00081fb0">0805 0803 80c0 10e0 090b 0007 c0d0 00e0</patch>
+        <patch offset="0x00081fc0">090b 0007 80d0 00e0 0005 0803 00a0 10c0</patch>
+        <patch offset="0x00081fd0">0406 0001 2040 2080 0301 0200 8080 4000</patch>
+        <patch offset="0x00082020">0102 0300 c000 c000 0501 0600 80a0 6000</patch>
+        <patch offset="0x00082030">020b 0c00 1040 3080 0c06 0801 30a0 10c0</patch>
+        <patch offset="0x00082040">0c07 0800 3060 1080 0a03 0c00 40d0 3000</patch>
+        <patch offset="0x00082050">0105 0600 a080 6000 0300 0300 8040 c000</patch>
+        <patch offset="0x000820a0">0303 0302 c0c0 c000 0506 0700 a060 e020</patch>
+        <patch offset="0x000820b0">0a0c 0f08 10b0 7000 0c09 0e00 3050 3080</patch>
+        <patch offset="0x000820c0">0c09 0e00 3090 7000 0a0c 0f00 5030 f010</patch>
+        <patch offset="0x000820d0">0506 0704 a060 e000 0303 0300 c0c0 c040</patch>
+    </rom>
+</misterromdescription>

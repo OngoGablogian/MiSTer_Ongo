@@ -187,6 +187,7 @@ main=MiSTer_N64DD
 | [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                                       |
 | [DoDonPachi (Ship Color No BGM)](https://epozzobon.it/re/ddonpach/patcher)                                                     |
 | [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                                     |
+| [Flying Shark (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                       |
 | [Gradius II (ver.xh)](https://github.com/Toryalai1/Arcade_Offset/tree/main/release/_Arcade%20Offset/_Gradius%20II)             |
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                              |
 | [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)        |
@@ -199,6 +200,8 @@ main=MiSTer_N64DD
 | Salamander (SP ver. clone)                                                                                                     |
 | Salamander (SP ver. clone Neo)                                                                                                 |
 | [SlapFight (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                          |
+| [Strikers 1945 (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                      |
+| [Strikers 1945 II (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                   |
 | [Terra Cresta (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                       |
 | [Tiger Heli (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                         |
 | [Toryumon DX](https://www.romhacking.net/hacks/8319/)                                                                          |
