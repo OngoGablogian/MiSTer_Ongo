@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>vertical</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>19</part></rom>
 
     <rom index="0" zip="madshark.zip" md5="none" address="0x30000000">
@@ -42,8 +41,8 @@
 
     <switches default="FF,FF,FF" base="0">
         <dip name="Lives" bits="0,1" ids="5,4,2,3"/>
-        <dip name="Coin A" bits="2,3,4" ids="1 Coin/4 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
-        <dip name="Coin A" bits="5,6,7" ids="1 Coin/4 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="2,4" ids="1 Coin/4 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="5,7" ids="1 Coin/4 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Flip Screen" bits="8" ids="On,Off"/>
         <dip name="Demo Sounds" bits="9" ids="Off,On"/>
         <dip name="Bonus Life" bits="11,12" ids="No,1000k 2000k,1500k 3000k,1000k"/>

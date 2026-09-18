@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>vertical</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>10</part></rom>
 
     <rom index="0" zip="eightfrc.zip" md5="none" address="0x30000000">
@@ -47,8 +46,8 @@
         <dip name="Difficulty" bits="3,4" ids="Hardest,Hard,Easy,Normal"/>
         <dip name="Lives" bits="5,6" ids="5,4,2,3"/>
         <dip name="Language" bits="7" ids="English,Japanese"/>
-        <dip name="Coin A" bits="8,9,10" ids="Free Play,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
-        <dip name="Coin B" bits="11,12,13" ids="Free Play,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="8,10" ids="Free Play,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="11,13" ids="Free Play,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Shared Credits" bits="14" ids="Off,On"/>
         <dip name="Credits To Start" bits="15" ids="2,1"/>
     </switches>

@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>0A</part></rom>
 
     <rom index="0" zip="qzkklogy.zip" md5="none" address="0x30000000">
@@ -40,7 +39,7 @@
     </rom>
 
     <switches default="FF,FF,FF" base="0">
-        <dip name="Coin A" bits="0,1,2" ids="Free Play,2 Coins/3 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="0,2" ids="Free Play,2 Coins/3 Credits,1 Coin/3 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Unused" bits="3" ids="On,Off"/>
         <dip name="Difficulty" bits="4,5" ids="Very Hard,Hard,Easy,Normal"/>
         <dip name="Lives" bits="6,7" ids="5,4,2,3"/>

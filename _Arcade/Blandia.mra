@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>1A</part></rom>
 
     <rom index="0" zip="blandia.zip" md5="none" address="0x30000000">
@@ -57,8 +56,8 @@
         <dip name="Service Mode" bits="7" ids="On,Off"/>
         <dip name="Demo Sounds" bits="8" ids="Off,On"/>
         <dip name="Coinage Type" bits="9" ids="Coin Mode 2,Coin Mode 1"/>
-        <dip name="Coin A" bits="10,11,12" ids="Free Play,2 Coins/3 Credits,2C_5C,2 Coins/1 Credit,3 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
-        <dip name="Coin B" bits="13,14,15" ids="Free Play,DSW,DSW,DSW,3 Coins/7 CreditsDSW,DSW,DSW,DSW"/>
+        <dip name="Coin A" bits="10,12" ids="Free Play,2 Coins/3 Credits,2 Coins/5 Credits,2 Coins/1 Credit,3 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B (Mode 1|2)" bits="13,15" ids="Free Play,3C/1C|2C/5C,4C/1C|2C/6C,2C/1C|2C/4C,5C/1C|3C/7C,1C/3C,1C/2C,1C/1C"/>
     </switches>
 
     <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>

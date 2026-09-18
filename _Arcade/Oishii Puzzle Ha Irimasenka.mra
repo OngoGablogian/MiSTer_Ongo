@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>11</part></rom>
 
     <rom index="0" zip="oisipuzl.zip" md5="none" address="0x30000000">
@@ -50,8 +49,8 @@
     </rom>
 
     <switches default="FF,FB,FF" base="0">
-        <dip name="Coin A" bits="0,1,2" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
-        <dip name="Coin B" bits="3,4,5" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="0,2" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="3,5" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
         <dip name="Demo Sounds" bits="10" ids="On,Off"/>
         <dip name="Service Mode" bits="15" ids="On,Off"/>

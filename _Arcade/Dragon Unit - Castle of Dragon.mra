@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>08</part></rom>
 
     <rom index="0" zip="drgnunit.zip" md5="none" address="0x30000000">
@@ -71,8 +70,8 @@
         <dip name="Flip Screen" bits="1" ids="On,Off"/>
         <dip name="Demo Sounds" bits="2" ids="1 of 8 Scenes,1 of 4 Scenes"/>
         <dip name="Service Mode" bits="3" ids="On,Off"/>
-        <dip name="Coin A" bits="4,5" ids="COINS,COINS,COINS,COINS"/>
-        <dip name="Coin B" bits="6,7" ids="COINS,COINS,COINS,COINS"/>
+        <dip name="Coin A (Mode 1|2)" bits="4,5" ids="2C/3C|4C/1C,2C/1C|3C/1C,1C/2C|2C/1C,1C/1C"/>
+        <dip name="Coin B (Mode 1|2)" bits="6,7" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
         <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Normal,Easy"/>
         <dip name="Bonus Life" bits="10,11" ids="400K Only,300K/Every 500K,150K/Every 300K,200K/Every 400K"/>
         <dip name="Lives" bits="12,13" ids="1,2,5,3"/>

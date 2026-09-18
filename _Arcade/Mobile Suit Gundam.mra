@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>0F</part></rom>
 
     <rom index="0" zip="msgundam.zip" md5="none" address="0x30000000">
@@ -42,14 +41,14 @@
     <switches default="FF,FF,FF" base="0">
         <dip name="Demo Sounds" bits="0" ids="Off,On"/>
         <dip name="Difficulty" bits="1,2" ids="Hardest,Hard,Easy,Normal"/>
-        <dip name="Unknown 1-4" bits="3" ids="On,Off"/>
+        <!-- <dip name="Unknown 1-4" bits="3" ids="On,Off"/> -->
         <dip name="Flip Screen" bits="4" ids="On,Off"/>
         <dip name="Memory Check" bits="5" ids="On,Off"/>
-        <dip name="Unknown 1-7" bits="6" ids="On,Off"/>
+        <!-- <dip name="Unknown 1-7" bits="6" ids="On,Off"/> -->
         <dip name="Service Mode" bits="7" ids="On,Off"/>
-        <dip name="Coin A" bits="8,9,10" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
-        <dip name="Coin B" bits="11,12,13" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
-        <dip name="Unknown 2-7" bits="14" ids="On,Off"/>
+        <dip name="Coin A" bits="8,10" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="11,13" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <!-- <dip name="Unknown 2-7" bits="14" ids="On,Off"/> -->
         <dip name="Free Play" bits="15" ids="On,Off"/>
         <dip name="Language" bits="23" ids="Japanese,English"/>
     </switches>

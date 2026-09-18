@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>02</part></rom>
 
     <rom index="0" zip="wits.zip" md5="none" address="0x30000000">
@@ -47,8 +46,8 @@
         <dip name="Lives" bits="12,13" ids="1,2,5,3"/>
         <dip name="Play Mode" bits="14" ids="4 Players,2 Players"/>
         <dip name="CPU Player During Multi-Player Game" bits="15" ids="No,Yes"/>
-        <dip name="Unknown 3-4*" bits="20" ids="On,Off"/>
-        <dip name="Unknown 3-5*" bits="21" ids="On,Off"/>
+        <!-- <dip name="Unknown 3-4*" bits="20" ids="On,Off"/> -->
+        <!-- <dip name="Unknown 3-5*" bits="21" ids="On,Off"/> -->
         <dip name="License" bits="22,23" ids="Athena (Japan Only),Visco (Japan Only),Seta U.S.A,Romstar"/>
     </switches>
 

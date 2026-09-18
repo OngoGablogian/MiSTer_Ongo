@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>vertical</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>09</part></rom>
 
     <rom index="0" zip="stg.zip" md5="none" address="0x30000000">

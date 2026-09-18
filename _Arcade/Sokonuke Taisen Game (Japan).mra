@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>18</part></rom>
 
     <rom index="0" zip="sokonuke.zip" md5="none" address="0x30000000">
@@ -38,16 +37,16 @@
     </rom>
 
     <switches default="FF,FF,FF" base="0">
-        <dip name="Coin A" bits="0,1,2" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
-        <dip name="Coin B" bits="3,4,5" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="0,2" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="3,5" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Cheap Continue" bits="6" ids="Yes,No"/>
-        <dip name="Unknown" bits="7" ids="On,Off"/>
+        <!-- <dip name="Unknown" bits="7" ids="On,Off"/> -->
         <dip name="Flip Screen" bits="8" ids="On,Off"/>
         <dip name="Demo Sounds" bits="9" ids="Off,On"/>
         <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
         <dip name="Free Play" bits="12" ids="On,Off"/>
         <dip name="DSW2 Switch 6*" bits="13" ids="On,Off"/>
-        <dip name="Unknown" bits="14" ids="On,Off"/>
+        <!-- <dip name="Unknown" bits="14" ids="On,Off"/> -->
         <dip name="Service Mode" bits="15" ids="On,Off"/>
     </switches>
 

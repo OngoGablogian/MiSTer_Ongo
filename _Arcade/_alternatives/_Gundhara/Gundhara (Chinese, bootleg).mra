@@ -8,7 +8,6 @@
     <category>Arcade</category>
     <rotation>vertical</rotation>
 
-    <!-- which game, for rtl/seta_board_cfg.sv. FIRST, because the download is permuted with it. -->
     <rom index="1"><part>14</part></rom>
 
     <rom index="0" zip="gundharac.zip|gundhara.zip" md5="none" address="0x30000000">
@@ -86,7 +85,7 @@
         <dip name="Bonus Life" bits="4,5" ids="None,400K,200K/Every 200K,200K"/>
         <dip name="Demo Sounds" bits="6" ids="Off,On"/>
         <dip name="Service Mode" bits="7" ids="On,Off"/>
-        <dip name="Coin A" bits="8,9,10,11" ids="Free Play,4 Coins/3 Credits,4 Coins/1 Credit,3 Coins/4 Credits,3 Coins/2 Credits,3 Coins/1 Credit,2C_5C,2 Coins/3 Credits,2 Coins/1 Credit,1C_7C,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin A" bits="8,11" ids="Free Play,4 Coins/3 Credits,4 Coins/1 Credit,3 Coins/4 Credits,3 Coins/2 Credits,3 Coins/1 Credit,2 Coins/5 Credits,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/7 Credits,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Coin B" bits="12,13" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Language" bits="14,15" ids="English,-,-,Japanese"/>
     </switches>
