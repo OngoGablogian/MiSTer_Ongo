@@ -1,5 +1,5 @@
 <!--
-  Hong Hu Zhanji II (China, set 1) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 35).
+  Hong Hu Zhanji II (China, set 1) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 31).
   Clone of grdnstrm; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... redfoxwp2 ...)
@@ -25,7 +25,7 @@
   <!-- DSW1, DSW2 (defaults from the PORT_DIPNAME default values; ids in
        bit-value order, value 0 first), then the game-id byte the core
        selects the board with. -->
-  <switches default="FF,FF,23">
+  <switches default="FF,FF,1F">
     <dip bits="0" name="Service Mode" ids="On,Off"/>
     <dip bits="1" name="Demo Sounds" ids="Off,On"/>
     <dip bits="2" name="Free Play" ids="On,Off"/>
@@ -43,7 +43,7 @@
   <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
 
   <rom index="0" zip="redfoxwp2.zip|grdnstrm.zip|nmk004.zip" md5="none">
-    <!-- maincpu, 0x080000 -->
+    <!-- maincpu, 0x080000 (init_grdnstrm scramble) -->
     <interleave output="16">
       <part crc="daa44ab4" name="u107" map="01"/>
       <part crc="3f31600b" name="u112" map="10"/>
