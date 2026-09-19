@@ -131,7 +131,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 # Important Info:
 
 > [!IMPORTANT]
-> * Since the release of Downloader v2.3, I'd recommended adding the lines below to your 'downloader.ini' file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
+> * Since the release of Downloader v2.3, I'd recommended adding the lines below to your `downloader.ini` file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
 
 ```
 [MiSTer]
@@ -142,7 +142,7 @@ file_checking = 'exhaustive'
 > * The included MRA files for the Cave CV1000 games require the user to obtain the core separately from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
 
 > [!IMPORTANT]
-> * For the FM Towns Marty core to function properly, you must add the lines below to your 'MiSTer.ini' file.
+> * For the FM Towns Marty core to function properly, you must add the lines below to your `MiSTer.ini` file.
 
 ```
 [Marty]
@@ -150,17 +150,26 @@ main=MiSTer_Marty
 ```
 
 > [!IMPORTANT]
-> * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your 'MiSTer.ini' file.
+> * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your `MiSTer.ini` file.
 
 ```
 [Uneon]
 main=MiSTer_Uneon
 ```
 
+> [!WARNING]
+> * This repository mirrors the cores from both the [Meathax](https://github.com/meathax/meatcores) & [blahm1d](https://github.com/blahm1d/MiSTer-cores) databases, as I prefer having all of the arcade games in the `_Arcade` folder on MiSTer. If you use either of these databases, please add these filters below to your `downloader.ini` to avoid having duplicate or conflicting MRAs/RBFs. This prevents the Meathax & blahm1d cores from being downloaded from this repository.
+
+```
+[OngoGablogian/MiSTer_Ongo]
+db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
+filter = !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_legendofkage !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_EscapeKids !Arcade-Meathax_I-Robot !Arcade-Meathax_Ikki !Arcade-Meathax_MCR68 !Arcade-Meathax_NARC !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_SSV !Arcade-Meathax_Suna8bit !Arcade-Meathax_YellowCab
+```
+
 ----
 
 > [!IMPORTANT]
-> * The CD-i core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
+> * The CD-i core is now officially released and included with update_all! If you've previously added the lines below to your `MiSTer.ini` file, please remove them.
 
 ```
 [CD-i]
@@ -168,7 +177,7 @@ main=MiSTer_CDi
 ```
 
 > [!IMPORTANT]
-> * The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to your 'MiSTer.ini' file, please remove them.
+> * The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to your `MiSTer.ini` file, please remove them.
 
 ```
 [N64DD]
@@ -239,7 +248,7 @@ main=MiSTer_N64DD
 ----
 
 > [!TIP]
-> **Here are some other recommended repositories you can add to your 'downloader.ini' file.**
+> **Here are some other recommended repositories you can add to your `downloader.ini` file.**
 
 [MiSTer Unstable Nightlies](https://github.com/MiSTer-unstable-nightlies)
 ```
