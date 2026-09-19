@@ -99,6 +99,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                            |
 | [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                |
 | [Seta 1st Generation Hardware (X1-010)](https://github.com/ppriest/Arcade-Seta_MiSTer)                                         |
+| [Skull & Crossbones](https://misterfpga.org/viewtopic.php?t=10831)                                                             |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
 | [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                   |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                   |
