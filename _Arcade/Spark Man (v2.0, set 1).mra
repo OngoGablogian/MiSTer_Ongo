@@ -5,7 +5,7 @@
   <manufacturer>SunA</manufacturer>
   <parent>sparkman</parent>
   <mameversion>0289</mameversion>
-  <rbf>Suna8bit</rbf>
+  <rbf>Meathax_Suna8bit</rbf>
   <resolution>15kHz</resolution>
   <rotation>horizontal</rotation>
   <homebrew>no</homebrew>

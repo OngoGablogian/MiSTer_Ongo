@@ -3,7 +3,7 @@
   <setname>radm</setname>
   <year>1990</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>SegaSystem32</rbf>
+  <rbf>Meathax_SegaSystem32</rbf>
   <buttons names="Accelerate,Brake,Light,Wiper,-,-,Start,Coin,Test,Service,Pause" default="A,B,X,Y,Start,Select,R,L,-" count="4"/>
   <rom index="4" zip="radm.zip" md5="none">
     <part name="epr-13693.ic21" crc="3f09a211"/>

@@ -6,7 +6,7 @@
   <setname>gground</setname>
   <year>1988</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>SegaSystem24</rbf>
+  <rbf>Meathax_SegaSystem24</rbf>
   <resolution>15kHz</resolution>
   <rotation>vertical (ccw)</rotation>
   <joystick>8-way</joystick>

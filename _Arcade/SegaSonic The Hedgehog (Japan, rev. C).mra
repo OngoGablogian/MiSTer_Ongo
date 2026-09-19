@@ -3,7 +3,7 @@
   <setname>sonic</setname>
   <year>1992</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>SegaSystem32</rbf>
+  <rbf>Meathax_SegaSystem32</rbf>
   <rotation>horizontal</rotation>
   <resolution>15kHz</resolution>
   <homebrew>no</homebrew>

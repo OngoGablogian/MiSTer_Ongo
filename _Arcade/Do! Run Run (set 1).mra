@@ -11,15 +11,15 @@
 	<setname>dorunrun</setname>
 	<parent>dorunrun</parent>
 	<mameversion>0288</mameversion>
-	<rbf>DoCastle</rbf>
-	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<rbf>Meathax_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence"/>
 	<resolution>15kHz</resolution>
 	<rotation>horizontal</rotation>
 	<flip>yes</flip>
 	<players>2</players>
 	<joystick>4-way</joystick>
 	<num_buttons>1</num_buttons>
-	<buttons names="Throw,-,Start 1P,Start 2P,Coin 1,Coin 2,Service Mode,Pause,-,-,-,-,Service Credit" default="A,-,Start,Select,R,L,X,Y,-,-,-,-,-" />
+	<buttons names="Throw,-,Start 1P,Start 2P,Coin 1,Coin 2,Service Mode,Pause,-,-,-,-,Service Credit" default="A,-,Start,Select,R,L,X,Y,-,-,-,-,-"/>
 
 	<switches default="DF,FF">
 		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
@@ -33,7 +33,7 @@
 		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
 	</switches>
 
-	<rom index="0" zip="dorunrun.zip" md5="None">
+	<rom index="0" zip="dorunrun.zip" md5="9e8fac30bd7a76109269c55a9f3a8df5">
 		<part name="2764.p1" crc="95c86f8e"/>
 		<part repeat="8192">00</part>
 		<part name="2764.l1" crc="e9a65ba7"/>

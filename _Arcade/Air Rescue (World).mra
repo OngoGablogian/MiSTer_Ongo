@@ -3,7 +3,7 @@
   <setname>arescue</setname>
   <year>1992</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>SegaSystem32</rbf>
+  <rbf>Meathax_SegaSystem32</rbf>
   <homebrew>no</homebrew>
   <bootleg>no</bootleg>
   <resolution>15kHz</resolution>

@@ -11,15 +11,15 @@
 	<setname>douni</setname>
 	<parent>docastle</parent>
 	<mameversion>0288</mameversion>
-	<rbf>DoCastle</rbf>
-	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence" />
+	<rbf>Meathax_DoCastle</rbf>
+	<about author="aCORES" source="MAME universal/docastle.cpp, Universal manuals and PCB evidence"/>
 	<resolution>15kHz</resolution>
 	<rotation>vertical (ccw)</rotation>
 	<flip>yes</flip>
 	<players>2</players>
 	<joystick>4-way</joystick>
 	<num_buttons>1</num_buttons>
-	<buttons names="Hammer,-,Start 1P,Start 2P,Coin 1,Coin 2,Service Mode,Pause,-,-,-,-,Service Credit" default="A,-,Start,Select,R,L,X,Y,-,-,-,-,-" />
+	<buttons names="Hammer,-,Start 1P,Start 2P,Coin 1,Coin 2,Service Mode,Pause,-,-,-,-,Service Credit" default="A,-,Start,Select,R,L,X,Y,-,-,-,-,-"/>
 
 	<switches default="DF,FF">
 		<dip bits="0,1" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
@@ -32,7 +32,7 @@
 		<dip bits="12,13,14,15" name="Coin A" ids="Free,1/1,1/1,1/1,1/1,1/1,4/1,3/2,3/1,2/3,2/1,1/5,1/4,1/3,1/2,1/1"/>
 	</switches>
 
-	<rom index="0" zip="douni.zip|docastle.zip" md5="None">
+	<rom index="0" zip="docastle.zip|douni.zip" md5="c86dc6e9528811fd929b3672e45e063c">
 		<part name="dorev1.bin" crc="1e2cbb3c"/>
 		<part name="dorev2.bin" crc="18418f83"/>
 		<part name="dorev3.bin" crc="7b9e2061"/>

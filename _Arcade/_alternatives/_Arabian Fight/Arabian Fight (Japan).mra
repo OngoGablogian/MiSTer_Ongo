@@ -4,7 +4,7 @@
   <parent>arabfgt</parent>
   <year>1991</year>
   <manufacturer>Sega</manufacturer>
-  <rbf>SegaSystem32</rbf>
+  <rbf>Meathax_SegaSystem32</rbf>
   <buttons names="Attack,Jump,-,-,-,-,Start,Coin,Test,Service,Pause" default="A,B,Start,Select,R,L,Y" count="2"/>
   <rom index="4" zip="arabfgt.zip|arabfgtj.zip" md5="none">
     <part name="epr-14597.ic8" crc="7a6fe222"/>

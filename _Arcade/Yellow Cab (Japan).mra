@@ -8,7 +8,7 @@
 	<year>1984</year>
 	<manufacturer>Data East Corporation</manufacturer>
 	<category>Driving</category>
-	<rbf>YellowCab</rbf>
+	<rbf>Meathax_YellowCab</rbf>
 	<about author="aCORES Yellow Cab scaffold" source="MAME liberate.cpp / kamikcab"/>
 	<resolution>15kHz</resolution>
 	<rotation>vertical</rotation>

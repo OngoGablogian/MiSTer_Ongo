@@ -14,8 +14,8 @@
 	<setname>farmer</setname>
 	<parent>ikki</parent>
 	<mameversion>0264</mameversion>
-	<rbf>Ikki</rbf>
-	<about author="aCORES" source="MAME ikki.cpp (farmer clone)" />
+	<rbf>Meathax_Ikki</rbf>
+	<about author="aCORES" source="MAME ikki.cpp (farmer clone)"/>
 
 	<resolution>240x224</resolution>
 	<rotation>horizontal</rotation>

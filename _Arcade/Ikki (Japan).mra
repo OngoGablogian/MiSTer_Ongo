@@ -14,8 +14,8 @@
 	<setname>ikki</setname>
 	<parent>ikki</parent>
 	<mameversion>0264</mameversion>
-	<rbf>Ikki</rbf>
-	<about author="aCORES" source="MAME ikki.cpp" />
+	<rbf>Meathax_Ikki</rbf>
+	<about author="aCORES" source="MAME ikki.cpp"/>
 
 	<resolution>240x224</resolution>
 	<rotation>horizontal</rotation>

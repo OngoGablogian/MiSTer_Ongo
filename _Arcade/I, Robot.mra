@@ -1,7 +1,7 @@
 <misterromdescription>
 	<name>I, Robot</name>
 	<setname>irobot</setname>
-	<rbf>I-Robot</rbf>
+	<rbf>Meathax_I-Robot</rbf>
 	<mameversion>0289</mameversion>
 	<year>1983</year>
 	<manufacturer>Atari</manufacturer>
@@ -12,18 +12,18 @@
 	<rotation>horizontal</rotation>
 	<homebrew>no</homebrew>
 	<bootleg>no</bootleg>
-	<buttons names="Fire,View,Start 1P,Start 2P,Coin 1,Coin 2,Coin 3,Service,Pause" default="A,B,Start,Select,R,L,X,Y,-" />
+	<buttons names="Fire,View,Start 1P,Start 2P,Coin 1,Coin 2,Coin 3,Service,Pause" default="A,B,Start,Select,R,L,X,Y,-"/>
 	<switches default="ff,00" base="16">
-		<dip bits="0" name="Language" ids="German,English" />
-		<dip bits="1" name="Minimum Game Time" ids="90 Seconds on Level 1,3 Lives (Limited Game Time)" />
-		<dip bits="2,3" name="Bonus Life" ids="30000,50000,None,20000" />
-		<dip bits="4,5" name="Lives" ids="4,5,2,3" />
-		<dip bits="6" name="Difficulty" ids="Easy,Medium" />
-		<dip bits="7" name="Demo Mode" ids="On,Off" />
-		<dip bits="8,9" name="Coins Per Credit" ids="1 Coin 1 Credit,2 Coins 1 Credit,3 Coins 1 Credit,4 Coins 1 Credit" />
-		<dip bits="10,11" name="Right Coin" ids="1 Coin for 1 Coin Unit,1 Coin for 4 Coin Units,1 Coin for 5 Coin Units,1 Coin for 6 Coin Units" />
-		<dip bits="12" name="Left Coin" ids="1 Coin for 1 Coin Unit,1 Coin for 2 Coin Units" />
-		<dip bits="13,14,15" name="Bonus Adder" ids="None,1 Credit for 2 Coin Units,1 Credit for 4 Coin Units,2 Credits for 4 Coin Units,1 Credit for 5 Coin Units,1 Credit for 3 Coin Units,No Bonus,Free Play" />
+		<dip bits="0" name="Language" ids="German,English"/>
+		<dip bits="1" name="Minimum Game Time" ids="90 Seconds on Level 1,3 Lives (Limited Game Time)"/>
+		<dip bits="2,3" name="Bonus Life" ids="30000,50000,None,20000"/>
+		<dip bits="4,5" name="Lives" ids="4,5,2,3"/>
+		<dip bits="6" name="Difficulty" ids="Easy,Medium"/>
+		<dip bits="7" name="Demo Mode" ids="On,Off"/>
+		<dip bits="8,9" name="Coins Per Credit" ids="1 Coin 1 Credit,2 Coins 1 Credit,3 Coins 1 Credit,4 Coins 1 Credit"/>
+		<dip bits="10,11" name="Right Coin" ids="1 Coin for 1 Coin Unit,1 Coin for 4 Coin Units,1 Coin for 5 Coin Units,1 Coin for 6 Coin Units"/>
+		<dip bits="12" name="Left Coin" ids="1 Coin for 1 Coin Unit,1 Coin for 2 Coin Units"/>
+		<dip bits="13,14,15" name="Bonus Adder" ids="None,1 Credit for 2 Coin Units,1 Credit for 4 Coin Units,2 Credits for 4 Coin Units,1 Credit for 5 Coin Units,1 Credit for 3 Coin Units,No Bonus,Free Play"/>
 	</switches>
 	<!-- Xicor X2212 non-volatile RAM: MiSTer Main streams and stores this
 	     back through ioctl index 1 with an 8-bit host address, i.e. 256
