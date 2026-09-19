@@ -45,7 +45,7 @@
         <dip name="Coin A" bits="8,11" ids="4 Coins/4 Credits,3 Coins/4 Credits,2 Coins/4 Credits,1 Coin/4 Credits,4 Coins/3 Credits,3 Coins/3 Credits,2 Coins/3 Credits,1 Coin/3 Credits,4 Coins/2 Credits,3 Coins/2 Credits,2 Coins/2 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Coin B" bits="12,15" ids="4 Coins/4 Credits,3 Coins/4 Credits,2 Coins/4 Credits,1 Coin/4 Credits,4 Coins/3 Credits,3 Coins/3 Credits,2 Coins/3 Credits,1 Coin/3 Credits,4 Coins/2 Credits,3 Coins/2 Credits,2 Coins/2 Credits,1 Coin/2 Credits,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Force 1 Life" bits="20" ids="Off,On"/>
-        <dip name="Copyright" bits="21,23" ids="None,None,None,None,Romstar,Visco,Seta (Romstar License),Seta (Visco License)"/>
+        <dip name="Copyright" bits="21,23" ids="None,None,None,None,Romstar,Visco,Seta/Romstar,Seta/Visco"/>
     </switches>
 
     <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>

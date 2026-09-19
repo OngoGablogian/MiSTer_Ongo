@@ -60,12 +60,12 @@
         <dip name="Lives" bits="4,5" ids="2,1,5,3"/>
         <dip name="Licensor Option" bits="6" ids="Option 2,Option 1"/>
         <dip name="Coinage Type" bits="7" ids="Coin Mode 2,Coin Mode 1"/>
-        <dip name="Copyright / License (Option 1|2)" bits="8" ids="Seta / Taito|Seta USA / Taito America,Seta USA / Romstar|Seta / Jordan I.S."/>
+        <dip name="License" bits="8" ids="Seta / Taito,Seta USA / Romstar"/>
         <dip name="Flip Screen" bits="9" ids="On,Off"/>
         <dip name="Service Mode" bits="10" ids="On,Off"/>
         <dip name="Demo Sounds" bits="11" ids="Off,On"/>
-        <dip name="Coin A (Mode 1|2)" bits="12,13" ids="2C/3C|4C/1C,2C/1C|3C/1C,1C/2C|2C/1C,1C/1C"/>
-        <dip name="Coin B (Mode 1|2)" bits="14,15" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
+        <dip name="Coin A (1|2)" bits="12,13" ids="2C/3C|4C/1C,2C/1C|3C/1C,1C/2C|2C/1C,1C/1C"/>
+        <dip name="Coin B (1|2)" bits="14,15" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
     </switches>
 
     <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>

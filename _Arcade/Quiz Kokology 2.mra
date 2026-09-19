@@ -36,13 +36,12 @@
         <dip name="Difficulty" bits="4,5" ids="Very Hard,Hard,Easy,Normal"/>
         <dip name="Lives" bits="6,7" ids="5,4,2,3"/>
         <dip name="DS2-1&amp;2*" bits="8,9" ids="0,1,2,3"/>
-        <dip name="Highlight Right Answer (Cheat)" bits="10" ids="On,Off"/>
-        <dip name="DSW2-4" bits="11" ids="On,Off"/>
+        <dip name="Show Answer (Cheat)" bits="10" ids="On,Off"/>
         <dip name="DSW2-5" bits="12" ids="On,Off"/>
         <dip name="Service Mode" bits="13" ids="On,Off"/>
         <dip name="Demo Sounds" bits="14" ids="Off,On"/>
         <dip name="Flip Screen" bits="15" ids="On,Off"/>
-        <dip name="Skip Real DAT Rom Check?" bits="11" ids="On,Off"/>
+        <dip name="Skip DAT ROM Check" bits="11" ids="On,Off"/>
     </switches>
 
     <buttons names="Button 1,Button 2,Button 3,Button 4,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,Start,Select,L,R" count="4"/>

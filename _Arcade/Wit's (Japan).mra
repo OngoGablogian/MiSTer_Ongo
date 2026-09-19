@@ -45,7 +45,7 @@
         <dip name="Bonus Life" bits="10,11" ids="400k,300k/600k,150k/350k,200k/500k"/>
         <dip name="Lives" bits="12,13" ids="1,2,5,3"/>
         <dip name="Play Mode" bits="14" ids="4 Players,2 Players"/>
-        <dip name="CPU Player During Multi-Player Game" bits="15" ids="No,Yes"/>
+        <dip name="CPU in Multiplayer Game" bits="15" ids="No,Yes"/>
         <!-- <dip name="Unknown 3-4*" bits="20" ids="On,Off"/> -->
         <!-- <dip name="Unknown 3-5*" bits="21" ids="On,Off"/> -->
         <dip name="License" bits="22,23" ids="Athena (Japan Only),Visco (Japan Only),Seta U.S.A,Romstar"/>

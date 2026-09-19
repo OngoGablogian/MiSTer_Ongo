@@ -46,7 +46,7 @@
         <dip name="Flip Screen" bits="8" ids="On,Off"/>
         <dip name="Demo Sounds" bits="9" ids="Off,On"/>
         <!-- <dip name="Unknown 1-3*" bits="10" ids="On,Off"/> -->
-        <dip name="Stage &amp; Weapon Select (Cheat)" bits="11" ids="On,Off"/>
+        <dip name="Stage/Weapon (Cheat)" bits="11" ids="On,Off"/>
         <dip name="Service Mode" bits="15" ids="On,Off"/>
     </switches>
 

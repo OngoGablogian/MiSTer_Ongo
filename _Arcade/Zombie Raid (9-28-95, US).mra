@@ -40,7 +40,7 @@
     <switches default="FF,FD,FF" base="0">
         <dip name="Coin A" bits="0,2" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Coin B" bits="3,5" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
-        <dip name="2 Coins to Start/1 to Continue" bits="6" ids="Yes,No"/>
+        <dip name="2C Start/1C Continue" bits="6" ids="Yes,No"/>
         <dip name="Vertical Screen Flip" bits="8" ids="On,Off"/>
         <dip name="Horizontal Screen Flip" bits="9" ids="Off,On"/>
         <dip name="Demo Sounds" bits="10" ids="Off,On"/>

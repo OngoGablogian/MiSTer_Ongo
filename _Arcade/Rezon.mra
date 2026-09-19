@@ -51,7 +51,7 @@
         <dip name="Coinage" bits="4,7" ids="Free Play,8 Coins/3 Credits,5 Coins/3 Credits,3 Coins/2 Credits,2 Coins/3 Credits,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,6 Coins/1 Credit,5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Flip Screen" bits="8" ids="On,Off"/>
         <dip name="Demo Sounds" bits="9" ids="Off,On"/>
-        <dip name="Cabinet" bits="11,12" ids="Upright 1 Controller,Cocktail,-,Upright 2 Controllers"/>
+        <dip name="Cabinet" bits="11,12" ids="Upright 1 Ctrl,Cocktail,-,Upright 2 Ctrls"/>
         <dip name="Service Mode" bits="15" ids="On,Off"/>
     </switches>
 

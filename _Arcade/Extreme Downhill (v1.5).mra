@@ -38,8 +38,8 @@
     <switches default="FF,FF,FF" base="0">
         <dip name="Coin A" bits="0,2" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
         <dip name="Coin B" bits="3,5" ids="1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
-        <dip name="Continue Coin" bits="6" ids="Half Continue: Start 2C / Continue 1C,Normal: Start 1C / Continue 1C"/>
-        <dip name="Game Mode" bits="7" ids="Semi-Finals &amp; Finals,Finals Only"/>
+        <dip name="Continue" bits="6" ids="Half (2C/1C cont),Normal (1C/1C)"/>
+        <dip name="Game Mode" bits="7" ids="Semis &amp; Finals,Finals Only"/>
         <dip name="Flip Screen" bits="8" ids="On,Off"/>
         <dip name="Demo Sounds" bits="9" ids="Off,On"/>
         <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>

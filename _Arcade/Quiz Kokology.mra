@@ -44,7 +44,7 @@
         <dip name="Difficulty" bits="4,5" ids="Very Hard,Hard,Easy,Normal"/>
         <dip name="Lives" bits="6,7" ids="5,4,2,3"/>
         <dip name="DS2-1&amp;2*" bits="8,9" ids="0,1,2,3"/>
-        <dip name="Highlight Right Answer (Cheat)" bits="10" ids="On,Off"/>
+        <dip name="Show Answer (Cheat)" bits="10" ids="On,Off"/>
         <dip name="DSW2-4" bits="11" ids="On,Off"/>
         <dip name="DSW2-5" bits="12" ids="On,Off"/>
         <dip name="Service Mode" bits="13" ids="On,Off"/>

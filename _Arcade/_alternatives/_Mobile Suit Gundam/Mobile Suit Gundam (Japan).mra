@@ -50,7 +50,6 @@
         <dip name="Coin B" bits="11,13" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <!-- <dip name="Unknown 2-7" bits="14" ids="On,Off"/> -->
         <dip name="Free Play" bits="15" ids="On,Off"/>
-        <dip name="Language" bits="23" ids="Japanese,English"/>
         <dip name="Language" bits="23" ids="Japanese,-"/>
     </switches>
 
