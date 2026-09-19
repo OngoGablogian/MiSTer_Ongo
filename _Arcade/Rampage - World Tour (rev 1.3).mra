@@ -22,7 +22,7 @@
     <year>1997</year>
     <manufacturer>Midway</manufacturer>
     <players>3</players>
-    <rbf>WolfUnit</rbf>
+    <rbf>blahm1d_wolfunit</rbf>
     <region>World</region>
 
     <!-- Wolf master profile 6: three-player harness, 465 PIC, and 16 MHz CPU enable. -->

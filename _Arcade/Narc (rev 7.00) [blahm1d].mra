@@ -36,11 +36,11 @@
     <year>1988</year>
     <manufacturer>Williams</manufacturer>
     <players>2</players>
-    <rbf>NARC_blahm1d</rbf>
+    <rbf>blahm1d_narc</rbf>
     <joystick>8</joystick>
     <region>World</region>
 
-    <rom index="0" zip="narc.zip" md5="None">
+    <rom index="0" zip="narc.zip" md5="770495e472661723860730d6f69d9bf7">
         <!-- ===== PROGRAM 512KB @0x000000 : rev7 game ROMs, LOAD16_BYTE interleave ===== -->
         <!-- pair0: byte 0x80000/0x80001 -> u42 even(low) / u24 odd(high) -->
         <interleave output="16">

@@ -1,5 +1,5 @@
 <!--
-  Revolution X (rev 2.0 9/8/94) - Midway X-unit - MiSTer MRA
+  Revolution X (rev 2.0 9/8/94) - - Midway X-unit - - MiSTer MRA
   Source set: revx (MAME 0.289 midxunit.cpp:706-773). Loads from the user's revx.zip.
 
   ioctl INDEX LAYOUT (defined by the BOARD lane; consumed by revx_top's loader):
@@ -20,13 +20,13 @@
 
   NOTE: the MAME "video" region reloads the program ROMs at 0xe00000 (midxunit.cpp:
   763-767 "TODO: Fix the need of reloading program ROMs... no duplicate ROMs on the
-  real PCB") - a MAME host workaround, NOT replicated here (gfx is fed by the blitter
+  real PCB") - - a MAME host workaround, NOT replicated here (gfx is fed by the blitter
   from the flat 0xf8000000 window; the CPU fetches program from 0xff000000).
 -->
 <misterromdescription>
   <name>Revolution X (revision 2.0 9/8/94)</name>
   <setname>revx</setname>
-  <rbf>RevX</rbf>
+  <rbf>blahm1d_xunit</rbf>
   <mameversion>0289</mameversion>
   <year>1994</year>
   <manufacturer>Midway</manufacturer>
@@ -104,7 +104,7 @@
 
   <!-- CMOS 8 KB, saved/restored via ioctl index 4 -->
   <!-- index 4 = wolf_nvram_bridge.sv:42-43 (Wolf convention); index 2 is the emu's
-       dcs_download route (Arcade-RevX.sv:642) - a 2 here never reaches the bridge. -->
+       dcs_download route (Arcade-RevX.sv:642) - - a 2 here never reaches the bridge. -->
   <nvram index="4" size="8192"/>
 
   <!-- X-unit game-profile selector byte at ioctl index 3 -->

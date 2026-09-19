@@ -9,7 +9,7 @@
   <year>1994</year>
   <manufacturer>Midway</manufacturer>
   <players>4</players>
-  <rbf>TUnit</rbf>
+  <rbf>blahm1d_tunit</rbf>
   <joystick>8-way</joystick>
   <region>World</region>
   <!-- Descriptor: magic/version/profile/sound/gfx/program/flags/xor. -->

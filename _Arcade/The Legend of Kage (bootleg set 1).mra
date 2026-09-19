@@ -1,32 +1,38 @@
 <misterromdescription>
     <name>The Legend of Kage (bootleg set 1)</name>
     <setname>lkagebl1</setname>
+    <mameversion>0289</mameversion>
     <year>1984</year>
     <manufacturer>bootleg</manufacturer>
-    <rbf>LegendOfKage</rbf>
+    <rbf>blahm1d_legendofkage</rbf>
     <rotation>horizontal</rotation>
     <players>2</players>
     <joystick>8-way</joystick>
-    <buttons names="Sword,Shuriken,Start 1P,Start 2P,Coin,Pause" default="A,B,Start,Select,R,L" />
+    <buttons names="Sword,Shuriken,Start 1P,Start 2P,Coin,Pause" default="A,B,Start,Select,R,L"/>
 
     <rom index="0" zip="lkagebl1.zip|lkage.zip">
-        <part name="lkagebl1/ic37_1" />
-        <part name="lkagebl1/ic38_2" />
-        <part name="a54-04.54" crc="541faf9a" />
-        <part name="a54-03.51" crc="493e76d8" />
-        <part name="lkageb/a54-05.84" />
-        <part name="lkageb/a54-06.85" />
-        <part name="lkageb/a54-07.86" />
-        <part name="lkageb/a54-08.87" />
+        <part name="ic37_1" crc="05694f7b"/>
+        <part name="ic38_2" crc="22efe29e"/>
+        <part name="a54-04.54" crc="541faf9a"/>
+        <part name="a54-03.51" crc="493e76d8"/>
+        <part name="ic93_5" crc="76753e52"/>
+        <part name="ic94_6" crc="f33c015c"/>
+        <part name="ic95_7" crc="0e02c2e8"/>
+        <part name="ic96_8" crc="4ef5f073"/>
     </rom>
 
     <switches default="7F,00,FF" base="8">
-        <dip name="Bonus Life" bits="0,1" ids="30k 130k 100k+,30k 100k 70k+,20k 90k 70k+,20k 70k 50k+" />
-        <dip name="Free Play" bits="2" ids="On,Off" />
-        <dip name="Lives" bits="3,4" ids="255,5,4,3" />
-        <dip name="Cabinet" bits="7" ids="Upright,Cocktail" />
-        <dip name="Difficulty" bits="18,19" ids="Hardest,Hard,Normal,Easy" />
-        <dip name="Initial Season" bits="17" ids="Winter,Spring" />
-        <dip name="Invulnerability" bits="22" ids="On,Off" />
+        <dip name="Bonus Life" bits="0,1" ids="30k 130k 100k+,30k 100k 70k+,20k 90k 70k+,20k 70k 50k+"/>
+        <dip name="Free Play" bits="2" ids="On,Off"/>
+        <dip name="Lives" bits="3,4" ids="255,5,4,3"/>
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail"/>
+        <dip name="Coin A" bits="8,9,10,11" ids="1C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C,1C/7C,1C/8C,2C/1C,3C/1C,4C/1C,5C/1C,6C/1C,7C/1C,8C/1C,9C/1C"/>
+        <dip name="Coin B" bits="12,13,14,15" ids="1C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C,1C/7C,1C/8C,2C/1C,3C/1C,4C/1C,5C/1C,6C/1C,7C/1C,8C/1C,9C/1C"/>
+        <dip name="Difficulty" bits="18,19" ids="Hardest,Hard,Normal,Easy"/>
+        <dip name="Initial Season" bits="17" ids="Winter,Spring"/>
+        <dip name="Coinage Display" bits="20" ids="No,Yes"/>
+        <dip name="Year Display" bits="21" ids="1985,MCMLXXXIV"/>
+        <dip name="Invulnerability" bits="22" ids="On,Off"/>
+        <dip name="Coin Slots" bits="23" ids="1,2"/>
     </switches>
 </misterromdescription>

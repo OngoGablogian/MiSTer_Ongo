@@ -12,7 +12,7 @@
     <year>1995</year>
     <manufacturer>Midway</manufacturer>
     <players>2</players>
-    <rbf>WolfUnit</rbf>
+    <rbf>blahm1d_wolfunit</rbf>
     <region>World</region>
 
     <!-- Wolf master profile 1: WWF five-button controls and dynamic I/O shuffle. -->

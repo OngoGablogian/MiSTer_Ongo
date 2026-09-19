@@ -7,7 +7,7 @@
     <year>1991</year>
     <manufacturer>Midway</manufacturer>
     <players>4</players>
-    <rbf>YUnit</rbf>
+    <rbf>blahm1d_yunit</rbf>
     <joystick>8</joystick>
     <rom index="3"><part>03</part></rom>
     <nvram index="4" size="32768"></nvram>
