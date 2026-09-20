@@ -1,0 +1,40 @@
+﻿<misterromdescription>
+    <rbf>Cadash_bazset</rbf>
+    <name>Cadash (World)</name>
+    <setname>cadash</setname>
+    <year>1989</year>
+    <manufacturer>Taito</manufacturer>
+    <players>2</players>
+    <joystick>8way</joystick>
+    <rotation>horizontal</rotation>
+    <region>World</region>
+
+    <rom index="0" zip="cadash.zip" type="merged" md5="none">
+        <!-- 68000 program: exact ROM_LOAD16_BYTE layout -->
+        <interleave output="16">
+            <part name="c21_14.ic11" crc="5daf13fb" map="01"/>
+            <part name="c21_16.ic15" crc="cbaa2e75" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="c21_13.ic10" crc="6b9e0ee9" map="01"/>
+            <part name="c21_17.ic14" crc="bf9a578a" map="10"/>
+        </interleave>
+        <part name="c21-08.38" crc="dca495a0"/>
+        <part name="c21-02.9" crc="205883b9"/>
+        <part name="c21-01.1" crc="1ff6f39c"/>
+        <part name="c21-07.57" crc="f02292bd"/>
+    </rom>
+    <nvram index="2" size="389"/>
+    <switches default="ff,ff" base="16">
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="4 Coins 1 Credit,3 Coins 1 Credit,2 Coins 1 Credit,1 Coin 1 Credit"/>
+        <dip name="Coin B" bits="6,7" ids="1 Coin 6 Credits,1 Coin 4 Credits,1 Coin 3 Credits,1 Coin 2 Credits"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Starting Time" bits="10,11" ids="5:00,6:00,8:00,7:00"/>
+        <dip name="Added Time" bits="12,13" ids="Default -2,Default -1,Default +1,Default"/>
+        <dip name="Communication" bits="14,15" ids="Slave,Unused,Master,Stand alone"/>
+    </switches>
+    <buttons names="Attack,Jump,Start 1P,Start 2P,Coin,Service,Pause"
+             default="A,B,Start,Select,R,L,X" count="7"/>
+</misterromdescription>

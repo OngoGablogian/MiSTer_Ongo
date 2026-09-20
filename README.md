@@ -33,6 +33,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                               |
+| [Cadash](https://www.patreon.com/bazset/posts/cadash-taito-169901680)                                                          |
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                  |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                  |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                       |
@@ -90,6 +91,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
 | [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                         |
+| [Sand Scorpion](https://github.com/kuzearcade/Arcade-SandScrp_MiSTer)                                                          |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
