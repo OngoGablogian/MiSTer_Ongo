@@ -1,0 +1,53 @@
+﻿<misterromdescription>
+    <rbf>Asuka_bazset</rbf>
+    <name>Asuka &amp; Asuka (World)</name>
+    <setname>asuka</setname>
+    <year>1988</year>
+    <manufacturer>Taito</manufacturer>
+    <players>2</players>
+    <joystick>8way</joystick>
+    <rotation>vertical (ccw)</rotation>
+    <region>World</region>
+
+    <rom index="0" zip="asuka.zip" type="merged" md5="none">
+        <!-- 68000 0x000000-0x03ffff: even/odd EPROMs. -->
+        <interleave output="16">
+            <part name="b68-13.ic23" crc="855efb3e" map="01"/>
+            <part name="b68-12.ic8" crc="271eeee9" map="10"/>
+        </interleave>
+        <!-- Real board has no program ROM at 0x040000-0x07ffff. -->
+        <part repeat="0x40000">00</part>
+        <!-- 68000 mask ROM at 0x080000; MAME loads it word-wise without byte swap. -->
+        <part name="b68-03.ic30" crc="d3a59b10"/>
+        <!-- Z80 sound program. -->
+        <part name="b68-11.ic27" crc="c378b508"/>
+        <!-- TC0100SCN tiles: loader byte-swaps the 0x80000 region. -->
+        <part name="b68-01.ic3" crc="89f32c94"/>
+        <!-- PC090OJ sprites: first 0x80000 is word-swapped; final 0x20000 is interleaved. -->
+        <part name="b68-02.ic6" crc="f5018cd3"/>
+        <interleave output="16">
+            <part name="b68-06.ic4" crc="f517e64d" map="01"/>
+            <part name="b68-07.ic5" crc="c113acc8" map="10"/>
+        </interleave>
+        <!-- MSM5205 ADPCM sample ROM. -->
+        <part name="b68-10.ic24" crc="387aaf40"/>
+    </rom>
+
+    <!-- MAME hiscore.dat: 103458/66 plus 1033c4/04 -->
+    <nvram index="2" size="106"/>
+
+    <switches default="ff,bf" base="16">
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="2C/3C,2C/1C,1C/2C,1C/1C"/>
+        <dip name="Coin B" bits="6,7" ids="2C/3C,2C/1C,1C/2C,1C/1C"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Bonus Points" bits="10,11" ids="2500,2000,1500,500"/>
+        <dip name="Lives" bits="12,13" ids="4,1,2,3"/>
+        <dip name="Allow Continue" bits="14,15" ids="No,Yes,Up To Level 3,Up To Level 2"/>
+    </switches>
+    <buttons names="Fire,Bomb,Start 1P,Start 2P,Coin,Service,Pause"
+             default="A,B,Start,Select,R,L,X" count="7"/>
+</misterromdescription>
+

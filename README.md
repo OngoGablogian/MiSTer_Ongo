@@ -25,6 +25,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                     |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                           |
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                  |
+| [Asuka & Asuka](https://www.patreon.com/bazset/posts/asuka-asuka-1988-169899343)                                               |
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
@@ -45,6 +46,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
 | [Fuuki FG-2 / FG-3](https://github.com/ppriest/Arcade-Fuuki_MiSTer)                                                            |
+| [Galmedes](https://www.patreon.com/bazset/posts/galmedes-visco-169900687)                                                      |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                  |
