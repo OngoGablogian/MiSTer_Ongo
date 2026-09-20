@@ -65,6 +65,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Mad Gear / Last Duel](https://github.com/fiermanb/LastDuel-MadGear_MiSTer)                                                    |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
+| [Maze of Flott](https://www.patreon.com/bazset/posts/maze-of-flott-169901241)                                                  |
 | [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-t-unit-167880978)                                                |
 | [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
 | [Midway Y Unit](https://www.patreon.com/blahm1d/posts/is-this-thing-on-168716958)                                              |
