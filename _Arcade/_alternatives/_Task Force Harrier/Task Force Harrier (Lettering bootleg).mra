@@ -49,7 +49,7 @@
     <part crc="b959f837" name="12.4l"/>
     <!-- mcu, 0x001000 (the whole MC68705R3 image: user EPROM, bootstrap ROM and vectors) -->
     <part crc="c560798b" name="mc68705r35.bin"/>
-    <!-- fgtile, 0x008000 - half the original's. MAME wraps tile codes modulo the region's own tile count (gfx_element::get_data does code %= total), so the family's 0x010000 slot is filled with a SECOND COPY rather than zeros: that reproduces the wrap exactly for the codes above 1023. -->
+    <!-- fgtile, 0x008000 — half the original's. MAME wraps tile codes modulo the region's own tile count (gfx_element::get_data does code %= total), so the family's 0x010000 slot is filled with a SECOND COPY rather than zeros: that reproduces the wrap exactly for the codes above 1023. -->
     <part crc="4e9a7e0b" name="t.256"/>
     <part crc="4e9a7e0b" name="t.256"/>
     <!-- bgtile, 0x080000 (8 files) -->

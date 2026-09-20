@@ -54,7 +54,7 @@
       <part crc="65f85cfe" name="afega_8.ub13" map="01"/>
       <part crc="f32554d4" name="afega_7.ub11" map="10"/>
     </interleave>
-    <!-- oki1, 0x0A0000 - init_twinactn banks from the region BASE (not +0x80000 as ssmissin does), so the canonical [fixed][bank0..3] slots are: su12, su12, the region's own 0x20000-0x3FFFF GAP (MAME leaves it unfilled = zeros; su13 sits at 0x40000), then su13's two halves. -->
+    <!-- oki1, 0x0A0000 — init_twinactn banks from the region BASE (not +0x80000 as ssmissin does), so the canonical [fixed][bank0..3] slots are: su12, su12, the region's own 0x20000-0x3FFFF GAP (MAME leaves it unfilled = zeros; su13 sits at 0x40000), then su13's two halves. -->
     <part crc="1a2ce1c2" name="afega2.su12"/>
     <part crc="1a2ce1c2" name="afega2.su12"/>
     <part repeat="0x20000">00</part>

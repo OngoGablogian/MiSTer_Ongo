@@ -1,5 +1,5 @@
 <!--
-  Red Hawk (China &amp; Hong Kong) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 23).
+  Red Hawk (China & Hong Kong) — NMK16 "NMK16_Afega" rbf (rtl/gunnail/gunnail_core.sv game id 23).
   Clone of stagger1; files it shares with the parent are looked up in the parent zip.
 
   Transcribed from mame/src/mame/nmk/nmk16.cpp: GAME(... redhawkc ...)

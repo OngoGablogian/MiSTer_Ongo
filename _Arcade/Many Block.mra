@@ -65,7 +65,7 @@
     <!-- oki1, 0x080000 (fixed 0x20000 = the first quarter of 6-u131.bin; banks 0-2 are the rest) -->
     <part crc="79a4ae75" name="6-u131.bin"/>
     <part crc="21db875e" name="7-u132.bin"/>
-    <!-- oki2, 0x080000 (ROM_REGION ERASE00 - the chip is fitted but has no samples) -->
+    <!-- oki2, 0x080000 (ROM_REGION ERASE00 — the chip is fitted but has no samples) -->
     <part repeat="0x80000">00</part>
   </rom>
 
