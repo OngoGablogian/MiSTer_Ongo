@@ -1,5 +1,5 @@
 ----
-# Add this to your MiSTer 'downloader.ini' file:
+# Add this to your MiSTer `downloader.ini`:
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
@@ -160,7 +160,7 @@ main=MiSTer_Uneon
 ```
 
 > [!WARNING]
-> * This repository mirrors the cores from both the [Meathax](https://github.com/meathax/meatcores) & [blahm1d](https://github.com/blahm1d/MiSTer-cores) databases, as I prefer having all of the arcade games in the `_Arcade` folder on MiSTer. If you use either of these databases, please add these filters below to your `downloader.ini` to avoid having duplicate or conflicting MRAs/RBFs. This prevents the Meathax & blahm1d cores from being downloaded from this repository.
+> * This repository mirrors cores from both the [Meathax](https://github.com/meathax/meatcores) & [blahm1d](https://github.com/blahm1d/MiSTer-cores) databases, as I prefer having all of the arcade games in the `_Arcade` folder on MiSTer. If you use either of these databases, please add these filters below to your `downloader.ini` to avoid having duplicate or conflicting MRAs/RBFs. This will prevent the Meathax & blahm1d cores from being downloaded from this repository.
 
 ```
 [OngoGablogian/MiSTer_Ongo]
