@@ -1,4 +1,4 @@
-<misterromdescription>
+﻿<misterromdescription>
     <rbf>BonzeAdventure_bazset</rbf>
     <name>Bonze Adventure (World, rev 1)</name>
     <setname>bonzeadv</setname>
@@ -33,8 +33,11 @@
         <part name="cchip_b41-05.43" crc="75c52553"/>
     </rom>
 
+    <!-- MAME hiscore.dat: 10d554/32 plus 10d52a/04 -->
+    <nvram index="2" size="54"/>
+
     <switches default="ff,ff" base="16">
-        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <!-- Flip Screen intentionally hidden: TC0100SCN flip is not yet implemented. -->
         <dip name="Service Mode" bits="2" ids="On,Off"/>
         <dip name="Demo Sounds" bits="3" ids="Off,On"/>
         <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>
@@ -44,3 +47,4 @@
     <buttons names="Fire,Jump,Start 1P,Start 2P,Coin,Service,Pause"
              default="A,B,Start,Select,R,L,X" count="7"/>
 </misterromdescription>
+
