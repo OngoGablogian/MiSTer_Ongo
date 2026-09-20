@@ -48,12 +48,13 @@
         <part name="ss1u27.v10" crc="17fe921d"/>
     </rom>
 
-    <switches default="FF,FB,FF" base="0">
+    <switches default="FF,FB,FF,00" base="0">
         <dip name="Coin A" bits="0,2" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Coin B" bits="3,5" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
         <dip name="Demo Sounds" bits="10" ids="On,Off"/>
         <dip name="Service Mode" bits="15" ids="On,Off"/>
+        <dip name="Flip Screen" bits="24" ids="Off,On"/>
     </switches>
 
     <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>

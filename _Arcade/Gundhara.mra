@@ -44,7 +44,7 @@
         <part name="bpgh-013.u70" crc="0fa5d503" offset="0x0" length="0x80000"/>
     </rom>
 
-    <switches default="FF,FF,FF" base="0">
+    <switches default="FF,FF,FF,00" base="0">
         <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Easy,Normal"/>
         <dip name="Lives" bits="2,3" ids="5,4,2,3"/>
         <dip name="Bonus Life" bits="4,5" ids="None,400K,200K/Every 200K,200K"/>
@@ -53,6 +53,7 @@
         <dip name="Coin A" bits="8,11" ids="Free Play,4 Coins/3 Credits,4 Coins/1 Credit,3 Coins/4 Credits,3 Coins/2 Credits,3 Coins/1 Credit,2 Coins/5 Credits,2 Coins/3 Credits,2 Coins/1 Credit,1 Coin/7 Credits,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Coin B" bits="12,13" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/2 Credits,1 Coin/1 Credit"/>
         <dip name="Language" bits="14,15" ids="English,-,-,Japanese"/>
+        <dip name="Flip Screen" bits="24" ids="Off,On"/>
     </switches>
 
     <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>

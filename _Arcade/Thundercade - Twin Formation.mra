@@ -1,0 +1,61 @@
+<misterromdescription>
+    <name>Thundercade / Twin Formation</name>
+    <setname>tndrcade</setname>
+    <rbf>SetaDowntown</rbf>
+    <mameversion>0286</mameversion>
+    <year>1987</year>
+    <manufacturer>Seta (Taito license)</manufacturer>
+    <category>Arcade</category>
+    <rotation>vertical</rotation>
+
+    <rom index="1"><part>08</part></rom>
+
+    <rom index="0" zip="tndrcade.zip" md5="none" address="0x30000000">
+        <!-- maincpu -->
+        <interleave output="16">
+            <part name="ua0-4.u19" crc="73bd63eb" map="01"/>
+            <part name="ua0-2.u17" crc="e96194b1" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ua0-3.u18" crc="0a7b1c41" map="01"/>
+            <part name="ua0-1.u16" crc="fa906626" map="10"/>
+        </interleave>
+        <!-- pad to 0x100000 -->
+        <part repeat="524288">00</part>
+        <!-- sprites -->
+        <part name="ua0-10.u12" crc="aa7b6757"/>
+        <part name="ua0-11.u13" crc="11eaf931"/>
+        <part name="ua0-12.u14" crc="00b5381c"/>
+        <part name="ua0-13.u15" crc="8f9a0ed3"/>
+        <part name="ua0-6.u8" crc="14ecc7bb"/>
+        <part name="ua0-7.u9" crc="ff1a4e68"/>
+        <part name="ua0-8.u10" crc="936e1884"/>
+        <part name="ua0-9.u11" crc="e812371c"/>
+        <!-- tiles -->
+        <!-- pad to 0x500000 -->
+        <part repeat="2097152">00</part>
+        <!-- x1snd -->
+        <!-- pad to 0x600000 -->
+        <part repeat="1048576">00</part>
+        <!-- sub -->
+        <part repeat="16384">00</part>
+        <part name="ua10-5.u24" crc="8eff6122" offset="0x0" length="0x8000"/>
+        <part name="ua10-5.u24" crc="8eff6122" offset="0x0" length="0x20000"/>
+    </rom>
+
+    <switches default="F7,7F,FF" base="0">
+        <dip name="Title" bits="0" ids="Twin Formation,Thundercade"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="On,Off"/>
+        <dip name="Coin A (JP|US)" bits="4,5" ids="4C/1C|2C/3C,3C/1C|2C/1C,2C/1C|1C/2C,1C/1C"/>
+        <dip name="Coin B (JP|US)" bits="6,7" ids="1C/6C|2C/3C,1C/4C|2C/1C,1C/3C|1C/2C,1C/2C|1C/1C"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Bonus Life" bits="10,11" ids="70K/Every 200K,50K/Every 150K,100K Only,50K  Only"/>
+        <dip name="Lives" bits="12,13" ids="2,1,5,3"/>
+        <dip name="Allow Continue" bits="14" ids="Off,On"/>
+        <dip name="License" bits="15" ids="Taito Japan,Taito America"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>
