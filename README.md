@@ -127,7 +127,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
 | [U.N. Defense Force - Earth Joker](https://www.patreon.com/bazset/posts/u-n-defense-1993-169900198)                            |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
-| [VideoBrain Family Computer]https://github.com/meauxdal/VideoBrain_MiSTer)                                                     |
+| [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
