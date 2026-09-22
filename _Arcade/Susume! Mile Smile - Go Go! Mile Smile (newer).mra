@@ -48,7 +48,7 @@
 		<part name="lh538n1d.rom25" crc="01622a95"/>
 	</rom>
 
-	<buttons names="Button 1,-,-,-,Start,Coin,Pause" default="Y,Start,Select,R" count="1"/>
+	<buttons names="Escape,-,-,-,Start,Coin,Pause" default="Y,Start,Select,R" count="1"/>
 
 	<switches default="FF,FF">
 		<dip name="Service Mode" bits="0" ids="On,Off"/>

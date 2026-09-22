@@ -45,7 +45,7 @@
 		<part name="n03.rom25" crc="a7bfb5ea"/>
 	</rom>
 
-	<buttons names="Button 1,-,-,-,Start,Coin,Pause" default="Y,Start,Select,R" count="1"/>
+	<buttons names="Rotate,-,-,-,Start,Coin,Pause" default="Y,Start,Select,R" count="1"/>
 
 	<switches default="FF,FF">
 		<dip name="Service Mode" bits="0" ids="On,Off"/>
