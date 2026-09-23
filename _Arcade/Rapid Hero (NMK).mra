@@ -27,8 +27,14 @@
   <category>Shooter</category>
   <rbf>NMK16_Raphero</rbf>
 
-  <!-- ROT270 in nmk16.cpp -->
-  <rotation>1</rotation>
+  <!-- ROT270 in nmk16.cpp. MiSTer matches this tag as TEXT, not as a
+       number: mra_loader.cpp does strncasecmp(text, "vertical", 8), so the
+       numeric form this file used to carry left is_vertical false and a
+       tate cabinet never picked up MiSTer.ini's [arcade_vertical] section.
+       The direction is explicit because MiSTer falls back to CW when none
+       is given, and ROT270 turns counter-clockwise to stand upright (the
+       core's own rotate_ccw=1 case). -->
+  <rotation>vertical (ccw)</rotation>
 
   <!-- DSW1 default 0xF5 (Service Mode off, Language English = bit1
        clear, SW1:6 "Unused" off = bit2 set, SW1:5 "Unused" off = bit3

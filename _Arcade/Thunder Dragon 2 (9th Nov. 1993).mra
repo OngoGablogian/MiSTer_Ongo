@@ -64,7 +64,14 @@
 
   <!-- ROT270 in nmk16.cpp (docs/game-inventory.md: "vertical") — see
        this file's own header note on the rotation-convention caveat. -->
-  <rotation>1</rotation>
+  <!-- ROT270 in nmk16.cpp. MiSTer matches this tag as TEXT, not as a
+       number: mra_loader.cpp does strncasecmp(text, "vertical", 8), so the
+       numeric form this file used to carry left is_vertical false and a
+       tate cabinet never picked up MiSTer.ini's [arcade_vertical] section.
+       The direction is explicit because MiSTer falls back to CW when none
+       is given, and ROT270 turns counter-clockwise to stand upright (the
+       core's own rotate_ccw=1 case). -->
+  <rotation>vertical (ccw)</rotation>
 
   <!-- DSW1 default 0xF7, DSW2 default 0xFF — see individual <dip>
        entries below for the bit-by-bit derivation. Byte order matches
