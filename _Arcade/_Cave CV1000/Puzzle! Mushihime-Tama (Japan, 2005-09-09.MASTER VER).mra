@@ -8,21 +8,23 @@
     <category>Puzzle</category>
     <rbf>ikacore_CV1k</rbf>
 
-    <rom index="1" address="0x34000000" zip="mushitam.zip" md5="none">
+    <rom index="1" address="0x34400000" zip="mushitam.zip" md5="none">
         <part name="mushitam_u2" crc="8ba498ab"/>
     </rom>
 
-    <rom index="2" address="0x3D000000" zip="mushitam.zip" md5="none">
+    <rom index="2" address="0x3C800000" zip="mushitam.zip" md5="none">
         <part name="u23" crc="701a912a"/>
         <part repeat="0x400000">00</part>
         <part name="u24" crc="6feeb9a1"/>
         <part repeat="0x400000">00</part>
     </rom>
 
+    <nvram index="3" size="135680"/>
+
     <rom index="0" zip="mushitam.zip" md5="none">
         <part name="mushitam_u4" crc="c49eb6b1"/>
         <part name="mushitam_u4" crc="c49eb6b1"/>
     </rom>
 
-    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service" default="A,B,X,Y,Start,R,L,Select"/>
+    <buttons names="B1,B2,B3,B4,Start,Coin,Test,Service,Save State" default="A,B,X,Y,Start,R,L,Select"/>
 </misterromdescription>
