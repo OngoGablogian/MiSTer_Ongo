@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <!-- PATREON MRA, 20260923. Required RBF: Arcade-XNSYSTEMFL_20260923.rbf. MiSTer requires the RBF stem without .rbf. -->
+  <name>Final Lap R (Japan Rev. C)</name>
+  <setname>finalaprj</setname>
+  <year>1994</year>
+  <manufacturer>Namco</manufacturer>
+  <rbf>XNSYSTEMFL</rbf>
+  <about>Namco System FL PATREON release 2026-09-23 (XelaNotPu).</about>
+  <buttons names="Accelerator,Brake,Shifter,Unused,Unused,Coin,Service,Test,Pause" default="A,B,X,Y,L,R,Select,Start"/>
+  <!-- Final Lap R cabinet controls: analog steering wheel (C75 AN5), analog accelerator pedal (AN7), analog brake pedal (AN6, released 0x00 .. pressed 0xff) and a 2-position shifter (IN1 bit 0x10), plus Coin/Service/Test. The config byte (rom index 10 = 01) selects this wiring in rtl/fl_inputs.sv: steering (Left/Right, analog axis or paddle, selected in the OSD), accelerator (button or right-stick axis), Brake (button, or the left-stick Y axis in Analog Pedal mode) and Shifter (each press flips the lever). Joystick slots 3-4 reach the C75 IN2 byte, which Final Lap R does not use (MAME marks every IN2 bit unknown; bit 0x80 would freeze the game), so the core holds IN2 idle in this mode and the slots are labelled Unused. -->
+  <switches default="00">
+    <dip bits="0" name="Freeze Screen" ids="Off,On"/>
+  </switches>
+  <!--
+     FAST LOADING (per /home/nas/claude/example.mra).
+     Every byte destined for SDRAM is concatenated into ONE index-0
+     stream, so the host assembles and transfers it in a single
+     download of 0x1680000 bytes. The core splits it by the fixed
+     offsets below (rtl/fl_rom_layout.svh, generated from the same
+     table) instead of by ioctl_index, so there are no per-region
+     transfers and no extra download handshakes.
+
+       stream     size       region
+       0x0000000  0x0100000  maincpu
+       0x0100000  0x0200000  data  (set fills 0x0000000; 0x0200000 padded with 0xff)
+       0x0300000  0x0080000  c75data  (set fills 0x0020000; 0x0060000 padded with 0x00)
+       0x0380000  0x0200000  c169roz
+       0x0580000  0x0400000  c123tmap
+       0x0980000  0x0800000  c355spr
+       0x1180000  0x0080000  c169roz:mask
+       0x1200000  0x0080000  c123tmap:mask
+       0x1280000  0x0400000  c352  (set fills 0x0200000; 0x0200000 padded with 0x00)
+
+     Padding: the regions marked above are not filled by this set, so
+     each short tail is emitted as <part repeat="0x..">XX</part> using
+     MAME's erase value for that region. That holds every later region
+     on its fixed offset and keeps the stream length exact.
+     The slot table is shared by every System FL set and is sized for
+     the largest of them, so fl_download.sv can insist on exactly
+     0x1680000 received bytes before it asserts `loaded`.
+
+     Not applicable: the DDR fast-load form <rom index="0"
+     address="0x30000000"> (Main_MiSTer rom_finish() -> shmem_put).
+     This core has no DDR3 ROM window - fl_download.sv streams index 0
+     into SDRAM over ioctl - so address= would write the ROM where
+     nothing reads it. The single-stream layout above is the whole of
+     the available fast-load optimisation.
+
+     The C75 MCU BIOS is not SDRAM content (it lands in on-chip BRAM
+     via fl_bios_loader.sv), so it stays its own index-8 stream, and
+     index 9 is the 8 KiB NVRAM save.
+  -->
+  <rom index="0" zip="finalaprj.zip|finalapr.zip" md5="none">
+    <!-- maincpu: stream 0x0000000, 1048576 bytes -->
+    <interleave output="32">
+      <part name="flr1_mp_ec.19a" crc="52735494" map="0021"/>
+      <part name="flr1_mp_oc.18a" crc="b11fe577" map="2100"/>
+    </interleave>
+    <!-- data: stream 0x0100000, 2097152 bytes -->
+    <!-- data: pad 0x200000 bytes with 0xff to hold the fixed offsets -->
+    <part repeat="0x200000">FF</part>
+    <!-- c75data: stream 0x0300000, 524288 bytes -->
+    <part name="flr1_spr.21l" crc="69bb0f5e"/>
+    <!-- c75data: pad 0x60000 bytes with 0x00 to hold the fixed offsets -->
+    <part repeat="0x60000">00</part>
+    <!-- c169roz: stream 0x0380000, 2097152 bytes -->
+    <part name="flr1_rch0.19j" crc="f413f50d"/>
+    <part name="flr1_rch1.18j" crc="4654d519"/>
+    <!-- c123tmap: stream 0x0580000, 4194304 bytes -->
+    <part name="flr1_sch0.21p" crc="7169efca"/>
+    <part name="flr1_sch1.20p" crc="aa233a02"/>
+    <part name="flr1_sch2.19p" crc="9b6b7abd"/>
+    <part name="flr1_sch3.18p" crc="50a14f54"/>
+    <!-- c355spr: stream 0x0980000, 8388608 bytes -->
+    <interleave output="32">
+      <part name="flr1_obj0l.ic1" crc="364a902c" map="0021"/>
+      <part name="flr1_obj0u.ic2" crc="a5c7b80e" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="flr1_obj1l.ic3" crc="51fd8de7" map="0021"/>
+      <part name="flr1_obj1u.ic4" crc="1737aa3c" map="2100"/>
+    </interleave>
+    <!-- c169roz:mask: stream 0x1180000, 524288 bytes -->
+    <part name="flr1_rsh.14k" crc="037c0983"/>
+    <!-- c123tmap:mask: stream 0x1200000, 524288 bytes -->
+    <part name="flr1_ssh.18u" crc="f70cb2bf"/>
+    <!-- c352: stream 0x1280000, 4194304 bytes -->
+    <part name="flr1_voi.23s" crc="ff6077cd"/>
+    <!-- c352: pad 0x200000 bytes with 0x00 to hold the fixed offsets -->
+    <part repeat="0x200000">00</part>
+  </rom>
+  <rom index="8" zip="namcoc75.zip" md5="none">
+    <part name="c75.bin" crc="42f539a5"/>
+  </rom>
+  <!-- Cabinet/config byte for rtl/fl_inputs.sv (SYSTEMFL.sv ioctl index 10): bit 0 = Final Lap R controls (brake pedal AN6, shifter IN1.4, IN2 idle). -->
+  <rom index="10">
+    <part>01</part>
+  </rom>
+  <!-- 8192-byte NVRAM: saved per .mra name by MiSTer (index 9). -->
+  <!-- Factory NVRAM (MAME "nvram" region: default settings incl. pedal/steering calibration) seeds the 8 KiB NVRAM on a fresh install; a saved .nvm still overrides it (loaded after the roms). -->
+  <rom index="9" zip="finalaprj.zip|finalapr.zip" md5="none">
+    <part name="finalapr.nv" crc="d51d65fe"/>
+  </rom>
+  <nvram index="9" size="8192"/>
+</misterromdescription>
