@@ -1,0 +1,27 @@
+<misterromdescription>
+    <name>Namco Classic Collection Vol.2</name>
+    <setname>ncv2</setname>
+    <year>1996</year>
+    <manufacturer>Namco</manufacturer>
+    <category>Compilation</category>
+    <rbf>Meathax_NamcoND1</rbf>
+    <mameversion>0289</mameversion>
+    <rotation>vertical (cw)</rotation>
+    <!-- Flat 7.5 MB image (rtl/mem/ncv1_mem.sv): 0x000000 68000 program (1 MB, big-endian words),
+         0x100000 H8 program, 0x180000 CG chip 0, 0x380000 C352 samples, 0x580000 CG chip 1
+         (Vol.1 repeats chip 0; MAME mirrors its single CG ROM across the 8 MB pattern space). -->
+    <rom index="0" zip="ncv2.zip" md5="None">
+        <part name="ncs2main0.14e" crc="fb8a4123"/>
+        <part name="ncs2main1.13e" crc="7a5ef23b"/>
+        <part name="ncs1sub.1d" crc="365cadbf"/>
+        <part name="ncs1cg0.10e" crc="fdd24dbe"/>
+        <part name="ncs1voic.7c" crc="ed05fd88"/>
+        <part name="ncs1cg1.10f" crc="007b19de"/>
+    </rom>
+    <switches default="00" base="16">
+        <dip name="Freeze" bits="0" ids="Off,On"/>
+        <dip name="Test Mode" bits="1" ids="Off,On"/>
+    </switches>
+    <buttons names="Button 1,Button 2,Button 3,Start 1P,Start 2P,Coin,Service" default="A,B,X,Start,R,Select,L"/>
+    <nvram index="4" size="2048"/>
+</misterromdescription>

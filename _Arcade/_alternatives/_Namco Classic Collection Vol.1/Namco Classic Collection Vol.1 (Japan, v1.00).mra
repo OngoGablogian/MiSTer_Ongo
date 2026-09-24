@@ -1,0 +1,27 @@
+<misterromdescription>
+    <name>Namco Classic Collection Vol.1 (Japan, v1.00)</name>
+    <setname>ncv1j</setname>
+    <year>1995</year>
+    <manufacturer>Namco</manufacturer>
+    <category>Compilation</category>
+    <rbf>Meathax_NamcoND1</rbf>
+    <mameversion>0289</mameversion>
+    <rotation>vertical (cw)</rotation>
+    <!-- Flat 7.5 MB image (rtl/mem/ncv1_mem.sv): 0x000000 68000 program (1 MB, big-endian words),
+         0x100000 H8 program, 0x180000 CG chip 0, 0x380000 C352 samples, 0x580000 CG chip 1
+         (Vol.1 repeats chip 0; MAME mirrors its single CG ROM across the 8 MB pattern space). -->
+    <rom index="0" zip="ncv1j.zip|ncv1.zip" md5="None">
+        <part name="nc1main0.14d" crc="48ce0b2b"/>
+        <part name="nc1main1.13d" crc="49f99235"/>
+        <part name="nc1sub.1c" crc="48ea0de2"/>
+        <part name="nc1cg0.10c" crc="d4383199"/>
+        <part name="nc1voice.7b" crc="91c85bd6"/>
+        <part name="nc1cg0.10c" crc="d4383199"/>
+    </rom>
+    <switches default="00" base="16">
+        <dip name="Freeze" bits="0" ids="Off,On"/>
+        <dip name="Test Mode" bits="1" ids="Off,On"/>
+    </switches>
+    <buttons names="Button 1,Button 2,Button 3,Start 1P,Start 2P,Coin,Service" default="A,B,X,Start,R,Select,L"/>
+    <nvram index="4" size="2048"/>
+</misterromdescription>
