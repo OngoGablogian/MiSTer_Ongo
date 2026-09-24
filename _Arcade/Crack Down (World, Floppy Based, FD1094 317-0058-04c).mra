@@ -1,28 +1,38 @@
 <misterromdescription>
   <name>Crack Down (World, Floppy Based, FD1094 317-0058-04c)</name>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
   <mameversion>0288</mameversion>
   <setname>crkdown</setname>
   <year>1989</year>
   <manufacturer>Sega</manufacturer>
   <rbf>Meathax_SegaSystem24</rbf>
+  <resolution>15kHz</resolution>
   <rotation>horizontal</rotation>
   <joystick>8-way</joystick>
-  <buttons default="A,B,Start,Select,R,L" names="Attack,Smart Bomb,-,-,-,-,Start,Coin,Service,Test"/>
-  <switches default="FF FF"/>
-  <rom index="1" zip="crkdown.zip" md5="none" type="merged|nonmerged|split">
+  <buttons default="A,B,Start,Select,R,L,Y" names="Attack,Smart Bomb,-,-,-,-,Start,Coin,Service,Test,Pause"/>
+  <switches default="FF FF">
+    <dip bits="0,1,2,3" name="Coin A" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,2 Coins/1 Credit (5/3 6/4),2 Coins/1 Credit (4/3),1 Coin/1 Credit,1 Coin/1 Credit (5/6),1 Coin/1 Credit (4/5),1 Coin/1 Credit (2/3),2 Coins/3 Credits,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,Free Play (A+B) or 1/1" values="7,8,9,5,4,15,3,2,1,6,14,13,12,11,10,0"/>
+    <dip bits="4,5,6,7" name="Coin B" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,2 Coins/1 Credit (5/3 6/4),2 Coins/1 Credit (4/3),1 Coin/1 Credit,1 Coin/1 Credit (5/6),1 Coin/1 Credit (4/5),1 Coin/1 Credit (2/3),2 Coins/3 Credits,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits,Free Play (A+B) or 1/1" values="7,8,9,5,4,15,3,2,1,6,14,13,12,11,10,0"/>
+    <dip bits="14" name="Coin Chute" ids="Common,Separate" values="1,0"/>
+    <dip bits="15" name="Flip Screen" ids="Off,On" values="1,0"/>
+  </switches>
+  <rom index="1" zip="crkdown.zip" md5="none">
     <interleave output="16">
       <part name="epr-12187.ic2" crc="e83783f3" map="01"/>
       <part name="epr-12186.ic1" crc="ce76319d" map="10"/>
     </interleave>
   </rom>
-  <rom index="3" zip="crkdown.zip" md5="none" type="merged|nonmerged|split">
+  <rom index="3" zip="crkdown.zip" md5="none">
     <part name="ds3-5000-04c.img" crc="7d97ba5e"/>
     <part repeat="253952">00</part>
   </rom>
-  <rom index="4" zip="crkdown.zip" md5="none" type="merged|nonmerged|split">
+  <nvram index="8" size="2097152"/>
+  <rom index="4" zip="crkdown.zip" md5="none">
     <part name="317-0058-04c.key" crc="16e978cc"/>
   </rom>
   <rom index="0">
     <part>0500002D00000000</part>
   </rom>
+  <mratimestamp>20260808</mratimestamp>
 </misterromdescription>
