@@ -25,16 +25,13 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                     |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                           |
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                  |
-| [Asuka & Asuka](https://www.patreon.com/bazset/posts/asuka-asuka-1988-169899343)                                               |
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
-| [Bonze Adventure](https://www.patreon.com/bazset/posts/bonze-adventure-169827251)                                              |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BrickBoy](https://github.com/kandowontu/BrickBoy_MiSTer)                                                                      |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                               |
-| [Cadash](https://www.patreon.com/bazset/posts/cadash-taito-169901680)                                                          |
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                  |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                  |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                       |
@@ -48,7 +45,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
 | [Fuuki FG-2 / FG-3](https://github.com/ppriest/Arcade-Fuuki_MiSTer)                                                            |
-| [Galmedes](https://www.patreon.com/bazset/posts/galmedes-visco-169900687)                                                      |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                  |
@@ -68,7 +64,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Mad Gear / Last Duel](https://github.com/fiermanb/LastDuel-MadGear_MiSTer)                                                    |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
-| [Maze of Flott](https://www.patreon.com/bazset/posts/maze-of-flott-169901241)                                                  |
 | [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-t-unit-167880978)                                                |
 | [Midway V Unit](https://www.patreon.com/blahm1d/posts/manifest-1994-to-170412649)                                              |
 | [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
@@ -131,7 +126,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
-| [U.N. Defense Force - Earth Joker](https://www.patreon.com/bazset/posts/u-n-defense-1993-169900198)                            |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
 | [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
