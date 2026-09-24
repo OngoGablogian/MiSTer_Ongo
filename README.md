@@ -31,6 +31,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
 | [Bonze Adventure](https://www.patreon.com/bazset/posts/bonze-adventure-169827251)                                              |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
+| [BrickBoy](https://github.com/kandowontu/BrickBoy_MiSTer)                                                                      |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                               |
 | [Cadash](https://www.patreon.com/bazset/posts/cadash-taito-169901680)                                                          |
