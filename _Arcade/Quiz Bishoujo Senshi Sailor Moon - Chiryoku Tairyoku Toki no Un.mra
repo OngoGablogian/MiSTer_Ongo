@@ -13,7 +13,7 @@
   <year>1997</year>
   <manufacturer>Banpresto</manufacturer>
   <category>Arcade</category>
-  <rbf>NMKBP964</rbf>
+  <rbf>kuze_NMKBP964</rbf>
   <rotation>horizontal</rotation>
 
   <switches default="FF,FF,01">

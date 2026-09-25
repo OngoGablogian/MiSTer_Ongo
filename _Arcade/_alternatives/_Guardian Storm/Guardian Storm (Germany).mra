@@ -17,7 +17,7 @@
   <year>1998</year>
   <manufacturer>Afega</manufacturer>
   <category>Shooter</category>
-  <rbf>NMK16_Afega</rbf>
+  <rbf>kuze_NMK16_Afega</rbf>
 
   <!-- ROT270 in nmk16.cpp. MiSTer matches this tag as TEXT, not as a
        number: mra_loader.cpp does strncasecmp(text, "vertical", 8), so the

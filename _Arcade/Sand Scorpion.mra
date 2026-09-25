@@ -18,7 +18,7 @@
   <year>1992</year>
   <manufacturer>Face</manufacturer>
   <category>Shooter</category>
-  <rbf>SandScrp</rbf>
+  <rbf>kuze_SandScrp</rbf>
 
   <!-- ROT90 in sandscrp.cpp (a vertical game). -->
   <rotation>vertical (cw)</rotation>

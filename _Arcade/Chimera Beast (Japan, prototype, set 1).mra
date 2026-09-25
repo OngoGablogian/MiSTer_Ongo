@@ -20,7 +20,7 @@
   <year>1993</year>
   <manufacturer>Jaleco</manufacturer>
   <category>Arcade</category>
-  <rbf>JalecoMS1BCD</rbf>
+  <rbf>kuze_JalecoMS1BCD</rbf>
 
   <switches default="BD,FF,01">
     <dip bits="0" name="Flip Screen" ids="On,Off"/>

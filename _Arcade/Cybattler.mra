@@ -20,7 +20,7 @@
   <year>1993</year>
   <manufacturer>Jaleco</manufacturer>
   <category>Arcade</category>
-  <rbf>JalecoMS1BCD</rbf>
+  <rbf>kuze_JalecoMS1BCD</rbf>
   <rotation>vertical (cw)</rotation>
 
   <switches default="FF,BF,01">

@@ -13,7 +13,7 @@
   <year>1996</year>
   <manufacturer>MOSS / Banpresto</manufacturer>
   <category>Arcade</category>
-  <rbf>NMKBP964</rbf>
+  <rbf>kuze_NMKBP964</rbf>
   <rotation>vertical (ccw)</rotation>
 
   <switches default="FF,BF,00">

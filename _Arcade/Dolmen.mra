@@ -17,7 +17,7 @@
   <year>1995</year>
   <manufacturer>Afega</manufacturer>
   <category>Shooter</category>
-  <rbf>NMK16_Gunnail</rbf>
+  <rbf>kuze_NMK16_Gunnail</rbf>
 
   <!-- DSW1, DSW2 (defaults from the PORT_DIPNAME default values; ids in
        bit-value order, value 0 first), then the game-id byte the core

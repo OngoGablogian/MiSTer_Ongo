@@ -20,7 +20,7 @@
   <year>1991</year>
   <manufacturer>Jaleco</manufacturer>
   <category>Arcade</category>
-  <rbf>JalecoMS1BCD</rbf>
+  <rbf>kuze_JalecoMS1BCD</rbf>
 
   <switches default="FF,FD,00">
     <dip bits="0,3" name="Coin A" ids="Free_Play,1C_1C,1C_1C,1C_1C,1C_1C,1C_1C,2C_3C,4C_1C,3C_1C,2C_1C,1C_6C,1C_5C,1C_4C,1C_3C,1C_2C,1C_1C"/>

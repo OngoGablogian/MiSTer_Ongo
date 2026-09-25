@@ -49,7 +49,7 @@
   <year>1993</year>
   <manufacturer>Atlus</manufacturer>
   <category>Fighting</category>
-  <rbf>NMK16_Macross2</rbf>
+  <rbf>kuze_NMK16_Macross2</rbf>
 
   <!-- DSW1 default 0xFF, DSW2 default 0xFB (nmk16.cpp defaults: Free Play
        off, coinage 1C/1C, flip off; 1 chute, Join In off, Demo Sounds ON

@@ -15,7 +15,7 @@
   <year>1993</year>
   <manufacturer>Atlus</manufacturer>
   <category>Fighting</category>
-  <rbf>NMK16_Macross2</rbf>
+  <rbf>kuze_NMK16_Macross2</rbf>
 
   <!-- DSW1/DSW2 defaults and the hidden game-select third byte, as the parent. -->
   <switches default="FF,FB,02">

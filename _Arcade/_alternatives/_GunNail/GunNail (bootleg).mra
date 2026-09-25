@@ -17,7 +17,7 @@
   <year>1992</year>
   <manufacturer>bootleg</manufacturer>
   <category>Shooter</category>
-  <rbf>NMK16_Gunnail</rbf>
+  <rbf>kuze_NMK16_Gunnail</rbf>
 
   <!-- ROT270 in nmk16.cpp. MiSTer matches this tag as TEXT, not as a
        number: mra_loader.cpp does strncasecmp(text, "vertical", 8), so the

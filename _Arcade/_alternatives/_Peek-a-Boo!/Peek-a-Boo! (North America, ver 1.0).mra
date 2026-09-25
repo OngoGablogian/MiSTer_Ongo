@@ -20,7 +20,7 @@
   <year>1993</year>
   <manufacturer>Jaleco</manufacturer>
   <category>Arcade</category>
-  <rbf>JalecoMS1BCD</rbf>
+  <rbf>kuze_JalecoMS1BCD</rbf>
 
   <switches default="FF,FF,72">
     <dip bits="0,1" name="Difficulty" ids="Easy,Hardest,Hard,Normal"/>

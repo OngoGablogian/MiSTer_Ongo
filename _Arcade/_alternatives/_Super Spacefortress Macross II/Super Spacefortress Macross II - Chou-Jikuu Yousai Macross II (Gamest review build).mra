@@ -15,7 +15,7 @@
   <year>1993</year>
   <manufacturer>Banpresto</manufacturer>
   <category>Shooter</category>
-  <rbf>NMK16_Macross2</rbf>
+  <rbf>kuze_NMK16_Macross2</rbf>
 
   <!-- DSW1/DSW2 defaults and the hidden game-select third byte, as the parent. -->
   <switches default="F7,FF,01">

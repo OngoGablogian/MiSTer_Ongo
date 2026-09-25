@@ -60,7 +60,7 @@
   <year>1993</year>
   <manufacturer>NMK</manufacturer>
   <category>Shooter</category>
-  <rbf>NMK16_Macross2</rbf>
+  <rbf>kuze_NMK16_Macross2</rbf>
 
   <!-- ROT270 in nmk16.cpp (docs/game-inventory.md: "vertical") — see
        this file's own header note on the rotation-convention caveat. -->

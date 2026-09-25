@@ -15,7 +15,7 @@
   <year>1996</year>
   <manufacturer>bootleg (Conny Co Ltd.)</manufacturer>
   <category>Shooter</category>
-  <rbf>NMK16_Macross2</rbf>
+  <rbf>kuze_NMK16_Macross2</rbf>
 
   <!-- ROT270 in nmk16.cpp. MiSTer matches this tag as TEXT, not as a
        number: mra_loader.cpp does strncasecmp(text, "vertical", 8), so the

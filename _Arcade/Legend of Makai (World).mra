@@ -15,7 +15,7 @@
   <year>1988</year>
   <manufacturer>Jaleco</manufacturer>
   <category>Arcade</category>
-  <rbf>JalecoMS1Z</rbf>
+  <rbf>kuze_JalecoMS1Z</rbf>
 
   <switches default="BF,BF,00">
     <dip bits="0,1" name="Lives" ids="2,5,4,3"/>

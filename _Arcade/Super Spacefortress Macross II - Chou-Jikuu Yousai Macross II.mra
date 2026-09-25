@@ -53,7 +53,7 @@
   <year>1993</year>
   <manufacturer>Banpresto</manufacturer>
   <category>Shooter</category>
-  <rbf>NMK16_Macross2</rbf>
+  <rbf>kuze_NMK16_Macross2</rbf>
 
   <!-- DSW1 default 0xF7, DSW2 default 0xFF — see individual <dip>
        entries below. Byte order matches the shared core's own address

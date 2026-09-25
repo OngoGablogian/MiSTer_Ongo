@@ -46,6 +46,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
+| [Ginga Ninkyouden](https://github.com/kuzearcade/Arcade-GingaNin_MiSTer)                                                       |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Guardians / Denjin Makai II](https://github.com/kandowontu/Guardians_MiSTer)                                                  |
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
