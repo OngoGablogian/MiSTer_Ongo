@@ -1,6 +1,6 @@
 <misterromdescription>
   <name>Guardians / Denjin Makai II (P-FG01-1 PCB)</name>
-  <mratimestamp>202609060236</mratimestamp>
+  <mratimestamp>202609250800</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>grdians</setname>
   <year>1995</year>
@@ -48,7 +48,7 @@
     <cheat name="P2 Invincibility">000000 10 0020328F 00000000 00000002</cheat>
     <cheat name="P2 Always Special">000000 20 0020334E 00000000 0000FFFF</cheat>
   </cheats>
-  <rom index="0" zip="grdians.zip" md5="580dde95d937dc00f9c32c3f7548ca7d">
+  <rom index="0" address="0x30000000" zip="grdians.zip" md5="580dde95d937dc00f9c32c3f7548ca7d">
     <!-- 2 MiB TMP68301 program, byte-interleaved big-endian. -->
     <interleave output="16">
       <part name="u2.bin" crc="36adc6f2" map="01"/>
