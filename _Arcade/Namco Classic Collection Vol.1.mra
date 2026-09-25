@@ -23,5 +23,9 @@
         <dip name="Test Mode" bits="1" ids="Off,On"/>
     </switches>
     <buttons names="Button 1,Button 2,Button 3,Start 1P,Start 2P,Coin,Service" default="A,B,X,Start,R,Select,L"/>
-    <nvram index="4" size="2048"/>
+    <!-- High-score table in shared RAM (rtl/nd1_hiscore.sv): offset, length, start/end marker; MAME hiscore.dat ncv1 (400914,2ee,07,01) -->
+    <rom index="3" md5="None">
+        <part>09 14 02 EE 07 01</part>
+    </rom>
+    <nvram index="4" size="3072"/>
 </misterromdescription>
