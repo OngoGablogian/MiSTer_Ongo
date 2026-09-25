@@ -1,0 +1,71 @@
+<!--
+  Nettou! Gekitou! Quiztou!! (Japan) - Namco NA-2 - MRA for the Namco_NA1_NA2 MiSTer core.
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml quiztou`).
+
+  Quiz cabinet: four answer buttons + Start, no joystick.
+  Needs the dumped default EEPROM (`eeprom`) from the MAME set; without it
+  the first boot stops at the NOTICE screen once (MAME does the same) and
+  a reset continues.
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>Nettou! Gekitou! Quiztou!! (Japan)</name>
+    <setname>quiztou</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0289</mameversion>
+    <year>1993</year>
+    <manufacturer>Namco</manufacturer>
+    <players>2</players>
+    <joystick>none</joystick>
+    <region>Japan</region>
+    <platform>Namco NA-2</platform>
+    <category>Quiz</category>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Credit" default="A,B,X,Y,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1" zip="quiztou.zip" md5="none">
+        <part repeat="0x800">00</part>
+        <part name="eeprom" crc="57a478a6"/>
+    </rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: C365 (KEYCUS mode 1, ID $016D on word 2), ROT0 cabinet, 4-button quiz panel, plain ROM board -->
+    <rom index="2"><part>01 6D 01 02 00 01 00</part></rom>
+
+    <rom index="0" zip="quiztou.zip|namcoc70.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="qt1ep0l.6c" crc="b680e543" map="01"/>
+            <part name="qt1ep0u.6f" crc="143c5e4d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="qt1ep1l.7c" crc="33a72242" map="01"/>
+            <part name="qt1ep1u.7f" crc="69f876cb" map="10"/>
+        </interleave>
+        <!-- mask ROM: stream $200000-$9FFFFF, all four 2 MiB pairs populated (no pad) -->
+        <interleave output="16">
+            <part name="qt1ma0l.2c" crc="5597f2b9" map="01"/>
+            <part name="qt1ma0u.2f" crc="f0a4cb7d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="qt1ma1l.3c" crc="1b9ce7a6" map="01"/>
+            <part name="qt1ma1u.3f" crc="58910872" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="qt1ma2l.4c" crc="94739917" map="01"/>
+            <part name="qt1ma2u.4f" crc="6ba5b893" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="qt1ma3l.5c" crc="aa9dc6ff" map="01"/>
+            <part name="qt1ma3u.5f" crc="14a5a163" map="10"/>
+        </interleave>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c70.bin" crc="b4015f23"/>
+    </rom>
+</misterromdescription>

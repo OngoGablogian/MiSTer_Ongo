@@ -1,0 +1,65 @@
+<!--
+  Knuckle Heads (Japan) - Namco NA-2 - MRA for the Namco_NA1_NA2 MiSTer core.
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml knckheadj`).
+
+  Up to four players.
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>Knuckle Heads (Japan)</name>
+    <setname>knckheadj</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0289</mameversion>
+    <year>1992</year>
+    <manufacturer>Namco</manufacturer>
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <region>Japan</region>
+    <platform>Namco NA-2</platform>
+    <category>Fighter</category>
+
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1"><part repeat="0x800">00</part></rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: C360 (KEYCUS mode 1, ID $0168 on word 1), ROT0 cabinet, joystick panel, plain ROM board -->
+    <rom index="2"><part>01 68 01 01 00 00 00</part></rom>
+
+    <rom index="0" zip="knckheadj.zip|knckhead.zip|namcoc70.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="kh1-ep0l.6c" crc="94660bec" map="01"/>
+            <part name="kh1-ep0u.6f" crc="ad640d69" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="kh1-ep1l.7c" crc="27e6ab4e" map="01"/>
+            <part name="kh1-ep1u.7f" crc="487b2434" map="10"/>
+        </interleave>
+        <!-- mask ROM: stream $200000-$9FFFFF, all four 2 MiB pairs populated (no pad) -->
+        <interleave output="16">
+            <part name="kh1-ma0l.2c" crc="7b2db5df" map="01"/>
+            <part name="kh1-ma0u.2f" crc="6983228b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="kh1-ma1l.3c" crc="b24f93e6" map="01"/>
+            <part name="kh1-ma1u.3f" crc="18a60348" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="kh1-ma2l.4c" crc="82064ee9" map="01"/>
+            <part name="kh1-ma2u.4f" crc="17fe8c3d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="kh1-ma3l.5c" crc="ad9a7807" map="01"/>
+            <part name="kh1-ma3u.5f" crc="efeb768d" map="10"/>
+        </interleave>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c70.bin" crc="b4015f23"/>
+    </rom>
+</misterromdescription>

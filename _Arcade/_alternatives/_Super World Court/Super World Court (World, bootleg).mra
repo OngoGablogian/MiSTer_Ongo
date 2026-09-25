@@ -1,0 +1,68 @@
+<!--
+  Super World Court (World, bootleg) - Namco NA-1 - MRA for the Namco_NA1_NA2 MiSTer core.
+  Alternate version of Super World Court (Japan).
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml swcourtb`).
+
+  Up to four players. Bootleg set with a replacement key board.
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>Super World Court (World, bootleg)</name>
+    <setname>swcourtb</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>bootleg (Playmark?)</manufacturer>
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <region>World</region>
+    <platform>Namco NA-1</platform>
+    <category>Sports</category>
+
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1"><part repeat="0x800">00</part></rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: replacement key board answering $8061 on word 1 (MAME NAMCO_SWCOURTB), ROT0 cabinet, joystick panel -->
+    <rom index="2"><part>01 61 80 01 00 00</part></rom>
+
+    <rom index="0" zip="swcourtb.zip|swcourt.zip|namcoc69.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="0l0l.4c" crc="669c9b10" map="01"/>
+            <part name="0u0u.4f" crc="742f3da1" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="1l1l.5c" crc="fb45cf5f" map="01"/>
+            <part name="1u.1u.5f" crc="1ce07b15" map="10"/>
+        </interleave>
+        <!-- mask ROM: stream $200000-$9FFFFF -->
+        <interleave output="16">
+            <part name="oll.ol.2c" crc="df0920ef" map="01"/>
+            <part name="oul.ou.2f" crc="844c6a1c" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="olh.ol.2c" crc="0a21abea" map="01"/>
+            <part name="ouh.ou.2f" crc="6b7c93f9" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="1ll.1l.3c" crc="f7e30277" map="01"/>
+            <part name="1ul.1u.3f" crc="5f03c51a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="1lh.1l.3c" crc="6531236e" map="01"/>
+            <part name="1uh.1u.3f" crc="acae6746" map="10"/>
+        </interleave>
+        <!-- unpopulated mask tail: 00 fill -->
+        <part repeat="0x400000">00</part>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c69.bin" crc="349134d9"/>
+    </rom>
+</misterromdescription>

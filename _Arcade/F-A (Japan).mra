@@ -1,0 +1,59 @@
+<!--
+  F/A (Japan) - Namco NA-1 - MRA for the Namco_NA1_NA2 MiSTer core.
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml fa`).
+
+  Vertical game (ROT90 cabinet).
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>F/A (Japan)</name>
+    <setname>fa</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0281</mameversion>
+    <year>1992</year>
+    <manufacturer>Namco</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <region>Japan</region>
+    <platform>Namco NA-1</platform>
+    <category>Shoot 'em Up</category>
+
+    <buttons names="Shot,Bomb,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1"><part repeat="0x800">00</part></rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: C349, ROT90 cabinet, joystick panel -->
+    <rom index="2"><part>01 5D 01 02 01 00</part></rom>
+
+    <rom index="0" zip="fa.zip|fghtatck.zip|namcoc69.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="fa1-ep0l.4c" crc="182eee5c" map="01"/>
+            <part name="fa1-ep0u.4f" crc="7ea7830e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="fa1-ep1l.5c" crc="b23a5b01" map="01"/>
+            <part name="fa1-ep1u.5f" crc="de2eb129" map="10"/>
+        </interleave>
+        <!-- mask ROM: stream $200000-$9FFFFF -->
+        <interleave output="16">
+            <part name="fa1-ma0l.2c" crc="a0a95e54" map="01"/>
+            <part name="fa1-ma0u.2f" crc="1d0135bd" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="fa1-ma1l.3c" crc="c4adf0a2" map="01"/>
+            <part name="fa1-ma1u.3f" crc="900297be" map="10"/>
+        </interleave>
+        <!-- unpopulated tail: 00 fill, exactly as ROMREGION_ERASE00 -->
+        <part repeat="0x400000">00</part>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c69.bin" crc="349134d9"/>
+    </rom>
+</misterromdescription>

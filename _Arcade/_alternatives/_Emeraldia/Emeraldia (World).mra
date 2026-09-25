@@ -1,0 +1,49 @@
+<!--
+  Emeraldia (World) - Namco NA-2 - MRA for the Namco_NA1_NA2 MiSTer core.
+  Alternate version of Emeraldia (Japan, Version B).
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml emeralda`).
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>Emeraldia (World)</name>
+    <setname>emeralda</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0289</mameversion>
+    <year>1993</year>
+    <manufacturer>Namco</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <region>World</region>
+    <platform>Namco NA-2</platform>
+    <category>Puzzle</category>
+
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1"><part repeat="0x800">00</part></rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: C358, ROT0 cabinet, joystick panel, plain ROM board -->
+    <rom index="2"><part>01 66 01 01 00 00 00</part></rom>
+
+    <rom index="0" zip="emeralda.zip|namcoc70.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="em2-ep0l.6c" crc="ff1479dc" map="01"/>
+            <part name="em2-ep0u.6f" crc="ffe750a2" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="em2-ep1l.7c" crc="6c3e5b53" map="01"/>
+            <part name="em2-ep1u.7f" crc="dee15a81" map="10"/>
+        </interleave>
+        <!-- mask ROM: stream $200000-$9FFFFF, none populated: 00 fill -->
+        <part repeat="0x800000">00</part>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c70.bin" crc="b4015f23"/>
+    </rom>
+</misterromdescription>

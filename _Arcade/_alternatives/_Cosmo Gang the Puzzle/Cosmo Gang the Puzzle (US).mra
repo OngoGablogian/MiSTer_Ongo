@@ -1,0 +1,50 @@
+<!--
+  Cosmo Gang the Puzzle (US) - Namco NA-1 - MRA for the Namco_NA1_NA2 MiSTer core.
+  Alternate version of Cosmo Gang the Puzzle (Japan).
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml cgangpzl`).
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>Cosmo Gang the Puzzle (US)</name>
+    <setname>cgangpzl</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0289</mameversion>
+    <year>1992</year>
+    <manufacturer>Namco</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <region>USA</region>
+    <platform>Namco NA-1</platform>
+    <category>Puzzle</category>
+
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1" zip="cgangpzl.zip" md5="none">
+        <part repeat="0x800">00</part>
+        <part name="eeprom_cgangpzl" crc="5f8dfe9e"/>
+    </rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: C356, ROT0 cabinet, joystick panel -->
+    <rom index="2"><part>01 64 01 01 00 00</part></rom>
+
+    <rom index="0" zip="cgangpzl.zip|namcoc69.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="cp2-ep0l.4c" crc="8f5cdcc5" map="01"/>
+            <part name="cp2-ep0u.4f" crc="3a816140" map="10"/>
+        </interleave>
+        <!-- EP1 socket empty: 00 fill, as MAME's maincpu region -->
+        <part repeat="0x100000">00</part>
+        <!-- mask ROM: stream $200000-$9FFFFF, none populated: 00 fill -->
+        <part repeat="0x800000">00</part>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c69.bin" crc="349134d9"/>
+    </rom>
+</misterromdescription>

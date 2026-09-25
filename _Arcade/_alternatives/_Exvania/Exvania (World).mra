@@ -1,0 +1,58 @@
+<!--
+  Exvania (World) - Namco NA-1 - MRA for the Namco_NA1_NA2 MiSTer core.
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml exvania`).
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>Exvania (World)</name>
+    <setname>exvania</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0281</mameversion>
+    <year>1992</year>
+    <manufacturer>Namco</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <region>World</region>
+    <platform>Namco NA-1</platform>
+    <category>Maze</category>
+
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1" zip="exvania.zip" md5="none">
+        <part repeat="0x800">00</part>
+        <part name="eeprom" crc="0f46389d"/>
+    </rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: C350, ROT0 cabinet, joystick panel -->
+    <rom index="2"><part>01 5E 01 02 00 00</part></rom>
+
+    <rom index="0" zip="exvania.zip|namcoc69.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="ex2-ep0l.4c" crc="ccf46677" map="01"/>
+            <part name="ex2-ep0u.4f" crc="37b8d890" map="10"/>
+        </interleave>
+        <!-- EP1 socket empty: pad to 2 MiB with 00, as MAME's maincpu region does -->
+        <part repeat="0x100000">00</part>
+        <!-- mask ROM: stream $200000-$9FFFFF -->
+        <interleave output="16">
+            <part name="ex1-ma0l.2c" crc="17922cd4" map="01"/>
+            <part name="ex1-ma0u.2f" crc="93d66106" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ex1-ma1l.3c" crc="e4bba6ed" map="01"/>
+            <part name="ex1-ma1u.3f" crc="04e7c4b0" map="10"/>
+        </interleave>
+        <!-- unpopulated tail: 00 fill, exactly as ROMREGION_ERASE00 -->
+        <part repeat="0x400000">00</part>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c69.bin" crc="349134d9"/>
+    </rom>
+</misterromdescription>

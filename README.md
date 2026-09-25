@@ -74,6 +74,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
 | [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                     |
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
+| [Namco NA-1 / NA-2](https://github.com/kyledlester/Namco_NA1_NA2_MiSTer)                                                       |
 | [Namco ND-1](https://www.patreon.com/Meathax/posts/namco-classic-1-170443635)                                                  |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
 | [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-166884433)                                           |
@@ -172,7 +173,7 @@ main=MiSTer_Uneon
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
-filter = !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_legendofkage !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_EscapeKids !Arcade-Meathax_I-Robot !Arcade-Meathax_Ikki !Arcade-Meathax_MCR68 !Arcade-Meathax_NARC !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_SSV !Arcade-Meathax_Suna8bit !Arcade-Meathax_YellowCab
+filter = !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_legendofkage !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_vunit !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_EscapeKids !Arcade-Meathax_I-Robot !Arcade-Meathax_Ikki !Arcade-Meathax_MCR68 !Arcade-Meathax_NamcoND1 !Arcade-Meathax_NARC !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_SSV !Arcade-Meathax_Suna8bit !Arcade-Meathax_YellowCab
 ```
 
 ----

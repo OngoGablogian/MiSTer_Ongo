@@ -1,0 +1,54 @@
+<!--
+  Cosmo Gang the Puzzle (Japan) - Namco NA-1 - MRA for the Namco_NA1_NA2 MiSTer core.
+
+  One RBF runs every supported title. The board record at rom index 2
+  (docs/MRA_FORMAT.md) describes the board; ROM names, CRCs and offsets are
+  from MAME 0.289 (`mame -listxml cgangpzlj`).
+
+  Needs a default EEPROM: eeprom_cgangpzlj from this set, or the US
+  eeprom_cgangpzl from cgangpzl.zip (both zips are searched).
+
+  No ROM data is embedded in this file.
+-->
+<misterromdescription>
+    <name>Cosmo Gang the Puzzle (Japan)</name>
+    <setname>cgangpzlj</setname>
+    <rbf>Namco_NA1_NA2</rbf>
+    <mameversion>0281</mameversion>
+    <year>1992</year>
+    <manufacturer>Namco</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <region>Japan</region>
+    <platform>Namco NA-1</platform>
+    <category>Puzzle</category>
+
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
+         code takes as FLIP ON and some titles hang on). A dumped default listed
+         after it overrides it; a saved .nvm (below) still wins. -->
+    <rom index="1" zip="cgangpzlj.zip|cgangpzl.zip" md5="none">
+        <part repeat="0x800">00</part>
+        <part name="eeprom_cgangpzl" crc="5f8dfe9e"/>
+        <part name="eeprom_cgangpzlj" crc="ef5ddff2"/>
+    </rom>
+    <nvram index="1" size="2048"/>
+
+    <!-- board record: C356, ROT0 cabinet, joystick panel -->
+    <rom index="2"><part>01 64 01 01 00 00</part></rom>
+
+    <rom index="0" zip="cgangpzlj.zip|cgangpzl.zip|namcoc69.zip" md5="none">
+        <!-- program ROM: stream $000000-$1FFFFF -->
+        <interleave output="16">
+            <part name="cp1-ep0l.4c" crc="2825f7ba" map="01"/>
+            <part name="cp1-ep0u.4f" crc="94d7d6fc" map="10"/>
+        </interleave>
+        <!-- EP1 socket empty: pad to 2 MiB with 00, as MAME's maincpu region does -->
+        <part repeat="0x100000">00</part>
+        <!-- mask ROM: stream $200000-$9FFFFF -->
+        <!-- no mask ROMs are populated at all: 00 fill, exactly as ROMREGION_ERASE00 -->
+        <part repeat="0x800000">00</part>
+        <!-- MCU BIOS: stream $A00000-$A03FFF -> the M37702 internal ROM, not SDRAM -->
+        <part name="c69.bin" crc="349134d9"/>
+    </rom>
+</misterromdescription>
