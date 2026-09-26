@@ -58,7 +58,7 @@ T	amoudan	-	-	-	mouse	-	-	-	-	America Oudan Ultra Quiz	1994
 T	angel	-	-	-	mouse	-	-	-	y	Angel	1993
 T	anghalo	-	-	-	mouse	-	-	-	y	Angel Halo	1996
 T	anneyume	-	-	-	mouse	-	-	-	-	Anne no Yume no Kuni - Anne's Country of Dreams	1993
-T	anotowns	6M	-	-	-	-	-	-	-	AnotherTOWNS - Anata~ Free Software Collection	1999
+T	anotowns	8M	-	-	-	-	-	-	-	AnotherTOWNS - Anata~ Free Software Collection	1999
 T	anpanman	-	-	-	-	-	-	-	-	Soreike! Anpanman - Tanoshii Eigo Asobi	1993
 T	appare1	-	-	-	mouse	-	-	-	-	Appare CD Vol. 1 - Hiryuu no Maki	1994
 T	appare2	-	-	-	mouse	-	-	-	-	Appare CD Vol. 2 - Houou no Maki	1995
@@ -382,7 +382,7 @@ T	collecdb	-	-	-	mouse	-	-	-	y	Collector D - Bangai-hen - Gokurakudai Nishichiku
 T	columns	-	-	-	-	-	-	-	-	Columns	1990
 T	columns_cracked	-	-	-	-	-	-	-	-	Columns (cracked)	1990
 T	condor	-	-	-	mouse	-	-	-	-	The Case of the Cautious Condor	1989
-T	confgrom	6M	gs	-	-	-	-	-	-	CONFIG-ROM	1996
+T	confgrom	8M	gs	-	-	-	-	-	-	CONFIG-ROM	1996
 T	crayonag	-	-	-	-	-	-	-	-	Crayonnage	1991
 T	criss	-	-	-	-	-	-	-	-	CRISS Ver. 1.00	1989
 T	crystalr	-	-	-	mouse	-	-	y	-	Crystal Rinal - Ouma no Meikyuu	1994
@@ -391,7 +391,7 @@ T	cubsketch	4M	-	-	mouse	-	-	-	-	CubicSketch V1.1 L10	1994
 T	curse	-	-	-	-	-	-	-	y	Curse	1995
 T	cvrgirls	-	-	-	mouse	-	-	-	-	Cover Girls Vol. 1	1994
 T	cyberia	4M	gs	-	-	-	-	-	-	Cyberia	1995
-T	cybrcity	-	-	-	-	-	-	y	-	Cybercity	1989
+T	cybrcity	-	-	towns	mouse	-	-	y	-	Cybercity	1989
 T	cybrmotn	-	-	-	-	-	-	y	-	Cyber Motion V1.0	1993
 T	cybsculp	-	-	-	mouse	-	-	-	-	Cyber Sculpt V1.0 (HMC-140A)	1991
 T	czukan	-	-	-	-	-	-	-	-	Computer Zukan - Shokubutsu-hen	1991
@@ -579,7 +579,7 @@ T	fwc2	-	-	-	-	-	-	-	-	Freeware Collection 2	1990
 T	fwc3	-	-	-	-	-	-	-	-	Freeware Collection 3	1991
 T	g5	-	-	-	mouse	-	-	y	-	G5 (HMA-206A)	1989
 T	g5o	-	-	-	mouse	-	-	y	-	G5 (HMA-206)	1989
-T	gadget	6M	-	-	-	-	-	y	-	Gadget - Invention, Travel, & Adventure	1993
+T	gadget	8M	-	-	-	-	-	y	-	Gadget - Invention, Travel, & Adventure	1993
 T	gakubaku	-	-	-	mouse	-	-	-	y	Gakuen Bakuretsu Tenkousei!	1996
 T	gakuking	-	-	-	-	-	-	-	-	Gakuen King - Hidehiko Gakkou o Tsukuru	1996
 T	gametec1	-	-	-	mouse	-	-	-	y	Game Technopolis Super Collection 1	1992
@@ -754,7 +754,7 @@ T	kiss	-	-	-	mouse	-	-	-	-	KISS - KISekae Set system	-
 T	kittyw2	-	-	-	-	-	-	-	-	Kitty World 2	1994
 T	kiwame	-	-	-	mouse	-	-	-	y	Kiwame	1992
 T	kiwame2	-	-	-	mouse	-	-	-	y	Kiwame II	1994
-T	kjmarian	6M	-	-	mouse	-	-	-	y	Kikai Jikake no Marian	1994
+T	kjmarian	8M	-	-	mouse	-	-	-	y	Kikai Jikake no Marian	1994
 T	knjehon	-	-	-	-	-	-	-	-	Kanji no Ehon	1992
 T	knjehon2	-	-	-	-	-	-	-	-	Kanji no Ehon 2	1994
 T	knjland3	-	-	-	-	-	-	-	-	Kanji Land 3-nen (OSL-010A)	1995
@@ -993,7 +993,7 @@ T	paipai	-	-	-	mouse	-	-	-	y	Moeru Asoko no Paipai Yuugi - Fukkatsu! Mahjong Ouk
 T	palamed	-	-	-	pad	-	-	-	-	Palamedes	1991
 T	panicbl2	-	-	-	-	-	2	-	y	Panic Ball II	-
 T	panicbom	-	-	-	-	-	-	-	-	Bomberman - Panic Bomber	1995
-T	parapara	6M	gs	-	-	-	-	-	-	Para Para Paradise	1997
+T	parapara	8M	gs	-	-	-	-	-	-	Para Para Paradise	1997
 T	paraparau	-	-	-	-	-	-	-	-	Para Para Paradise Update Disk	1997
 T	pegasus	4M	-	-	mouse	-	-	-	-	Pegasus V1.1 L10C	1995
 T	pegasusa	4M	-	-	mouse	-	-	-	-	Pegasus V1.1 L10A	1995
@@ -1214,8 +1214,8 @@ T	tenranma	-	-	-	mouse	-	-	-	y	Tenshin Ranma	1992
 T	tensen	-	-	-	mouse	-	-	-	y	Tensen Nyannyan	1994
 T	tenshi6	-	-	-	mouse	-	-	-	-	Tenshi-tachi no Gogo VI - My Fair Teacher	1993
 T	tenshiten	-	-	-	-	-	-	y	-	Tenshi-tachi no Gogo - Tenkousei	1995
-T	teo10	6M	gs	-	-	-	-	-	y	Teo - Mou Hitotsu no Chikyuu - Version 1.0	1995
-T	teo20	6M	gs	-	-	-	-	-	y	Teo - Mou Hitotsu no Chikyuu - Version 2.0	1996
+T	teo10	8M	gs	-	mouse	-	-	-	y	Teo - Mou Hitotsu no Chikyuu - Version 1.0	1995
+T	teo20	8M	gs	-	mouse	-	-	-	y	Teo - Mou Hitotsu no Chikyuu - Version 2.0	1996
 T	terra	-	-	-	-	-	-	y	-	Terra Towns (HMA-110B)	1989
 T	terra2	-	-	-	-	-	-	y	-	Terra Towns II	1993
 T	terrao	-	-	-	-	-	-	y	-	Terra Towns (HMA-110)	1989
