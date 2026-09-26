@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Off Road Challenge (v1.63)</name>
+    <setname>offroadc</setname>
+    <rbf>blahm1d_vunit</rbf>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Midway</manufacturer>
+
+    <rom index="4"><part>02</part></rom>
+
+    <nvram index="3" size="32768"/>
+
+    <rom index="1" zip="offroadc.zip" md5="none">
+        <interleave input="8" output="32">
+            <part name="1.63_off_road_u10_game.u10" crc="faaf81b8" map="0001"/>
+            <part name="1.63_off_road_u11_game.u11" crc="f68e9655" map="0010"/>
+            <part name="1.63_off_road_u12_game.u12" crc="6a5295b3" map="0100"/>
+            <part name="1.63_off_road_u13_game.u13" crc="cb9233b5" map="1000"/>
+        </interleave>
+        <interleave input="8" output="32">
+            <part name="offroad_challenge_5341-15510-01_u14_video_image.u14" crc="1e41d14b" map="0001"/>
+            <part name="offroad_challenge_5341-15510-02_u15_video_image.u15" crc="654d623d" map="0010"/>
+            <part name="offroad_challenge_5341-15510-03_u16_video_image.u16" crc="259774d8" map="0100"/>
+            <part name="offroad_challenge_5341-15510-04_u17_video_image.u17" crc="50c61434" map="1000"/>
+        </interleave>
+        <interleave input="8" output="32">
+            <part name="offroad_challenge_5341-15510-05_u18_video_image.u18" crc="015be91c" map="0001"/>
+            <part name="offroad_challenge_5341-15510-06_u19_video_image.u19" crc="cfc6b70e" map="0010"/>
+            <part name="offroad_challenge_5341-15510-07_u20_video_image.u20" crc="f48d6e33" map="0100"/>
+            <part name="offroad_challenge_5341-15510-08_u21_video_image.u21" crc="17794b56" map="1000"/>
+        </interleave>
+        <interleave input="8" output="32">
+            <part name="offroad_challenge_5341-15510-09_u22_video_image.u22" crc="f2a6e622" map="0001"/>
+            <part name="offroad_challenge_5341-15510-10_u23_video_image.u23" crc="1cba6e20" map="0010"/>
+            <part name="offroad_challenge_5341-15510-11_u24_video_image.u24" crc="fd3ce11f" map="0100"/>
+            <part name="offroad_challenge_5341-15510-12_u25_video_image.u25" crc="78f8e5db" map="1000"/>
+        </interleave>
+    </rom>
+
+    <rom index="2" zip="offroadc.zip" md5="none">
+        <part name="1.0_off_road_u2_sound.u2" crc="69976e9d"/>
+        <part name="offroad_challenge_5341-15511-01_u3_sound.u3" crc="2db9b548"/>
+        <part name="offroad_challenge_5341-15511-02_u4_sound.u4" crc="42bdf9d0"/>
+        <part name="offroad_challenge_5341-15511-03_u5_sound.u5" crc="569cc84b"/>
+        <part name="offroad_challenge_5341-15511-04_u6_sound.u6" crc="0896f679"/>
+        <part name="offroad_challenge_5341-15511-05_u7_sound.u7" crc="fe242d6a"/>
+        <part name="offroad_challenge_5341-15511-06_u8_sound.u8" crc="5da13f12"/>
+        <part name="offroad_challenge_5341-15511-07_u9_sound.u9" crc="7ad27f69"/>
+    </rom>
+</misterromdescription>

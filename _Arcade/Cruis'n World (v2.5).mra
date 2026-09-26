@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Cruis'n World (v2.5)</name>
+    <setname>crusnwld</setname>
+    <rbf>blahm1d_vunit</rbf>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Midway</manufacturer>
+
+    <rom index="4"><part>01</part></rom>
+
+    <nvram index="3" size="32768"/>
+
+    <rom index="1" zip="crusnwld.zip" md5="none">
+        <interleave input="8" output="32">
+            <part name="2.5_cruisn_world_automatic_u10.u10" crc="fd776872" map="0001"/>
+            <part name="2.5_cruisn_world_automatic_u11.u11" crc="0c99a405" map="0010"/>
+            <part name="2.5_cruisn_world_automatic_u12.u12" crc="3ba9fad8" map="0100"/>
+            <part name="2.5_cruisn_world_automatic_u13.u13" crc="21a79c9a" map="1000"/>
+        </interleave>
+        <interleave input="8" output="32">
+            <part name="1.1_cruisn_world_u14_image.u14" crc="ee815091" map="0001"/>
+            <part name="1.1_cruisn_world_u15_image.u15" crc="e2da7bf1" map="0010"/>
+            <part name="1.1_cruisn_world_u16_image.u16" crc="05a7ad2f" map="0100"/>
+            <part name="1.1_cruisn_world_u17_image.u17" crc="d6278c0c" map="1000"/>
+        </interleave>
+        <interleave input="8" output="32">
+            <part name="1.1_cruisn_world_u18_image.u18" crc="e2dc2733" map="0001"/>
+            <part name="1.1_cruisn_world_u19_image.u19" crc="5223a070" map="0010"/>
+            <part name="1.1_cruisn_world_u20_image.u20" crc="db535625" map="0100"/>
+            <part name="1.1_cruisn_world_u21_image.u21" crc="92a080e8" map="1000"/>
+        </interleave>
+        <interleave input="8" output="32">
+            <part name="1.1_cruisn_world_u22_image.u22" crc="77c56318" map="0001"/>
+            <part name="1.1_cruisn_world_u23_image.u23" crc="6b920fc7" map="0010"/>
+            <part name="1.1_cruisn_world_u24_image.u24" crc="83485401" map="0100"/>
+            <part name="1.1_cruisn_world_u25_image.u25" crc="0dad97a9" map="1000"/>
+        </interleave>
+    </rom>
+
+    <rom index="2" zip="crusnwld.zip" md5="none">
+        <part name="1.0_cruisn_world_u2_sound.u2" crc="7a233c89"/>
+        <part name="1.0_cruisn_world_u3_sound.u3" crc="be9a5ff0"/>
+        <part name="1.0_cruisn_world_u4_sound.u4" crc="69f02d84"/>
+        <part name="1.0_cruisn_world_u5_sound.u5" crc="9d0b9071"/>
+        <part name="1.0_cruisn_world_u6_sound.u6" crc="df28f492"/>
+        <part name="1.0_cruisn_world_u7_sound.u7" crc="0128913e"/>
+        <part name="1.0_cruisn_world_u8_sound.u8" crc="5127c08e"/>
+        <part name="1.0_cruisn_world_u9_sound.u9" crc="84cdc781"/>
+    </rom>
+</misterromdescription>

@@ -1,16 +1,4 @@
 <misterromdescription>
-    <!--
-      gm1 Cruis'n USA master core MRA. ROM delivery copied from the cabinet-proven bw1 build 4 MRA
-      (bandwidth/bw1/quartus/bw1_CruisinUSA_Bandwidth.mra: stream CRCs proven bit-exact on the cabinet 2026-09-15), only the
-      name and rbf differ. Layout from MAME midvunit.cpp crusnusa (ROM_REGION32_LE maindata, ROM_LOAD32_BYTE; the DCS ROMs
-      packed back to back).
-        index 1 = maindata: 5 banks x 4 byte ROMs interleaved into 32-bit words (maps are hex nibbles per lane from the LSB;
-                  memory mister-mra-interleave-needs-map): 10 MiB, zlib CRC-32 0x3d41eabf. gm1_loader writes it to board
-                  SDRAM, copies words 0-0x1ffff into main RAM, zeroes the rest of the 16 MiB ROM region, fills CMOS with
-                  ones and fast RAM with zeros.
-        index 2 = dcs: the 8 sound ROMs u2..u9 packed (4 MiB, CRC-32 0x692a64fa), stored in DDR3 by cusa_dcs_subsystem.
-      hps_io WIDE=1 (16-bit ioctl_dout, ioctl_addr steps by 2). Part names and CRCs are crusnusa44's.
-    -->
     <name>Cruis'n USA (v4.4)</name>
     <setname>crusnusa44</setname>
     <rbf>blahm1d_vunit</rbf>
@@ -18,10 +6,6 @@
     <year>1994</year>
     <manufacturer>Midway</manufacturer>
 
-    <!-- index 3: calibrated CMOS seed, 32768 bytes (8192 C31 words at 0x9c0000-0x9c1fff).
-         Verified against MAME by scripts/verify_cmos_seed.py: an all-ones CMOS lands on
-         CALIBRATE CONTROLS (what the cabinet showed), this image lands in attract.
-         Literal head 9104 bytes, then 23664 bytes of 0xFF. CRC-32 0xd0bbad68. -->
     <rom index="3">
         <part>
             07 00 00 00 00 07 00 00 00 00 07 00 00 00 00 07
@@ -597,10 +581,6 @@
         <part repeat="23664">FF</part>
     </rom>
 
-    <!-- r23: saved CMOS (MAME nvram format, same layout as the seed above). Main sends it as a SECOND index-3 stream
-         right after the seed when /media/fat/config/nvram/<this MRA file name>.nvm exists; gm1_loader restarts the CMOS write
-         at word 0 for it, so it replaces the seed. Saved via OSD "Save NVRAM", Save settings, or automatically when
-         the OSD opens after the game changed CMOS (gm1_cmos_shadow.sv). -->
     <nvram index="3" size="32768"/>
 
     <rom index="1" zip="crusnusa44.zip|crusnusa.zip" md5="none">

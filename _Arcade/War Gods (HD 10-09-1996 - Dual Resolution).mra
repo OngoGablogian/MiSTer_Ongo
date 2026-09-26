@@ -1,0 +1,16 @@
+<misterromdescription>
+    <name>War Gods (HD 10/09/1996 - Dual Resolution)</name>
+    <setname>wargods</setname>
+    <rbf>blahm1d_wargods</rbf>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Midway</manufacturer>
+
+    <rom index="1" zip="wargods.zip" md5="none">
+        <part name="u41.rom" crc="398c54cc"/>
+    </rom>
+
+    <rom index="2" zip="wargods.zip" md5="none">
+        <part name="u2.rom" crc="bec7d3ae"/>
+    </rom>
+</misterromdescription>
