@@ -110,7 +110,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Seta 1st Generation Hardware (X1-010)](https://github.com/ppriest/Arcade-Seta_MiSTer)                                         |
 | [Skull & Crossbones](https://misterfpga.org/viewtopic.php?t=10831)                                                             |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
-| [SNK Neo Geo (Streamer)](https://github.com/rmonic79/NeoGeo_MiSTer_Streamer)                                                   |
 | [SNK Neo Geo (Turbo)](https://github.com/ajgowans/alt-cores)                                                                   |
 | [Sony PocketStation](https://discord.com/channels/647909397477195803/1543102626265174146)                                      |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                               |
