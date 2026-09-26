@@ -8,13 +8,13 @@
   <year>1997</year>
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32</rbf>
-  <mameversion>0286</mameversion>
+  <mameversion>0289</mameversion>
   <switches default="FF,FF,7F,FF" base="0">
     <dip name="Flip Screen" bits="0" ids="On,Off"/>
     <dip name="Demo Sounds" bits="1" ids="Off,On"/>
     <dip name="VS Match" bits="2,3" ids="1,5,7,3"/>
     <dip name="Puzzle Difficulty" bits="4,5" ids="Easy,Hard,Very Hard,Normal"/>
-    <dip name="Endless Difficulty" bits="6,7" ids="Easy,Hard,Very Hard,Normal"/>
+    <dip name="Endless Level" bits="6,7" ids="Easy,Hard,Very Hard,Normal"/>
     <dip name="Service Mode" bits="8" ids="On,Off"/>
     <dip name="Free Play" bits="9" ids="On,Off"/>
     <dip name="Coin B" bits="10,11,12" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>

@@ -8,7 +8,7 @@
   <year>1994</year>
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32</rbf>
-  <mameversion>0286</mameversion>
+  <mameversion>0289</mameversion>
   <switches default="FD,FF,FF,FF" base="0">
     <dip name="Flip Screen" bits="0" ids="On,Off"/>
     <dip name="Language" bits="1" ids="English,Japanese"/>
@@ -19,13 +19,13 @@
     <dip name="Free Play" bits="9" ids="On,Off"/>
     <dip name="Coin B" bits="10,11,12" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
     <dip name="Coin A" bits="13,14,15" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
-    <dip name="Grute's Attacking Power" bits="17" ids="Harder,Normal"/>
-    <dip name="Biff's Attacking Power" bits="18" ids="Harder,Normal"/>
-    <dip name="Carolde's Attacking Power" bits="19" ids="Harder,Normal"/>
-    <dip name="Jose's Attacking Power" bits="20" ids="Harder,Normal"/>
-    <dip name="Thamalatt's Attacking Power" bits="21" ids="Harder,Normal"/>
-    <dip name="Kim's Attacking Power" bits="22" ids="Harder,Normal"/>
-    <dip name="Jyoji's Attacking Power" bits="23" ids="Harder,Normal"/>
+    <dip name="Grute Attack" bits="17" ids="Harder,Normal"/>
+    <dip name="Biff Attack" bits="18" ids="Harder,Normal"/>
+    <dip name="Carolde Attack" bits="19" ids="Harder,Normal"/>
+    <dip name="Jose Attack" bits="20" ids="Harder,Normal"/>
+    <dip name="Thamalatt Attack" bits="21" ids="Harder,Normal"/>
+    <dip name="Kim Attack" bits="22" ids="Harder,Normal"/>
+    <dip name="Jyoji Attack" bits="23" ids="Harder,Normal"/>
   </switches>
   <rom index="1"><part>11</part></rom>   <!-- mod byte: key ss92046_01 -->
   <rom index="0" zip="bbbxing.zip" md5="none" address="0x30000000">

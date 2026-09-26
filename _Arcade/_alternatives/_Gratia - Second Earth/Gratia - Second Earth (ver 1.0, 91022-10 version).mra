@@ -8,11 +8,11 @@
   <year>1996</year>
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32</rbf>
-  <mameversion>0286</mameversion>
+  <mameversion>0289</mameversion>
   <switches default="FF,FF,7F,FF" base="0">
     <dip name="Flip Screen" bits="0" ids="On,Off"/>
     <dip name="Demo Sounds" bits="1" ids="Off,On"/>
-    <dip name="Bonus Life" bits="2" ids="None,200k and every 1000k"/>
+    <dip name="Bonus Life" bits="2" ids="None,200k/every 1000k"/>
     <dip name="Invulnerability (Cheat)" bits="3" ids="On,Off"/>
     <dip name="Lives" bits="4,5" ids="1,4,2,3"/>
     <dip name="Difficulty" bits="6,7" ids="Easy,Hard,Hardest,Normal"/>

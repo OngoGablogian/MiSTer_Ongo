@@ -8,7 +8,7 @@
   <year>1997</year>
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32</rbf>
-  <mameversion>0286</mameversion>
+  <mameversion>0289</mameversion>
   <switches default="FF,FF,FF,FF" base="0">
     <dip name="Difficulty" bits="6,7" ids="Easy,Hard,Hardest,Normal"/>
     <dip name="Service Mode" bits="8" ids="On,Off"/>

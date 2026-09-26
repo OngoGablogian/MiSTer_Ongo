@@ -8,19 +8,19 @@
   <year>1995</year>
   <manufacturer>Jaleco / BPS</manufacturer>
   <rbf>JalecoMS32</rbf>
-  <mameversion>0286</mameversion>
+  <mameversion>0289</mameversion>
   <switches default="FF,FF,7F,FF" base="0">
     <dip name="Flip Screen" bits="0" ids="On,Off"/>
     <dip name="Demo Sounds" bits="1" ids="Off,On"/>
-    <dip name="Join In" bits="2,3" ids="-,Normal and Puzzle Modes,VS Mode,All Modes"/>
-    <dip name="Winning Rounds (Player VS Player)" bits="4,5" ids="1/1,3/5,4/7,2/3"/>
+    <dip name="Join In" bits="2,3" ids="-,Normal &amp; Puzzle,VS Mode,All Modes"/>
+    <dip name="VS Rounds" bits="4,5" ids="1/1,3/5,4/7,2/3"/>
     <dip name="Difficulty" bits="6,7" ids="Easy,Hard,Hardest,Normal"/>
     <dip name="Service Mode" bits="8" ids="On,Off"/>
     <dip name="Free Play" bits="9" ids="On,Off"/>
     <dip name="Coin B" bits="10,11,12" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
     <dip name="Coin A" bits="13,14,15" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
     <dip name="Freeze" bits="16" ids="On,Off"/>
-    <dip name="After VS Mode" bits="19" ids="Winner Continues,Game Ends"/>
+    <dip name="After VS" bits="19" ids="Winner Continues,Game Ends"/>
     <dip name="Voice" bits="20" ids="English Only,Yes"/>
     <dip name="FBI Logo" bits="22" ids="Yes,No"/>
     <dip name="Language" bits="23" ids="English,Japanese"/>
