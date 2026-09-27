@@ -1,0 +1,72 @@
+<misterromdescription>
+  <name>S.T.U.N. Runner (rev 6)</name>
+  <setname>stunrun</setname>
+  <year>1989</year>
+  <manufacturer>Atari Games</manufacturer>
+  <category>Racing</category>
+  <rbf>Meathax_StunRunner</rbf>
+  <rotation>horizontal</rotation>
+  <buttons default="A,B,Start,Select" names="Fire L,Fire R,Start/Shockwave,Coin"/>
+  <switches default="00 01">
+    <dip bits="0" name="SW1:8" ids="On,Off"/>
+    <dip bits="1" name="SW1:7" ids="On,Off"/>
+    <dip bits="2" name="SW1:6" ids="On,Off"/>
+    <dip bits="3" name="SW1:5" ids="On,Off"/>
+    <dip bits="4" name="SW1:4" ids="On,Off"/>
+    <dip bits="5" name="SW1:3" ids="On,Off"/>
+    <dip bits="6" name="SW1:2" ids="On,Off"/>
+    <dip bits="7" name="SW1:1" ids="On,Off"/>
+    <dip bits="8" name="Diagnostic jumper" ids="On,Off"/>
+  </switches>
+  <!-- DDR 0x30000000: 68010 program 0x000000, ADSP object ROM 0x100000,
+       OKI samples 0x160000. -->
+  <rom index="0" address="0x30000000" zip="stunrun.zip" md5="none">
+    <interleave output="16">
+      <part name="136070-2102.200r" crc="e0ed54d8" map="01"/>
+      <part name="136070-2101.210r" crc="3008bcf8" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136070-6104.200s" crc="f469f91c" map="01"/>
+      <part name="136070-6103.210s" crc="096aad68" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136070-6106.200t" crc="b445bae5" map="01"/>
+      <part name="136070-6105.210t" crc="42736c52" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136070-2108.200u" crc="0ce849aa" map="01"/>
+      <part name="136070-2107.210u" crc="19bc7495" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136070-2110.200v" crc="4f6d22c5" map="01"/>
+      <part name="136070-2109.210v" crc="ac6d4d4a" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136070-2112.200w" crc="3f896aaf" map="01"/>
+      <part name="136070-2111.210w" crc="47f010ad" map="10"/>
+    </interleave>
+    <part repeat="0x40000">00</part>
+    <interleave output="16">
+      <part name="136070-2121.90h" crc="0ebf8e58" map="01"/>
+      <part name="136070-2118.90k" crc="fb98abaf" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136070-2122.10h" crc="bd5380bd" map="01"/>
+      <part name="136070-2119.10k" crc="bde8bd31" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136070-2120.9h" crc="55a30976" map="01"/>
+      <part name="136070-2117.9k" crc="d4a9696d" map="10"/>
+    </interleave>
+    <part name="136070-2124.1fh" crc="4dc14fe8"/>
+    <part name="136070-2125.1ef" crc="cbdabbcc"/>
+    <part name="136070-2126.1de" crc="b973d9d1"/>
+    <part name="136070-2127.1cd" crc="3e419f4e"/>
+  </rom>
+  <rom index="1" zip="stunrun.zip" md5="none">
+    <part name="136070-2123.10c" crc="121ab09a"/>
+  </rom>
+  <nvram index="2" size="4096"/>
+
+  <remark>Uses stock MiSTer Main. Steering (handlebars): left analog stick X or a USB wheel axis (full analog), a paddle, a spinner (OSD: Spinner speed, Invert steering), or D-pad left/right; whichever moved last steers. Pitch: left analog stick Y or D-pad up/down. Buttons: Fire L / Fire R (handlebar triggers), Start (also Shockwave), Coin. Settings save to NVRAM.</remark>
+</misterromdescription>

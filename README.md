@@ -97,6 +97,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
 | [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
+| [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                              |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                         |
 | [Sand Scorpion](https://github.com/kuzearcade/Arcade-SandScrp_MiSTer)                                                          |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
