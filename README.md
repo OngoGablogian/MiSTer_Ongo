@@ -70,6 +70,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Midway V Unit](https://www.patreon.com/blahm1d/posts/tears-through-at-170597455)                                              |
 | [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
 | [Midway Y Unit](https://www.patreon.com/blahm1d/posts/is-this-thing-on-168716958)                                              |
+| [Midway Zeus](https://www.patreon.com/blahm1d/posts/zeus-protocol-170680967)                                                   |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                      |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
 | [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                     |

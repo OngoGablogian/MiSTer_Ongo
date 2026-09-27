@@ -1,0 +1,41 @@
+<misterromdescription>
+    <name>Invasion: The Abductors (version 5.0)</name>
+    <about author="blahm1d"/>
+    <setname>invasnab</setname>
+    <rbf>blahm1d_invasion</rbf>
+    <mameversion>0289</mameversion>
+    <year>1999</year>
+    <manufacturer>Midway</manufacturer>
+    <region>World</region>
+    <players>2</players>
+    <joystick>lightgun</joystick>
+    <rom index="1" zip="invasnab.zip" md5="None">
+        <interleave output="32">
+            <part name="invasion5.u10" crc="8c7785d9" map="0021"/>
+            <part name="invasion5.u11" crc="8ceb1f32" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="invasion4.u12" crc="ce1eb06a" map="0021"/>
+            <part name="invasion4.u13" crc="33fc6707" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="invasion4.u14" crc="760682a1" map="0021"/>
+            <part name="invasion4.u15" crc="90467d7a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="invasion4.u16" crc="3ef1b28d" map="0021"/>
+            <part name="invasion4.u17" crc="97aa677a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="invasion4.u18" crc="6930c656" map="0021"/>
+            <part name="invasion4.u19" crc="89fa6ee5" map="2100"/>
+        </interleave>
+    </rom>
+    <rom index="3" zip="invasnab.zip" md5="None">
+        <part name="invasion2.u2" crc="59d2e1d6"/>
+        <part name="invasion2.u3" crc="86b956ae"/>
+        <part name="invasion2.u4" crc="5ef1fab5"/>
+        <part name="invasion2.u5" crc="e42805c9"/>
+    </rom>
+    <nvram index="2" size="32768"/>
+</misterromdescription>

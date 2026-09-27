@@ -1,0 +1,37 @@
+<misterromdescription>
+    <name>Mortal Kombat 4 (version 3.0)</name>
+    <about author="blahm1d"/>
+    <setname>mk4</setname>
+    <rbf>blahm1d_mk4</rbf>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Midway</manufacturer>
+    <region>World</region>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rom index="1" zip="mk4.zip" md5="None">
+        <interleave output="32">
+            <part name="mk4_l3.u10" crc="84efe5a9" map="0021"/>
+            <part name="mk4_l3.u11" crc="0c026ccb" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mk4_l2.u12" crc="7816c07f" map="0021"/>
+            <part name="mk4_l2.u13" crc="b3c237cd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mk4_l2.u14" crc="fd33eb1a" map="0021"/>
+            <part name="mk4_l2.u15" crc="b907518f" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mk4_l2.u16" crc="24371d57" map="0021"/>
+            <part name="mk4_l2.u17" crc="3a1a082c" map="2100"/>
+        </interleave>
+    </rom>
+    <rom index="3" zip="mk4.zip" md5="None">
+        <part name="mk4_l2.u2" crc="f9d410b4"/>
+        <part name="mk4_l2.u3" crc="8fbcf0ac"/>
+        <part name="mk4_l1.u4" crc="dee91696"/>
+        <part name="mk4_l1.u5" crc="44d072be"/>
+    </rom>
+    <nvram index="2" size="32768"/>
+</misterromdescription>
