@@ -1,0 +1,39 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Team Hat Trick (11/16/84)</name>
+	<setname>teamht</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1985</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>4</players>
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="teamht.zip|sente6vb.zip" md5="none">
+		<part name="hat_trk_ab-0_11-12-84.u8a" crc="cb746de8"/>
+		<part name="hat_trk_ab-1_11-16-84.u7a" crc="5f2a0b24"/>
+		<part repeat="0x14000">00</part>
+		<part name="hat_trk_cd_11-16-84.u1a" crc="6c6cf2be"/>
+		<part repeat="0x20000">00</part>
+		<part name="hat_trk_gr-0_11-16-84.u6b" crc="6e299728"/>
+		<part repeat="0xc000">00</part>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 04 24 A4 C4 FF FF 09 80 08 28 FF FF FF FF 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Shoot,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="01,7A,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Game Time" bits="8,10" ids="1:15,1:30,1:45,2:00,2:15,2:30,2:45,3:00"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/1 Credit,1 Coin/2 Credits,2 Coins/1 Credit"/>
+		<dip name="Bonus Coin" bits="2,4" ids="None,2 Coins +1,3 Coins +1,4 Coins +1,4 Coins +2,5 Coins +1,5 Coins +2,5 Coins +3"/>
+		<dip name="Left Multiplier" bits="5" ids="1,2"/>
+		<dip name="Right Multiplier" bits="6,7" ids="1,4,5,6"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

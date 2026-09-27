@@ -1,0 +1,47 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Off the Wall (Sente) (10/16/84)</name>
+	<setname>otwalls</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1984</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>2</players>
+	<!-- Analog: P1 dial reversed, P2 dial reversed. Player 1's from the mouse or the left stick, others from their stick. -->
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="otwalls.zip|sente6vb.zip" md5="none">
+		<part name="off_the_wall_ab0_10-16-84.u9a" crc="474441c7"/>
+		<part name="off_the_wall_ab1_10-16-84.u8a" crc="2e9e9411"/>
+		<part name="off_the_wall_ab2_10-16-84.u7a" crc="ba092128"/>
+		<part name="off_the_wall_ab3_10-16-84.u6a" crc="74bc479d"/>
+		<part name="off_the_wall_ab4_10-16-84.u5a" crc="f5f67619"/>
+		<part name="off_the_wall_ab5_10-16-84.u4a" crc="f5f67619"/>
+		<part repeat="0x10000">00</part>
+		<part name="off_the_wall_cd_10-16-84.u3a" crc="8e2d15ab"/>
+		<part name="off_the_wall_ef_10-16-84.u2a" crc="57eab299"/>
+		<part repeat="0x20000">00</part>
+		<part name="off_the_wall_gr0_10-16-84.u9b" crc="210bad3c"/>
+		<part name="off_the_wall_gr1_10-16-84.u8b" crc="13e6aaa5"/>
+		<part name="off_the_wall_gr2_10-16-84.u7b" crc="5cfefee5"/>
+		<part name="off_the_wall_gr3_10-16-84.u6b" crc="6b17e4a9"/>
+		<part name="off_the_wall_gr4_10-16-84.u5b" crc="15985c8c"/>
+		<part name="off_the_wall_gr5_10-16-84.u4b" crc="448f7e3c"/>
+		<part repeat="0x4000">00</part>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>00 00 00 00 98 99 00 00 00 00 00 00 00 00 00 00 21 20 01 00 FF FF 09 80 08 28 FF FF FF FF 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="-,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="FF,7F,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/2 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Players Per Credit" bits="2" ids="1,1 Or 2"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

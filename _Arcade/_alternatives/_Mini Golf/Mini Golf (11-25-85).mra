@@ -1,0 +1,52 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Mini Golf (11/25/85)</name>
+	<setname>minigolfa</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1985</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>1</players>
+	<!-- Analog: P1 trackball_y, P1 trackball_x reversed. Player 1's from the mouse or the left stick, others from their stick. -->
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="minigolfa.zip|minigolf.zip|sente6vb.zip" md5="none">
+		<part name="mini_golf_ur_ab01_11-25-85.u8a" crc="348f827f"/>
+		<part name="mini_golf_ur_ab23_11-25-85.u7a" crc="19a6ff47"/>
+		<part name="mini_golf_ur_ab45_11-25-85.u6a" crc="925d76eb"/>
+		<part name="mini_golf_ur_ab67_11-25-85.u5a" crc="6a311c9a"/>
+		<part repeat="0x4000">00</part>
+		<part name="mini_golf_ur_cd23_11-25-85.u3a" crc="8c18b38d"/>
+		<part repeat="0x4000">00</part>
+		<part name="mini_golf_ur_cd6ef_11-25-85.u1a" crc="38bf5962"/>
+		<part repeat="0x20000">00</part>
+		<part name="mini_golf_ur_gr01_11-25-85.u6b" crc="8e24d594"/>
+		<part name="mini_golf_ur_gr23_11-25-85.u5b" crc="3bf355ef"/>
+		<part name="mini_golf_ur_gr45_11-25-85.u4b" crc="8eb14921"/>
+		<part repeat="0x4000">00</part>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>0C 00 00 00 10 88 02 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF 09 80 08 28 0C 0D 04 FF 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Tee Select,-,-,-,Start,Coin,Service,Pause,Start 3,Start 4" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="00,7F,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Add-A-Coin" bits="8" ids="On,Off"/>
+		<dip name="Display Kids" bits="9" ids="Yes,No"/>
+		<dip name="Kid On Left Located" bits="10" ids="Yes,No"/>
+		<dip name="Kid On Right Located" bits="11" ids="Yes,No"/>
+		<dip name="Unknown" bits="12" ids="On,Off"/>
+		<dip name="Unknown" bits="13" ids="On,Off"/>
+		<dip name="Unknown" bits="14" ids="On,Off"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="1 Coin/1 Credit,1 Coin/2 Credits,2 Coins/1 Credit,3 Coins/1 Credit"/>
+		<dip name="Bonus Coins" bits="2,4" ids="None,2 Coins=1 Bonus,3 Coins=1 Bonus,4 Coins=1 Bonus,4 Coins=2 Bonus,5 Coins=1 Bonus,5 Coins=2 Bonus,5 Coins=3 Bonus"/>
+		<dip name="Left Coin Mech" bits="5" ids="x1,x2"/>
+		<dip name="Right Coin Mech" bits="6,7" ids="x1,x4,x5,x6"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

@@ -1,0 +1,36 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Grudge Match (v00.80, prototype)</name>
+	<setname>grudgep</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1987</year>
+	<manufacturer>Bally Midway</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>3</players>
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="grudgep.zip|grudge.zip|sente6vb.zip" md5="none">
+		<part name="grudge.ab0" crc="260965ca"/>
+		<part name="grudge.ab4" crc="c6cd734d"/>
+		<part name="grudge.cd0" crc="e51db1f2"/>
+		<part name="grudge.cd4" crc="6b60e47e"/>
+		<part repeat="0x20000">00</part>
+		<part name="grudge.gr0" crc="b9681f53"/>
+		<part name="grudge.gr0" crc="b9681f53"/>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>3F 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 FF FF FF FF 09 29 A9 80 08 28 A8 04 24 A4 FF FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Button 1,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="FF,7F,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Players" bits="15" ids="3,2"/>
+		<dip name="Unknown" bits="0,1" ids="0,1,2,3"/>
+		<dip name="Free Play" bits="7" ids="Off (buggy),On"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

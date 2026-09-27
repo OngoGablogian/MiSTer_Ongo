@@ -1,0 +1,40 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Hat Trick (11/12/84)</name>
+	<setname>hattrick</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1984</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>2</players>
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="hattrick.zip|sente6vb.zip" md5="none">
+		<part name="hat_trk_ab0_11-12-84.u9a" crc="f25c1b99"/>
+		<part name="hat_trk_ab1_11-12-84.u8a" crc="c1df3d1f"/>
+		<part name="hat_trk_ab2_11-12-84.u7a" crc="f6c41257"/>
+		<part repeat="0x16000">00</part>
+		<part name="hat_trk_cd_11-12-84.u3a" crc="fc44f36c"/>
+		<part name="hat_trk_ef_11-12-84.u2a" crc="d8f910fb"/>
+		<part repeat="0x20000">00</part>
+		<part name="hat_trk_gr0_11-12-84.u9b" crc="9f41baba"/>
+		<part name="hat_trk_gr1_11-12-84.u8b" crc="951f08c9"/>
+		<part repeat="0xc000">00</part>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 02 00 01 04 24 09 80 08 28 23 22 20 21 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Shoot,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="FF,7A,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Game Time" bits="8,10" ids="1:15,1:30,1:45,2:00,2:15,2:30,2:45,3:00"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/2 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Players Per Credit" bits="2" ids="1,1 Or 2"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

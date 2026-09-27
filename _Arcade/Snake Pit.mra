@@ -1,0 +1,50 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Snake Pit</name>
+	<setname>snakepit</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1984</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>1</players>
+	<!-- Analog: P1 trackball_y, P1 trackball_x reversed. Player 1's from the mouse or the left stick, others from their stick. -->
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="snakepit.zip|sente6vb.zip" md5="none">
+		<part name="spit-ab0.u9a" crc="5aa86081"/>
+		<part name="spit-ab1.u8a" crc="588228b8"/>
+		<part name="spit-ab2.u7a" crc="60173ab6"/>
+		<part name="spit-ab3.u6a" crc="56cb51a8"/>
+		<part name="spit-ab4.u5a" crc="40ba61e0"/>
+		<part name="spit-ab5.u4a" crc="2a1d9d8f"/>
+		<part repeat="0x10000">00</part>
+		<part name="spit-cd.u3a" crc="54095cbb"/>
+		<part name="spit-ef.u2a" crc="5f836a66"/>
+		<part repeat="0x20000">00</part>
+		<part name="spit-gr0.u9b" crc="f77fd85d"/>
+		<part name="spit-gr1.u8b" crc="3ad10334"/>
+		<part name="spit-gr2.u7b" crc="24887703"/>
+		<part name="spit-gr3.u6b" crc="c6703ec2"/>
+		<part name="spit-gr4.u5b" crc="b4293435"/>
+		<part name="spit-gr5.u4b" crc="dc27c970"/>
+		<part repeat="0x4000">00</part>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>00 00 00 00 10 88 01 00 00 00 00 00 00 00 00 00 03 02 00 01 FF FF 09 80 08 28 04 FF FF FF 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Whip,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="FF,74,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Bonus Life" bits="8,9" ids="Every 10000,Every 15000,Every 20000,Every 25000"/>
+		<dip name="Lives" bits="10,11" ids="2,3,4,5"/>
+		<dip name="Difficulty" bits="14" ids="Hard,Easy"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/2 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="High Scores" bits="7" ids="Keep All,Keep Top 5"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

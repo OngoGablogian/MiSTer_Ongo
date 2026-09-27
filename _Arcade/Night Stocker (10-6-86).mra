@@ -1,0 +1,46 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Night Stocker (10/6/86)</name>
+	<setname>nstocker</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1986</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>2</players>
+	<!-- Analog: P1 dial. Player 1's from the mouse or the left stick, others from their stick. -->
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="nstocker.zip|sente6vb.zip" md5="none">
+		<part name="night_stocker_ab_01_10-06-86.u8a" crc="a635f973"/>
+		<part name="night_stocker_ab_23_10-06-86.u7a" crc="223acbb2"/>
+		<part name="night_stocker_ab_45_10-06-86.u6a" crc="27a728b5"/>
+		<part name="night_stocker_ab_67_10-06-86.u5a" crc="2999cdf2"/>
+		<part name="night_stocker_cd_01_10-06-86.u4a" crc="75e9b51a"/>
+		<part name="night_stocker_cd_23_10-06-86.u3a" crc="0a32e0a5"/>
+		<part name="night_stocker_cd_45_10-06-86.u2a" crc="9bb292fe"/>
+		<part name="night_stocker_cd_6_ef_10-06-86.u1a" crc="e77c1aea"/>
+		<part repeat="0x20000">00</part>
+		<part name="night_stocker_gr_01_10-06-86.u4c" crc="fd0c38be"/>
+		<part name="night_stocker_gr_23_10-06-86.u3c" crc="35d4433e"/>
+		<part name="night_stocker_gr_45_10-06-86.u2c" crc="734b858a"/>
+		<part name="night_stocker_gr_67_10-06-86.u1c" crc="3311f9c0"/>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>3F 01 00 00 00 1C 01 05 00 00 00 00 00 00 00 00 FE FE FE FE FF FF 09 80 08 04 FF FF FF FF 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Trigger,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="00,7E,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Difficulty" bits="8" ids="Hard,Easy"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="1 Coin/1 Credit,1 Coin/2 Credits,2 Coins/1 Credit,3 Coins/1 Credit"/>
+		<dip name="Bonus Coins" bits="2,4" ids="None,2 Coins=1 Bonus,3 Coins=1 Bonus,4 Coins=1 Bonus,4 Coins=2 Bonus,5 Coins=1 Bonus,5 Coins=2 Bonus,5 Coins=3 Bonus"/>
+		<dip name="Left Coin Mech" bits="5" ids="x1,x2"/>
+		<dip name="Right Coin Mech" bits="6,7" ids="x1,x4,x5,x6"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

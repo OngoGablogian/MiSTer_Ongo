@@ -1,0 +1,50 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Stompin' (4/4/86)</name>
+	<setname>stompin</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1986</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>1</players>
+	<!-- Analog: P1 pads, P2 pads, P3 pads. Player 1's from the mouse or the left stick, others from their stick. -->
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="stompin.zip|sente6vb.zip" md5="none">
+		<part name="ab 01.u8a" crc="46f428c6"/>
+		<part name="ab 23.u7a" crc="0e13132f"/>
+		<part name="ab 45.u6a" crc="6ed26069"/>
+		<part name="ab 67.u5a" crc="7f63b516"/>
+		<part repeat="0x4000">00</part>
+		<part name="cd 23.u3a" crc="52b29048"/>
+		<part repeat="0x4000">00</part>
+		<part name="cd 6 ef.u1a" crc="b880961a"/>
+		<part repeat="0x20000">00</part>
+		<part name="gr 01.u4c" crc="14ffdd1e"/>
+		<part name="gr 23.u3c" crc="761abb80"/>
+		<part name="gr 45.u2c" crc="0d2cf2e6"/>
+		<part name="gr 67.u2c" crc="2bab2784"/>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>0C 01 30 31 32 00 80 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF 09 80 08 04 FF FF FF FF 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Zapper,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="00,3E,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Display Kids" bits="8" ids="No,Yes"/>
+		<dip name="Kid On Right Located" bits="9" ids="Yes,No"/>
+		<dip name="Kid On Left Located" bits="10" ids="Yes,No"/>
+		<dip name="Demo Sounds" bits="13" ids="Off,On"/>
+		<dip name="Bee In Game" bits="14" ids="Yes,No"/>
+		<dip name="Bug Generation" bits="15" ids="Regular,None"/>
+		<dip name="Coinage" bits="0,1" ids="1 Coin/1 Credit,1 Coin/2 Credits,2 Coins/1 Credit,3 Coins/1 Credit"/>
+		<dip name="Bonus Coins" bits="2,4" ids="None,2 Coins=1 Bonus,3 Coins=1 Bonus,4 Coins=1 Bonus,4 Coins=2 Bonus,5 Coins=1 Bonus,5 Coins=2 Bonus,5 Coins=3 Bonus"/>
+		<dip name="Left Coin Mech" bits="5" ids="x1,x2"/>
+		<dip name="Right Coin Mech" bits="6,7" ids="x1,x4,x5,x6"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

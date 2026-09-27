@@ -1,0 +1,49 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Trivial Pursuit (Think Tank - Genus Edition) (12/14/84)</name>
+	<setname>triviag1a</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1984</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>1</players>
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="triviag1a.zip|triviag1.zip|sente6vb.zip" md5="none">
+		<part name="trivial_pursuit_ab0_12-14-84.u9a" crc="41ca9a81"/>
+		<part name="trivial_pursuit_ab1_12-14-84.u8a" crc="b3b48a3d"/>
+		<part name="trivial_pursuit_ab2_12-14-84.u7a" crc="ab652ce9"/>
+		<part name="trivial_pursuit_ab3_12-14-84.u6a" crc="4b382c77"/>
+		<part name="trivial_pursuit_ab4_12-14-84.u5a" crc="9b4a8c4e"/>
+		<part name="trivial_pursuit_ab5_12-14-84.u4a" crc="499773a4"/>
+		<part repeat="0x10000">00</part>
+		<part name="trivial_pursuit_cd_12-14-84.u3a" crc="12d870ba"/>
+		<part name="trivial_pursuit_ef_12-14-84.u2a" crc="d902ee28"/>
+		<part repeat="0x20000">00</part>
+		<part name="trivial_pursuit_gr0_12-14-84.u9b" crc="20c9217a"/>
+		<part name="trivial_pursuit_gr1_12-14-84.u8b" crc="d7f44504"/>
+		<part name="trivial_pursuit_gr2_12-14-84.u7b" crc="4e59a15d"/>
+		<part name="trivial_pursuit_gr3_12-14-84.u6b" crc="323a8640"/>
+		<part name="trivial_pursuit_gr4_12-14-84.u5b" crc="673acf42"/>
+		<part name="trivial_pursuit_gr5_12-14-84.u4b" crc="d17d5431"/>
+		<part repeat="0x4000">00</part>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 02 00 01 04 FF 09 80 08 28 0C 0D 05 04 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Green,Red,-,-,Start,Coin,Service,Pause,Start 3,Start 4" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="9F,77,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Guesses" bits="10,11" ids="3,4,5,6"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/2 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
+		<dip name="Sound" bits="5" ids="On,Off"/>
+		<dip name="Sound Test" bits="6" ids="On,Off"/>
+		<dip name="High Scores" bits="7" ids="Keep Top 5,Keep Top 10"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>

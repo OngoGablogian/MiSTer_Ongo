@@ -1,0 +1,45 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Trivial Pursuit (Volumen II, Spanish, Maibesa license)</name>
+	<setname>triviaes2</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1987</year>
+	<manufacturer>Bally/Sente (Maibesa license)</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>1</players>
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="triviaes2.zip|triviaes.zip|sente6vb.zip" md5="none">
+		<part name="tpe-2cd45.u2a" crc="ef26b178"/>
+		<part name="tpe-2ab23.u7a" crc="348dc874"/>
+		<part name="tpe-2cd01.u4a" crc="9695d8ed"/>
+		<part name="tpe-2ab67.u5a" crc="808a3e1e"/>
+		<part name="tpe-2ab01.u8a" crc="39ddbafd"/>
+		<part name="tpe-2cdef.u1a" crc="22f9e1b4"/>
+		<part name="tpe-2ab45.u6a" crc="cf48b8eb"/>
+		<part name="tpe-2cd23.u3a" crc="dacd287e"/>
+		<part repeat="0x20000">00</part>
+		<part name="tpegr01.u6b" crc="6829de8e"/>
+		<part name="tpegr23.u5b" crc="89398700"/>
+		<part name="tpegr45.u4b" crc="1242033e"/>
+		<part repeat="0x4000">00</part>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 02 00 01 04 FF 09 80 08 28 0C 0D 05 04 29 FE</part>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Green,Red,-,-,Start,Coin,Service,Pause,Start 3,Start 4" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="9C,77,FF,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Guesses" bits="10,11" ids="2,3,4,5"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="1 Coin/1 Credit,1 Coin/2 Credits,2 Coins/1 Credit,Free Play"/>
+		<dip name="Sound" bits="5" ids="On,Off"/>
+		<dip name="Sound Test" bits="6" ids="On,Off"/>
+		<dip name="High Scores" bits="7" ids="Keep Top 5,Keep Top 10"/>
+		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+	</switches>
+</misterromdescription>
