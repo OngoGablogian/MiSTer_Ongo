@@ -1,0 +1,59 @@
+<misterromdescription>
+    <name>Fantastic Journey (ver AAA)</name>
+    <setname>fantjoura</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>04</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 4); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="fantjoura.zip|fantjour.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="321aaa04.27b" crc="507becce" map="0012"/>
+            <part name="321aaa02.21b" crc="5efb62f8" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 5-byte row, then the last 1 byte of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="321b14.17h" crc="437d0057"/>  <!-- four-byte part -->
+        <part repeat="2936012">00</part>
+        <part name="321b12.13g" crc="5f9edfa0"/>  <!-- second part -->
+        <part repeat="734003">00</part>
+        <!-- k055673: MAME's region, a four-byte part then the fifth bytes -->
+        <part repeat="4194305">00</part>
+        <interleave output="32">
+            <part name="321b11.25g" crc="c6e2e74d" map="0021"/>
+            <part name="321b10.28g" crc="ea9f8c48" map="2100"/>
+        </interleave>
+        <part name="321b09.30g" crc="94add237"/>
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="3145728">00</part>
+        <interleave output="16">
+            <part name="321b06.9c" crc="da810554" map="01"/>
+            <part name="321b07.7c" crc="c47634c0" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="321b17.9g" crc="b3e8d5d8"/>
+        <part name="321b18.7g" crc="2c561ad0"/>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="fantjoura.zip|fantjour.zip" md5="none">
+        <part name="fantjoura.nv" crc="d13b1ec1"/>
+    </rom>
+
+    <switches default="FE,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Power Up,Shot,Missile,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>

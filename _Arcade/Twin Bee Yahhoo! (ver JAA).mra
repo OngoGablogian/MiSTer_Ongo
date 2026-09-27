@@ -1,0 +1,59 @@
+<misterromdescription>
+    <name>Twin Bee Yahhoo! (ver JAA)</name>
+    <setname>tbyahhoo</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>07</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 7); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="tbyahhoo.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="424jaa04.27b" crc="bcbe0e40" map="0012"/>
+            <part name="424jaa02.31b" crc="0416ad78" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 5-byte row, then the last 1 byte of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="424a14.17h" crc="b1d9fce8"/>  <!-- four-byte part -->
+        <part repeat="2097152">00</part>
+        <part name="424a12.13g" crc="7f9cb8b1"/>  <!-- second part -->
+        <part repeat="524288">00</part>
+        <!-- k055673: MAME's region, a four-byte part then the fifth bytes -->
+        <part repeat="3145728">00</part>
+        <interleave output="32">
+            <part name="424a11.25g" crc="29592688" map="0021"/>
+            <part name="424a10.28g" crc="cf24e5e3" map="2100"/>
+        </interleave>
+        <part name="424a09.30g" crc="daa07224"/>
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="3145728">00</part>
+        <interleave output="16">
+            <part name="424a06.9c" crc="a4760e14" map="01"/>
+            <part name="424a07.7c" crc="fa90d7e2" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="424a17.9g" crc="e9dd9692"/>
+        <part name="424a18.7g" crc="0f0d9f3a"/>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="tbyahhoo.zip" md5="none">
+        <part name="tbyahhoo.nv" crc="1e6fa2f8"/>
+    </rom>
+
+    <switches default="FE,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

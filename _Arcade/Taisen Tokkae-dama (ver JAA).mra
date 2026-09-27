@@ -1,0 +1,64 @@
+<misterromdescription>
+    <name>Taisen Tokkae-dama (ver JAA)</name>
+    <setname>tokkae</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>0A</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 10); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="tokkae.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="615jaa03.27b" crc="b7760e2b" map="0012"/>
+            <part name="615jaa02.31b" crc="f66d6dbf" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 6-byte row, then the last 2 bytes of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="615a19.17h" crc="07749e1e"/>  <!-- four-byte part -->
+        <part repeat="2446676">00</part>
+        <part name="615a20.13c" crc="9911b5a1"/>  <!-- second part -->
+        <part repeat="1223338">00</part>
+        <!-- k055673: MAME's region, a four-byte part then the fifth bytes -->
+        <part repeat="2097154">00</part>
+        <interleave output="32">
+            <part name="615a17.25g" crc="b864654b" map="0021"/>
+            <part name="615a13.28g" crc="4e8afa1a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="615a16.18h" crc="dfa0f0fe" map="0021"/>
+            <part name="615a12.27g" crc="fbc563fd" map="2100"/>
+        </interleave>
+        <part name="615a11.30g" crc="f25946e4"/>
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="6291456">00</part>
+        <interleave output="16">
+            <part name="615a08.9c" crc="a5340de4" map="01"/>
+            <part name="615a09.7c" crc="c61f954c" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="615a22.9g" crc="ea7e47dd"/>
+        <part name="615a23.7g" crc="22d71f36"/>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="tokkae.zip" md5="none">
+        <part name="tokkae.nv" crc="5a6f8da6"/>
+    </rom>
+
+    <switches default="FE,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Flip Screen" bits="2" ids="On,Off"/>
+        <dip name="Cabinet" bits="3" ids="Vs. Cabinet,Upright"/>
+    </switches>
+
+    <buttons names="Swap Ball,Line Up,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

@@ -1,0 +1,54 @@
+<misterromdescription>
+    <name>Winning Spike (ver JAA)</name>
+    <setname>winspikej</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>11</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 17); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="winspikej.zip|winspike.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="705jaa03.27b" crc="1d5e3922" map="0012"/>
+            <part name="705jaa02.31b" crc="85f11b03" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: MAME's region as it is (8-byte rows, a granule each) -->
+        <part repeat="917502">00</part>
+        <interleave output="16">
+            <part name="705a19.17h" crc="bab84b30" map="01"/>
+            <part name="705a18.22h" crc="eb97fb5f" map="10"/>
+        </interleave>
+        <part repeat="6291456">00</part>
+        <!-- k056832: the four-byte part of each 8-byte row, then the last 4 bytes of each (the core spreads rows to 8) -->
+        <!-- k055673: MAME's region as it is -->
+        <interleave output="64">
+            <part name="705a17.25g" crc="971d2812" map="00000021"/>
+            <part name="705a13.28g" crc="3b62584b" map="00002100"/>
+            <part name="705a11.30g" crc="68542ce9" map="00210000"/>
+            <part name="705a10.33g" crc="fc4dc78b" map="21000000"/>
+        </interleave>
+        <!-- soundcpu: MAME's region as it is -->
+        <interleave output="16">
+            <part name="705a08.9c" crc="0d531639" map="01"/>
+            <part name="705a09.7c" crc="24e58845" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="705a22.9g" crc="1a9246f6"/>
+    </rom>
+
+    <switches default="FE,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button A,Button B,Button C,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>

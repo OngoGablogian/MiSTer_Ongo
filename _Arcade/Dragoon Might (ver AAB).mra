@@ -1,0 +1,71 @@
+<misterromdescription>
+    <name>Dragoon Might (ver AAB)</name>
+    <setname>dragoona</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>0D</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 13); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="dragoona.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="417aab03.27b" crc="813dd8d5" map="0012"/>
+            <part name="417aab02.31b" crc="0421c19c" map="1200"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+        <interleave output="32">
+            <part name="417a05.23c" crc="2ee2c587" map="0012"/>
+            <part name="417a04.26c" crc="dc574747" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 5-byte row, then the last 1 byte of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="417a16.17h" crc="88b2213b"/>  <!-- four-byte part -->
+        <part repeat="2097148">00</part>
+        <!-- k055673: MAME's region as it is -->
+        <part repeat="3145732">00</part>
+        <interleave output="32">
+            <part name="417a15.25g" crc="83bccd01" map="0021"/>
+            <part name="417a11.28g" crc="624a7c4c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="417a14.18h" crc="fbf551f1" map="0021"/>
+            <part name="417a10.27g" crc="18fde49f" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="417a13.20h" crc="d2e3959d" map="0021"/>
+            <part name="417a09.30g" crc="b5653e24" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="417a12.23h" crc="25496115" map="0021"/>
+            <part name="417a08.33g" crc="801e9d93" map="2100"/>
+        </interleave>
+        <!-- soundcpu: MAME's region as it is -->
+        <interleave output="16">
+            <part name="417a06.9c" crc="8addbbee" map="01"/>
+            <part name="417a07.7c" crc="c1fd7584" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="417a17.9g" crc="88d47dfd"/>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="dragoona.zip" md5="none">
+        <part name="dragoona.nv" crc="7980ad2b"/>
+    </rom>
+
+    <switches default="FE,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select" count="6"/>
+</misterromdescription>

@@ -1,0 +1,66 @@
+<misterromdescription>
+    <name>Tokimeki Memorial Taisen Puzzle-dama (ver JAB)</name>
+    <setname>tkmmpzdm</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>0B</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 11); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="tkmmpzdm.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="515jab03.27b" crc="c383413d" map="0012"/>
+            <part name="515jab02.31b" crc="60d4d577" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 6-byte row, then the last 2 bytes of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="515a11.17h" crc="8689852d"/>  <!-- four-byte part -->
+        <part repeat="2446676">00</part>
+        <part name="515a12.13c" crc="6936f94a"/>  <!-- second part -->
+        <part repeat="1223338">00</part>
+        <!-- k055673: MAME's region, a four-byte part then the fifth bytes -->
+        <part repeat="2097154">00</part>
+        <interleave output="32">
+            <part name="515a10.25g" crc="e6e7ab7e" map="0021"/>
+            <part name="515a08.28g" crc="5613daea" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="515a09.18h" crc="28ffdb48" map="0021"/>
+            <part name="515a07.27g" crc="246e6cb1" map="2100"/>
+        </interleave>
+        <part name="515a06.30g" crc="13b7b953"/>
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="6291456">00</part>
+        <interleave output="16">
+            <part name="515a04.9c" crc="a9b7bb45" map="01"/>
+            <part name="515a05.7c" crc="dea4ca2f" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="515a13.9g" crc="4b066b00"/>
+        <part name="515a14.7g" crc="128cc944"/>
+        <patch offset="0x243c7">00</patch>  <!-- CPU 0x2043c7: 01 -> 00, MAME init_konamigx -->
+        <patch offset="0x3cba9">1F</patch>  <!-- CPU 0x21cba9: 11 -> 1F, MAME init_konamigx -->
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="tkmmpzdm.zip" md5="none">
+        <part name="tkmmpzdm.nv" crc="850ab8c4"/>
+    </rom>
+
+    <switches default="FE,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Flip Screen" bits="2" ids="On,Off"/>
+        <dip name="Cabinet" bits="3" ids="Vs. Cabinet,Upright"/>
+    </switches>
+
+    <buttons names="Rotate Right,Rotate Left,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

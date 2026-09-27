@@ -1,0 +1,58 @@
+<misterromdescription>
+    <name>Crazy Cross (ver EAA)</name>
+    <setname>crzcross</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>01</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 1); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="crzcross.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="315eaa04.27b" crc="c89dd3e5" map="0012"/>
+            <part name="315eaa02.31b" crc="9c0faa4b" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 5-byte row, then the last 1 byte of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="315a14.17h" crc="0ab731e0"/>  <!-- four-byte part -->
+        <part repeat="7864320">00</part>
+        <part name="315a12.13g" crc="3047b8d2"/>  <!-- second part -->
+        <!-- k055673: MAME's region, a four-byte part then the fifth bytes -->
+        <part repeat="6291456">00</part>
+        <interleave output="32">
+            <part name="315a11.25g" crc="b8a99c29" map="0021"/>
+            <part name="315a10.28g" crc="77d175dc" map="2100"/>
+        </interleave>
+        <part name="315a09.30g" crc="82580329"/>
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="3145728">00</part>
+        <interleave output="16">
+            <part name="315a06.9c" crc="06580a9f" map="01"/>
+            <part name="315a07.7c" crc="431c58f3" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="315a17.9g" crc="ea763d61"/>
+        <part name="315a18.7g" crc="6e416cee"/>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="crzcross.zip" md5="none">
+        <part name="crzcross.nv" crc="446f178c"/>
+    </rom>
+
+    <switches default="FE,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Flip Screen" bits="2" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Rotate,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
+</misterromdescription>

@@ -1,0 +1,69 @@
+<misterromdescription>
+    <name>Lethal Enforcers II: Gun Fighters (ver EAA)</name>
+    <setname>le2</setname>
+    <rbf>KonamiGX</rbf>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>0C</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 12); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="le2.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="312eaa05.26b" crc="875f6561" map="0001"/>
+            <part name="312eaa04.28b" crc="d5fb8d30" map="0010"/>
+            <part name="312eaa03.30b" crc="cfe07036" map="0100"/>
+            <part name="312eaa02.33b" crc="5094b965" map="1000"/>
+        </interleave>
+        <part repeat="3">00</part>
+        <!-- k056832: MAME's region as it is (8-byte rows, a granule each) -->
+        <part repeat="393213">00</part>
+        <interleave output="16">
+            <part name="312a14.17h" crc="dc862f19" map="01"/>
+            <part name="312a12.22h" crc="98c04ddd" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="312a15.15h" crc="516f2941" map="01"/>
+            <part name="312a13.20h" crc="16e5fdaa" map="10"/>
+        </interleave>
+        <!-- k056832: the four-byte part of each 8-byte row, then the last 4 bytes of each (the core spreads rows to 8) -->
+        <!-- k055673: MAME's region as it is -->
+        <interleave output="64">
+            <part name="312a11.25g" crc="5f474357" map="00000021"/>
+            <part name="312a10.28g" crc="3c570d04" map="00002100"/>
+            <part name="312a09.30g" crc="b2c5d6d5" map="00210000"/>
+            <part name="312a08.33g" crc="29015d56" map="21000000"/>
+        </interleave>
+        <!-- soundcpu: MAME's region as it is -->
+        <interleave output="16">
+            <part name="312b06.9c" crc="a6f62539" map="01"/>
+            <part name="312b07.7c" crc="1aa19c41" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="312a17.9g" crc="ed101448"/>
+        <part name="312a18.7g" crc="5717abd7"/>
+        <part repeat="1048576">00</part>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="le2.zip" md5="none">
+        <part name="le2.nv" crc="fec3bc2e"/>
+    </rom>
+
+    <switches default="F7,FF">
+        <dip name="Stereo" bits="0" ids="Mono,Stereo"/>
+        <dip name="Coin Mechanism" bits="1" ids="Independent,Common"/>
+        <dip name="Stage Select" bits="2" ids="Yes,No"/>
+        <dip name="Mirror" bits="3" ids="No,Yes"/>
+        <dip name="Flip Screen" bits="4" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Trigger,Reload,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>
