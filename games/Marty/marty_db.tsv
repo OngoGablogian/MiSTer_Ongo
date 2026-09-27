@@ -84,7 +84,7 @@ T	ayayo4	-	-	-	-	-	-	-	-	Hacchake Ayayo-san IV - Sexy Olympic / Ayayo's Live Aff
 T	ayumi	-	-	-	mouse	-	-	y	-	Ayumi-chan Monogatari	1993
 T	ayumihint	-	-	-	-	-	-	-	-	Ayumi-chan Monogatari Hint Disk	1993
 T	ayumijb	-	-	-	mouse	-	-	-	y	Ayumi-chan Monogatari - Jisshaban	1995
-T	azure	-	-	-	-	-	-	-	-	Azure	1993
+T	azure	-	orig	-	-	-	-	-	-	Azure	1993
 T	bacta12v	-	-	-	mouse	-	-	-	y	Bacta 1 & 2 + Voice	1996
 T	bandkun	-	-	-	mouse	-	-	-	y	Band-kun	1991
 T	batchess	-	-	-	mouse	-	-	-	y	Battle Chess	1991
@@ -366,8 +366,8 @@ T	catsp1	-	-	-	mouse	-	-	-	y	Cat's Part-1	1993
 T	cdgplay	-	-	-	mouse	-	-	-	-	CD+Graphics Player V1.1L10	1990
 T	centur	-	-	-	mouse	-	-	-	y	Centurion - Defender of Rome	1993
 T	cgsynd1	-	-	-	mouse	-	-	-	-	CG Syndicate Vol. 1 - Lisa Northpoint	1991
-T	chasehq	-	-	pad	stick	-	-	-	-	Taito Chase H.Q.	1991
-T	chasehqd	-	-	pad	stick	-	-	-	-	Taito Chase H.Q. (demo)	1991
+T	chasehq	-	orig	pad	stick	-	-	-	-	Taito Chase H.Q.	1991
+T	chasehqd	-	orig	pad	stick	-	-	-	-	Taito Chase H.Q. (demo)	1991
 T	chiemi	-	-	-	mouse	-	-	y	-	Chiemi & Naomi	1993
 T	chiensou	-	-	-	-	-	-	-	-	Mirumiru Sagasu Konchuu Series Vol. 1 - Chiisana Ensouka	1993
 T	chinsei	-	-	-	-	-	-	-	-	Technostress Yobouhou Series - Chinsei	1989
@@ -391,7 +391,7 @@ T	cubsketch	4M	-	-	mouse	-	-	-	-	CubicSketch V1.1 L10	1994
 T	curse	-	-	-	-	-	-	-	y	Curse	1995
 T	cvrgirls	-	-	-	mouse	-	-	-	-	Cover Girls Vol. 1	1994
 T	cyberia	4M	gs	-	-	-	-	-	-	Cyberia	1995
-T	cybrcity	-	-	towns	mouse	-	-	y	-	Cybercity	1989
+T	cybrcity	-	-	pad	mouse	-	-	y	-	Cybercity	1989
 T	cybrmotn	-	-	-	-	-	-	y	-	Cyber Motion V1.0	1993
 T	cybsculp	-	-	-	mouse	-	-	-	-	Cyber Sculpt V1.0 (HMC-140A)	1991
 T	czukan	-	-	-	-	-	-	-	-	Computer Zukan - Shokubutsu-hen	1991
@@ -988,6 +988,60 @@ T	oshaclub	-	-	-	mouse	-	-	-	y	Oshare Club	1991
 T	oshacoo2	-	-	-	-	-	-	-	-	Oshare Cooking II	1990
 T	oshacook	-	-	-	-	-	-	-	-	Oshare Cooking	1989
 T	ougonras	-	-	mouse	-	-	-	-	y	Toudou Ryuunosuke Tantei Nikki - Ougon no Rashinban - Shouyoumaru San Francisco Kouro Satsujin Jiken	1991
+T	p_aburner_again	-	-	-	-	-	-	-	-	After Burner II ('Again' Mod)	1989
+T	p_aitd_ys	-	gs	-	-	-	-	-	y	Alone in the Dark (CaptainYS CD Boot Loader Patch)	1993
+T	p_alltynex_cd	-	-	-	-	-	-	-	-	Alltynex (Doujin) (CD-ROM Conversion) (T-En v1.1)	1996
+T	p_arcfront_cd	4M	-	-	-	-	-	-	-	Arc Frontier (Doujin) (CD-ROM Conversion)	1993
+T	p_asuka120_cd	-	-	-	-	-	-	-	y	Asuka 120% Burning Fest. (CD-ROM Conversion)	1994
+T	p_cameltry_cd	-	-	-	mouse	-	-	-	-	Cameltry (CD-ROM Conversion)	1994
+T	p_cameltry_cd31k	-	-	-	mouse	-	-	-	-	Cameltry (CD-ROM Conversion) (31kHz Video Locked)	1994
+T	p_cameltry_fd31k	-	-	-	mouse	-	-	-	-	Cameltry (31KHz Video Locked)	1994
+T	p_chasehq_ys	-	orig	pad	stick	-	-	-	-	Taito Chase H.Q. (CaptainYS CD Boot Loader Patch)	1991
+T	p_columns_cd	4M	-	-	-	-	-	-	-	Columns (CD-ROM Conversion)	1990
+T	p_doom_cd	8M	gs	-	-	-	-	-	-	Doom (CD-ROM Conversion)	2025
+T	p_dragontwr_cd	4M	-	-	-	-	-	-	-	The Secret of Dragon Tower (Doujin) (CD-ROM Conversion)	1997
+T	p_emit1_en	-	-	-	-	-	-	y	-	EMIT Vol. 1 - Lost in Time (T-En v0.9)	1994
+T	p_emit2_en	-	-	-	-	-	-	y	-	EMIT Vol. 2 - A Life-and-Death Trip (T-En v0.9)	1994
+T	p_emit3_en	-	-	-	-	-	-	y	-	EMIT Vol. 3 - Bid Myself Farewell (T-En v0.9)	1994
+T	p_exceed_cd	4M	orig	-	-	-	-	-	-	Exceed (Doujin) (CD-ROM Conversion)	1994
+T	p_genocsq_marty	-	-	-	-	-	-	-	-	Genocide Squared (Marty Fix)	1993
+T	p_gorbypip_cd	4M	-	-	-	-	-	-	-	Gorby no Pipeline Daisakusen (CD-ROM Conversion)	1991
+T	p_heboris_cd	4M	-	-	-	-	-	-	-	Heboris (Doujin) (CD Conversion)	1999
+T	p_ironfist_cd	4M	-	-	-	-	-	-	-	Iron Fist (Doujin) (CD-ROM Conversion with Generic TownsOS CDDA)	1994
+T	p_ktiger_coldboot	-	-	-	-	-	-	-	-	Twin Cobra (Kyukyoku Tiger) (Cold Boot Fix)	1994
+T	p_ktiger_ys	-	-	-	-	-	-	-	-	Kyuukyoku Tiger (CaptainYS CD Boot Loader Patch)	1994
+T	p_kurunku_cd	4M	-	-	-	-	-	-	-	KurunkuRoopa (Doujin) (CD-ROM Conversion)	2023
+T	p_lemming2_en	-	-	-	mouse	-	-	-	y	Lemmings 2 - The Tribes (T-En v1.0)	1994
+T	p_mparadox_en	-	-	-	-	-	-	-	y	Mad Paradox (T-En v1.0)	1994
+T	p_ningytsu_en	-	-	-	-	-	-	-	y	Puppet Master (T-En v1.1)	1993
+T	p_panicbl2_cd	4M	-	-	-	-	-	-	y	Panic Ball 2 (CD-ROM Conversion)	-
+T	p_planatkr_cd	4M	-	-	-	-	-	-	-	Planet Attacker (CD-ROM Conversion)	-
+T	p_pulirula_ram	4M	-	-	-	marty	-	-	-	Pu-Li-Ru-La (Marty Expanded RAM Version)	1994
+T	p_pulirula_ramuc	4M	-	-	-	marty	-	-	-	Pu-Li-Ru-La (Marty Expanded RAM Version + Unlimited Continues)	1994
+T	p_pulirula_uc	-	-	-	-	-	-	-	-	Pu-Li-Ru-La (Unlimited Continues)	1994
+T	p_pulirula_ysuc	-	-	-	-	-	-	-	-	Pu-Li-Ru-La (CaptainYS CD Boot Loader Patch + Unlimited Continues)	1994
+T	p_puyopuyo_ys	-	-	-	-	-	-	-	-	Puyo Puyo (CaptainYS CD Boot Loader Patch)	1994
+T	p_queencup_en	-	-	-	-	-	-	-	y	Gambler - Queen's Cup (T-En v1.0)	1994
+T	p_rockrang_ys	-	-	-	mouse	-	-	-	-	Rocket Ranger (CaptainYS CD Boot Loader Patch)	1990
+T	p_rumstorm_cd	6M	gs	-	-	-	-	-	-	Rumstorm (Doujin) (CD-ROM Conversion)	2000
+T	p_rumuder_cd	6M	-	-	-	-	-	-	-	Rumuder (Doujin) (CD-ROM Conversion)	1997
+T	p_skyduel_cd	6M	gs	-	-	-	-	-	-	Sky Duel (Doujin) (CD-ROM Conversion)	-
+T	p_swordedg_cd	4M	-	-	-	-	-	-	-	Sword Edge (Doujin) (CD-ROM Conversion)	-
+T	p_syojin_cd	6M	-	-	-	-	-	-	-	Syojin Saga (Doujin) (CD-ROM Conversion)	1995
+T	p_tango_cd	4M	-	-	-	-	-	-	-	Tango (Doujin) (CD-ROM Conversion)	1994
+T	p_tnzs_31k	-	-	-	-	-	-	-	-	The New Zealand Story (31kHz Video Locked)	1989
+T	p_tnzs_31kuc	-	-	-	-	-	-	-	-	The New Zealand Story (31kHz Video Locked + Unlimited Continues)	1989
+T	p_tnzs_uc	-	-	-	-	-	-	-	-	The New Zealand Story (Unlimited Continues)	1989
+T	p_viewpoin_ys	-	-	-	-	-	-	-	-	Viewpoint (CaptainYS CD Boot Loader Patch)	1993
+T	p_volpheed_cd	4M	-	-	-	-	-	-	-	Volpheed (Doujin) (CD-ROM Conversion)	1994
+T	p_wingcomm_auto	6M	-	-	mouse	-	-	-	y	Wing Commander (Auto-Boot)	1992
+T	p_wolf3d_cd2m	4M	-	-	-	-	-	-	-	Wolfenstein 3D (CD-ROM Conversion) (2MB RAM Version)	2024
+T	p_wolf3d_cd4m	4M	-	-	-	-	-	-	-	Wolfenstein 3D (CD-ROM Conversion) (4MB RAM Version)	2024
+T	p_worldfant_cd	4M	-	-	-	-	-	-	-	World Fantasy (Doujin) (CD-ROM Conversion)	1994
+T	p_ysboot_cd	-	-	-	-	-	-	-	-	CaptainYS CD Boot Loader	2024
+T	p_ysboot_fd	-	-	-	-	-	-	-	-	CaptainYS Floppy Boot Loader	2024
+T	p_ysboot_fdscsi	-	-	-	-	-	-	-	-	CaptainYS Floppy Boot Loader (Auto-Boot External SCSI CD-ROM)	2024
+T	p_yuuwaku_en	-	-	-	mouse	-	-	y	-	Temptation (T-En v1.0)	1996
 T	pack13k	-	-	-	-	-	-	-	-	Pack 13000 Free Soft & Shareware	1996
 T	paipai	-	-	-	mouse	-	-	-	y	Moeru Asoko no Paipai Yuugi - Fukkatsu! Mahjong Oukoku	1993
 T	palamed	-	-	-	pad	-	-	-	-	Palamedes	1991
@@ -1457,6 +1511,7 @@ K	cd:128f13d6d59e9371	tccgmus
 K	cd:12f25e19b0f9e23c	biblemas
 K	cd:12f487f2439b8e16	shknatsu
 K	cd:131e4e230921684c	parapara
+K	cd:1352d434af68a453	p_doom_cd
 K	cd:136023c586889578	indycrus
 K	cd:1362d20a71a21112	tenshiten
 K	cd:138d88074ce5df4c	fsc5o
@@ -1467,6 +1522,7 @@ K	cd:13c413aa142f2255	g5
 K	cd:145287293cfc726e	fwc1
 K	cd:14633e784df0ebee	takamiza
 K	cd:147cd091801a0d41	fshark
+K	cd:1533da705ac107ab	p_rumuder_cd
 K	cd:1568137219c0f1ce	branmar2
 K	cd:1583fb6e830ad10e	dmaster
 K	cd:167c6ac168d2d5eb	libbler
@@ -1523,6 +1579,7 @@ K	cd:22a9d1d276771d72	hyplanets2
 K	cd:22f0135a6f1ec948	rbisland
 K	cd:22f3d42c065e0759	hoshisn2
 K	cd:2300e2c796be2f84	themeprk
+K	cd:230304a4a079fa27	p_rumstorm_cd
 K	cd:236e4d51f74f47de	lodoss2
 K	cd:23a88c801185641c	rejectn
 K	cd:23b9fbf1d9562059	libido7
@@ -1541,10 +1598,12 @@ K	cd:25fc5a99a8135713	eurosens
 K	cd:264e84be066f5cb1	igoshodan
 K	cd:264eefb95c766e04	yuudisc
 K	cd:26a4d41984ec8eb5	emit1
+K	cd:26fa8576bb000b4c	p_tango_cd
 K	cd:2752f878f8c6cfaf	psydetf1
 K	cd:281624684a236730	terra
 K	cd:2849a588bc162d64	wordwort
 K	cd:28bd09892b78b63f	kindanke
+K	cd:2904c5c83f2ded0a	p_worldfant_cd
 K	cd:294c037bae04f5ed	simcity
 K	cd:29515f6e3623db80	softcon1o
 K	cd:298356b7e5197eb3	carmnwld
@@ -1605,9 +1664,11 @@ K	cd:3b56ff04790df27f	cancanbx
 K	cd:3b6c9ae44d66da8b	secre2
 K	cd:3be54ad6428b5ea1	vastness
 K	cd:3c0e2c24caf4c622	kyrandia
+K	cd:3c1b60517c9a452e	p_yuuwaku_en
 K	cd:3c64bb849f0c6c44	denurse
 K	cd:3d1ed03e289efd79	hajiryoei
 K	cd:3db86355efc40715	imgpower
+K	cd:3df46dd521d95c70	p_wolf3d_cd4m
 K	cd:3e2bed5d526db155	akikoprm
 K	cd:3e79920ae96689c1	eikanwa2
 K	cd:3f0c7f0a87e4faf3	dalk
@@ -1673,6 +1734,7 @@ K	cd:5135a05cd4513f7e	lastsurv
 K	cd:515728f059cba3a1	sotsu93
 K	cd:5188c0fb03dce5e3	visitor
 K	cd:51e5c98ef1717af3	ntenki
+K	cd:51e870dac69164d9	p_wingcomm_auto
 K	cd:522895e5108e13b6	fsc5a
 K	cd:52a08e8f95c99468	mastercdv
 K	cd:52c9de8c82a82c02	mjfant2
@@ -1745,6 +1807,7 @@ K	cd:6434ff7141550422	schwarzs
 K	cd:64413e32469b49c3	queencup
 K	cd:646f70c2baf691c6	gforce2
 K	cd:6483e382647dbc6b	nihonya
+K	cd:6496ecebc1c2cc1f	p_emit3_en
 K	cd:64ccbc84a21b289c	hypland2
 K	cd:654dda66ca576de7	dstall
 K	cd:6565b4d4b4e96aac	mflcan3
@@ -1779,6 +1842,7 @@ K	cd:6eada444f7dae7d9	beatles2
 K	cd:6f5ff37f151eac6f	tcwpro
 K	cd:6f6924da570a8ffb	win95up
 K	cd:6f6eb746b99c5475	kiwame
+K	cd:6f88fc9da03eb66d	p_planatkr_cd
 K	cd:6f9d20396d222930	shooting
 K	cd:6fb473bc2337342f	splatth
 K	cd:6ffaca7685bbf3eb	fsc7o
@@ -1793,9 +1857,12 @@ K	cd:721faa381171a80e	ayumi
 K	cd:723e5f6b56a852ee	kyofmt1
 K	cd:72435205d93cd83f	ztdc
 K	cd:7256d183d17c1c24	liveanim11
+K	cd:729de942d3c48982	p_arcfront_cd
 K	cd:72b2e8fca59ac8d9	batchess
+K	cd:72bb58d967662083	p_gorbypip_cd
 K	cd:7359ba41b19b5632	okitgear
 K	cd:736df6ea995b027d	digipin1
+K	cd:737374f47112a26f	p_dragontwr_cd
 K	cd:73c611c4db5bef1f	castles
 K	cd:74972d26a33ef16d	misty
 K	cd:74a46b6b5118c695	fsc4
@@ -1814,9 +1881,12 @@ K	cd:76f4902a5774c52e	mastercd
 K	cd:76f75ca84ba7d8c9	ultima6
 K	cd:770397f14b502a68	manycol
 K	cd:7714cab17052e7ef	schwarz4
+K	cd:77303e313d74befd	p_exceed_cd
 K	cd:7743b43ea762a135	genocsq
 K	cd:777c52fe82083f4d	tuntroll
+K	cd:7785b2603c6a2c69	p_asuka120_cd
 K	cd:77adc3ef9c8c4a52	zokudm
+K	cd:77b2dd14278a9ba2	p_volpheed_cd
 K	cd:77e09835d07ad9ba	ku2pp
 K	cd:7800f34b6a415995	vaindrem
 K	cd:7846e2bcb8f9c624	burai2
@@ -1832,6 +1902,7 @@ K	cd:7ada232b638d953b	nihonshi1
 K	cd:7b1dffc9f2a88dad	softcon3
 K	cd:7b591afe38cad0f5	fractal
 K	cd:7b5f8a768636b7f9	msdet2
+K	cd:7b8b1ce803e19917	p_genocsq_marty
 K	cd:7bce93ff789b95b4	demo93w
 K	cd:7c13bc58deb815eb	excel10
 K	cd:7c6756e887a3a4f8	collecdb
@@ -1841,7 +1912,7 @@ K	cd:7da29caf7a0a17b8	mcosm
 K	cd:7db73f535096c623	teiketsu
 K	cd:7e02f1cd520e1ca9	demo90f
 K	cd:7e25865b68280cf3	fsnkit
-K	cd:7e40740d1ab8649b	pulirula
+K	cd:7e76bd4143a17af3	p_panicbl2_cd
 K	cd:7e8492d9d6608908	nova
 K	cd:7ef5b0d40e94263b	syndicat
 K	cd:7f7096e7ba0ec2ea	nhkeigo1
@@ -1935,8 +2006,11 @@ K	cd:96b9f74c07967868	okuman2
 K	cd:96eeeb712a82d8d4	frogfstd
 K	cd:9702275bcc8b878f	c_blandiaplus
 K	cd:9713af1114aa1b52	alice2
+K	cd:972b8a92198a42b5	p_ironfist_cd
 K	cd:978ff247463477b0	chuumon
 K	cd:97e91dd61e164d38	townsmgs5
+K	cd:986b4ad118872238	p_swordedg_cd
+K	cd:99140a5bf8794df4	p_ningytsu_en
 K	cd:99353af242d84bc3	simfarm
 K	cd:9998df82a2251dc6	genchohi
 K	cd:9af0ad5b8c174dee	jkhatsu
@@ -1980,6 +2054,7 @@ K	cd:a86d07cbb0a8be23	lesserm
 K	cd:a87b4cb7dab18165	metaley2
 K	cd:a8909efcc9eb500b	dualtarg
 K	cd:a89deba779c7438d	anghalo
+K	cd:a8a38ffe81776bd2	p_columns_cd
 K	cd:a8d83597fa4a3699	powdoll
 K	cd:a90d6fab1b4a8eed	fsc4
 K	cd:a9564c23249746d6	funnybee
@@ -2002,6 +2077,7 @@ K	cd:ad09977dc4882de6	empereur
 K	cd:ad391d4484948e2b	crayonag
 K	cd:ad70646526eff166	phobos
 K	cd:ae0e6ebab98f2907	desire
+K	cd:ae6900333b8eb97b	p_queencup_en
 K	cd:aef02d50951cd1c4	zako
 K	cd:af5097eccd89c800	nihonshi2
 K	cd:af5744edb7070554	fsc9
@@ -2011,6 +2087,7 @@ K	cd:afc6f4283f953dd8	wizardr5
 K	cd:afeb31aac6e7571c	deep
 K	cd:b039ed259f679ace	debuts1
 K	cd:b05ee44fa19a3702	sekigaha
+K	cd:b0c67214ac9707e4	p_skyduel_cd
 K	cd:b0d74d5cb7360751	shamhat
 K	cd:b14cd24e9f8b2cc3	dagaind
 K	cd:b15a273cfb77d10c	adtennis
@@ -2034,6 +2111,7 @@ K	cd:b4fcec011a4a52ca	beatles6
 K	cd:b53e17a5037b1020	g5o
 K	cd:b56c0e33f5b02463	f29ret
 K	cd:b5a591790339e6b9	idolproj
+K	cd:b5c87818b117bf4d	p_heboris_cd
 K	cd:b5d238f3ffed126f	silentmb
 K	cd:b60fdae6c7b35fb4	daisenex
 K	cd:b62a832ff248dfa4	sspirits
@@ -2070,6 +2148,7 @@ K	cd:be4fabcfb85d7d8f	provvdnz
 K	cd:be5e599b19b1c7ba	if
 K	cd:be6f5162d82312c2	ppersia
 K	cd:be742d9476ba640b	amoudan
+K	cd:bee315b3c9baf074	p_wolf3d_cd2m
 K	cd:beee81af137061c5	airwar11
 K	cd:bf7c8cf6cbe4e82c	chiensou
 K	cd:bfd776a4bd55bcc5	nhorz2e2
@@ -2084,6 +2163,7 @@ K	cd:c22d7e69faf89399	zero
 K	cd:c27ca5600d5db84b	psydetf2d
 K	cd:c311cf7476348a4f	4thuni12
 K	cd:c31b34f00dd30ca2	nihonmb4
+K	cd:c3328cc7e8c13657	p_syojin_cd
 K	cd:c3414a780cafb899	win95up
 K	cd:c3b8a9ff5e899602	yuuwaku
 K	cd:c3ba8a577b9f924f	c_frecollemarty1freesoftwarecollection
@@ -2097,6 +2177,7 @@ K	cd:c5c17d1b904cd2bf	meisotos
 K	cd:c5e75ba7e8a9d2ab	necronom
 K	cd:c5e8a52b0e461443	sakumori
 K	cd:c5fe754f038df0f1	drgnflam
+K	cd:c6004abe16ac6260	p_kurunku_cd
 K	cd:c63ded2b0ed39d2f	hyprocea
 K	cd:c691efeab8f1ffe0	yojusenk
 K	cd:c6fb2e9f0e9a64f2	teitotai
@@ -2297,6 +2378,7 @@ K	fd:11dd1077b39e0d1a	futoph10
 K	fd:11ecd85ca5aa8c8a	c_flyingcarpet
 K	fd:1330c6761767a138	15puzzle
 K	fd:14d8a21fc6073703	ultimatr
+K	fd:156546e51a58f0d5	p_ysboot_fdscsi
 K	fd:15872d210ca2760c	c_flyballguy
 K	fd:162665d5c250c4a1	reira
 K	fd:18d46d91cbec0332	indy4
@@ -2482,6 +2564,7 @@ K	fd:9a068801204a64b3	c_monkeyturtlever103b
 K	fd:9a1e7144945d869b	dpssg3
 K	fd:9a4961b926e0abc3	tactairw
 K	fd:9b19a378d12f2501	ultuw
+K	fd:9b6fb729176adfdb	p_cameltry_fd31k
 K	fd:9c7619fc4454130e	irium
 K	fd:9c7641cae61655a3	daisenr3
 K	fd:9cc9a2be8fb430a7	toshinto
@@ -2514,6 +2597,7 @@ K	fd:ab9d8fe64f9f888b	brandish
 K	fd:ac3ac30692e8bf84	wang2
 K	fd:ac57d834023f57b3	brandish
 K	fd:ac642b9b8acd5905	hhunt12
+K	fd:ad03ae4aead7f9fe	p_ysboot_fd
 K	fd:addf06050b375dc0	c_tanyocrest
 K	fd:adeca23e31c48320	wang2a
 K	fd:ae0bda0845778fc4	swordedg
@@ -5437,6 +5521,7 @@ K	x:after burner (v1.01)	aburnero
 K	x:after burner (v1.02)	aburner
 K	x:after burner (v1.02, alt)	aburnera
 K	x:after burner 2 again	ab2again
+K	x:after burner ii ('again' mod)	p_aburner_again
 K	x:after burner ii again	ab2again
 K	x:after burner iii	aburner3
 K	x:after burner iii (japan)	aburner3
@@ -5477,7 +5562,9 @@ K	x:alice no yakata cd iii	alice3
 K	x:alice_no_yakata_2	alice2
 K	x:all bishoujo extra	c_allbishoujoextra
 K	x:alltynex	c_alltynex
+K	x:alltynex (doujin) (cd-rom conversion) (t-en v1.1)	p_alltynex_cd
 K	x:alone in the dark	aitd
+K	x:alone in the dark (captainys cd boot loader patch)	p_aitd_ys
 K	x:alone in the dark (japan)	aitd
 K	x:alone in the dark 2	aitd2
 K	x:alone in the dark 2 (japan)	aitd2
@@ -5513,6 +5600,7 @@ K	x:appare cd vol. 2 - houou no maki	appare2
 K	x:appare cd vol. 2 - houou no maki (japan)	appare2
 K	x:arabesque - shoujo-tachi no orinasu ai no monogatari	arabesq
 K	x:arabesque - shoujo-tachi no orinasu ai no monogatari (japan)	arabesq
+K	x:arc frontier (doujin) (cd-rom conversion)	p_arcfront_cd
 K	x:arcadia	c_arcadia
 K	x:arquelphos	arquelph
 K	x:arquelphos (japan)	arquelph
@@ -5526,6 +5614,7 @@ K	x:asuka 120 burning fest. (disk c)	asuka120_cracked
 K	x:asuka 120 burning fest. excellent (boot disk)	asu120ex
 K	x:asuka 120 excellent - burning fest. excellent (japan)	asu120ex
 K	x:asuka 120% burning fest.	asuka120
+K	x:asuka 120% burning fest. (cd-rom conversion)	p_asuka120_cd
 K	x:asuka 120% burning fest. (cracked)	asuka120_cracked
 K	x:asuka 120% burning fest. excellent	asu120ex
 K	x:asuka120_disk_a	asuka120
@@ -5642,6 +5731,9 @@ K	x:california x party - joshi daisei himitsu club	calxpart
 K	x:california x party - joshi daisei himitsu club (japan)	calxpart
 K	x:california_x_party	calxpart
 K	x:cameltry	cameltry
+K	x:cameltry (31khz video locked)	p_cameltry_fd31k
+K	x:cameltry (cd-rom conversion)	p_cameltry_cd
+K	x:cameltry (cd-rom conversion) (31khz video locked)	p_cameltry_cd31k
 K	x:cameltry (cracked)	cameltry_cracked
 K	x:cameltry_fixed	cameltry_cracked
 K	x:can can bunny extra	cancanbx
@@ -5649,6 +5741,9 @@ K	x:can can bunny extra (japan)	cancanbx
 K	x:can can bunny premiere	cancanbp
 K	x:can can bunny premiere (japan)	cancanbp
 K	x:cannon sight	c_cannonsight
+K	x:captainys cd boot loader	p_ysboot_cd
+K	x:captainys floppy boot loader	p_ysboot_fd
+K	x:captainys floppy boot loader (auto-boot external scsi cd-rom)	p_ysboot_fdscsi
 K	x:case of the cautious condor, the (japan)	condor
 K	x:castles	castles
 K	x:castles (japan) (en,ja)	castles
@@ -5695,6 +5790,7 @@ K	x:collector d - bangai-hen - gokurakudai nishichiku sales daisakusen	collecdb
 K	x:collector d - bangai-hen - gokurakudai nishichiku sales daisakusen (japan)	collecdb
 K	x:collector d – bangai-hen	collecdb
 K	x:columns	columns
+K	x:columns (cd-rom conversion)	p_columns_cd
 K	x:columns (cracked)	columns_cracked
 K	x:computer zukan - shokubutsu-hen	czukan
 K	x:computer zukan - shokubutsu-hen (japan)	czukan
@@ -5848,6 +5944,7 @@ K	x:doki doki disk cd-ban vol. 3 (japan)	dokidok3
 K	x:doki doki vacation - kirameku kisetsu no naka de	dokivact
 K	x:doki doki vacation - kirameku kisetsu no naka de (japan)	dokivact
 K	x:doki_doki_vacation_disk_a	dokivact
+K	x:doom (cd-rom conversion)	p_doom_cd
 K	x:dor	dor
 K	x:dor - best selection - gekan (japan) (disc 1)	dorbestg
 K	x:dor - best selection - gekan (japan) (disc 2)	dorbestg
@@ -5978,14 +6075,17 @@ K	x:elm knight - a living body armor	elmknigt
 K	x:emerald dragon	emeraldd
 K	x:emerald dragon (japan)	emeraldd
 K	x:emerald dragon (system disk)	emeraldd
+K	x:emit vol. 1 - lost in time (t-en v0.9)	p_emit1_en
 K	x:emit vol. 1 - toki no maigo (demo)	emit1d
 K	x:emit vol. 1 - toki no maigo (japan) (demo)	emit1d
 K	x:emit vol. 1 - toki no maigo (japan) (en,ja)	emit1
 K	x:emit vol. 1 - toki no maigo (version 1.20 release 1.00)	emit1o
 K	x:emit vol. 1 - toki no maigo (version 1.30 release 2.00, 1994-04-26)	emit1a
 K	x:emit vol. 1 - toki no maigo (version 1.30 release 2.00, 1995-01-20)	emit1
+K	x:emit vol. 2 - a life-and-death trip (t-en v0.9)	p_emit2_en
 K	x:emit vol. 2 - inochigake no tabi	emit2
 K	x:emit vol. 2 - inochigake no tabi (japan) (en,ja)	emit2
+K	x:emit vol. 3 - bid myself farewell (t-en v0.9)	p_emit3_en
 K	x:emit vol. 3 - watashi ni sayonara o	emit3
 K	x:emit vol. 3 - watashi ni sayonara o (japan) (en,ja)	emit3
 K	x:emit1_v1.20_r1.00	emit1o
@@ -6019,6 +6119,7 @@ K	x:europa sensen (japan)	eurosens
 K	x:europa_sensen	eurosens
 K	x:evolution	evolutn
 K	x:evolution (japan)	evolutn
+K	x:exceed (doujin) (cd-rom conversion)	p_exceed_cd
 K	x:excellent 10	excel10
 K	x:excellent 10 (japan)	excel10
 K	x:exciting cd	excitcd
@@ -6265,6 +6366,7 @@ K	x:galaxy force ii (japan)	gforce2
 K	x:galaxy wars - regional power ii (japan)	regpowr2
 K	x:gambler - queen's cup	queencup
 K	x:gambler - queen's cup (japan)	queencup
+K	x:gambler - queen's cup (t-en v1.0)	p_queencup_en
 K	x:game jang+	c_gamejang
 K	x:game nihonshi - kakumeiji oda nobunaga	nihonshi1
 K	x:game nihonshi - kakumeiji oda nobunaga (japan)	nihonshi1
@@ -6286,6 +6388,7 @@ K	x:gendai daisenryaku ex special	daisenex
 K	x:gendai daisenryaku ex special (japan)	daisenex
 K	x:genocide square	genocsq
 K	x:genocide squared	genocsq
+K	x:genocide squared (marty fix)	p_genocsq_marty
 K	x:genocide^2 - genocide square (japan)	genocsq
 K	x:giga mortion	gigamort
 K	x:giga mortion (japan)	gigamort
@@ -6324,6 +6427,7 @@ K	x:golf links 386 pro champion course vol. 2 - firestone country club south cou
 K	x:golf links 386 pro champion course vol. 3 - banff springs	links386cc3
 K	x:golf links 386 pro champion course vol. 4 - innisbrook copperhead course	links386cc4
 K	x:gorby no pipeline daisakusen	gorbypip
+K	x:gorby no pipeline daisakusen (cd-rom conversion)	p_gorbypip_cd
 K	x:gorby_no_pipeline_daisakusen	gorbypip
 K	x:gou ii - towns special (japan)	goh2
 K	x:grapharmony (v1.0)	c_grapharmony
@@ -6365,6 +6469,7 @@ K	x:hatchake ayayo-san 1-2-3	ayayo123
 K	x:healthy life ii	healthy2
 K	x:healthy life ii (japan)	healthy2
 K	x:heboris	heboris
+K	x:heboris (doujin) (cd conversion)	p_heboris_cd
 K	x:heike monogatari (gekan)	heike2
 K	x:heike monogatari (gekan) (japan)	heike2
 K	x:heike monogatari (joukan)	heike1
@@ -6611,6 +6716,7 @@ K	x:irium_disk_b	irium
 K	x:irium_disk_c	irium
 K	x:irium_disk_d	irium
 K	x:irium_kidou_disk	irium
+K	x:iron fist (doujin) (cd-rom conversion with generic townsos cdda)	p_ironfist_cd
 K	x:iron fist (revised version)	ironfist
 K	x:iron fist - the revised edition	ironfist
 K	x:iron fist kaiteiban	ironfist
@@ -6735,6 +6841,7 @@ K	x:kousoku choujin	kchoujin
 K	x:kousoku choujin (japan)	kchoujin
 K	x:ku^2++ (japan)	ku2pp
 K	x:kuron (くうろん) ver 1.0	c_kuronver10
+K	x:kurunkuroopa (doujin) (cd-rom conversion)	p_kurunku_cd
 K	x:kusuriyubi no kyoukasho	kusuriyu
 K	x:kusuriyubi no kyoukasho (japan)	kusuriyu
 K	x:kuuchisuu no ooi windows	c_kuuchisuunoooiwindows
@@ -6754,6 +6861,7 @@ K	x:kyrandia ii - the hand of fate	kyrand2
 K	x:kyrandia ii - the hand of fate (japan) (en,ja)	kyrand2
 K	x:kyukyoku tiger	ktiger
 K	x:kyuukyoku tiger	ktiger
+K	x:kyuukyoku tiger (captainys cd boot loader patch)	p_ktiger_ys
 K	x:kyuukyoku tiger (japan)	ktiger
 K	x:l elle	elle
 K	x:l zone	c_lzone
@@ -6790,6 +6898,7 @@ K	x:lemmings (japan)	lemmings
 K	x:lemmings 2	lemming2
 K	x:lemmings 2 - the tribes	lemming2
 K	x:lemmings 2 - the tribes (japan)	lemming2
+K	x:lemmings 2 - the tribes (t-en v1.0)	p_lemming2_en
 K	x:lemon cocktail collection	lemoncc
 K	x:lemon cocktail collection (japan)	lemoncc
 K	x:lesser mern	lesserm
@@ -6871,6 +6980,7 @@ K	x:lupin sansei - hong kong no mashu - fukushuu wa meikyuu no hate ni (japan)	l
 K	x:lupin the 3rd - hong kong no mashu	c_lupin3rdhongkongnomashu
 K	x:ma saiko jan	msjong
 K	x:mad paradox	mparadox
+K	x:mad paradox (t-en v1.0)	p_mparadox_en
 K	x:mad stalker - fullmetalforce	madstalk
 K	x:mad stalker - fullmetalforce (japan)	madstalk
 K	x:mad-paradox (japan)	mparadox
@@ -7323,6 +7433,7 @@ K	x:pack 13000 free soft & shareware	pack13k
 K	x:pack 13000 free soft & shareware (japan) (disc 4)	pack13k
 K	x:palamedes	palamed
 K	x:palamedes (japan)	palamed
+K	x:panic ball 2 (cd-rom conversion)	p_panicbl2_cd
 K	x:panic ball ii	panicbl2
 K	x:para para paradise	parapara
 K	x:para para paradise (japan) (disc a) (akane kouda)	parapara
@@ -7347,6 +7458,7 @@ K	x:phobos (japan)	phobos
 K	x:pi's solitaire royale + tom snyder's puppy love	solpuppy
 K	x:pi's solitaire royale + tom snyder's puppy love (japan)	solpuppy
 K	x:planet attacker	planatkr
+K	x:planet attacker (cd-rom conversion)	p_planatkr_cd
 K	x:planet harmony	pharmony
 K	x:planet harmony (japan)	pharmony
 K	x:planet's edge	planedge
@@ -7465,8 +7577,14 @@ K	x:psychic_detective_series_vol_3_aya_remake	psydet3r
 K	x:psychic_detective_series_vol_4_orgel_remake	psydet4r
 K	x:psychic_detective_series_vol_5_nightmare_remake	psydet5r
 K	x:pu-li-ru-la	pulirula
+K	x:pu-li-ru-la (captainys cd boot loader patch + unlimited continues)	p_pulirula_ysuc
 K	x:pu-li-ru-la (japan)	pulirula
+K	x:pu-li-ru-la (marty expanded ram version + unlimited continues)	p_pulirula_ramuc
+K	x:pu-li-ru-la (marty expanded ram version)	p_pulirula_ram
+K	x:pu-li-ru-la (unlimited continues)	p_pulirula_uc
+K	x:puppet master (t-en v1.1)	p_ningytsu_en
 K	x:puyo puyo	puyopuyo
+K	x:puyo puyo (captainys cd boot loader patch)	p_puyopuyo_ys
 K	x:puyo puyo (japan)	puyopuyo
 K	x:puzznic	puzznic
 K	x:puzznic (japan)	puzznic
@@ -7572,6 +7690,7 @@ K	x:ring-out (japan)	ringout
 K	x:rinkan gakkou	rinkan
 K	x:rinkan gakkou (japan)	rinkan
 K	x:rocket ranger	rockrang
+K	x:rocket ranger (captainys cd boot loader patch)	p_rockrang_ys
 K	x:rocket ranger (japan)	rockrang
 K	x:roland – desktop music system (ver 2) (myuujirou ongaku kyoushitsu)	c_rolanddesktopmusicsystem
 K	x:roll paper game (ロール･ペーパー･ゲーム) v1.16	c_rollpapergamev116
@@ -7579,7 +7698,9 @@ K	x:royal blood	royalbld
 K	x:royal blood (japan)	royalbld
 K	x:royal_blood	royalbld
 K	x:rumstorm	rumstorm
+K	x:rumstorm (doujin) (cd-rom conversion)	p_rumstorm_cd
 K	x:rumuder	rumuder
+K	x:rumuder (doujin) (cd-rom conversion)	p_rumuder_cd
 K	x:running girls - hashiri onna ii (japan)	honna2
 K	x:running girls - hashiri onna ii + rance 4.1 / 4.2 hint disk	honna2
 K	x:ryuutouden	ryuutou
@@ -7774,6 +7895,7 @@ K	x:simfarm (demo)	simfarmd
 K	x:simfarm - simcity's country cousin (japan)	simfarm
 K	x:simfarm - simcity's country cousin (japan) (demo)	simfarmd
 K	x:sky duel	c_skyduel
+K	x:sky duel (doujin) (cd-rom conversion)	p_skyduel_cd
 K	x:soft de hard na monogatari	softhard
 K	x:soft de hard na monogatari (japan)	softhard
 K	x:soft de hard na monogatari (utility disk)	softhard
@@ -7878,12 +8000,14 @@ K	x:sweet view	c_sweetview
 K	x:sweetangel1	sweetang
 K	x:sweetangel2	sweetang
 K	x:sword edge	swordedg
+K	x:sword edge (doujin) (cd-rom conversion)	p_swordedg_cd
 K	x:sword edge (map editor)	swordedgme
 K	x:sword edge (sprite editor)	swordedgse
 K	x:sword edge - map editor	swordedgme
 K	x:sword edge - sprite editor	swordedgse
 K	x:syndicate	syndicat
 K	x:syndicate (japan)	syndicat
+K	x:syojin saga (doujin) (cd-rom conversion)	p_syojin_cd
 K	x:t.d.f. - terrestrial defense force (japan)	tdf
 K	x:tactical air wing	tactairw
 K	x:tactical tank corps dx	tankcpdx
@@ -7900,6 +8024,7 @@ K	x:taikou risshiden	taikoris
 K	x:taikou risshiden (japan)	taikoris
 K	x:taikou_risshiden	taikoris
 K	x:taito chase h.q.	chasehq
+K	x:taito chase h.q. (captainys cd boot loader patch)	p_chasehq_ys
 K	x:taito chase h.q. (demo)	chasehqd
 K	x:taito chase h.q. (japan)	chasehq
 K	x:taito chase h.q. (japan) (demo)	chasehqd
@@ -7912,6 +8037,7 @@ K	x:tama_cg-shuu_mai	tamacgmai
 K	x:tamashii no mon - dante "shinkyoku" yori	dante
 K	x:tamashii no mon - dante shinkyoku yori (japan)	dante
 K	x:tamashii_no_mon	dante
+K	x:tango (doujin) (cd-rom conversion)	p_tango_cd
 K	x:tania	tania
 K	x:tania (japan)	tania
 K	x:tanjou - debut	debut
@@ -7959,6 +8085,7 @@ K	x:teitoku no ketsudan ii (japan)	teikets2
 K	x:teitoku_no_ketsudan	teiketsu
 K	x:tele harmonium - city lights	citylights
 K	x:tele harmonium - city lights (japan)	citylights
+K	x:temptation (t-en v1.0)	p_yuuwaku_en
 K	x:tender light (v1.1 l10)	tenderlt
 K	x:tenderlight v1.1 l10	tenderlt
 K	x:tenderlight v1.1 l10 (japan)	tenderlt
@@ -8025,14 +8152,18 @@ K	x:the legend of kyrandia	kyrandia
 K	x:the legend of kyrandia (user disk)	kyrandia
 K	x:the manhole (hmb-181)	manholeo
 K	x:the manhole (hmb-181a)	manhole
+K	x:the new zealand story (31khz video locked + unlimited continues)	p_tnzs_31kuc
+K	x:the new zealand story (31khz video locked)	p_tnzs_31k
 K	x:the new zealand story (hma-213)	tnzso
 K	x:the new zealand story (hma-213a)	tnzs
+K	x:the new zealand story (unlimited continues)	p_tnzs_uc
 K	x:the playroom	playroom
 K	x:the queen of duellist (hme-166)	tqodo
 K	x:the queen of duellist (hme-166a)	tqod
 K	x:the queen of duellist (user disk)	tqodo
 K	x:the queen of duellist gaiden + gaiden alpha (1994-03-02)	tqodgao
 K	x:the queen of duellist gaiden + gaiden alpha (1994-03-10)	tqodga
+K	x:the secret of dragon tower (doujin) (cd-rom conversion)	p_dragontwr_cd
 K	x:the secret of monkey island	monkey
 K	x:the silent service - chinmoku no kantai	silentsr
 K	x:the visitor	visitor
@@ -8243,6 +8374,7 @@ K	x:tunnels & trolls crusaders of khazar	tuntroll
 K	x:tunnels & trolls: crusaders of khazan	tuntroll
 K	x:turbo out run	toutrun
 K	x:turbo outrun (japan)	toutrun
+K	x:twin cobra (kyukyoku tiger) (cold boot fix)	p_ktiger_coldboot
 K	x:two shot diary	2shot
 K	x:two shot diary (japan)	2shot
 K	x:uchuu kaitou funny bee	funnybee
@@ -8296,6 +8428,7 @@ K	x:video koubou v1.4 l10	vkoubou
 K	x:video koubou v1.4l10 (japan)	vkoubou
 K	x:videokoubou_systemdisk	vkoubou1310
 K	x:viewpoint	viewpoin
+K	x:viewpoint (captainys cd boot loader patch)	p_viewpoin_ys
 K	x:viewpoint (japan)	viewpoin
 K	x:viewpoint demonstration no. 1	viewpoid
 K	x:ving	vingsoft
@@ -8323,6 +8456,7 @@ K	x:visitor, the (japan)	visitor
 K	x:volfied	volfied
 K	x:volfied (japan)	volfied
 K	x:volified	volfied
+K	x:volpheed (doujin) (cd-rom conversion)	p_volpheed_cd
 K	x:vorious (バリアス)	c_vorious
 K	x:vp_demo	viewpoid
 K	x:vz editor 1.6 with atok 7	vzedit
@@ -8347,6 +8481,7 @@ K	x:where in the world is carmen sandiego? deluxe edition	carmnwld
 K	x:windows_3.0_mme_1.0l20	win30
 K	x:wing commander	wingcomm
 K	x:wing commander (alt)	wingcomma
+K	x:wing commander (auto-boot)	p_wingcomm_auto
 K	x:wing commander (japan)	wingcomm
 K	x:wing commander (japan) (en,ja) (alt)	wingcomma
 K	x:wing commander - armada (japan)	wingcmar
@@ -8369,6 +8504,8 @@ K	x:wizardry v - heart of the maelstrom	wizardr5
 K	x:wizardry v - heart of the maelstrom (japan)	wizardr5
 K	x:wizardry v - heart of the maelstrom (user disk)	wizardr5
 K	x:wizardry vi - bane of the cosmic forge (user disk)	wizardr6
+K	x:wolfenstein 3d (cd-rom conversion) (2mb ram version)	p_wolf3d_cd2m
+K	x:wolfenstein 3d (cd-rom conversion) (4mb ram version)	p_wolf3d_cd4m
 K	x:woman's memory	womanmem
 K	x:woman's memory (japan)	womanmem
 K	x:wonpara wars	wonpara
@@ -8379,6 +8516,7 @@ K	x:words worth	wordwort
 K	x:words worth special disk	wordwortsp
 K	x:words_worth_specialdisk_a	wordwortsp
 K	x:words_worth_specialdisk_b	wordwortsp
+K	x:world fantasy (doujin) (cd-rom conversion)	p_worldfant_cd
 K	x:wrestle angels	wang
 K	x:wrestle angels (disk a)	wang
 K	x:wrestle angels (disk b)	wang
