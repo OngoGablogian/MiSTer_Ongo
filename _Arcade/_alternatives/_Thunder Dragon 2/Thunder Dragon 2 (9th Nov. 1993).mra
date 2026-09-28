@@ -1,0 +1,175 @@
+<!--
+  Thunder Dragon 2 (Mikejmoffitt Enhanced): MAME's tdragon2 (Thunder Dragon 2, 9th Nov. 1993) with Mike J
+  Moffitt's 2018 enhancement hacks applied to its main CPU program, 6.rom:
+    * player 1 autofire on Button 1; Button 3 fires without autofire
+    * player 2 can start a game without player 1
+    * the ROM checksum test is skipped (the program is modified)
+  Credit: "Thunder Dragon 2 Enhancement Hacks" (c) 2018 Mike J Moffitt
+  (mikejmoffitt), td2-enhancements: patch.s / td2-enhancement.ips.
+    https://www.arcade-projects.com/threads/thunder-dragon-2-enhancement-hacks.7595/
+    https://github.com/Mikejmoffitt/td2-enhancements
+
+  Only MAME's tdragon2.zip is needed: the 4 runs (120 bytes) where
+  the patched 6.rom differs from MAME's (crc ca348caf) are <patch>es at the
+  end of ROM index 0, which MiSTer's loader applies to the assembled image.
+  6.rom is that image's first part, at offset 0, so each offset is 6.rom's
+  own byte offset, in the file's byte order (the patch's 68000 NOP 4E71
+  reads 71 4E, as the core's download pairs the bytes). Everything else is
+  the parent's .mra, "Thunder Dragon 2 (9th Nov. 1993).mra".
+-->
+<!--
+  Thunder Dragon 2 (NMK, 1993) — Family C ("NMK16_Macross2" rbf) pilot game.
+
+  Transcribed directly from mame/src/mame/nmk/nmk16.cpp:
+    - ROM_START(tdragon2)      lines 8331-8359
+    - GAME(... tdragon2 ...)   line 10740
+    - INPUT_PORTS_START(tdragon2) lines 2890-2976
+
+  ROM region -> byte offset mapping matches docs/hw-bringup.md's own
+  table exactly (that table was itself derived from this same
+  ROM_START block) and tools/mk_ioctl_stream.py's own region list for
+  this game, both already used to build and verify the hardware-mode
+  Verilator testbench this core's own quartus_map/fit/asm run was
+  checked against. No byte reordering is needed for the
+  ROM_LOAD16_WORD_SWAP regions (maincpu, sprites) despite the .mra
+  format's inability to reorder bytes within a <part> — the core's own
+  ioctl-download write logic reconstructs 16-bit words by byte parity
+  (even ioctl_addr -> low byte, odd -> high byte), which reproduces
+  ROM_LOAD16_WORD_SWAP's own byte order automatically (verified
+  directly against mkrom_wordswap.py's own formula — see
+  tools/mk_ioctl_stream.py's own header comment).
+
+  Game select: this Macross2.rbf is now SHARED between tdragon2 and
+  macross2 (rtl/tdragon2/tdragon2_core.sv was merged to serve both games
+  at runtime — see that file's own header). <switches default="F7,FF,00">
+  below's third byte sets status[16]=0 (tdragon2) — a HIDDEN bit, no
+  corresponding <dip> entry, so it never appears in the OSD and can't be
+  accidentally toggled (see docs/mra-workflow.md's own Donkey Kong
+  reference example for the precedent: an undeclared bit in a <switches
+  default="..."> byte just stays fixed at that raw value). This is bit0
+  of status[16] specifically because Macross2.sv reads status[16] as
+  game_macross2 — see that file's own header.
+
+  Known limitations, not yet resolved (see Macross2.sv's own header):
+    - HSync/VSync timing is a documented placeholder, not yet tuned
+      against real hardware.
+    - Player input bit mapping (joystick_0/1 -> IN0/IN1) is now
+      cross-checked bit-for-bit against the INPUT_PORTS block below
+      (see Macross2.sv's own in0_i/in1_i comment) — not yet confirmed
+      against real hardware, only that it compiles.
+    - dsw1_i/dsw2_i are now wired to status[7:0]/status[15:8] in
+      Macross2.sv, matching this file's own <dip bits="N"> bit
+      positions (the MiSTer .mra loader writes each dip's configured
+      value directly into status[] at that same bit index — no
+      CONF_STR reservation needed). Not yet confirmed against real
+      hardware (no JTAG/SD-card access in this environment), only that
+      it compiles and the bit-position math is internally consistent
+      with this file's own <switches> byte order.
+    - <rotation> below is this project's best understanding of the
+      MiSTer .mra convention for a MAME ROT270 flag (see
+      docs/game-inventory.md's own "vertical" orientation note for this
+      game) — not independently confirmed against a known-working
+      NMK16-family MiSTer core, since none exists in this project yet.
+-->
+<misterromdescription>
+  <name>Thunder Dragon 2 (9th Nov. 1993)</name>
+  <mratimestamp>202609060000</mratimestamp>
+  <mameversion>0270</mameversion>
+  <setname>tdragon2</setname>
+  <year>1993</year>
+  <manufacturer>NMK</manufacturer>
+  <category>Shooter</category>
+  <rbf>kuze_NMK16_Macross2</rbf>
+
+  <!-- ROT270 in nmk16.cpp (docs/game-inventory.md: "vertical") — see
+       this file's own header note on the rotation-convention caveat. -->
+  <!-- ROT270 in nmk16.cpp. MiSTer matches this tag as TEXT, not as a
+       number: mra_loader.cpp does strncasecmp(text, "vertical", 8), so the
+       numeric form this file used to carry left is_vertical false and a
+       tate cabinet never picked up MiSTer.ini's [arcade_vertical] section.
+       The direction is explicit because MiSTer falls back to CW when none
+       is given, and ROT270 turns counter-clockwise to stand upright (the
+       core's own rotate_ccw=1 case). -->
+  <rotation>vertical (ccw)</rotation>
+
+  <!-- DSW1 default 0xF7, DSW2 default 0xFF — see individual <dip>
+       entries below for the bit-by-bit derivation. Byte order matches
+       tdragon2_core.sv's own address decode (sel_dsw1 at 0x100008,
+       sel_dsw2 at 0x10000A — DSW1 first). Third byte 0x00 sets the
+       HIDDEN game-select bit (status[16]=0 -> tdragon2, no <dip> entry
+       declares it — see this file's own header). -->
+  <switches default="F7,FF,00">
+    <dip bits="0" name="Service Mode" ids="On,Off"/> <!-- PORT_SERVICE_DIPLOC, active low: bit clear = service mode ON -->
+    <dip bits="1" name="Demo Sounds" ids="Off,On"/>
+    <dip bits="2" name="Flip Screen" ids="On,Off"/>
+    <dip bits="3" name="Unused" ids="Off,On"/>
+    <dip bits="4,5" name="Difficulty" ids="Hardest,Easy,Hard,Normal"/>
+    <dip bits="6,7" name="Lives" ids="1,2,4,3"/>
+    <dip bits="8,11" name="Coin B" ids="5C_3C,2C_1C,3C_2C,1C_4C,4C_1C,1C_6C,2C_5C,1C_2C,4C_3C,1C_7C,3C_1C,1C_3C,3C_4C,1C_5C,2C_3C,1C_1C"/>
+    <dip bits="12,15" name="Coin A" ids="Free_Play,2C_1C,3C_2C,1C_4C,4C_1C,1C_6C,2C_5C,1C_2C,4C_3C,1C_7C,3C_1C,1C_3C,3C_4C,1C_5C,2C_3C,1C_1C"/>
+  </switches>
+
+  <!-- IN1: 3 buttons/player (nmk16.cpp:2906-2908, 2914-2916). IN0 also
+       has COIN1/COIN2/SERVICE1/START1/START2 but no independent
+       "Service" button beyond the DSW1 Service Mode toggle above. -->
+  <buttons names="Shot (Auto),Bomb,Shot,Button 4,Start,Coin" default="Y,B,A,X,Start,R"/>
+
+  <!-- One <rom> per ROM_REGION in ROM_START(tdragon2), same order as
+       docs/hw-bringup.md's own offset table. -->
+  <rom index="0" zip="tdragon2.zip" md5="none">
+    <!-- maincpu, 0x080000 @ 0x000000 -->
+    <part crc="ca348caf" name="6.rom"/>
+    <!-- audiocpu, 0x020000 @ 0x080000 -->
+    <part crc="b870be61" name="5.bin"/>
+    <!-- fgtile, 0x020000 @ 0x0A0000 -->
+    <part crc="d488aafa" name="1.bin"/>
+    <!-- bgtile, 0x200000 @ 0x0C0000 -->
+    <part crc="f968c65d" name="ww930914.2"/>
+    <!-- sprites, 0x400000 @ 0x2C0000 (2 files, ROM_LOAD16_WORD_SWAP) -->
+    <part crc="b98873cb" name="ww930917.7"/>
+    <part crc="baee84b2" name="ww930918.8"/>
+    <!-- oki1, 0x200000 @ 0x6C0000 -->
+    <part crc="07c35fe6" name="ww930916.4"/>
+    <!-- oki2, 0x200000 @ 0x8C0000 -->
+    <part crc="82025bab" name="ww930915.3"/>
+    <!-- Mike J Moffitt's enhancements (6.rom byte offsets) -->
+    <patch offset="0x0062EA">71 4E 71 4E 71 4E</patch>
+    <patch offset="0x00B026">F9 4E 04 00 00 80</patch>
+    <patch offset="0x00CA72">F9 4E 04 00 4C 80</patch>
+    <patch offset="0x048000">39 3E 10 00 02 00 47 46 47 02 EF FF 07 3C 46 02 40 00 0C 67 79 42 1F 00 0E 00 47 00 10 00 26 60</patch>
+    <patch offset="0x048020">39 3C 10 00 02 00 46 46 46 02 10 00 08 66 79 42 1F 00 0E 00 10 60 79 0A 01 00 1F 00 0E 00 06 67</patch>
+    <patch offset="0x048040">47 00 10 00 71 4E F9 4E 00 00 2E B0 79 4A 1F 00 0C 90 0C 67 07 08 03 00 06 67 F9 4E 00 00 7A CA</patch>
+    <patch offset="0x048060">F9 4E 00 00 9A CA</patch>
+  </rom>
+
+  <!-- nmk_irq:vtiming, 0x0100 bytes. Streamed as its own ioctl index so no
+       SDRAM region base moves; nmk_irq.sv writes it into table 0. -->
+  <rom index="1" zip="tdragon2.zip" md5="none">
+    <part crc="e6ead349" name="10.bpr"/>
+  </rom>
+
+  <!-- High scores: MAME hiscore.dat entries for tdragon2, and the
+       saved dump. See tools/gen_hiscore_mra.py. -->
+  <rom index="3" md5="none">
+    <part>
+        0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+        00 1F F1 01 00 6B 18 00
+    </part>
+  </rom>
+  <nvram index="4" size="107"/>
+
+  <!-- Cheats (Pugsy's MAME cheat database). Slots in fixed order:
+       Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs.
+       This set provides: Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Lives, P2 Infinite Lives, P1 Infinite Bombs, P2 Infinite Bombs. See tools/gen_cheats_mra.py. -->
+  <rom index="5" md5="none">
+    <part>
+        01 00 1F 90 0D 00 00 09 00 00 00 00 00 00
+        01 00 1F 7F 2D 00 00 02 00 00 00 00 00 00
+        01 00 1F 7E 2D 00 00 02 00 00 00 00 00 00
+        01 00 1F 7F 29 00 00 06 00 00 00 00 00 00
+        01 00 1F 7E 29 00 00 06 00 00 00 00 00 00
+        01 00 1F 7F 2F 00 00 08 00 00 00 00 00 00
+        01 00 1F 7E 2F 00 00 08 00 00 00 00 00 00
+    </part>
+  </rom>
+</misterromdescription>
