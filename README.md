@@ -319,12 +319,6 @@ db_url = https://raw.githubusercontent.com/jlrh/jlrh-misterfpga-db/db/db.json.zi
 filter = filter = !arcade-ffbigkarnk !arcade-ffbiomtoy !arcade-ffopwolf !arcade-ffsquash !arcade-ffssriders !arcade-ffthoop
 ```
 
-[Arcade_HyperDuel_MiSTer](https://github.com/searchsolved/Arcade_HyperDuel_MiSTer)
-```
-[searchsolved/hyperduel]
-db_url = https://raw.githubusercontent.com/searchsolved/Arcade_HyperDuel_MiSTer/main/hyperduel_db.json
-```
-
 [Slop-Core](https://github.com/TheJesusFish/Slop-Core)
 ```
 [TheJesusFish/Slop-Core]
