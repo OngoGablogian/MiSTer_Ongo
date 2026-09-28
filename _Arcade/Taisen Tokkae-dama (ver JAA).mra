@@ -54,6 +54,10 @@
         <part name="tokkae.nv" crc="5a6f8da6"/>
     </rom>
 
+    <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
+         saved when the OSD opens after the game has written it -->
+    <nvram index="4" size="128"/>
+
     <switches default="FE,FF">
         <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
         <dip name="Flip Screen" bits="2" ids="On,Off"/>

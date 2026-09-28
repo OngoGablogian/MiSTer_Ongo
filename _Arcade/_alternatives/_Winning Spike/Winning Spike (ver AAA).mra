@@ -1,6 +1,6 @@
 <misterromdescription>
-    <name>Winning Spike (ver JAA)</name>
-    <setname>winspikej</setname>
+    <name>Winning Spike (ver AAA)</name>
+    <setname>winspikea</setname>
     <rbf>KonamiGX</rbf>
     <mameversion>0289</mameversion>
     <year>1997</year>
@@ -8,17 +8,17 @@
     <category>Arcade</category>
     <rotation>horizontal</rotation>
 
-    <rom index="1"><part>11</part></rom>
+    <rom index="1"><part>10</part></rom>
 
     <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
-         (rtl/gx_board_cfg.sv arm 17); written and proven by
+         (rtl/gx_board_cfg.sv arm 16); written and proven by
          scripts/build_mra.py, not by hand -->
-    <rom index="0" zip="winspikej.zip|winspike.zip|konamigx.zip" md5="none" address="0x30000000">
+    <rom index="0" zip="winspikea.zip|winspike.zip|konamigx.zip" md5="none" address="0x30000000">
         <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
         <part name="300a01.34k" crc="d5fa95f5"/>
         <interleave output="32">
-            <part name="705jaa03.27b" crc="1d5e3922" map="0012"/>
-            <part name="705jaa02.31b" crc="85f11b03" map="1200"/>
+            <part name="705aaa03.27b" crc="2af78cca" map="0012"/>
+            <part name="705aaa02.31b" crc="43d1bad9" map="1200"/>
         </interleave>
         <part repeat="2">00</part>
         <!-- k056832: MAME's region as it is (8-byte rows, a granule each) -->
@@ -44,6 +44,10 @@
         <!-- k054539: MAME's region as it is -->
         <part name="705a22.9g" crc="1a9246f6"/>
     </rom>
+
+    <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
+         saved when the OSD opens after the game has written it -->
+    <nvram index="4" size="128"/>
 
     <switches default="FE,FF">
         <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>

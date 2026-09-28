@@ -57,6 +57,10 @@
         <part name="le2.nv" crc="fec3bc2e"/>
     </rom>
 
+    <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
+         saved when the OSD opens after the game has written it -->
+    <nvram index="4" size="128"/>
+
     <switches default="F7,FF">
         <dip name="Stereo" bits="0" ids="Mono,Stereo"/>
         <dip name="Coin Mechanism" bits="1" ids="Independent,Common"/>
