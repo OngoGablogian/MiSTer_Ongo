@@ -23,15 +23,15 @@
     <platform>Namco NA-1</platform>
     <category>Shoot 'em Up</category>
 
-    <buttons names="Shot,Bomb,Button 3,Start,Coin" default="A,B,X,Start,Select"/>
+    <buttons names="Shot,Bomb,-,Start,Coin" default="A,B,Start,Select"/>
     <!-- First-boot EEPROM: 2 KiB of 00 (an erased part reads FF, which the boot
          code takes as FLIP ON and some titles hang on). A dumped default listed
          after it overrides it; a saved .nvm (below) still wins. -->
     <rom index="1"><part repeat="0x800">00</part></rom>
     <nvram index="1" size="2048"/>
 
-    <!-- board record: C349, ROT90 cabinet (180-degree base presentation), joystick panel -->
-    <rom index="2"><part>01 5D 01 02 01 00</part></rom>
+    <!-- board record: C349, ROT90 cabinet (180-degree base presentation), two-button joystick panel -->
+    <rom index="2"><part>01 5D 01 02 01 02</part></rom>
 
     <rom index="0" zip="fghtatck.zip|namcoc69.zip" md5="none">
         <!-- program ROM: stream $000000-$1FFFFF -->
