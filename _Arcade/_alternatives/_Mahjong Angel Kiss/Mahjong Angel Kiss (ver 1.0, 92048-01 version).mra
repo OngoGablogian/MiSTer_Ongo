@@ -9,6 +9,8 @@
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32</rbf>
   <mameversion>0289</mameversion>
+  <rotation>horizontal</rotation>
+  <buttons names="-,-,-,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
   <switches default="FF,FF,FF,FF" base="0">
     <dip name="Difficulty" bits="6,7" ids="Easy,Hard,Hardest,Normal"/>
     <dip name="Service Mode" bits="8" ids="On,Off"/>

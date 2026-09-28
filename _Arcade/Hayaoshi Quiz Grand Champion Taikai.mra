@@ -9,12 +9,14 @@
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32</rbf>
   <mameversion>0289</mameversion>
+  <rotation>horizontal</rotation>
+  <buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
   <switches default="FF,FF,FF,FF" base="0">
     <dip name="Demo Sounds" bits="2" ids="Off,On"/>
     <dip name="Questions (VS Mode)" bits="3" ids="More,Default"/>
     <dip name="Race Time" bits="4,5" ids="Default - 0:15,Default + 0:15,Default - 0:10,Default"/>
     <dip name="CPU AI (VS)" bits="6,7" ids="Highest,Low,High,Normal"/>
-    <dip name="Unknown" bits="8" ids="On,Off"/>
+    <!-- MAME: unknown. <dip name="Unknown" bits="8" ids="On,Off"/> -->
     <dip name="Free Play" bits="9" ids="On,Off"/>
     <dip name="Coin B" bits="10,11,12" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
     <dip name="Coin A" bits="13,14,15" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>

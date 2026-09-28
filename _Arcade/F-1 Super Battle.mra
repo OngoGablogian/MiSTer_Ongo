@@ -9,6 +9,7 @@
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32F1</rbf>
   <mameversion>0289</mameversion>
+  <rotation>horizontal</rotation>
   <buttons names="Accelerator,Brake,Shifter,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
   <switches default="3F,FF,FF,FF,00,FF,FF,FF" base="0">
     <dip name="Credit Counter" bits="0" ids="Eremite,Display"/>

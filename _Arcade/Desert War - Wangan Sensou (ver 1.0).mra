@@ -9,6 +9,8 @@
   <manufacturer>Jaleco</manufacturer>
   <rbf>JalecoMS32</rbf>
   <mameversion>0289</mameversion>
+  <rotation>vertical (ccw)</rotation>
+  <buttons names="Attach (Rescue),Take Off/Landing,-,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
   <switches default="FF,FF,6F,FF" base="0">
     <dip name="Flip Screen" bits="0" ids="On,Off"/>
     <dip name="Demo Sounds" bits="1" ids="Off,On"/>
