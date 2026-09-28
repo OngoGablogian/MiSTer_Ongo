@@ -27,7 +27,7 @@
     <dip bits="7" name="Service Mode" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" default="A,B,X,Start,R,L"/>
+  <buttons names="Trigger,-,-,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
 
   <rom index="0" zip="bubbletrj.zip|bubbletr.zip|namcoc65.zip" md5="none">
     <!-- maincpu: 0x40000 bytes at image 0x0000000 -->
@@ -55,7 +55,7 @@
     <!-- zoomlut: 0x2000 bytes at image 0x00d4000 -->
     <part crc="90db1bf6" name="04544191.6n" length="0x2000"/>
     <!-- config: 0x30 bytes at image 0x00d6000 -->
-    <part>4E 32 00 40 02 00 05 00 02 00 04 00 10 14 10 00 00 00 00 00 00 80 80 80 80 FF FF FF FF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <part>4E 32 00 40 02 00 05 00 02 00 04 00 10 14 10 00 00 00 00 00 00 80 80 80 80 FF FF FF FF FF FF FF FF C2 FF FF 00 00 00 00 00 00 00 00 00 00 00 00</part>
     <part repeat="0x29fd0">00</part>
     <!-- data_rom: 0x200000 bytes at image 0x0100000 -->
     <interleave output="16">

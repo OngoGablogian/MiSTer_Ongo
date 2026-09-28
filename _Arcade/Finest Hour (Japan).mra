@@ -26,7 +26,7 @@
     <dip bits="7" name="Service Mode" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" default="A,B,X,Start,R,L"/>
+  <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
 
   <rom index="0" zip="finehour.zip|namcoc65.zip" md5="none">
     <!-- maincpu: 0x40000 bytes at image 0x0000000 -->
@@ -51,7 +51,7 @@
     <part repeat="0x2000">FF</part>
     <part repeat="0x3000">00</part>
     <!-- config: 0x30 bytes at image 0x00d6000 -->
-    <part>4E 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5E 80 FF FF FF FF FF FF FF FF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <part>4E 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5E 80 FF FF FF FF FF FF FF FF FF FF FF FF 00 FF FF 00 00 00 00 00 00 00 00 00 00 00 00</part>
     <part repeat="0x29fd0">00</part>
     <!-- data_rom: 0x200000 bytes at image 0x0100000 -->
     <interleave output="16">
