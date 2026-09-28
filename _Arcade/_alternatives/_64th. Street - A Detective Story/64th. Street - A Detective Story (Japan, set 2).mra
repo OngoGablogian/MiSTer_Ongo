@@ -33,7 +33,7 @@
     <dip bits="15" name="Service Mode" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
+  <buttons names="Punch,Jump,-,Start,Coin" default="A,B,-,Start,R"/>
 
   <rom index="0" zip="64streetja.zip|64street.zip" md5="none">
     <!-- maincpu 0x080000 @ 0x000000 -->

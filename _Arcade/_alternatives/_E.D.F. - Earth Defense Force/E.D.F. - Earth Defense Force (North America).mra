@@ -34,7 +34,7 @@
     <dip bits="15" name="Flip Screen" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
+  <buttons names="Fire,Formation,-,Start,Coin" default="A,B,-,Start,R"/>
 
   <rom index="0" zip="edfu.zip|edf.zip" md5="none">
     <!-- maincpu 0x080000 @ 0x000000 -->

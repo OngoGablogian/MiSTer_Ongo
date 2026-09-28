@@ -33,7 +33,7 @@
     <dip bits="12,15" name="Coin B" ids="Free_Play,1C_1C,1C_1C,1C_1C,1C_1C,1C_1C,2C_3C,4C_1C,3C_1C,2C_1C,1C_6C,1C_5C,1C_4C,1C_3C,1C_2C,1C_1C"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin" default="Y,B,A,Start,R"/>
+  <buttons names="Fire,Super Attack,-,Start,Coin" default="A,B,-,Start,R"/>
 
   <rom index="0" zip="chimerab.zip" md5="none">
     <!-- maincpu 0x080000 @ 0x000000 -->
