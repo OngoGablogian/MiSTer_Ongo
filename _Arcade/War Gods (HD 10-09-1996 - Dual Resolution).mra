@@ -7,6 +7,8 @@
     <year>1995</year>
     <manufacturer>Midway</manufacturer>
 
+    <nvram index="4" size="256"/>
+
     <rom index="1" zip="wargods.zip" md5="none">
         <part name="u41.rom" crc="398c54cc"/>
     </rom>
