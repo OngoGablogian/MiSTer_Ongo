@@ -1,0 +1,17 @@
+<misterromdescription>
+  <name>The Pit (US set 1)</name>
+  <setname>thepitu1</setname>
+  <rbf>ThePit</rbf>
+  <buttons names="Fire,Start 1P,Start 2P,Coin" default="A,Start,Select,R"/>
+  <rom index="0" zip="thepitu1.zip|thepit.zip" md5="56cad0a84bb00c856806709e6537011c">
+    <part name="p38b.ic38" crc="7315e1bc"/>
+    <part name="p39b.ic39" crc="c9cc30fe"/>
+    <part name="p40b.ic40" crc="986738b5"/>
+    <part name="p41b.ic41" crc="31ceb0a1"/>
+    <part name="p33b.ic33" crc="614ec454"/>
+    <part name="p30.ic30" crc="1b79dfb6"/>
+    <part name="p9.ic9" crc="69502afc"/>
+    <part name="p8.ic8" crc="2ddd5045"/>
+    <part name="82s123.ic4" crc="a758b567"/>
+  </rom>
+</misterromdescription>

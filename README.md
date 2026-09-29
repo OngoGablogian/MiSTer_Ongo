@@ -96,6 +96,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                  |
 | [NMK16](https://github.com/kuzearcade/Arcade-NMK16_MiSTer)                                                                     |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
+| [Primal Rage](https://github.com/nortido/Arcade-PrimalRage_MiSTer)                                                             |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
 | [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
 | [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                              |
@@ -132,6 +133,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
 | [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
+| [The Pit](https://misterfpga.org/viewtopic.php?p=115950)                                                                       |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
 | [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                    |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
