@@ -14,6 +14,9 @@
   <rom index="1">
     <part>5303010A0E0203000100000804B0F00100000000000000DE</part>
   </rom>
+  <rom index="3">
+    <part>00000000FFFF004001000001000F040000002ACCA8000200000000C001151500</part>
+  </rom>
   <rom index="0" zip="mslider.zip" address="0x30000000">
     <!-- program -->
     <interleave output="16">
@@ -35,6 +38,7 @@
       <part name="ms-snd1.bin" crc="8f484b35" map="12"/>
     </interleave>
   </rom>
+  <nvram index="4" size="169"/>
   <switches default="FF,FE" base="16">
     <!-- DSW1 -->
     <dip bits="0,2" name="Coin A" ids="3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C,1C/5C,1C/6C" values="5,6,7,4,3,2,1,0"/>
