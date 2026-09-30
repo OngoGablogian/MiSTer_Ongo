@@ -5,9 +5,9 @@
 	<year>1990</year>
 	<manufacturer>Leland Corporation</manufacturer>
 	<category>Platform</category>
-	<rbf>SuperOffRoad</rbf>
+	<rbf>Leland</rbf>
 
-	<rom index="0" zip="pigout.zip" md5="None" type="merged">
+	<rom index="0" address="0x30000000" zip="pigout.zip" md5="None" type="merged">
 		<part>4C 01 03 02 01 10 00 00 00 00 00 00 00 00 00 00</part>
 
 		<part name="03-29020-0x.u58t" crc="8fe4b683" length="0x10000"/>
@@ -59,12 +59,18 @@
 		<part name="eeprom-pigout.bin" crc="9646fa72" length="0x80"/>
 	</rom>
 
-	<switches page="1" title="DIP Switches">
-		<dip name="Lives"        bits="7:6" values="3,4,5,2"/>
-		<dip name="Difficulty"   bits="9:8" values="Normal,Easy,Hard,Very Hard"/>
-		<dip name="Service Mode" bits="4"   values="Off,On"/>
-		<dip name="Free Play"    bits="5"   values="Off,On"/>
-	</switches>
+	<!--
+	  Button labels: the core shares one set of OSD button names
+	  (Nitro, Coin, Gas, Start) across its games, and they are written for
+	  Super Off-Road. In Pig Out those four buttons are Button 1 (Jump),
+	  Button 2 (Throw), Start and Coin, so "Gas" is really Start and "Start"
+	  is really Coin. Start and Coin are mappable here because the game
+	  needs a coin input to leave attract mode.
+
+	  The operator menu is opened from the OSD ("Service Menu"), which
+	  presses P1 Start and Test for you; there is no Service button to map.
+	  Player 2 uses its own copies of these buttons.
+	-->
 	<buttons names="Jump,Throw,Start,Coin"></buttons>
 
 </misterromdescription>

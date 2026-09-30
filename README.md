@@ -64,6 +64,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Konami GX](https://github.com/ppriest/Arcade-KonamiGX_MiSTer)                                                                 |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [Krull](https://www.patreon.com/bazset/posts/krull-1983-d-co-169209991)                                                        |
+| [Leland](https://github.com/shimian5/Arcade-Leland_MiSTer)                                                                     |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Mad Gear / Last Duel](https://github.com/fiermanb/LastDuel-MadGear_MiSTer)                                                    |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
@@ -124,7 +125,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                           |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                          |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                        |
-| [Super Off-Road](https://github.com/shimian5/Arcade-SuperOffRoad_MiSTer)                                                       |
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                       |
 | [Taito Air System](https://github.com/retrogarage/tas-mister)                                                                  |
 | [Taito B System](https://github.com/Mezzow/Arcade-TaitoB_MiSTer)                                                               |

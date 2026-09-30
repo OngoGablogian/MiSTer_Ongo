@@ -5,9 +5,9 @@
 	<year>1989</year>
 	<manufacturer>Leland Corporation</manufacturer>
 	<category>Driving</category>
-	<rbf>SuperOffRoad</rbf>
+	<rbf>Leland</rbf>
 
-	<rom index="0" zip="offroadt.zip" md5="None" type="merged">
+	<rom index="0" address="0x30000000" zip="offroadt.zip" md5="None" type="merged">
 		<part>4C 01 03 01 00 00 00 00 00 00 00 00 00 00 00 00</part>
 
 		<part name="03-25016-0x.u58t" crc="adbc6211" length="0x10000"/>
@@ -59,13 +59,14 @@
 		<part name="eeprom-offroad.bin" crc="57955248" length="0x80"/>
 	</rom>
 
-	<switches page="1" title="DIP Switches">
-		<dip name="Lives"        bits="7:6" values="3,4,5,2"/>
-		<dip name="Difficulty"   bits="9:8" values="Normal,Easy,Hard,Very Hard"/>
-		<dip name="Service Mode" bits="4"   values="Off,On"/>
-		<dip name="Free Play"    bits="5"   values="Off,On"/>
-	</switches>
-
-	<buttons names="Nitro,Coin,Gas"></buttons>
+	<!--
+	  Button labels: Nitro, Coin and Gas are J1 buttons 1-3. The fourth button,
+	  Menu Enter, acts as Blue Nitro and is used to choose items in the
+	  operator menu (manual p.17: Red Nitro selects, Blue Nitro enters). The
+	  menu itself is opened from the OSD ("Service Menu"), not from a
+	  controller button, so it can't be triggered by accident during play.
+	  Re-run "Define joystick buttons" in the OSD to map Menu Enter.
+	-->
+	<buttons names="Nitro,Coin,Gas,Menu Enter"></buttons>
 
 </misterromdescription>
