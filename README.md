@@ -94,6 +94,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                |
 | [Nintendo Entertainment System (Test)](https://discord.com/channels/647909397477195803/737506076806611064/1423754567371460781) |
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
+| [Nintendo Super System](https://www.patreon.com/bazset/posts/nintendo-super-170678491)                                         |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                  |
 | [NMK16](https://github.com/kuzearcade/Arcade-NMK16_MiSTer)                                                                     |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |

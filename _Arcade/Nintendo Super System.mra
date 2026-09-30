@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <rbf>NSS_bazset</rbf>
+  <name>Nintendo Super System</name>
+  <setname>nss</setname>
+  <year>1991</year>
+  <manufacturer>Nintendo</manufacturer>
+  <players>2</players>
+  <joystick>8way</joystick>
+  <rotation>horizontal</rotation>
+  <region>World</region>
+  <rom index="3" zip="nss.zip" type="merged" md5="eacc9a321518b58daf97a52babbeb5fb">
+    <part zip="nss.zip" name="nss-c.ic14" crc="a8e202b3" length="0x8000" />
+    <part zip="nss.zip" name="m50458_char.bin" crc="011cc342" length="0x1200" />
+  </rom>
+  <rom index="4" zip="nss_fzer.zip|nss_smw.zip|nss_sten.zip" type="merged" md5="3467f5c90763c033cbed2fb6649082ee">
+    <part zip="nss_fzer.zip" name="nss-fz-0.ic2" crc="e9b3cdf1" length="0x100000" />
+    <part zip="nss_smw.zip" name="nss-mw-0_prg.ic1" crc="c46766f2" length="0x80000" />
+    <part zip="nss_smw.zip" name="nss-mw-0_prg.ic1" crc="c46766f2" length="0x80000" />
+    <part zip="nss_sten.zip" name="nss-st-0.ic1" crc="f131611f" length="0x100000" />
+    <part zip="nss_fzer.zip" name="fz.ic7" crc="48ae570d" length="0x8000" />
+    <part zip="nss_smw.zip" name="nss-r__ic3__mw.ic3" crc="f2c5466e" length="0x8000" />
+    <part zip="nss_sten.zip" name="st.ic3" crc="8880596e" length="0x8000" />
+    <part zip="nss_fzer.zip" name="security.prm" crc="9650a7d0" length="0x10" />
+    <part zip="nss_smw.zip" name="security.prm" crc="fd700dca" length="0x10" />
+    <part zip="nss_sten.zip" name="security.prm" crc="2fd8475b" length="0x10" />
+  </rom>
+  <buttons names="A,B,X,Y,L,R,Select,Start,Game 1,Game 2,Game 3,Instructions,Restart,Page Up,Page Down,Coin,Service" default="A,B,X,Y,L,R,Select,Start,R2,L2,R3,L3,-,-,-,-,-" count="17" />
+</misterromdescription>
