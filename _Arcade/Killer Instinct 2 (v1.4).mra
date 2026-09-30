@@ -27,14 +27,21 @@
     .img with chdman.
   </remark>
 
-  <rom index="0"><part>01</part></rom>
-  <rom index="1" zip="kinst2.zip"><part name="ki2-l14.u98" crc="27d0285e"/></rom>
-  <rom index="2" zip="kinst2.zip"><part name="ki2_l1.u10" crc="fdf6ed51"/></rom>
-  <rom index="3" zip="kinst2.zip"><part name="ki2_l1.u11" crc="f9e70024"/></rom>
-  <rom index="4" zip="kinst2.zip"><part name="ki2_l1.u12" crc="2994c199"/></rom>
-  <rom index="5" zip="kinst2.zip"><part name="ki2_l1.u13" crc="3fe6327b"/></rom>
-  <rom index="6" zip="kinst2.zip"><part name="ki2_l1.u33" crc="6f4dcdcf"/></rom>
-  <rom index="7" zip="kinst2.zip"><part name="ki2_l1.u34" crc="5db48206"/></rom>
-  <rom index="8" zip="kinst2.zip"><part name="ki2_l1.u35" crc="7245ce69"/></rom>
-  <rom index="9" zip="kinst2.zip"><part name="ki2_l1.u36" crc="8920acbb"/></rom>
+  <!-- Game selector: 01 = Killer Instinct 2 -->
+  <rom index="0">
+    <part>01</part>
+  </rom>
+
+  <!-- Combined 4.5 MiB ROM image -->
+  <rom index="1" zip="kinst2.zip">
+    <part name="ki2-l14.u98" crc="27d0285e"/>
+    <part name="ki2_l1.u10" crc="fdf6ed51"/>
+    <part name="ki2_l1.u11" crc="f9e70024"/>
+    <part name="ki2_l1.u12" crc="2994c199"/>
+    <part name="ki2_l1.u13" crc="3fe6327b"/>
+    <part name="ki2_l1.u33" crc="6f4dcdcf"/>
+    <part name="ki2_l1.u34" crc="5db48206"/>
+    <part name="ki2_l1.u35" crc="7245ce69"/>
+    <part name="ki2_l1.u36" crc="8920acbb"/>
+  </rom>
 </misterromdescription>
