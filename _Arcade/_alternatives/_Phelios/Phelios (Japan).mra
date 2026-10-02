@@ -53,7 +53,7 @@
     <part repeat="0x2000">FF</part>
     <part repeat="0x3000">00</part>
     <!-- config: 0x30 bytes at image 0x00d6000 -->
-    <part>4E 32 00 00 F0 00 E1 1F CA 02 94 05 F8 00 F0 01 3E 00 00 59 80 FF FF FF FF FF FF FF FF FF FF FF FF 00 FF FF 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <part>4E 32 00 00 F0 00 E1 1F CA 02 94 05 F8 00 F0 01 3E 00 00 59 80 FF FF FF FF FF FF FF FF FF FF FF FF 00 FF FF 80 66 00 00 00 00 00 00 00 00 00 00</part>
     <part repeat="0x29fd0">00</part>
     <!-- data_rom: 0x200000 bytes at image 0x0100000 -->
     <interleave output="16">

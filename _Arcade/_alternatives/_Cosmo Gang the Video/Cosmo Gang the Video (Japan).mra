@@ -54,7 +54,7 @@
     <!-- zoomlut: 0x2000 bytes at image 0x00d4000 -->
     <part crc="90db1bf6" name="04544191.6n" length="0x2000"/>
     <!-- config: 0x30 bytes at image 0x00d6000 -->
-    <part>4E 32 00 00 00 00 00 00 00 00 50 0A 08 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF 00 FF FF 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <part>4E 32 00 00 00 00 00 00 00 00 50 0A 08 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF 00 FF FF 60 66 00 00 00 00 00 00 00 00 00 00</part>
     <part repeat="0x29fd0">00</part>
     <!-- data_rom: 0x200000 bytes at image 0x0100000 -->
     <interleave output="16">

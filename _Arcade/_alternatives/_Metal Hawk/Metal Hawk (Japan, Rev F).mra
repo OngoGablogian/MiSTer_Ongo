@@ -55,7 +55,7 @@
     <!-- zoomlut: 0x2000 bytes at image 0x00d4000 -->
     <part crc="90db1bf6" name="mh5762.7p" length="0x2000"/>
     <!-- config: 0x30 bytes at image 0x00d6000 -->
-    <part>4E 32 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF 80 80 80 FF FF FF FF 03 C0 A0 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <part>4E 32 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF 80 80 80 FF FF FF FF 03 C0 A0 80 66 00 00 00 00 00 00 00 00 00 00</part>
     <part repeat="0x29fd0">00</part>
     <!-- data_rom: 0x200000 bytes at image 0x0100000 -->
     <interleave output="16">
