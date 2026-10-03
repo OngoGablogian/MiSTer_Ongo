@@ -135,6 +135,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [The Pit](https://misterfpga.org/viewtopic.php?p=115950)                                                                       |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
 | [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                    |
+| [Violent Storm](https://www.patreon.com/Meathax/posts/violent-storm-v1-171203196)                                              |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
