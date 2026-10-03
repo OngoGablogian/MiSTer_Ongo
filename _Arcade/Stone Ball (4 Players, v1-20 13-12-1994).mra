@@ -1,0 +1,59 @@
+<misterromdescription>
+  <name>Stone Ball (4 Players, v1-20 13/12/1994)</name>
+  <region>World</region>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <year>1994</year>
+  <manufacturer>Art &amp; Magic</manufacturer>
+  <platform>Art &amp; Magic</platform>
+  <setname>stonebal</setname>
+  <parent>stonebal</parent>
+  <rbf>Meathax_StoneBall</rbf>
+  <mameversion>0289</mameversion>
+  <about author="Stone Ball core" source="MAME artmagic.cpp; ROM audit in docs/rom-audit.json"/>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <players>4</players>
+  <joystick>8-way</joystick>
+  <num_buttons>3</num_buttons>
+
+  <!--
+    The core consumes one linear image.  The first region is the two
+    big-endian 68000 ROMs interleaved into 0x80000 bytes.  The graphics pair
+    follows as two little-endian source images, then the 0x80000-byte OKI ROM.
+    This is the same order and byte-lane contract used by scripts/prepare_rom.py
+    and StoneBall.sv.
+  -->
+  <rom index="0" zip="stonebal.zip" md5="none" type="merged|nonmerged|split">
+    <interleave output="16">
+      <part name="u102" crc="712feda1" map="01"/>
+      <part name="u101" crc="4f1656a9" map="10"/>
+    </interleave>
+    <part name="u1600.bin" crc="d2ffe9ff"/>
+    <part name="u1601.bin" crc="dbe893f0"/>
+    <part name="sb_snd_9-9-94.u1801" crc="d98f7378"/>
+  </rom>
+
+  <!-- Core game select: 0 Stone Ball, 1 Ultimate Tennis, 2 Cheese Chase. -->
+  <rom index="1"><part>00</part></rom>
+
+  <nvram index="2" size="2048"/>
+
+  <!-- Names, values and defaults follow pinned MAME artmagic.cpp stonebal
+       (DSW1 = 300004, DSW2 = 300006; MAME defaults ff,fa). -->
+  <switches default="ff,fa">
+    <dip bits="0" name="Service Mode" ids="Off,On" values="1,0"/>
+    <dip bits="1" name="Free Play" ids="Off,On" values="1,0"/>
+    <dip bits="2,3,4" name="Left Coinage" ids="4 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,1,7,6,5,4,3,2"/>
+    <dip bits="5,6,7" name="Right Coinage" ids="6 Coins/1 Credit,5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/4 Credits" values="2,3,4,5,6,7,1,0"/>
+    <dip bits="8,9" name="Difficulty" ids="Easy,Normal,Hard,Very Hard" values="3,2,1,0"/>
+    <dip bits="10" name="Demo Sounds" ids="Off,On" values="1,0"/>
+    <dip bits="11,12,13" name="Match Time" ids="60 s,70 s,80 s,90 s,100 s,110 s,120 s,130 s" values="6,5,4,3,7,2,1,0"/>
+    <dip bits="14" name="Free Match Time" ids="Normal,Short" values="1,0"/>
+    <dip bits="15" name="Game Mode" ids="4 Players,2 Players" values="1,0"/>
+  </switches>
+
+  <!-- With the ball / without it, from the in-game HELP screens; the MAME
+       button mapping was confirmed by pressing each button at kickoff. -->
+  <buttons names="Shoot/Fight,Pass/Tackle,Push,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+</misterromdescription>

@@ -123,6 +123,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                           |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                          |
+| [Stone Ball](https://www.patreon.com/Meathax/posts/stone-ball-chase-171312474)                                                 |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                        |
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                       |
 | [Taito Air System](https://github.com/retrogarage/tas-mister)                                                                  |

@@ -1,0 +1,57 @@
+<misterromdescription>
+  <name>Ultimate Tennis</name>
+  <region>World</region>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <year>1993</year>
+  <manufacturer>Art &amp; Magic</manufacturer>
+  <platform>Art &amp; Magic</platform>
+  <setname>ultennis</setname>
+  <parent>ultennis</parent>
+  <rbf>Meathax_StoneBall</rbf>
+  <mameversion>0289</mameversion>
+  <about author="Stone Ball core" source="MAME artmagic.cpp"/>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <num_buttons>3</num_buttons>
+
+  <!--
+    Same PCB family as Stone Ball.  Image layout expected by the core:
+    0x080000 interleaved 68000 ROM, 0x400000 graphics, 0x080000 OKI samples.
+    Smaller ROM sets are padded / mirrored to that layout.  The 256KB OKI ROM is mirrored into both 256KB banks (bank bit is ignored on the real board).
+  -->
+  <rom index="0" zip="ultennis.zip" md5="none" type="merged|nonmerged|split">
+    <interleave output="16">
+      <part name="a+m001b1093_13b_u102.u102" crc="ec31385e" map="01"/>
+      <part name="a+m001b1093_12b_u101.u101" crc="08a7f655" map="10"/>
+    </interleave>
+    <part name="a+m-001-01-a.ic133" crc="29d9204d"/>
+    <part repeat="0x200000">00</part>
+    <part name="a+m001b1093_14a_u151.u151" crc="4e19ca89"/>
+    <part name="a+m001b1093_14a_u151.u151" crc="4e19ca89"/>
+  </rom>
+
+  <!-- Core game select: 0 Stone Ball, 1 Ultimate Tennis, 2 Cheese Chase. -->
+  <rom index="1"><part>01</part></rom>
+
+  <nvram index="2" size="2048"/>
+
+  <!-- DIP names/values follow pinned MAME artmagic.cpp ultennis:
+       SWB = 300004 (bits 0-7), SWA = 300006 (bits 8-15). -->
+  <switches default="4f,ff">
+    <dip bits="0" name="Button Layout" ids="Linear,Triangular" values="0,1"/>
+    <dip bits="1" name="Start Set At" ids="0-0,4-4" values="0,1"/>
+    <dip bits="2" name="Sets Per Match" ids="3,1" values="0,1"/>
+    <dip bits="3,4" name="Game Duration" ids="5 Lost Points,6 Lost Points,7 Lost Points,8 Lost Points" values="3,1,2,0"/>
+    <dip bits="5" name="Demo Sounds" ids="Off,On" values="1,0"/>
+    <dip bits="6,7" name="Difficulty" ids="Easy,Normal,Hard,Very Hard" values="3,1,2,0"/>
+    <dip bits="8,9,10" name="Right Coinage" ids="6 Coins/1 Credit,5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/4 Credits" values="2,6,1,5,3,7,4,0"/>
+    <dip bits="11,12,13" name="Left Coinage" ids="4 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip bits="14" name="Free Play" ids="Off,On" values="1,0"/>
+    <dip bits="15" name="Service Mode" ids="Off,On" values="1,0"/>
+  </switches>
+
+  <buttons names="Shot/Serve 1,Lob/Serve 2,Smash/Serve 3,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+</misterromdescription>
