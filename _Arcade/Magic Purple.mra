@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Magic Purple</name>
+  <setname>magipur</setname>
+  <mameversion>0289</mameversion>
+  <year>1996</year>
+  <manufacturer>Unico</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="magipur.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 12 01 00 00 00 10 00 00 10 00 01
+</part>
+    <interleave output="16">
+      <part name="unico_2-27c040.bin" crc="135c5de7" offset="0" length="524288" map="01"/>
+      <part name="unico_3-27c040.bin" crc="ee4b16da" offset="0" length="524288" map="10"/>
+    </interleave>
+    <part repeat="1048576">FF</part>
+    <interleave output="16">
+      <part name="unico_6-27c040.bin" crc="b25b5872" offset="262144" length="262144" map="01"/>
+      <part name="unico_6-27c040.bin" crc="b25b5872" offset="0" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="unico_7-27c040.bin" crc="d3c3a672" offset="262144" length="262144" map="01"/>
+      <part name="unico_7-27c040.bin" crc="d3c3a672" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1048576">FF</part>
+    <interleave output="16">
+      <part name="unico_5-27c040.bin" crc="79c53627" offset="0" length="262144" map="01"/>
+      <part name="unico_5-27c040.bin" crc="79c53627" offset="262144" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="unico_4-27c040.bin" crc="e460a77d" offset="0" length="262144" map="01"/>
+      <part name="unico_4-27c040.bin" crc="e460a77d" offset="262144" length="262144" map="10"/>
+    </interleave>
+    <part repeat="3145728">FF</part>
+    <part name="unico_1-27c020.bin" crc="84dcf771" offset="0" length="262144"/>
+  </rom>
+  <rom index="1">
+    <part>12</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 00 4E DA 00 AC 00 20
+</part>
+  </rom>
+  <nvram index="4" size="172"/>
+  <switches default="f7,ff">
+    <dip name="2 Coins Start/1 Cont." bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="2" ids="Off,On" values="1,0"/>
+    <dip name="Demo Sounds" bits="3" ids="Off,On" values="1,0"/>
+    <dip name="Allow Continue" bits="4" ids="No,Yes" values="0,1"/>
+    <dip name="Coinage" bits="5,7" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits" values="1,2,3,7,6,5,4"/>
+    <dip name="Freeze" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="9" ids="Off,On" values="1,0"/>
+    <dip name="Unused (3)" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Unused (4)" bits="11" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="12,13" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0"/>
+    <dip name="Lives" bits="14,15" ids="1,2,3,4" values="2,0,3,1"/>
+  </switches>
+  <buttons names="Shoot,Punch,Jump,Start,Coin,Pause,Service" default="A,B,X,Start,Select,R,L" count="2"/>
+</misterromdescription>

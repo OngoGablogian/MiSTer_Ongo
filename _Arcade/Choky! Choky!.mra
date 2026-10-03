@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Choky! Choky!</name>
+  <setname>chokchok</setname>
+  <mameversion>0289</mameversion>
+  <year>1995</year>
+  <manufacturer>SemiCom</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="chokchok.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 26 01 00 00 00 20 00 00 20 00 01
+</part>
+    <interleave output="16">
+      <part name="ub17.bin" crc="ecdb45ca" offset="0" length="262144" map="01"/>
+      <part name="ub18.bin" crc="b183852a" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="524288">00</part>
+    <part name="ub5.bin" crc="30c2171d" offset="0" length="65536"/>
+    <part repeat="131072">FF</part>
+    <part name="p87c52ebpn.bin" crc="0d6b4918" offset="0" length="8192"/>
+    <part repeat="843776">FF</part>
+    <interleave output="16">
+      <part name="srom6.bin" crc="31d5715d" offset="0" length="131072" map="01"/>
+      <part name="srom5.bin" crc="836608b8" offset="0" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="srom6.bin" crc="31d5715d" offset="262144" length="131072" map="01"/>
+      <part name="srom5.bin" crc="836608b8" offset="262144" length="131072" map="10"/>
+    </interleave>
+    <part repeat="524288">00</part>
+    <interleave output="16">
+      <part name="srom6.bin" crc="31d5715d" offset="131072" length="131072" map="01"/>
+      <part name="srom5.bin" crc="836608b8" offset="131072" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="srom6.bin" crc="31d5715d" offset="393216" length="131072" map="01"/>
+      <part name="srom5.bin" crc="836608b8" offset="393216" length="131072" map="10"/>
+    </interleave>
+    <part repeat="524288">00</part>
+    <interleave output="16">
+      <part name="uor1.bin" crc="ded6642a" offset="0" length="524288" map="01"/>
+      <part name="uor2.bin" crc="493f9516" offset="0" length="524288" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="uor3.bin" crc="e2dc3e12" offset="0" length="524288" map="01"/>
+      <part name="uor4.bin" crc="6f377530" offset="0" length="524288" map="10"/>
+    </interleave>
+    <part repeat="2097152">FF</part>
+    <part name="uc1.bin" crc="f3f57abd" offset="0" length="262144"/>
+  </rom>
+  <rom index="1">
+    <part>26</part>
+  </rom>
+  <switches default="ff,3f">
+    <dip name="Winning Rounds" bits="0" ids="2,3" values="0,1"/>
+    <dip name="Ball Speed" bits="1,2" ids="Slow,Normal,Fast,Very Fast" values="0,3,1,2"/>
+    <dip name="Energy Decrease" bits="3,4" ids="Very Small,Small,Normal,Big" values="0,2,3,1"/>
+    <dip name="Game Time" bits="5" ids="60 Seconds,90 Seconds" values="1,0"/>
+    <dip name="Starting Balls" bits="6,7" ids="3,4,5,6" values="0,3,1,2"/>
+    <dip name="Service Mode" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="9,10" ids="Easy,Normal,Hard,Very Hard" values="0,3,1,2"/>
+    <dip name="Coinage" bits="11,13" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,2 Coins/3 Credits,1 Coin/2 Credits,1 Coin/3 Credits" values="0,4,2,6,7,5,3,1"/>
+    <dip name="Language" bits="14" ids="Korean,English" values="1,0"/>
+    <dip name="Demo Sounds" bits="15" ids="Off,On" values="1,0"/>
+  </switches>
+  <buttons names="Fire,Button 2,-,Start,Coin,Pause" default="A,B,X,Start,Select,R" count="2"/>
+</misterromdescription>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Fancy World - Earth of Crisis (set 1)</name>
+  <setname>fncywld</setname>
+  <mameversion>0289</mameversion>
+  <year>1996</year>
+  <manufacturer>Unico</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="fncywld.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 10 01 00 00 00 10 00 00 10 00 01
+</part>
+    <interleave output="16">
+      <part name="01_fw02.bin" crc="ecb978c1" offset="0" length="524288" map="01"/>
+      <part name="02_fw03.bin" crc="2d233b42" offset="0" length="524288" map="10"/>
+    </interleave>
+    <part repeat="1048576">FF</part>
+    <interleave output="16">
+      <part name="08_fw09.bin" crc="a4a00de9" offset="0" length="262144" map="01"/>
+      <part name="07_fw08.bin" crc="b48cd1d4" offset="0" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="10_fw11.bin" crc="f21bab48" offset="0" length="262144" map="01"/>
+      <part name="09_fw10.bin" crc="6aea8e0f" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1048576">FF</part>
+    <interleave output="16">
+      <part name="05_fw06.bin" crc="e141ecdc" offset="0" length="262144" map="01"/>
+      <part name="06_fw07.bin" crc="0058a812" offset="0" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="03_fw04.bin" crc="6ad38c14" offset="0" length="262144" map="01"/>
+      <part name="04_fw05.bin" crc="b8d079a6" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="3145728">FF</part>
+    <part name="00_fw01.bin" crc="b395fe01" offset="0" length="262144"/>
+  </rom>
+  <rom index="1">
+    <part>10</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 FF 83 11 00 AE 05 56
+</part>
+  </rom>
+  <nvram index="4" size="174"/>
+  <switches default="f7,ff">
+    <dip name="2 Coins Start/1 Cont." bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Language" bits="2" ids="English,Korean" values="1,0"/>
+    <dip name="Demo Sounds" bits="3" ids="Off,On" values="1,0"/>
+    <dip name="Allow Continue" bits="4" ids="No,Yes" values="0,1"/>
+    <dip name="Coinage" bits="5,7" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits" values="1,2,3,7,6,5,4"/>
+    <dip name="Freeze" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="9" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Unused (3)" bits="11" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="12,13" ids="Easy,Normal,Hard,Hardest" values="3,2,1,0"/>
+    <dip name="Lives" bits="14,15" ids="1,2,3,4" values="2,0,3,1"/>
+  </switches>
+  <buttons names="Fire,Jump,Button 3,Start,Coin,Pause,Service" default="A,B,X,Start,Select,R,L" count="2"/>
+</misterromdescription>

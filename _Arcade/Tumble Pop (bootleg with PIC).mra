@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Tumble Pop (bootleg with PIC)</name>
+  <setname>tumbleb2</setname>
+  <mameversion>0289</mameversion>
+  <year>1991</year>
+  <manufacturer>bootleg</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="tumbleb2.zip|tumblep.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 02 01 00 00 00 08 00 00 10 00 01
+</part>
+    <interleave output="16">
+      <part name="wj-2" crc="34b016e1" offset="0" length="262144" map="01"/>
+      <part name="wj-3" crc="89501c71" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1572864">FF</part>
+    <interleave output="16">
+      <part name="wj-9" crc="0795aab4" offset="0" length="262144" map="01"/>
+      <part name="wj-8" crc="ad58df43" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1572864">FF</part>
+    <interleave output="16">
+      <part name="wj-6" crc="ee91db18" offset="0" length="262144" map="01"/>
+      <part name="wj-7" crc="87cffb06" offset="0" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="wj-4" crc="79a29725" offset="0" length="262144" map="01"/>
+      <part name="wj-5" crc="dda8932e" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="3145728">FF</part>
+    <part name="wj-1" crc="fabbf15d" offset="0" length="524288"/>
+    <part name="wj-1" crc="fabbf15d" offset="0" length="524288"/>
+  </rom>
+  <rom index="1">
+    <part>02</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 12 3C 10 00 A0 44 50 00 12 3C 01 00 03 00 00
+</part>
+  </rom>
+  <nvram index="4" size="163"/>
+  <switches default="ff,fe">
+    <dip name="2 Coins Start/1 Cont." bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Coin B" bits="2,4" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Coin A" bits="5,7" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Demo Sounds" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Allow Continue" bits="9" ids="No,Yes" values="0,1"/>
+    <dip name="Unused" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="11" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="12,13" ids="Easy,Normal,Hard,Hardest" values="1,3,2,0"/>
+    <dip name="Lives" bits="14,15" ids="1,2,3,4" values="2,0,3,1"/>
+  </switches>
+  <buttons names="Vacuum,Jump,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,R,L" count="2"/>
+</misterromdescription>

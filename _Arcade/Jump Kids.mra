@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Jump Kids</name>
+  <setname>jumpkids</setname>
+  <mameversion>0289</mameversion>
+  <year>1993</year>
+  <manufacturer>Comad</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="jumpkids.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 05 01 00 00 00 08 00 00 10 00 01
+</part>
+    <interleave output="16">
+      <part name="23-ic29.15c" crc="6ba11e91" offset="0" length="262144" map="01"/>
+      <part name="24-ic30.17c" crc="5795d98b" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="524288">FF</part>
+    <part name="22-ic19.3c" crc="bd619530" offset="0" length="32768"/>
+    <part repeat="32768">00</part>
+    <part repeat="983040">FF</part>
+    <interleave output="16">
+      <part name="30-ic125.15j" crc="44b9a089" offset="0" length="262144" map="01"/>
+      <part name="29-ic124.13j" crc="3f98ec69" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1572864">FF</part>
+    <interleave output="16">
+      <part name="25-ic69.1g" crc="176ae857" offset="0" length="262144" map="01"/>
+      <part name="28-ic131.1l" crc="ed837757" offset="0" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="26-ic70.2g" crc="e8b34980" offset="0" length="262144" map="01"/>
+      <part name="27-ic100.1j" crc="3918dda3" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="3145728">FF</part>
+    <part name="ic18.2c" crc="a63736c3" offset="0" length="131072"/>
+    <part repeat="131072">00</part>
+    <part repeat="786432">FF</part>
+    <part name="21-ic17.1c" crc="e5094f75" offset="0" length="524288"/>
+  </rom>
+  <rom index="1">
+    <part>05</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 12 3C 10 00 A0 50 50 00 12 3C 01 00 03 00 00
+</part>
+  </rom>
+  <nvram index="4" size="163"/>
+  <switches default="ff,fe">
+    <dip name="2 Coins Start/1 Cont." bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Coin B" bits="2,4" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Coin A" bits="5,7" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Demo Sounds" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Allow Continue" bits="9" ids="No,Yes" values="0,1"/>
+    <dip name="Unused" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="11" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="12,13" ids="Easy,Normal,Hard,Hardest" values="1,3,2,0"/>
+    <dip name="Lives" bits="14,15" ids="1,2,3,4" values="2,0,3,1"/>
+  </switches>
+  <buttons names="Attack,Jump,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,R,L" count="2"/>
+</misterromdescription>

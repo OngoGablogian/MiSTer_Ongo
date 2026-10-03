@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Tumble Pop (bootleg)</name>
+  <setname>tumbleb</setname>
+  <mameversion>0289</mameversion>
+  <year>1991</year>
+  <manufacturer>bootleg</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="tumbleb.zip|tumblep.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 01 01 00 00 00 08 00 00 10 00 01
+</part>
+    <interleave output="16">
+      <part name="thumbpop.12" crc="0c984703" offset="0" length="262144" map="01"/>
+      <part name="thumbpop.13" crc="864c4053" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1572864">FF</part>
+    <interleave output="16">
+      <part name="thumbpop.19" crc="0795aab4" offset="0" length="262144" map="01"/>
+      <part name="thumbpop.18" crc="ad58df43" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1572864">FF</part>
+    <part name="map-01.rom" crc="e81ffa09" offset="0" length="524288"/>
+    <part name="map-00.rom" crc="8c879cfe" offset="0" length="524288"/>
+    <part repeat="3145728">FF</part>
+    <part name="thumbpop.snd" crc="fabbf15d" offset="0" length="524288"/>
+  </rom>
+  <rom index="1">
+    <part>01</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 12 3C 10 00 A0 44 50 00 12 3C 01 00 03 00 00
+</part>
+  </rom>
+  <nvram index="4" size="163"/>
+  <switches default="ff,fe">
+    <dip name="2 Coins Start/1 Cont." bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Coin B" bits="2,4" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Coin A" bits="5,7" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Demo Sounds" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Allow Continue" bits="9" ids="No,Yes" values="0,1"/>
+    <dip name="Unused" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="11" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="12,13" ids="Easy,Normal,Hard,Hardest" values="1,3,2,0"/>
+    <dip name="Lives" bits="14,15" ids="1,2,3,4" values="2,0,3,1"/>
+  </switches>
+  <buttons names="Vacuum,Jump,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,R,L" count="2"/>
+</misterromdescription>

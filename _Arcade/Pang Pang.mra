@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Pang Pang</name>
+  <setname>pangpang</setname>
+  <mameversion>0289</mameversion>
+  <year>1994</year>
+  <manufacturer>Dong Gue La Mi Ltd.</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="pangpang.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 03 01 00 00 00 10 00 00 10 00 01
+</part>
+    <interleave output="16">
+      <part name="2.bin" crc="45436666" offset="0" length="262144" map="01"/>
+      <part name="3.bin" crc="2725cbe7" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="589824">FF</part>
+    <part name="pic_16c57" crc="1ca515b4" offset="0" length="11596"/>
+    <part repeat="971444">FF</part>
+    <interleave output="16">
+      <part name="11.bin" crc="a2b9fec8" offset="0" length="131072" map="01"/>
+      <part name="10.bin" crc="4f59d7b9" offset="0" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="6.bin" crc="1ebbc4f1" offset="0" length="131072" map="01"/>
+      <part name="7.bin" crc="cd544173" offset="0" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="11.bin" crc="a2b9fec8" offset="131072" length="131072" map="01"/>
+      <part name="10.bin" crc="4f59d7b9" offset="131072" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="6.bin" crc="1ebbc4f1" offset="131072" length="131072" map="01"/>
+      <part name="7.bin" crc="cd544173" offset="131072" length="131072" map="10"/>
+    </interleave>
+    <part repeat="1048576">FF</part>
+    <interleave output="16">
+      <part name="8.bin" crc="ea0fa1e0" offset="0" length="262144" map="01"/>
+      <part name="9.bin" crc="1da5fe49" offset="0" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="4.bin" crc="4f282eb1" offset="0" length="262144" map="01"/>
+      <part name="5.bin" crc="00694df9" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="3145728">FF</part>
+    <part name="1.bin" crc="e722bb02" offset="0" length="524288"/>
+    <part name="1.bin" crc="e722bb02" offset="0" length="524288"/>
+  </rom>
+  <rom index="1">
+    <part>03</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 12 3C 10 00 A0 44 50
+</part>
+  </rom>
+  <nvram index="4" size="160"/>
+  <switches default="ff,fe">
+    <dip name="2 Coins Start/1 Cont." bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Flip Screen" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Coin B" bits="2,4" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Coin A" bits="5,7" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/4 Credits,1 Coin/5 Credits,1 Coin/6 Credits" values="0,4,7,3,5,1,6,2"/>
+    <dip name="Demo Sounds" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Allow Continue" bits="9" ids="No,Yes" values="0,1"/>
+    <dip name="Unused" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="11" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="12,13" ids="Easy,Normal,Hard,Hardest" values="1,3,2,0"/>
+    <dip name="Lives" bits="14,15" ids="1,2,3,4" values="2,0,3,1"/>
+  </switches>
+  <buttons names="Fire,Jump,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,R,L" count="2"/>
+</misterromdescription>

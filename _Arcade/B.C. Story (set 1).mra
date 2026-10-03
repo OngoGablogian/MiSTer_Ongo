@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>B.C. Story (set 1)</name>
+  <setname>bcstry</setname>
+  <mameversion>0289</mameversion>
+  <year>1997</year>
+  <manufacturer>SemiCom / Tirano</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="bcstry.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 23 01 00 00 00 20 00 00 40 00 01
+</part>
+    <interleave output="16">
+      <part name="bcstry_u.62" crc="7f7aa244" offset="131072" length="131072" map="01"/>
+      <part name="bcstry_u.35" crc="d25b80a4" offset="131072" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.62" crc="7f7aa244" offset="0" length="131072" map="01"/>
+      <part name="bcstry_u.35" crc="d25b80a4" offset="0" length="131072" map="10"/>
+    </interleave>
+    <part repeat="524288">00</part>
+    <part name="bcstry_u.21" crc="3ba072d4" offset="16384" length="16384"/>
+    <part name="bcstry_u.21" crc="3ba072d4" offset="0" length="16384"/>
+    <part name="bcstry_u.21" crc="3ba072d4" offset="49152" length="16384"/>
+    <part name="bcstry_u.21" crc="3ba072d4" offset="32768" length="16384"/>
+    <part repeat="73728">FF</part>
+    <part name="protdata.bin" crc="e84e328c" offset="0" length="512"/>
+    <part repeat="908800">FF</part>
+    <interleave output="16">
+      <part name="bcstry_u.109" crc="eb04d37a" offset="0" length="131072" map="01"/>
+      <part name="bcstry_u.113" crc="746ecdd7" offset="0" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.109" crc="eb04d37a" offset="262144" length="131072" map="01"/>
+      <part name="bcstry_u.113" crc="746ecdd7" offset="262144" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.110" crc="1bfe65c3" offset="0" length="131072" map="01"/>
+      <part name="bcstry_u.111" crc="c8bf3a3c" offset="0" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.110" crc="1bfe65c3" offset="262144" length="131072" map="01"/>
+      <part name="bcstry_u.111" crc="c8bf3a3c" offset="262144" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.109" crc="eb04d37a" offset="131072" length="131072" map="01"/>
+      <part name="bcstry_u.113" crc="746ecdd7" offset="131072" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.109" crc="eb04d37a" offset="393216" length="131072" map="01"/>
+      <part name="bcstry_u.113" crc="746ecdd7" offset="393216" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.110" crc="1bfe65c3" offset="131072" length="131072" map="01"/>
+      <part name="bcstry_u.111" crc="c8bf3a3c" offset="131072" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.110" crc="1bfe65c3" offset="393216" length="131072" map="01"/>
+      <part name="bcstry_u.111" crc="c8bf3a3c" offset="393216" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.100" crc="8c11cbed" offset="0" length="524288" map="01"/>
+      <part name="bcstry_u.106" crc="5219bcbf" offset="0" length="524288" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.99" crc="cdb1af87" offset="0" length="524288" map="01"/>
+      <part name="bcstry_u.105" crc="8166b596" offset="0" length="524288" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.104" crc="377c0c71" offset="0" length="524288" map="01"/>
+      <part name="bcstry_u.108" crc="442307ed" offset="0" length="524288" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bcstry_u.102" crc="71b40ece" offset="0" length="524288" map="01"/>
+      <part name="bcstry_u.107" crc="ab3c923a" offset="0" length="524288" map="10"/>
+    </interleave>
+    <part name="bcstry_u.64" crc="23f0e0fe" offset="0" length="262144"/>
+  </rom>
+  <rom index="1">
+    <part>23</part>
+  </rom>
+  <switches default="7f,df">
+    <dip name="Service Mode" bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="1,3" ids="Level 1,Level 2,Level 3,Level 4,Level 5,Level 6,Level 7,Level 8" values="2,4,0,7,3,5,1,6"/>
+    <dip name="Coinage" bits="4,6" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,2 Coins/3 Credits,1 Coin/2 Credits,1 Coin/3 Credits" values="0,4,2,6,7,5,3,1"/>
+    <dip name="Demo Sounds" bits="7" ids="Off,On" values="1,0"/>
+    <dip name="Free Play" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="9" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Unused (3)" bits="11" ids="Off,On" values="1,0"/>
+    <dip name="Unused (4)" bits="12" ids="Off,On" values="1,0"/>
+    <dip name="Event Selection" bits="13" ids="Off,On" values="1,0"/>
+    <dip name="Control Type" bits="14" ids="Joystick+Buttons,Buttons Only" values="1,0"/>
+    <dip name="Debug Mode" bits="15" ids="Off,On" values="1,0"/>
+  </switches>
+  <buttons names="Action 1,Action 2,Action 3,Start,Coin,Pause" default="A,B,X,Start,Select,R" count="2"/>
+</misterromdescription>

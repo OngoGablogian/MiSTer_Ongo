@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Metal Saver</name>
+  <setname>metlsavr</setname>
+  <mameversion>0289</mameversion>
+  <year>1994</year>
+  <manufacturer>First Amusement</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="metlsavr.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 25 01 00 00 00 08 00 00 20 00 01
+</part>
+    <interleave output="16">
+      <part name="first-4.ub17" crc="667a494d" offset="0" length="262144" map="01"/>
+      <part name="first-3.ub18" crc="87bf4ed2" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="524288">00</part>
+    <part name="first-2.ua7" crc="49505edf" offset="0" length="65536"/>
+    <part repeat="73728">FF</part>
+    <part name="protdata.bin" crc="17aa17a9" offset="0" length="512"/>
+    <part repeat="908800">FF</part>
+    <interleave output="16">
+      <part name="first-6.rom6" crc="808b0e0b" offset="0" length="262144" map="01"/>
+      <part name="first-5.rom5" crc="dd4af746" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1572864">FF</part>
+    <interleave output="16">
+      <part name="first-7.uor1" crc="a6816747" offset="0" length="524288" map="01"/>
+      <part name="first-8.uor2" crc="377020e5" offset="0" length="524288" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="first-9.uor3" crc="fccf1bb7" offset="0" length="524288" map="01"/>
+      <part name="first-10.uor4" crc="a22b587b" offset="0" length="524288" map="10"/>
+    </interleave>
+    <part repeat="2097152">FF</part>
+    <part name="first-1.uc1" crc="e943dacb" offset="0" length="262144"/>
+  </rom>
+  <rom index="1">
+    <part>25</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 34 16 00 00 63 03 44
+</part>
+  </rom>
+  <nvram index="4" size="99"/>
+  <switches default="ff,ff">
+    <dip name="Unused" bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Lives" bits="2,3" ids="2,3,4,5" values="0,3,2,1"/>
+    <dip name="Coinage" bits="4,6" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/5 Credits" values="0,1,2,3,7,6,5,4"/>
+    <dip name="Demo Sounds" bits="7" ids="Off,On" values="0,1"/>
+    <dip name="Service Mode" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Unknown" bits="9" ids="Off,On" values="1,0"/>
+    <dip name="Unknown (2)" bits="10" ids="Off,On" values="1,0"/>
+    <dip name="Language" bits="11" ids="English,Korean" values="1,0"/>
+    <dip name="Life Meter" bits="12,13" ids="66%,100%,133%,166%" values="0,3,2,1"/>
+    <dip name="Time" bits="14,15" ids="30 Seconds,40 Seconds,60 Seconds,80 Seconds" values="1,2,3,0"/>
+  </switches>
+  <buttons names="Attack,Strong Attack,Jump,Start,Coin,Pause" default="A,B,X,Start,Select,R" count="2"/>
+</misterromdescription>

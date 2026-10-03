@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Cookie &amp; Bibi (set 1)</name>
+  <setname>cookbib</setname>
+  <mameversion>0289</mameversion>
+  <year>1995</year>
+  <manufacturer>SemiCom</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="cookbib.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 20 01 00 00 00 08 00 00 08 00 01
+</part>
+    <interleave output="16">
+      <part name="prg2.ub17" crc="2664a335" offset="0" length="131072" map="01"/>
+      <part name="prg1.ub16" crc="cda6335f" offset="0" length="131072" map="10"/>
+    </interleave>
+    <part repeat="786432">00</part>
+    <part name="prg-s.ub5" crc="547d6ea3" offset="0" length="65536"/>
+    <part repeat="73728">FF</part>
+    <part name="protdata.bin" crc="a77d13f4" offset="0" length="512"/>
+    <part repeat="908800">FF</part>
+    <interleave output="16">
+      <part name="srom6.bin" crc="ade2dbec" offset="0" length="262144" map="01"/>
+      <part name="srom5.bin" crc="73a46e43" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="1572864">FF</part>
+    <interleave output="16">
+      <part name="uor1.bin" crc="a7d91f23" offset="0" length="131072" map="01"/>
+      <part name="uor2.bin" crc="9aacbec2" offset="0" length="131072" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="uor3.bin" crc="3fee0c3c" offset="0" length="131072" map="01"/>
+      <part name="uor4.bin" crc="bed9ed2d" offset="0" length="131072" map="10"/>
+    </interleave>
+    <part repeat="3670016">FF</part>
+    <part name="sound.uc1" crc="545e19b6" offset="0" length="131072"/>
+    <part repeat="131072">00</part>
+  </rom>
+  <rom index="1">
+    <part>20</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 12 1C CA 00 AA 20 64
+</part>
+  </rom>
+  <nvram index="4" size="170"/>
+  <switches default="ff,7f">
+    <dip name="Unused" bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Unused (2)" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Unused (3)" bits="2" ids="Off,On" values="1,0"/>
+    <dip name="Unused (4)" bits="3" ids="Off,On" values="1,0"/>
+    <dip name="Unused (5)" bits="4" ids="Off,On" values="1,0"/>
+    <dip name="Unused (6)" bits="5" ids="Off,On" values="1,0"/>
+    <dip name="Unused (7)" bits="6" ids="Off,On" values="1,0"/>
+    <dip name="Unused (8)" bits="7" ids="Off,On" values="1,0"/>
+    <dip name="Service Mode" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="9,10" ids="Easy,Normal,Hard,Very Hard" values="0,3,1,2"/>
+    <dip name="Coinage" bits="11,13" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,2 Coins/3 Credits,1 Coin/2 Credits,1 Coin/3 Credits" values="0,4,2,6,7,5,3,1"/>
+    <dip name="Winning Rounds (VS Mode)" bits="14" ids="1,2" values="0,1"/>
+    <dip name="Demo Sounds" bits="15" ids="Off,On" values="1,0"/>
+  </switches>
+  <buttons names="Fire,Button 2,-,Start,Coin,Pause" default="A,B,X,Start,Select,R" count="2"/>
+</misterromdescription>

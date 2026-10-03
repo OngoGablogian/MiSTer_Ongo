@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+  <about author="TUMBLE core" source="https://github.com/meathax/TUMBLE"/>
+  <rotation>horizontal</rotation>
+  <name>Super Trio</name>
+  <setname>suprtrio</setname>
+  <mameversion>0289</mameversion>
+  <year>1994</year>
+  <manufacturer>Gameace</manufacturer>
+  <players>2</players>
+  <rbf>kuze_Tumble</rbf>
+  <rom index="0" zip="suprtrio.zip" md5="None" type="merged">
+    <part>
+54 4D 42 4C 01 30 03 00 00 00 10 00 00 10 02 01
+</part>
+    <interleave output="16">
+      <part name="rom2" crc="4102e59d" offset="0" length="262144" map="01"/>
+      <part name="rom1" crc="cc3a83c3" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="524288">FF</part>
+    <part name="rom4l" crc="466aa96d" offset="0" length="65536"/>
+    <part repeat="983040">FF</part>
+    <part name="rom4" crc="cd2dfae4" offset="0" length="131072"/>
+    <part name="rom4" crc="cd2dfae4" offset="262144" length="131072"/>
+    <part name="rom4" crc="cd2dfae4" offset="131072" length="131072"/>
+    <part name="rom4" crc="cd2dfae4" offset="393216" length="131072"/>
+    <part name="rom5" crc="4e64da64" offset="0" length="131072"/>
+    <part name="rom5" crc="4e64da64" offset="262144" length="131072"/>
+    <part name="rom5" crc="4e64da64" offset="131072" length="131072"/>
+    <part name="rom5" crc="4e64da64" offset="393216" length="131072"/>
+    <part repeat="1048576">FF</part>
+    <interleave output="16">
+      <part name="rom9l" crc="cc45f437" offset="0" length="262144" map="01"/>
+      <part name="rom8l" crc="9bc90169" offset="0" length="262144" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="rom7l" crc="bfc7c756" offset="0" length="262144" map="01"/>
+      <part name="rom6l" crc="bb3499af" offset="0" length="262144" map="10"/>
+    </interleave>
+    <part repeat="3145728">FF</part>
+    <part name="rom3h" crc="34ea7ec9" offset="0" length="196608"/>
+    <part repeat="65536">00</part>
+    <part name="rom3h" crc="34ea7ec9" offset="196608" length="327680"/>
+    <part name="rom3l" crc="1b73233b" offset="0" length="131072"/>
+  </rom>
+  <rom index="1">
+    <part>30</part>
+  </rom>
+  <rom index="3">
+    <part>
+00 10 00 00 00 FF 00 02 00 02 00 01 00 FF 0F 00
+00 F0 33 08 00 5A 01 4E
+</part>
+  </rom>
+  <nvram index="4" size="90"/>
+  <switches default="10">
+    <dip name="Coin A" bits="0,2" ids="5 Coins/1 Credit,4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit,1 Coin/2 Credits,1 Coin/3 Credits,Free Play" values="6,5,4,3,0,1,2,7"/>
+    <dip name="Lives" bits="3,4" ids="1,2,3,5" values="0,1,2,3"/>
+    <dip name="Difficulty" bits="5" ids="Normal,Hard" values="0,1"/>
+    <dip name="Bonus Life" bits="6" ids="50000,60000" values="0,1"/>
+    <dip name="Service Mode" bits="7" ids="Off,On" values="0,1"/>
+  </switches>
+  <buttons names="Attack,Jump,Button 3,Start,Coin,Pause" default="A,B,X,Start,Select,R" count="2"/>
+</misterromdescription>
