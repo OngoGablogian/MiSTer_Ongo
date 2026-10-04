@@ -1,0 +1,46 @@
+<!--
+  Neratte Chu (ver. 1.10) - Seta 1996 - Seta ST-0016 - MRA for the NeratteChu MiSTer core.
+  MAME set nratechu (MAME 0.289 simple_st0016.cpp). No ROM data is embedded in this file.
+
+  ioctl index 0: the ST-0016 external ROM region exactly as MAME builds it
+  (ROM_REGION 0x400000 "maincpu", ROMREGION_ERASE00):
+      000000-07FFFF  sx012-01 (u31)
+      080000-0FFFFF  zero (not populated in this range)
+      100000-1FFFFF  sx012-02 (u32)
+      200000-3FFFFF  zero (U33/U34 not populated) - written by the core's loader, not streamed
+  Stream offset == external ROM byte address (docs/ST0016_HARDWARE.md).
+
+  DIP switches (index 254): byte 0 = DSW1, byte 1 = DSW2, stored as MAME's port values
+  (active low). Defaults are MAME's: DSW1 = FF, DSW2 = DF (Demo Sounds On, as MAME).
+-->
+<misterromdescription>
+    <name>Neratte Chu (ver. 1.10)</name>
+    <setname>nratechu</setname>
+    <rbf>NeratteChu</rbf>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Seta</manufacturer>
+    <region>Japan</region>
+    <category>Puzzle</category>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service" default="A,B,X,Start,Select,R"/>
+
+    <switches default="FF,DF" base="16">
+        <dip bits="0,2"  name="Coinage" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+        <dip bits="6"    name="How To Play" ids="No,Yes"/>
+        <dip bits="7"    name="Language" ids="English,Japanese"/>
+        <dip bits="8,9"  name="Difficulty" ids="Hardest,Hard,Easy,Normal"/>
+        <dip bits="10,11" name="VS Round" ids="First one to win,Best 4 of 7,Best 3 of 5,Best 2 of 3"/>
+        <dip bits="13"   name="Demo Sounds" ids="On,Off"/>
+        <dip bits="14"   name="Flip Screen" ids="On,Off"/>
+        <dip bits="15"   name="Service Mode" ids="On,Off"/>
+    </switches>
+
+    <rom index="0" zip="nratechu.zip" md5="None">
+        <part name="sx012-01.u31" crc="6ca01d57"/>
+        <part repeat="0x80000">00</part>
+        <part name="sx012-02.u32" crc="40a4e354"/>
+    </rom>
+</misterromdescription>

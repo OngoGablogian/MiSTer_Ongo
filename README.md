@@ -75,6 +75,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                     |
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
 | [Namco NA-1 / NA-2](https://github.com/kyledlester/Namco_NA1_NA2_MiSTer)                                                       |
+| [Namco NB-1](https://github.com/kyledlester/Namco_NB1_MiSTer)                                                                  |
 | [Namco ND-1](https://www.patreon.com/Meathax/posts/namco-classic-1-170443635)                                                  |
 | [Namco System 2](https://github.com/kuzearcade/Arcade-NamcoSystem2_MiSTer)                                                     |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
@@ -85,6 +86,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [NARC (blahm1d)](https://www.patreon.com/blahm1d/posts/blahm1d-coaxes-164867975)                                               |
 | [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-v1-0-165736329)                                               |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |
+| [Neratte Chu (Seta ST-0016)](https://github.com/kyledlester/MiSTer_Neratte_Chu)                                                |
 | [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
 | [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                        |
 | [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                 |
@@ -94,8 +96,10 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo Super System](https://www.patreon.com/bazset/posts/nintendo-super-170678491)                                         |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                  |
 | [NMK16](https://github.com/kuzearcade/Arcade-NMK16_MiSTer)                                                                     |
+| [Nostradamus / Magical Cat Adventure (LINDA board)](https://github.com/kyledlester/Nostradamus_Magical_Cat_Adventure_MiSTer)   |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
+| [R-Shark / Super-X (Dooyong)](https://github.com/kyledlester/R_Shark_Super_X_MiSTer)                                           |
 | [Return of the Jedi](https://github.com/Usquebagh/Arcade-Jedi_MiSTer)                                                          |
 | [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
 | [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                              |

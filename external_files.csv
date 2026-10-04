@@ -69,6 +69,7 @@ games/mame/momoko.zip,https://archive.org/download/OngoFiles/mame/momoko.zip,"20
 games/mame/narc.zip,https://archive.org/download/OngoFiles/mame/narc.zip,"6273107",7d84f28d5c75292b5b48361acaaaf89e,,,
 games/mame/nob.zip,https://archive.org/download/OngoFiles/mame/nob.zip,"197068",9b02c09dd3397addeb7da2562ffc4809,,,
 games/mame/nova2001h.zip,https://archive.org/download/OngoFiles/mame/nova2001h.zip,"29741",6e010f1ae04f6cc9b2812fc0ea9c4d8f,,,
+games/mame/nratechu.zip,https://archive.org/download/OngoFiles/mame/nratechu.zip,"563498",97ac56e3f82bbb38fda3256ee906c977,,,
 games/mame/pacupacu.zip,https://archive.org/download/OngoFiles/mame/pacupacu.zip,"8718",9e3b03176cb39becea1227b3b4428c15,,,
 games/mame/punchout.zip,https://archive.org/download/OngoFiles/mame/punchout.zip,"297969",22ec2846eebd3c67e897801fd602f667,,,
 games/mame/revx.zip,https://archive.org/download/OngoFiles/mame/revx.zip,"18679384",5ab1cbd25a4f61e529488cbec8688302,,,
@@ -233,6 +234,16 @@ games/mame/quiztou.zip,https://archive.org/download/OngoFiles/mame-namcona1na2/q
 games/mame/swcourt.zip,https://archive.org/download/OngoFiles/mame-namcona1na2/swcourt.zip,"3241996",20f8908f0ad6e19dd6b57692f4288d5a,,,
 games/mame/tinklpit.zip,https://archive.org/download/OngoFiles/mame-namcona1na2/tinklpit.zip,"2246626",e9a7a61d3843cf9164e9c887b13a4c49,,,
 
+games/mame/gslgr94u.zip,https://archive.org/download/OngoFiles/mame-namconb1/gslgr94u.zip,"10167077",5a6a5cdddef3f28e423213e699ea0291,,,
+games/mame/gslugrsj.zip,https://archive.org/download/OngoFiles/mame-namconb1/gslugrsj.zip,"3822210",e95781b6fe988fe994bc2ea43ef36544,,,
+games/mame/namcoc75.zip,https://archive.org/download/OngoFiles/mame-namconb1/namcoc75.zip,"8709",17516c33298e52424ffb58afc2ad208c,,,
+games/mame/nebulray.zip,https://archive.org/download/OngoFiles/mame-namconb1/nebulray.zip,"19467713",39b5ff379c65ea96f265ba77eecf0183,,,
+games/mame/ptblank.zip,https://archive.org/download/OngoFiles/mame-namconb1/ptblank.zip,"6023436",4eb46870236573bcfb289cd406376940,,,
+games/mame/sws95.zip,https://archive.org/download/OngoFiles/mame-namconb1/sws95.zip,"3428540",26c03ecf5ad17911a7c079927e021a88,,,
+games/mame/sws96.zip,https://archive.org/download/OngoFiles/mame-namconb1/sws96.zip,"3455578",a669846ab11ae5c91513082b732b99f5,,,
+games/mame/sws97.zip,https://archive.org/download/OngoFiles/mame-namconb1/sws97.zip,"3453442",d034843f198992cab685a8fe2c9dcb22,,,
+games/mame/vshoot.zip,https://archive.org/download/OngoFiles/mame-namconb1/vshoot.zip,"5004115",8e0ff95cbe52ceb6a26a06e8f2b4f41d,,,
+
 games/mame/ncv1.zip,https://archive.org/download/OngoFiles/mame-namcond1/ncv1.zip,"2794680",a47218b946bcd8e54ad349e037e2a68b,,,
 games/mame/ncv2.zip,https://archive.org/download/OngoFiles/mame-namcond1/ncv2.zip,"3362803",56fd3de335ae9304243f14ac687b9385,,,
 
@@ -341,6 +352,9 @@ games/mame/vandyke.zip,https://archive.org/download/OngoFiles/mame-nmk16/vandyke
 games/mame/macrossp.zip,https://archive.org/download/OngoFiles/mame-nmkbp964/macrossp.zip,"16024981",840e30b4876afa8521246b1a76b1c3bc,,,
 games/mame/quizmoon.zip,https://archive.org/download/OngoFiles/mame-nmkbp964/quizmoon.zip,"23097005",4e4372360aeb2450ed076e5e589bf7c0,,,
 
+games/mame/mcatadv.zip,https://archive.org/download/OngoFiles/mame-nostradamus/mcatadv.zip,"4485469",a6f90f943860325071a76c18d69ca5d7,,,
+games/mame/nost.zip,https://archive.org/download/OngoFiles/mame-nostradamus/nost.zip,"3189195",a1c997e911c4c5ff406d25486d2f2859,,,
+
 games/mame/nss.zip,https://archive.org/download/OngoFiles/mame-nss/nss.zip,"50412",4faaf2df15a5132eda3120d50d4a6693,,,
 games/mame/nss_fzer.zip,https://archive.org/download/OngoFiles/mame-nss/nss_fzer.zip,"583835",156bb6397beee69bd7530372f001a227,,,
 games/mame/nss_smw.zip,https://archive.org/download/OngoFiles/mame-nss/nss_smw.zip,"353701",5bd923c28757d6dd0fb98cdf52eb4d2f,,,
@@ -353,6 +367,9 @@ games/mame/ketps4.zip,https://archive.org/download/OngoFiles/mame-pgm/ketps4.zip
 games/mame/kov.zip,https://archive.org/download/OngoFiles/mame-pgm/kov.zip,"30867775",52356a57708cdf61a2e7f4e159394ce4,,,
 games/mame/kov2p.zip,https://archive.org/download/OngoFiles/mame-pgm/kov2p.zip,"28799203",81ee45078459a4e5ba6cc0364201aa76,,,
 games/mame/kovplus.zip,https://archive.org/download/OngoFiles/mame-pgm/kovplus.zip,"33185889",867312a58f0b086fa28b9dcfd256a617,,,
+
+games/mame/rshark.zip,https://archive.org/download/OngoFiles/mame-rshark/rshark.zip,"2695123",dcf81fcc20120af5f8791cb1004d4fe1,,,
+games/mame/superx.zip,https://archive.org/download/OngoFiles/mame-rshark/superx.zip,"1894376",c3569647c8889692e888c93f3f56588d,,,
 
 games/mame/model1io.zip,https://archive.org/download/OngoFiles/mame-segamodel1/model1io.zip,"4700",804ad0e72a9e18b67dfcf630f5b79985,,,
 games/mame/swa.zip,https://archive.org/download/OngoFiles/mame-segamodel1/swa.zip,"16533461",d3433f7d6ba1a34cef4cbd0deaa899cc,,,
