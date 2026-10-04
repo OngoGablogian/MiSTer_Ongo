@@ -1,0 +1,70 @@
+<misterromdescription>
+	<name>Return of the Jedi</name>
+	<region></region>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<version></version>
+	<alternative></alternative>
+	<platform>Atari</platform>
+	<series>Star Wars</series>
+	<year>1984</year>
+	<manufacturer>Atari</manufacturer>
+	<category>Shooter</category>
+
+	<setname>jedi</setname>
+	<parent>jedi</parent>
+	<mameversion>0289</mameversion>
+	<rbf>Jedi</rbf>
+	<about author="Usquebagh" webpage="https://github.com/Usquebagh/Arcade-Jedi_MiSTer">Atari Return of the Jedi (1984): 2 x 6502, quad POKEY, TMS5220 speech, PIXI smoothing.</about>
+
+	<rotation>horizontal</rotation>
+	<flip></flip>
+
+	<players>1</players>
+	<joystick>Analog</joystick>
+	<special_controls>yoke</special_controls>
+	<num_buttons>6</num_buttons>
+	<buttons default="A,B,X,Select,R,Start" names="Trigger,Left Thumb,Right Thumb,Coin L,Coin R,Aux Coin"></buttons>
+
+	<!-- Layout must match the download decode in rtl/jedi_core.v -->
+	<rom index="0" md5="none" zip="jedi.zip">
+		<!-- 00000 main CPU: fixed 8000/C000, then banks 0-2 -->
+		<part crc="414d05e3" name="136030-221.14f"></part>
+		<part crc="7b3f21be" name="136030-222.13f"></part>
+		<part crc="877f554a" name="136030-123.13d"></part>
+		<part crc="e72d41db" name="136030-124.13b"></part>
+		<part crc="cce7ced5" name="136030-122.13a"></part>
+		<!-- 14000 sound CPU -->
+		<part crc="6c601c69" name="136030-133.01c"></part>
+		<part crc="5e36c564" name="136030-134.01a"></part>
+		<!-- 1C000 alphanumerics -->
+		<part crc="3e49491f" name="136030-215.11t"></part>
+		<!-- 1E000 / 26000 playfield -->
+		<part crc="9c55ece8" name="136030-126.06r"></part>
+		<part crc="4b09dcc5" name="136030-127.06n"></part>
+		<!-- 2E000 / 3E000 motion objects -->
+		<part crc="2646a793" name="136030-130.01h"></part>
+		<part crc="60107350" name="136030-131.01f"></part>
+		<part crc="24663184" name="136030-128.01m"></part>
+		<part crc="ac86b98c" name="136030-129.01k"></part>
+		<!-- 4E000 / 4E400 PIXI smoothing PROMs -->
+		<part crc="9831bd55" name="136030-117.bin"></part>
+		<part crc="261fbfe7" name="136030-118.bin"></part>
+	</rom>
+
+	<nvram index="4" size="256"></nvram>
+
+	<!-- Cheats converted from the MAME cheat file (https://www.mamecheat.co.uk).
+	     Format: flags(4) address(4) compare(4) value(4); applied to main CPU reads. -->
+	<cheats>
+		<cheat name="Infinite Lives">000000 10 00000013 00000000 0000009A</cheat>
+		<cheat name="Invincibility">
+			000000 10 0000A976 00000000 00000060
+			000000 10 0000A9FD 00000000 00000060
+			000000 10 0000A9F0 00000000 00000060
+			000000 10 0000A8EA 00000000 0000004C
+			000000 10 0000A8EB 00000000 00000011
+			000000 10 0000A8EC 00000000 000000A8
+		</cheat>
+	</cheats>
+</misterromdescription>
