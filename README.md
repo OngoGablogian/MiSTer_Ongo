@@ -28,7 +28,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Bally/Sente SAC-1](https://github.com/ppriest/Arcade-BallySente_MiSTer)                                                       |
 | [Banpresto BP964A / BP965A](https://github.com/kuzearcade/Arcade-NMKBP964_MiSTer)                                              |
-| [Batman](https://misterfpga.org/viewtopic.php?f=25&t=10877)                                                                    |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
@@ -41,7 +40,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
-| [Escape Kids](https://github.com/meathax/escapekids)                                                                           |
 | [Exidy 440](https://www.patreon.com/blahm1d/posts/exidy-to-your-168834272)                                                     |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
 | [FM Towns Marty](https://discord.com/channels/647909397477195803/1550527341237768235)                                          |
@@ -111,11 +109,9 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System 32](https://github.com/meathax/s32)                                                                               |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                    |
 | [SEGA System C / C-2](https://github.com/Mezzow/Arcade-SystemC2_MiSTer)                                                        |
-| [SEGA VCO](https://github.com/shimian5/Arcade-SegaVCO_MiSTer)                                                                  |
 | [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                            |
 | [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                |
 | [Seta 1st Generation Hardware (X1-010)](https://github.com/ppriest/Arcade-Seta_MiSTer)                                         |
-| [Skull & Crossbones](https://misterfpga.org/viewtopic.php?t=10831)                                                             |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
 | [SNK Neo Geo (Turbo)](https://misterfpga.org/viewtopic.php?p=115829#p115829)                                                   |
 | [Sony PocketStation](https://discord.com/channels/647909397477195803/1543102626265174146)                                      |
