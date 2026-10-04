@@ -1,0 +1,62 @@
+<misterromdescription>
+	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
+	<name>Shrike Avenger (prototype)</name>
+	<setname>shrike</setname>
+	<rbf>BallySente</rbf>
+	<mameversion>0289</mameversion>
+	<year>1986</year>
+	<manufacturer>Bally/Sente</manufacturer>
+	<rotation>horizontal</rotation>
+	<players>1</players>
+	<!-- Analog: P1 ad_stick_y, P1 ad_stick_x. Player 1's from the mouse or the left stick, others from their stick. -->
+
+	<!-- Layout and configuration bytes: scripts/build_mra.py, rtl/balsente_core.sv. -->
+	<rom index="0" zip="shrike.zip|sente6vb.zip" md5="none">
+		<part name="savgu35.bin" crc="dd2230a0"/>
+		<part name="savgu20.bin" crc="3d140edc"/>
+		<part name="savgu34.bin" crc="779eca9d"/>
+		<part name="savgu19.bin" crc="9ec89a80"/>
+		<part name="savgu33.bin" crc="20596f48"/>
+		<part name="savgu18.bin" crc="7abc3f14"/>
+		<part name="savgu32.bin" crc="807f0a3b"/>
+		<part name="savgu17.bin" crc="e0dbf6ad"/>
+		<part repeat="0xc000">00</part>
+		<part name="savgu21.bin" crc="c22b93e1"/>
+		<part name="savgu36.bin" crc="28431c4a"/>
+		<part name="savgu16.bin" crc="b8f60607"/>
+		<part name="savgu15.bin" crc="6b332a5d"/>
+		<part name="savgu14.bin" crc="8d5117aa"/>
+		<part name="savgu13.bin" crc="d3ce645e"/>
+		<part name="savgu12.bin" crc="ccdfedb1"/>
+		<part name="savgu11.bin" crc="db11ff4c"/>
+		<part name="savgu10.bin" crc="6f3d9aa1"/>
+		<part repeat="0x2000">00</part>
+		<part repeat="0x10000">00</part>
+		<part name="savgu8.bin" crc="499a1d06"/>
+		<part name="savgu7.bin" crc="ce0607f9"/>
+		<part name="savgu6.bin" crc="01d1b31e"/>
+		<part name="savgu5.bin" crc="8bc6d101"/>
+		<part name="savgu4.bin" crc="72644753"/>
+		<part name="savgu3.bin" crc="606a9cfd"/>
+		<part name="savgu2.bin" crc="69f600f6"/>
+		<part name="savgu1.bin" crc="303b8e7b"/>
+		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
+		<part>00 00 28 20 00 00 C0 06 00 00 00 00 00 00 00 00 06 05 04 07 FF FF 09 80 08 08 FF FF FF FF 29 FE</part>
+		<part repeat="0x1fe0">00</part>
+		<part name="savgu22.bin" crc="c7787162"/>
+		<part name="savgu24.bin" crc="a9105ca8"/>
+	</rom>
+
+	<nvram index="4" size="512"/>
+
+	<buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+
+	<switches default="FC,7F,FF,FE">
+		<dip name="Service Mode" bits="23" ids="On,Off"/>
+		<dip name="Minimum Game Time" bits="8,9" ids="1:00,1:30,2:00,2:30"/>
+		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
+		<dip name="Coinage" bits="0,1" ids="2 Coins/1 Credit,3 Coins/1 Credit,4 Coins/1 Credit,Free Play"/>
+		<dip name="Reset High Scores" bits="6" ids="Yes,No"/>
+		<dip name="Flip Screen" bits="24" ids="Off,On"/>
+	</switches>
+</misterromdescription>

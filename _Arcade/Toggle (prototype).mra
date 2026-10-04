@@ -32,12 +32,12 @@
 
 	<buttons names="Shoot,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
 
-	<switches default="FF,7F,FF,FF,FE">
+	<switches default="FF,7F,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
 		<dip name="Lives" bits="10" ids="2,3"/>
 		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
 		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/2 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
 		<dip name="High Scores" bits="7" ids="Keep All,Keep Top 5"/>
-		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+		<dip name="Flip Screen" bits="24" ids="Off,On"/>
 	</switches>
 </misterromdescription>

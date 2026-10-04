@@ -36,7 +36,7 @@
 
 	<buttons names="Green,Red,-,-,Start,Coin,Service,Pause,Start 3,Start 4" default="A,B,X,Y,Start,Select,L,R"/>
 
-	<switches default="9F,77,FF,FF,FE">
+	<switches default="9F,77,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
 		<dip name="Guesses" bits="10,11" ids="3,4,5,6"/>
 		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
@@ -44,6 +44,6 @@
 		<dip name="Sound" bits="5" ids="On,Off"/>
 		<dip name="Sound Test" bits="6" ids="On,Off"/>
 		<dip name="High Scores" bits="7" ids="Keep Top 5,Keep Top 10"/>
-		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+		<dip name="Flip Screen" bits="24" ids="Off,On"/>
 	</switches>
 </misterromdescription>

@@ -26,11 +26,11 @@
 
 	<buttons names="Button 1,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
 
-	<switches default="FF,7F,FF,FF,FE">
+	<switches default="FF,7F,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
 		<dip name="Players" bits="15" ids="3,2"/>
 		<dip name="Unknown" bits="0,1" ids="0,1,2,3"/>
 		<dip name="Free Play" bits="7" ids="Off (buggy),On"/>
-		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+		<dip name="Flip Screen" bits="24" ids="Off,On"/>
 	</switches>
 </misterromdescription>

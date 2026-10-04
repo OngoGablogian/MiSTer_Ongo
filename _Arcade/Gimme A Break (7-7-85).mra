@@ -29,7 +29,7 @@
 
 	<buttons names="Position Cue Ball,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
 
-	<switches default="01,69,FF,FF,FE">
+	<switches default="01,69,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
 		<dip name="Bonus Shot" bits="8,9" ids="Every 6 Balls,Every 8 Balls,Every 10 Balls,Every 12 Balls"/>
 		<dip name="Initial Shots" bits="10,11" ids="8,10,12,14"/>
@@ -41,6 +41,6 @@
 		<dip name="Bonus Coins" bits="2,4" ids="None,2 Coins=1 Bonus,3 Coins=1 Bonus,4 Coins=1 Bonus,4 Coins=2 Bonus,5 Coins=1 Bonus,5 Coins=2 Bonus,5 Coins=3 Bonus"/>
 		<dip name="Left Coin Mech" bits="5" ids="x1,x2"/>
 		<dip name="Right Coin Mech" bits="6,7" ids="x1,x4,x5,x6"/>
-		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+		<dip name="Flip Screen" bits="24" ids="Off,On"/>
 	</switches>
 </misterromdescription>

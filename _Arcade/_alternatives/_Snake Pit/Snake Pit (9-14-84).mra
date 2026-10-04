@@ -35,7 +35,7 @@
 
 	<buttons names="Whip,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
 
-	<switches default="FF,74,FF,FF,FE">
+	<switches default="FF,74,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
 		<dip name="Bonus Life" bits="8,9" ids="Every 10000,Every 15000,Every 20000,Every 25000"/>
 		<dip name="Lives" bits="10,11" ids="2,3,4,5"/>
@@ -43,6 +43,6 @@
 		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
 		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/2 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
 		<dip name="High Scores" bits="7" ids="Keep All,Keep Top 5"/>
-		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+		<dip name="Flip Screen" bits="24" ids="Off,On"/>
 	</switches>
 </misterromdescription>

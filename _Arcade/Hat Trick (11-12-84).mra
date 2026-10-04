@@ -29,12 +29,12 @@
 
 	<buttons names="Shoot,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
 
-	<switches default="FF,7A,FF,FF,FE">
+	<switches default="FF,7A,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
 		<dip name="Game Time" bits="8,10" ids="1:15,1:30,1:45,2:00,2:15,2:30,2:45,3:00"/>
 		<dip name="Demo Sounds" bits="15" ids="On,Off"/>
 		<dip name="Coinage" bits="0,1" ids="Free Play,1 Coin/2 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
 		<dip name="Players Per Credit" bits="2" ids="1,1 Or 2"/>
-		<dip name="Flip Screen" bits="32" ids="Off,On"/>
+		<dip name="Flip Screen" bits="24" ids="Off,On"/>
 	</switches>
 </misterromdescription>
