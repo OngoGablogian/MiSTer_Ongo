@@ -27,7 +27,7 @@
     <dip bits="7" name="Service Mode" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
+  <buttons names="Throw,Jump,-,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
 
   <rom index="0" zip="mirninjaa.zip|mirninja.zip|namcoc65.zip" md5="none">
     <!-- maincpu: 0x40000 bytes at image 0x0000000 -->
@@ -183,5 +183,31 @@
     <part repeat="0x300000">00</part>
   </rom>
 
-  <nvram index="4" size="8192"/>
+  <!-- High scores: hiscore.dat's mirninjaa (tools/ns2_extras.py); the dump follows
+       the EEPROM in the .nvm, 209 bytes -->
+  <rom index="3" md5="none">
+    <part>
+      1D 4C 00 00 00 FF 00 02 00 02 00 01 00 FF 10 00
+      00 10 04 00 00 D0 4D 00
+      00 10 04 CE 00 01 10 10
+    </part>
+  </rom>
+
+  <!-- Cheats (Pugsy's database, tools/ns2_extras.py): P1 Infinite Energy -->
+  <rom index="5" md5="none">
+    <part>
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 40 A1 01 00 00 99 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    </part>
+  </rom>
+
+  <nvram index="4" size="8402"/>
 </misterromdescription>

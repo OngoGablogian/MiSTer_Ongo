@@ -26,7 +26,7 @@
     <dip bits="7" name="Service Mode" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
+  <buttons names="Fire,-,-,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
 
   <rom index="0" zip="cosmogng.zip|namcoc65.zip" md5="none">
     <!-- maincpu: 0x40000 bytes at image 0x0000000 -->
@@ -104,5 +104,31 @@
     <part repeat="0x380000">00</part>
   </rom>
 
-  <nvram index="4" size="8192"/>
+  <!-- High scores: hiscore.dat's cosmogng (tools/ns2_extras.py); the dump follows
+       the EEPROM in the .nvm, 307 bytes -->
+  <rom index="3" md5="none">
+    <part>
+      1D 4C 00 00 00 FF 00 02 00 02 00 01 00 FF 10 00
+      00 10 A0 03 00 F7 01 0D
+      00 10 08 0E 00 3C 00 70
+    </part>
+  </rom>
+
+  <!-- Cheats (Pugsy's database, tools/ns2_extras.py): P1 Invincibility, P2 Invincibility, P1 Infinite Lives -->
+  <rom index="5" md5="none">
+    <part>
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 10 0B 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 10 89 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 40 9B 29 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    </part>
+  </rom>
+
+  <nvram index="4" size="8500"/>
 </misterromdescription>

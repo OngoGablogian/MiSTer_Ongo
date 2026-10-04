@@ -26,7 +26,7 @@
     <dip bits="7" name="Service Mode" ids="On,Off"/>
   </switches>
 
-  <buttons names="Accelerator,Brake,-,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
+  <buttons names="Accelerator,Brake,Gear Up,Start,Coin,Service,Gear Down,-" default="A,B,X,Start,R,L,Y,Select"/>
 
   <rom index="0" zip="dirtfoxj.zip|namcoc65.zip" md5="none">
     <!-- maincpu: 0x40000 bytes at image 0x0000000 -->
@@ -118,6 +118,22 @@
     <part crc="7f3a1ed9" name="df1_roz6.bin" length="0x40000"/>
     <part crc="dd546ae8" name="df1_roz7.bin" length="0x40000"/>
     <part crc="dd546ae8" name="df1_roz7.bin" length="0x40000"/>
+  </rom>
+
+  <!-- Cheats (Pugsy's database, tools/ns2_extras.py): Infinite Time, Infinite Credits, Maximum Speed -->
+  <rom index="5" md5="none">
+    <part>
+      01 00 10 52 63 00 00 F0 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 33 FD 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 53 E6 00 00 44 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    </part>
   </rom>
 
   <nvram index="4" size="8192"/>

@@ -29,7 +29,7 @@
     <dip bits="7" name="Service Mode" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Button 3,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
+  <buttons names="Attack,Jump,-,Start,Coin,Service,-,-" default="A,B,X,Start,R,L,Y,Select"/>
 
   <rom index="0" zip="valkyrie.zip|namcoc65.zip" md5="none">
     <!-- maincpu: 0x40000 bytes at image 0x0000000 -->
@@ -55,7 +55,7 @@
     <part crc="d5ce4069" name="valkyrie.nv" length="0x2000"/>
     <part repeat="0x3000">00</part>
     <!-- config: 0x30 bytes at image 0x00d6000 -->
-    <part>4E 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF 00 FF FF 00 00 00 00 00 00 00 00 00 00 00 00</part>
+    <part>4E 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF 00 FF FF 3A 80 00 00 00 00 00 00 00 00 00 00</part>
     <part repeat="0x29fd0">00</part>
     <!-- data_rom: 0x200000 bytes at image 0x0100000 -->
     <interleave output="16">
@@ -573,5 +573,31 @@
     <patch offset="0x0037280">00 21</patch>
   </rom>
 
-  <nvram index="4" size="8192"/>
+  <!-- High scores: hiscore.dat's valkyrie (tools/ns2_extras.py); the dump follows
+       the EEPROM in the .nvm, 160 bytes -->
+  <rom index="3" md5="none">
+    <part>
+      1D 4C 00 00 00 FF 00 02 00 02 00 01 00 FF 10 00
+      00 10 06 20 00 04 00 A0
+      00 10 06 24 00 9C 56 00
+    </part>
+  </rom>
+
+  <!-- Cheats (Pugsy's database, tools/ns2_extras.py): P1 Invincibility, P2 Invincibility, P1 Infinite Energy, P2 Infinite Energy -->
+  <rom index="5" md5="none">
+    <part>
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 45 43 00 00 24 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 45 C3 00 00 24 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 45 51 00 00 C0 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 45 D1 00 00 C0 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    </part>
+  </rom>
+
+  <nvram index="4" size="8352"/>
 </misterromdescription>

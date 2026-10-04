@@ -109,5 +109,32 @@
     <part repeat="0x400000">FF</part>
   </rom>
 
-  <nvram index="4" size="8192"/>
+  <!-- High scores: hiscore.dat's sgunnerj (tools/ns2_extras.py); the dump follows
+       the EEPROM in the .nvm, 199 bytes -->
+  <rom index="3" md5="none">
+    <part>
+      1D 4C 00 00 00 FF 00 02 00 02 00 01 00 FF 10 00
+      00 10 01 8F 00 BB 00 4F
+      00 10 01 65 00 0B 00 00
+      00 10 01 69 00 01 04 04
+    </part>
+  </rom>
+
+  <!-- Cheats (Pugsy's database, tools/ns2_extras.py): Infinite Credits, P1 Invincibility, P2 Invincibility, P1 Infinite Energy, P2 Infinite Energy, P1 Infinite Weapons -->
+  <rom index="5" md5="none">
+    <part>
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 01 21 00 00 09 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 02 FF 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 03 01 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 01 25 00 00 1E 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 01 27 00 00 1E 00 00 00 00 00 00 00 00 00 00 00 00
+      00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+      01 00 10 03 21 00 00 63 00 00 00 00 00 00 00 00 00 00 00 00
+    </part>
+  </rom>
+
+  <nvram index="4" size="8392"/>
 </misterromdescription>
