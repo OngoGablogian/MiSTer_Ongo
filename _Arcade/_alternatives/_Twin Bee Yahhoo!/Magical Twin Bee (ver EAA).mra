@@ -60,4 +60,13 @@
     </switches>
 
     <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="P1 Infinite Lives">00000010 00C0FBD1 00000000 0000000A</cheat>
+        <cheat name="P1 Invincibility" >00000010 00C0044A 00000000 00000000 00000010 00C0044B 00000000 00000002</cheat>
+        <cheat name="P2 Infinite Lives">00000010 00C0FC13 00000000 0000000A</cheat>
+        <cheat name="P2 Invincibility" >00000010 00C02F4A 00000000 00000000 00000010 00C02F4B 00000000 00000002</cheat>
+    </cheats>
 </misterromdescription>

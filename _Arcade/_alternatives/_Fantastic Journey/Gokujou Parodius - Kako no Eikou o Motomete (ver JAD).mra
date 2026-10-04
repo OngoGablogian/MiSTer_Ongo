@@ -50,9 +50,20 @@
         <part name="gokuparo.nv" crc="15c0f2d9"/>
     </rom>
 
+
+    <!-- MAME's hiscore.dat entries for hiscore.v (rtl/hiscore) -->
+    <rom index="3">
+        <part>
+        1E 16 A3 00 3F FF 00 02 00 02 00 01 00 0F 20 00
+        00 C0 D7 36 00 04 00 00
+        00 C0 D7 42 00 78 00 09
+        00 C0 D7 38 00 01 73 73
+        </part>
+    </rom>
+
     <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
-         saved when the OSD opens after the game has written it -->
-    <nvram index="4" size="128"/>
+         saved when the OSD opens after the game has written it; then hiscore.v's tables -->
+    <nvram index="4" size="253"/>
 
     <switches default="FE,FF">
         <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
@@ -60,4 +71,31 @@
     </switches>
 
     <buttons names="Power Up,Shot,Missile,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="P1 Infinite Lives"                >00000010 00C0D7C7 00000000 0000000A</cheat>
+        <cheat name="P1 Invincibility"                 >00000010 00C00835 00000000 00000002</cheat>
+        <cheat name="P1 Invincibility 'ON' (No Bells)" >00000010 00C00873 00000000 00000001</cheat>
+        <cheat name="P1 Invincibility 'OFF' (No Bells)">00000010 00C00873 00000000 00000000</cheat>
+        <cheat name="P1 Always Have Super Bomb"        >00000010 00C0086F 00000000 0000000D 00000010 00C00871 00000000 00000003</cheat>
+        <cheat name="P1 Always Have Megaphone Option"  >00000010 00C0086F 00000000 00000009 00000010 00C00871 00000000 00000003</cheat>
+        <cheat name="P1 Always Have KIKU Beam"         >00000010 00C0086F 00000000 0000000B 00000010 00C00871 00000000 00000003</cheat>
+        <cheat name="P1 Always Have Big Option"        >00000010 00C0086F 00000000 0000000E 00000010 00C00871 00000000 00000003</cheat>
+        <cheat name="P1 Can Always Shoot"              >00000010 00C00875 00000000 00000000</cheat>
+        <cheat name="P1 Keep Speed Level 2"            >00000010 00C00865 00000000 00000002</cheat>
+        <cheat name="P1 Infinite White Bell Power"     >00000010 00C0E8CF 00000000 000000FF</cheat>
+        <cheat name="P2 Infinite Lives"                >00000010 00C0D827 00000000 0000000A</cheat>
+        <cheat name="P2 Invincibility"                 >00000010 00C03635 00000000 00000002</cheat>
+        <cheat name="P2 Invincibility 'ON' (No Bells)" >00000010 00C03673 00000000 00000001</cheat>
+        <cheat name="P2 Invincibility 'OFF' (No Bells)">00000010 00C03673 00000000 00000000</cheat>
+        <cheat name="P2 Always Have Super Bomb"        >00000010 00C0366F 00000000 0000000D 00000010 00C03671 00000000 00000003</cheat>
+        <cheat name="P2 Always Have Megaphone Option"  >00000010 00C0366F 00000000 00000009 00000010 00C03671 00000000 00000003</cheat>
+        <cheat name="P2 Always Have KIKU Beam"         >00000010 00C0366F 00000000 0000000B 00000010 00C03671 00000000 00000003</cheat>
+        <cheat name="P2 Always Have Big Option"        >00000010 00C0366F 00000000 0000000E 00000010 00C03671 00000000 00000003</cheat>
+        <cheat name="P2 Can Always Shoot"              >00000010 00C03675 00000000 00000000</cheat>
+        <cheat name="P2 Keep Speed Level 2"            >00000010 00C03665 00000000 00000002</cheat>
+        <cheat name="P2 Infinite White Bell Power"     >00000010 00C0E92F 00000000 000000FF</cheat>
+    </cheats>
 </misterromdescription>

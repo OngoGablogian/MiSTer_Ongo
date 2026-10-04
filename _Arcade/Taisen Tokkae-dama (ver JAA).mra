@@ -65,4 +65,25 @@
     </switches>
 
     <buttons names="Swap Ball,Line Up,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Select Character: #Unknown Character Name 1#">00000010 00C141BC 00000000 00000000</cheat>
+        <cheat name="Select Character: #Unknown Character Name 2#">00000010 00C141BC 00000000 00000001</cheat>
+        <cheat name="Select Character: #Unknown Character Name 3#">00000010 00C141BC 00000000 00000002</cheat>
+        <cheat name="Select Character: #Unknown Character Name 4#">00000010 00C141BC 00000000 00000003</cheat>
+        <cheat name="Select Character: #Unknown Character Name 5#">00000010 00C141BC 00000000 00000004</cheat>
+        <cheat name="Select Character: #Unknown Character Name 6#">00000010 00C141BC 00000000 00000005</cheat>
+        <cheat name="Select Character: #Unknown Character Name 7#">00000010 00C141BC 00000000 00000006</cheat>
+        <cheat name="Select Character: #Unknown Boss Name 1#"     >00000010 00C141BC 00000000 00000007</cheat>
+        <cheat name="Select Character: #Unknown Boss Name 2#"     >00000010 00C141BC 00000000 00000008</cheat>
+        <cheat name="Select Character: #Unknown Boss Name 3#"     >00000010 00C141BC 00000000 00000009</cheat>
+        <cheat name="P1 Never Get Attacked"                       >00000010 00C114FB 00000000 00000000</cheat>
+        <cheat name="P1 Attack Opponent With 24 Now!"             >00000010 00C111BF 00000000 00000018</cheat>
+        <cheat name="P1 Balls Don`t Rise"                         >00000010 00C1123B 00000000 00000000</cheat>
+        <cheat name="P2 Never Get Attacked"                       >00000010 00C111BF 00000000 00000000</cheat>
+        <cheat name="P2 Attack Opponent With 24 Now!"             >00000010 00C114FB 00000000 00000018</cheat>
+        <cheat name="P2 Balls Don`t Rise"                         >00000010 00C11577 00000000 00000000</cheat>
+    </cheats>
 </misterromdescription>

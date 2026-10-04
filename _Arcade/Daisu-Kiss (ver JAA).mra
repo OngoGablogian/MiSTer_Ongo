@@ -56,4 +56,32 @@
     </switches>
 
     <buttons names="1,2,3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Time (Question)"         >00000010 00C0136F 00000000 00000009</cheat>
+        <cheat name="P1 Infinite Lives (Question)"     >00000010 00C01173 00000000 00000000</cheat>
+        <cheat name="P2 Infinite Lives (Question)"     >00000010 00C01273 00000000 00000000</cheat>
+        <cheat name="Infinite Time (Geography)"        >00000010 00C0146F 00000000 00000009</cheat>
+        <cheat name="P1 Infinite Lives (Geography)"    >00000010 00C0107F 00000000 00000003</cheat>
+        <cheat name="P2 Infinite Lives (Geography)"    >00000010 00C0127F 00000000 00000003</cheat>
+        <cheat name="Infinite Time (Kiss)"             >00000010 00C0156F 00000000 0000001D</cheat>
+        <cheat name="P1 finish (Hit)"                  >00000010 00C01483 00000000 00000063</cheat>
+        <cheat name="P2 finish (Hit)"                  >00000010 00C01683 00000000 00000063</cheat>
+        <cheat name="P1 Infinite Lives (Bake)"         >00000010 00C0118D 00000000 00000003</cheat>
+        <cheat name="P2 Infinite Lives (Bake)"         >00000010 00C0128D 00000000 00000003</cheat>
+        <cheat name="Infinite Time (English,Arith)"    >00000010 00C02770 00000000 00000002</cheat>
+        <cheat name="P1 Infinite Lives (English,Arith)">00000010 00C087F3 00000000 00000003</cheat>
+        <cheat name="P2 Infinite Lives (English,Arith)">00000010 00C0892F 00000000 00000003</cheat>
+        <cheat name="P1 Infinite Time (Ice Cream)"     >00000010 00C0306F 00000000 00000009</cheat>
+        <cheat name="P2 Infinite Time (Ice Cream)"     >00000010 00C04A6F 00000000 00000009</cheat>
+        <cheat name="P1 Infinite Lives (Dance)"        >00000010 00C0287F 00000000 00000002</cheat>
+        <cheat name="P2 Infinite Lives (Dance)"        >00000010 00C0297F 00000000 00000002</cheat>
+        <cheat name="P1 Infinite Lives (Block)"        >00000010 00C08C3D 00000000 00000002</cheat>
+        <cheat name="P2 Infinite Lives (Block)"        >00000010 00C08C3F 00000000 00000002</cheat>
+        <cheat name="P1 Infinite Time (Discern)"       >00000010 00C0586F 00000000 00000009</cheat>
+        <cheat name="P1 Infinite Lives (Discern)"      >00000010 00C07D85 00000000 00000000</cheat>
+        <cheat name="P2 Infinite Lives (Discern)"      >00000010 00C07E85 00000000 00000000</cheat>
+    </cheats>
 </misterromdescription>

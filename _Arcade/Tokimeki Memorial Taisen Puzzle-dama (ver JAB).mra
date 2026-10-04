@@ -67,4 +67,58 @@
     </switches>
 
     <buttons names="Rotate Right,Rotate Left,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"                           >00000010 00C13E1C 00000000 000000E7 00000010 00C13E1D 00000000 00000003</cheat>
+        <cheat name="Secret Characters Appearance 'ON'"          >00000010 00C02745 00000000 00000001</cheat>
+        <cheat name="Secret Characters Appearance 'OFF'"         >00000010 00C02745 00000000 00000000</cheat>
+        <cheat name="P1 Never get Attacked"                      >00000010 00C15C76 00000000 00000000</cheat>
+        <cheat name="P1 Attack opposite side Now!"               >00000010 00C15C77 00000000 000000FF</cheat>
+        <cheat name="P1 Always send attack Blocks"               >00000010 00C15C77 00000000 000000FF</cheat>
+        <cheat name="P1 Select Next Ball Colour (Top): Blue"     >00000010 00C03EAE 00000000 00000006</cheat>
+        <cheat name="P1 Select Next Ball Colour (Top): Red"      >00000010 00C03EAE 00000000 00000007</cheat>
+        <cheat name="P1 Select Next Ball Colour (Top): Yellow"   >00000010 00C03EAE 00000000 00000008</cheat>
+        <cheat name="P1 Select Next Ball Colour (Top): Green"    >00000010 00C03EAE 00000000 00000009</cheat>
+        <cheat name="P1 Select Next Ball Colour (Top): Pink"     >00000010 00C03EAE 00000000 0000000A</cheat>
+        <cheat name="P1 Select Next Ball Colour (Top): Black"    >00000010 00C03EAE 00000000 0000000B</cheat>
+        <cheat name="P1 Select Next Ball Colour (Bottom): Blue"  >00000010 00C03DAE 00000000 00000006</cheat>
+        <cheat name="P1 Select Next Ball Colour (Bottom): Red"   >00000010 00C03DAE 00000000 00000007</cheat>
+        <cheat name="P1 Select Next Ball Colour (Bottom): Yellow">00000010 00C03DAE 00000000 00000008</cheat>
+        <cheat name="P1 Select Next Ball Colour (Bottom): Green" >00000010 00C03DAE 00000000 00000009</cheat>
+        <cheat name="P1 Select Next Ball Colour (Bottom): Pink"  >00000010 00C03DAE 00000000 0000000A</cheat>
+        <cheat name="P1 Select Next Ball Colour (Bottom): Black" >00000010 00C03DAE 00000000 0000000B</cheat>
+        <cheat name="P1 Select Next Ball Status (Top): Big"      >00000010 00C03EAD 00000000 00000000</cheat>
+        <cheat name="P1 Select Next Ball Status (Top): Small"    >00000010 00C03EAD 00000000 000000FF</cheat>
+        <cheat name="P1 Select Next Ball Status (Bottom): Big"   >00000010 00C03DAD 00000000 00000000</cheat>
+        <cheat name="P1 Select Next Ball Status (Bottom): Small" >00000010 00C03DAD 00000000 000000FF</cheat>
+        <cheat name="P1 Always have Max Chain"                   >00000010 00C027CE 00000000 0000001D</cheat>
+        <cheat name="P1 Select Character: Yoshio Saotome"        >00000010 00C0274C 00000000 0000000C</cheat>
+        <cheat name="P1 Select Character: Rei Ijyuuin"           >00000010 00C0274C 00000000 0000000B</cheat>
+        <cheat name="P1 Select Character: Miharu Tatebayashi"    >00000010 00C0274C 00000000 0000000D</cheat>
+        <cheat name="P2 Never get Attacked"                      >00000010 00C15C77 00000000 00000000</cheat>
+        <cheat name="P2 Attack opposite side Now!"               >00000010 00C15C76 00000000 000000FF</cheat>
+        <cheat name="P2 Always send attack Blocks"               >00000010 00C15C76 00000000 000000FF</cheat>
+        <cheat name="P2 Select Next Ball Colour (Top): Blue"     >00000010 00C040AE 00000000 00000006</cheat>
+        <cheat name="P2 Select Next Ball Colour (Top): Red"      >00000010 00C040AE 00000000 00000007</cheat>
+        <cheat name="P2 Select Next Ball Colour (Top): Yellow"   >00000010 00C040AE 00000000 00000008</cheat>
+        <cheat name="P2 Select Next Ball Colour (Top): Green"    >00000010 00C040AE 00000000 00000009</cheat>
+        <cheat name="P2 Select Next Ball Colour (Top): Pink"     >00000010 00C040AE 00000000 0000000A</cheat>
+        <cheat name="P2 Select Next Ball Colour (Top): Black"    >00000010 00C040AE 00000000 0000000B</cheat>
+        <cheat name="P2 Select Next Ball Colour (Bottom): Blue"  >00000010 00C03FAE 00000000 00000006</cheat>
+        <cheat name="P2 Select Next Ball Colour (Bottom): Red"   >00000010 00C03FAE 00000000 00000007</cheat>
+        <cheat name="P2 Select Next Ball Colour (Bottom): Yellow">00000010 00C03FAE 00000000 00000008</cheat>
+        <cheat name="P2 Select Next Ball Colour (Bottom): Green" >00000010 00C03FAE 00000000 00000009</cheat>
+        <cheat name="P2 Select Next Ball Colour (Bottom): Pink"  >00000010 00C03FAE 00000000 0000000A</cheat>
+        <cheat name="P2 Select Next Ball Colour (Bottom): Black" >00000010 00C03FAE 00000000 0000000B</cheat>
+        <cheat name="P2 Select Next Ball Status (Top): Big"      >00000010 00C040AD 00000000 00000000</cheat>
+        <cheat name="P2 Select Next Ball Status (Top): Small"    >00000010 00C040AD 00000000 000000FF</cheat>
+        <cheat name="P2 Select Next Ball Status (Bottom): Big"   >00000010 00C03FAD 00000000 00000000</cheat>
+        <cheat name="P2 Select Next Ball Status (Bottom): Small" >00000010 00C03FAD 00000000 000000FF</cheat>
+        <cheat name="P2 Always have Max Chain"                   >00000010 00C028CE 00000000 0000001D</cheat>
+        <cheat name="P2 Select Character: Yoshio Saotome"        >00000010 00C0274E 00000000 0000000C</cheat>
+        <cheat name="P2 Select Character: Rei Ijyuuin"           >00000010 00C0274E 00000000 0000000B</cheat>
+        <cheat name="P2 Select Character: Miharu Tatebayashi"    >00000010 00C0274E 00000000 0000000D</cheat>
+    </cheats>
 </misterromdescription>

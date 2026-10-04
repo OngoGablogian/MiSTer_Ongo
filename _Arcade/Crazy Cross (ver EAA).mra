@@ -59,4 +59,13 @@
     </switches>
 
     <buttons names="Rotate,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="P1 Never Get Attacked"          >00000010 00C05EFC 00000000 00000000</cheat>
+        <cheat name="P1 Attack Opponent With 24 Now!">00000010 00C05EFE 00000000 00000018</cheat>
+        <cheat name="P2 Never Get Attacked"          >00000010 00C05EFE 00000000 00000000</cheat>
+        <cheat name="P2 Attack Opponent With 24 Now!">00000010 00C05EFC 00000000 00000018</cheat>
+    </cheats>
 </misterromdescription>

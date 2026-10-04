@@ -62,9 +62,18 @@
         <part name="dragoonj.nv" crc="cbe16082"/>
     </rom>
 
+
+    <!-- MAME's hiscore.dat entries for hiscore.v (rtl/hiscore) -->
+    <rom index="3">
+        <part>
+        31 8B 1B 00 3F FF 00 02 00 02 00 01 00 0F 20 00
+        00 C0 1B 00 00 9A 00 B0
+        </part>
+    </rom>
+
     <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
-         saved when the OSD opens after the game has written it -->
-    <nvram index="4" size="128"/>
+         saved when the OSD opens after the game has written it; then hiscore.v's tables -->
+    <nvram index="4" size="282"/>
 
     <switches default="FE,FF">
         <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
@@ -72,4 +81,34 @@
     </switches>
 
     <buttons names="Light Punch,Medium Punch,Heavy Punch,Light Kick,Medium Kick,Heavy Kick,Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select" count="6"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"                     >00000010 00C01044 00000000 00000063</cheat>
+        <cheat name="Finish this Round Now!"               >00000010 00C05000 00000000 00000000</cheat>
+        <cheat name="Start on Final Stage"                 >00000010 00C03041 00000000 00000008</cheat>
+        <cheat name="P1 Infinite Energy (Single)"          >00000010 00C180B8 00000000 000000FF</cheat>
+        <cheat name="P1 Infinite Energy (Team)"            >00000010 00C180B8 00000000 000000CF</cheat>
+        <cheat name="P1 Drain All Energy Now!"             >00000010 00C180B8 00000000 00000000</cheat>
+        <cheat name="P1 Always have Max Power (Team)"      >00000010 00C04020 00000000 00000040 00000010 00C04052 00000000 00000002</cheat>
+        <cheat name="P1 Always have Super Bomber Available">00000010 00C0503C 00000000 00000001</cheat>
+        <cheat name="P1 Always Have Weapon"                >00000010 00C090EC 00000000 00000000</cheat>
+        <cheat name="P1 Always No Weapon"                  >00000010 00C090EC 00000000 00000001</cheat>
+        <cheat name="P1 Play with Dogma (Single)"          >00000010 00C03012 00000000 0000000C</cheat>
+        <cheat name="P1 Play with Dogma (Team - 1st)"      >00000010 00C03013 00000000 0000000C</cheat>
+        <cheat name="P1 Play with Dogma (Team - 2nd)"      >00000010 00C03014 00000000 0000000C</cheat>
+        <cheat name="P1 Play with Dogma (Team - 3rd)"      >00000010 00C03015 00000000 0000000C</cheat>
+        <cheat name="P2 Infinite Energy (Single)"          >00000010 00C181B8 00000000 000000FF</cheat>
+        <cheat name="P2 Infinite Energy (Team)"            >00000010 00C181B8 00000000 000000CF</cheat>
+        <cheat name="P2 Drain All Energy Now!"             >00000010 00C181B8 00000000 00000000</cheat>
+        <cheat name="P2 Always have Max Power (Team)"      >00000010 00C04022 00000000 00000040 00000010 00C04054 00000000 00000002</cheat>
+        <cheat name="P2 Always have Super Bomber Available">00000010 00C0503D 00000000 00000001</cheat>
+        <cheat name="P2 Always No Weapon"                  >00000010 00C0B0EC 00000000 00000001</cheat>
+        <cheat name="P2 Always Have Weapon"                >00000010 00C0B0EC 00000000 00000000</cheat>
+        <cheat name="P2 Play with Dogma (Single)"          >00000010 00C03016 00000000 0000000C</cheat>
+        <cheat name="P2 Play with Dogma (Team - 1st)"      >00000010 00C03017 00000000 0000000C</cheat>
+        <cheat name="P2 Play with Dogma (Team - 2nd)"      >00000010 00C03018 00000000 0000000C</cheat>
+        <cheat name="P2 Play with Dogma (Team - 3rd)"      >00000010 00C03019 00000000 0000000C</cheat>
+    </cheats>
 </misterromdescription>

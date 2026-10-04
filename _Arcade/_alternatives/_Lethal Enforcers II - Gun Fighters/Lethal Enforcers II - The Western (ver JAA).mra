@@ -70,4 +70,29 @@
     </switches>
 
     <buttons names="Trigger,Reload,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"                   >00000010 00C012AD 00000000 00000009</cheat>
+        <cheat name="Kill Boss with 1 hit Now!"          >00000010 00C013F8 00000000 00000000</cheat>
+        <cheat name="P1 Infinite Lives"                  >00000010 00C012F4 00000000 00000005</cheat>
+        <cheat name="P1 Infinite Ammo"                   >00000010 00C01316 00000000 00000006</cheat>
+        <cheat name="P1 Invincibility"                   >00000010 00C012F7 00000000 00000002</cheat>
+        <cheat name="P1 No Victims"                      >00000010 00C01313 00000000 00000000</cheat>
+        <cheat name="P1 Select Rank Now!: Posse"         >00000010 00C012F2 00000000 00000000 00000010 00C012F3 00000000 00000000</cheat>
+        <cheat name="P1 Select Rank Now!: Deputy"        >00000010 00C012F2 00000000 00000001 00000010 00C012F3 00000000 00000001</cheat>
+        <cheat name="P1 Select Rank Now!: Sheriff"       >00000010 00C012F2 00000000 00000002 00000010 00C012F3 00000000 00000002</cheat>
+        <cheat name="P1 Select Rank Now!: Deputy Marshal">00000010 00C012F2 00000000 00000003 00000010 00C012F3 00000000 00000003</cheat>
+        <cheat name="P1 Select Rank Now!: U.S. Marshal"  >00000010 00C012F2 00000000 00000004 00000010 00C012F3 00000000 00000004</cheat>
+        <cheat name="P2 Infinite Lives"                  >00000010 00C01334 00000000 00000005</cheat>
+        <cheat name="P2 Infinite Ammo"                   >00000010 00C01356 00000000 00000006</cheat>
+        <cheat name="P2 Invincibility"                   >00000010 00C01337 00000000 00000002</cheat>
+        <cheat name="P2 No Victims"                      >00000010 00C01353 00000000 00000000</cheat>
+        <cheat name="P2 Select Rank Now!: Posse"         >00000010 00C01332 00000000 00000000 00000010 00C01333 00000000 00000000</cheat>
+        <cheat name="P2 Select Rank Now!: Deputy"        >00000010 00C01332 00000000 00000001 00000010 00C01333 00000000 00000001</cheat>
+        <cheat name="P2 Select Rank Now!: Sheriff"       >00000010 00C01332 00000000 00000002 00000010 00C01333 00000000 00000002</cheat>
+        <cheat name="P2 Select Rank Now!: Deputy Marshal">00000010 00C01332 00000000 00000003 00000010 00C01333 00000000 00000003</cheat>
+        <cheat name="P2 Select Rank Now!: U.S. Marshal"  >00000010 00C01332 00000000 00000004 00000010 00C01333 00000000 00000004</cheat>
+    </cheats>
 </misterromdescription>

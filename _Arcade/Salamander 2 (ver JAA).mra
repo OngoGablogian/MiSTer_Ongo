@@ -53,9 +53,18 @@
         <part name="salmndr2.nv" crc="60cdea03"/>
     </rom>
 
+
+    <!-- MAME's hiscore.dat entries for hiscore.v (rtl/hiscore) -->
+    <rom index="3">
+        <part>
+        31 35 A8 00 3F FF 00 02 00 02 00 01 00 0F 20 00
+        00 C0 20 33 01 36 00 14
+        </part>
+    </rom>
+
     <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
-         saved when the OSD opens after the game has written it -->
-    <nvram index="4" size="128"/>
+         saved when the OSD opens after the game has written it; then hiscore.v's tables -->
+    <nvram index="4" size="438"/>
 
     <switches default="FE,FF">
         <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
@@ -63,4 +72,30 @@
     </switches>
 
     <buttons names="Shot,Option,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"              >00000010 00C00C29 00000000 00000063</cheat>
+        <cheat name="P1 Infinite Lives"             >00000010 00C00461 00000000 0000000B</cheat>
+        <cheat name="P1 Select Weapon: Normal"      >00000010 00C0048F 00000000 00000010</cheat>
+        <cheat name="P1 Select Weapon: Laser"       >00000010 00C0048F 00000000 00000011</cheat>
+        <cheat name="P1 Select Weapon: Ripple Laser">00000010 00C0048F 00000000 00000012</cheat>
+        <cheat name="P1 Select Weapon: Twin Laser"  >00000010 00C0048F 00000000 00000013</cheat>
+        <cheat name="P1 Select Shot Power: Low"     >00000010 00C00490 00000000 00000000</cheat>
+        <cheat name="P1 Select Shot Power: High"    >00000010 00C00490 00000000 00000001</cheat>
+        <cheat name="P1 Select Missiles: None"      >00000010 00C00491 00000000 0000000F 00000010 00C00492 00000000 00000000</cheat>
+        <cheat name="P1 Select Missiles: Normal"    >00000010 00C00491 00000000 00000018 00000010 00C00492 00000000 00000001</cheat>
+        <cheat name="P1 Select Missiles: Twin"      >00000010 00C00491 00000000 00000019 00000010 00C00492 00000000 00000001</cheat>
+        <cheat name="P2 Infinite Lives"             >00000010 00C0080F 00000000 0000000B</cheat>
+        <cheat name="P2 Select Weapon: Normal"      >00000010 00C0083D 00000000 00000010</cheat>
+        <cheat name="P2 Select Weapon: Laser"       >00000010 00C0083D 00000000 00000011</cheat>
+        <cheat name="P2 Select Weapon: Ripple Laser">00000010 00C0083D 00000000 00000012</cheat>
+        <cheat name="P2 Select Weapon: Twin Laser"  >00000010 00C0083D 00000000 00000013</cheat>
+        <cheat name="P2 Select Shot Power: Low"     >00000010 00C0083E 00000000 00000000</cheat>
+        <cheat name="P2 Select Shot Power: High"    >00000010 00C0083E 00000000 00000001</cheat>
+        <cheat name="P2 Select Missiles: None"      >00000010 00C0083F 00000000 0000000F 00000010 00C00840 00000000 00000000</cheat>
+        <cheat name="P2 Select Missiles: Normal"    >00000010 00C0083F 00000000 00000018 00000010 00C00840 00000000 00000001</cheat>
+        <cheat name="P2 Select Missiles: Twin"      >00000010 00C0083F 00000000 00000019 00000010 00C00840 00000000 00000001</cheat>
+    </cheats>
 </misterromdescription>

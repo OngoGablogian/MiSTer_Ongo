@@ -57,9 +57,18 @@
         <part name="le2u.nv" crc="d46b3878"/>
     </rom>
 
+
+    <!-- MAME's hiscore.dat entries for hiscore.v (rtl/hiscore) -->
+    <rom index="3">
+        <part>
+        22 18 07 00 3F FF 00 02 00 02 00 01 00 0F 20 00
+        00 C0 3E 94 00 40 05 48
+        </part>
+    </rom>
+
     <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
-         saved when the OSD opens after the game has written it -->
-    <nvram index="4" size="128"/>
+         saved when the OSD opens after the game has written it; then hiscore.v's tables -->
+    <nvram index="4" size="192"/>
 
     <switches default="FF,FF">
         <dip name="Stereo" bits="0" ids="Mono,Stereo"/>
@@ -68,4 +77,29 @@
     </switches>
 
     <buttons names="Trigger,Reload,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"                   >00000010 00C012AB 00000000 00000009</cheat>
+        <cheat name="Kill Boss with 1 hit Now!"          >00000010 00C013F6 00000000 00000000</cheat>
+        <cheat name="P1 Infinite Lives"                  >00000010 00C012F2 00000000 00000005</cheat>
+        <cheat name="P1 Infinite Ammo"                   >00000010 00C01314 00000000 00000006</cheat>
+        <cheat name="P1 Invincibility"                   >00000010 00C012F5 00000000 00000002</cheat>
+        <cheat name="P1 No Victims"                      >00000010 00C01311 00000000 00000000</cheat>
+        <cheat name="P1 Select Rank Now!: Posse"         >00000010 00C012F0 00000000 00000000 00000010 00C012F1 00000000 00000000</cheat>
+        <cheat name="P1 Select Rank Now!: Deputy"        >00000010 00C012F0 00000000 00000001 00000010 00C012F1 00000000 00000001</cheat>
+        <cheat name="P1 Select Rank Now!: Sheriff"       >00000010 00C012F0 00000000 00000002 00000010 00C012F1 00000000 00000002</cheat>
+        <cheat name="P1 Select Rank Now!: Deputy Marshal">00000010 00C012F0 00000000 00000003 00000010 00C012F1 00000000 00000003</cheat>
+        <cheat name="P1 Select Rank Now!: U.S. Marshal"  >00000010 00C012F0 00000000 00000004 00000010 00C012F1 00000000 00000004</cheat>
+        <cheat name="P2 Infinite Lives"                  >00000010 00C01332 00000000 00000005</cheat>
+        <cheat name="P2 Infinite Ammo"                   >00000010 00C01354 00000000 00000006</cheat>
+        <cheat name="P2 Invincibility"                   >00000010 00C01335 00000000 00000002</cheat>
+        <cheat name="P2 No Victims"                      >00000010 00C01351 00000000 00000000</cheat>
+        <cheat name="P2 Select Rank Now!: Posse"         >00000010 00C01330 00000000 00000000 00000010 00C01331 00000000 00000000</cheat>
+        <cheat name="P2 Select Rank Now!: Deputy"        >00000010 00C01330 00000000 00000001 00000010 00C01331 00000000 00000001</cheat>
+        <cheat name="P2 Select Rank Now!: Sheriff"       >00000010 00C01330 00000000 00000002 00000010 00C01331 00000000 00000002</cheat>
+        <cheat name="P2 Select Rank Now!: Deputy Marshal">00000010 00C01330 00000000 00000003 00000010 00C01331 00000000 00000003</cheat>
+        <cheat name="P2 Select Rank Now!: U.S. Marshal"  >00000010 00C01330 00000000 00000004 00000010 00C01331 00000000 00000004</cheat>
+    </cheats>
 </misterromdescription>

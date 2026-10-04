@@ -45,9 +45,20 @@
         <part name="533a23.7g" crc="1bb7552b"/>
     </rom>
 
+
+    <!-- MAME's hiscore.dat entries for hiscore.v (rtl/hiscore) -->
+    <rom index="3">
+        <part>
+        2D 7D 82 00 3F FF 00 02 00 02 00 01 00 0F 20 00
+        00 C1 07 52 00 04 00 00
+        00 C1 07 5E 00 78 00 06
+        00 C1 07 54 00 01 73 73
+        </part>
+    </rom>
+
     <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
-         saved when the OSD opens after the game has written it -->
-    <nvram index="4" size="128"/>
+         saved when the OSD opens after the game has written it; then hiscore.v's tables -->
+    <nvram index="4" size="253"/>
 
     <switches default="FE,FF">
         <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
@@ -55,4 +66,25 @@
     </switches>
 
     <buttons names="Power Up,Shot,Missile,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"                              >00000010 00C10249 00000000 00000099</cheat>
+        <cheat name="Always have 300 items"                         >00000010 00C109C0 00000000 00000003</cheat>
+        <cheat name="P1 Infinite Lives"                             >00000010 00C107E9 00000000 0000000A</cheat>
+        <cheat name="P1 Invincibility"                              >00000010 00C00E4F 00000000 00000002</cheat>
+        <cheat name="P1 Infinite ALEX Energy"                       >00000010 00C0134F 00000000 00000099</cheat>
+        <cheat name="P1 Get Maximum Level Items"                    >00000020 00C109C0 00000000 00000999</cheat>
+        <cheat name="P1 Constantly Cycle Upgrades"                  >00000010 00C00EDD 00000000 00000001</cheat>
+        <cheat name="P1 Infinite Bell Option"                       >00000010 00C00EDF 00000000 00000003</cheat>
+        <cheat name="P1 Select Bell Choice: Activate Option Slot #7">00000010 00C00EE1 00000000 00000000</cheat>
+        <cheat name="P1 Select Bell Choice: KIKU Beam"              >00000010 00C00EE1 00000000 00000008</cheat>
+        <cheat name="P1 Select Bell Choice: Super Bomb"             >00000010 00C00EE1 00000000 00000009</cheat>
+        <cheat name="P1 Select Bell Choice: Big"                    >00000010 00C00EE1 00000000 0000000A</cheat>
+        <cheat name="P1 Select Bell Choice: Option #7 Effect"       >00000010 00C00EE1 00000000 0000000B</cheat>
+        <cheat name="P1 Select Bell Choice: Alex"                   >00000010 00C00EE1 00000000 0000000D</cheat>
+        <cheat name="P2 Infinite Lives"                             >00000010 00C10867 00000000 0000000A</cheat>
+        <cheat name="P2 Invincibility"                              >00000010 00C03B4F 00000000 00000002</cheat>
+    </cheats>
 </misterromdescription>

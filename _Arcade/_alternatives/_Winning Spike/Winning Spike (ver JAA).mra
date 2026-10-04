@@ -55,4 +55,18 @@
     </switches>
 
     <buttons names="Button A,Button B,Button C,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"    >00000010 00C01023 00000000 00000063</cheat>
+        <cheat name="P1 Score always = 0" >00000010 00C00A22 00000000 00000000</cheat>
+        <cheat name="P1 Score always = 17">00000010 00C00A22 00000000 00000011</cheat>
+        <cheat name="P1 Score = 0 Now!"   >00000010 00C00A22 00000000 00000000</cheat>
+        <cheat name="P1 Score = 17 Now!"  >00000010 00C00A22 00000000 00000011</cheat>
+        <cheat name="P2 Score always = 0" >00000010 00C00B22 00000000 00000000</cheat>
+        <cheat name="P2 Score always = 17">00000010 00C00B22 00000000 00000011</cheat>
+        <cheat name="P2 Score = 0 Now!"   >00000010 00C00B22 00000000 00000000</cheat>
+        <cheat name="P2 Score = 17 Now!"  >00000010 00C00B22 00000000 00000011</cheat>
+    </cheats>
 </misterromdescription>
