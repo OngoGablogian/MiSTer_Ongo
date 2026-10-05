@@ -58,7 +58,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
-| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1550283248138199193)                |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1556319753612697643)                |
 | [Konami GX](https://github.com/ppriest/Arcade-KonamiGX_MiSTer)                                                                 |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [Krull](https://www.patreon.com/bazset/posts/krull-1983-d-co-169209991)                                                        |
@@ -138,7 +138,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Tumble Pop Bootleg](https://www.patreon.com/Meathax/posts/tumble-pop-pcb-171191206)                                           |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
 | [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                    |
-| [Violent Storm](https://www.patreon.com/Meathax/posts/violent-storm-v1-171203196)                                              |
+| [Violent Storm](https://www.patreon.com/Meathax/posts/violent-storm-v1-171292784)                                              |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
