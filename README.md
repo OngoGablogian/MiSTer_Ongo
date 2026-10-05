@@ -76,6 +76,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
 | [Namco NA-1 / NA-2](https://github.com/kyledlester/Namco_NA1_NA2_MiSTer)                                                       |
 | [Namco NB-1](https://github.com/kyledlester/Namco_NB1_MiSTer)                                                                  |
+| [Namco NB-2](https://github.com/kyledlester/Namco_NB2_MiSTer)                                                                  |
 | [Namco ND-1](https://www.patreon.com/Meathax/posts/namco-classic-1-170443635)                                                  |
 | [Namco System 2](https://github.com/kuzearcade/Arcade-NamcoSystem2_MiSTer)                                                     |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
