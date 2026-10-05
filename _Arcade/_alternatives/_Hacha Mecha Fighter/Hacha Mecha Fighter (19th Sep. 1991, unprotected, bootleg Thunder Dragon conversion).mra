@@ -85,8 +85,8 @@
   <rom index="3" md5="none">
     <part>
         0C 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
-        00 0F C0 00 03 F0 01 4E
+        00 0F C0 00 03 E0 01 4E
     </part>
   </rom>
-  <nvram index="4" size="1008"/>
+  <nvram index="4" size="992"/>
 </misterromdescription>

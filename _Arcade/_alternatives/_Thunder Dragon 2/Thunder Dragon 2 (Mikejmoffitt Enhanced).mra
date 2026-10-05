@@ -72,7 +72,7 @@
       NMK16-family MiSTer core, since none exists in this project yet.
 -->
 <misterromdescription>
-  <name>Thunder Dragon 2 (9th Nov. 1993)</name>
+  <name>Thunder Dragon 2 (Mikejmoffitt Enhanced)</name>
   <mratimestamp>202609060000</mratimestamp>
   <mameversion>0270</mameversion>
   <setname>tdragon2</setname>
