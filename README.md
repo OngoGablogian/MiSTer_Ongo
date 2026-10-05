@@ -100,7 +100,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nostradamus / Magical Cat Adventure (LINDA board)](https://github.com/kyledlester/Nostradamus_Magical_Cat_Adventure_MiSTer)   |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
-| [R-Shark / Super-X (Dooyong)](https://github.com/kyledlester/R_Shark_Super_X_MiSTer)                                           |
 | [Return of the Jedi](https://github.com/Usquebagh/Arcade-Jedi_MiSTer)                                                          |
 | [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
 | [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                              |
@@ -316,6 +315,12 @@ db_url = https://raw.githubusercontent.com/misteraddons/Reflex-Adapt/main/reflex
 ```
 [davewongillies/syncthing]
 db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-syncthing/db/db.json.zip
+```
+
+[Shmup Fan](https://github.com/shmupfan)
+```
+[shmupfan]
+db_url = https://raw.githubusercontent.com/shmupfan/Distribution/main/db.json
 ```
 
 [jlrh-misterfpga-db](https://github.com/jlrh/jlrh-misterfpga-db)
