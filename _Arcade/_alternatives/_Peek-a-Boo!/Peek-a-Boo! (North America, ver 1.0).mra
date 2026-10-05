@@ -35,7 +35,7 @@
     <dip bits="15" name="Flip Screen" ids="On,Off"/>
   </switches>
 
-  <buttons names="Button 1,Button 2,Stage Clear,Option,Start,Coin" default="Y,B,A,X,Start,R"/>
+  <buttons names="Fire,Left,Right,Start,Coin" default="Y,B,A,Start,R"/>
 
   <rom index="0" zip="peekaboou.zip|peekaboo.zip" md5="none">
     <!-- maincpu 0x040000 @ 0x000000 -->
