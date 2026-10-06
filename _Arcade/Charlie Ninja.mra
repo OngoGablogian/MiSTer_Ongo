@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Charlie Ninja</name>
+  <setname>charlien</setname>
+  <rbf>Meathax_Simple156</rbf>
+  <mameversion>0289</mameversion>
+  <year>1995</year>
+  <manufacturer>Mitchell</manufacturer>
+  <buttons names="Attack,Jump,-,Start,Coin,Pause,Service,Test" default="A,B,Start,Select,R"/>
+  <rotation>horizontal</rotation>
+  <rom index="0" zip="charlien.zip" md5="f5c57d82bcbc00078513cccce0004fb3">
+    <part>53 31 35 36 01 00 03 00 00 00 00 00 00 00 00 00</part>
+    <part name="nd00-1.1e" crc="f18f4b23"/>
+    <part name="mbr-00.9a" crc="ecf2c7f0"/>
+    <part name="mbr-03.14h" crc="c448a68a"/>
+    <part name="mbr-01.14a" crc="46c90215"/>
+    <part name="nd01-0.13h" crc="635a100a"/>
+    <part name="mbr-02.12f" crc="4f67d333"/>
+    <part repeat="1048576">00</part>
+    <part repeat="128">FF</part>
+  </rom>
+  <nvram index="4" size="384"/>
+  <rom index="255">
+    <part>A5</part>
+  </rom>
+</misterromdescription>

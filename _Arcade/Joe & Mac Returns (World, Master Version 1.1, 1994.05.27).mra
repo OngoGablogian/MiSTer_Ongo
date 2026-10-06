@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Joe &amp; Mac Returns (World, Master Version 1.1, 1994.05.27)</name>
+  <setname>joemacr</setname>
+  <rbf>Meathax_Simple156</rbf>
+  <mameversion>0289</mameversion>
+  <year>1994</year>
+  <manufacturer>Data East Corporation</manufacturer>
+  <buttons names="Club Attack,Jump,-,Start,Coin,Pause,Service,Test" default="A,B,Start,Select,R"/>
+  <rotation>horizontal</rotation>
+  <rom index="0" zip="joemacr.zip" md5="55a4bbd082177b01af2528346cfb9532">
+    <part> 53 31 35 36 01 00 02 00 00 00 00 00 00 00 00 00 </part>
+    <part name="05.u29" crc="74e9a158"/>
+    <part name="01.u8l" crc="4da4a2c1"/>
+    <part name="02.u8h" crc="642c08db"/>
+    <part name="mbn02" crc="aa2230c5"/>
+    <part name="mbn01" crc="a3a37353"/>
+    <part name="mbn04" crc="dcbd4771"/>
+    <part name="mbn03" crc="70b71a2a"/>
+    <part>FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF</part>
+  </rom>
+  <nvram index="4" size="128"/>
+  <rom index="255">
+    <part>A5</part>
+  </rom>
+</misterromdescription>

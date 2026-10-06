@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Osman (World)</name>
+  <setname>osman</setname>
+  <rbf>Meathax_Simple156</rbf>
+  <mameversion>0289</mameversion>
+  <year>1996</year>
+  <manufacturer>Mitchell</manufacturer>
+  <buttons names="Attack,Jump,Special Attack,Start,Coin,Pause,Service,Test" default="A,B,X,Start,Select,R"/>
+  <rotation>horizontal</rotation>
+  <rom index="0" zip="osman.zip" md5="ec57564998f170b0ff7fa552fc5fbdc0">
+    <part>53 31 35 36 01 00 00 00 00 00 00 00 00 00 00 00</part>
+    <part name="sa00-0.1e" crc="ec6b3257"/>
+    <part name="mcf-00.9a" crc="247712dc"/>
+    <part name="mcf-04.14h" crc="4fa55577"/>
+    <part name="mcf-03.14d" crc="faf1d51d"/>
+    <part name="mcf-02.14a" crc="21251b33"/>
+    <part name="mcf-01.13a" crc="83881e25"/>
+    <part name="sa01-0.13h" crc="cea8368e"/>
+    <part name="mcf-05.12f" crc="f007d376"/>
+    <part name="eeprom-osman.bin" crc="509552b2"/>
+  </rom>
+  <nvram index="4" size="384"/>
+  <rom index="255">
+    <part>A5</part>
+  </rom>
+</misterromdescription>

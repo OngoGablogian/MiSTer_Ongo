@@ -37,6 +37,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                  |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                  |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                       |
+| [Data East Simple 156](https://www.patreon.com/Meathax/posts/data-east-156-171562893)                                          |
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
