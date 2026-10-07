@@ -27,7 +27,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                  |
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Bally/Sente SAC-1](https://github.com/ppriest/Arcade-BallySente_MiSTer)                                                       |
-| [Banpresto BP964A / BP965A](https://github.com/kuzearcade/Arcade-NMKBP964_MiSTer)                                              |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
@@ -47,15 +46,12 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
-| [Ginga Ninkyouden](https://github.com/kuzearcade/Arcade-GingaNin_MiSTer)                                                       |
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
 | [I, Robot](https://www.patreon.com/Meathax/posts/i-robot-1984-169005879)                                                       |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                        |
 | [Intrepid](https://misterfpga.org/viewtopic.php?t=10823)                                                                       |
-| [Jaleco MegaSystem 1 Type B, C, D](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                        |
-| [Jaleco MegaSystem 1 Type Z](https://github.com/kuzearcade/Arcade-JalecoMS1Z_MiSTer)                                           |
 | [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
@@ -79,7 +75,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Namco NB-1](https://github.com/kyledlester/Namco_NB1_MiSTer)                                                                  |
 | [Namco NB-2](https://github.com/kyledlester/Namco_NB2_MiSTer)                                                                  |
 | [Namco ND-1](https://www.patreon.com/Meathax/posts/namco-classic-1-170443635)                                                  |
-| [Namco System 2](https://github.com/kuzearcade/Arcade-NamcoSystem2_MiSTer)                                                     |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
 | [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-166884433)                                           |
 | [Namco System 22 / Super System 22](https://www.patreon.com/XelaNotPu/posts/namco-system-22-169006058)                         |
@@ -97,7 +92,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
 | [Nintendo Super System](https://www.patreon.com/bazset/posts/nintendo-super-170678491)                                         |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                  |
-| [NMK16](https://github.com/kuzearcade/Arcade-NMK16_MiSTer)                                                                     |
 | [Nostradamus / Magical Cat Adventure (LINDA board)](https://github.com/kyledlester/Nostradamus_Magical_Cat_Adventure_MiSTer)   |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
@@ -105,7 +99,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
 | [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                              |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                         |
-| [Sand Scorpion](https://github.com/kuzearcade/Arcade-SandScrp_MiSTer)                                                          |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
@@ -316,6 +309,12 @@ db_url = https://raw.githubusercontent.com/misteraddons/Reflex-Adapt/main/reflex
 ```
 [davewongillies/syncthing]
 db_url = https://raw.githubusercontent.com/davewongillies/MiSTer-syncthing/db/db.json.zip
+```
+
+[kuzecores](https://github.com/kuzearcade/kuzecores)
+```
+[kuzearcade/kuzecores]
+db_url = https://raw.githubusercontent.com/kuzearcade/kuzecores/db/db.json.zip
 ```
 
 [Shmup Fan](https://github.com/shmupfan)
