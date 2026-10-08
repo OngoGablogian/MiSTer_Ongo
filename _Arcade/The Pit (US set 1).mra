@@ -1,7 +1,10 @@
 <misterromdescription>
   <name>The Pit (US set 1)</name>
   <setname>thepitu1</setname>
+  <mameversion>0269</mameversion>
   <rbf>ThePit</rbf>
+  <year>1982</year>
+  <manufacturer>Zilec Electronics (Centuri license)</manufacturer>
   <buttons names="Fire,Start 1P,Start 2P,Coin" default="A,Start,Select,R"/>
   <rom index="0" zip="thepitu1.zip|thepit.zip" md5="56cad0a84bb00c856806709e6537011c">
     <part name="p38b.ic38" crc="7315e1bc"/>
@@ -14,4 +17,5 @@
     <part name="p8.ic8" crc="2ddd5045"/>
     <part name="82s123.ic4" crc="a758b567"/>
   </rom>
+  <nvram index="4" size="32"/>
 </misterromdescription>
