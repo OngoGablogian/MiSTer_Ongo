@@ -7,8 +7,8 @@
     <category>Arcade</category>
     <rbf>Intrepid</rbf>
     <rotation>vertical (cw)</rotation>
-    <buttons names="Action,Start 1,Coin,Start 2" default="B,Start,R,Select"/>
-    <!--Production candidate. DIP settings are in the core OSD; defaults match pinned parent MAME. ROM stream unchanged.-->
+    <buttons names="Action,Start 1,Coin,Start 2,Pause" default="B,Start,R,Select,L"/>
+    <!--Targeted Pause restore correction. Distinct basename isolates its NVRAM. ROM stream, controls, DIP defaults and 63-byte format are unchanged.-->
     <rom index="0" zip="intrepid.zip" md5="10289df13e432eeaaf65e8daef334c7f">
         <!--maincpu: stream 0x0000, 4096 bytes-->
         <part name="ic19.1" crc="7d927b23" length="0x1000"/>
@@ -31,4 +31,5 @@
         <!--proms: stream 0x8000, 32 bytes-->
         <part name="ic3.prm" crc="927ff40a" length="0x20"/>
     </rom>
+    <nvram index="4" size="63"/>
 </misterromdescription>
