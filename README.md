@@ -30,6 +30,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
+| [BrezzaSoft Crystal System](https://github.com/kyledlester/BrezzaSoft_Crystal_System_MiSTer)                                   |
 | [BrickBoy](https://github.com/kandowontu/BrickBoy_MiSTer)                                                                      |
 | [BubbleUniverse](https://github.com/movievertigo/MiSTer-BubbleUniverse)                                                        |
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                               |

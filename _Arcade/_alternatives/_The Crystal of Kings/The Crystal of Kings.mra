@@ -1,0 +1,60 @@
+<!--
+  The Crystal of Kings (BrezzaSoft, 2001) - BrezzaSoft Crystal System - MRA for the Crystal MiSTer core.
+
+  ROM set: MAME crysking.zip (parent BIOS crysbios.zip). Sizes/CRCs verified against MAME
+  (c233473382353a00fb2d8b00d98c197cee910854 and 0.289). No ROM data is embedded in this file.
+  docs/ROM_LAYOUT.md describes the stream.
+
+  Index 1: board record (16 bytes): "CRYS", version 1, game id 1 (crysking: enables the isolated
+           MAME-compatible protection overlay, docs/PROTECTION.md), populated flash banks 3.
+  Index 2: NVRAM image (zeros, then the saved .nvm), before index 0 so the board starts with it.
+  Index 0: platform ROM stream. 0x0000000-0x2FFFFFF cartridge flash banks 0-2 (u1,u2,u3, file byte
+           order = little-endian CPU byte order), 0x3000000-0x301FFFF BIOS (mx27l1000-alt.u14, AMG0110D).
+-->
+<misterromdescription>
+    <name>The Crystal of Kings</name>
+    <setname>crysking</setname>
+    <rbf>Crystal</rbf>
+    <mameversion>0289</mameversion>
+    <year>2001</year>
+    <manufacturer>BrezzaSoft</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <platform>BrezzaSoft Crystal System</platform>
+    <category>Fighter / Hack and Slash</category>
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin,Service" default="A,B,X,Y,Start,Select,R"/>
+
+    <switches default="FF" base="16">
+        <dip bits="0" name="Pause" ids="On,Off"/>
+        <dip bits="1" name="Free Play" ids="On,Off"/>
+        <dip bits="2" name="Unknown (DSW:3)" ids="On,Off"/>
+        <dip bits="3" name="Unknown (DSW:4)" ids="On,Off"/>
+        <dip bits="4" name="Unknown (DSW:5)" ids="On,Off"/>
+        <dip bits="5" name="Unknown (DSW:6)" ids="On,Off"/>
+        <dip bits="6" name="Unknown (DSW:7)" ids="On,Off"/>
+        <dip bits="7" name="Test (DSW:8)" ids="On,Off"/>
+    </switches>
+
+    <rom index="1">
+        <part>
+            43 52 59 53 01 01 03 00 00 00 00 00 00 00 00 00
+        </part>
+    </rom>
+
+    <!-- NVRAM (64 KiB battery RAM at 0x01400000, MAME nvram/crysking/nvram format): zero image (MAME default),
+         then MiSTer replaces it with the saved .nvm and saves it when the game has written it. -->
+    <rom index="2">
+        <part repeat="0x10000">00</part>
+    </rom>
+    <nvram index="2" size="65536"/>
+
+    <rom index="0" zip="crysking.zip|crysbios.zip" md5="none">
+        <!-- FLASH bank 0-2: MAME region "flash" (ROM_REGION32_LE 0x3000000) -->
+        <part name="bcsv0004f01.u1" crc="8feff120"/>
+        <part name="bcsv0004f02.u2" crc="0e799845"/>
+        <part name="bcsv0004f03.u3" crc="659e2d17"/>
+        <!-- BIOS: MAME region "maincpu", system BIOS 1 "amg0110d" (alternate) -->
+        <part name="mx27l1000-alt.u14" crc="1e8175c8"/>
+    </rom>
+</misterromdescription>

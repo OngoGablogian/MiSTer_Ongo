@@ -1,0 +1,65 @@
+<!--
+  Top Blade V (Sonokong / Expotato, 2003) - BrezzaSoft Crystal System - MRA for the Crystal MiSTer core.
+
+  ROM set: MAME topbladv.zip (parent BIOS crysbios.zip). Sizes/CRCs verified against MAME
+  (c233473382353a00fb2d8b00d98c197cee910854 and 0.289). No ROM data is embedded in this file.
+  docs/ROM_LAYOUT.md describes the stream.
+
+  Index 1: board record (16 bytes): "CRYS", version 1, game id 3 (topbladv: protection PIC16F628A run by the
+           core, VRender0/CPU at 80.013 MHz / 40.007 MHz as in the MAME topbladv machine), populated flash
+           banks 1.
+  Index 2: NVRAM image (zeros, then the saved .nvm).
+  Index 3: protection PIC firmware (MAME region "pic", 0x4300 bytes; older sets name the file
+           top_blade_v_pic16c727.bin - matched by CRC).
+  Index 0: platform ROM stream. 0x0000000-0x0FFFFFF cartridge flash bank 0 (flash.u1),
+           0x1000000-0x101FFFF BIOS (mx27l1000.u14, AMG0110B).
+-->
+<misterromdescription>
+    <name>Top Blade V</name>
+    <setname>topbladv</setname>
+    <rbf>Crystal</rbf>
+    <mameversion>0289</mameversion>
+    <year>2003</year>
+    <manufacturer>Sonokong / Expotato</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <platform>BrezzaSoft Crystal System</platform>
+    <category>Action</category>
+    <buttons names="Button 1,Button 2,-,-,Start,Coin,Service" default="A,B,Start,Select,R"/>
+
+    <switches default="FF" base="16">
+        <dip bits="0" name="Pause" ids="On,Off"/>
+        <dip bits="1" name="Free Play" ids="On,Off"/>
+        <dip bits="2" name="Unknown (DSW:3)" ids="On,Off"/>
+        <dip bits="3" name="Unknown (DSW:4)" ids="On,Off"/>
+        <dip bits="4" name="Unknown (DSW:5)" ids="On,Off"/>
+        <dip bits="5" name="Unknown (DSW:6)" ids="On,Off"/>
+        <dip bits="6" name="Unknown (DSW:7)" ids="On,Off"/>
+        <dip bits="7" name="Test (DSW:8)" ids="On,Off"/>
+    </switches>
+
+    <rom index="1">
+        <part>
+            43 52 59 53 01 03 01 00 00 00 00 00 00 00 00 00
+        </part>
+    </rom>
+
+    <!-- NVRAM (64 KiB battery RAM at 0x01400000, MAME nvram format) -->
+    <rom index="2">
+        <part repeat="0x10000">00</part>
+    </rom>
+    <nvram index="2" size="65536"/>
+
+    <!-- Protection PIC16F628A firmware: MAME image layout (program, configuration word, EEPROM) -->
+    <rom index="3" zip="topbladv.zip" md5="none">
+        <part name="top_blade_v_pic16c727.bin" crc="9cdea57b"/>
+    </rom>
+
+    <rom index="0" zip="topbladv.zip|crysbios.zip" md5="none">
+        <!-- FLASH bank 0: MAME region "flash" (ROM_REGION32_LE 0x1000000) -->
+        <part name="flash.u1" crc="bd23f640"/>
+        <!-- BIOS: MAME region "maincpu", system BIOS 0 "amg0110b" -->
+        <part name="mx27l1000.u14" crc="beff39a9"/>
+    </rom>
+</misterromdescription>
