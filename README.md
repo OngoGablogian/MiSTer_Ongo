@@ -171,12 +171,12 @@ main=MiSTer_Uneon
 ```
 
 > [!WARNING]
-> * This repository mirrors cores from both the [Meathax](https://github.com/meathax/meatcores) & [blahm1d](https://github.com/blahm1d/MiSTer-cores) databases, as I prefer having all of the arcade games in the `_Arcade` folder on MiSTer. If you use either of these databases, please add these filters below to your `downloader.ini` to avoid having duplicate or conflicting MRAs/RBFs. This will prevent the Meathax & blahm1d cores from being downloaded from this repository.
+> * This repository mirrors cores from both the [Meathax](https://github.com/meathax/meatcores) & [blahm1d](https://mister.blahm1d.com/) databases, as I prefer having all of the arcade games in the `_Arcade` folder on MiSTer. If you use either of these databases, please add these filters below to your `downloader.ini` to avoid having duplicate or conflicting MRAs/RBFs. This will prevent the Meathax & blahm1d cores from being downloaded from this repository.
 
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
-filter = !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_legendofkage !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_vunit !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_EscapeKids !Arcade-Meathax_I-Robot !Arcade-Meathax_Ikki !Arcade-Meathax_MCR68 !Arcade-Meathax_NamcoND1 !Arcade-Meathax_NARC !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_SSV !Arcade-Meathax_Suna8bit !Arcade-Meathax_YellowCab
+filter = !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_invasion !Arcade-blahm1d_legendofkage !Arcade-blahm1d_mk4 !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_vunit !Arcade-blahm1d_wargods !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_I-Robot !Arcade-Meathax_Ikki !Arcade-Meathax_MCR68 !Arcade-Meathax_NamcoND1 !Arcade-Meathax_NARC !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_Simple156 !Arcade-Meathax_SSV !Arcade-Meathax_StoneBall !Arcade-Meathax_StunRunner !Arcade-Meathax_Suna8bit !Arcade-Meathax_Tumble !Arcade-Meathax_VioStorm !Arcade-Meathax_YellowCab
 ```
 
 ----
