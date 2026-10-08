@@ -206,6 +206,7 @@ main=MiSTer_N64DD
 | MRA |
 | :---: |
 | [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                                            |
+| [Cave CV1000 Practice ROMs](https://blog.kasaski.dev/2026/10/02/kasaskis-CV1000-practice-roms)                                                |
 | [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                                                                                   |
 | [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)                                                                  |
 | [DoDonPachi (Ship Color Hack)](https://epozzobon.it/re/ddonpach/patcher)                                                                      |
