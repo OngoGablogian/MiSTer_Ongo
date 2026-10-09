@@ -136,6 +136,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Violent Storm](https://www.patreon.com/Meathax/posts/violent-storm-171663267)                                                 |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
 | [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
+| [Zero Team](https://www.patreon.com/Meathax/posts/fresh-meat-zero-171867032)                                                   |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                |
 

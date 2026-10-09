@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<misterromdescription>
+  <name>Zero Team (Taiwan)</name>
+  <setname>zeroteamc</setname>
+  <rbf>Meathax_ZeroTeam</rbf>
+  <mameversion>0289</mameversion>
+  <year>1993</year>
+  <manufacturer>Seibu Kaihatsu (Liang Hwa license)</manufacturer>
+  <category>Beat em up</category>
+  <rotation>horizontal</rotation>
+  <resolution>15kHz</resolution>
+  <players>4</players>
+  <joystick>8-way</joystick>
+  <num_buttons>2</num_buttons>
+  <buttons names="Attack,Jump,-,-,-,-,Start,Coin,Pause,Service Credit,Service Menu" default="A,B,Start,R,L,Select,Y"/>
+  <switches default="FF,FF,FF,FF">
+    <dip name="Coin A" bits="0,2" ids="4C 1C,3C 1C,2C 1C,1C 4C,1C 6C,1C 3C,1C 2C,1C 1C"/>
+    <dip name="Coin B" bits="3,5" ids="4C 1C,3C 1C,2C 1C,1C 4C,1C 6C,1C 3C,1C 2C,1C 1C"/>
+    <dip name="Starting Coin" bits="6" ids="X 2,Normal"/>
+    <dip name="Flip Screen" bits="7" ids="On,Off"/>
+    <dip name="Difficulty" bits="8,9" ids="Very Hard,Easy,Hard,Normal"/>
+    <dip name="Lives" bits="10,11" ids="1,3,4,2"/>
+    <dip name="Bonus Life" bits="12,13" ids="No Extend,Every 1000000,2000000,1000000"/>
+    <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+    <dip name="Unused SW2:8" bits="15" ids="On,Off"/>
+    <dip name="Cabinet Setting" bits="24,26" ids="4P Freeplay,2P Freeplay,4P 2Slot,2P x2,3P 2Slot,4P 4Slot,3P 3Slot,2P"/>
+    <dip name="Service Menu" bits="27" ids="On,Off"/>
+    <dip name="Unused SW3:5" bits="28" ids="On,Off"/>
+    <dip name="Unused SW3:6" bits="29" ids="On,Off"/>
+    <dip name="Unused SW3:7" bits="30" ids="On,Off"/>
+    <dip name="Unused SW3:8" bits="31" ids="On,Off"/>
+  </switches>
+  <!--SW1/2 are DSW; SW3 is SYSTEM high byte. Attack+Jump together performs the special move.-->
+  <rom index="0" zip="zeroteamc.zip|zeroteam.zip" md5="None">
+    <interleave output="32">
+      <part name="b1.u024.5k" crc="528de3b9" map="0001"/>
+      <part name="b2.u025.6l" crc="5176015e" map="0010"/>
+      <part name="b3.u023.6k" crc="3688739a" map="0100"/>
+      <part name="b4.u026.5l" crc="c79925cb" map="1000"/>
+    </interleave>
+    <interleave output="16">
+      <part name="b7.u072.5s" crc="30ec0241" map="01"/>
+      <part name="b8.u077.5r" crc="e18b3a75" map="10"/>
+    </interleave>
+    <part name="musha_back-1.u075.4s" crc="8b7f9219"/>
+    <part name="musha_back-2.u0714.2s" crc="ce61c952"/>
+    <part repeat="0x280000">00</part>
+    <part name="6.c.u105.4a" crc="b4a6e899"/>
+    <part name="5.c.u1110.5b" crc="efc484ca"/>
+    <part repeat="0x90000">00</part>
+    <interleave output="32">
+      <part name="musha_obj-1.u0811.6f" crc="45be8029" map="0021"/>
+      <part name="musha_obj-2.u082.5f" crc="cb61c19d" map="2100"/>
+    </interleave>
+    <part repeat="0x400000">FF</part>
+  </rom>
+  <rom index="3">
+    <part>1C 9C 38 00 3F FF 00 04 00 04 00 01 00 0F 10 00 00 00 92 12 4B 40 55 00</part>
+  </rom>
+  <nvram index="4" size="75"/>
+</misterromdescription>
