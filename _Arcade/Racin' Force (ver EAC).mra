@@ -1,0 +1,93 @@
+<misterromdescription>
+    <name>Racin' Force (ver EAC)</name>
+    <setname>racinfrc</setname>
+    <rbf>KonamiGXT1</rbf>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>23</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 35); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="racinfrc.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="250eac02.34n" crc="df2a48c0" map="0012"/>
+            <part name="250eac03.31n" crc="6da86a4d" map="1200"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+        <interleave output="32">
+            <part name="250a04.34s" crc="45e4d43c" map="0012"/>
+            <part name="250a05.31s" crc="a235af3e" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 6-byte row, then the last 2 bytes of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="250a15.19y" crc="60abc472"/>  <!-- four-byte part -->
+        <part repeat="1048576">00</part>
+        <part name="250a14.21y" crc="d14abf98"/>  <!-- second part -->
+        <part repeat="524288">00</part>
+        <!-- k055673: MAME's region, a four-byte part then the fifth bytes -->
+        <part repeat="1048576">00</part>
+        <interleave output="32">
+            <part name="250a12.26y" crc="e4ca3cff" map="0021"/>
+            <part name="250a10.31y" crc="75c02d12" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="250a13.24y" crc="7aeef929" map="0021"/>
+            <part name="250a11.28y" crc="dfbce309" map="2100"/>
+        </interleave>
+        <part name="250a08.36y" crc="25ff6414"/>
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="6291456">00</part>
+        <interleave output="16">
+            <part name="250a06.8p" crc="2d0a3ff1" map="01"/>
+            <part name="250a07.6p" crc="612b670a" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="250a17.14y" crc="adefa079"/>
+        <part name="250a18.12y" crc="8014a2eb"/>
+        <part repeat="786432">00</part>
+        <!-- gfx3: MAME's region as it is -->
+        <interleave output="24">
+            <part name="250a20.10d" crc="26a2fcaf" map="001"/>
+            <part name="250a21.7d" crc="370d7771" map="010"/>
+            <part name="250a22.5d" crc="c66a7775" map="100"/>
+        </interleave>
+        <!-- gfx4: MAME's region as it is -->
+        <interleave output="24">
+            <part name="250a24.10h" crc="a14547da" map="001"/>
+            <part name="250a25.7h" crc="58310501" map="010"/>
+            <part name="250a26.5h" crc="f72e4cbe" map="100"/>
+        </interleave>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="racinfrc.zip" md5="none">
+        <part name="racinfrc.nv" crc="dc88c693"/>
+    </rom>
+
+    <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
+         saved when the OSD opens after the game has written it -->
+    <nvram index="4" size="128"/>
+
+    <switches default="E7,FF">
+        <dip name="Flip Screen" bits="2" ids="Yes,No"/>
+        <dip name="Cabinet" bits="3,4" ids="Upright (Stereo),Unused,Upright (Mono),2in1"/>
+        <dip name="Car" bits="5,7" ids="No. 8 (Green),No. 7 (Yellow),No. 6 (Blue),No. 5 (Red),No. 4 (Green),No. 3 (Yellow),No. 2 (Blue),No. 1 (Red)"/>
+    </switches>
+
+    <buttons names="Gas,Brake,Gear Shift,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Time"       >00000020 00C004C8 00000000 000003E8</cheat>
+        <cheat name="Always in Position 1">00000010 00C06070 00000000 00000001</cheat>
+    </cheats>
+</misterromdescription>

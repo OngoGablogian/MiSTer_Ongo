@@ -77,7 +77,8 @@
     </rom>
     <nvram index="1" size="2048"/>
 
-    <rom index="0" zip="nebulrayp.zip|nebulray.zip|namcoc75.zip" md5="none">
+    <!-- address: fast loading (Main_MiSTer puts the stream in DDR3; the core copies it to SDRAM) -->
+    <rom index="0" zip="nebulrayp.zip|nebulray.zip|namcoc75.zip" md5="none" address="0x31000000">
         <!-- OBJ: stream 0x0000000-0x0FFFFFF, MAME region "c355spr" -->
         <interleave output="32">
             <part name="a0.1a" crc="e6ecca1a" map="0001"/>

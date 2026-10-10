@@ -69,7 +69,7 @@
          saved when the OSD opens after the game has written it -->
     <nvram index="4" size="128"/>
 
-    <switches default="F6,FF">
+    <switches default="FE,FF">
         <dip name="Sound output" bits="0" ids="Stereo,Mono"/>
         <dip name="Left Flip Screen" bits="1" ids="On,Off"/>
         <dip name="Right Flip Screen" bits="2" ids="On,Off"/>

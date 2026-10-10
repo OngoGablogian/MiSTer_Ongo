@@ -49,7 +49,7 @@
     </rom>
     <nvram index="2" size="65536"/>
 
-    <rom index="0" zip="crysking.zip|crysbios.zip" md5="none">
+    <rom index="0" zip="crysking.zip|crysbios.zip" md5="none" address="0x32000000">
         <!-- FLASH bank 0-2: MAME region "flash" (ROM_REGION32_LE 0x3000000) -->
         <part name="bcsv0004f01.u1" crc="8feff120"/>
         <part name="bcsv0004f02.u2" crc="0e799845"/>

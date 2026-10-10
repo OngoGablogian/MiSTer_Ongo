@@ -48,7 +48,7 @@
     </rom>
     <nvram index="2" size="65536"/>
 
-    <rom index="0" zip="evosocc.zip|crysbios.zip" md5="none">
+    <rom index="0" zip="evosocc.zip|crysbios.zip" md5="none" address="0x32000000">
         <!-- FLASH bank 0-2: MAME region "flash" (ROM_REGION32_LE 0x3000000) -->
         <part name="bcsv0001u01" crc="2581a0ea"/>
         <part name="bcsv0001u02" crc="47ef1794"/>

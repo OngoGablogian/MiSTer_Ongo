@@ -56,7 +56,7 @@
         <part name="top_blade_v_pic16c727.bin" crc="9cdea57b"/>
     </rom>
 
-    <rom index="0" zip="topbladv.zip|crysbios.zip" md5="none">
+    <rom index="0" zip="topbladv.zip|crysbios.zip" md5="none" address="0x32000000">
         <!-- FLASH bank 0: MAME region "flash" (ROM_REGION32_LE 0x1000000) -->
         <part name="flash.u1" crc="bd23f640"/>
         <!-- BIOS: MAME region "maincpu", system BIOS 0 "amg0110b" -->

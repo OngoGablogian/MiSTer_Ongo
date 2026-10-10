@@ -1,0 +1,90 @@
+<misterromdescription>
+    <name>Run and Gun 2 (ver UAA)</name>
+    <setname>rungun2</setname>
+    <rbf>KonamiGXT34</rbf>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>1B</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 27); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="rungun2.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="505uaa03.27b" crc="ad7f9ded" map="0012"/>
+            <part name="505uaa02.31b" crc="cfca23f7" map="1200"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+        <interleave output="32">
+            <part name="505a05.29r" crc="5da5d695" map="0012"/>
+            <part name="505a04.31r" crc="11a73f01" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: MAME's region as it is (8-byte rows, a granule each) -->
+        <part repeat="917502">00</part>
+        <interleave output="16">
+            <part name="505a21.11r" crc="03fda175" map="01"/>
+            <part name="505a20.11m" crc="a6a300fb" map="10"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+        <!-- k056832: the four-byte part of each 8-byte row, then the last 4 bytes of each (the core spreads rows to 8) -->
+        <!-- k055673: GX6, bytes 0-3 of each half-row, then bytes 4-5 -->
+        <interleave output="32">
+            <part name="505a19.14r" crc="ffde4f17" map="0021"/>
+            <part name="505a15.18r" crc="d9ab1e6c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="505a17.16r" crc="8176f2f5" map="0021"/>
+            <part name="505a13.21r" crc="e60c5191" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="505a18.18m" crc="c12bacfe" map="0021"/>
+            <part name="505a14.14m" crc="356a75b0" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="505a16.16m" crc="ca9c2193" map="0021"/>
+            <part name="505a12.21m" crc="421d5034" map="2100"/>
+        </interleave>
+        <part name="505a11.23r" crc="75c13df0"/>  <!-- two-byte part -->
+        <part name="505a09.25r" crc="3e1d5a15"/>  <!-- two-byte part -->
+        <part name="505a10.23m" crc="fc315ee0"/>  <!-- two-byte part -->
+        <part name="505a08.25m" crc="442ed3ec"/>  <!-- two-byte part -->
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="8388608">00</part>
+        <interleave output="16">
+            <part name="505a06.9m" crc="920013f1" map="01"/>
+            <part name="505a07.7m" crc="5641c603" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="505a23.7r" crc="67f03445"/>
+        <part name="505a22.9r" crc="c2b67a9d"/>
+        <part repeat="786432">00</part>
+        <!-- gfx3: MAME's region as it is -->
+        <part name="505a24.22h" crc="70e906da"/>
+    </rom>
+
+    <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
+         saved when the OSD opens after the game has written it -->
+    <nvram index="4" size="128"/>
+
+    <switches default="FE,FF">
+        <dip name="Sound output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Left Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Right Flip Screen" bits="2" ids="On,Off"/>
+        <dip name="Number of Screens" bits="3" ids="2,1"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits">00000010 00C12701 00000000 00000009</cheat>
+    </cheats>
+</misterromdescription>

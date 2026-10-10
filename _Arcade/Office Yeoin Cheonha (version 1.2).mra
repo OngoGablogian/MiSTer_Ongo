@@ -55,7 +55,7 @@
         <part name="office_yeo_in_cheon_ha_pic16f84a.bin" crc="7561cdf5"/>
     </rom>
 
-    <rom index="0" zip="officeye.zip" md5="none">
+    <rom index="0" zip="officeye.zip" md5="none" address="0x32000000">
         <!-- FLASH bank 0-1: MAME region "flash" (ROM_REGION32_LE 0x2000000) -->
         <part name="flash.u1" crc="d3f3eec4"/>
         <part name="flash.u2" crc="e4f85d0a"/>

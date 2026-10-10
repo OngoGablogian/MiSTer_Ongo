@@ -12,6 +12,8 @@
   MAME byte order, placed in its fixed window; stream offset == physical address (below
   0x2000000 SDRAM, above it the DDR3 sprite store). The C75 BIOS (c75.bin) comes from the game
   zip (non-merged sets) or from namcoc75.zip (split/merged sets).
+  address="0x30000000": DDR3 fast loading (MiSTer copies the stream into DDR3 there and the core
+  replays it, rtl/nb2/nb2_fastload.sv); firmware without it streams the ROM as before.
 -->
 <misterromdescription>
     <name>The Outfoxies (Korea?)</name>
@@ -72,7 +74,7 @@
     </rom>
     <nvram index="1" size="2048"/>
 
-    <rom index="0" zip="outfxiesa.zip|outfxies.zip|namcoc75.zip" md5="none">
+    <rom index="0" zip="outfxiesa.zip|outfxies.zip|namcoc75.zip" md5="none" address="0x30000000">
         <!-- ROZ: stream 0x0000000-0x07FFFFF, MAME region "c169roz" -->
         <part name="ou1-rot0.3d" crc="a50c67c8"/>
         <part name="ou1-rot1.3c" crc="14866780"/>

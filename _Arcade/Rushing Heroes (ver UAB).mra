@@ -1,0 +1,83 @@
+<misterromdescription>
+    <name>Rushing Heroes (ver UAB)</name>
+    <setname>rushhero</setname>
+    <rbf>KonamiGXT34</rbf>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>1D</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 29); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="rushhero.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="605uab03.29m" crc="c5b8d31d" map="0012"/>
+            <part name="605uab02.31m" crc="94c3d835" map="1200"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+        <interleave output="32">
+            <part name="605a05.29r" crc="9bca4297" map="0012"/>
+            <part name="605a04.31r" crc="f6788154" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: MAME's region as it is (8-byte rows, a granule each) -->
+        <part repeat="917502">00</part>
+        <interleave output="16">
+            <part name="605a21.11r" crc="0e5add29" map="01"/>
+            <part name="605a20.11m" crc="a8fb4288" map="10"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+        <!-- k056832: the four-byte part of each 8-byte row, then the last 4 bytes of each (the core spreads rows to 8) -->
+        <!-- k055673: GX6, bytes 0-3 of each half-row, then bytes 4-5 -->
+        <interleave output="32">
+            <part name="605a19.14r" crc="293427d0" map="0021"/>
+            <part name="605a15.18r" crc="19e6e356" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="605a17.16r" crc="7a8f1cf9" map="0021"/>
+            <part name="605a13.21r" crc="9a6dff6d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="605a18.14m" crc="4d4dbecb" map="0021"/>
+            <part name="605a14.18m" crc="b5115d76" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="605a16.16m" crc="aab542ca" map="0021"/>
+            <part name="605a12.21m" crc="194ffad0" map="2100"/>
+        </interleave>
+        <part name="605a11.23r" crc="bc61339c"/>  <!-- two-byte part -->
+        <part name="605a09.25r" crc="624fd486"/>  <!-- two-byte part -->
+        <part name="605a10.23m" crc="4f47d434"/>  <!-- two-byte part -->
+        <part name="605a08.25m" crc="ea80ddfd"/>  <!-- two-byte part -->
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="16777216">00</part>
+        <interleave output="16">
+            <part name="605a06.9m" crc="9ca03dce" map="01"/>
+            <part name="605a07.7m" crc="3116a8b0" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="605a23.7r" crc="458ecee1"/>
+        <part repeat="786432">00</part>
+        <!-- gfx3: MAME's region as it is -->
+        <part name="605a24.22h" crc="73f06065"/>
+    </rom>
+
+    <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
+         saved when the OSD opens after the game has written it -->
+    <nvram index="4" size="128"/>
+
+    <switches default="FE,FF">
+        <dip name="Sound output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Left Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Right Flip Screen" bits="2" ids="On,Off"/>
+        <dip name="Number of Screens" bits="3" ids="2,1"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+</misterromdescription>
