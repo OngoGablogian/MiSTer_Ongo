@@ -50,6 +50,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
+| [Hyperstone E1](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                             |
 | [I, Robot](https://www.patreon.com/Meathax/posts/i-robot-1984-169005879)                                                       |
 | [Ikki](https://www.patreon.com/Meathax/posts/1-1-ikki-update-165122730)                                                        |
 | [Intrepid](https://misterfpga.org/viewtopic.php?t=10823)                                                                       |
