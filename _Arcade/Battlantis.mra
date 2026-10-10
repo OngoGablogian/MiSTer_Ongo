@@ -1,0 +1,34 @@
+<misterromdescription>
+    <name>Battlantis</name>
+    <mameversion>0220</mameversion>
+    <setname>battlnts</setname>
+    <year>1987</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Shooter</category>
+    <rbf>Battlantis</rbf>
+
+    <!-- One core, one MRA, three versions: Battlantis (version G), Battlantis (version F) and Battlantis (Japan, version E).
+         Pick the version in the OSD (Game Version); the core restarts the game when it changes.
+         All the program ROMs are loaded together, in this order (the shared sound ROM, sprites and tiles are used by every version):
+           0x00000 banked ROM, version G      777_g03.8e             battlnts.zip
+           0x10000 fixed ROM, version G       777_g02.7e
+           0x18000 sound ROM (shared)         777_c01.10a
+           0x20000 sprites (shared)           777c05.13e
+           0x60000 tiles (shared)             777c04.13a
+           0xA0000 banked ROM, version F      battlntsa/777_f03.8e
+           0xB0000 fixed ROM, version F       battlntsa/777_f02.7e
+           0xB8000 banked ROM, version E      battlntsj/777_e03.8e
+           0xC8000 fixed ROM, version E       battlntsj/777_e02.7e
+         The file battlnts.zip must hold all of them, the F and E files inside the folders battlntsa and battlntsj. -->
+    <rom index="0" zip="battlnts.zip" md5="none">
+        <part name="777_g03.8e" />            <!-- 64KB banked ROM, version G -->
+        <part name="777_g02.7e" />            <!-- 32KB fixed ROM, version G -->
+        <part name="777_c01.10a" />           <!-- 32KB sound ROM -->
+        <part name="777c05.13e" />            <!-- 256KB sprites -->
+        <part name="777c04.13a" />            <!-- 256KB tiles -->
+        <part name="battlntsa/777_f03.8e" />  <!-- 64KB banked ROM, version F -->
+        <part name="battlntsa/777_f02.7e" />  <!-- 32KB fixed ROM, version F -->
+        <part name="battlntsj/777_e03.8e" />  <!-- 64KB banked ROM, Japan version E -->
+        <part name="battlntsj/777_e02.7e" />  <!-- 32KB fixed ROM, Japan version E -->
+    </rom>
+</misterromdescription>
