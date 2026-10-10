@@ -25,10 +25,12 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                     |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                           |
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                  |
+| [B.Rap Boys](https://www.patreon.com/bazset/posts/b-rap-boys-1992-171451712)                                                   |
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Bally/Sente SAC-1](https://github.com/ppriest/Arcade-BallySente_MiSTer)                                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
+| [Bonk's Adventure](https://www.patreon.com/bazset/posts/bonks-adventure-171454226)                                             |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BrezzaSoft Crystal System](https://github.com/kyledlester/BrezzaSoft_Crystal_System_MiSTer)                                   |
 | [BrickBoy](https://github.com/kandowontu/BrickBoy_MiSTer)                                                                      |
@@ -37,6 +39,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                  |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                  |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                       |
+| [Chase H.Q.](https://www.patreon.com/bazset/posts/chase-h-q-taito-171600711)                                                   |
+| [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                          |
 | [Data East Simple 156](https://www.patreon.com/Meathax/posts/data-east-156-171562893)                                          |
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
@@ -112,6 +116,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                            |
 | [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                |
 | [Seta 1st Generation Hardware (X1-010)](https://github.com/ppriest/Arcade-Seta_MiSTer)                                         |
+| [Shogun Warriors](https://www.patreon.com/bazset/posts/shogun-warriors-171613142)                                              |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
 | [SNK Neo Geo (Turbo)](https://misterfpga.org/viewtopic.php?p=115829#p115829)                                                   |
 | [Sony PocketStation](https://discord.com/channels/647909397477195803/1543102626265174146)                                      |
@@ -120,6 +125,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                           |
 | [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                          |
+| [Special Criminal Investigation](https://www.patreon.com/bazset/posts/s-c-i-taito-1989-171266717)                              |
 | [Stone Ball](https://www.patreon.com/Meathax/posts/stone-ball-chase-171312474)                                                 |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                        |
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                       |

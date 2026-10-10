@@ -59,7 +59,6 @@ games/mame/intrepid.zip,https://archive.org/download/OngoFiles/mame/intrepid.zip
 games/mame/irobot.zip,https://archive.org/download/OngoFiles/mame/irobot.zip,"87060",94e99c182f30191a5ab194d917732e23,,,
 games/mame/jedi.zip,https://archive.org/download/OngoFiles/mame/jedi.zip,"137157",d70b0013d656e030129964e2d9267f8b,,,
 games/mame/kamikcab.zip,https://archive.org/download/OngoFiles/mame/kamikcab.zip,"109175",91b18a4e34ad8a6bcf0f836b9b945517,,,
-games/mame/krull.zip,https://archive.org/download/OngoFiles/mame/krull.zip,"51847",a0513c2d3f3ca4be76bf19e8e52c8cbf,,,
 games/mame/lastduel.zip,https://archive.org/download/OngoFiles/mame/lastduel.zip,"2242972",d85b947c1c8ebd6ab2e180d26c84792c,,,
 games/mame/leds2011.zip,https://archive.org/download/OngoFiles/mame/leds2011.zip,"1392959",54c97e85d73dc1ef75639906e761219d,,,
 games/mame/madgear.zip,https://archive.org/download/OngoFiles/mame/madgear.zip,"1056617",a15fd679e1e4376d0ba29a357273cda8,,,
@@ -111,6 +110,14 @@ games/mame/triviag1.zip,https://archive.org/download/OngoFiles/mame-ballysente/t
 games/mame/triviag2.zip,https://archive.org/download/OngoFiles/mame-ballysente/triviag2.zip,"77241",b022f679cd4fff48d62ba9b3bdde94a8,,,
 games/mame/triviasp.zip,https://archive.org/download/OngoFiles/mame-ballysente/triviasp.zip,"74460",038e4326962066ecfa953bb59685ece2,,,
 games/mame/triviayp.zip,https://archive.org/download/OngoFiles/mame-ballysente/triviayp.zip,"77049",36a49d273721703b2e375b6ed4205221,,,
+
+games/mame/bonkadv.zip,https://archive.org/download/OngoFiles/mame-bazset/bonkadv.zip,"5482624",b1eda8ca06e684ec05a84a72c2086f7c,,,
+games/mame/brapboys.zip,https://archive.org/download/OngoFiles/mame-bazset/brapboys.zip,"6832987",d65be06b5f38d5709dbc3ba97e313823,,,
+games/mame/chasehq.zip,https://archive.org/download/OngoFiles/mame-bazset/chasehq.zip,"5569158",0b7714dd4de4bdbfcda443d553d33da0,,,
+games/mame/contcirc.zip,https://archive.org/download/OngoFiles/mame-bazset/contcirc.zip,"2269941",ce1cfb39d2fd1386777d1438a4cfb437,,,
+games/mame/krull.zip,https://archive.org/download/OngoFiles/mame-bazset/krull.zip,"51847",a0513c2d3f3ca4be76bf19e8e52c8cbf,,,
+games/mame/sci.zip,https://archive.org/download/OngoFiles/mame-bazset/sci.zip,"4770815",a53dc329c55b9f0ae6a8f48d525a6c47,,,
+games/mame/shogwarr.zip,https://archive.org/download/OngoFiles/mame-bazset/shogwarr.zip,"6809833",cb0c7a35e98e7674d92e0513889139b3,,,
 
 games/mame/coh1000c.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/coh1000c.zip,"278492",a77a0ea2ab5d8678e6b8ba1304fb6cf5,,,
 games/mame/glpracr.zip,https://archive.org/download/OngoFiles/mame-capcomzn1/glpracr.zip,"4418784",b5b2172ed6cf5a89bcb98220f84887c1,,,

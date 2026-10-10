@@ -1,0 +1,157 @@
+<!--
+Chase H.Q. (Taito, 1988). Taito Z System, dual 68000 + TC0100SCN + TC0150ROD
+road + TC0170ABT-style sprites + Z80/YM2610 sound.
+
+Requires chasehq.zip.
+
+Stream layout (matches REGIONS in scripts/build_chasehq_flat_image.py,
+verified this session against doc/mame/taito_z.cpp's ROM_START(chasehq)):
+    0x000000  main 68000 program   512KB  (2x ROM_LOAD16_BYTE pairs)
+    0x080000  sub 68000 program    128KB  (1x ROM_LOAD16_BYTE pair)
+    0x0A0000  Z80 sound program     64KB  (flat)
+    0x0B0000  TC0100SCN tile ROM   512KB  (ROM_LOAD16_WORD_SWAP, single file)
+    0x130000  sprites bank A         2MB  (ROM_LOAD64_WORD_SWAP x4)
+    0x330000  TC0150ROD road ROM   512KB  (ROM_LOAD16_WORD, flat)
+    0x3B0000  sprites bank B          2MB  (ROM_LOAD64_WORD_SWAP x4)
+    0x5B0000  spritemap (STY)      512KB  (ROM_LOAD16_WORD, flat)
+    0x630000  ADPCM-A samples      1.5MB  (flat, 3 files concatenated)
+    0x7B0000  ADPCM-B samples      512KB  (flat)
+    0x830000  B52-50.IC66 Y zoom   64KB  (flat; first 16KB is the non-flipped 128x128 lookup)
+
+MAIN/SUB CPU interleave map polarity (01/10) matches the exact idiom
+already confirmed working on real hardware in Superman's and Gigandes'
+own MRAs for the same ROM_LOAD16_BYTE pattern - not guessed.
+
+SPRITE 4-LANE INTERLEAVE (ROM_LOAD64_WORD_SWAP x4, offsets 0/2/4/6):
+the map="12000000"/"00120000"/"00001200"/"00000012" pattern below is the
+standard MiSTer MRA idiom for this exact MAME macro (each mask ROM feeds
+one word-swapped 16-bit lane of a 64-bit bus). UNLIKE every other section
+of this file, no sibling core in this workspace has a 4-lane interleave to
+verify this specific map string against - this is the one piece that
+still needs confirming (either against a known-good published MRA using
+the same macro, or empirically on hardware/an MRA-to-binary converter)
+before being trusted the way build_chasehq_flat_image.py's equivalent
+Python interleave() was verified this session (byte-exact round-trip
+against the original zip, see codex_changes.md 2026-08-19/20).
+-->
+<misterromdescription>
+    <rbf>bazset_ChaseHQ</rbf>
+    <name>Chase H.Q. (World)</name>
+    <setname>chasehq</setname>
+    <year>1988</year>
+    <manufacturer>Taito</manufacturer>
+    <about author="bazset" source="https://github.com/bazset" patreon="https://www.patreon.com/cw/bazset"/>
+    <players>1</players>
+    <joystick>8way</joystick>
+
+    <rotation>horizontal</rotation>
+    <region>World</region>
+
+    <rom index="0" zip="chasehq.zip" type="merged" md5="none">
+
+        <!-- maincpu: b52-130.36/b52-136.29 (low half), b52-131.37/b52-129.30 (high half) -->
+        <interleave output="16">
+            <part name="b52-130.36" crc="4e7beb46" map="01"/>
+            <part name="b52-136.29" crc="2f414df0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="b52-131.37" crc="aa945d83" map="01"/>
+            <part name="b52-129.30" crc="0eaebc08" map="10"/>
+        </interleave>
+
+        <!-- sub: b52-132.39/b52-133.55 -->
+        <interleave output="16">
+            <part name="b52-132.39" crc="a2f54789" map="01"/>
+            <part name="b52-133.55" crc="12232f95" map="10"/>
+        </interleave>
+
+        <!-- audiocpu: Z80 program, flat -->
+        <part name="b52-137.51" crc="37abb74a"/>
+
+        <!-- tc0100scn: single ROM_LOAD16_WORD_SWAP file -->
+        <interleave output="16">
+            <part name="b52-29.27" crc="8366d27c" map="12"/>
+        </interleave>
+
+        <!-- sprites bank A: b52-34.5(lane0)/b52-35.7(lane1)/b52-36.9(lane2)/b52-37.11(lane3) -->
+        <!-- lane order verified byte-for-byte vs chasehq_flat.bin -->
+        <interleave output="64">
+            <part name="b52-34.5"  crc="7d8dce36" map="00000012"/>
+            <part name="b52-35.7"  crc="78eeec0d" map="00001200"/>
+            <part name="b52-36.9"  crc="61e89e91" map="00120000"/>
+            <part name="b52-37.11" crc="f02e47b9" map="12000000"/>
+        </interleave>
+
+        <!-- tc0150rod: single ROM_LOAD16_WORD file, no swap -->
+        <part name="b52-28.4" crc="963bc82b"/>
+
+        <!-- sprites bank B: b52-30.4/b52-31.6/b52-32.8/b52-33.10 -->
+        <!-- lane order verified byte-for-byte vs chasehq_flat.bin -->
+        <interleave output="64">
+            <part name="b52-30.4"  crc="1b8cc647" map="00000012"/>
+            <part name="b52-31.6"  crc="f1998e20" map="00001200"/>
+            <part name="b52-32.8"  crc="8620780c" map="00120000"/>
+            <part name="b52-33.10" crc="e6f4b8c4" map="12000000"/>
+        </interleave>
+
+        <!-- spritemap: single ROM_LOAD16_WORD file, no swap -->
+        <part name="b52-38.34" crc="5b5bf7f6"/>
+
+        <!-- ADPCM-A: 3 files concatenated flat -->
+        <part name="b52-115.71" crc="4e117e93"/>
+        <part name="b52-114.72" crc="3a73d6b1"/>
+        <part name="b52-113.73" crc="2c6a3a05"/>
+
+        <!-- ADPCM-B: single file, flat -->
+        <part name="b52-116.70" crc="ad46983c"/>
+
+        <!-- B02: physical sprite vertical-zoom lookup ROM, IC66. The core
+             captures only the first 0x4000 bytes into BRAM; the remaining
+             direction/high-address halves are preserved in the stream for
+             provenance but are not required because flip is applied to the
+             resolved 7-bit source row. -->
+        <part name="b52-50.66" crc="c189781c"/>
+
+    </rom>
+
+    <!-- MAME/FBNeo hiscore.dat: maincpu 101760, length a0, sentinels 20/24. -->
+    <nvram index="2" size="160"/>
+
+    <!-- Diagnostic sprite flight recorder kept on a separate slot. -->
+    <nvram index="3" size="16384"/>
+
+    <!--
+    DIP switches and control mapping are deliberately omitted here rather
+    than filled with placeholder/guessed values - TC0040IOC's real DIP
+    byte layout for THIS game needs to come from the actual chasehq_map
+    driver entry (same sec.16 discipline as everything else this session:
+    read the specific game's map function, don't infer from the generic
+    chip or a plausible-looking guess), which hasn't been done yet. Add
+    <switches>/<buttons> once that's confirmed; until then this MRA loads
+    ROMs correctly but the OSD won't show a DIP menu.
+    -->
+
+    <switches default="ff,ff" base="16">
+        <!-- Bits from INPUT_PORTS_START(chasehq) in doc/mame/taito_z.cpp.
+             ids are listed for raw dip value 0,1,2,3 in that order.
+             DSWA bit2 is PORT_SERVICE_DIPLOC, active low, so 1 = Off; with no
+             switches block at all sw[0] stayed 0x00, which held SERVICE MODE
+             ON and booted the board straight into the factory test screen. -->
+        <dip name="Cabinet" bits="0,1" ids="Full Throttle Deluxe,Full Throttle Cockpit,Upright No Steering Lock,Upright Steering Lock"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="4C 1C,3C 1C,2C 1C,1C 1C"/>
+        <dip name="Coin B" bits="6,7" ids="1C 6C,1C 4C,1C 3C,1C 2C"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Timer Setting" bits="10,11" ids="55 Seconds,65 Seconds,70 Seconds,60 Seconds"/>
+        <dip name="Turbos Stocked" bits="12" ids="5,3"/>
+        <dip name="Continue Price" bits="13" ids="Discount,Same as Start"/>
+        <dip name="Clear Damage on Continue" bits="14" ids="Off,On"/>
+        <dip name="Allow Continue" bits="15" ids="Off,On"/>
+    </switches>
+
+    <!-- Names/count match the core's CONF_STR J1 list exactly. -->
+    <buttons names="Accel,Brake,Turbo,Gear,Start,Coin,Coin2,Service,Pause"
+             default="A,B,X,Y,Start,Select,R,L,C" count="9"/>
+
+</misterromdescription>

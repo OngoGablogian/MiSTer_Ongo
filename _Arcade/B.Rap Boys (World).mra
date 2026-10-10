@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+<name>B.Rap Boys (World)</name>
+<setname>brapboys</setname>
+<year>1992</year>
+<manufacturer>Kaneko</manufacturer>
+<category>Beat'em Up</category>
+<filename>brapboys</filename>
+<rbf>bazset_BRapBoys</rbf>
+<nvram index="2" size="128"/>
+<rom index="0" zip="brapboys.zip">
+<interleave input="8" output="16">
+    <part crc="ccbe9a53" name="rb-030.01.u61" map="0001"/>
+    <part crc="c72b8dda" name="rb-031.01.u62" map="0010"/>
+</interleave>
+<part crc="757c6e19" name="rb-040.00.u33"/>
+<part crc="ffd73f87" name="rb-010.u65"/>
+<part crc="d9325f78" name="rb-011.u66"/>
+<part crc="bfdbe0d1" name="rb-012.u67"/>
+<part crc="28c37fe8" name="rb-013.u68"/>
+<part crc="58ad1a62" name="rb-000.u43"/>
+<part crc="2cac25d7" name="rb-003.00.u101"/>
+<part crc="7cf774b3" name="rb-001.u44"/>
+<part crc="e4b30444" name="rb-002.u45"/>
+<part crc="ce220d38" name="rb-020.u100"/>
+<part crc="74001407" name="rb-021.u76"/>
+<part crc="cb3f42dc" name="rb-022.u77"/>
+<part crc="0e6530c5" name="rb-023.u78"/>
+<part crc="65fa6447" name="rb-024.u79"/>
+<part crc="65fa6447" name="rb-024.u79"/>
+<part crc="36cd6b90" name="rb-025.01.u80"/>
+<part repeat="2883584">00</part>
+</rom>
+<rom index="1"><part>05 00</part></rom>
+</misterromdescription>
+

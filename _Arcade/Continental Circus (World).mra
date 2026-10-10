@@ -1,0 +1,56 @@
+<misterromdescription>
+  <rbf>bazset_ContinentalCircus</rbf>
+  <name>Continental Circus (World)</name>
+  <setname>contcirc</setname>
+  <year>1987</year>
+  <manufacturer>Taito</manufacturer>
+  <players>1</players>
+  <rotation>horizontal</rotation>
+  <rom index="0" zip="contcirc.zip" type="merged" md5="none">
+    <!-- 0x000000 maincpu 256K -->
+    <interleave output="16">
+      <part name="b33-ww.ic25" crc="f5c92e42" map="01"/>
+      <part name="b33-xx.ic26" crc="e7c1d1fa" map="10"/>
+    </interleave>
+    <!-- 0x040000 sub 256K -->
+    <interleave output="16">
+      <part name="b33-yy.ic35" crc="16522f2d" map="01"/>
+      <part name="cc_36.bin" crc="a1732ea5" map="10"/>
+    </interleave>
+    <!-- 0x080000 Z80 -->
+    <part name="b33-30.11" crc="d8746234"/>
+    <!-- 0x090000 TC0100SCN -->
+    <interleave output="16"><part name="b33-02.57" crc="f6fb3ba2" map="12"/></interleave>
+    <!-- 0x110000 sprites, ROM_LOAD64_WORD_SWAP lanes -->
+    <interleave output="64">
+      <part name="b33-06" crc="2cb40599" map="00000012"/>
+      <part name="b33-05" crc="bddf9eea" map="00001200"/>
+      <part name="b33-04" crc="8df866a2" map="00120000"/>
+      <part name="b33-03" crc="4f6c36d9" map="12000000"/>
+    </interleave>
+    <!-- 0x310000 road -->
+    <part name="b33-01.3" crc="f11f2be8"/>
+    <!-- 0x390000 spritemap -->
+    <part name="b33-07.64" crc="151e1f52"/>
+    <!-- 0x410000 ADPCM-A -->
+    <part name="b33-09.18" crc="1e6724b5"/>
+    <part name="b33-10.17" crc="e9ce03ab"/>
+    <!-- 0x510000 ADPCM-B -->
+    <part name="b33-08.19" crc="caa1c4c8"/>
+  </rom>
+  <!-- Chase H.Q.-style persisted high scores; Continental has 604 bytes. -->
+  <nvram index="2" size="604"/>
+  <switches default="ff,cf" base="16">
+    <dip name="Cabinet" bits="0" ids="Upright,Cockpit"/>
+    <dip name="Continue Price" bits="1" ids="Discount,Same as Start"/>
+    <dip name="Service Mode" bits="2" ids="On,Off"/>
+    <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+    <dip name="Coin A" bits="4,5" ids="4 Coins/1 Credit,3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/1 Credit"/>
+    <dip name="Coin B" bits="6,7" ids="1 Coin/6 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits"/>
+    <dip name="Difficulty 1 (time/speed)" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+    <dip name="Difficulty 2 (other cars)" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+    <dip name="Steering Wheel" bits="12" ids="Locked,Free"/>
+    <!-- DSWB:6 3D is exclusively controlled by the b01-prerelease top OSD setting. -->
+  </switches>
+  <buttons names="Gas,Brake,Gear,Start,Coin,Coin2,Service,Pause,Tilt" default="A,B,Y,Start,Select,R,L,C,-" count="9"/>
+</misterromdescription>

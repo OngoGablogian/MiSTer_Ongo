@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<misterromdescription>
+    <name>Special Criminal Investigation (World set 1)</name>
+    <setname>sci</setname>
+    <mameversion>0289</mameversion>
+    <year>1989</year>
+    <manufacturer>Taito</manufacturer>
+    <rbf>bazset_SCI</rbf>
+    <rotation>horizontal</rotation>
+    <resolution>320x240</resolution>
+    <buttons names="Gas,Brake,Gun,Turbo,Gear,Start 1P,Coin,Service,Pause" default="A,B,X,Y,R,Start,Select,L,R3" count="5"/>
+    <switches default="FE,FF" page_id="1" page_name="Switches">
+        <dip bits="0" ids="Upright,Cockpit" name="Cabinet"/>
+        <dip bits="2" ids="On,Off" name="Service Mode"/>
+        <dip bits="3" ids="Off,On" name="Demo Sounds"/>
+        <dip bits="4,5" ids="4C/1C,3C/1C,2C/1C,1C/1C" name="Coin A"/>
+        <dip bits="6,7" ids="1C/6C,1C/4C,1C/3C,1C/2C" name="Coin B"/>
+        <dip bits="8,9" ids="Hardest,Hard,Easy,Medium" name="Difficulty"/>
+        <dip bits="10,11" ids="55 Seconds,65 Seconds,70 Seconds,60 Seconds" name="Timer Setting"/>
+        <dip bits="12" ids="5,3" name="Turbos Stocked"/>
+        <dip bits="13" ids="270 Degree,360 Degree" name="Steering Radius"/>
+        <dip bits="14" ids="Off,On" name="Clear Damage on Continue"/>
+        <dip bits="15" ids="Low,Normal" name="Siren Volume"/>
+    </switches>
+
+    <!--
+      The interleave maps follow ROM_LOAD16_BYTE/ROM_LOAD64_WORD_SWAP in
+      doc/mame/taito_z.cpp.  The single output stream is the exact flat-image
+      order consumed by SCI.sv and scripts/build_sci_flat_image.py.
+    -->
+    <rom index="0" zip="sci.zip" md5="none" type="merged">
+        <interleave output="16">
+            <part name="c09-37.43" crc="0fecea17" sha1="0ad4454eee6646b0f978b1ba83206d64c1f6d081" map="01"/>
+            <part name="c09-38.40" crc="e46ebd9b" sha1="52b0c1f95e8a664076d8fbc0f6204ca55893e281" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="c09-42.38" crc="f4404f87" sha1="8f051f1ffbf323cb3d613bc22afa53676590f29c" map="01"/>
+            <part name="c09-39.41" crc="de87bcb9" sha1="b5537a25871ea90294f3b6f0b6386a883cfdf991" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="c09-33.6" crc="cf4e6c5b" sha1="8d6720b605b8e0c7f0473ba452c79bf5efc2615d" map="01"/>
+            <part name="c09-32.5" crc="a4713719" sha1="b1110e397d3407ec63975cdd92a23cbb16348200" map="10"/>
+        </interleave>
+        <part name="c09-34.31" crc="a21b3151" sha1="f59c7b1ba5edf97d72670ee194ce9fdc5c5b9a58"/>
+        <interleave output="16">
+            <part name="c09-05.16" crc="890b38f0" sha1="b478c96214ce027926346a4653250c8ee8a98bdc" map="12"/>
+        </interleave>
+        <interleave output="64">
+            <part name="c09-04.52" crc="2cbb3c9b" sha1="9e3d95f76f5f5d385b6a9516af781aefef1eb0ca" map="00000012"/>
+            <part name="c09-02.54" crc="a83a0389" sha1="932788b5b5f01326d0fbb2b9fdb94a8c7c004db3" map="00001200"/>
+            <part name="c09-03.53" crc="a31d0e80" sha1="dfeff1b89dd7b3f19b26e77f2d66f6448cb00553" map="00120000"/>
+            <part name="c09-01.55" crc="64bfea10" sha1="15ea43092027b1717d0f24fbe6ac2cdf11a7ddc6" map="12000000"/>
+        </interleave>
+        <part name="c09-07.15" crc="963bc82b" sha1="e3558aecd1b82ddbf10ab2b71843a3664705f1f1"/>
+        <part name="c09-06.37" crc="12df6d7b" sha1="8ce742eb3f7eb6283b5ca32bb520d1cc7684d515"/>
+        <part name="c09-14.42" crc="ad78bf46" sha1="4020744bbdc4b9ec3dee1a9d7b5ffa8def43d7b2"/>
+        <part name="c09-13.43" crc="d57c41d3" sha1="3375a1fc6389840544b9fdb96b2fafbc8e3276e2"/>
+        <part name="c09-12.44" crc="56c99fa5" sha1="3f9a6bc89d847cc4c99d35f98157ea3f187c0f98"/>
+        <part name="c09-15.29" crc="e63b9095" sha1="c6ea670b5a90ab39429259ec1fefb2bde5d0213f"/>
+    </rom>
+</misterromdescription>

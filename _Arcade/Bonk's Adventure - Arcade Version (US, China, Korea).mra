@@ -1,0 +1,37 @@
+<misterromdescription>
+  <name>B.C. Kid (Europe) / Bonk's Adventure: Arcade Version (US, China, Korea) / Kyukyoku!! PC Genjin: Special Arcade Version (Japan)</name>
+  <setname>bonkadv</setname>
+  <rbf>bazset_BonksAdventure</rbf>
+  <year>1994</year>
+  <manufacturer>Kaneko (Hudson Soft / Red license)</manufacturer>
+  <category>Platform</category>
+  <nvram index="2" size="280"/>
+  <rom index="0" zip="bonkadv.zip" md5="none">
+    <!-- 0x000000-0x0fffff maincpu: MAME ROM_LOAD16_BYTE even/odd -->
+    <interleave output="16">
+      <part name="prg.8" crc="af2e60f8" map="01"/>
+      <part name="prg.7" crc="a1cc6a78" map="10"/>
+    </interleave>
+    <!-- 0x100000-0x2fffff VIEW2 #0; physical ROM is 1 MiB in a 2 MiB region -->
+    <part name="pc400104.51" crc="3b176f84"/>
+    <part repeat="1048576">00</part>
+    <!-- 0x300000-0x4fffff VIEW2 #1 -->
+    <part name="pc500105.55" crc="bebb3edc"/>
+    <part repeat="1048576">00</part>
+    <!-- 0x500000-0x9fffff KC002 sprites -->
+    <part name="pc100101.37" crc="c96e7c10"/>
+    <part name="pc200102.40" crc="c2b7a26a"/>
+    <part name="pc300103.38" crc="51ee162c"/>
+    <interleave output="16">
+      <part name="pc600106.42" crc="25877026" map="01"/>
+      <part name="pc700107.43" crc="bfe21c44" map="10"/>
+    </interleave>
+    <!-- 0xa00000-0xafffff OKI0; 0xb00000-0xdfffff OKI1 -->
+    <part name="pc604109.101" crc="76025530"/>
+    <part name="pc601106.99" crc="a893651c"/>
+    <part name="pc602107.100" crc="0fbb23aa"/>
+    <part name="pc603108.102" crc="58458985"/>
+    <!-- 0xe00000-0xe1ffff raw TBSOP01 MCU data; generic Toybox DMA decrypts upper half on demand -->
+    <part name="mcu.124" crc="9d4e2724"/>
+  </rom>
+</misterromdescription>
