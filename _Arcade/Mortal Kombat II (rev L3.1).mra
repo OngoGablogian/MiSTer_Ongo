@@ -1,6 +1,6 @@
 <misterromdescription>
   <!-- Candidate generated from official MAME 0.289 signed tag mame0289 (f34f02505e32c1993c6a782b6814232cbfc74e36); no ROM data is distributed. -->
-  <about author="rejectedcoins"/>
+  <about author="blahm1d"/>
   <rotation>horizontal</rotation>
   <name>Mortal Kombat II (rev L3.1)</name>
   <setname>mk2</setname>

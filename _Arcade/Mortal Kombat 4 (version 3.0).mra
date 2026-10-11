@@ -10,6 +10,7 @@
       The DCS2 sound ROMs (u2-u5) are sent separately as ROM index 3.
     -->
     <name>Mortal Kombat 4 (version 3.0)</name>
+    <about author="blahm1d"/>
     <setname>mk4</setname>
     <rbf>blahm1d_mk4</rbf>
     <mameversion>0289</mameversion>
@@ -38,7 +39,7 @@
     </rom>
     <!-- DCS2 sound ROM (midzeus.cpp:1507-1511): u2 + u3 + u4 + u5 concatenated, 7 MiB. zk4_dcs2 stores it in DDR3
          and rebuilds MAME's ERASEFF 16-bit region by address (low byte = ROM byte, high byte 0xFF, holes 0xFFFF).
-         The v9 fabric DCS2 engine consumes index 3. -->
+         The fabric DCS2 engine consumes index 3. -->
     <rom index="3" zip="mk4.zip" md5="None">
         <part name="mk4_l2.u2" crc="f9d410b4"/>
         <part name="mk4_l2.u3" crc="8fbcf0ac"/>

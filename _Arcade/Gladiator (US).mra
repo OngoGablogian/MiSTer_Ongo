@@ -1,5 +1,6 @@
 <misterromdescription>
   <name>Gladiator (US)</name>
+  <about author="blahm1d"/>
   <mameversion>0280</mameversion>
   <setname>gladiatr</setname>
   <year>1986</year>

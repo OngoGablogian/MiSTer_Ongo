@@ -4,7 +4,7 @@
      the final four 512 KiB U117..U114 parts immediately at gfx 0x1000000.
      ROM data is user-supplied and CRC-checked. -->
 <misterromdescription>
-    <about author="rejectedcoins"/>
+    <about author="blahm1d"/>
     <rotation>horizontal</rotation>
     <name>Mortal Kombat 3 (rev 2.1)</name>
     <setname>mk3</setname>

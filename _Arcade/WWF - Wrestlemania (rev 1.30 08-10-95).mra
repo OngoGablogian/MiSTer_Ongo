@@ -4,7 +4,7 @@
      and the five dynamic I/O shuffle tables used by the game executable.
      ROM data is user-supplied and CRC-checked. -->
 <misterromdescription>
-    <about author="rejectedcoins"/>
+    <about author="blahm1d"/>
     <rotation>horizontal</rotation>
     <name>WWF: Wrestlemania (rev 1.30 08/10/95)</name>
     <setname>wwfmania</setname>

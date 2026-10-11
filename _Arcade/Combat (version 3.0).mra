@@ -1,5 +1,6 @@
 <misterromdescription>
   <name>Combat (version 3.0)</name>
+  <about author="blahm1d"/>
   <mameversion>0289</mameversion>
   <setname>combat</setname>
   <year>1985</year>

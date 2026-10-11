@@ -28,7 +28,7 @@
      Total download = 0x9A0500 bytes. -->
 
 <misterromdescription>
-    <about author="rejectedcoins"/>
+    <about author="blahm1d"/>
     <rotation>horizontal</rotation>
     <name>Narc (rev 7.00) [blahm1d]</name>
     <setname>narc_blahm1d</setname>
@@ -153,6 +153,10 @@
         <part name="a-5346-3036-5_narc_pls153.u83" crc="3a2f21b2"/>
         <part repeat="0x15">00</part>
     </rom>
+
+    <!-- CMOS persistence: the Z-unit's battery-backed 32 KiB CMOS as MAME's narc nvram image
+         (0x4000 little-endian u16 words, pages 0..3). OSD: Save NVRAM / Clear NVRAM. -->
+    <nvram index="4" size="32768"/>
 
     <!-- NARC is four-button, not the donor's two-button metadata. Order must
          match CONF_STR/joystick bits 4..11 exactly. -->

@@ -15,7 +15,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > * You can easily check out the files included with this database by using theypsilon's [Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip)
 
 > [!NOTE]
-> * In its current state, this repo totals around 6.4 GB of files.
+> * In its current state, this repo totals around 9 GB of files.
 
 ----
 
@@ -38,20 +38,19 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                               |
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                  |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                  |
-| [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                       |
 | [Chase H.Q.](https://www.patreon.com/bazset/posts/chase-h-q-taito-171600711)                                                   |
 | [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                          |
 | [Data East Simple 156](https://www.patreon.com/Meathax/posts/data-east-156-171562893)                                          |
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
-| [Exidy 440](https://www.patreon.com/blahm1d/posts/exidy-to-your-168834272)                                                     |
+| [Exidy 440](https://mister.blahm1d.com/core-exidy440.html)                                                                     |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
 | [FM Towns Marty](https://discord.com/channels/647909397477195803/1550527341237768235)                                          |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
-| [Gladiator](https://www.patreon.com/blahm1d/posts/blahm1d-forces-164867524)                                                    |
+| [Gladiator](https://mister.blahm1d.com/core-gladiator.html)                                                                    |
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
 | [Hyperstone E1](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                             |
@@ -69,11 +68,16 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Mad Gear / Last Duel](https://github.com/fiermanb/LastDuel-MadGear_MiSTer)                                                    |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                             |
-| [Midway T Unit](https://www.patreon.com/blahm1d/posts/blahm1d-t-unit-167880978)                                                |
-| [Midway V Unit](https://www.patreon.com/blahm1d/posts/tears-through-at-170597455)                                              |
-| [Midway Wolf Unit](https://github.com/blahm1d/wolf-unit)                                                                       |
-| [Midway Y Unit](https://www.patreon.com/blahm1d/posts/is-this-thing-on-168716958)                                              |
-| [Midway Zeus](https://www.patreon.com/blahm1d/posts/zeus-protocol-170680967)                                                   |
+| [Midway T Unit](https://mister.blahm1d.com/core-tunit.html)                                                                    |
+| [Midway T Unit (DCS)](https://mister.blahm1d.com/core-tunitdcs.html)                                                           |
+| [Midway V Unit](https://mister.blahm1d.com/core-vunit.html)                                                                    |
+| [Midway V Unit (War Gods)](https://mister.blahm1d.com/core-wargods.html)                                                       |
+| [Midway Wolf Unit](https://mister.blahm1d.com/core-wolfunit.html)                                                              |
+| [Midway X Unit](https://mister.blahm1d.com/core-xunit.html)                                                                    |
+| [Midway Y Unit](https://mister.blahm1d.com/core-yunit.html)                                                                    |
+| [Midway Y Unit (ADPCM)](https://mister.blahm1d.com/core-yunitadpcm.html)                                                       |
+| [Midway Zeus (Invasion: The Abductors)](https://mister.blahm1d.com/core-invasion.html)                                         |
+| [Midway Zeus (Mortal Kombat 4)](https://mister.blahm1d.com/core-mk4.html)                                                      |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                      |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
 | [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                     |
@@ -87,7 +91,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Namco System 22 / Super System 22](https://www.patreon.com/XelaNotPu/posts/namco-system-22-169006058)                         |
 | [Namco System FL](https://www.patreon.com/XelaNotPu/posts/namco-system-fl-170317789)                                           |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |
-| [NARC (blahm1d)](https://www.patreon.com/blahm1d/posts/blahm1d-coaxes-164867975)                                               |
+| [NARC (blahm1d)](https://mister.blahm1d.com/core-narc.html)                                                                    |
 | [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-v1-0-165736329)                                               |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |
 | [Neratte Chu (Seta ST-0016)](https://github.com/kyledlester/MiSTer_Neratte_Chu)                                                |
@@ -103,7 +107,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
 | [Return of the Jedi](https://github.com/Usquebagh/Arcade-Jedi_MiSTer)                                                          |
-| [Revolution X](https://www.patreon.com/blahm1d/posts/yellow-sprite-169471358)                                                  |
 | [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                              |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                         |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
@@ -136,7 +139,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Taito FX-1B “Taito Zoom”](https://github.com/XelaNotPu/ZN1-TaitoFX1B_MiSTer)                                                  |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
-| [The Legend of Kage](https://www.patreon.com/blahm1d/posts/blahm1d-demands-164411352)                                          |
+| [The Legend of Kage](https://mister.blahm1d.com/core-legendofkage.html)                                                        |
 | [The Pit](https://misterfpga.org/viewtopic.php?p=115950)                                                                       |
 | [Tumble Pop Bootleg](https://www.patreon.com/Meathax/posts/tumble-pop-pcb-171191206)                                           |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
@@ -215,6 +218,7 @@ main=MiSTer_N64DD
 | MRA |
 | :---: |
 | [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                                            |
+| [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                                      |
 | [Cave CV1000 Practice ROMs](https://blog.kasaski.dev/2026/10/02/kasaskis-CV1000-practice-roms)                                                |
 | [Chuckie Egg](https://arlagames.itch.io/chuckie-egg-arcade)                                                                                   |
 | [Dangun Feveron (No Discomen) (v1.0)](https://www.romhacking.net/hacks/7544)                                                                  |

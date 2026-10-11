@@ -1,5 +1,6 @@
 <misterromdescription>
   <name>Showdown (version 5.0)</name>
+  <about author="blahm1d"/>
   <mameversion>0289</mameversion>
   <setname>showdown</setname>
   <year>1988</year>
