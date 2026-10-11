@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+    <name>Strength &amp; Skill</name>
+    <setname>strnskil</setname>
+    <rbf>Meathax_IkkiSunsoft</rbf>
+    <mameversion>0289</mameversion>
+    <year>1984</year>
+    <manufacturer>Sun Electronics</manufacturer>
+    <orientation>horizontal</orientation>
+    <buttons names="Power Left,Power Right,Start 2P,Start 1P,Coin,Service,Pause,Service Mode" default="A,B,R,Start,Select,X,L,Y"/>
+    <switches page_id="1" page_name="DIP Switches" base="0" default="00,00">
+        <dip name="Demo Sounds" bits="0" ids="On,Off"/>
+        <dip name="Unknown 1-2" bits="1" ids="Off,On"/>
+        <dip name="Flip Screen" bits="2" ids="Off,On"/>
+        <dip name="Coin Chutes" bits="3" ids="Individual,Common"/>
+        <dip name="Coinage" bits="4,5,6,7" ids="1C 1C / 1C 1C,2C 1C / 2C 1C,2C 1C / 1C 3C,1C 1C / 1C 2C,1C 1C / 1C 3C,1C 1C / 1C 4C,1C 1C / 1C 5C,1C 1C / 1C 6C,1C 2C / 1C 2C,1C 2C / 1C 4C,1C 2C / 1C 5C,1C 2C / 1C 10C,1C 2C / 1C 11C,1C 2C / 1C 12C,1C 2C / 1C 6C,Free Play"/>
+        <dip name="Difficulty" bits="8" ids="Normal,Hard"/>
+        <dip name="Unknown 2-2" bits="9" ids="Off,On"/>
+        <dip name="Unknown 2-3" bits="10" ids="Off,On"/>
+        <dip name="Unknown 2-4" bits="11" ids="Off,On"/>
+        <dip name="Unknown 2-5" bits="12" ids="Off,On"/>
+        <dip name="Unknown 2-6" bits="13" ids="Off,On"/>
+        <dip name="Unknown 2-7" bits="14" ids="Off,On"/>
+        <dip name="Freeze" bits="15" ids="Off,On"/>
+    </switches>
+    <rom index="1">
+        <part>02</part>
+    </rom>
+    <nvram index="4" size="126"/>
+    <rom index="3">
+        <part>0b eb c2 00 ff ff 00 04 00 04 00 01 00 0f 10 00 00 00 c0 c4 1e 22 00 00 00 00 c4 30 60 09 00 00</part>
+    </rom>
+    <rom index="0" zip="strnskil.zip|strnskil.zip" md5="None">
+        <part name="tvg3.7" crc="31fd793a" length="0x2000"/>
+        <part name="tvg4.8" crc="c58315b5"/>
+        <part name="tvg5.9" crc="29e7ded5"/>
+        <part name="tvg6.10" crc="8b126a4b"/>
+        <part name="tvg3.7" crc="31fd793a" offset="0x2000" length="0x2000"/>
+        <part name="tvg1.2" crc="b586b753"/>
+        <part name="tvg2.3" crc="8bd71bb6"/>
+        <part repeat="0x2000">FF</part>
+        <part name="tvg7.90" crc="ee3bd593"/>
+        <part name="tvg8.92" crc="1b265360"/>
+        <part name="tvg9.94" crc="776c7ca6"/>
+        <part name="tvg12.102" crc="68b9d888"/>
+        <part name="tvg11.101" crc="7f2179ff"/>
+        <part name="tvg10.100" crc="321ad963"/>
+        <part name="15-3.prm" crc="dbcd3bec"/>
+        <part name="15-4.prm" crc="9eb7b6cf"/>
+        <part name="15-5.prm" crc="9b30a7f3"/>
+        <part name="15-1.prm" crc="d4f5b3d7"/>
+        <part name="15-2.prm" crc="cdffede9"/>
+        <part name="15-6.prm" crc="ec4faf5b"/>
+        <part repeat="0x100">FF</part>
+        <part repeat="0x700">FF</part>
+        <part repeat="0x1000">FF</part>
+    </rom>
+</misterromdescription>

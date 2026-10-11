@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+    <name>BanBam</name>
+    <setname>banbam</setname>
+    <rbf>Meathax_IkkiSunsoft</rbf>
+    <mameversion>0289</mameversion>
+    <year>1984</year>
+    <manufacturer>Sun Electronics</manufacturer>
+    <orientation>horizontal</orientation>
+    <buttons names="Flip Tile,-,Start 2P,Start 1P,Coin,Service,Pause,Service Mode" default="A,B,R,Start,Select,X,L,Y"/>
+    <switches page_id="1" page_name="DIP Switches" base="0" default="02,70">
+        <dip name="Lives" bits="0" ids="3,5"/>
+        <dip name="Cabinet" bits="1" ids="Cocktail,Upright"/>
+        <dip name="Flip Screen" bits="2" ids="Off,On"/>
+        <dip name="Coin Chutes" bits="3" ids="Individual,Common"/>
+        <dip name="Coinage" bits="4,5,6,7" ids="1C 1C / 1C 1C,2C 1C / 2C 1C,2C 1C / 1C 3C,1C 1C / 1C 2C,1C 1C / 1C 3C,1C 1C / 1C 4C,1C 1C / 1C 5C,1C 1C / 1C 6C,1C 2C / 1C 2C,1C 2C / 1C 4C,1C 2C / 1C 5C,1C 2C / 1C 10C,1C 2C / 1C 11C,1C 2C / 1C 12C,1C 2C / 1C 6C,Free Play"/>
+        <dip name="Demo Sounds" bits="8" ids="On,Off"/>
+        <dip name="Bonus Life" bits="9,10" ids="20K 50K,20K 80K,20K,None"/>
+        <dip name="Second Practice" bits="11" ids="On,Off"/>
+        <dip name="Unused" bits="12" ids="On,Off"/>
+        <dip name="Unused" bits="13" ids="On,Off"/>
+        <dip name="Unused" bits="14" ids="On,Off"/>
+        <dip name="Freeze" bits="15" ids="Off,On"/>
+    </switches>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <nvram index="4" size="30"/>
+    <rom index="3">
+        <part>0b eb c2 00 ff ff 00 04 00 04 00 01 00 0f 10 00 00 00 c0 c2 1e 20 00 00</part>
+    </rom>
+    <rom index="0" zip="banbam.zip|banbam.zip" md5="None">
+        <part name="ban-rom2.ic7" crc="a5aeef6e" length="0x2000"/>
+        <part name="ban-rom3.ic8" crc="f91472bf"/>
+        <part name="ban-rom4.ic9" crc="436a09ef"/>
+        <part name="ban-rom5.ic10" crc="45205f86"/>
+        <part name="ban-rom2.ic7" crc="a5aeef6e" offset="0x2000" length="0x2000"/>
+        <part name="ban-rom1.ic2" crc="e36009f6"/>
+        <part repeat="0x4000">FF</part>
+        <part name="ban-rom6.ic90" crc="41fc44df"/>
+        <part name="ban-rom7.ic92" crc="8b429c5b"/>
+        <part name="ban-rom8.ic94" crc="76c02d6b"/>
+        <part name="ban-rom11.ic102" crc="aa827c57"/>
+        <part name="ban-rom10.ic101" crc="51bd1c5c"/>
+        <part name="ban-rom9.ic100" crc="c0a5a4c8"/>
+        <part name="16-3.66" crc="dbcd3bec"/>
+        <part name="16-4.67" crc="9eb7b6cf"/>
+        <part name="16-5.68" crc="9b30a7f3"/>
+        <part name="16-1.148" crc="777e2770"/>
+        <part name="16-2.97" crc="7f95d4b2"/>
+        <part name="16-6.59" crc="ec4faf5b"/>
+        <part repeat="0x100">FF</part>
+        <part repeat="0x700">FF</part>
+        <part name="ban-rom12.ic2" crc="044bb2f6" length="0x1000"/>
+    </rom>
+</misterromdescription>

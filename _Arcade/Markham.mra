@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+    <name>Markham</name>
+    <setname>markham</setname>
+    <rbf>Meathax_IkkiSunsoft</rbf>
+    <mameversion>0289</mameversion>
+    <year>1983</year>
+    <manufacturer>Sun Electronics</manufacturer>
+    <orientation>horizontal</orientation>
+    <buttons names="Beam,Missile,Start 2P,Start 1P,Coin,Service,Pause,Service Mode" default="A,B,R,Start,Select,X,L,Y"/>
+    <switches page_id="1" page_name="DIP Switches" base="0" default="02,7e">
+        <dip name="Lives" bits="0" ids="3,5"/>
+        <dip name="Cabinet" bits="1" ids="Cocktail,Upright"/>
+        <dip name="Flip Screen" bits="2" ids="Off,On"/>
+        <dip name="Coin Chutes" bits="3" ids="Individual,Common"/>
+        <dip name="Coinage" bits="4,5,6,7" ids="1C 1C / 1C 1C,2C 1C / 2C 1C,2C 1C / 1C 3C,1C 1C / 1C 2C,1C 1C / 1C 3C,1C 1C / 1C 4C,1C 1C / 1C 5C,1C 1C / 1C 6C,1C 2C / 1C 2C,1C 2C / 1C 4C,1C 2C / 1C 5C,1C 2C / 1C 10C,1C 2C / 1C 11C,1C 2C / 1C 12C,1C 2C / 1C 6C,Free Play"/>
+        <dip name="Bonus Life" bits="8,9" ids="None,20K,20K then 50K,20K then 80K"/>
+        <dip name="Demo Sounds" bits="10" ids="Off,On"/>
+        <dip name="Unused" bits="11" ids="On,Off"/>
+        <dip name="Unused" bits="12" ids="On,Off"/>
+        <dip name="Unused" bits="13" ids="On,Off"/>
+        <dip name="Unused" bits="14" ids="On,Off"/>
+        <dip name="Freeze" bits="15" ids="Off,On"/>
+    </switches>
+    <rom index="1">
+        <part>01</part>
+    </rom>
+    <nvram index="4" size="60"/>
+    <rom index="3">
+        <part>0b eb c2 00 ff ff 00 04 00 04 00 01 00 0f 10 00 00 00 c0 c4 3c 2a 00 00</part>
+    </rom>
+    <rom index="0" zip="markham.zip|markham.zip" md5="None">
+        <part name="tv3.9" crc="59391637"/>
+        <part name="tvg4.10" crc="1837bcce"/>
+        <part name="tvg5.11" crc="651da602"/>
+        <part repeat="0x4000">FF</part>
+        <part name="tvg1.5" crc="c5299766"/>
+        <part repeat="0x2000">FF</part>
+        <part name="tvg2.6" crc="b216300a"/>
+        <part name="tvg6.84" crc="ab933ae5"/>
+        <part name="tvg7.85" crc="ce8edda7"/>
+        <part name="tvg8.86" crc="74d1536a"/>
+        <part name="tvg9.87" crc="42168675"/>
+        <part name="tvg10.88" crc="fa9feb67"/>
+        <part name="tvg11.89" crc="71f3dd49"/>
+        <part name="14-3.99" crc="89d09126"/>
+        <part name="14-4.100" crc="e1cafe6c"/>
+        <part name="14-5.101" crc="2d444fa6"/>
+        <part name="14-1.61" crc="3ad8306d"/>
+        <part name="14-2.115" crc="12a4f1ff"/>
+        <part repeat="0x200">FF</part>
+        <part repeat="0x700">FF</part>
+        <part repeat="0x1000">FF</part>
+    </rom>
+</misterromdescription>

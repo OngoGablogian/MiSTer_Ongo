@@ -1,62 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
 <misterromdescription>
-	<name>Farmers Rebellion</name>
-	<region></region>
-	<homebrew>0</homebrew>
-	<bootleg>0</bootleg>
-	<version></version>
-	<alternative></alternative>
-	<platform></platform>
-	<series></series>
-	<year>1985</year>
-	<manufacturer>Sun Electronics</manufacturer>
-	<category>Shooter / Walking</category>
-
-	<setname>farmer</setname>
-	<parent>ikki</parent>
-	<mameversion>0264</mameversion>
-	<rbf>Meathax_Ikki</rbf>
-	<about author="aCORES" source="MAME ikki.cpp (farmer clone)"/>
-
-	<resolution>240x224</resolution>
-	<rotation>horizontal</rotation>
-	<flip></flip>
-
-	<!--
-	  Same linear layout as ikki.mra.  farmer has its own program and sprite
-	  ROMs; tiles and PROMs come from the ikki set, so both zips are searched.
-	  tvg-1.10 is 16 KB and is split by MAME's ROM_CONTINUE, so it appears twice
-	  here as two 8 KB slices.
-	-->
-	<rom index="0" zip="farmer.zip|ikki.zip" md5="none" type="merged|nonmerged">
-		<part name="tvg-1.10"  crc="2c0bd392" offset="0x0000" length="0x2000"/>
-		<part name="tvg-2.9"   crc="b86efe02" length="0x2000"/>
-		<part name="tvg-3.8"   crc="fd686ff4" length="0x2000"/>
-		<part name="tvg-4.7"   crc="1415355d" length="0x2000"/>
-		<part name="tvg-1.10"  crc="2c0bd392" offset="0x2000" length="0x2000"/>
-
-		<part name="tvg-5.30"  crc="22bdb40e" length="0x2000"/>
-
-		<part name="tvg-8.102" crc="45c9087a" length="0x4000"/>
-		<part name="tvg-7.103" crc="0e9efeba" length="0x4000"/>
-		<part name="tvg-6.104" crc="dc8aa269" length="0x4000"/>
-
-		<part name="tvg17_11"  crc="35012775" length="0x4000"/>
-		<part name="tvg17_10"  crc="2e510b4e" length="0x4000"/>
-		<part name="tvg17_9"   crc="c594f3c5" length="0x4000"/>
-
-		<part name="prom17_3"  crc="dbcd3bec" length="0x100"/>
-		<part name="prom17_4"  crc="9eb7b6cf" length="0x100"/>
-		<part name="prom17_5"  crc="9b30a7f3" length="0x100"/>
-		<part name="prom17_6"  crc="962e619d" length="0x200"/>
-		<part name="prom17_7"  crc="b1f5148c" length="0x200"/>
-
-		<part name="prom17_1"  crc="ca0af30c" length="0x100"/>
-		<part name="prom17_2"  crc="f3c55174" length="0x100"/>
-	</rom>
-
-	<rom index="1">
-		<part>00</part>
-	</rom>
-
-	<buttons names="Fire,-,Start 2P,Start 1P,Coin,Service,Pause" default="A,B,R,Start,Select,X,L"/>
+    <name>Farmers Rebellion</name>
+    <setname>farmer</setname>
+    <rbf>Meathax_IkkiSunsoft</rbf>
+    <mameversion>0289</mameversion>
+    <year>1985</year>
+    <manufacturer>Sun Electronics</manufacturer>
+    <orientation>horizontal</orientation>
+    <buttons names="Throw Sickle,-,Start 2P,Start 1P,Coin,Service,Pause,Service Mode" default="A,B,R,Start,Select,X,L,Y"/>
+    <switches page_id="1" page_name="DIP Switches" base="0" default="00,00">
+        <dip name="Lives" bits="0" ids="3,5"/>
+        <dip name="2 Players Game" bits="1" ids="2 Cr,1 Cr"/>
+        <dip name="Flip Screen" bits="2" ids="Off,On"/>
+        <dip name="Unknown 1-4" bits="3" ids="Off,On"/>
+        <dip name="Coinage" bits="4,5,6,7" ids="1C 1C / 1C 1C,2C 1C / 2C 1C,2C 1C / 1C 3C,1C 1C / 1C 2C,1C 1C / 1C 3C,1C 1C / 1C 4C,1C 1C / 1C 5C,1C 1C / 1C 6C,1C 2C / 1C 2C,1C 2C / 1C 4C,1C 2C / 1C 5C,1C 2C / 1C 10C,1C 2C / 1C 11C,1C 2C / 1C 12C,1C 2C / 1C 6C,Free Play"/>
+        <dip name="Demo Sounds" bits="8" ids="On,Off"/>
+        <dip name="Difficulty" bits="9,10" ids="1 (Normal),2,3,4 (Difficult)"/>
+        <dip name="Unknown 2-4" bits="11" ids="Off,On"/>
+        <dip name="Unknown 2-5" bits="12" ids="Off,On"/>
+        <dip name="Unknown 2-6" bits="13" ids="Off,On"/>
+        <dip name="Unknown 2-7" bits="14" ids="Off,On"/>
+        <dip name="Freeze" bits="15" ids="Off,On"/>
+    </switches>
+    <rom index="1">
+        <part>00</part>
+    </rom>
+    <nvram index="4" size="36"/>
+    <rom index="3">
+        <part>0b eb c2 00 ff ff 00 04 00 04 00 01 00 0f 10 00 00 00 c0 10 1e 22 00 00 00 00 d6 1b 01 2a 2a 00 00 00 d6 5b 01 04 04 00 00 00 d6 9b 01 00 00 00 00 00 d6 db 01 00 00 00 00 00 d7 1b 01 00 00 00 00 00 d7 5b 01 00 00 00</part>
+    </rom>
+    <rom index="0" zip="farmer.zip|ikki.zip" md5="None">
+        <part name="tvg-1.10" crc="2c0bd392" length="0x2000"/>
+        <part name="tvg-2.9" crc="b86efe02"/>
+        <part name="tvg-3.8" crc="fd686ff4"/>
+        <part name="tvg-4.7" crc="1415355d"/>
+        <part name="tvg-1.10" crc="2c0bd392" offset="0x2000" length="0x2000"/>
+        <part name="tvg-5.30" crc="22bdb40e"/>
+        <part name="tvg-8.102" crc="45c9087a"/>
+        <part name="tvg-7.103" crc="0e9efeba"/>
+        <part name="tvg-6.104" crc="dc8aa269"/>
+        <part name="tvg17_11" crc="35012775"/>
+        <part name="tvg17_10" crc="2e510b4e"/>
+        <part name="tvg17_9" crc="c594f3c5"/>
+        <part name="prom17_3" crc="dbcd3bec"/>
+        <part name="prom17_4" crc="9eb7b6cf"/>
+        <part name="prom17_5" crc="9b30a7f3"/>
+        <part name="prom17_6" crc="962e619d"/>
+        <part name="prom17_7" crc="b1f5148c"/>
+        <part name="prom17_1" crc="ca0af30c"/>
+        <part name="prom17_2" crc="f3c55174"/>
+        <patch offset="0x4068">00</patch>
+    </rom>
 </misterromdescription>
