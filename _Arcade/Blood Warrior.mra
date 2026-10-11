@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Blood Warrior</name>
+  <setname>bloodwar</setname>
+  <rbf>bazset_KanekoFamily</rbf>
+  <year>1994</year>
+  <manufacturer>Kaneko</manufacturer>
+  <category>Arcade</category>
+  <buttons names="Weak Punch,Strong Punch,Start,Coin,Pause,Weak Kick,Strong Kick" default="Y,X,Start,Select,L,B,A"/>
+  <nvram index="2" size="176"/>
+  <rom index="0" zip="bloodwar.zip" md5="none">
+    <interleave output="16">
+      <part name="ofp0f3.514" crc="0c93da15" map="01"/>
+      <part name="ofp1f3.513" crc="894ecbe5" map="10"/>
+    </interleave>
+    <part name="of-300-0225.51" crc="fbc3c08a"/>
+    <part repeat="0x1000">00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+    <part name="of-301-0226.55" crc="fcf215de"/>
+    <part repeat="0x1000">00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+    <part name="of-200-0201.8" crc="bba63025"/>
+    <part name="of-201-0202.9" crc="4ffd9ddc"/>
+    <part name="of-202-0203.10" crc="fbcc5363"/>
+    <part name="of-203-0204.11" crc="8e818ce9"/>
+    <part name="of-204-0205.12" crc="70c4a76b"/>
+    <part name="of-205-0206.13" crc="80c667bb"/>
+    <part name="of-206-0207.14" crc="c2028c97"/>
+    <part name="of-207-0208.15" crc="b1f30c61"/>
+    <part name="of-208-0209.28" crc="a8f29545"/>
+    <interleave output="16">
+      <part name="of-209e-0210.16" crc="93018468" map="01"/>
+      <part name="of-2090-2011.17" crc="3fb226a1" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-210e-0212.18" crc="80f3fa1b" length="0x1" map="01"/>
+      <part name="of-2100-0213.19" crc="8ca3a3d6" length="0x1" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-210e-0212.18" crc="80f3fa1b" offset="0x1" length="0xfffff" map="01"/>
+      <part name="of-2100-0213.19" crc="8ca3a3d6" offset="0x1" length="0xfffff" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-211e-0214.20" crc="8d3d96f7" length="0x1" map="01"/>
+      <part name="of-2110-0215.21" crc="78268230" length="0x1" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-211e-0214.20" crc="8d3d96f7" offset="0x1" length="0xfffff" map="01"/>
+      <part name="of-2110-0215.21" crc="78268230" offset="0x1" length="0xfffff" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-212e-0216.22" crc="5a013d99" length="0x1" map="01"/>
+      <part name="of-2120-0217.23" crc="84ed25bd" length="0x1" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-212e-0216.22" crc="5a013d99" offset="0x1" length="0xfffff" map="01"/>
+      <part name="of-2120-0217.23" crc="84ed25bd" offset="0x1" length="0xfffff" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-213e-0218.24" crc="861bc5b1" length="0x1" map="01"/>
+      <part name="of-2130-0219.25" crc="a79b8119" length="0x1" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-213e-0218.24" crc="861bc5b1" offset="0x1" length="0xfffff" map="01"/>
+      <part name="of-2130-0219.25" crc="a79b8119" offset="0x1" length="0xfffff" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-214e-0220.26" crc="43c622de" length="0x1" map="01"/>
+      <part name="of-2140-0221.27" crc="d10bf03c" length="0x1" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="of-214e-0220.26" crc="43c622de" offset="0x1" length="0xfffff" map="01"/>
+      <part name="of-2140-0221.27" crc="d10bf03c" offset="0x1" length="0xfffff" map="10"/>
+    </interleave>
+    <part name="of-101-f-0223.101" crc="295f3c93"/>
+    <part repeat="0x2000">00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+    <part name="of-100-0222.99" crc="42b12269"/>
+    <part repeat="0x2000">00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</part>
+    <part name="ofd0x3.124" crc="399f2005"/>
+  </rom>
+  <romstruct>ROM size 0x02920000 (41.125 MiB). CPU 1 MiB, VIEW2 A/B 2 MiB each, KC002 sprites 30 MiB, OKI1/OKI2 3 MiB each, TOYBOX raw 128 KiB. Reconstructed on MiSTer directly from standard MAME ZIPs, with no synthetic ROM archive.</romstruct>
+  <rom index="1">
+    <part>0000</part>
+  </rom>
+</misterromdescription>

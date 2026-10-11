@@ -31,7 +31,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bally/Sente SAC-1](https://github.com/ppriest/Arcade-BallySente_MiSTer)                                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
 | [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
-| [Bonk's Adventure](https://www.patreon.com/bazset/posts/bonks-adventure-171454226)                                             |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BrezzaSoft Crystal System](https://github.com/kyledlester/BrezzaSoft_Crystal_System_MiSTer)                                   |
 | [BrickBoy](https://github.com/kandowontu/BrickBoy_MiSTer)                                                                      |
@@ -61,6 +60,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Intrepid](https://misterfpga.org/viewtopic.php?t=10823)                                                                       |
 | [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
+| [Kaneko Family](https://www.patreon.com/bazset/posts/blood-warrior-172051209)                                                  |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
 | [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1556319753612697643)                |
 | [Konami GX](https://github.com/ppriest/Arcade-KonamiGX_MiSTer)                                                                 |
