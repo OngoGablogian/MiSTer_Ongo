@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Kyros no Yakata (Japan)</name>
+  <setname>kyrosj</setname>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Alpha68kN</rbf>
+  <manufacturer>Alpha Denshi Co.</manufacturer>
+  <year>1986</year>
+  <rotation>vertical (cw)</rotation>
+  <about>Development core: simulation and hardware gates pending.</about>
+  <buttons names="Punch,Jump,Start,Coin,Pause" default="A,B,Start,Select,X"/>
+  <switches default="8E">
+    <dip name="Demo Sounds" bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Coinage" bits="1,3" ids="A 1C/1C B 1C/1C,A 1C/2C B 2C/1C,A 1C/3C B 3C/1C,A 1C/4C B 4C/1C,A 1C/5C B 5C/1C,A 1C/6C B 6C/1C,A 2C/3C B 7C/1C,A 3C/2C B 8C/1C" values="7,3,5,1,6,2,4,0"/>
+    <dip name="Lives" bits="4,5" ids="3,4,5,6" values="0,1,2,3"/>
+    <dip name="Difficulty" bits="6" ids="Easy,Hard" values="0,1"/>
+    <dip name="Cabinet" bits="7" ids="Upright,Cocktail" values="1,0"/>
+  </switches>
+  <rom index="0" zip="kyrosj.zip|kyros.zip" md5="None">
+    <part>41 36 38 4e 01 01</part>
+    <part repeat="0xfa">00</part>
+    <interleave output="16">
+      <part name="2j.10c" crc="b324c11b" offset="0x0" length="0x4000" map="01"/>
+      <part name="1j.13c" crc="8496241b" offset="0x0" length="0x4000" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="4.10a" crc="0187f59d" offset="0x0" length="0x4000" map="01"/>
+      <part name="3.13a" crc="ab97941d" offset="0x0" length="0x4000" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="2j.10c" crc="b324c11b" offset="0x4000" length="0x4000" map="01"/>
+      <part name="1j.13c" crc="8496241b" offset="0x4000" length="0x4000" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="4.10a" crc="0187f59d" offset="0x4000" length="0x4000" map="01"/>
+      <part name="3.13a" crc="ab97941d" offset="0x4000" length="0x4000" map="10"/>
+    </interleave>
+    <part name="2s.1f" crc="800ceb27" offset="0x0" length="0x4000"/>
+    <part name="1s.1d" crc="87d3e719" offset="0x0" length="0x8000"/>
+    <part repeat="0x4000">00</part>
+    <part name="mb7114l.5r" crc="3628bf36" offset="0x0" length="0x100"/>
+    <part name="mb7114l.4r" crc="850704e4" offset="0x0" length="0x100"/>
+    <part name="mb7114l.6r" crc="a54f60d7" offset="0x0" length="0x100"/>
+    <part name="mb7114l.6p" crc="b0d6971f" offset="0x0" length="0x100"/>
+    <part name="mb7114l.5p" crc="1cc53765" offset="0x0" length="0x100"/>
+    <part repeat="0xa00">00</part>
+    <part name="0j.1t" crc="a34ecb29" offset="0x0" length="0x2000"/>
+    <part name="kyros_68705u3.bin" crc="c20880b7" offset="0x0" length="0x1000"/>
+    <part repeat="0xc000">00</part>
+    <part name="8.9r" crc="d8203284" offset="0x0" length="0x8000"/>
+    <part name="11.12m" crc="a2f9738c" offset="0x0" length="0x8000"/>
+    <part name="12.11n" crc="10fed501" offset="0x0" length="0x8000"/>
+    <part name="9j.9s" crc="3e725349" offset="0x0" length="0x8000"/>
+    <part name="13.11p" crc="e6a02030" offset="0x0" length="0x8000"/>
+    <part name="14.12r" crc="39d07db9" offset="0x0" length="0x8000"/>
+    <part name="15.3t" crc="045fdda4" offset="0x0" length="0x8000"/>
+    <part name="17.7t" crc="7618ec00" offset="0x0" length="0x8000"/>
+    <part name="18.9t" crc="0ee74171" offset="0x0" length="0x8000"/>
+    <part name="16j.5t" crc="e1566679" offset="0x0" length="0x8000"/>
+    <part name="19.11t" crc="4f336306" offset="0x0" length="0x8000"/>
+    <part name="20j.13t" crc="0624b4c0" offset="0x0" length="0x8000"/>
+  </rom>
+  <rom index="3" md5="None">
+    <part>00 00 00 00 00 ff 00 04 00 04 00 01 00 0f 04 00 00 02 0e 00 ae 01 02 00 00 02 00 20 04 00 00 00</part>
+  </rom>
+  <nvram index="4" size="178"/>
+</misterromdescription>

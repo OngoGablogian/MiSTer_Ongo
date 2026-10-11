@@ -24,6 +24,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | :---: |
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                     |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                           |
+| [Alpha Denshi 68000 (Type Alpha N)](https://www.patreon.com/Meathax/posts/fresh-meat-kyros-172051005)                          |
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                  |
 | [B.Rap Boys](https://www.patreon.com/bazset/posts/b-rap-boys-1992-171451712)                                                   |
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |

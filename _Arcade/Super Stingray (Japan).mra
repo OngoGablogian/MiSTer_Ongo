@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Super Stingray (Japan)</name>
+  <setname>sstingry</setname>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Alpha68kN</rbf>
+  <manufacturer>Alpha Denshi Co.</manufacturer>
+  <year>1986</year>
+  <rotation>vertical (cw)</rotation>
+  <about>Super Stingray profile 2: simulation, gameplay/input, cocktail, earned-score and hardware qualification remain incomplete.</about>
+  <buttons names="Main weapon,Sub weapon,Start,Coin,Pause" default="A,B,Start,Select,X"/>
+  <switches default="01">
+    <dip name="Demo Sounds" bits="0" ids="Off,On" values="0,1"/>
+    <dip name="Coinage" bits="1,3" ids="A 1C/1C B 1C/1C,A 1C/2C B 2C/1C,A 1C/3C B 3C/1C,A 1C/4C B 4C/1C,A 1C/5C B 5C/1C,A 1C/6C B 6C/1C,A 2C/3C B 7C/1C,A 3C/2C B 8C/1C" values="0,1,2,3,4,5,6,7"/>
+    <dip name="Lives" bits="4,5" ids="3,4,5,6" values="0,1,2,3"/>
+    <dip name="Unused" bits="6" ids="Off,On" values="0,1"/>
+    <dip name="Cabinet" bits="7" ids="Upright,Cocktail" values="0,1"/>
+  </switches>
+  <rom index="0" zip="sstingry.zip" md5="None">
+    <part>41 36 38 4e 01 02</part>
+    <part repeat="0xfa">00</part>
+    <interleave output="16">
+      <part name="ss_05.rom" crc="bfb28d53" offset="0x0" length="0x4000" map="01"/>
+      <part name="ss_07.rom" crc="eb1b65c5" offset="0x0" length="0x4000" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="ss_04.rom" crc="2e477a79" offset="0x0" length="0x4000" map="01"/>
+      <part name="ss_06.rom" crc="597620cb" offset="0x0" length="0x4000" map="10"/>
+    </interleave>
+    <part repeat="0x10000">00</part>
+    <part name="ss_01.rom" crc="fef09a92" offset="0x0" length="0x4000"/>
+    <part name="ss_02.rom" crc="ab4e8c01" offset="0x0" length="0x4000"/>
+    <part repeat="0x8000">00</part>
+    <part name="ic92" crc="e7ce1179" offset="0x0" length="0x100"/>
+    <part name="ic93" crc="9af8a375" offset="0x0" length="0x100"/>
+    <part name="ic91" crc="c3965079" offset="0x0" length="0x100"/>
+    <part name="ssprom1.bin" crc="1003186c" offset="0x0" length="0x100"/>
+    <part name="ssprom2.bin" crc="c2205b71" offset="0x0" length="0x100"/>
+    <part repeat="0x2a00">00</part>
+    <part name="d8748.bin" crc="7fcbfc30" offset="0x0" length="0x400"/>
+    <part repeat="0xcc00">00</part>
+    <part name="ss_12.rom" crc="74caa9e9" offset="0x0" length="0x4000"/>
+    <part repeat="0x4000">00</part>
+    <part name="ss_08.rom" crc="32368925" offset="0x0" length="0x4000"/>
+    <part repeat="0x4000">00</part>
+    <part name="ss_13.rom" crc="13da6203" offset="0x0" length="0x4000"/>
+    <part repeat="0x4000">00</part>
+    <part name="ss_10.rom" crc="2903234a" offset="0x0" length="0x4000"/>
+    <part repeat="0x4000">00</part>
+    <part name="ss_11.rom" crc="d134302e" offset="0x0" length="0x4000"/>
+    <part repeat="0x4000">00</part>
+    <part name="ss_09.rom" crc="6f9d938a" offset="0x0" length="0x4000"/>
+    <part repeat="0x34000">00</part>
+  </rom>
+  <rom index="3" md5="None">
+    <part>00 00 00 00 00 ff 00 04 00 04 00 01 00 0f 04 00 00 02 00 28 04 00 73 00 00 02 07 70 90 00 00 00</part>
+  </rom>
+  <nvram index="4" size="148"/>
+</misterromdescription>
