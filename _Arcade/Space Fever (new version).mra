@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Space Fever (new version)</name>
+  <year>1979</year>
+  <manufacturer>Nintendo</manufacturer>
+  <category>Shooter</category>
+  <setname>spacefev</setname>
+  <parent>spacefev</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Nintendo8080</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>vertical (ccw)</rotation>
+  <players>2 (alternating)</players>
+  <joystick>2-way</joystick>
+  <num_buttons>4</num_buttons>
+  <buttons names="Fire,Start 1,Start 2,Coin 1,Game A,Game B,Game C,-,Pause" default="A,Start,L,Select,B,X,Y,,R"/>
+  <rom index="5" md5="none">
+    <part>01</part>
+  </rom>
+  <rom index="0" zip="spacefev.zip">
+    <part name="f1-ro-.bin" crc="35f295bd" length="1024"/>
+    <part name="f2-ro-.bin" crc="0c633f4c" length="1024"/>
+    <part name="g1-ro-.bin" crc="f3d851cb" length="1024"/>
+    <part name="g2-ro-.bin" crc="1faef63a" length="1024"/>
+    <part name="h1-ro-.bin" crc="b365389d" length="1024"/>
+    <part name="h2-ro-.bin" crc="a163e800" length="1024"/>
+    <part name="i1-ro-p.bin" crc="756b5582" length="1024"/>
+    <part repeat="9216">00</part>
+    <part name="ss3.ic2" crc="95c2c1ee" length="1024"/>
+    <part repeat="1024">00</part>
+    <part name="f5-i-.bin" crc="c5914ec1" length="32"/>
+    <part repeat="992">00</part>
+  </rom>
+  <switches default="00 00 FC 00">
+    <dip name="Lives" bits="16,17" ids="3,4,5,6" values="0,1,2,3"/>
+    <dip name="Unused" bits="18" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="19" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="20" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="21" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="22" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="23" ids="Off,On" values="1,0"/>
+    <dip name="Video Hardware" bits="0" ids="Monochrome,Color" values="1,0"/>
+  </switches>
+  <remark>ROM layout, profile selection, DIP transport and named control metadata verified. Combined graphics, audio, controls, gameplay, timing and hardware verification remain pending.</remark>
+</misterromdescription>

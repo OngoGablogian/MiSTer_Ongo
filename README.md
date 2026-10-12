@@ -96,6 +96,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |
 | [Neratte Chu (Seta ST-0016)](https://github.com/kyledlester/MiSTer_Neratte_Chu)                                                |
 | [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |
+| [Nintendo 8080](https://www.patreon.com/Meathax/posts/sheriff-sf-space-172141521)                                              |
 | [Nintendo Entertainment System (Monochrome)](https://x.com/iequalshane/status/1702385984053109018?s=20)                        |
 | [Nintendo Entertainment System (PC10 PPU Emphasis)](https://x.com/iequalshane/status/1714695850910175269?s=20)                 |
 | [Nintendo Entertainment System (RF)](https://x.com/iequalshane/status/1619921884682002433?s=20)                                |
@@ -188,7 +189,7 @@ main=MiSTer_Uneon
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
-filter = !Arcade-bazset_BRapBoys !Arcade-bazset_ChaseHQ !Arcade-bazset_ContinentalCircus !Arcade-bazset_KanekoFamily !Arcade-bazset_Krull !Arcade-bazset_SCI !Arcade-bazset_ShogunWarriors !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_invasion !Arcade-blahm1d_legendofkage !Arcade-blahm1d_mk4 !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_vunit !Arcade-blahm1d_wargods !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Alpha68kN !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_I-Robot !Arcade-Meathax_IkkiSunsoft !Arcade-Meathax_MCR68 !Arcade-Meathax_NamcoND1 !Arcade-Meathax_NARC !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_Simple156 !Arcade-Meathax_SSV !Arcade-Meathax_StoneBall !Arcade-Meathax_StunRunner !Arcade-Meathax_Suna8bit !Arcade-Meathax_Tumble !Arcade-Meathax_VioStorm !Arcade-Meathax_YellowCab !Arcade-Meathax_ZeroTeam
+filter = !Arcade-bazset_BRapBoys !Arcade-bazset_ChaseHQ !Arcade-bazset_ContinentalCircus !Arcade-bazset_KanekoFamily !Arcade-bazset_Krull !Arcade-bazset_SCI !Arcade-bazset_ShogunWarriors !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_invasion !Arcade-blahm1d_legendofkage !Arcade-blahm1d_mk4 !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_vunit !Arcade-blahm1d_wargods !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Alpha68kN !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_I-Robot !Arcade-Meathax_IkkiSunsoft !Arcade-Meathax_MCR68 !Arcade-Meathax_NamcoND1 !Arcade-Meathax_NARC !Arcade-Meathax_Nintendo8080 !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_Simple156 !Arcade-Meathax_SSV !Arcade-Meathax_StoneBall !Arcade-Meathax_StunRunner !Arcade-Meathax_Suna8bit !Arcade-Meathax_Tumble !Arcade-Meathax_VioStorm !Arcade-Meathax_YellowCab !Arcade-Meathax_ZeroTeam
 ```
 
 ----

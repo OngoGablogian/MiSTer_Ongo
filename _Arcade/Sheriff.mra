@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Sheriff</name>
+  <year>1979</year>
+  <manufacturer>Nintendo</manufacturer>
+  <category>Shooter</category>
+  <setname>sheriff</setname>
+  <parent>sheriff</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Nintendo8080</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>vertical (ccw)</rotation>
+  <players>2 (alternating)</players>
+  <joystick>8-way, dual sticks</joystick>
+  <num_buttons>1</num_buttons>
+  <buttons names="Fire,Start 1,Start 2,Coin 1,Aim Right,Aim Left,Aim Up,Aim Down,Pause" default="A,Start,L,Select,,,,,R"/>
+  <rom index="5" md5="none">
+    <part>00</part>
+  </rom>
+  <rom index="0" zip="sheriff.zip">
+    <part name="sh.f1" crc="e79df6e8"/>
+    <part name="sh.f2" crc="da67721a"/>
+    <part name="sh.g1" crc="3fb7888e"/>
+    <part name="sh.g2" crc="585fcfee"/>
+    <part name="sh.h1" crc="e59eab52"/>
+    <part name="sh.h2" crc="79e69a6a"/>
+    <part name="sh.i1" crc="dda7d1e8"/>
+    <part name="sh.i2" crc="5c5f3f86"/>
+    <part name="sh.j1" crc="0aa8b79a"/>
+    <part repeat="7168">00</part>
+    <part name="sh.snd" crc="75731745"/>
+    <part name="82s137.3l" crc="820f8cdd"/>
+  </rom>
+  <rom index="3" md5="none">
+    <part>03 01 0B 00 00 FF 00 02 00 02 00 01 00 FF 04 00 00 00 60 F1 03 00 00 00</part>
+  </rom>
+  <nvram index="4" size="3"/>
+  <remark>ROM layout, profile selection, DIP transport and named control metadata verified. Combined graphics, audio, controls, gameplay, timing and hardware verification remain pending.</remark>
+</misterromdescription>

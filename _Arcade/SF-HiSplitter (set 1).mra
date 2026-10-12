@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>SF-HiSplitter (set 1)</name>
+  <year>1979</year>
+  <manufacturer>Nintendo</manufacturer>
+  <category>Shooter</category>
+  <setname>highsplt</setname>
+  <parent>highsplt</parent>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Nintendo8080</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>vertical (ccw)</rotation>
+  <players>2 (alternating)</players>
+  <joystick>2-way</joystick>
+  <num_buttons>4</num_buttons>
+  <buttons names="Fire,Start 1,Start 2,Coin 1,Game A,Game B,Game C,-,Pause" default="A,Start,L,Select,B,X,Y,,R"/>
+  <rom index="5" md5="none">
+    <part>04</part>
+  </rom>
+  <rom index="0" zip="highsplt.zip">
+    <part name="f1-ha-.bin" crc="b8887351" length="1024"/>
+    <part name="f2-ha-.bin" crc="cda933a7" length="1024"/>
+    <part name="g1-ha-.bin" crc="de17578a" length="1024"/>
+    <part name="g2-ha-.bin" crc="f1a90948" length="1024"/>
+    <part name="hs.h1" crc="eefb4273" length="1024"/>
+    <part name="h2-ha-.bin" crc="e91703e8" length="1024"/>
+    <part name="hs.i1" crc="41e18df9" length="1024"/>
+    <part name="i2-ha-.bin" crc="eff9f82d" length="1024"/>
+    <part repeat="8192">00</part>
+    <part name="ss4.bin" crc="939e01d4" length="1024"/>
+    <part repeat="1024">00</part>
+    <part name="f5-i-.bin" crc="c5914ec1" length="32"/>
+    <part repeat="992">00</part>
+  </rom>
+  <switches default="00 00 F0 00">
+    <dip name="Lives" bits="16,17" ids="3,4,5,6" values="0,1,2,3"/>
+    <dip name="Bonus Life" bits="18,19" ids="1500,2000,3000,4000" values="0,1,2,3"/>
+    <dip name="Unused" bits="20" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="21" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="22" ids="Off,On" values="1,0"/>
+    <dip name="Unused" bits="23" ids="Off,On" values="1,0"/>
+    <dip name="Video Hardware" bits="0" ids="Monochrome,Color" values="1,0"/>
+  </switches>
+  <remark>ROM layout, profile selection, DIP transport and named control metadata verified. Combined graphics, audio, controls, gameplay, timing and hardware verification remain pending.</remark>
+</misterromdescription>
