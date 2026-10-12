@@ -61,7 +61,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
 | [Kaneko Family](https://www.patreon.com/bazset/posts/blood-warrior-172051209)                                                  |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
-| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1556319753612697643)                |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1559340446617174098)                |
 | [Konami GX](https://github.com/ppriest/Arcade-KonamiGX_MiSTer)                                                                 |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [Krull](https://www.patreon.com/bazset/posts/krull-1983-d-co-169209991)                                                        |
@@ -168,14 +168,6 @@ file_checking = 'exhaustive'
 > * The included MRA files for the Cave CV1000 games require the user to obtain the core separately from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
 
 > [!IMPORTANT]
-> * For the FM Towns Marty core to function properly, you must add the lines below to your `MiSTer.ini` file.
-
-```
-[Marty]
-main=MiSTer_Marty
-```
-
-> [!IMPORTANT]
 > * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your `MiSTer.ini` file.
 
 ```
@@ -208,6 +200,14 @@ main=MiSTer_CDi
 ```
 [N64DD]
 main=MiSTer_N64DD
+```
+
+> [!IMPORTANT]
+> * The FM Towns Marty core is now officially released and included with update_all! If you've previously added the lines below to your `MiSTer.ini` file, please remove them.
+
+```
+[Marty]
+main=MiSTer_Marty
 ```
 
 > [!IMPORTANT]
