@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Mysterious Stones: Dr. John's Adventure</name>
+  <setname>mystston</setname>
+  <parent>mystston</parent>
+  <mameversion>0289</mameversion>
+  <year>1984</year>
+  <manufacturer>Technos Japan</manufacturer>
+  <rbf>Meathax_MysteriousStones</rbf>
+  <resolution>15kHz</resolution>
+  <rotation>vertical (ccw)</rotation>
+  <players>2 (alternating)</players>
+  <joystick>4-way</joystick>
+  <num_buttons>2</num_buttons>
+  <button_names>Fire,Kick</button_names>
+  <buttons names="Fire,Kick,Start,Coin,Pause" default="A,B,Start,Select,R"/>
+  <switches default="fb,1f">
+    <dip bits="0" name="Lives" ids="5,3"/>
+    <dip bits="1" name="Difficulty" ids="Hard,Easy"/>
+    <dip bits="2" name="Demo Sounds" ids="On,Off"/>
+    <dip bits="8,9" name="Coin A" ids="2C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="10,11" name="Coin B" ids="2C/1C,1C/3C,1C/2C,1C/1C"/>
+    <dip bits="13" name="Flip Screen" ids="Off,On"/>
+    <dip bits="14" name="Cabinet" ids="Upright,Cocktail"/>
+  </switches>
+  <rom index="0" zip="mystston.zip" md5="d64d7f0d8020aba3e73aae7655eb4d91">
+    <part repeat="0x4000">00</part>
+    <part name="rom6.bin" crc="7bd9c6cd"/>
+    <part name="rom5.bin" crc="a83f04a6"/>
+    <part name="rom4.bin" crc="46c73714"/>
+    <part name="rom3.bin" crc="34f8b8a3"/>
+    <part name="rom2.bin" crc="bfd22cfc"/>
+    <part name="rom1.bin" crc="fb163e38"/>
+    <part name="ms6" crc="85c83806"/>
+    <part name="ms9" crc="b146c6ab"/>
+    <part name="ms7" crc="d025f84d"/>
+    <part name="ms10" crc="d85015b5"/>
+    <part name="ms8" crc="53765d89"/>
+    <part name="ms11" crc="919ee527"/>
+    <part repeat="0x4000">00</part>
+    <part name="ms12" crc="72d8331d"/>
+    <part name="ms13" crc="845a1f9b"/>
+    <part name="ms14" crc="822874b0"/>
+    <part name="ms15" crc="4594e53c"/>
+    <part name="ms16" crc="2f470b0f"/>
+    <part name="ms17" crc="38966d1b"/>
+    <part repeat="0x4000">00</part>
+    <part name="ic61" crc="e802d6cf"/>
+  </rom>
+  <rom index="3" md5="none">
+    <part>00 00 00 00 01 00 00 04 00 04 00 01 01 00 40 00
+00 00 03 08 37 00 0C 00
+00 00 00 1A 05 00 00 00
+00 00 10 33 08 40 41 00</part>
+  </rom>
+  <nvram index="4" size="68"/>
+</misterromdescription>

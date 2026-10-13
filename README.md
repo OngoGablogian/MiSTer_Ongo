@@ -83,6 +83,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
 | [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                     |
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                    |
+| [Mysterious Stones - Dr. John's Adventure](https://www.patreon.com/Meathax/posts/mysterious-1984-172246699)                    |
 | [Namco NA-1 / NA-2](https://github.com/kyledlester/Namco_NA1_NA2_MiSTer)                                                       |
 | [Namco NB-1](https://github.com/kyledlester/Namco_NB1_MiSTer)                                                                  |
 | [Namco NB-2](https://github.com/kyledlester/Namco_NB2_MiSTer)                                                                  |
