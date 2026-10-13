@@ -1,0 +1,155 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Layout contract: docs/rom-layout.md. Derived from MAME 0.289
+      model2.cpp ROM_START(daytona93).
+
+      FULL 43.62 MB SET. The SDRAM controller now addresses 128 MB (11 column
+      bits, 26-bit word address), proven against the device model at both
+      geometries: make test_m2_sdram and test_m2_sdram128.
+
+      This file was briefly trimmed to 22.25 MB because the controller addressed
+      only 32 MB and the full set wrapped over its own start, which the board
+      showed as FFFFFFFF where the i960 program should be. That constraint is
+      gone; the trim is not a thing to reinstate.
+
+      The ROM_COPY mirrors in main_data (0x900000 -> 0xa00000..0xf00000) are
+      deliberately NOT repeated here. Shipping six duplicate megabytes over
+      ioctl every boot to express an address decode belongs in the core.
+    -->
+    <name>Daytona USA [15kHz CRT]</name>
+    <setname>daytona93</setname>
+    <rbf>Model2</rbf>
+    <nvram index="2" size="16384"/>
+    <!-- 15 kHz CRT (study R795): the game-ID byte's bit 7 tells the core this
+         is a CRT, and it starts in 15 kHz interlaced whatever the OSD's Video
+         setting says. Bits 6:0 stay 0 (Daytona). -->
+    <rom index="4" md5="none">
+        <part>80 00</part>
+    </rom>
+    <!-- The I/O board's Z80 firmware (study R61): a real EPR-14869C on a real
+         Z80 core replaces the behavioural exchange. Loaded at index 1 into the
+         board's 16 KB ROM; the Z80 stays in reset without it. -->
+    <rom index="3" zip="model1io.zip|daytona93.zip|daytona.zip" md5="none">
+        <part name="epr-14869c.25" crc="24b68e64"/>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1993</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="daytona93.zip|daytona.zip" md5="none">
+
+        <!-- 0x0000000  i960 program, 0x40000 -->
+        <interleave output="32">
+            <part name="epr-16530a.12" crc="39e962b5" map="0021"/>
+            <part name="epr-16531a.13" crc="693126eb" map="2100"/>
+        </interleave>
+
+        <!-- 0x0040000  i960 data, 0xa00000 -->
+        <interleave output="32">
+            <part name="mpr-16528.10" crc="9ce591f6" map="0021"/>
+            <part name="mpr-16529.11" crc="f7095eaf" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16526.8" crc="5273b8b5" map="0021"/>
+            <part name="mpr-16527.9" crc="fc4cb0ef" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-16534a.6" crc="1bb0d72d" map="0021"/>
+            <part name="epr-16535a.7" crc="459a8bfb" map="2100"/>
+        </interleave>
+
+        <!-- 0x0a40000  copro data, 0x400000 -->
+        <interleave output="32">
+            <part name="mpr-16537.ic28" crc="36b7c35a" map="0021"/>
+            <part name="mpr-16536.ic29" crc="6d6afed9" map="2100"/>
+        </interleave>
+
+        <!-- 0x0e40000  textures, 0x800000 -->
+        <interleave output="32">
+            <part name="mpr-16522.25" crc="55d39a57" map="0021"/>
+            <part name="mpr-16521.24" crc="af1934fb" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16517.27" crc="4705d3dd" map="0021"/>
+            <part name="mpr-16516.26" crc="a260d45d" map="2100"/>
+        </interleave>
+
+        <!-- 0x1640000  polygons, 0xd00000 -->
+        <interleave output="32">
+            <part name="mpr-16523.ic16" crc="2f484d42" map="0021"/>
+            <part name="mpr-16518.ic20" crc="df683bf7" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16524.ic17" crc="34658bd7" map="0021"/>
+            <part name="mpr-16519.ic21" crc="facd1c81" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16525.ic18" crc="fb517521" map="0021"/>
+            <part name="mpr-16520.ic22" crc="d66bd9bd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-16646.ic19" crc="7ba9fd6b" map="0021"/>
+            <part name="epr-16645.ic23" crc="78fe0b8a" map="2100"/>
+        </interleave>
+
+        <!-- 0x2340000  68000 sound program, 0x40000 (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-16489.7" crc="c20e543e" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="epr-16490.8" crc="c24edaab" map="12"/>
+        </interleave>
+
+        <!-- 0x2380000  MPCM samples, 0x800000 -->
+        <part name="mpr-16491.32" crc="89920903"/>
+        <part name="mpr-16492.33" crc="459e701b"/>
+        <part name="mpr-16493.4"  crc="9990db15"/>
+        <part name="mpr-16494.5"  crc="600e1d6c"/>
+
+        <!-- 0x2b80000  comms program, 0x20000 -->
+        <part name="epr-16726.bin" crc="c179b8c7"/>
+
+        <!-- 0x2ba0000  TGP math tables, 0x40000
+
+             THE OFFSET IS 0x2BA0000, THE ARITHMETIC'S ANSWER. This comment
+             used to say 0x2bb0000, "measured" from an image that
+             tools/rom_csum.py had built by walking every <rom> in file order,
+             which put the 64 KB index-3 I/O firmware ahead of index 0. The
+             loader sends each index as its own stream, so the board never had
+             that 64 KB and the coprocessor read its tables 64 KB late from
+             2026-08-30 to 2026-09-10 (study R203). The paragraph below is kept
+             as the record of how a gap was invented.
+
+             The sincos, atan, inv and isqrt lookup tables the geometry
+             processor reads through its IO space: four 16K-word quadrants,
+             64K words in all. MAME's region is "copro_tgp_tables" and the
+             TGP's copro_sincos_r/atan_r/inv_r/isqrt_r index straight into it.
+
+             These were NOT in this file. Nothing had asked for them, because
+             the coprocessor was stubbed as permanently finished, so the
+             omission stayed invisible until the real TGP went in and its
+             table port had nowhere to read from. Interleaved to 32 bits like
+             every other paired ROM here; the region is u32 in MAME.
+
+             THE OFFSET IS MEASURED, NOT COUNTED. Adding 0x40000 to the end of
+             the previous section gives 0x2ba0000 and the tables are at
+             0x2bb0000, a 64 KB gap, which is the same discrepancy studies
+             R88 and R89 found for the 68000 sound ROM, in the same direction.
+             The comments in this file are a description of intent; the built
+             image is the authority. Found by searching it for the ROM's own
+             first bytes. -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Inputs are wired: coin, start, test, service, the four VR buttons,
+     a five-position gearbox and analog steering, accelerator and brake.
+     The board's own DIP banks read 0xFF, which is what Daytona expects. -->
+</misterromdescription>

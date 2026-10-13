@@ -1,0 +1,148 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Daytona USA, 1994 Revision A. Derived from MAME 0.289 model2.cpp
+      ROM_START(daytona), against the '93 MRA (Daytona USA (Deluxe 93).mra)
+      and docs/rom-layout.md. Study R725.
+
+      THE SAME LAYOUT AS '93 UP TO ITS LAST BYTE (0x2BE0000), WITH TWO
+      DIFFERENCES:
+
+      1. main_data's last section is ONE megabyte here (epr-16724a/16725a,
+         512 KB each) where '93's is two (epr-16534a/16535a). MAME mirrors it
+         from 0x800000 across 0x900000-0xF00000; '93 mirrors from 0x900000.
+         It is loaded TWICE below, so 0x900000 holds what 0x800000 does and
+         the core's own mirror of 0x900000 (0xA00000-0xF00000) is right for
+         both sets without the core knowing which one it runs.
+
+      2. The polygon ROM is 16 MB here (the ic19/ic23 pair is mpr-16772/16771,
+         2 MB each) where '93's is 13 (epr-16646/16645, 512 KB each). The
+         pair's first 1 MB goes where '93's pair does; the other 3 MB are
+         appended after the TGP tables, and the core's loader (XTRA_FROM /
+         XTRA_TO) and engine put them at GAME_POLYX in free SDRAM. In a flat
+         image without that, everything after the polygons - the sound
+         program first - moves 3 MB later.
+
+      Everything else is the same parts or the same layout with new parts:
+      the i960 program and data, the textures' second pair and the 68000
+      sound program are this revision's; the copro data, the first three
+      polygon pairs, the first texture pair, the samples, the comms program
+      and the TGP tables are '93's.
+    -->
+    <name>Daytona USA (Revision A) [15kHz CRT]</name>
+    <setname>daytona</setname>
+    <rbf>Model2</rbf>
+    <nvram index="2" size="16384"/>
+    <!-- 15 kHz CRT (study R795): the game-ID byte's bit 7 tells the core this
+         is a CRT, and it starts in 15 kHz interlaced whatever the OSD's Video
+         setting says. Bits 6:0 stay 0 (Daytona). -->
+    <rom index="4" md5="none">
+        <part>80 00</part>
+    </rom>
+    <rom index="3" zip="model1io.zip|daytona.zip" md5="none">
+        <part name="epr-14869c.25" crc="24b68e64"/>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="daytona.zip" md5="none">
+
+        <!-- 0x0000000  i960 program, 0x40000 -->
+        <interleave output="32">
+            <part name="epr-16722a.12" crc="48b94318" map="0021"/>
+            <part name="epr-16723a.13" crc="8af8b32d" map="2100"/>
+        </interleave>
+
+        <!-- 0x0040000  i960 data, 0xa00000 -->
+        <interleave output="32">
+            <part name="mpr-16528.10" crc="9ce591f6" map="0021"/>
+            <part name="mpr-16529.11" crc="f7095eaf" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16808.8" crc="44f1f5a0" map="0021"/>
+            <part name="mpr-16809.9" crc="37a2dd12" map="2100"/>
+        </interleave>
+        <!-- data 0x800000: 1 MB, and again at 0x900000 (MAME's ROM_COPY from 0x800000) -->
+        <interleave output="32">
+            <part name="epr-16724a.6" crc="469f10fd" map="0021"/>
+            <part name="epr-16725a.7" crc="ba0df8db" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-16724a.6" crc="469f10fd" map="0021"/>
+            <part name="epr-16725a.7" crc="ba0df8db" map="2100"/>
+        </interleave>
+
+        <!-- 0x0a40000  copro data, 0x400000 -->
+        <interleave output="32">
+            <part name="mpr-16537.ic28" crc="36b7c35a" map="0021"/>
+            <part name="mpr-16536.ic29" crc="6d6afed9" map="2100"/>
+        </interleave>
+
+        <!-- 0x0e40000  textures, 0x800000 -->
+        <interleave output="32">
+            <part name="mpr-16522.25" crc="55d39a57" map="0021"/>
+            <part name="mpr-16521.24" crc="af1934fb" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16770.27" crc="f9fa7bfb" map="0021"/>
+            <part name="mpr-16769.26" crc="e57429e9" map="2100"/>
+        </interleave>
+
+        <!-- 0x1640000  polygons, 0xd00000 here (the last 3 MB at the end) -->
+        <interleave output="32">
+            <part name="mpr-16523.ic16" crc="2f484d42" map="0021"/>
+            <part name="mpr-16518.ic20" crc="df683bf7" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16524.ic17" crc="34658bd7" map="0021"/>
+            <part name="mpr-16519.ic21" crc="facd1c81" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16525.ic18" crc="fb517521" map="0021"/>
+            <part name="mpr-16520.ic22" crc="d66bd9bd" map="2100"/>
+        </interleave>
+        <!-- polygons 12-13 MB: the first 512 KB of each of the 16 MB set's last pair -->
+        <interleave output="32">
+            <part name="mpr-16772.ic19" crc="770ed912" map="0021" offset="0x000000" length="0x080000"/>
+            <part name="mpr-16771.ic23" crc="a2205124" map="2100" offset="0x000000" length="0x080000"/>
+        </interleave>
+
+        <!-- 0x2340000  68000 sound program, 0x40000 (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-16720.7" crc="8e73cffd" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="epr-16721.8" crc="1bb3b7b7" map="12"/>
+        </interleave>
+
+        <!-- 0x2380000  MPCM samples, 0x800000 -->
+        <part name="mpr-16491.32" crc="89920903"/>
+        <part name="mpr-16492.33" crc="459e701b"/>
+        <part name="mpr-16493.4"  crc="9990db15"/>
+        <part name="mpr-16494.5"  crc="600e1d6c"/>
+
+        <!-- 0x2b80000  comms program, 0x20000 -->
+        <part name="epr-16726.bin" crc="c179b8c7"/>
+
+        <!-- 0x2ba0000  TGP math tables, 0x40000 (see the '93 MRA for the offset's history) -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x2be0000  polygons 13-16 MB, 0x300000: the rest of the last pair.
+             The loader moves these to GAME_POLYX (Model2.sv, R725). -->
+        <interleave output="32">
+            <part name="mpr-16772.ic19" crc="770ed912" map="0021" offset="0x080000" length="0x180000"/>
+            <part name="mpr-16771.ic23" crc="a2205124" map="2100" offset="0x080000" length="0x180000"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Inputs as the '93 set: coin, start, test, service, the four VR buttons,
+     a five-position gearbox and analog steering, accelerator and brake. -->
+</misterromdescription>

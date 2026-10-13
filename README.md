@@ -1,5 +1,5 @@
 ----
-# Add this to your MiSTer `downloader.ini`:
+# Add this to your MiSTer **`downloader.ini`**:
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
@@ -117,6 +117,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
 | [SEGA Model 1](https://github.com/alphanu1/sega-model1-mister)                                                                 |
+| [SEGA Model 2](https://github.com/alphanu1/sega-model2-mister)                                                                 |
 | [SEGA System 24](https://github.com/meathax/s24)                                                                               |
 | [SEGA System 32](https://github.com/meathax/s32)                                                                               |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                    |
@@ -160,7 +161,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 # Important Info:
 
 > [!IMPORTANT]
-> * Since the release of Downloader v2.3, I'd recommended adding the lines below to your `downloader.ini` file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
+> * Since the release of Downloader v2.3, I'd recommended adding the lines below to your **`downloader.ini`** file. This will help avoid potential issues, for instance, when a file is removed from this repository after being added to one of the more "official" repositories.
 
 ```
 [MiSTer]
@@ -171,7 +172,7 @@ file_checking = 'exhaustive'
 > * The included MRA files for the Cave CV1000 games require the user to obtain the core separately from [Raki](https://www.patreon.com/c/ikamusume/posts) on Patreon. Please support them and their ongoing development on this core.
 
 > [!IMPORTANT]
-> * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your `MiSTer.ini` file.
+> * For the Soyuz-Neon PC-11/16 (Uneon) core to function properly, you must add the lines below to your **`MiSTer.ini`** file.
 
 ```
 [Uneon]
@@ -179,7 +180,7 @@ main=MiSTer_Uneon
 ```
 
 > [!WARNING]
-> * This repository mirrors cores from the [Meathax](https://github.com/meathax/meatcores), [blahm1d](https://mister.blahm1d.com/), & [bazset](https://github.com/bazset/MiSTer_BAZSET) databases, as I prefer having all of the arcade games in the `_Arcade` folder on MiSTer. If you use either of these databases, please add these filters below to your `downloader.ini` to avoid having duplicate or conflicting MRAs/RBFs. This will prevent the Meathax & blahm1d cores from being downloaded from this repository.
+> * This repository mirrors cores from the [Meathax](https://github.com/meathax/meatcores), [blahm1d](https://mister.blahm1d.com/), & [bazset](https://github.com/bazset/MiSTer_BAZSET) databases, as I prefer having all of the arcade games in the `_Arcade` folder on MiSTer. If you use either of these databases, please add these filters below to your **`downloader.ini`** to avoid having duplicate or conflicting MRAs/RBFs. This will prevent the Meathax & blahm1d cores from being downloaded from this repository.
 
 ```
 [OngoGablogian/MiSTer_Ongo]
@@ -190,7 +191,7 @@ filter = !Arcade-bazset_BRapBoys !Arcade-bazset_ChaseHQ !Arcade-bazset_Continent
 ----
 
 > [!IMPORTANT]
-> * The CD-i, Nintendo 64DD, & FM Towns Marty cores are now officially released and included with update_all! If you've previously added any of the lines below to your `MiSTer.ini` file, please remove them.
+> * The CD-i, Nintendo 64DD, & FM Towns Marty cores are now officially released and included with update_all! If you've previously added any of the lines below to your **`MiSTer.ini`** file, please remove them.
 
 ```
 [CD-i]
@@ -204,7 +205,7 @@ main=MiSTer_Marty
 ```
 
 > [!IMPORTANT]
-> * Jotego's Neo Geo Pocket Color is out of beta. If you previously symlinked your **_Arcade/Cores** folder to **_Console/cores**, it can now be removed.
+> * Jotego's Neo Geo Pocket Color is out of beta. If you previously symlinked your **`_Arcade/Cores`** folder to **`_Console/cores`**, it can now be removed.
 
 ----
 
