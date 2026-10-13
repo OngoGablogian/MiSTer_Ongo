@@ -15,7 +15,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > * You can easily check out the files included with this database by using theypsilon's [Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip)
 
 > [!NOTE]
-> * In its current state, this repo totals around 9 GB of files.
+> * In its current state, this repo totals around 10 GB of files.
 
 ----
 
@@ -184,31 +184,21 @@ main=MiSTer_Uneon
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
-filter = !Arcade-bazset_BRapBoys !Arcade-bazset_ChaseHQ !Arcade-bazset_ContinentalCircus !Arcade-bazset_KanekoFamily !Arcade-bazset_Krull !Arcade-bazset_SCI !Arcade-bazset_ShogunWarriors !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_invasion !Arcade-blahm1d_legendofkage !Arcade-blahm1d_mk4 !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_vunit !Arcade-blahm1d_wargods !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Alpha68kN !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_I-Robot !Arcade-Meathax_IkkiSunsoft !Arcade-Meathax_MCR68 !Arcade-Meathax_NamcoND1 !Arcade-Meathax_NARC !Arcade-Meathax_Nintendo8080 !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_Simple156 !Arcade-Meathax_SSV !Arcade-Meathax_StoneBall !Arcade-Meathax_StunRunner !Arcade-Meathax_Suna8bit !Arcade-Meathax_Tumble !Arcade-Meathax_VioStorm !Arcade-Meathax_YellowCab !Arcade-Meathax_ZeroTeam
+filter = !Arcade-bazset_BRapBoys !Arcade-bazset_ChaseHQ !Arcade-bazset_ContinentalCircus !Arcade-bazset_KanekoFamily !Arcade-bazset_kickle !Arcade-bazset_Krull !Arcade-bazset_SCI !Arcade-bazset_ShogunWarriors !Arcade-blahm1d_exidy440 !Arcade-blahm1d_gladiator !Arcade-blahm1d_invasion !Arcade-blahm1d_legendofkage !Arcade-blahm1d_mk4 !Arcade-blahm1d_narc !Arcade-blahm1d_tunit !Arcade-blahm1d_tunitdcs !Arcade-blahm1d_vunit !Arcade-blahm1d_wargods !Arcade-blahm1d_wolfunit !Arcade-blahm1d_xunit !Arcade-blahm1d_yunit !Arcade-blahm1d_yunitadpcm !Arcade-Meathax_Alpha68kN !Arcade-Meathax_Appoooh !Arcade-Meathax_Bucky !Arcade-Meathax_DoCastle !Arcade-Meathax_DrMicro !Arcade-Meathax_I-Robot !Arcade-Meathax_IkkiSunsoft !Arcade-Meathax_MCR68 !Arcade-Meathax_MysteriousStones !Arcade-Meathax_NamcoND1 !Arcade-Meathax_NARC !Arcade-Meathax_Nintendo8080 !Arcade-Meathax_SegaSystem24 !Arcade-Meathax_SegaSystem32 !Arcade-Meathax_SegaSystem32Multi !Arcade-Meathax_Simple156 !Arcade-Meathax_Simple156 !Arcade-Meathax_SSV !Arcade-Meathax_StoneBall !Arcade-Meathax_StunRunner !Arcade-Meathax_Suna8bit !Arcade-Meathax_Tumble !Arcade-Meathax_VioStorm !Arcade-Meathax_YellowCab !Arcade-Meathax_ZeroTeam
 ```
 
 ----
 
 > [!IMPORTANT]
-> * The CD-i core is now officially released and included with update_all! If you've previously added the lines below to your `MiSTer.ini` file, please remove them.
+> * The CD-i, Nintendo 64DD, & FM Towns Marty cores are now officially released and included with update_all! If you've previously added any of the lines below to your `MiSTer.ini` file, please remove them.
 
 ```
 [CD-i]
 main=MiSTer_CDi
-```
 
-> [!IMPORTANT]
-> * The Nintendo 64DD core is now officially released and included with update_all! If you've previously added the lines below to your `MiSTer.ini` file, please remove them.
-
-```
 [N64DD]
 main=MiSTer_N64DD
-```
 
-> [!IMPORTANT]
-> * The FM Towns Marty core is now officially released and included with update_all! If you've previously added the lines below to your `MiSTer.ini` file, please remove them.
-
-```
 [Marty]
 main=MiSTer_Marty
 ```
