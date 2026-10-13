@@ -218,6 +218,7 @@ main=MiSTer_Marty
 # MRA:
 | MRA |
 | :---: |
+| [Arcade Patches (strygo)](https://arcadepatches.com/)                                                                                         |
 | [Bubble Bobble Ultra (v1.0)](https://www.romhacking.net/hacks/754)                                                                            |
 | [Cave CV1000](https://www.patreon.com/c/ikamusume/posts)                                                                                      |
 | [Cave CV1000 Practice ROMs](https://blog.kasaski.dev/2026/10/02/kasaskis-CV1000-practice-roms)                                                |
@@ -248,8 +249,6 @@ main=MiSTer_Marty
 | [Truxton II - Tatsujin Oh (Round Select)](http://alamone.net/)                                                                                |
 | [Twin Cobra (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                                        |
 | Twin Twist (Twin Cobra Hack)                                                                                                                  |
-| [Vampire Hunter 2 (Night Warriors 2) (English Translation)](https://strygo.github.io/arcade-patches/vhunt2-english/index.html)                |
-| [Vampire Savior 2 (English Translation)](https://strygo.github.io/arcade-patches/vsav2-english/index.html)                                    |
 | [Warriors of Fate - Special (v1.0)](https://www.romhacking.net/hacks/7550)                                                                    |
 
 ----

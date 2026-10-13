@@ -1,0 +1,3266 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<!--
+    Darkstalkers: The Night Warriors, English restoration patch (rc1)
+    An unofficial English restoration of Vampire: The Night Warriors (Japan 940705), presented as the USA version of Darkstalkers.
+
+    Patch by Steve Gordon (https://x.com/strygo).
+
+    This is a patch-overlay MRA: it references the ORIGINAL, unmodified
+    MAME romset (vampj.zip) and applies the restoration in memory
+    while the game loads. It contains no ROM data. Settings and saves use
+    the name 'vamprest'.
+
+    Base MRA and jtcps2 core by Jose Tejada (jotego); see his header below.
+    Not affiliated with or endorsed by Capcom. Free patch; do not sell.
+-->
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
+    <name>Darkstalkers: The Night Warriors (USA) (English Restoration) [RC1]</name>
+    <setname>vamprest</setname>
+    <mameversion>0282</mameversion>
+    <year>1994</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>jtcps2</rbf>
+    <joystick>8</joystick>
+    <region>USA</region>
+    <platform>CPS-2</platform>
+    <category>Fighting</category>
+    <catver>Fighter / Versus</catver>
+    <mraauthor>jotego,strygo</mraauthor>
+    <rom index="0" zip="vampj.zip|dstlk.zip|qsound.zip" md5="None" address="0x30000000" asm_md5="2b986d60053286ef305fd3492352dc5e">
+        <!--  -->
+        <part>
+            00 10 00 11 00 21 00 71
+            FF FF FF FF FF FF FF FF
+            32 FF 00 02 04 06 26 28
+            2A 2C 2E 00 00 30 02 04
+            08 30 FF FF FF FF FF FF
+            FC FF FF FF </part>
+        <!-- key - starts at 0x0 - length 0x14 (5 bits) -->
+        <part name="vampj.key" crc="8418cc6f"/>
+        <!-- maincpu - starts at 0x14 - length 0x400000 (22 bits) -->
+        <part name="vamj.03a" crc="f55d3722"/>
+        <part name="vamj.04b" crc="4d9c43c4"/>
+        <part name="vamj.05a" crc="6c497e92"/>
+        <part name="vamj.06a" crc="f1bbecb6"/>
+        <part name="vamj.07a" crc="1067ad84"/>
+        <part name="vamj.08a" crc="4b89f41f"/>
+        <part name="vamj.09a" crc="fc0a4aac"/>
+        <part name="vamj.10a" crc="9270c26b"/>
+        <!-- audiocpu - starts at 0x400014 - length 0x40000 (18 bits) -->
+        <part name="vam.01" crc="64b685d5"/>
+        <part name="vam.02" crc="cf7c97c7"/>
+        <!-- qsound - starts at 0x440014 - length 0x400000 (22 bits) -->
+        <interleave output="16">
+            <part name="vam.11m" crc="4a39deb2" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="vam.12m" crc="1a3e5c03" map="12"/>
+        </interleave>
+        <!-- gfx - starts at 0x840014 - length 0x1400000 (25 bits) -->
+        <interleave output="64">
+            <part name="vam.13m" crc="c51baf99" map="00000021"/>
+            <part name="vam.15m" crc="3ce83c77" map="00002100"/>
+            <part name="vam.17m" crc="4f2408e0" map="00210000"/>
+            <part name="vam.19m" crc="9ff60250" map="21000000"/>
+        </interleave>
+        <interleave output="64">
+            <part name="vam.14m" crc="bd87243c" map="00000021"/>
+            <part name="vam.16m" crc="afec855f" map="00002100"/>
+            <part name="vam.18m" crc="3a033625" map="00210000"/>
+            <part name="vam.20m" crc="2bff6a89" map="21000000"/>
+        </interleave>
+        <!-- firmware - starts at 0x1C40014 - length 0x2000 (13 bits) -->
+        <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000"/>
+        <!-- Total 0x1C42014 bytes - 28936 kBytes -->
+        <patch offset="0x2fd">
+            01 02 00 00 00 00 01
+        </patch>
+        <patch offset="0x756e">
+            05 55
+        </patch>
+        <patch offset="0x8242">
+            08 00 10 00 B7 03 B8 03 B9 03 BA 03 BB 03
+        </patch>
+        <patch offset="0x8266">
+            C1 03 C2 03 C3 03 C4 03 C5 03
+        </patch>
+        <patch offset="0x82b2">
+            00 00 0C 00 00 00 D9 03 DA 03 DB
+        </patch>
+        <patch offset="0x82d6">
+            E1 03 E2 03 E3 03 E4
+        </patch>
+        <patch offset="0xa100">
+            34 E1 0C 00 00 00 00 00 34 E5
+        </patch>
+        <patch offset="0xa146">
+            1E 18 60 8E CD 01 21 4C
+        </patch>
+        <patch offset="0xa1b0">
+            35 31 81 7E 79 7D
+        </patch>
+        <patch offset="0xad36">
+            52 20 15 2F 00 44
+        </patch>
+        <patch offset="0xb310">
+            52 20 15 2F 00 44
+        </patch>
+        <patch offset="0xbbc8">
+            4F 86 F1 BC C9 C1 F3 5C 1A 7B 86 50 80 F4 3B D4
+            DF D8 11 45 D7 25 20 45 E4 40 9D F3 F8 B7 36 C9
+            0C 3C 18 93 4F FD 11 30 08 2A 1E F2 A7 F4 6A 4B
+            22 20 78 0B 6C 5C CB 1F 4C 3C 59 59 A0 5C 15 08
+            70 FE 3B 4D 76 4A 47 15 60 A1 2B 73 52 4F 0B 99
+            4C 03 52 D0 6B 19 86 05 71 EB 0C 8A 67 13 66 4D
+            5F A2 3C 92 F5 C4 6C F4 7D A1 F5 DB 96 98 57 D9
+            4A DE 66 17 0A 49 07 C9 8E 65 7C 1A 9B E1 75 03
+            E0 DE D3 10 83 2F F0 86 13 28 F7 4D 06 6B 56 96
+            54 25 18 A2 05 96 78 AF 05 D9 9C 91 8C 16 7E CF
+            FE E1 40 EB C9 D9 4F EA A7 87 7E F3 A3 B2 79 53
+            15 18 3E 65 68 59 3C 05 6B 44 60 12 24 8F A4 FB
+            9A F1 90 2B B5 A9 08 78 91 49 15 96 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 02 01 04 03
+            06 05 08 07 03 02 05 04 07 06 02 01 0A 09 0C 0B
+            0E 0D 09 0F 09 09 09 09 09 09 09 09 11 10 13 12
+            15 14 17 16 10 18 10 10 10 10 10 10 1A 19 1C 1B
+            1E 1D 20 1F 22 21 19 23 19 19 19 19 25 24 27 26
+            29 28 24 2A 24 24 24 24 24 24 24 24 2C 2B 2E 2D
+            30 2F 2B 31 2B 2B 2B 2B 2B 2B 2B 2B 33 32 35 34
+            37 36 32 32 32 32 32 32 32 32 32 32 39 38 3B 3A
+            3D 3C 38 3E 38 38 38 38 38 38 38 38 40 3F 42 41
+            44 43 46 45 3F 47 3F 3F 3F 3F 3F 3F 49 48 4B 4A
+            4D 4C 48 4E 48 48 48 48 48 48 48 48 50 4F 52 51
+            54 53 4F 55 4F 4F 4F 4F 4F 4F 4F 4F 00 00 68 BE
+            00 00 8C BE 00 00 B9 BE 00 00 F9 BE 00 00 3A BF
+            00 00 81 BF 00 00 E2 BF 00 00 1B C0 00 00 3B C0
+            00 00 7D C0 00 00 BE C0 00 00 01 C1 00 00 42 C1
+            00 00 80 C1 00 00 BA C1 00 00 1B C2 00 00 5C C2
+            00 00 9F C2 00 00 ED C2 00 00 0F C3 00 00 59 C3
+            00 00 B0 C3 00 00 F7 C3 00 00 3C C4 00 00 94 C4
+            00 00 D3 C4 00 00 17 C5 00 00 67 C5 00 00 B6 C5
+            00 00 F9 C5 00 00 51 C6 00 00 9F C6 00 00 F9 C6
+            00 00 37 C7 00 00 8E C7 00 00 E4 C7 00 00 29 C8
+            00 00 65 C8 00 00 B2 C8 00 00 06 C9 00 00 66 C9
+            00 00 AD C9 00 00 05 CA 00 00 45 CA 00 00 92 CA
+            00 00 D5 CA 00 00 20 CB 00 00 77 CB 00 00 CC CB
+            00 00 2B CC 00 00 8D CC 00 00 DC CC 00 00 2F CD
+            00 00 70 CD 00 00 B5 CD 00 00 11 CE 00 00 69 CE
+            00 00 C1 CE 00 00 02 CF 00 00 42 CF 00 00 9B CF
+            00 00 ED CF 00 00 53 D0 00 00 9F D0 00 00 EF D0
+            00 00 43 D1 00 00 86 D1 00 00 E9 D1 00 00 49 D2
+            00 00 9A D2 00 00 F3 D2 00 00 47 D3 00 00 90 D3
+            00 00 D1 D3 00 00 0E D4 00 00 5B D4 00 00 B4 D4
+            00 00 09 D5 00 00 68 D5 00 00 AA D5 00 00 EB D5
+            00 00 33 D6 00 00 81 D6 00 00 CF D6 00 00 0C D7
+            48 E0 D5 C3 05 13 08 20 07 09 20 08 0E 01 20 04
+            0F 0C 20 17 15 07 12 01 13 04 17 20 13 09 0C 05
+            A1 19 00 00 6A E0 D9 C3 15 0F 03 20 0E 01 02 20
+            0F 0C 0B 03 01 20 12 09 01 20 14 14 03 01 13 0B
+            E0 00 D3 BE 0E 09 14 20 05 08 01 20 12 09 00 A1
+            E0 00 C3 5E 15 C2 0C 09 20 04 0F 19 12 15 D3 20
+            05 10 09 03 0C 01 C7 20 15 01 05 07 14 20 00 0F
+            59 E0 10 D3 17 0F 12 05 15 20 20 10 0F 19 12 15
+            13 20 05 10 09 03 0C 01 0D 20 16 0F 13 05 00 A1
+            E0 00 C3 5A 01 D7 03 14 20 08 0F 19 12 15 0F 20
+            10 10 0E 0F 0E 05 A7 14 20 13 0F 0D 05 16 A1 13
+            E0 00 D3 5A 0F D9 A7 15 0C 0C 06 20 0E 09 20 04
+            20 01 08 03 0E 01 05 03 14 20 20 0F 09 17 A1 0E
+            00 00 48 E0 CE C3 16 05 12 05 06 20 12 0F 05 07
+            20 14 0F 19 20 15 01 03 20 0E 0F 03 05 0D 02 20
+            03 01 A1 0B E0 00 D3 48 09 C6 08 07 20 14 09 17
+            08 14 06 20 09 01 08 14 09 20 20 0E 0F 19 12 15
+            10 20 17 0F 12 05 00 A1 E0 00 BB 57 15 C2 0C 09
+            20 04 0F 19 12 15 D3 20 05 10 09 03 0C 01 C7 20
+            15 01 05 07 01 20 04 0E E0 00 CB 45 13 15 20 05
+            20 01 10 13 03 05 01 09 20 0C 0F 0D 05 16 06 20
+            12 0F 01 20 03 20 01 08 03 0E 00 05 6B E0 14 DB
+            20 0F 15 14 0E 12 14 20 05 08 06 20 07 09 14 08
+            01 20 0F 12 0E 15 A1 04 00 00 8A E0 D9 C3 15 0F
+            12 A7 20 05 0C 01 0F 0D 14 13 14 20 05 08 05 12
+            00 A1 5A E0 C4 D3 0E 0F 14 A7 07 20 16 09 20 05
+            10 15 15 20 14 0E 0C 09 14 20 05 08 05 20 04 0E
+            00 A1 E0 00 C3 60 14 C1 01 14 0B 03 19 20 15 0F
+            20 12 0F 06 A7 05 20 13 10 0F 0E 05 0E 09 13 07
+            00 A1 E0 00 C3 6C 08 C3 0F 01 20 13 0C C6 12 01
+            20 05 10 13 03 05 01 09 20 0C 0F 0D 05 16 00 BA
+            65 E0 1B D3 AD 01 01 1B 1B 9B AF 01 AB 20 D0 20
+            0E 15 08 03 A8 20 01 06 09 03 07 0E 12 20 07 09
+            14 08 00 A9 E0 00 C3 59 0F D9 20 15 01 03 20 0E
+            0C 01 0F 13 15 20 05 13 14 20 05 08 13 20 05 10
+            09 03 0C 01 E0 00 D3 59 0F 0D 05 16 C3 20 01 08
+            13 0F C6 20 01 0C 05 12 09 20 20 0E 08 14 20 05
+            09 01 A1 12 00 00 66 E0 C4 C3 0D 05 0E 0F C3 20
+            01 12 0C 04 20 05 10 13 03 05 01 09 20 0C 0F 0D
+            05 16 00 BA 66 E0 1B D3 AF 01 01 1B 1B AD 9B 01
+            AB 20 D0 20 0E 15 08 03 A8 20 01 06 09 03 07 0E
+            12 20 07 09 14 08 00 A9 E0 00 C3 66 05 C4 0F 0D
+            20 0E 12 C3 04 01 05 0C 13 20 05 10 09 03 0C 01
+            0D 20 16 0F BA 05 E0 00 D3 4E 0F D9 20 15 01 03
+            20 0E 0C 01 0F 13 15 20 05 13 09 20 20 14 0E 09
+            01 20 04 20 13 01 A1 08 00 00 7E E0 C2 C3 14 01
+            D3 20 09 10 20 0E 10 13 03 05 01 09 20 0C 0F 0D
+            05 16 00 BA 6B E0 1B D3 AD 01 01 1B 1B 9A AE 01
+            AB 20 CB 20 03 09 20 0B 06 A8 03 01 0E 09 20 07
+            09 12 08 07 A9 14 00 00 4E E0 CE C3 07 05 14 01
+            16 09 20 05 14 D3 0C 0F 0E 05 13 20 05 10 09 03
+            0C 01 14 20 12 08 17 0F 00 BA 8C E0 B1 D3 06 20
+            0C 15 20 0C 15 14 0E 12 AB 20 D0 20 0E 15 08 03
+            00 00 54 E0 CD BB 04 09 09 0E 08 07 20 14 0C D0
+            01 05 15 13 05 12 13 20 10 15 12 05 0D 20 16 0F
+            BA 05 E0 00 CB 65 01 1B 1B AD AF 01 01 1B 20 9B
+            20 AB 15 D0 03 0E 20 08 06 A8 03 01 0E 09 20 07
+            09 12 08 07 A9 14 E0 00 DB 76 01 A8 0C 0C B3 20
+            02 20 14 15 0F 14 13 0E 01 20 20 14 0E 0F 05 03
+            00 A9 E0 00 C3 72 05 C2 13 01 20 14 15 D2 08 13
+            13 20 05 10 09 03 0C 01 0D 20 16 0F BA 05 E0 00
+            D3 65 01 1B 1B AD 9B 01 01 1B 20 AF 20 AB 15 D0
+            03 0E 20 08 06 A8 03 01 0E 09 20 07 09 12 08 07
+            A9 14 00 00 66 E0 C2 C3 01 05 14 13 D2 20 13 15
+            20 08 13 01 01 20 20 0E 0E 01 09 14 01 AD 12 09
+            00 BA 66 E0 1B D3 AF 01 01 1B 1B AD 9B 01 AB 20
+            D0 20 0E 15 08 03 A8 20 01 06 09 03 07 0E 12 20
+            07 09 14 08 00 A9 E0 00 BB 66 13 D5 20 05 05 C2
+            13 01 20 14 15 D2 08 13 09 20 20 0E 08 14 20 05
+            09 01 A1 12 E0 00 CB 8C 0E C9 01 20 12 09 20 BA
+            01 1B 1B AF 9B 01 01 1B 20 AD 20 AB 15 D0 03 0E
+            00 08 AC E0 A8 DB 01 06 09 03 07 0E 12 20 07 09
+            14 08 00 A9 E0 00 C3 BA 0C C3 0D 09 20 02 01 D2
+            0F 1A BA 12 E0 00 D3 CA 01 1B 1B AD AC 01 AB 20
+            CB 20 03 09 00 0B E0 00 BB 78 01 C3 19 0E 0E 0F
+            C6 20 19 0C 12 05 01 20 12 09 14 20 12 08 17 0F
+            00 BA 4B E0 C9 CB 20 0E 09 01 BA 12 01 20 19 0E
+            04 20 12 09 03 05 09 14 0E 0F 05 20 03 18 10 05
+            20 14 01 1B 00 AC DC E0 AB DB CB 20 03 09 00 0B
+            E0 00 BB 5A 09 D7 04 0C C3 20 12 09 15 03 01 0C
+            20 12 10 13 03 05 01 09 20 0C 08 14 0F 12 BA 17
+            E0 00 CB 7D 05 CE 12 01 06 20 05 0F 20 BA 01 1B
+            1B AF 9B 01 01 1B 1B AD 9A 01 01 1B 20 AE 20 AB
+            09 CB 0B 03 E0 00 DB AC 06 A8 03 01 0E 09 20 07
+            09 12 08 07 A9 14 00 00 72 E0 C2 C3 01 05 14 13
+            C3 20 0E 01 0F 0E 20 0E 15 13 05 10 20 12 0F 0D
+            05 16 00 BA 5A E0 1B D3 AE 01 01 1B 1B 9A AD 01
+            01 1B 1B 9B AF 01 AB 20 D0 20 0E 15 08 03 A8 20
+            01 06 09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00
+            C3 5A 0E C1 09 14 01 AD 12 09 C2 20 01 05 14 13
+            C3 20 0E 01 0F 0E 20 0E 15 13 05 10 BA 12 E0 00
+            D3 65 01 1B 1B AD 9A 01 01 1B 20 7B 20 AB 15 D0
+            03 0E 20 08 06 A8 03 01 0E 09 20 07 09 12 08 07
+            A9 14 00 00 4E E0 C2 BB 01 05 14 13 C3 20 0E 01
+            0F 0E 20 0E 15 13 05 10 20 12 0E 09 14 20 05 08
+            01 20 12 09 00 BA 80 E0 C9 CB 20 0E 09 01 BA 12
+            1B 20 7A 01 01 1B 1B AE 9A 01 01 1B 1B AD 9B 01
+            AB 20 D0 20 0E 15 08 03 E0 00 DB AC 06 A8 03 01
+            0E 09 20 07 09 12 08 07 A9 14 00 00 78 E0 C7 C3
+            07 09 20 01 15 C2 0E 12 13 20 05 10 09 03 0C 01
+            0D 20 16 0F BA 05 E0 00 D3 6B 01 1B 1B AD 9A 01
+            01 1B 20 AE 20 AB 09 CB 0B 03 A8 20 01 06 09 03
+            07 0E 12 20 07 09 14 08 00 A9 E0 00 C3 72 19 C7
+            0F 12 C3 20 15 12 08 13 13 20 05 10 09 03 0C 01
+            0D 20 16 0F BA 05 E0 00 D3 5F 01 1B 1B AD 9A 01
+            01 1B 1B AE AF 01 AB 20 D0 20 0E 15 08 03 A8 20
+            01 06 09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00
+            BB 6C 09 C7 01 07 C8 20 0D 01 05 0D 20 12 10 13
+            03 05 01 09 20 0C 0F 0D 05 16 00 BA 6F E0 C3 CB
+            01 08 07 12 20 05 01 1B AE AE 14 20 05 08 20 0E
+            01 1B 20 AF 20 AB 15 D0 03 0E 00 08 AC E0 A8 DB
+            01 06 09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00
+            BB 6C 09 C7 01 07 C2 20 13 15 05 14 20 12 10 13
+            03 05 01 09 20 0C 0F 0D 05 16 00 BA 77 E0 C3 CB
+            01 08 07 12 20 05 01 1B AE AE 14 20 05 08 20 0E
+            01 1B 20 AF 20 AB 09 CB 0B 03 E0 00 DB AC 06 A8
+            03 01 0E 09 20 07 09 12 08 07 A9 14 00 00 4E E0
+            C8 C3 07 09 20 08 09 C7 01 07 C2 20 13 15 05 14
+            20 12 10 13 03 05 01 09 20 0C 0F 0D 05 16 00 BA
+            71 E0 1B D3 9A 01 01 1B 20 7B 20 AB 09 CB 0B 03
+            A8 20 01 06 09 03 07 0E 12 20 07 09 14 08 00 A9
+            E0 00 BB 48 12 C7 16 01 14 09 0E 0F CB 20 15 0E
+            0B 03 05 0C 10 20 17 0F 12 05 15 06 20 0C 12 07
+            02 01 00 BA 63 E0 C1 CB 14 06 12 05 07 20 01 12
+            02 02 0E 09 BA 07 1B 20 AD 01 01 1B 20 AC 20 AB
+            15 D0 03 0E 00 08 AC E0 A8 DB 01 06 09 03 07 0E
+            12 20 07 09 14 08 00 A9 E0 00 BB 6C 05 CD 01 07
+            D3 20 0F 08 0B 03 10 20 17 0F 12 05 15 06 20 0C
+            12 07 02 01 00 BA 89 E0 CE CB 01 05 20 12 0F 06
+            BA 05 1B 20 AD 01 01 1B 1B 9B AF 01 AB 20 CB 20
+            03 09 00 0B AC E0 A8 DB 01 06 09 03 07 0E 12 20
+            07 09 14 08 00 A9 E0 00 BB 6C 05 CD 01 07 D3 20
+            09 10 05 0B 10 20 17 0F 12 05 15 06 20 0C 12 07
+            02 01 00 BA 51 E0 CE CB 01 05 20 12 0F 06 BA 05
+            B1 20 06 20 0C 15 20 0C 15 14 0E 12 AB 20 D0 20
+            0E 15 08 03 E0 00 DB 76 01 A8 0C 0C B3 20 02 20
+            14 15 0F 14 13 0E 01 20 20 14 0E 0F 05 03 00 A9
+            E0 00 C3 6C 08 D4 0E 15 05 04 20 12 12 C2 01 05
+            20 0B 15 13 05 10 20 12 0F 0D 05 16 00 BA 6F E0
+            C3 D3 01 08 07 12 20 05 01 1B AE AD 14 20 05 08
+            20 0E 01 1B 20 AC 20 AB 15 D0 03 0E 00 08 E0 00
+            BB 78 0F D0 05 17 20 12 10 15 D4 20 15 08 04 0E
+            12 05 C2 20 05 12 0B 01 00 A1 6F E0 C3 CB 01 08
+            07 12 20 05 01 1B AE AD 14 20 05 08 20 0E 01 1B
+            20 AC 20 AB 15 D0 03 0E 00 08 76 E0 A8 DB 0C 01
+            20 0C 20 B3 15 02 14 14 0E 0F 20 13 14 01 0F 20
+            03 0E A9 05 00 00 7E E0 C7 BB 07 09 20 01 12 C2
+            14 15 20 05 15 13 05 10 20 12 0F 0D 05 16 00 BA
+            6F E0 C3 CB 01 08 07 12 20 05 01 1B AE AE 14 20
+            05 08 20 0E 01 1B 20 AF 20 AB 15 D0 03 0E 00 08
+            76 E0 A8 DB 0C 01 20 0C 20 B3 15 02 14 14 0E 0F
+            20 13 14 01 0F 20 03 0E A9 05 00 00 54 E0 C4 C3
+            01 05 08 14 C8 20 12 15 09 12 01 03 05 0E 13 20
+            05 10 09 03 0C 01 0D 20 16 0F BA 05 E0 00 D3 6B
+            01 1B 1B AD 9A 01 01 1B 20 AE 20 AB 09 CB 0B 03
+            A8 20 01 06 09 03 07 0E 12 20 07 09 14 08 00 A9
+            E0 00 C3 8A 0B D3 0C 15 20 0C 01 CA 05 16 09 0C
+            20 0E 14 13 0D 0F BA 10 E0 00 D3 5F 08 D7 0E 05
+            06 20 05 0F 09 20 20 13 0F 04 0E 17 20 BA 01 1B
+            1B AD AC 01 AB 20 CB 20 03 09 00 0B E0 00 C3 48
+            05 C8 0C 0C 13 A7 C7 20 14 01 20 05 0F 0D 05 16
+            05 0D 14 0E 14 20 03 05 0E 08 11 09 05 15 00 BA
+            60 E0 1B D3 AE 01 01 1B 1B 9A AD 01 01 1B 1B 9B
+            AF 01 AB 20 CB 20 03 09 20 0B 06 A8 03 01 0E 09
+            20 07 09 12 08 07 A9 14 00 00 60 E0 D3 BB 15 0B
+            0C 0C D0 20 0E 15 13 09 20 08 10 13 03 05 01 09
+            20 0C 08 14 0F 12 BA 17 E0 00 CB 7B 05 CE 12 01
+            06 20 05 0F 20 BA 01 1B 1B AD 9B 01 01 1B 1B AF
+            7B 01 AB 20 D0 20 0E 15 08 03 E0 00 DB AC 06 A8
+            03 01 0E 09 20 07 09 12 08 07 A9 14 00 00 66 E0
+            C1 BB 12 09 C3 20 14 01 13 01 12 14 10 0F 05 08
+            01 20 12 09 14 20 12 08 17 0F 00 BA 6A E0 CA CB
+            0D 15 20 10 05 0E 12 01 06 20 05 0F 20 AE 08 14
+            0E 05 10 20 05 12 13 13 E0 00 DB 4B 0E 01 20 19
+            09 04 05 12 14 03 0F 09 20 0E 18 05 05 03 14 10
+            1B 20 AC 01 AB 20 D0 20 0E 15 08 03 00 00 6C E0
+            C4 C3 01 05 08 14 D6 20 0C 0F 01 14 05 07 13 20
+            10 15 12 05 0D 20 16 0F BA 05 E0 00 D3 60 01 1B
+            1B AF 9B 01 01 1B 1B AD 9A 01 01 1B 20 AE 20 AB
+            09 CB 0B 03 A8 20 01 06 09 03 07 0E 12 20 07 09
+            14 08 00 A9 E0 00 BB 78 16 C5 0C 09 D3 20 12 03
+            01 05 20 0D 15 13 05 10 20 12 0F 0D 05 16 00 BA
+            6C E0 1B CB AF 01 01 1B 20 AE 20 AB 15 D0 03 0E
+            20 08 06 A8 03 01 0E 09 20 07 09 12 08 07 A9 14
+            E0 00 DB 76 01 A8 0C 0C B3 20 02 20 14 15 0F 14
+            13 0E 01 20 20 14 0E 0F 05 03 00 A9 E0 00 C3 78
+            0F D3 0C 15 C6 20 13 09 20 14 10 13 03 05 01 09
+            20 0C 0F 0D 05 16 00 BA 65 E0 1B D3 AD 01 01 1B
+            1B 9B AF 01 AB 20 D0 20 0E 15 08 03 A8 20 01 06
+            09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00 BB 6C
+            13 D5 20 05 0F D3 0C 15 C6 20 13 09 20 14 0E 09
+            14 20 05 08 01 20 12 09 00 A1 8C E0 C9 CB 20 0E
+            09 01 BA 12 1B 20 AC 01 01 1B 1B 7B AF 01 AB 20
+            D0 20 0E 15 08 03 E0 00 DB AC 06 A8 03 01 0E 09
+            20 07 09 12 08 07 A9 14 00 00 66 E0 D3 C3 01 08
+            0F 04 20 17 0C C2 04 01 20 05 10 13 03 05 01 09
+            20 0C 0F 0D 05 16 00 BA 66 E0 1B D3 AF 01 01 1B
+            1B AD 9B 01 AB 20 D0 20 0E 15 08 03 A8 20 01 06
+            09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00 BB 72
+            08 D3 0C 05 20 0C 09 CB 0B 03 13 20 05 10 09 03
+            0C 01 0D 20 16 0F BA 05 E0 00 CB 93 0E C9 01 20
+            12 09 20 BA 01 1B 1B AD 9A 01 01 1B 20 AE 20 AB
+            09 CB 0B 03 E0 00 DB AC 06 A8 03 01 0E 09 20 07
+            09 12 08 07 A9 14 00 00 60 E0 D6 BB 03 05 0F 14
+            20 12 12 C4 09 01 20 0E 10 13 03 05 01 09 20 0C
+            08 14 0F 12 BA 17 E0 00 CB 75 05 CE 12 01 06 20
+            05 0F 20 BA 01 1B 1B AF 9B 01 01 1B 1B AD 9A 01
+            01 1B 20 AE 20 AB 15 D0 03 0E 00 08 AC E0 A8 DB
+            01 06 09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00
+            BB 6C 01 D6 0B 0C 12 19 05 09 D4 20 12 15 20 0E
+        </patch>
+        <patch offset="0xcbc8">
+            15 13 05 10 20 12 0F 0D 05 16 00 BA 77 E0 1B CB
+            AF 01 01 1B 1B 9B AD 01 01 1B 1B 9A AE 01 AB 20
+            CB 20 03 09 AE 0B 14 20 05 08 20 0E 09 CB 0B 03
+            E0 00 DB AC 06 A8 03 01 0E 09 20 07 09 12 08 07
+            A9 14 00 00 72 E0 C4 BB 12 01 0E 0B 13 05 20 13
+            0C C9 15 0C 09 13 0E 0F 13 20 10 15 12 05 00 BA
+            4E E0 CC CB 07 09 14 08 D0 20 0E 15 08 03 18 20
+            AE B2 1B 20 AF 01 20 AE 09 CC 08 07 20 14 09 CB
+            0B 03 00 AE 66 E0 C8 DB 01 05 19 16 D0 20 0E 15
+            08 03 A8 20 01 06 09 03 07 0E 12 20 07 09 14 08
+            00 A9 E0 00 BB 48 17 D3 0C 01 0F 0C 20 17 20 01
+            08 13 14 0F 09 20 20 0E 12 06 0E 0F 20 14 06 0F
+            19 20 15 0F 00 BA 5A E0 1B CB AF 01 01 1B 1B 9B
+            AD 01 01 1B 1B 9A AE 01 AB 20 D0 20 0E 15 08 03
+            20 BB 10 13 14 09 09 20 20 14 01 02 0B 03 00 BA
+            C4 E0 1B DB AD 01 01 1B 1B 9B AF 01 AB 20 CB 20
+            03 09 00 0B E0 00 BB 66 0F C3 06 06 0E 09 C4 20
+            0E 01 05 03 13 20 05 10 09 03 0C 01 0D 20 16 0F
+            BA 05 E0 00 CB 6B 0C C1 20 0C 20 B3 15 D0 03 0E
+            20 08 12 0F 01 20 0C 0C B3 20 CB 20 03 09 00 0B
+            A5 E0 02 DB 14 15 0F 14 13 0E 01 20 20 14 0E 0F
+            05 03 00 00 5A E0 D2 BB 19 0F 0C 01 CA 20 04 15
+            0D 07 0E 05 20 14 10 13 03 05 01 09 20 0C 0F 0D
+            05 16 00 BA 86 E0 C9 CB 20 0E 09 01 BA 12 1B 20
+            AF 01 01 1B 1B 9A AD 01 01 1B 20 9B 20 AB 15 D0
+            03 0E 00 08 AC E0 A8 DB 01 06 09 03 07 0E 12 20
+            07 09 14 08 00 A9 E0 00 C3 72 0F C3 12 02 20 01
+            0C C2 17 0F 13 20 05 10 09 03 0C 01 0D 20 16 0F
+            BA 05 E0 00 D3 66 01 1B 1B AF AE 01 01 1B 20 AF
+            20 AB 15 D0 03 0E 20 08 06 A8 03 01 0E 09 20 07
+            09 12 08 07 A9 14 00 00 5A E0 CD C3 0D 15 19 0D
+            C4 20 0F 12 20 10 17 13 0C 01 0F 0C 09 17 07 0E
+            14 20 12 08 17 0F 00 BA 65 E0 1B D3 AD 01 01 1B
+            1B 9B AF 01 AB 20 D0 20 0E 15 08 03 A8 20 01 06
+            09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00 BB 6C
+            08 D0 12 01 0F 01 20 08 01 CD 09 07 20 03 15 13
+            05 10 20 12 0F 0D 05 16 00 BA 5A E0 CD CB 04 05
+            15 09 20 0D 09 CB 0B 03 20 AE 09 CC 08 07 20 14
+            15 D0 03 0E AE 08 1B 20 AD 01 00 AE 6F E0 CC DB
+            07 09 14 08 CB 20 03 09 AE 0B CD 20 04 05 15 09
+            20 0D 15 D0 03 0E 00 08 E0 00 BB 54 0F D2 0C 0C
+            0E 09 20 07 15 C2 0B 03 05 0C 20 12 10 13 03 05
+            01 09 20 0C 0F 0D 05 16 00 BA 6F E0 1B CB AE 01
+            01 1B 1B 9A AD 01 01 1B 20 9B 20 AB 15 D0 03 0E
+            AE 08 14 20 05 08 20 0E 15 D0 03 0E 00 08 AC E0
+            A8 DB 01 06 09 03 07 0E 12 20 07 09 14 08 00 A9
+            E0 00 BB 54 0F D2 0C 0C 0E 09 20 07 03 D3 01 12
+            03 14 20 08 10 13 03 05 01 09 20 0C 0F 0D 05 16
+            00 BA 6F E0 1B CB AF 01 01 1B 1B 9B AD 01 01 1B
+            20 9A 20 AB 15 D0 03 0E AE 08 14 20 05 08 20 0E
+            15 D0 03 0E 00 08 AC E0 A8 DB 01 06 09 03 07 0E
+            12 20 07 09 14 08 00 A9 E0 00 C3 6C 01 D3 04 0E
+            D3 20 0C 10 13 01 20 08 10 13 03 05 01 09 20 0C
+            0F 0D 05 16 00 BA 6B E0 1B D3 AD 01 01 1B 1B 9B
+            AF 01 AB 20 CB 20 03 09 20 0B 06 A8 03 01 0E 09
+            20 07 09 12 08 07 A9 14 00 00 72 E0 C4 C3 0C 05
+            01 14 CB 20 03 09 20 0B 10 13 03 05 01 09 20 0C
+            0F 0D 05 16 00 BA 6C E0 1B D3 AE 01 01 1B 1B AD
+            9A 01 AB 20 CB 20 03 09 20 0B 06 A8 03 01 0E 09
+            20 07 09 12 08 07 A9 14 00 00 90 E0 C6 BB 09 0C
+            20 10 01 C3 20 14 09 01 20 12 08 14 0F 12 BA 17
+            E0 00 CB 6A 15 CA 10 0D 0E 20 01 05 20 12 0F 06
+            AE 05 14 20 05 08 20 0E 12 10 13 05 00 13 4B E0
+            01 DB 19 0E 04 20 12 09 03 05 09 14 0E 0F 05 20
+            03 18 10 05 20 14 01 1B 20 AC 20 AB 15 D0 03 0E
+            00 08 E0 00 BB 78 05 C8 0C 0C C3 20 14 01 13 20
+            05 10 09 03 0C 01 14 20 12 08 17 0F 00 BA 7D E0
+            CE CB 01 05 20 12 0F 06 BA 05 1B 20 AF 01 01 1B
+            1B 9B AD 01 01 1B 1B 9A AE 01 AB 20 CB 20 03 09
+            00 0B AC E0 A8 DB 01 06 09 03 07 0E 12 20 07 09
+            14 08 00 A9 E0 00 BB 6C 01 C4 03 0E 0E 09 20 07
+            0C C6 13 01 20 08 15 13 05 10 20 12 0F 0D 05 16
+            00 BA 53 E0 1B CB AD 01 01 1B 1B 9B AF 01 01 1B
+            1B AE 9A 01 01 1B 20 AD 20 AB 15 D0 03 0E 20 08
+            06 A8 03 01 0E 09 20 07 09 12 08 07 A9 14 E0 00
+            DB 76 01 A8 0C 0C B3 20 02 20 14 15 0F 14 13 0E
+            01 20 20 14 0E 0F 05 03 00 A9 E0 00 BB 82 01 C9
+            07 09 12 09 20 09 10 13 03 05 01 09 20 0C 0F 0D
+            05 16 00 BA 6F E0 C3 CB 01 08 07 12 20 05 01 1B
+            AE AE 14 20 05 08 20 0E 01 1B 20 AF 20 AB 15 D0
+            03 0E 00 08 AC E0 A8 DB 01 06 09 03 07 0E 12 20
+            07 09 14 08 00 A9 E0 00 BB 66 12 C3 15 0F 08 03
+            0E 09 20 07 01 C9 07 09 12 09 20 09 10 13 03 05
+            01 09 BA 0C E0 00 CB 77 08 C3 12 01 05 07 1B 20
+            AE 01 20 AE 08 14 0E 05 1B 20 AF 01 AB 20 CB 20
+            03 09 00 0B AC E0 A8 DB 01 06 09 03 07 0E 12 20
+            07 09 14 08 00 A9 E0 00 BB 6C 01 CB 01 12 05 0D
+            C4 20 0D 01 20 01 10 13 03 05 01 09 20 0C 0F 0D
+            05 16 00 BA 63 E0 D6 CB 12 05 09 14 01 03 20 0C
+            15 0A 10 0D 20 BA 01 1B 1B AC 7B 01 01 1B 20 AF
+            20 AB 15 D0 03 0E 00 08 AC E0 A8 DB 01 06 09 03
+            07 0E 12 20 07 09 14 08 00 A9 E0 00 C3 8A 01 C8
+            05 0E C8 20 20 01 17 13 12 0F 20 04 08 14 0F 12
+            BA 17 E0 00 D3 5A 01 1B 1B AE 9A 01 01 1B 1B AD
+            9B 01 01 1B 20 AF 20 AB 15 D0 03 0E 20 08 06 A8
+            03 01 0E 09 20 07 09 12 08 07 A9 14 00 00 66 E0
+            D4 BB 15 13 09 0A C8 20 19 01 14 01 20 05 10 13
+            03 05 01 09 20 0C 0F 0D 05 16 00 BA 5A E0 D7 CB
+            09 08 05 0C C8 20 0E 01 20 05 01 C8 08 20 14 09
+            20 13 0F 19 12 15 06 20 05 0F 00 BA 65 E0 1B DB
+            AD 01 01 1B 1B 9B AF 01 AB 20 D0 20 0E 15 08 03
+            A8 20 01 06 09 03 07 0E 12 20 07 09 14 08 00 A9
+            E0 00 BB 78 01 CB 13 05 09 08 C8 20 20 01 10 13
+            03 05 01 09 20 0C 0F 0D 05 16 00 BA 5A E0 D7 CB
+            09 08 05 0C C8 20 0E 01 20 05 01 C8 08 20 14 09
+            20 13 0F 19 12 15 06 20 05 0F 00 BA 65 E0 1B DB
+            AD 01 01 1B 1B 9A AE 01 AB 20 D0 20 0E 15 08 03
+            A8 20 01 06 09 03 07 0E 12 20 07 09 14 08 00 A9
+            E0 00 BB 7E 09 CB 0E 05 DA 20 0E 01 13 20 05 10
+            09 03 0C 01 0D 20 16 0F BA 05 E0 00 CB 63 13 C1
+            01 20 12 20 16 05 12 05 01 13 BA 0C 1B 20 AF 01
+            01 1B 1B AD 9B 01 AB 20 D0 20 0E 15 08 03 E0 00
+            DB AC 06 A8 03 01 0E 09 20 07 09 12 08 07 A9 14
+            00 00 54 E0 CB BB 12 09 13 09 14 15 20 05 0F C7
+            05 0D 20 0E 10 13 03 05 01 09 20 0C 08 14 0F 12
+            BA 17 E0 00 CB 75 05 CE 12 01 06 20 05 0F 20 BA
+            01 1B 1B AF 9B 01 01 1B 1B AD 9A 01 01 1B 20 9B
+            20 AB 15 D0 03 0E 00 08 AC E0 A8 DB 01 06 09 03
+            07 0E 12 20 07 09 14 08 00 A9 E0 00 BB 60 0E CF
+            20 09 15 CB 09 02 C8 20 0E 09 12 05 20 09 15 13
+            05 10 20 12 0F 0D 05 16 00 BA 7B E0 CE CB 01 05
+            20 12 0F 06 BA 05 1B 20 AF 01 01 1B 1B 9B AD 01
+            01 1B 20 9A 20 AB 15 D0 03 0E 00 08 AC E0 A8 DB
+            01 06 09 03 07 0E 12 20 07 09 14 08 00 A9 E0 00
+            C3 60 0F D0 13 09 0E 0F C2 20 05 12 14 01 20 08
+            10 13 03 05 01 09 20 0C 0F 0D 05 16 00 BA 60 E0
+            1B D3 AE 01 01 1B 1B 9A AD 01 01 1B 1B 9B AF 01
+            AB 20 CB 20 03 09 20 0B 06 A8 03 01 0E 09 20 07
+            09 12 08 07 A9 14 00 00 72 E0 D3 C3 0E 0F 03 09
+            D7 20 16 01 20 05 10 13 03 05 01 09 20 0C 0F 0D
+            05 16 00 BA 65 E0 1B D3 AD 01 01 1B 1B 9B AF 01
+            AB 20 D0 20 0E 15 08 03 A8 20 01 06 09 03 07 0E
+            12 20 07 09 14 08 00 A9 E0 00 C3 78 03 D3 05 12
+            20 17 05 CA 20 14 10 13 03 05 01 09 20 0C 0F 0D
+            05 16 00 BA 6C E0 1B D3 AE 01 01 1B 20 AF 20 AB
+            15 D0 03 0E 20 08 06 A8 03 01 0E 09 20 07 09 12
+            08 07 A9 14 00 00 72 E0 D4 BB 09 12 0B 03 C6 20
+            13 09 20 08 10 13 03 05 01 09 20 0C 0F 0D 05 16
+            00 BA 7D E0 C2 CB 03 01 04 0B 13 01 20 08 01 1B
+            1B AE AE 01 20 AE 08 14 0E 05 CB 20 03 09 00 0B
+            AC E0 A8 DB 01 06 09 03 07 0E 12 20 07 09 14 08
+            00 A9 E0 00 BB 54 12 C3 13 19 01 14 20 0C 01 CC
+            03 0E 12 05 13 20 05 10 09 03 0C 01 14 20 12 08
+            17 0F 00 BA 75 E0 CE CB 01 05 20 12 0F 06 BA 05
+            1B 20 AF 01 01 1B 1B 9B AD 01 01 1B 1B 9A AE 01
+            AB 20 D0 20 0E 15 08 03 E0 00 DB AC 06 A8 03 01
+            0E 09 20 07 09 12 08 07 A9 14 00 00 66 E0 D3 BB
+            19 0B CE 20 10 05 15 14 05 0E 13 20 05 10 09 03
+            0C 01 14 20 12 08 17 0F 00 BA 7D E0 CE CB 01 05
+            20 12 0F 06 BA 05 1B 20 AF 01 01 1B 1B 9B AD 01
+            01 1B 1B 9A AE 01 AB 20 CB 20 03 09 00 0B AC E0
+            A8 DB 01 06 09 03 07 0E 12 20 07 09 14 08 00 A9
+            E0 00 BB 78 11 C1 01 15 D3 20 12 10 01 05 20 04
+            15 13 05 10 20 12 0F 0D 05 16 00 BA 77 E0 1B CB
+            AF 01 01 1B 1B 9B AD 01 AB 20 B3 20 D0 20 0E 15
+            08 03 0F 20 20 12 20 B3 09 CB 0B 03 E0 00 DB 4D
+            15 02 14 14 0E 0F 20 13 14 01 0F 20 03 0E 20 05
+            06 A8 03 01 0E 09 20 07 09 12 08 07 A9 14 00 00
+            7E E0 C2 C3 07 09 D3 20 0F 0E 20 17 10 13 03 05
+            01 09 20 0C 0F 0D 05 16 00 BA 5F E0 1B D3 9A 01
+            01 1B 1B AD 9B 01 01 1B 20 AF 20 AB 15 D0 03 0E
+            20 08 06 A8 03 01 0E 09 20 07 09 12 08 07 A9 14
+            00 00 6C E0 C2 C3 07 09 D4 20 10 19 0F 08 0E 0F
+            13 20 05 10 09 03 0C 01 0D 20 16 0F BA 05 E0 00
+            D3 6C 01 1B 1B AF AD 01 01 1B 20 9B 20 AB 09 CB
+            0B 03 A8 20 01 06 09 03 07 0E 12 20 07 09 14 08
+            00 A9 E0 00 BB 72 09 C2 20 07 0F D4 05 17 13 12
+            13 20 05 10 09 03 0C 01 0D 20 16 0F BA 05 E0 00
+            CB 70 01 1B 1B AD AD 01 AB 20 01 20 0C 0C B3 20
+            D0 20 0E 15 08 03 02 20 14 15 0F 14 13 0E E0 00
+            DB D5 14 01 0F 20 03 0E 00 05 E0 00 BB 72 09 C2
+            20 07 08 D3 0B 01 20 05 10 13 03 05 01 09 20 0C
+            08 14 0F 12 BA 17 E0 00 CB 81 05 CE 12 01 06 20
+            05 0F 20 BA 01 1B 1B AF 9B 01 01 1B 20 AD 20 AB
+            15 D0 03 0E 00 08 AC E0 A8 DB 01 06 09 03 07 0E
+            12 20 07 09 14 08 00 A9 E0 00 BB 6C 09 C2 20 07
+            12 C2 0E 15 08 03 13 20 05 10 09 03 0C 01 14 20
+            12 08 17 0F 00 BA 89 E0 CE CB 01 05 20 12 0F 06
+            BA 05 1B 20 AD 01 01 1B 1B 9A AE 01 AB 20 CB 20
+            03 09 00 0B AC E0 A8 DB 01 06 09 03 07 0E 12 20
+            07 09 14 08 00 A9 E0 00 C3 72 09 C2 20 07 17 D3
+            0E 09 20 07 10 13 03 05 01 09 20 0C 08 14 0F 12
+            BA 17 E0 00 D3 59 05 CE 12 01 06 20 05 0F 20 BA
+            20 B1 15 06 0C 0C 14 20 12 15 20 0E 20 AB 09 CB
+            0B 03 00 00 78 E0 C2 BB 07 09 C6 20 05 12 1A 05
+            12 05 13 20 10 15 12 05 0D 20 16 0F BA 05 E0 00
+            CB 5A 01 1B 1B AE 9A 01 01 1B 1B AD 9B 01 01 1B
+            20 AF 20 AB 15 D0 03 0E 20 08 06 A8 03 01 0E 09
+            20 07 09 12 08 07 A9 14 E0 00 DB 76 01 A8 0C 0C
+            B3 20 02 20 14 15 0F 14 13 0E 01 20 20 14 0E 0F
+            05 03 00 A9 00 00 B5 B5 05 E7 F4 DC 93 1A 21 26
+            45 4F 1E DB DF 1E D7 84 CF 0B 5D D4 70 B0 77 CB
+            7F 8B 23 F8 F3 09 DF 69 20 8C 20 00 78 00 38 01
+            C6 01 6E 02 46 03 A0 04 DE 04 50 00 40 00 48 00
+            48 00 38 00 18 00 50 00 60 00 2C 00 00 00 D0 00
+            CC 00 C1 00 CE 00 CE 00 C9 00 CE 00 C7 00 FF FF
+            FF FF FC FF 01 00 20 00 CA 00 D5 00 CE 00 C9 00
+            C3 00 C8 00 C9 00 20 00 CF 00 C8 00 CE 00 CF 00
+            FF FF 20 00 C7 00 D9 00 CF 00 FF FF 20 00 CA 00
+            D5 00 CE 00 20 00 CB 00 CF 00 C9 00 CB 00 C5 00
+            00 00 4B 00 00 00 D0 00 D2 00 CF 00 C7 00 D2 00
+            C1 00 CD 00 FF FF FF FF FC FF 01 00 20 00 C1 00
+            D4 00 D3 00 D5 00 D3 00 C8 00 C9 00 20 00 CF 00
+            C8 00 D5 00 C3 00 C8 00 C9 00 FF FF 20 00 C1 00
+            CB 00 C9 00 D9 00 CF 00 D3 00 C8 00 C9 00 20 00
+            C5 00 D3 00 C8 00 C9 00 D2 00 CF 00 FF FF 20 00
+            D4 00 CF 00 D3 00 C8 00 C9 00 C8 00 C9 00 CB 00
+            CF 00 20 00 D4 00 D3 00 D5 00 CA 00 C9 00 FF FF
+            20 00 CD 00 CF 00 D2 00 C9 00 CD 00 C9 00 C3 00
+            C8 00 C9 00 20 00 D3 00 D5 00 DA 00 D5 00 CB 00
+            C9 00 FF FF 20 00 C8 00 C9 00 D2 00 CF 00 D3 00
+            C8 00 C9 00 20 00 C9 00 CE 00 C1 00 C2 00 C1 00
+            00 00 36 00 00 00 CF 00 C2 00 CA 00 C5 00 C3 00
+            D4 00 FF FF FF FF FC FF 01 00 20 00 CB 00 D5 00
+            D2 00 C9 00 D3 00 C1 00 CE 00 FF FF 20 00 C8 00
+            C9 00 D2 00 CF 00 D3 00 C8 00 C9 00 20 00 D3 00
+            C8 00 C9 00 C2 00 C1 00 D4 00 C1 00 FF FF 20 00
+            CB 00 C5 00 C9 00 CB 00 CF 00 20 00 CB 00 C9 00
+            D4 00 C1 00 D9 00 C1 00 CD 00 C1 00 FF FF 20 00
+            CD 00 C9 00 DA 00 D5 00 C8 00 CF 00 20 00 CB 00
+            C1 00 C7 00 C5 00 D9 00 C1 00 CD 00 C1 00 00 00
+            40 00 01 00 20 00 D4 00 C1 00 CB 00 C1 00 D3 00
+            C8 00 C9 00 20 00 C8 00 C1 00 D9 00 C1 00 D3 00
+            C8 00 C9 00 FF FF 20 00 D1 00 FF FF 20 00 D4 00
+            CF 00 D3 00 C8 00 C9 00 CB 00 C1 00 DA 00 D5 00
+            20 00 CD 00 C1 00 D4 00 D3 00 D5 00 CD 00 CF 00
+            D4 00 CF 00 FF FF 20 00 CB 00 C9 00 CD 00 CF 00
+            20 00 CB 00 C9 00 CD 00 CF 00 FF FF 20 00 D7 00
+            C8 00 CF 00 FF FF 20 00 D4 00 CF 00 C8 00 D2 00
+            D5 00 20 00 D4 00 C1 00 CB 00 C1 00 CF 00 CB 00
+            C1 00 FF FF 20 00 CD 00 C9 00 DA 00 D5 00 D0 00
+            D9 00 CF 00 CE 00 00 00 52 00 00 00 D3 00 C3 00
+            D2 00 CF 00 CC 00 CC 00 FF FF FF FF FC FF 01 00
+            20 00 D9 00 D5 00 CB 00 C9 00 20 00 CB 00 D9 00
+            CF 00 D4 00 C1 00 CE 00 C9 00 FF FF 20 00 CB 00
+            C1 00 CF 00 D2 00 C9 00 20 00 CD 00 C1 00 D4 00
+            D3 00 D5 00 CD 00 CF 00 D4 00 CF 00 FF FF 20 00
+            C8 00 C9 00 D2 00 CF 00 D9 00 D5 00 CB 00 C9 00
+            20 00 C9 00 CD 00 C1 00 C8 00 CF 00 D2 00 C9 00
+            FF FF 20 00 C1 00 CB 00 C5 00 CD 00 C9 00 20 00
+            C9 00 D3 00 CF 00 C5 00 FF FF 20 00 D4 00 C1 00
+            CD 00 C1 00 D9 00 CF 00 20 00 D4 00 C1 00 CB 00
+            C5 00 CF 00 FF FF 20 00 CD 00 C9 00 D9 00 D5 00
+            CB 00 C9 00 20 00 C8 00 CF 00 CE 00 C7 00 CF 00
+            C8 00 FF FF 20 00 D3 00 C1 00 D2 00 D5 00 00 00
+            4F 00 00 00 D3 00 CF 00 D5 00 CE 00 C4 00 20 00
+            C4 00 C5 00 D3 00 C9 00 C7 00 CE 00 FF FF FF FF
+            FC FF 01 00 20 00 D4 00 CF 00 D3 00 C8 00 C9 00
+            CF 00 20 00 CB 00 C1 00 CA 00 C9 00 CE 00 CF 00
+            FF FF 20 00 20 00 A8 00 B1 00 B9 00 B7 00 B0 00
+            AC 00 B2 00 AC 00 B2 00 B5 00 A9 00 20 00 C2 00
+            FF FF 20 00 D4 00 0F 02 0D 02 0F 02 19 02 15 02
+            0B 02 09 02 A2 00 D4 00 AC 00 CB 00 AE 00 CE 00
+            D9 00 A2 00 CB 00 01 02 17 02 01 02 0B 02 01 02
+            0D 02 09 02 FF FF 20 00 20 00 A8 00 B1 00 B9 00
+            B7 00 B1 00 AC 00 B8 00 AC 00 B3 00 B1 00 A9 00
+        </patch>
+        <patch offset="0xdbc8">
+            20 00 C1 00 FF FF FF FF FC FF 00 00 CD 00 D5 00
+            D3 00 C9 00 C3 00 20 00 C3 00 CF 00 CD 00 D0 00
+            CF 00 D3 00 C5 00 FF FF FF FF FC FF 01 00 20 00
+            A2 00 C1 00 CE 00 C1 00 C3 00 C8 00 C5 00 D9 00
+            A2 00 D4 00 C1 00 CB 00 C1 00 D0 00 CF 00 CE 00
+            FF FF 20 00 20 00 A8 00 B1 00 B9 00 B6 00 B9 00
+            AC 00 B1 00 B1 00 AC 00 B1 00 B9 00 A9 00 20 00
+            C1 00 FF FF 20 00 C8 00 C9 00 C4 00 C5 00 CB 00
+            C9 00 AC 00 CF 00 CB 00 FF FF 20 00 20 00 A8 00
+            B1 00 B9 00 B7 00 B0 00 AC 00 B3 00 AC 00 B2 00
+            B8 00 A9 00 20 00 C1 00 00 00 16 00 00 00 D2 00
+            C5 00 D3 00 D4 00 CF 00 D2 00 C1 00 D4 00 C9 00
+            CF 00 CE 00 FF FF FF FF FC FF 01 00 20 00 D3 00
+            D4 00 C5 00 D6 00 C5 00 20 00 C7 00 CF 00 D2 00
+            C4 00 CF 00 CE 00 00 00 13 00 02 00 D4 00 C8 00
+            C1 00 CE 00 CB 00 20 00 D9 00 CF 00 D5 00 20 00
+            C6 00 CF 00 D2 00 20 00 D0 00 CC 00 C1 00 D9 00
+            C9 00 CE 00 C7 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 FC CA 58 77 F9 C1 4C 87 64 35
+            22 B6 23 1F 5C AF 6D 16 45 E5 7A FB 00 F3 4F 21
+            FF B6 68 93 63 99 E2 FF F4 4F E5 46 9E 73 B6 84
+            2A 58 F9 C4 D8 04 B9 D9 11 F6 AC B0 09 DE A6 BC
+            31 CD 49 A0 B2 35 33 63 AA 1A B9 3C 59 39 15 D1
+            3E 3D C5 FB 14 3E EF 92 2C 33 50 78 3C FD 9D BE
+            A8 22 66 09 3E E1 6C B8 D9 BB E5 6A 7C A0 AE CE
+            C3 4F C8 22 7A 6C BF 4B 95 AE DA 73 0B EB 8E BE
+            5B 96 C8 9D 60 02 B6 CE 32 DC C3 75 D8 81 18 1F
+            29 BB F0 AD E0 70 2A 78 BB D4 0F 0C 30 F3 D8 6B
+            E2 4D 55 E0 D3 8C B7 80 61 FF 8E AA C8 2E 7D CB
+            81 DB 87 18 DE CB CC 32 76 C9 F8 02 C9 AB A2 BD
+            1A 8B 39 8B 3A 30 96 88 21 21 D7 51 3D 90 04 54
+            4E 36 BD 42 F8 0C E8 94 E7 2B 78 38 15 F4 7D 9C
+            BD 37 EF 13 86 31 5F EA F5 E4 D2 5E 9E 02 13 06
+            97 BC 38 EB F1 EF C8 7B 84 C5 B5 44 86 40 84 26
+            FE C6 6F 2D F9 F3 B0 90 CC D3 59 DF 3B 7D C8 B0
+            22 44 E7 E8 A0 82 C3 71 FA 56 AE FB 00 00 B4 ED
+            00 00 B4 ED 00 00 B4 ED 00 00 B4 ED 00 00 B4 ED
+            00 00 B4 ED 00 00 B4 ED 00 00 B4 ED 00 00 B4 ED
+            00 00 B4 ED 00 00 B4 ED 00 00 B4 ED 00 00 B4 ED
+            00 00 B4 ED 00 00 B4 ED 00 00 B4 ED 00 00 4C F0
+            00 00 D4 F0 00 00 26 F1 00 00 B2 F1 00 00 3C F2
+            00 00 B2 F2 00 00 28 F3 00 00 A0 F3 00 00 00 F4
+            00 00 38 F4 00 00 D4 F4 00 00 8A F5 00 00 9E F5
+            00 00 C2 F5 00 00 00 F4 00 00 00 F4 00 00 02 F6
+            00 00 2A F6 00 00 C8 F6 00 00 E2 F6 00 00 FE F6
+            00 00 CC F7 00 00 02 F6 00 00 02 F6 00 00 3E F8
+            00 00 92 F8 00 00 34 F9 00 00 D6 F9 00 00 EA F9
+            00 00 4C FA 00 00 E6 FA 00 00 5E FB 00 00 FC FB
+            00 00 94 FC 00 00 26 FD 00 00 86 FD 00 00 F2 FD
+            00 00 E2 FE 00 00 40 FF 00 00 A2 FF 01 00 BC 00
+            01 00 5C 01 01 00 A6 01 01 00 CC 01 01 00 3A 02
+            01 00 F0 02 01 00 58 03 01 00 86 03 01 00 3C 05
+            01 00 76 05 01 00 04 06 01 00 20 06 01 00 A8 06
+            01 00 A0 07 01 00 3C 05 01 00 3C 05 01 00 D8 07
+            01 00 0E 08 01 00 C8 08 01 00 E0 08 01 00 06 09
+            01 00 F0 09 01 00 0C 0A 01 00 D8 07 01 00 1E 0A
+            01 00 A8 0A 01 00 CC 0A 01 00 40 0B 01 00 9E 0B
+            01 00 F8 0B 01 00 8C 0C 01 00 9C 0C 01 00 28 0D
+            01 00 8A 0D 01 00 E8 0D 01 00 8E 0E 01 00 A4 0E
+            01 00 54 0F 01 00 5A 10 01 00 98 10 01 00 B6 10
+            01 00 24 11 01 00 8E 11 01 00 F2 11 01 00 1C 12
+            01 00 B6 10 01 00 B6 10 01 00 B6 10 01 00 92 12
+            01 00 E8 12 01 00 20 13 01 00 F8 13 01 00 0A 14
+            01 00 2E 14 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 00 00 CC FF
+            01 00 28 00 01 00 34 00 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 D0 03
+            01 00 C4 04 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 00 00 FC ED
+            00 00 FC ED 00 00 FC ED 00 00 FC ED 00 00 FC ED
+            00 00 FC ED 00 00 FC ED 00 00 FC ED 00 00 FC ED
+            00 00 FC ED 00 00 FC ED 00 00 FC ED 00 00 FC ED
+            00 00 FC ED 00 00 FC ED 00 00 FC ED 00 00 4C F0
+            00 00 D4 F0 00 00 26 F1 00 00 B2 F1 00 00 3C F2
+            00 00 B2 F2 00 00 28 F3 00 00 A0 F3 00 00 00 F4
+            00 00 38 F4 00 00 D4 F4 00 00 8A F5 00 00 9E F5
+            00 00 C2 F5 00 00 00 F4 00 00 00 F4 00 00 02 F6
+            00 00 2A F6 00 00 C8 F6 00 00 E2 F6 00 00 FE F6
+            00 00 CC F7 00 00 02 F6 00 00 02 F6 00 00 3E F8
+            00 00 92 F8 00 00 34 F9 00 00 D6 F9 00 00 EA F9
+            00 00 4C FA 00 00 E6 FA 00 00 5E FB 00 00 FC FB
+            00 00 94 FC 00 00 26 FD 00 00 86 FD 00 00 F2 FD
+            00 00 E2 FE 00 00 40 FF 00 00 A2 FF 01 00 BC 00
+            01 00 5C 01 01 00 A6 01 01 00 CC 01 01 00 3A 02
+            01 00 F0 02 01 00 58 03 01 00 86 03 01 00 3C 05
+            01 00 76 05 01 00 04 06 01 00 20 06 01 00 A8 06
+            01 00 A0 07 01 00 3C 05 01 00 3C 05 01 00 D8 07
+            01 00 0E 08 01 00 C8 08 01 00 E0 08 01 00 06 09
+            01 00 F0 09 01 00 0C 0A 01 00 D8 07 01 00 1E 0A
+            01 00 A8 0A 01 00 CC 0A 01 00 40 0B 01 00 9E 0B
+            01 00 F8 0B 01 00 8C 0C 01 00 9C 0C 01 00 28 0D
+            01 00 8A 0D 01 00 E8 0D 01 00 8E 0E 01 00 A4 0E
+            01 00 54 0F 01 00 5A 10 01 00 98 10 01 00 B6 10
+            01 00 24 11 01 00 8E 11 01 00 F2 11 01 00 1C 12
+            01 00 B6 10 01 00 B6 10 01 00 B6 10 01 00 92 12
+            01 00 E8 12 01 00 20 13 01 00 F8 13 01 00 0A 14
+            01 00 2E 14 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 00 00 CC FF
+            01 00 28 00 01 00 34 00 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 D0 03
+            01 00 C4 04 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 01 00 92 12
+            01 00 92 12 01 00 92 12 01 00 92 12 00 00 E0 EE
+            00 00 B4 EF 00 00 E0 EF 00 00 6E EE 00 00 6E EE
+            00 00 6E EE 00 00 6E EE 00 00 6E EE 00 00 6E EE
+            00 00 6E EE 00 00 6E EE 00 00 6E EE 00 00 6E EE
+            00 00 6E EE 00 00 6E EE 00 00 6E EE 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 01 00 9E 14
+            01 00 E6 14 01 00 12 15 01 00 5C 15 01 00 A4 15
+            01 00 E2 15 01 00 20 16 01 00 60 16 01 00 94 16
+            01 00 B4 16 01 00 06 17 01 00 64 17 01 00 72 17
+            01 00 88 17 01 00 94 16 01 00 94 16 01 00 AC 17
+            01 00 C4 17 01 00 16 18 01 00 26 18 01 00 38 18
+            01 00 A2 18 01 00 AC 17 01 00 AC 17 01 00 DE 18
+            01 00 0C 19 01 00 60 19 01 00 B4 19 01 00 C2 19
+            01 00 F6 19 01 00 46 1A 01 00 86 1A 01 00 D8 1A
+            01 00 28 1B 01 00 74 1B 01 00 A8 1B 01 00 E2 1B
+            01 00 5E 1C 01 00 90 1C 01 00 C4 1C 01 00 56 1D
+            01 00 AA 1D 01 00 D2 1D 01 00 E8 1D 01 00 22 1E
+            01 00 80 1E 01 00 B8 1E 01 00 D2 1E 01 00 B8 1F
+            01 00 D8 1F 01 00 22 20 01 00 34 20 01 00 7C 20
+            01 00 FC 20 01 00 B8 1F 01 00 B8 1F 01 00 1C 21
+            01 00 3A 21 01 00 9A 21 01 00 AA 21 01 00 C0 21
+            01 00 38 22 01 00 4A 22 01 00 1C 21 01 00 56 22
+            01 00 9E 22 01 00 B4 22 01 00 F2 22 01 00 24 23
+            01 00 54 23 01 00 A2 23 01 00 AE 23 01 00 F8 23
+            01 00 2C 24 01 00 5E 24 01 00 B4 24 01 00 C2 24
+            01 00 1E 25 01 00 A4 25 01 00 C6 25 01 00 D8 25
+            01 00 12 26 01 00 4A 26 01 00 80 26 01 00 98 26
+            01 00 D8 25 01 00 D8 25 01 00 D8 25 01 00 D6 26
+            01 00 04 27 01 00 24 27 01 00 94 27 01 00 A0 27
+            01 00 B6 27 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+        </patch>
+        <patch offset="0xebc8">
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 DC 1C
+            00 00 00 00 01 00 0E 1D 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 FA 1E
+            01 00 78 1F 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 01 00 D6 26
+            01 00 D6 26 01 00 D6 26 01 00 D6 26 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 58 00 C3 00
+            01 00 A8 04 63 01 73 01 65 01 81 03 66 03 74 01
+            A3 01 78 01 A1 01 66 01 98 01 63 01 A4 01 61 01
+            6E 01 FF FF 7F 00 D3 00 01 00 75 01 75 01 75 01
+            20 00 8B 04 FE 04 46 03 77 01 64 01 70 01 61 01
+            4F 01 00 00 0A 00 B6 00 01 00 C1 00 C1 00 C1 00
+            C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 FF FF
+            0A 00 C6 00 01 00 C1 00 C1 00 C1 00 C1 00 C1 00
+            C1 00 C1 00 C1 00 C1 00 C1 00 FF FF 0A 00 D6 00
+            01 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00
+            C1 00 C1 00 C1 00 FF FF 0A 00 E6 00 01 00 C1 00
+            C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00
+            C1 00 FF FF 00 00 0A 00 B6 00 01 00 C1 00 C1 00
+            C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00
+            FF FF 0A 00 C6 00 01 00 C1 00 C1 00 C1 00 C1 00
+            C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 FF FF 0A 00
+            D6 00 01 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00
+            C1 00 C1 00 C1 00 C1 00 FF FF 0A 00 E6 00 01 00
+            C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00 C1 00
+            C1 00 C1 00 FF FF 00 00 11 00 B0 00 01 00 D7 00
+            05 02 20 00 17 02 09 02 0C 02 0C 02 20 00 0A 02
+            0F 02 09 02 0E 02 20 00 0F 02 15 02 12 02 20 00
+            0C 02 05 02 01 02 04 02 05 02 12 02 20 00 01 02
+            0E 02 04 02 FF FF 11 00 C0 00 01 00 14 02 0F 02
+            07 02 05 02 14 02 08 02 05 02 12 02 20 00 17 02
+            05 02 20 00 17 02 09 02 0C 02 0C 02 20 00 03 02
+            12 02 15 02 13 02 08 02 20 00 01 02 0C 02 0C 02
+            FF FF 11 00 D0 00 01 00 17 02 08 02 0F 02 20 00
+            0F 02 10 02 10 02 0F 02 13 02 05 02 20 00 15 02
+            13 02 20 00 02 02 05 02 0E 02 05 02 01 02 14 02
+            08 02 20 00 0F 02 15 02 12 02 FF FF 11 00 E0 00
+            01 00 0D 02 09 02 07 02 08 02 14 02 19 02 20 00
+            06 02 05 02 05 02 14 02 A1 00 00 00 79 00 B0 00
+            01 00 CF 00 0E 02 17 02 01 02 12 02 04 02 20 00
+            14 02 0F 02 20 00 16 02 09 02 03 02 14 02 0F 02
+            12 02 19 02 A1 00 00 00 1E 00 B0 00 01 00 C1 00
+            12 02 19 02 0F 02 0F 02 0F 02 07 02 01 02 A1 00
+            FF FF 1E 00 C0 00 01 00 D3 00 0F 02 0F 02 0E 02
+            20 00 14 02 08 02 05 02 19 02 20 00 17 02 09 02
+            0C 02 0C 02 20 00 0A 02 0F 02 09 02 0E 02 20 00
+            0D 02 05 02 AC 00 01 02 0E 02 04 02 FF FF 1E 00
+            D0 00 01 00 14 02 08 02 05 02 0E 02 A1 00 A1 00
+            A1 00 00 00 38 00 B8 00 01 00 D0 00 19 02 12 02
+            0F 02 0E 02 AE 00 20 00 19 02 0F 02 15 02 20 00
+            06 02 0F 02 15 02 07 02 08 02 14 02 20 00 17 02
+            05 02 0C 02 0C 02 AC 00 FF FF 4F 00 C8 00 01 00
+            C2 00 15 02 14 02 20 00 19 02 0F 02 15 02 20 00
+            01 02 12 02 05 02 20 00 0E 02 0F 02 14 02 20 00
+            06 02 09 02 14 02 FF FF 6D 00 D8 00 01 00 14 02
+            0F 02 20 00 12 02 15 02 0C 02 05 02 20 00 C5 00
+            01 02 12 02 14 02 08 02 AC 00 00 00 62 00 C0 00
+            01 00 CF 00 0E 02 0C 02 19 02 20 00 C9 00 AE 00
+            20 00 C4 00 05 02 0D 02 09 02 14 02 12 02 09 02
+            AE 00 FF FF 5B 00 D0 00 01 00 03 02 01 02 0E 02
+            20 00 02 02 05 02 20 00 09 02 14 02 13 02 20 00
+            12 02 15 02 0C 02 05 02 12 02 AC 00 00 00 4E 00
+            B8 00 01 00 D4 00 08 02 01 02 14 02 20 00 0E 02
+            09 02 07 02 08 02 14 02 AE 00 20 00 01 02 20 00
+            10 02 01 02 12 02 14 02 19 02 FF FF 41 00 C8 00
+            01 00 17 02 01 02 13 02 20 00 08 02 05 02 0C 02
+            04 02 20 00 14 02 0F 02 20 00 03 02 05 02 0C 02
+            05 02 02 02 12 02 01 02 14 02 05 02 FF FF 56 00
+            D8 00 01 00 C4 00 05 02 0D 02 09 02 14 02 12 02
+            09 02 A7 00 13 02 20 00 16 02 09 02 03 02 14 02
+            0F 02 12 02 19 02 AC 00 00 00 36 00 B8 00 01 00
+            D7 00 08 02 05 02 12 02 05 02 20 00 09 02 13 02
+            20 00 CC 00 0F 02 12 02 04 02 20 00 CD 00 01 02
+            18 02 09 02 0D 02 0F 02 06 02 06 02 BF 00 FF FF
+            50 00 C8 00 01 00 C9 00 20 00 08 02 01 02 16 02
+            05 02 0E 02 A7 00 14 02 20 00 13 02 05 02 05 02
+            0E 02 20 00 08 02 09 02 0D 02 FF FF 61 00 D8 00
+            01 00 06 02 0F 02 12 02 20 00 13 02 0F 02 0D 02
+            05 02 20 00 14 02 09 02 0D 02 05 02 AC 00 AC 00
+            AC 00 00 00 26 00 C0 00 01 00 CF 00 08 02 AE 00
+            20 00 03 02 0F 02 0D 02 05 02 20 00 14 02 0F 02
+            20 00 14 02 08 02 09 02 0E 02 0B 02 20 00 0F 02
+            06 02 20 00 09 02 14 02 AC 00 AC 00 AC 00 FF FF
+            2A 00 D0 00 01 00 D7 00 08 02 05 02 12 02 05 02
+            20 00 03 02 0F 02 15 02 0C 02 04 02 20 00 08 02
+            05 02 20 00 08 02 01 02 16 02 05 02 20 00 07 02
+            0F 02 0E 02 05 02 BF 00 00 00 29 00 C0 00 01 00
+            D4 00 0F 02 20 00 0D 02 19 02 20 00 05 02 14 02
+            05 02 12 02 0E 02 01 02 0C 02 20 00 12 02 15 02
+            0C 02 05 02 AC 00 AC 00 AC 00 20 00 01 02 0E 02
+            04 02 FF FF 25 00 D0 00 01 00 14 02 0F 02 20 00
+            14 02 08 02 05 02 20 00 0C 02 09 02 07 02 08 02
+            14 02 20 00 0F 02 06 02 20 00 14 02 08 02 09 02
+            13 02 20 00 0D 02 0F 02 0F 02 0E 02 AC 00 00 00
+            30 00 C0 00 01 00 C5 00 16 02 05 02 0E 02 20 00
+            01 02 20 00 0C 02 09 02 07 02 08 02 14 02 20 00
+            14 02 08 02 01 02 14 02 20 00 04 02 17 02 05 02
+            0C 02 0C 02 13 02 FF FF 18 00 D0 00 01 00 09 02
+            0E 02 20 00 04 02 01 02 12 02 0B 02 0E 02 05 02
+            13 02 13 02 20 00 09 02 13 02 20 00 14 02 12 02
+            15 02 05 02 20 00 0C 02 09 02 07 02 08 02 14 02
+            AC 00 AC 00 AC 00 00 00 25 00 C0 00 01 00 CF 00
+            0E 02 05 02 20 00 04 02 01 02 19 02 AE 00 20 00
+            05 02 16 02 05 02 0E 02 20 00 14 02 08 02 05 02
+            20 00 13 02 15 02 0E 02 0C 02 09 02 07 02 08 02
+            14 02 FF FF 6D 00 D0 00 01 00 13 02 08 02 01 02
+            0C 02 0C 02 20 00 02 02 05 02 20 00 0D 02 09 02
+            0E 02 05 02 AC 00 00 00 30 00 C8 00 01 00 C9 00
+            20 00 17 02 0F 02 0E 02 AC 00 AC 00 AC 00 20 00
+            C1 00 14 02 20 00 0C 02 01 02 13 02 14 02 AE 00
+            20 00 C9 00 20 00 17 02 0F 02 0E 02 A1 00 00 00
+            54 00 B8 00 01 00 CC 00 0F 02 0F 02 0B 02 09 02
+            0E 02 07 02 20 00 02 02 01 02 03 02 0B 02 AE 00
+            20 00 09 02 14 02 A7 00 13 02 FF FF 49 00 C8 00
+            01 00 02 02 05 02 05 02 0E 02 20 00 01 02 20 00
+            0C 02 0F 02 0E 02 07 02 20 00 0A 02 0F 02 15 02
+            12 02 0E 02 05 02 19 02 AC 00 FF FF 1A 00 D8 00
+            01 00 C2 00 15 02 14 02 20 00 01 02 14 02 20 00
+            0C 02 01 02 13 02 14 02 AE 00 20 00 09 02 14 02
+            20 00 05 02 0E 02 04 02 13 02 20 00 08 02 05 02
+            12 02 05 02 AC 00 AC 00 AC 00 00 00 23 00 B8 00
+            01 00 D3 00 0F 02 20 00 14 02 08 02 05 02 20 00
+            03 02 15 02 12 02 13 02 05 02 20 00 16 02 01 02
+            0E 02 09 02 13 02 08 02 05 02 13 02 20 00 17 02
+            08 02 05 02 0E 02 FF FF 1E 00 C8 00 01 00 C9 00
+            20 00 13 02 15 02 12 02 10 02 01 02 13 02 13 02
+            20 00 0D 02 19 02 20 00 0C 02 09 02 0D 02 09 02
+            14 02 13 02 AC 00 AC 00 AC 00 20 00 D7 00 09 02
+            0C 02 0C 02 FF FF 23 00 D8 00 01 00 0D 02 19 02
+            20 00 02 02 0F 02 04 02 19 02 20 00 14 02 12 02
+            15 02 0C 02 19 02 20 00 03 02 08 02 01 02 0E 02
+            07 02 05 02 20 00 02 02 01 02 03 02 0B 02 BF 00
+            00 00 9E 00 C8 00 01 00 CF 00 08 02 AC 00 AC 00
+            AC 00 A1 00 00 00 6C 00 C8 00 01 00 C9 00 AC 00
+            AC 00 AC 00 20 00 C9 00 20 00 04 02 09 02 04 02
+            20 00 09 02 14 02 A1 00 00 00 1A 00 C8 00 01 00
+            D4 00 08 02 05 02 20 00 0D 02 0F 02 12 02 0E 02
+            09 02 0E 02 07 02 20 00 13 02 15 02 0E 02 20 00
+            09 02 13 02 20 00 04 02 01 02 1A 02 1A 02 0C 02
+            09 02 0E 02 07 02 AC 00 00 00 62 00 C8 00 01 00
+            C4 00 0F 02 03 02 14 02 0F 02 12 02 AE 00 20 00
+            17 02 01 02 0B 02 05 02 20 00 15 02 10 02 A1 00
+            00 00 2B 00 B8 00 01 00 D9 00 0F 02 15 02 20 00
+            0D 02 01 02 04 02 05 02 20 00 0D 02 05 02 20 00
+            14 02 08 02 05 02 20 00 13 02 14 02 12 02 0F 02
+            0E 02 07 02 05 02 13 02 14 02 FF FF 5B 00 C8 00
+            01 00 0D 02 01 02 0E 02 20 00 09 02 0E 02 20 00
+            14 02 08 02 05 02 20 00 17 02 0F 02 12 02 0C 02
+            04 02 AC 00 FF FF 2A 00 D8 00 01 00 D3 00 0F 02
+            20 00 17 02 08 02 19 02 20 00 17 02 0F 02 0E 02
+            A7 00 14 02 20 00 19 02 0F 02 15 02 20 00 17 02
+            01 02 0B 02 05 02 20 00 15 02 10 02 BF 00 00 00
+            8C 00 C8 00 01 00 D6 00 09 02 03 02 14 02 0F 02
+            12 02 AC 00 AC 00 AC 00 00 00 84 00 C8 00 01 00
+            C9 00 A7 00 0D 02 20 00 C5 00 0D 02 09 02 0C 02
+            19 02 AC 00 00 00 37 00 B0 00 01 00 D9 00 0F 02
+            15 02 20 00 0E 02 05 02 05 02 04 02 0E 02 A7 00
+            14 02 20 00 17 02 0F 02 12 02 12 02 19 02 20 00
+            01 02 02 02 0F 02 15 02 14 02 FF FF 38 00 C0 00
+            01 00 C6 00 01 02 14 02 08 02 05 02 12 02 20 00
+            01 02 0E 02 19 02 0D 02 0F 02 12 02 05 02 AC 00
+            20 00 D6 00 09 02 03 02 14 02 0F 02 12 02 AE 00
+            FF FF 3A 00 D0 00 01 00 0C 02 05 02 14 02 A7 00
+            13 02 20 00 0C 02 09 02 16 02 05 02 20 00 14 02
+            0F 02 07 02 05 02 14 02 08 02 05 02 12 02 20 00
+            01 02 13 02 FF FF 4F 00 E0 00 01 00 02 02 12 02
+            0F 02 14 02 08 02 05 02 12 02 20 00 01 02 0E 02
+            04 02 20 00 13 02 09 02 13 02 14 02 05 02 12 02
+            AC 00 00 00 36 00 C0 00 01 00 C1 00 0E 02 04 02
+            20 00 13 02 0F 02 20 00 D6 00 09 02 03 02 14 02
+            0F 02 12 02 20 00 01 02 0E 02 04 02 20 00 C5 00
+            0D 02 09 02 0C 02 19 02 FF FF 24 00 D0 00 01 00
+            0C 02 09 02 16 02 05 02 04 02 20 00 08 02 01 02
+            10 02 10 02 09 02 0C 02 19 02 20 00 09 02 0E 02
+            20 00 08 02 05 02 12 02 20 00 08 02 0F 02 0D 02
+            05 02 AC 00 00 00 3E 00 C0 00 01 00 C8 00 01 02
+            20 00 08 02 01 02 20 00 08 02 01 02 AC 00 AC 00
+            AC 00 20 00 D7 00 05 02 0C 02 0C 02 20 00 04 02
+            0F 02 0E 02 05 02 AE 00 FF FF 7A 00 D0 00 01 00
+            CC 00 0F 02 12 02 04 02 20 00 D2 00 01 02 10 02
+            14 02 0F 02 12 02 AC 00 00 00 41 00 B8 00 01 00
+            CC 00 0F 02 12 02 04 02 20 00 CF 00 1A 02 0F 02
+            0D 02 A1 00 20 00 C9 00 20 00 04 02 05 02 06 02
+            05 02 01 02 14 02 05 02 04 02 FF FF 3B 00 C8 00
+            01 00 05 02 16 02 05 02 12 02 19 02 20 00 C4 00
+            01 02 12 02 0B 02 13 02 14 02 01 02 0C 02 0B 02
+            05 02 12 02 AC 00 20 00 CE 00 0F 02 17 02 FF FF
+            25 00 D8 00 01 00 07 02 09 02 16 02 05 02 20 00
+            0D 02 05 02 20 00 17 02 08 02 01 02 14 02 20 00
+            19 02 0F 02 15 02 20 00 10 02 12 02 0F 02 0D 02
+            09 02 13 02 05 02 04 02 A1 00 00 00 30 00 B8 00
+            01 00 C1 00 08 02 AE 00 20 00 19 02 05 02 13 02
+            AC 00 20 00 D9 00 0F 02 15 02 20 00 17 02 01 02
+            0E 02 14 02 05 02 04 02 20 00 0D 02 0F 02 12 02
+            05 02 FF FF 36 00 C8 00 01 00 14 02 05 02 12 02
+            12 02 09 02 02 02 0C 02 05 02 20 00 10 02 0F 02
+            17 02 05 02 12 02 AC 00 20 00 C9 00 20 00 13 02
+            08 02 01 02 0C 02 0C 02 FF FF 3D 00 D8 00 01 00
+            07 02 12 02 01 02 0E 02 14 02 20 00 09 02 14 02
+            20 00 14 02 0F 02 20 00 19 02 0F 02 15 02 20 00
+            0E 02 0F 02 17 02 AC 00 AC 00 AC 00 00 00 9E 00
+            C8 00 01 00 D4 00 08 02 05 02 12 02 05 02 A1 00
+            00 00 6E 00 C0 00 01 00 C7 00 12 02 01 02 01 02
+            01 02 08 02 AC 00 AC 00 AC 00 20 00 D9 00 05 02
+            13 02 A1 00 FF FF 20 00 D0 00 01 00 D4 00 08 02
+            09 02 13 02 20 00 09 02 13 02 20 00 14 02 08 02
+            05 02 20 00 10 02 0F 02 17 02 05 02 12 02 20 00
+            C9 00 20 00 17 02 01 02 0E 02 14 02 05 02 04 02
+            A1 00 00 00 3D 00 B8 00 01 00 D2 00 01 02 10 02
+            14 02 0F 02 12 02 AE 00 20 00 10 02 15 02 14 02
+            20 00 14 02 08 02 01 02 14 02 20 00 10 02 0F 02
+            17 02 05 02 12 02 FF FF 67 00 C8 00 01 00 14 02
+            0F 02 20 00 17 02 0F 02 12 02 0B 02 20 00 06 02
+            0F 02 12 02 20 00 0D 02 05 02 AE 00 FF FF 19 00
+            D8 00 01 00 14 02 08 02 05 02 20 00 CB 00 09 02
+            0E 02 07 02 20 00 0F 02 06 02 20 00 C8 00 01 02
+            04 02 05 02 13 02 A1 00 20 00 C8 00 01 02 20 00
+            08 02 01 02 20 00 08 02 01 02 A1 00 00 00 2A 00
+            C0 00 01 00 D4 00 08 02 05 02 12 02 05 02 A7 00
+            13 02 20 00 12 02 0F 02 0F 02 0D 02 20 00 06 02
+            0F 02 12 02 20 00 0F 02 0E 02 0C 02 19 02 20 00
+            0F 02 0E 02 05 02 FF FF 1F 00 D0 00 01 00 13 02
+            14 02 12 02 0F 02 0E 02 07 02 20 00 0D 02 01 02
+            0E 02 20 00 09 02 0E 02 20 00 14 02 08 02 09 02
+            13 02 20 00 17 02 0F 02 12 02 0C 02 04 02 AC 00
+            AC 00 AC 00 00 00 50 00 B8 00 01 00 C9 00 20 00
+            17 02 09 02 0C 02 0C 02 20 00 04 02 05 02 06 02
+            05 02 01 02 14 02 20 00 CF 00 1A 02 0F 02 0D 02
+        </patch>
+        <patch offset="0xfbc8">
+            FF FF 29 00 C8 00 01 00 01 02 0E 02 04 02 20 00
+            02 02 05 02 03 02 0F 02 0D 02 05 02 20 00 14 02
+            08 02 05 02 20 00 04 02 05 02 0D 02 0F 02 0E 02
+            20 00 0B 02 09 02 0E 02 07 02 FF FF 31 00 D8 00
+            01 00 0F 02 06 02 20 00 04 02 01 02 12 02 0B 02
+            0E 02 05 02 13 02 13 02 A1 00 20 00 C8 00 01 02
+            20 00 08 02 01 02 20 00 08 02 01 02 AC 00 AC 00
+            AC 00 00 00 20 00 B8 00 01 00 D7 00 08 02 01 02
+            14 02 20 00 01 02 20 00 13 02 17 02 05 02 05 02
+            14 02 20 00 13 02 0C 02 05 02 05 02 10 02 09 02
+            0E 02 07 02 20 00 06 02 01 02 03 02 05 02 AC 00
+            FF FF 53 00 C8 00 01 00 D0 00 19 02 12 02 0F 02
+            0E 02 AE 00 20 00 0C 02 05 02 14 02 20 00 0D 02
+            05 02 20 00 13 02 08 02 0F 02 17 02 FF FF 4F 00
+            D8 00 01 00 19 02 0F 02 15 02 20 00 01 02 20 00
+            0C 02 0F 02 16 02 05 02 0C 02 19 02 20 00 04 02
+            12 02 05 02 01 02 0D 02 AC 00 00 00 3D 00 B8 00
+            01 00 C1 00 20 00 04 02 12 02 05 02 01 02 0D 02
+            20 00 0D 02 0F 02 12 02 05 02 20 00 17 02 0F 02
+            0E 02 04 02 05 02 12 02 06 02 15 02 0C 02 FF FF
+            52 00 C8 00 01 00 14 02 08 02 01 02 0E 02 20 00
+            01 02 0E 02 19 02 20 00 19 02 0F 02 15 02 20 00
+            03 02 0F 02 15 02 0C 02 04 02 FF FF 43 00 D8 00
+            01 00 0B 02 0E 02 0F 02 17 02 20 00 09 02 0E 02
+            20 00 14 02 08 02 09 02 13 02 20 00 17 02 0F 02
+            12 02 0C 02 04 02 AC 00 AC 00 AC 00 00 00 3E 00
+            C0 00 01 00 D7 00 05 02 0C 02 03 02 0F 02 0D 02
+            05 02 20 00 08 02 0F 02 0D 02 05 02 AE 00 20 00
+            0D 02 19 02 20 00 0C 02 01 02 04 02 19 02 AC 00
+            FF FF 56 00 D0 00 01 00 D9 00 0F 02 15 02 20 00
+            0D 02 15 02 13 02 14 02 20 00 02 02 05 02 20 00
+            14 02 09 02 12 02 05 02 04 02 AC 00 00 00 2E 00
+            C0 00 01 00 C9 00 20 00 17 02 01 02 13 02 20 00
+            02 02 05 02 07 02 09 02 0E 02 0E 02 09 02 0E 02
+            07 02 20 00 14 02 0F 02 20 00 17 02 0F 02 12 02
+            12 02 19 02 FF FF 3D 00 D0 00 01 00 17 02 08 02
+            05 02 0E 02 20 00 19 02 0F 02 15 02 20 00 17 02
+            0F 02 15 02 0C 02 04 02 20 00 12 02 05 02 14 02
+            15 02 12 02 0E 02 AC 00 00 00 1D 00 B0 00 01 00
+            C9 00 14 02 20 00 17 02 0F 02 15 02 0C 02 04 02
+            20 00 02 02 05 02 20 00 04 02 12 02 05 02 01 02
+            04 02 06 02 15 02 0C 02 20 00 09 02 06 02 20 00
+            0F 02 15 02 12 02 FF FF 29 00 C0 00 01 00 0D 02
+            01 02 13 02 14 02 05 02 12 02 20 00 0C 02 05 02
+            01 02 12 02 0E 02 05 02 04 02 20 00 19 02 0F 02
+            15 02 A7 00 04 02 20 00 07 02 0F 02 0E 02 05 02
+            FF FF 19 00 D0 00 01 00 14 02 0F 02 20 00 14 02
+            08 02 05 02 20 00 08 02 15 02 0D 02 01 02 0E 02
+            20 00 17 02 0F 02 12 02 0C 02 04 02 AC 00 20 00
+            CC 00 15 02 03 02 0B 02 09 02 0C 02 19 02 AE 00
+            FF FF 31 00 E0 00 01 00 08 02 05 02 20 00 08 02
+            01 02 13 02 20 00 0E 02 0F 02 14 02 20 00 01 02
+            17 02 01 02 0B 02 05 02 0E 02 05 02 04 02 20 00
+            19 02 05 02 14 02 AC 00 00 00 40 00 C0 00 01 00
+            D1 00 15 02 09 02 03 02 0B 02 0C 02 19 02 AE 00
+            20 00 14 02 0F 02 20 00 19 02 0F 02 15 02 12 02
+            20 00 12 02 0F 02 0F 02 0D 02 FF FF 55 00 D0 00
+            01 00 02 02 05 02 06 02 0F 02 12 02 05 02 20 00
+            08 02 05 02 20 00 17 02 01 02 0B 02 05 02 13 02
+            AC 00 AC 00 AC 00 00 00 4E 00 C0 00 01 00 C9 00
+            A7 00 0D 02 20 00 01 02 20 00 0C 02 09 02 14 02
+            14 02 0C 02 05 02 20 00 14 02 09 02 12 02 05 02
+            04 02 AC 00 FF FF 3E 00 D0 00 01 00 D0 00 0C 02
+            05 02 01 02 13 02 05 02 20 00 0D 02 01 02 0B 02
+            05 02 20 00 15 02 10 02 20 00 0D 02 19 02 20 00
+            02 02 05 02 04 02 AC 00 00 00 5C 00 C8 00 01 00
+            C1 00 14 02 20 00 0F 02 0E 02 03 02 05 02 AE 00
+            20 00 0D 02 19 02 20 00 0C 02 01 02 04 02 19 02
+            AC 00 00 00 4E 00 C0 00 01 00 C1 00 0E 02 04 02
+            20 00 08 02 0F 02 17 02 20 00 17 02 05 02 12 02
+            05 02 20 00 14 02 08 02 09 02 0E 02 07 02 13 02
+            FF FF 4C 00 D0 00 01 00 09 02 0E 02 20 00 14 02
+            08 02 05 02 20 00 08 02 15 02 0D 02 01 02 0E 02
+            20 00 17 02 0F 02 12 02 0C 02 04 02 BF 00 00 00
+            70 00 BA 00 01 00 20 00 20 00 00 00 60 00 B8 00
+            01 00 CE 00 0F 02 14 02 08 02 09 02 0E 02 07 02
+            20 00 0D 02 15 02 03 02 08 02 20 00 08 02 01 02
+            13 02 FF FF 48 00 C8 00 01 00 03 02 08 02 01 02
+            0E 02 07 02 05 02 04 02 AC 00 20 00 C9 00 20 00
+            0A 02 15 02 13 02 14 02 20 00 17 02 05 02 0E 02
+            14 02 FF FF 49 00 D8 00 01 00 14 02 0F 02 20 00
+            13 02 14 02 12 02 05 02 14 02 03 02 08 02 20 00
+            0D 02 19 02 20 00 17 02 09 02 0E 02 07 02 13 02
+            AC 00 00 00 47 00 B8 00 01 00 CF 00 15 02 12 02
+            20 00 13 02 05 02 03 02 0F 02 0E 02 04 02 20 00
+            01 02 0E 02 04 02 20 00 14 02 08 02 09 02 12 02
+            04 02 FF FF 49 00 C8 00 01 00 02 02 01 02 14 02
+            14 02 01 02 0C 02 09 02 0F 02 0E 02 13 02 20 00
+            01 02 12 02 05 02 20 00 07 02 0F 02 0E 02 05 02
+            AC 00 FF FF 1A 00 D8 00 01 00 D4 00 08 02 05 02
+            20 00 05 02 0E 02 05 02 0D 02 19 02 20 00 09 02
+            13 02 20 00 01 02 0C 02 0D 02 0F 02 13 02 14 02
+            20 00 15 02 10 02 0F 02 0E 02 20 00 15 02 13 02
+            A1 00 00 00 74 00 C0 00 01 00 C3 00 15 02 12 02
+            13 02 05 02 20 00 14 02 08 02 05 02 0D 02 AC 00
+            AC 00 AC 00 FF FF 5E 00 D0 00 01 00 C9 00 13 02
+            20 00 14 02 08 02 09 02 13 02 20 00 14 02 08 02
+            05 02 20 00 05 02 0E 02 04 02 BF 00 00 00 68 00
+            C8 00 01 00 C4 00 0F 02 20 00 0E 02 0F 02 14 02
+            20 00 07 02 09 02 16 02 05 02 20 00 15 02 10 02
+            AC 00 00 00 92 00 B8 00 01 00 CD 00 19 02 20 00
+            0C 02 0F 02 12 02 04 02 A1 00 FF FF 5C 00 C8 00
+            01 00 D0 00 08 02 01 02 12 02 01 02 0F 02 08 02
+            20 00 C1 00 0E 02 01 02 0B 02 01 02 12 02 09 02
+            13 02 A1 00 FF FF 56 00 D8 00 01 00 D9 00 0F 02
+            15 02 20 00 08 02 01 02 16 02 05 02 20 00 01 02
+            17 02 01 02 0B 02 05 02 0E 02 05 02 04 02 A1 00
+            00 00 18 00 B8 00 01 00 D9 00 05 02 13 02 AC 00
+            20 00 C6 00 0F 02 12 02 07 02 09 02 16 02 05 02
+            20 00 0D 02 05 02 20 00 06 02 0F 02 12 02 20 00
+            17 02 0F 02 12 02 12 02 19 02 09 02 0E 02 07 02
+            FF FF 35 00 C8 00 01 00 19 02 0F 02 15 02 AE 00
+            20 00 0D 02 19 02 20 00 13 02 05 02 12 02 16 02
+            01 02 0E 02 14 02 13 02 AC 00 20 00 C9 00 20 00
+            08 02 01 02 04 02 FF FF 19 00 D8 00 01 00 14 02
+            0F 02 20 00 0C 02 05 02 01 02 16 02 05 02 20 00
+            14 02 08 02 09 02 13 02 20 00 0C 02 01 02 0E 02
+            04 02 20 00 14 02 0F 02 20 00 06 02 09 02 07 02
+            08 02 14 02 AC 00 00 00 3E 00 C0 00 01 00 CE 00
+            0F 02 17 02 20 00 02 02 05 02 08 02 0F 02 0C 02
+            04 02 20 00 14 02 08 02 05 02 20 00 10 02 0F 02
+            17 02 05 02 12 02 20 00 C9 00 FF FF 3D 00 D0 00
+            01 00 07 02 01 02 09 02 0E 02 05 02 04 02 20 00
+            09 02 0E 02 20 00 14 02 08 02 01 02 14 02 20 00
+            02 02 01 02 14 02 14 02 0C 02 05 02 A1 00 00 00
+            4E 00 C8 00 01 00 D7 00 08 02 01 02 14 02 20 00
+            09 02 13 02 20 00 14 02 08 02 01 02 14 02 20 00
+            0C 02 09 02 07 02 08 02 14 02 BF 00 00 00 7A 00
+            C0 00 01 00 D4 00 08 02 05 02 20 00 05 02 0E 02
+            05 02 0D 02 19 02 AC 00 AC 00 AC 00 FF FF 5C 00
+            D0 00 01 00 D4 00 08 02 05 02 19 02 A7 00 16 02
+            05 02 20 00 16 02 01 02 0E 02 09 02 13 02 08 02
+            05 02 04 02 A1 00 00 00 44 00 B0 00 01 00 D0 00
+            05 02 0F 02 10 02 0C 02 05 02 20 00 0F 02 06 02
+            20 00 0D 02 19 02 20 00 0B 02 09 02 0E 02 07 02
+            04 02 0F 02 0D 02 AE 00 FF FF 12 00 C0 00 01 00
+            06 02 05 02 01 02 12 02 20 00 0E 02 0F 02 20 00
+            0C 02 0F 02 0E 02 07 02 05 02 12 02 AC 00 20 00
+            C9 00 20 00 13 02 08 02 01 02 0C 02 0C 02 20 00
+            06 02 09 02 07 02 08 02 14 02 FF FF 25 00 D0 00
+            01 00 14 02 0F 02 20 00 10 02 12 02 0F 02 14 02
+            05 02 03 02 14 02 20 00 14 02 08 02 09 02 13 02
+            20 00 0C 02 01 02 0E 02 04 02 AE 00 20 00 01 02
+            13 02 20 00 C9 00 FF FF 0D 00 E0 00 01 00 16 02
+            0F 02 17 02 05 02 04 02 20 00 06 02 09 02 16 02
+            05 02 20 00 14 02 08 02 0F 02 15 02 13 02 01 02
+            0E 02 04 02 20 00 19 02 05 02 01 02 12 02 13 02
+            20 00 01 02 07 02 0F 02 A1 00 00 00 26 00 C0 00
+            01 00 C1 00 0C 02 0C 02 20 00 08 02 01 02 09 02
+            0C 02 20 00 D0 00 08 02 01 02 12 02 01 02 0F 02
+            08 02 20 00 C1 00 0E 02 01 02 0B 02 01 02 12 02
+            09 02 13 02 A1 00 FF FF 26 00 D0 00 01 00 C1 00
+            0C 02 0C 02 20 00 08 02 01 02 09 02 0C 02 20 00
+            D0 00 08 02 01 02 12 02 01 02 0F 02 08 02 20 00
+            C1 00 0E 02 01 02 0B 02 01 02 12 02 09 02 13 02
+            A1 00 00 00 2C 00 C8 00 01 00 C6 00 05 02 0C 02
+            09 02 03 02 09 02 01 02 AE 00 20 00 03 02 0F 02
+            0E 02 07 02 12 02 01 02 14 02 15 02 0C 02 01 02
+            14 02 09 02 0F 02 0E 02 13 02 A1 00 00 00 48 00
+            B8 00 01 00 D9 00 0F 02 15 02 A7 00 16 02 05 02
+            20 00 10 02 12 02 0F 02 16 02 05 02 0E 02 20 00
+            19 02 0F 02 15 02 A7 00 12 02 05 02 FF FF 37 00
+            C8 00 01 00 14 02 08 02 05 02 20 00 13 02 14 02
+            12 02 0F 02 0E 02 07 02 05 02 13 02 14 02 20 00
+            0F 02 0E 02 20 00 C5 00 01 02 12 02 14 02 08 02
+            AC 00 FF FF 60 00 D8 00 01 00 C8 00 0F 02 17 02
+            20 00 04 02 0F 02 20 00 19 02 0F 02 15 02 20 00
+            06 02 05 02 05 02 0C 02 BF 00 00 00 86 00 C8 00
+            01 00 D7 00 0F 02 0E 02 04 02 05 02 12 02 06 02
+            15 02 0C 02 A1 00 00 00 66 00 B8 00 01 00 C1 00
+            06 02 14 02 05 02 12 02 20 00 14 02 08 02 09 02
+            13 02 AE 00 20 00 13 02 08 02 05 02 FF FF 37 00
+            C8 00 01 00 01 02 10 02 10 02 05 02 01 02 12 02
+            05 02 04 02 20 00 09 02 0E 02 20 00 14 02 08 02
+            05 02 20 00 0D 02 15 02 13 02 09 02 03 02 01 02
+            0C 02 FF FF 56 00 D8 00 01 00 D4 00 08 02 05 02
+            20 00 D7 00 0F 02 12 02 0C 02 04 02 20 00 C9 00
+            13 02 20 00 CD 00 09 02 0E 02 05 02 AC 00 00 00
+            2A 00 B0 00 01 00 C8 00 05 02 12 02 20 00 12 02
+            0F 02 0C 02 05 02 20 00 02 02 12 02 0F 02 15 02
+            07 02 08 02 14 02 20 00 08 02 05 02 12 02 20 00
+            09 02 0E 02 14 02 0F 02 FF FF 16 00 C0 00 01 00
+            14 02 08 02 05 02 20 00 13 02 10 02 0F 02 14 02
+            0C 02 09 02 07 02 08 02 14 02 AE 00 20 00 01 02
+            0E 02 04 02 20 00 13 02 08 02 05 02 20 00 02 02
+            05 02 07 02 01 02 0E 02 FF FF 17 00 D0 00 01 00
+            08 02 05 02 12 02 20 00 12 02 09 02 13 02 05 02
+            20 00 14 02 0F 02 17 02 01 02 12 02 04 02 20 00
+            02 02 05 02 03 02 0F 02 0D 02 09 02 0E 02 07 02
+            20 00 0F 02 0E 02 05 02 FF FF 1F 00 E0 00 01 00
+            0F 02 06 02 20 00 14 02 08 02 05 02 20 00 17 02
+            0F 02 12 02 0C 02 04 02 A7 00 13 02 20 00 14 02
+            0F 02 10 02 20 00 13 02 14 02 01 02 12 02 13 02
+            AC 00 AC 00 AC 00 00 00 32 00 C8 00 01 00 D4 00
+            08 02 09 02 13 02 20 00 12 02 05 02 01 02 0C 02
+            0C 02 19 02 20 00 09 02 13 02 20 00 14 02 08 02
+            05 02 20 00 02 02 05 02 13 02 14 02 A1 00 00 00
+            36 00 C8 00 01 00 D7 00 08 02 01 02 14 02 AC 00
+            AC 00 AC 00 20 00 08 02 01 02 10 02 10 02 05 02
+            0E 02 05 02 04 02 20 00 14 02 0F 02 20 00 0D 02
+            05 02 BF 00 00 00 1D 00 B8 00 01 00 D9 00 05 02
+            13 02 AE 00 20 00 C9 00 20 00 12 02 05 02 0D 02
+            05 02 0D 02 02 02 05 02 12 02 AC 00 20 00 D4 00
+            08 02 05 02 20 00 03 02 15 02 12 02 13 02 05 02
+            04 02 FF FF 23 00 C8 00 01 00 13 02 17 02 0F 02
+            12 02 04 02 20 00 01 02 0E 02 04 02 20 00 01 02
+            12 02 0D 02 0F 02 12 02 20 00 03 02 0F 02 0E 02
+            14 02 12 02 0F 02 0C 02 0C 02 05 02 04 02 FF FF
+            19 00 D8 00 01 00 0D 02 05 02 AC 00 20 00 D4 00
+            08 02 05 02 19 02 20 00 0D 02 01 02 04 02 05 02
+            20 00 0D 02 05 02 20 00 01 02 20 00 0B 02 09 02
+            0C 02 0C 02 05 02 12 02 AC 00 AC 00 AC 00 00 00
+            92 00 C8 00 01 00 CD 00 19 02 20 00 0C 02 0F 02
+            16 02 05 02 AC 00 00 00 68 00 C8 00 01 00 CF 00
+            12 02 09 02 0E 02 A1 00 20 00 C9 00 14 02 A7 00
+            13 02 20 00 19 02 0F 02 15 02 AC 00 00 00 12 00
+            B0 00 01 00 C9 00 20 00 08 02 01 02 16 02 05 02
+            20 00 03 02 0F 02 0D 02 0D 02 09 02 14 02 14 02
+            05 02 04 02 20 00 0D 02 01 02 0E 02 19 02 20 00
+            13 02 09 02 0E 02 13 02 AC 00 AC 00 AC 00 FF FF
+            30 00 C0 00 01 00 D4 00 0F 02 20 00 01 02 14 02
+            0F 02 0E 02 05 02 AE 00 20 00 C9 00 20 00 13 02
+            08 02 01 02 0C 02 0C 02 20 00 04 02 05 02 16 02
+            0F 02 14 02 05 02 FF FF 4D 00 D0 00 01 00 0D 02
+            19 02 20 00 0C 02 09 02 06 02 05 02 20 00 14 02
+            0F 02 20 00 14 02 08 02 05 02 20 00 07 02 0F 02
+            0F 02 04 02 FF FF 13 00 E0 00 01 00 0F 02 06 02
+            20 00 14 02 08 02 09 02 13 02 20 00 17 02 0F 02
+            12 02 0C 02 04 02 20 00 01 02 0E 02 04 02 20 00
+            09 02 14 02 13 02 20 00 10 02 05 02 0F 02 10 02
+            0C 02 05 02 AC 00 00 00 86 00 C8 00 01 00 CD 00
+            19 02 20 00 0C 02 0F 02 16 02 05 02 AC 00 AC 00
+            AC 00 00 00 A4 00 C8 00 01 00 CF 00 12 02 09 02
+            0E 02 AC 00 00 00 56 00 B8 00 01 00 C1 00 13 02
+            20 00 0C 02 0F 02 0E 02 07 02 20 00 01 02 13 02
+            20 00 C9 00 20 00 0C 02 09 02 16 02 05 02 AE 00
+            FF FF 3C 00 C8 00 01 00 14 02 08 02 09 02 13 02
+            20 00 13 02 01 02 03 02 12 02 05 02 04 02 20 00
+            10 02 0C 02 01 02 03 02 05 02 20 00 17 02 09 02
+            0C 02 0C 02 FF FF 5B 00 D8 00 01 00 0E 02 05 02
+            16 02 05 02 12 02 20 00 02 02 05 02 20 00 04 02
+            05 02 06 02 09 02 0C 02 05 02 04 02 AC 00 00 00
+            6C 00 C8 00 01 00 D7 00 AD 00 17 02 08 02 0F 02
+            20 00 01 02 12 02 05 02 20 00 19 02 0F 02 15 02
+            BF 00 00 00 3C 00 C0 00 01 00 C9 00 20 00 08 02
+            05 02 01 02 12 02 04 02 20 00 12 02 15 02 0D 02
+            0F 02 12 02 13 02 20 00 0F 02 06 02 20 00 19 02
+            0F 02 15 02 AE 00 FF FF 1A 00 D0 00 01 00 CC 00
+            0F 02 12 02 04 02 20 00 D2 00 09 02 0B 02 15 02
+            0F 02 AE 00 20 00 01 02 0E 02 04 02 20 00 17 02
+            01 02 09 02 14 02 05 02 04 02 20 00 08 02 05 02
+            12 02 05 02 AC 00 00 00 61 00 C0 00 01 00 D4 00
+            0F 02 20 00 14 02 08 02 09 02 0E 02 0B 02 20 00
+            01 02 0E 02 0F 02 14 02 08 02 05 02 12 02 FF FF
+            37 00 D0 00 01 00 0F 02 06 02 20 00 0F 02 15 02
+            12 02 20 00 0B 02 09 02 0E 02 04 02 20 00 13 02
+        </patch>
+        <patch offset="0x10bc8">
+            15 02 12 02 16 02 09 02 16 02 05 02 04 02 AC 00
+            AC 00 AC 00 00 00 5F 00 C0 00 01 00 C9 00 20 00
+            01 02 0D 02 20 00 13 02 0F 02 20 00 07 02 0C 02
+            01 02 04 02 20 00 19 02 0F 02 15 02 FF FF 43 00
+            D0 00 01 00 01 02 12 02 05 02 20 00 13 02 01 02
+            06 02 05 02 AE 00 20 00 CC 00 0F 02 12 02 04 02
+            20 00 D2 00 09 02 0B 02 15 02 0F 02 AC 00 00 00
+            44 00 B8 00 01 00 C1 00 11 02 15 02 01 02 12 02
+            09 02 01 02 AE 00 20 00 06 02 12 02 0F 02 0D 02
+            20 00 0E 02 0F 02 17 02 20 00 0F 02 0E 02 AE 00
+            FF FF 21 00 C8 00 01 00 0C 02 05 02 14 02 20 00
+            15 02 13 02 20 00 10 02 12 02 0F 02 14 02 05 02
+            03 02 14 02 20 00 14 02 08 02 09 02 13 02 20 00
+            13 02 01 02 03 02 12 02 05 02 04 02 FF FF 67 00
+            D8 00 01 00 10 02 0C 02 01 02 03 02 05 02 20 00
+            14 02 0F 02 07 02 05 02 14 02 08 02 05 02 12 02
+            AC 00 00 00 AA 00 C8 00 01 00 D9 00 05 02 13 02
+            AC 00 00 00 68 00 B8 00 01 00 CF 00 0E 02 05 02
+            20 00 19 02 05 02 01 02 12 02 20 00 0C 02 01 02
+            14 02 05 02 12 02 AE 00 FF FF 17 00 C8 00 01 00
+            01 02 20 00 0E 02 05 02 17 02 20 00 07 02 15 02
+            01 02 12 02 04 02 09 02 01 02 0E 02 20 00 0F 02
+            06 02 20 00 14 02 08 02 05 02 20 00 13 02 01 02
+            03 02 12 02 05 02 04 02 FF FF 67 00 D8 00 01 00
+            10 02 0C 02 01 02 03 02 05 02 20 00 17 02 01 02
+            13 02 20 00 02 02 0F 02 12 02 0E 02 AC 00 00 00
+            74 00 C0 00 01 00 CD 00 01 02 09 02 0C 02 20 00
+            06 02 0F 02 12 02 20 00 19 02 0F 02 15 02 A1 00
+            FF FF 1A 00 D0 00 01 00 CF 00 08 02 A1 00 20 00
+            C1 00 20 00 0C 02 05 02 14 02 14 02 05 02 12 02
+            20 00 06 02 12 02 0F 02 0D 02 20 00 D3 00 01 02
+            13 02 11 02 15 02 01 02 14 02 03 02 08 02 A1 00
+            00 00 30 00 C0 00 01 00 C5 00 0C 02 04 02 05 02
+            12 02 AE 00 20 00 17 02 08 02 01 02 14 02 20 00
+            04 02 0F 02 05 02 13 02 20 00 09 02 14 02 20 00
+            13 02 01 02 19 02 BF 00 FF FF 68 00 D0 00 01 00
+            C8 00 15 02 12 02 12 02 19 02 AE 00 20 00 14 02
+            05 02 0C 02 0C 02 20 00 15 02 13 02 A1 00 00 00
+            44 00 B8 00 01 00 C8 00 05 02 A7 00 13 02 20 00
+            02 02 05 02 01 02 14 02 05 02 0E 02 20 00 14 02
+            08 02 05 02 0D 02 20 00 01 02 0C 02 0C 02 A1 00
+            FF FF 32 00 C8 00 01 00 D4 00 08 02 05 02 19 02
+            20 00 17 02 05 02 12 02 05 02 20 00 17 02 05 02
+            01 02 0B 02 AE 00 20 00 08 02 05 02 20 00 13 02
+            01 02 19 02 13 02 AE 00 FF FF 25 00 D8 00 01 00
+            01 02 0E 02 04 02 20 00 0E 02 0F 02 17 02 20 00
+            0F 02 15 02 12 02 20 00 14 02 09 02 0D 02 05 02
+            20 00 08 02 01 02 13 02 20 00 03 02 0F 02 0D 02
+            05 02 A1 00 00 00 98 00 C8 00 01 00 C8 00 0F 02
+            0F 02 12 02 01 02 19 02 A1 00 00 00 14 00 B8 00
+            01 00 C5 00 16 02 05 02 12 02 19 02 0F 02 0E 02
+            05 02 AE 00 20 00 10 02 12 02 05 02 10 02 01 02
+            12 02 05 02 20 00 06 02 0F 02 12 02 20 00 02 02
+            01 02 14 02 14 02 0C 02 05 02 A1 00 FF FF 49 00
+            C8 00 01 00 CC 00 05 02 14 02 20 00 15 02 13 02
+            20 00 03 02 05 02 0C 02 05 02 02 02 12 02 01 02
+            14 02 05 02 20 00 0F 02 15 02 12 02 FF FF 1E 00
+            D8 00 01 00 0C 02 05 02 01 02 04 02 05 02 12 02
+            20 00 D3 00 01 02 13 02 11 02 15 02 01 02 14 02
+            03 02 08 02 A7 00 13 02 20 00 16 02 09 02 03 02
+            14 02 0F 02 12 02 19 02 A1 00 00 00 12 00 B0 00
+            01 00 D3 00 0F 02 0F 02 0E 02 20 00 17 02 05 02
+            20 00 C2 00 09 02 07 02 06 02 0F 02 0F 02 14 02
+            20 00 17 02 09 02 0C 02 0C 02 20 00 12 02 0F 02
+            01 02 0D 02 20 00 14 02 08 02 05 02 FF FF 19 00
+            C0 00 01 00 17 02 0F 02 12 02 0C 02 04 02 A1 00
+            20 00 D7 00 09 02 14 02 08 02 20 00 D3 00 01 02
+            13 02 11 02 15 02 01 02 14 02 03 02 08 02 AE 00
+            20 00 17 02 05 02 A7 00 0C 02 0C 02 FF FF 0B 00
+            D0 00 01 00 03 02 12 02 15 02 13 02 08 02 20 00
+            01 02 0C 02 0C 02 20 00 17 02 08 02 0F 02 20 00
+            13 02 14 02 01 02 0E 02 04 02 20 00 09 02 0E 02
+            20 00 0F 02 15 02 12 02 20 00 17 02 01 02 19 02
+            FF FF 19 00 E0 00 01 00 02 02 05 02 0E 02 05 02
+            01 02 14 02 08 02 20 00 0F 02 15 02 12 02 20 00
+            09 02 0E 02 16 02 09 02 0E 02 03 02 09 02 02 02
+            0C 02 05 02 20 00 06 02 05 02 05 02 14 02 A1 00
+            00 00 20 00 C8 00 01 00 D4 00 08 02 05 02 20 00
+            04 02 01 02 19 02 20 00 0F 02 06 02 20 00 16 02
+            09 02 03 02 14 02 0F 02 12 02 19 02 20 00 09 02
+            13 02 20 00 0E 02 05 02 01 02 12 02 A1 00 00 00
+            80 00 C8 00 01 00 C7 00 0F 02 20 00 06 02 0F 02
+            12 02 20 00 09 02 14 02 A1 00 A1 00 00 00 3B 00
+            C0 00 01 00 CE 00 0F 02 AC 00 AC 00 AC 00 20 00
+            D4 00 0F 02 20 00 14 02 08 02 09 02 0E 02 0B 02
+            20 00 C9 00 20 00 17 02 0F 02 15 02 0C 02 04 02
+            FF FF 2B 00 D0 00 01 00 06 02 01 02 0C 02 0C 02
+            20 00 14 02 0F 02 20 00 01 02 20 00 0D 02 05 02
+            12 02 05 02 20 00 0D 02 01 02 03 02 08 02 09 02
+            0E 02 05 02 AC 00 AC 00 AC 00 00 00 31 00 C0 00
+            01 00 C2 00 15 02 14 02 20 00 14 02 08 02 09 02
+            13 02 20 00 09 02 13 02 20 00 0E 02 0F 02 14 02
+            20 00 14 02 08 02 05 02 20 00 06 02 15 02 0C 02
+            0C 02 FF FF 43 00 D0 00 01 00 05 02 18 02 14 02
+            05 02 0E 02 14 02 20 00 0F 02 06 02 20 00 0D 02
+            19 02 20 00 10 02 0F 02 17 02 05 02 12 02 AC 00
+            AC 00 AC 00 00 00 32 00 C0 00 01 00 CE 00 0F 02
+            20 00 16 02 09 02 14 02 01 02 0C 02 20 00 13 02
+            09 02 07 02 0E 02 13 02 20 00 04 02 05 02 14 02
+            05 02 03 02 14 02 05 02 04 02 AE 00 FF FF 55 00
+            D0 00 01 00 0D 02 09 02 13 02 13 02 09 02 0F 02
+            0E 02 20 00 03 02 0F 02 0D 02 10 02 0C 02 05 02
+            14 02 05 02 04 02 AC 00 00 00 5C 00 C8 00 01 00
+            CD 00 05 02 18 02 09 02 03 02 0F 02 AE 00 20 00
+            D8 00 D8 00 20 00 12 02 15 02 09 02 0E 02 13 02
+            AC 00 00 00 14 00 C0 00 01 00 C1 00 15 02 14 02
+            0F 02 0D 02 01 02 14 02 09 02 03 02 20 00 12 02
+            05 02 03 02 0F 02 16 02 05 02 12 02 19 02 20 00
+            01 02 03 02 14 02 09 02 16 02 01 02 14 02 05 02
+            04 02 AC 00 FF FF 3E 00 D0 00 01 00 C5 00 0E 02
+            14 02 05 02 12 02 09 02 0E 02 07 02 20 00 13 02
+            14 02 01 02 0E 02 04 02 02 02 19 02 20 00 0D 02
+            0F 02 04 02 05 02 AC 00 00 00 36 00 C0 00 01 00
+            CE 00 0F 02 20 00 0F 02 0E 02 05 02 20 00 09 02
+            0E 02 20 00 14 02 08 02 09 02 13 02 20 00 15 02
+            0E 02 09 02 16 02 05 02 12 02 13 02 05 02 FF FF
+            79 00 D0 00 01 00 0D 02 01 02 19 02 20 00 04 02
+            05 02 06 02 19 02 20 00 0D 02 05 02 AC 00 00 00
+            30 00 C8 00 01 00 C9 00 AE 00 20 00 D0 00 19 02
+            12 02 0F 02 0E 02 AE 00 20 00 12 02 15 02 0C 02
+            05 02 20 00 0F 02 16 02 05 02 12 02 20 00 01 02
+            0C 02 0C 02 AC 00 00 00 14 00 B0 00 01 00 C1 00
+            14 02 20 00 0C 02 01 02 13 02 14 02 AE 00 20 00
+            14 02 08 02 09 02 13 02 20 00 10 02 0C 02 01 02
+            0E 02 05 02 14 02 20 00 09 02 13 02 20 00 0D 02
+            09 02 0E 02 05 02 AC 00 FF FF 2C 00 C0 00 01 00
+            C1 00 13 02 20 00 10 02 01 02 12 02 14 02 20 00
+            0F 02 06 02 20 00 0D 02 19 02 20 00 03 02 0F 02
+            0C 02 0C 02 05 02 03 02 14 02 09 02 0F 02 0E 02
+            AE 00 FF FF 47 00 D0 00 01 00 0C 02 05 02 14 02
+            20 00 09 02 14 02 20 00 13 02 08 02 09 02 0E 02
+            05 02 20 00 06 02 0F 02 12 02 05 02 16 02 05 02
+            12 02 FF FF 54 00 E0 00 01 00 09 02 0E 02 20 00
+            01 02 0C 02 0C 02 20 00 09 02 14 02 13 02 20 00
+            02 02 05 02 01 02 15 02 14 02 19 02 AC 00 00 00
+            A4 00 C8 00 01 00 C8 00 0D 02 10 02 08 02 A1 00
+            00 00 6E 00 C8 00 01 00 D7 00 08 02 01 02 14 02
+            20 00 09 02 13 02 20 00 14 02 08 02 09 02 13 02
+            BF 00 A1 00 00 00 47 00 C0 00 01 00 C5 00 01 02
+            12 02 14 02 08 02 20 00 09 02 13 02 20 00 02 02
+            05 02 09 02 0E 02 07 02 20 00 04 02 12 02 01 02
+            17 02 0E 02 FF FF 18 00 D0 00 01 00 09 02 0E 02
+            20 00 02 02 19 02 20 00 13 02 0F 02 0D 02 05 02
+            20 00 14 02 12 02 05 02 0D 02 05 02 0E 02 04 02
+            0F 02 15 02 13 02 20 00 06 02 0F 02 12 02 03 02
+            05 02 A1 00 00 00 27 27 00 38 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13
+            16 15 00 17 00 00 18 00 1A 19 1C 1B 1E 1D 20 1F
+            22 21 24 23 26 25 28 27 2A 29 00 00 00 00 2C 2B
+            2E 2D 30 2F 32 31 34 33 36 35 38 37 00 00 1E 1E
+            00 21 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 00 00 00 00 12 11 14 13 16 15 18 17
+            1A 19 1C 1B 1E 1D 20 1F 00 21 18 18 00 3A 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            12 11 00 13 00 00 14 00 16 15 18 17 1A 19 1C 1B
+            1E 1D 20 1F 22 21 24 23 26 25 28 27 00 00 00 00
+            2A 29 2C 2B 2E 2D 30 2F 32 31 34 33 36 35 38 37
+            3A 39 00 00 1A 1A 00 39 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15
+            00 17 00 00 18 00 1A 19 1C 1B 1E 1D 20 1F 22 21
+            24 23 26 25 28 27 00 29 00 00 2A 00 2C 2B 2E 2D
+            30 2F 32 31 34 33 36 35 38 37 00 39 1F 1F 00 33
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 16 15 18 17 1A 19 00 00 00 00
+            1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29
+            2C 2B 2E 2D 30 2F 32 31 00 33 17 17 00 33 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            12 11 14 13 16 15 18 17 00 19 00 00 1A 00 1C 1B
+            1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B
+            2E 2D 30 2F 32 31 00 33 13 13 00 34 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11
+            14 13 16 15 18 17 00 00 00 00 1A 19 1C 1B 1E 1D
+            20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B 2E 2D
+            30 2F 32 31 34 33 00 00 17 17 00 28 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11
+            14 13 16 15 18 17 1A 19 00 00 00 00 1C 1B 1E 1D
+            20 1F 22 21 24 23 26 25 28 27 00 00 0F 0F 00 18
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 16 15 18 17 00 00 27 27 00 42
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 00 00 00 00 14 13 16 15 18 17 1A 19
+            1C 1B 1E 1D 20 1F 22 21 24 23 26 25 00 00 00 00
+            28 27 2A 29 2C 2B 2E 2D 30 2F 32 31 34 33 36 35
+            38 37 3A 39 3C 3B 3E 3D 40 3F 42 41 00 00 2B 2B
+            00 4F 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 14 13 16 15 18 17 1A 19 00 00
+            00 00 1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27
+            2A 29 2C 2B 2E 2D 30 2F 32 31 34 33 00 35 00 00
+            36 00 38 37 3A 39 3C 3B 3E 3D 40 3F 42 41 44 43
+            46 45 48 47 4A 49 4C 4B 4E 4D 00 4F 09 09 00 06
+            00 00 02 01 04 03 06 05 00 00 08 08 00 0E 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 00 00
+            0B 0B 00 1C 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17 1A 19
+            1C 1B 00 00 0B 0B 00 10 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 00 00 2D 2D 00 43
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 16 15 18 17 00 19 00 00 1A 00
+            1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29
+            00 00 00 00 2C 2B 2E 2D 30 2F 32 31 34 33 36 35
+            38 37 3A 39 3C 3B 3E 3D 40 3F 42 41 00 43 0A 0A
+            00 09 00 00 02 01 04 03 06 05 08 07 00 09 09 09
+            00 0A 00 00 02 01 04 03 06 05 08 07 0A 09 00 00
+            29 29 00 57 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 00 17 00 00
+            18 00 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 2A 29 2C 2B 2E 2D 00 00 00 00 30 2F 32 31
+            34 33 36 35 38 37 3A 39 3C 3B 3E 3D 40 3F 42 41
+            44 43 00 00 00 00 46 45 48 47 4A 49 4C 4B 4E 4D
+            50 4F 52 51 54 53 56 55 00 57 1D 1D 00 31 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            12 11 14 13 16 15 00 17 00 00 18 00 1A 19 1C 1B
+            1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B
+            2E 2D 30 2F 00 31 1A 1A 00 22 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13
+            16 15 00 00 00 00 18 17 1A 19 1C 1B 1E 1D 20 1F
+            22 21 00 00 2D 2D 00 45 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 00 15
+            00 00 16 00 18 17 1A 19 1C 1B 1E 1D 20 1F 22 21
+            24 23 26 25 28 27 2A 29 00 2B 00 00 2C 00 2E 2D
+            30 2F 32 31 34 33 36 35 38 37 3A 39 3C 3B 3E 3D
+            40 3F 42 41 44 43 00 45 28 28 00 45 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11
+            14 13 16 15 18 17 00 00 00 00 1A 19 1C 1B 1E 1D
+            20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B 2E 2D
+            00 2F 00 00 30 00 32 31 34 33 36 35 38 37 3A 39
+            3C 3B 3E 3D 40 3F 42 41 44 43 00 45 06 06 00 06
+            00 00 02 01 04 03 06 05 00 00 27 27 00 29 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 00 00
+            00 00 10 0F 12 11 14 13 16 15 18 17 1A 19 1C 1B
+            1E 1D 20 1F 22 21 24 23 26 25 28 27 00 29 29 29
+            00 41 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 14 13 16 15 00 00 00 00 18 17
+            1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 00 25 00 00
+            26 00 28 27 2A 29 2C 2B 2E 2D 30 2F 32 31 34 33
+            36 35 38 37 3A 39 3C 3B 3E 3D 40 3F 00 41 17 17
+            00 34 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 14 13 16 15 18 17 00 19 00 00
+            1A 00 1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27
+            2A 29 2C 2B 2E 2D 30 2F 32 31 34 33 00 00 25 25
+            00 43 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 00 00 00 00 14 13 16 15 18 17
+            1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27
+            2A 29 00 2B 00 00 2C 00 2E 2D 30 2F 32 31 34 33
+            36 35 38 37 3A 39 3C 3B 3E 3D 40 3F 42 41 00 43
+            28 28 00 40 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17 1A 19
+            00 1B 00 00 1C 00 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 2A 29 2C 2B 00 2D 00 00 2E 00 30 2F 32 31
+            34 33 36 35 38 37 3A 39 3C 3B 3E 3D 40 3F 00 00
+            1F 1F 00 3D 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 00 00 00 00
+            18 17 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 00 00 00 00 2A 29 2C 2B 2E 2D 30 2F 32 31
+            34 33 36 35 38 37 3A 39 3C 3B 00 3D 0F 0F 00 28
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+        </patch>
+        <patch offset="0x11bc8">
+            10 0F 12 11 14 13 16 15 00 00 00 00 18 17 1A 19
+            1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27 00 00
+            1B 1B 00 2E 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17 00 00
+            00 00 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 2A 29 2C 2B 2E 2D 00 00 34 34 00 68 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            12 11 14 13 16 15 18 17 1A 19 00 1B 00 00 1C 00
+            1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B
+            2E 2D 30 2F 32 31 34 33 00 00 00 00 36 35 38 37
+            3A 39 3C 3B 3E 3D 40 3F 42 41 44 43 46 45 48 47
+            4A 49 4C 4B 4E 4D 50 4F 00 00 00 00 52 51 54 53
+            56 55 58 57 5A 59 5C 5B 5E 5D 60 5F 62 61 64 63
+            66 65 68 67 00 00 13 13 00 27 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13
+            00 15 00 00 16 00 18 17 1A 19 1C 1B 1E 1D 20 1F
+            22 21 24 23 26 25 00 27 19 19 00 29 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11
+            00 13 00 00 14 00 16 15 18 17 1A 19 1C 1B 1E 1D
+            20 1F 22 21 24 23 26 25 28 27 00 29 0B 0B 00 11
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 00 11 18 18 00 26 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 00 13 00 00
+            14 00 16 15 18 17 1A 19 1C 1B 1E 1D 20 1F 22 21
+            24 23 26 25 00 00 20 20 00 38 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 00 00 00 00
+            12 11 14 13 16 15 18 17 1A 19 1C 1B 1E 1D 20 1F
+            22 21 24 23 00 00 00 00 26 25 28 27 2A 29 2C 2B
+            2E 2D 30 2F 32 31 34 33 36 35 38 37 00 00 18 18
+            00 44 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 14 13 00 00 00 00 16 15 18 17
+            1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27
+            00 00 00 00 2A 29 2C 2B 2E 2D 30 2F 32 31 34 33
+            36 35 38 37 3A 39 3C 3B 3E 3D 40 3F 42 41 44 43
+            00 00 10 10 00 1D 00 00 02 01 04 03 06 05 08 07
+            0A 09 0C 0B 00 0D 00 00 0E 00 10 0F 12 11 14 13
+            16 15 18 17 1A 19 1C 1B 00 1D 0B 0B 00 0F 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 00 0F
+            1C 1C 00 2B 00 00 02 01 04 03 06 05 08 07 00 00
+            00 00 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15
+            18 17 00 19 00 00 1A 00 1C 1B 1E 1D 20 1F 22 21
+            24 23 26 25 28 27 2A 29 00 2B 30 30 00 4F 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            12 11 14 13 16 15 18 17 1A 19 1C 1B 00 00 00 00
+            1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B
+            2E 2D 30 2F 32 31 00 33 00 00 34 00 36 35 38 37
+            3A 39 3C 3B 3E 3D 40 3F 42 41 44 43 46 45 48 47
+            4A 49 4C 4B 4E 4D 00 4F 18 18 00 2C 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11
+            14 13 16 15 00 00 00 00 18 17 1A 19 1C 1B 1E 1D
+            20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B 00 00
+            09 09 00 13 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 00 13 0E 0E 00 1D 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 00 00 00 00
+            0E 0D 10 0F 12 11 14 13 16 15 18 17 1A 19 1C 1B
+            00 1D 3A 3A 00 6A 00 00 02 01 04 03 06 05 08 07
+            0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 00 15 00 00
+            16 00 18 17 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23
+            26 25 28 27 2A 29 2C 2B 2E 2D 30 2F 32 31 00 00
+            00 00 34 33 36 35 38 37 3A 39 3C 3B 3E 3D 40 3F
+            42 41 44 43 46 45 48 47 4A 49 4C 4B 00 00 00 00
+            4E 4D 50 4F 52 51 54 53 56 55 58 57 5A 59 5C 5B
+            5E 5D 60 5F 62 61 64 63 66 65 68 67 6A 69 00 00
+            1C 1C 00 34 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17 1A 19
+            00 00 00 00 1C 1B 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 2A 29 2C 2B 2E 2D 30 2F 32 31 34 33 00 00
+            15 15 00 19 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17 00 19
+            22 22 00 3B 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 00 00 00 00 16 15
+            18 17 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 2A 29 00 2B 00 00 2C 00 2E 2D 30 2F 32 31
+            34 33 36 35 38 37 3A 39 00 3B 05 05 00 0A 00 00
+            02 01 04 03 06 05 08 07 0A 09 00 00 1C 1C 00 38
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            00 0F 00 00 10 00 12 11 14 13 16 15 18 17 1A 19
+            1C 1B 1E 1D 20 1F 22 21 24 23 26 25 00 00 00 00
+            28 27 2A 29 2C 2B 2E 2D 30 2F 32 31 34 33 36 35
+            38 37 00 00 23 23 00 6C 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15
+            18 17 00 19 00 00 1A 00 1C 1B 1E 1D 20 1F 22 21
+            24 23 26 25 28 27 2A 29 2C 2B 2E 2D 30 2F 32 31
+            34 33 00 35 00 00 36 00 38 37 3A 39 3C 3B 3E 3D
+            40 3F 42 41 44 43 46 45 48 47 4A 49 4C 4B 4E 4D
+            50 4F 00 51 00 00 52 00 54 53 56 55 58 57 5A 59
+            5C 5B 5E 5D 60 5F 62 61 64 63 66 65 68 67 6A 69
+            6C 6B 00 00 09 09 00 18 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15
+            18 17 00 00 0B 0B 00 17 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15
+            00 17 2F 2F 00 51 00 00 02 01 04 03 06 05 08 07
+            0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17
+            1A 19 00 1B 00 00 1C 00 1E 1D 20 1F 22 21 24 23
+            26 25 28 27 2A 29 2C 2B 2E 2D 30 2F 32 31 34 33
+            00 35 00 00 36 00 38 37 3A 39 3C 3B 3E 3D 40 3F
+            42 41 44 43 46 45 48 47 4A 49 4C 4B 4E 4D 50 4F
+            00 51 06 06 00 08 00 00 02 01 04 03 06 05 08 07
+            00 00 0E 0E 00 0F 00 00 02 01 04 03 06 05 08 07
+            0A 09 0C 0B 0E 0D 00 0F 34 34 00 65 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11
+            14 13 16 15 18 17 1A 19 1C 1B 00 1D 00 00 1E 00
+            20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B 2E 2D
+            30 2F 32 31 34 33 00 35 00 00 36 00 38 37 3A 39
+            3C 3B 3E 3D 40 3F 42 41 44 43 46 45 48 47 00 00
+            00 00 4A 49 4C 4B 4E 4D 50 4F 52 51 54 53 56 55
+            58 57 5A 59 5C 5B 5E 5D 60 5F 62 61 64 63 00 65
+            09 09 00 0A 00 00 02 01 04 03 06 05 08 07 0A 09
+            00 00 06 06 00 05 00 00 02 01 04 03 00 05 17 17
+            00 39 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 00 00 00 00 14 13 16 15 18 17
+            1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27
+            00 00 00 00 2A 29 2C 2B 2E 2D 30 2F 32 31 34 33
+            36 35 38 37 00 39 07 07 00 0E 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 00 00 20 20 00 32
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 16 15 00 00 00 00 18 17 1A 19
+            1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29
+            2C 2B 2E 2D 30 2F 32 31 00 00 1A 1A 00 27 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            00 00 00 00 12 11 14 13 16 15 18 17 1A 19 1C 1B
+            1E 1D 20 1F 22 21 24 23 26 25 00 27 12 12 00 25
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 00 00 00 00 12 11 14 13 16 15 18 17 1A 19
+            1C 1B 1E 1D 20 1F 22 21 24 23 00 25 21 21 00 3E
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 00 15 00 00 16 00 18 17 1A 19
+            1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29
+            2C 2B 2E 2D 00 2F 00 00 30 00 32 31 34 33 36 35
+            38 37 3A 39 3C 3B 3E 3D 00 00 05 05 00 04 00 00
+            02 01 04 03 00 00 13 13 00 3A 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 00 0F 00 00 10 00
+            12 11 14 13 16 15 18 17 1A 19 1C 1B 1E 1D 20 1F
+            22 21 24 23 26 25 28 27 2A 29 00 2B 00 00 2C 00
+            2E 2D 30 2F 32 31 34 33 36 35 38 37 3A 39 00 00
+            15 15 00 29 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 00 0D 00 00 0E 00 10 0F 12 11 14 13 16 15
+            18 17 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 00 29 1B 1B 00 27 00 00 02 01 04 03 06 05
+            08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15
+            18 17 00 00 00 00 1A 19 1C 1B 1E 1D 20 1F 22 21
+            24 23 26 25 00 27 39 39 00 47 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13
+            00 15 00 00 16 00 18 17 1A 19 1C 1B 1E 1D 20 1F
+            22 21 24 23 26 25 28 27 2A 29 2C 2B 00 2D 00 00
+            2E 00 30 2F 32 31 34 33 36 35 38 37 3A 39 3C 3B
+            3E 3D 40 3F 42 41 44 43 46 45 00 47 07 07 00 07
+            00 00 02 01 04 03 06 05 00 07 31 31 00 4C 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            12 11 14 13 16 15 18 17 1A 19 1C 1B 00 1D 00 00
+            1E 00 20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B
+            2E 2D 30 2F 00 31 00 00 32 00 34 33 36 35 38 37
+            3A 39 3C 3B 3E 3D 40 3F 42 41 44 43 46 45 48 47
+            4A 49 4C 4B 00 00 44 44 00 73 00 00 02 01 04 03
+            06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 12 11 14 13
+            16 15 18 17 1A 19 1C 1B 00 1D 00 00 1E 00 20 1F
+            22 21 24 23 26 25 28 27 2A 29 2C 2B 2E 2D 30 2F
+            32 31 34 33 36 35 38 37 00 39 00 00 3A 00 3C 3B
+            3E 3D 40 3F 42 41 44 43 46 45 48 47 4A 49 4C 4B
+            4E 4D 50 4F 52 51 54 53 56 55 00 57 00 00 58 00
+            5A 59 5C 5B 5E 5D 60 5F 62 61 64 63 66 65 68 67
+            6A 69 6C 6B 6E 6D 70 6F 72 71 00 73 0B 0B 00 1B
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 16 15 18 17 1A 19 00 1B 0A 0A
+            00 0B 00 00 02 01 04 03 06 05 08 07 0A 09 00 0B
+            1E 1E 00 2F 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 00 00 00 00
+            18 17 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25
+            28 27 2A 29 2C 2B 2E 2D 00 2F 18 18 00 2D 00 00
+            02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F
+            12 11 14 13 16 15 18 17 00 00 00 00 1A 19 1C 1B
+            1E 1D 20 1F 22 21 24 23 26 25 28 27 2A 29 2C 2B
+            00 2D 11 11 00 2A 00 00 02 01 04 03 06 05 08 07
+            0A 09 0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17
+            00 00 00 00 1A 19 1C 1B 1E 1D 20 1F 22 21 24 23
+            26 25 28 27 2A 29 00 00 0A 0A 00 11 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 10 0F 00 11
+            1B 1B 00 33 00 00 02 01 04 03 06 05 08 07 0A 09
+            0C 0B 0E 0D 10 0F 12 11 14 13 16 15 18 17 1A 19
+            1C 1B 00 1D 00 00 1E 00 20 1F 22 21 24 23 26 25
+            28 27 2A 29 2C 2B 2E 2D 30 2F 32 31 00 33 1B 1B
+            00 23 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 14 13 16 15 00 17 00 00 18 00
+            1A 19 1C 1B 1E 1D 20 1F 22 21 00 23 18 18 00 18
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 16 15 18 17 00 00 2F 2F 00 5C
+            00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B 0E 0D
+            10 0F 12 11 14 13 16 15 18 17 1A 19 1C 1B 00 1D
+            00 00 1E 00 20 1F 22 21 24 23 26 25 28 27 2A 29
+            2C 2B 2E 2D 30 2F 32 31 34 33 36 35 00 00 00 00
+            38 37 3A 39 3C 3B 3E 3D 40 3F 42 41 44 43 46 45
+            48 47 4A 49 00 00 00 00 4C 4B 4E 4D 50 4F 52 51
+            54 53 56 55 58 57 5A 59 5C 5B 00 00 05 05 00 05
+            00 00 02 01 04 03 00 05 09 09 00 0E 00 00 02 01
+            04 03 06 05 08 07 0A 09 0C 0B 0E 0D 00 00 16 16
+            00 30 00 00 02 01 04 03 06 05 08 07 0A 09 0C 0B
+            0E 0D 10 0F 12 11 14 13 00 00 00 00 16 15 18 17
+            1A 19 1C 1B 1E 1D 20 1F 22 21 24 23 26 25 28 27
+            2A 29 2C 2B 2E 2D 30 2F 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00
+        </patch>
+        <patch offset="0x23baa">
+            C7 1B 23 E9 2B 6C 03 ED 6C 1B 34 C7 0A 9C A5 67
+            E7 6E C3 2A 79 34 8A 4A F8 C1 DC 8D 04 4A 33 62
+            87 6B 0C 38 C3 F6 14 89 54 D9 5D BD FA 9A 75 3C
+            A3 43 D3 F6 E2 19 67 9B 98 69 63 1C 9A 2C D6 B1
+            99 B1 CD F0 5B 26 30 79 DF EE BC 53 7B F3 97 20
+            F1 71 AC E9 BF 26 C6 01 5A AF 0D B0 0F BD 64 12
+            4E 93 15 4D EE FD 90 38 F8 2C A9 A4 08 33 E5 4C
+            F2 57 70 47 C9 9E 5C B0 19 69 4F 46 4E CA 02 DE
+            A0 38 C1 AA DD AF 45 B7 A1 7B 3A 45 AF 7A B5 6B
+            46 DF 4A 68 92 96 C8 8E 56 05 D3 82 47 5C 67 A7
+            15 6C 43 4D 7F BA 3F 28 E2 CC DE DD 18 52 2F 01
+            A4 F5 A5 EE E4 15 80 D5 73 F1 1F 39 7C F3 63 2C
+            7D 88 F0 8D 07 86 FC 27 7A 87 FA 05 39 09 4E D6
+            D7 99 38 B1 29 34 68 DF C8 7A 99 38 04 46 E2 C5
+            8A 2F 35 00 67 05 F4 53 C3 ED 83 87 B9 D9 B4 73
+            28 42 FA 45 C4 69 74 BB 54 5A 7F DF 02 3B A4 C6
+            CB FE 51 29 DA D3 8F D2 B2 4A 2C 4C FA BE 70 23
+            C4 B5 74 65 AA E3 04 34 96 C2 F1 C3 39 89 0E 1F
+            7F D5 1B F2 31 CB F5 6F A3 C6 A7 E6 6C A5 80 E4
+            5B 73 9D 0A A6 88 4D 9C 33 E3 25 FA 90 63 A1 6A
+            CE C9 18 AA 92 90 8F 4B C5 4A E5 F2 3C B0 3C 3C
+            0D 5B 7B B0 D0 16 3F 3D DA AB A2 E1 A1 BD DC 93
+            94 EF 96 0F B9 C6 C9 3A 89 E5 A9 3C 67 43 71 29
+            84 B9 D9 8D 32 9D 2B 3A 93 AF A9 3D 73 9C 75 97
+            44 5D C9 99 B3 B0 A0 82 78 E1 88 A4 6B 1B DF 1E
+            33 77 18 9D 64 88 02 23 9C 32 1E 6D EB 2D 5B 40
+            6A EC CA 25 A5 67 95 DA 6C 52 94 2D 46 BB 68 5D
+            C2 4F 56 2C 35 67 0A 60 6B CB 76 11 C0 9C 8C 9B
+            FF 59 FA 12 38 95 57 BF 9F 6E 6E 77 8A EE 7F 34
+            43 B9 69 33 7E 97 A4 6B C7 F0 83 4D 14 C5 D1 75
+            CC 2C E0 BF 1F 25 DB 8B 1B E4 DA C2 91 69 ED 57
+            49 C3 D4 23 96 7D 52 16 5A 8F 6D 6D 34 DC 6F C6
+            4C 83 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 02 01 04 03 06 05 08 07 14 13 16 15 18 17
+            1A 19 26 25 28 27 2A 29 2C 2B 38 37 3A 39 3C 3B
+            3E 3D 4A 49 4C 4B 4E 4D 50 4F 5C 5B 5E 5D 60 5F
+            62 61 6E 6D 70 6F 72 71 74 73 80 7F 82 81 84 83
+            86 85 92 91 94 93 96 95 98 97 A4 A3 A6 A5 A8 A7
+            AA A9 B6 B5 B8 B7 BA B9 BC BB C8 C7 CA C9 CC CB
+            CE CD 0A 09 0C 0B 0E 0D 10 0F 12 11 12 12 12 12
+            12 12 1C 1B 1E 1D 20 1F 22 21 24 23 24 24 24 24
+            24 24 2E 2D 30 2F 32 31 34 33 36 35 36 36 36 36
+            36 36 40 3F 42 41 44 43 46 45 48 47 37 37 37 37
+            37 37 52 51 54 53 56 55 58 57 5A 59 49 49 49 49
+            49 49 64 63 66 65 68 67 6A 69 6C 6B 5B 5B 5B 5B
+            5B 5B 76 75 78 77 7A 79 7C 7B 7E 7D 6D 6D 6D 6D
+            6D 6D 88 87 8A 89 8C 8B 8E 8D 90 8F 7F 7F 7F 7F
+            7F 7F 9A 99 9C 9B 9E 9D A0 9F A2 A1 91 91 91 91
+            91 91 AC AB AE AD B0 AF B2 B1 B4 B3 A3 A3 A3 A3
+            A3 A3 BE BD C0 BF C2 C1 C4 C3 C6 C5 B5 B5 B5 B5
+            B5 B5 D0 CF D2 D1 D4 D3 D6 D5 D8 D7 C7 C7 C7 C7
+            C7 C7 02 00 30 42 02 00 65 42 02 00 97 42 02 00
+            E0 42 02 00 08 43 02 00 46 43 02 00 8B 43 02 00
+            CC 43 02 00 1F 44 02 00 73 44 02 00 A8 44 02 00
+            DA 44 02 00 29 45 02 00 79 45 02 00 CB 45 02 00
+            15 46 02 00 5C 46 02 00 99 46 02 00 C9 46 02 00
+            EB 46 02 00 1F 47 02 00 56 47 02 00 95 47 02 00
+            D3 47 02 00 06 48 02 00 63 48 02 00 9E 48 02 00
+            E7 48 02 00 19 49 02 00 3A 49 02 00 9D 49 02 00
+            DA 49 02 00 08 4A 02 00 55 4A 02 00 99 4A 02 00
+            D5 4A 02 00 32 4B 02 00 5A 4B 02 00 94 4B 02 00
+            D0 4B 02 00 15 4C 02 00 39 4C 02 00 6D 4C 02 00
+            A8 4C 02 00 CB 4C 02 00 F7 4C 02 00 1A 4D 02 00
+            3B 4D 02 00 6E 4D 02 00 AC 4D 02 00 E2 4D 02 00
+            1A 4E 02 00 51 4E 02 00 A1 4E 02 00 D3 4E 02 00
+            0E 4F 02 00 26 4F 02 00 70 4F 02 00 C7 4F 02 00
+            F9 4F 02 00 2B 50 02 00 77 50 02 00 B1 50 02 00
+            E4 50 02 00 28 51 02 00 6E 51 02 00 B5 51 02 00
+            E9 51 02 00 11 52 02 00 40 52 02 00 71 52 02 00
+            B0 52 02 00 F1 52 02 00 2F 53 02 00 5F 53 02 00
+            89 53 02 00 B1 53 02 00 F9 53 02 00 41 54 02 00
+            82 54 02 00 DA 54 02 00 27 55 02 00 66 55 02 00
+            9C 55 02 00 DD 55 02 00 2E 56 02 00 6B 56 02 00
+            8C 56 02 00 C4 56 02 00 0C 57 02 00 44 57 02 00
+            A5 57 02 00 FC 57 02 00 54 58 02 00 82 58 02 00
+            CC 58 02 00 F8 58 02 00 52 59 02 00 A2 59 02 00
+            DD 59 02 00 19 5A 02 00 67 5A 02 00 9F 5A 02 00
+            D2 5A 02 00 21 5B 02 00 77 5B 02 00 AF 5B 02 00
+            0C 5C 02 00 59 5C 02 00 B2 5C 02 00 EF 5C 02 00
+            23 5D 02 00 71 5D 02 00 8D 5D 02 00 B0 5D 02 00
+            E1 5D 02 00 22 5E 02 00 4F 5E 02 00 A3 5E 02 00
+            E3 5E 02 00 07 5F 02 00 48 5F 02 00 74 5F 02 00
+            9F 5F 02 00 D3 5F 02 00 0B 60 02 00 41 60 02 00
+            7C 60 02 00 B3 60 02 00 D5 60 02 00 ED 60 02 00
+            21 61 02 00 57 61 02 00 8D 61 02 00 CD 61 02 00
+            03 62 02 00 43 62 02 00 8D 62 02 00 C8 62 02 00
+            19 63 02 00 5B 63 02 00 84 63 02 00 D1 63 02 00
+            11 64 02 00 5C 64 02 00 9D 64 02 00 EA 64 02 00
+            29 65 02 00 69 65 02 00 A7 65 02 00 F6 65 02 00
+            40 66 02 00 8D 66 02 00 DF 66 02 00 2A 67 02 00
+            77 67 02 00 C1 67 02 00 0F 68 02 00 52 68 02 00
+            93 68 02 00 DE 68 02 00 18 69 02 00 50 69 02 00
+            89 69 02 00 C1 69 02 00 ED 69 02 00 0E 6A 02 00
+            41 6A 02 00 8E 6A 02 00 CC 6A 02 00 14 6B 02 00
+            5C 6B 02 00 98 6B 02 00 D9 6B 02 00 34 6C 02 00
+            70 6C 02 00 A5 6C 02 00 EB 6C 02 00 0E 6D 02 00
+            27 6D 02 00 73 6D 02 00 AD 6D 02 00 EC 6D 02 00
+            1C 6E 02 00 3E 6E 02 00 7C 6E 02 00 C5 6E 02 00
+            07 6F 02 00 22 6F 02 00 68 6F 02 00 AC 6F 02 00
+            EA 6F 02 00 02 70 02 00 41 70 02 00 8F 70 02 00
+            AE 70 02 00 E2 70 02 00 01 71 02 00 3A 71 02 00
+            84 71 02 00 C8 71 02 00 E7 71 02 00 22 72 02 00
+            6E 72 02 00 B7 72 02 00 1A 73 02 00 58 73 02 00
+            97 73 02 00 D3 73 02 00 24 74 02 00 4E 74 02 00
+            A1 74 02 00 DA 74 02 00 22 75 02 00 7A 75 02 00
+            CE 75 02 00 A4 7A 02 00 16 7B 02 00 AC 7B 02 00
+            32 7C 02 00 98 7C 02 00 2A 7D 02 00 8A 7D 02 00
+            16 7E 02 00 CA 7E 02 00 66 7F 02 00 D2 7F 02 00
+            78 80 02 00 D0 80 0C 0C 6C E0 D4 C5 09 08 20 13
+            13 09 0D 20 20 19 12 14 05 15 13 20 12 14 0E 05
+            14 07 AC 08 E0 00 D1 9C 05 D2 05 0D 02 0D 12 05
+            09 20 20 14 05 17 0C 0C 00 AC 0C 00 E0 0C C5 82
+            08 D7 20 0F 13 09 14 20 05 08 13 20 12 14 0E 0F
+            05 07 14 13 00 BF 94 E0 CD D1 13 15 20 14 0F 19
+            20 15 16 05 0E 05 01 20 0B 13 00 BF 0C 00 E0 0C
+            BF 5E 08 D7 20 19 0F 0E 20 14 14 13 10 0F 17 20
+            09 08 05 0C 19 20 15 0F 03 20 0E 01 00 BF AC E0
+            D3 CB 01 10 05 12 19 20 15 0F 13 12 0C 05 00 06
+            9C E0 01 D7 0F 0E 08 14 12 05 04 20 13 09 12 07
+            03 01 AC 05 00 00 0C 0C B9 E0 C8 C5 10 0D AC 08
+            C4 20 06 05 01 05 00 14 9C E0 04 D1 05 0F 20 13
+            0F 0E 20 14 15 13 14 09 0D 20 AC 05 00 00 0C 0C
+            60 E0 D9 C5 15 0F 06 20 15 0F 08 07 20 14 05 17
+            0C 0C 01 20 01 07 0E 09 14 13 0D 20 AC 05 E0 00
+            D1 70 20 C9 05 12 10 13 03 05 20 14 0F 19 12 15
+            13 20 12 14 0E 05 14 07 AC 08 00 00 0C 0C 54 E0
+            CE C5 14 0F 02 20 04 01 06 20 12 0F 01 20 13 20
+            12 14 0B 0F 20 05 06 0F 0C 20 03 15 AC 0B E0 00
+            D1 54 0E C1 05 20 14 0E 12 05 01 14 0E 09 0E 09
+            20 07 09 0E 08 07 AC 14 AC AC C8 20 08 05 00 AC
+            0C 00 E0 0C C5 52 20 C9 0F 17 0C 15 20 04 0C 10
+            19 01 01 20 0C 20 14 09 0C 14 20 05 0F 0C 07 0E
+            12 05 00 AE 6C E0 02 D1 14 15 C9 20 01 20 20 0D
+            20 01 05 16 19 12 02 20 13 15 20 19 01 0D AC 0E
+            00 00 0C 0C 66 E0 C8 BF 08 05 08 20 08 05 20 AC
+            08 D4 14 01 17 20 13 01 01 20 15 0D 09 13 07 0E
+            00 AC 6B E0 C1 CB 0C 20 14 09 0C 14 20 05 01 04
+            07 0E 12 05 09 20 20 13 0F 0E 20 14 0F 13 E0 00
+            D7 9C 01 02 20 04 0F 0E 20 17 0E 01 20 04 08 14
+            0E 05 00 AC 0C 00 E0 0C BF 77 0F D9 20 15 0F 06
+            0C 0F 20 AC 09 C4 20 04 0F 19 20 15 08 14 0E 09
+            00 0B 70 E0 19 CB 15 0F 03 20 15 0F 04 0C 09 20
+            10 0D 12 05 0F 13 01 0E 05 14 0D 20 00 05 7C E0
+            01 D7 04 0E 05 20 03 13 10 01 20 05 0E 15 15 10
+            09 0E 08 13 04 05 00 BF 0C 00 E0 0C C5 92 14 C9
+            13 20 05 05 13 0D 19 20 15 0F 03 20 15 0F 04 0C
+            E0 00 D1 72 0F 0E 20 14 0F 03 19 10 0D 20 20 19
+            0F 0E 0C 02 20 05 0F 10 05 17 AC 12 00 00 0C 0C
+            93 E0 C9 C5 20 14 13 09 0F 20 05 16 AC 12 D2 20
+            07 05 05 12 00 14 83 E0 19 D1 15 0F 20 12 03 01
+            09 14 0E 0F 20 13 0E 09 08 20 0C 05 AC 0C 00 00
+            0C 0C 60 E0 C3 BE 12 01 05 16 14 20 09 08 20 13
+            0E 09 0F 14 19 20 15 0F 20 12 0C 06 13 05 AC 08
+            E0 00 CA 9A 08 D4 12 05 20 05 13 09 0F 20 0C 0E
+            20 19 0E 0F 00 05 89 E0 16 D6 03 09 0F 14 AE 12
+            01 20 04 0E 09 20 20 14 13 09 C9 20 00 AC 0C 00
+            E0 0C BF 6A 06 C9 19 20 15 0F 0D 20 01 05 20 0E
+            0F 14 04 20 06 05 01 05 20 14 05 0D 00 AE 7D E0
+            13 CB 01 14 05 0B 19 20 15 0F 20 12 09 0C 05 06
+            0F 20 20 0E 14 09 00 AC 94 E0 C9 D7 20 14 13 09
+            0F 20 0C 0E 20 19 12 10 10 0F 12 05 00 AC 0C 00
+            E0 0C BF 58 20 C9 0E 05 0F 0A 05 19 20 04 15 0F
+            20 12 09 14 05 0D 14 20 07 0F 14 05 05 08 AE 12
+            E0 00 CB 99 08 14 15 0F 08 07 09 20 20 14 05 0C
+            14 06 0D 20 00 05 7E E0 17 D7 0E 01 09 14 07 0E
+            01 20 0C 20 14 09 0C 14 20 05 0F 0D 05 12 00 AC
+            0C 00 E0 0C BF AD 19 CD 06 20 12 09 14 13 06 20
+            07 09 14 08 E0 00 CB 8E 0E 09 01 20 08 20 0E 15
+            12 04 04 05 19 20 01 05 13 12 00 AE 64 E0 01 D7
+            04 0E 14 20 09 08 20 13 13 09 01 20 0C 0C 19 20
+            15 0F 0F 20 06 06 12 05 00 BF 0C 00 E0 0C BF 88
+            01 C3 20 0E 0F 19 20 15 0F 0E 20 14 05 06 0C 05
+            09 20 BF 14 E0 00 CB 94 20 C1 01 17 05 16 0F 20
+            20 06 01 04 0B 12 05 0E 13 13 E0 00 D7 95 08 14
+            14 01 13 20 01 17 0C 0C 17 0F 20 13 0C 01 A1 0C
+            00 00 0C 0C 7E E0 C8 C5 08 05 08 20 08 05 AC AC
+            20 AC 0F C6 07 12 16 09 20 05 05 0D 00 AC 5A E0
+            D9 D1 15 0F 0C 20 0F 0F 20 0B 14 15 05 14 0C 12
+            20 19 09 12 09 04 15 03 0F 0C 13 15 00 AC 0C 00
+            E0 0C C5 83 0F D4 09 0E 08 07 AE 14 0C 20 14 05
+            15 20 20 13 0F 14 13 01 00 14 A2 E0 17 D1 14 09
+            20 08 0F 19 12 15 02 20 0F 0C 04 0F 00 AC 0C 00
+            E0 0C CB 60 0F CE 0F 20 05 0E 03 20 0E 01 13 20
+            0F 14 20 10 05 0D 20 AC 0F CE 0F 20 05 0E 00 A1
+            0C 00 E0 0C C5 64 20 C9 09 06 08 07 20 14 09 17
+            08 14 01 20 0C 0C 0D 20 20 19 09 0D 08 07 AC 14
+            E0 00 D1 A8 08 D4 14 01 09 20 20 13 19 0D 17 20
+            19 01 00 A1 0C 00 E0 0C C5 A2 05 CC 20 14 05 0D
+            02 20 20 05 0C 03 01 05 AC 12 E0 00 D1 58 20 C9
+            01 08 05 16 0E 20 20 0F 13 15 20 05 0F 06 20 12
+            0C 13 17 0F 0F 10 05 0B A1 13 00 00 0C 0C 65 E0
+            D4 C5 12 0F 05 0D 14 0E 0E 09 20 07 0F 19 20 15
+            0E 01 20 19 15 06 14 12 05 08 00 12 64 E0 09 D1
+            20 13 0F 0E 20 14 19 0D 13 20 19 14 05 0C 20 AC
+            05 C7 20 14 0F 0C 14 13 00 A1 0C 00 E0 0C C5 7E
+            0F D9 20 15 12 01 20 05 15 11 14 09 20 05 0B 13
+            0C 09 05 0C AC 04 E0 00 D1 52 20 C9 01 03 0E 0E
+            14 0F 01 20 06 06 12 0F 20 04 0F 14 13 20 01 0C
+            0B 03 0F 20 06 06 00 AC 0C 00 E0 0C C5 95 14 D3
+            10 0F 14 20 05 08 05 12 20 AC 0F D9 20 15 0F 04
+            E0 00 D1 7E 0F 0E 20 14 0E 0B 17 0F 17 20 05 08
+            20 0E 0F 14 11 20 09 15 AC 14 00 00 0C 0C 52 E0
+            C9 BF 20 14 13 09 01 20 02 20 07 09 17 20 12 0F
+            04 0C 20 AE 06 01 05 14 20 12 0C 01 AC 0C E0 00
+            CB 68 20 C9 05 0E 05 16 20 12 08 14 15 0F 08 07
+            20 14 0F 19 20 15 0F 17 0C 15 00 04 72 E0 0D D7
+            0B 01 20 05 05 0D 06 20 07 09 14 08 13 20 12 05
+            0F 09 13 15 19 0C 00 AC 0C 00 E0 0C C5 77 20 C1
+            01 13 09 14 06 13 09 19 07 0E 02 20 14 09 AC 05
+            D9 20 15 0F 00 12 6C E0 02 D1 0F 0C 04 0F 0D 20
+            0B 01 13 05 01 20 06 20 0E 09 20 05 01 13 03 15
+            AC 05 00 00 0C 0C 82 E0 D4 BE 01 12 0E 09 08 20
+            12 01 05 04 20 12 0E 01 20 04 0F 03 05 0D E0 00
+            CA 71 01 02 0B 03 20 A1 20 C9 09 17 0C 0C 02 20
+            20 05 14 13 0F 12 07 0E 12 05 E0 00 D6 B4 19 02
+            14 20 05 08 AE 0E 14 20 0F 0F 00 AC 0C 00 E0 0C
+            C5 89 12 C1 20 05 08 14 13 0F 20 05 01 06 07 0E
+            20 13 15 0A 14 13 E0 00 D1 8F 0F 06 20 12 08 13
+            17 0F 20 BF 01 D0 08 14 14 05 03 09 00 A1 0C 00
+            E0 0C CB 66 01 D3 0F 16 20 12 08 14 20 05 01 14
+            14 13 20 05 06 0F 04 20 06 05 01 05 A1 14 00 00
+            0C 08 5E E0 CD BF 20 19 01 06 07 0E 20 13 09 17
+            0C 0C 14 20 01 05 20 12 0F 19 20 15 10 01 12 01
+            AE 14 E0 00 CB 5F 12 0F 19 20 15 0F 03 20 0E 01
+            12 20 0E 15 17 20 14 09 20 08 0F 19 12 15 14 20
+            09 01 00 0C 6C E0 02 D7 14 05 05 17 0E 05 19 20
+            15 0F 20 12 05 0C 13 07 20 AC 08 C3 0F 0F 05 13
+            00 A1 0C 00 E0 0C C5 83 14 D3 0C 09 AC 0C AC AC
+            C8 20 16 01 20 05 20 C9 14 13 0C 09 00 0C 54 E0
+            0E D1 14 0F 13 20 12 15 01 10 13 13 04 05 0D 20
+            20 19 17 0F 20 0E 09 0C 09 0D 13 14 A1 BF 00 00
+            0C 0C 9A E0 CE C5 14 0F 09 08 07 0E 03 20 0E 01
+            13 20 01 14 04 0E E0 00 D1 96 07 01 09 01 13 0E
+            20 14 19 0D 06 20 0E 01 13 07 A1 A1 00 00 0C 0C
+            78 E0 D4 BF 05 08 0D 20 0F 0F 20 0E 12 04 16 09
+            13 05 0D 20 20 05 01 0D AC 04 E0 00 CB 7B 14 C9
+            03 20 0D 0F 01 0D 04 0E 20 13 05 0D 14 20 20 0F
+            05 14 12 01 E0 00 D7 9C 16 05 12 05 14 19 09 08
+            07 0E 01 20 01 10 14 12 00 A1 0C 00 E0 0C C5 57
+            20 C9 0D 01 CA 20 0E 0F D4 20 0C 01 01 02 0E 09
+            20 AE 20 01 05 17 05 12 0F 17 06 0C E0 00 D1 54
+            01 17 12 12 0F 09 20 12 01 06 14 13 12 05 14 20
+            01 08 20 0E 08 14 20 05 09 17 04 0E 00 AC 0C 00
+            E0 0C C5 5F 09 C7 05 16 15 20 AC 10 D9 20 15 0F
+            03 20 15 0F 04 0C 0E 20 14 0F 02 20 01 05 00 14
+            7E E0 0D D1 20 05 0E 09 01 20 08 20 0E 15 12 04
+            04 05 19 20 01 05 13 12 00 AC 06 00 E0 0C BF 54
+            15 CA 07 04 0E 09 20 07 0E 01 0F 20 10 10 0E 0F
+            0E 05 A7 14 20 13 14 13 05 12 07 0E 08 14 E0 00
+            CB 7C 13 09 10 20 12 01 20 14 06 0F 02 20 09 05
+            07 0E 13 20 12 14 0E 0F AC 07 E0 00 D7 7E 0F D9
+            20 15 01 03 0E 0E 14 0F 05 20 05 16 20 0E 0F 04
+            14 20 01 08 AC 14 00 00 0C 0C C4 E0 C9 C5 0B 20
+            05 0E 20 17 14 09 00 AC 8E E0 C9 D1 01 20 20 0D
+            08 14 20 05 14 13 0F 12 07 0E 13 05 A1 14 00 00
+            0C 0C 54 E0 CE C5 20 0F 01 0D 14 14 12 05 08 20
+        </patch>
+        <patch offset="0x24baa">
+            17 0F 19 20 15 0F 0C 20 0F 0F 20 0B 14 01 09 20
+            AE 14 E0 00 D1 94 A7 C9 20 0D 08 14 20 05 14 13
+            0F 12 07 0E 13 05 AC 14 00 00 0C 0C 54 E0 D9 C5
+            15 0F 12 A7 20 05 05 17 0B 01 20 AE 15 02 20 14
+            0F 04 A7 0E 20 14 0F 17 12 12 AC 19 E0 00 D1 88
+            A7 C9 20 0D 15 0A 14 13 14 20 0F 0F 13 20 12 14
+            0E 0F AC 07 00 00 0C 0C A6 E0 C4 BF 03 0F 0F 14
+            AE 12 04 20 04 09 19 20 15 0F E0 00 CB A1 05 13
+            BF 05 C9 20 0D A7 13 20 12 14 0E 0F AC 07 E0 00
+            D7 78 14 D3 0F 12 07 0E 13 05 20 14 0E 09 14 20
+            05 08 17 20 12 0F 04 0C 00 A1 0C 00 E0 0C CB 54
+            08 D4 14 AD 01 08 20 14 01 0C 14 13 10 20 0E 15
+            08 03 17 20 13 01 13 20 01 03 19 12 00 AC 0C 00
+            E0 0C C5 95 0F C4 13 05 09 20 20 14 15 08 14 12
+            20 BF 08 D7 14 01 E0 00 D1 76 0F 04 13 05 08 20
+            12 15 09 14 07 0E 06 20 05 05 20 0C 09 0C 05 0B
+            00 BF 0C 00 E0 0C C5 6A 20 C9 01 12 05 12 19 0C
+            06 20 07 09 14 08 14 20 09 08 20 13 01 08 04 12
+            00 AC 78 E0 D9 D1 15 0F 17 20 12 05 20 05 12 10
+            14 05 19 14 13 20 12 14 0E 0F AC 07 00 00 0C 0C
+            58 E0 C4 CB 20 0F 0F 19 20 15 05 12 05 0D 02 0D
+            12 05 0D 20 20 19 01 0E 05 0D 0E 20 17 0F 00 BF
+            0C 00 E0 0C C5 7C 20 C9 0E 0B 17 0F 20 A1 0F D9
+            A7 15 05 12 01 20 06 20 0B 01 AE 05 E0 00 D1 BE
+            12 01 0E 05 14 A7 19 20 15 0F 00 BF 0C 00 E0 0C
+            CB 5A 0F D9 20 15 0F 0C 0B 0F 0C 20 0B 09 20 05
+            05 0D 20 AC 15 C2 20 14 20 C9 0F 17 AC 0E 00 00
+            0C 0C 64 E0 C1 CB 05 12 19 20 15 0F 0D 20 20 19
+            09 0C 14 14 05 0C 02 20 0F 12 08 14 12 05 00 BF
+            0C 00 E0 0C C5 6A A7 C9 20 0D 0F 19 AE 15 01 20
+            04 0E 19 20 15 0F 12 A7 20 05 05 0D AC AC 00 AC
+            A6 E0 C9 D1 04 20 0E 0F 14 A7 07 20 14 05 09 20
+            AC 14 00 00 0C 0C 70 E0 C9 C5 0D A7 01 20 20 0E
+            12 01 09 14 09 06 09 03 0C 01 08 20 0D 15 0E 01
+            00 AC 60 E0 D4 D1 05 08 13 20 12 14 0E 0F 05 07
+            14 13 0D 20 0E 01 14 20 05 08 05 12 09 20 AC 13
+            00 00 0C 0C 66 E0 D4 C5 05 08 C4 20 03 0F 0F 14
+            20 12 01 0D 05 04 0D 20 20 05 14 13 0F 12 07 0E
+            00 AC 9C E0 D4 D1 01 08 A7 14 20 13 08 17 20 19
+            20 C9 09 17 AC 0E 00 00 0C 0C 81 E0 C9 C5 08 20
+            16 01 0E 05 14 A7 05 20 14 01 0E 05 13 20 0E 09
+            05 03 E0 00 D1 72 0F 0D 0E 12 0E 09 AC 07 D9 20
+            15 0F 0C 20 0F 0F 20 0B 01 14 14 13 AC 19 00 00
+            0C 0C 94 E0 C8 C5 19 05 20 AE 09 04 20 04 0F 19
+            20 15 0E 0B 17 0F 00 BF 66 E0 D4 D1 05 08 C4 20
+            03 0F 0F 14 20 12 13 09 01 20 07 20 05 12 14 01
+            0D 20 0E 01 00 AC 0C 00 E0 0C BF 82 19 CD 10 20
+            0E 15 08 03 09 20 20 13 05 14 20 0E 09 14 05 0D
+            00 13 89 E0 13 CB 12 14 0E 0F 05 07 20 12 08 14
+            0E 01 19 20 15 0F 13 12 00 AC 72 E0 D4 D7 01 08
+            A7 14 20 13 08 17 20 19 20 C9 05 0E 05 16 20 12
+            0F 0C 05 13 00 AC 0C 00 E0 0C C5 A1 08 D4 20 05
+            0F C4 14 03 12 0F 0E 20 16 05 12 05 E0 00 D1 77
+            12 10 09 01 05 13 20 13 05 0D 20 AC A7 C9 20 0D
+            0F 0C 05 0E 19 0C 00 AC 0C 00 E0 0C C5 71 0F D4
+            20 0F 0F 03 0C 0F 14 20 20 0F 10 13 01 05 BF 0B
+            C4 20 0E 0F 14 A7 E0 00 D1 72 13 01 20 0B 05 0D
+            06 20 12 0F 01 20 20 0E 15 01 0F 14 12 07 10 01
+            A1 08 00 00 0C 0C 9C E0 D4 CB 09 08 20 13 13 09
+            14 20 05 08 05 20 04 0E A1 A1 00 00 0C 0C A0 E0
+            C9 BF 0D A7 CC 20 12 0F 20 04 01 D2 14 10 12 0F
+            00 AE A7 E0 14 CB 05 08 04 20 0D 05 0E 0F 0B 20
+            0E 09 A1 07 E0 00 D7 5A 0F CE 0F 20 05 0E 03 20
+            0E 01 13 20 01 14 04 0E 01 20 01 07 0E 09 14 13
+            0D 20 A1 05 00 00 0C 0C 63 E0 C9 BF 08 20 16 01
+            20 05 0F 0E 03 20 0D 0F 0F 06 14 12 0E 09 20 07
+            0F 17 04 12 00 13 57 E0 06 CB 12 0F 19 20 15 0F
+            20 AC 18 C5 05 03 14 10 14 20 09 08 AC 13 D3 20
+            12 05 05 16 00 13 95 E0 19 D7 15 0F 12 20 07 09
+            14 08 20 A1 01 C8 01 08 01 08 00 A1 0C 00 E0 0C
+            C4 94 09 CC 05 0B 08 20 0C 05 20 0C A7 C9 0C 0C
+            04 20 05 09 E0 00 D0 84 20 01 05 13 0F 03 04 0E
+            14 20 0D 09 AE 05 02 20 02 01 A1 19 00 A1 0C 00
+            E0 0C C4 9B 08 D4 20 05 01 07 05 14 20 13 06 0F
+            08 20 0C 05 00 0C 7E E0 01 D0 05 12 0A 20 13 15
+            20 14 08 01 01 05 AE 04 02 20 02 01 A1 19 00 A1
+            0C 00 E0 0C BF 72 08 D4 05 12 20 05 05 19 12 01
+            20 13 0E 15 05 04 07 12 0F 12 0E 15 AE 04 E0 00
+            CB 8E 0E 01 20 04 A7 C9 20 0D 14 13 0C 09 20 0C
+            0F 07 0E 09 00 07 95 E0 13 D7 12 14 0E 0F A1 07
+            C8 20 08 01 08 01 08 01 A1 01 00 A1 0C 00 E0 0C
+            C5 90 0F D2 14 14 0E 05 14 20 20 0F 08 14 20 05
+            0F 03 05 12 00 AE 5A E0 02 D1 14 15 13 20 09 14
+            0C 0C 01 20 1A 20 0D 0F 09 02 A1 05 C8 20 08 01
+            08 01 A1 01 00 A1 0C 00 E0 0C C5 95 08 D4 13 09
+            17 20 12 0F 04 0C 04 20 05 0F 0E 13 14 A7 E0 00
+            D1 7E 05 0E 04 05 14 20 0F 17 CC 20 12 0F 20 04
+            01 D2 14 10 12 0F AC 13 00 00 0C 0C 95 E0 C6 BF
+            12 0F 05 07 20 14 14 09 20 A1 20 C9 01 03 A7 0E
+            00 14 AC E0 13 CB 01 14 04 0E 06 20 07 09 14 08
+            0E 09 00 07 83 E0 13 D7 0D 0F 0F 05 05 0E 17 20
+            14 09 20 08 19 0D 06 20 03 01 A1 05 00 00 0C 0C
+            7C E0 C2 BF 05 05 20 0E 09 04 14 05 0E 09 20 07
+            0F 14 20 0F 15 0D 08 03 00 BF 8A E0 D9 CB 15 0F
+            12 A7 20 05 0F 0C 0B 0F 0E 09 20 07 01 10 05 0C
+            00 A1 B4 E0 C8 D7 05 05 08 20 05 05 08 20 05 05
+            A1 A1 00 00 0C 0C 88 E0 D7 BF 0E 01 20 14 0F 14
+            13 20 0E 09 20 07 20 01 15 04 14 05 00 BF 8E E0
+            C9 CB 0C A7 20 0C 01 14 05 0B 14 20 05 08 0C 20
+            01 05 AE 04 E0 00 D7 9C 06 0F 03 20 15 0F 13 12
+            A1 05 C8 20 08 01 A1 01 00 A1 0C 00 E0 0C C5 84
+            01 C8 01 08 01 08 20 A1 08 D7 14 01 01 20 13 20
+            07 09 14 08 00 AC 8A E0 D4 D1 01 08 20 14 01 06
+            05 03 13 20 09 15 13 14 19 20 15 0F 00 A1 0C 00
+            E0 0C C4 A6 0F C7 03 20 01 12 19 1A 06 20 12 0F
+            0D 20 00 19 AD E0 13 D0 12 03 01 05 AE 0D 02 20
+            02 01 A1 19 00 A1 0C 00 E0 0C C5 A0 05 C6 0C 05
+            14 20 01 08 20 14 08 13 03 0F BF 0B E0 00 D1 8A
+            0F C7 04 0F 20 AC 14 D3 19 01 14 20 01 08 20 14
+            01 17 A1 19 00 00 0C 0C 90 E0 D9 C5 15 0F 08 20
+            16 01 20 05 0F 0E 12 20 19 08 08 14 AE 0D E0 00
+            D1 90 0F 04 19 20 15 0F 20 BF 01 C8 01 08 01 08
+            01 08 01 08 00 A1 0C 00 E0 0C C5 64 08 D4 15 0F
+            08 07 20 14 0F 19 20 15 0F 03 0C 15 20 04 09 17
+            BF 0E C8 20 08 05 E0 00 D1 66 05 08 AC 08 D9 20
+            15 0F 12 A7 20 05 01 06 20 12 0F 14 20 0F 01 0E
+            16 09 A1 05 00 00 0C 0C 69 E0 C9 C5 0C 20 0B 09
+            20 05 0F 19 AC 15 CE 20 14 0F 09 08 07 0E 06 20
+            05 05 13 0C E0 00 D1 54 05 02 14 14 12 05 14 20
+            01 08 20 0E 15 03 14 14 0E 09 20 07 0F 19 20 15
+            0F 04 0E 17 00 A1 0C 00 E0 0C C5 64 08 C1 AC AC
+            20 AC 0F D9 12 15 0C 20 06 09 20 05 13 09 06 20
+            0C 09 09 0C 07 0E E0 00 D1 6C 05 0D 20 AC 14 C9
+            06 20 05 05 13 0C 17 20 0E 0F 05 04 06 12 0C 15
+            AC AC 00 AC 0C 00 E0 0C C5 88 0F D9 A7 15 05 12
+            03 20 14 15 20 05 08 17 0E 05 19 20 15 0F E0 00
+            D1 9C 05 07 20 14 0F 13 17 20 12 0F 05 0B 20 04
+            10 15 00 AC 0C 00 E0 0C C5 87 A7 C9 0C 0C 14 20
+            0B 01 20 05 16 05 12 05 14 19 09 08 07 0E E0 00
+            D1 BF 12 06 0D 0F 19 20 15 0F AC AC 00 AC 0C 00
+            E0 0C C5 AE 0F D9 A7 15 05 12 02 20 12 0F 0E 09
+            AC 07 E0 00 D1 A6 A7 C9 20 0D 0F 07 0E 09 20 07
+            0F 08 05 0D 00 AC 0C 00 E0 0C BF 7C 0F D9 20 15
+            03 13 01 12 03 14 05 08 20 04 19 0D 06 20 03 01
+            BF 05 E0 00 CB A2 0F C6 0C 0F 13 09 20 08 08 14
+            0E 09 AC 07 AC AC E0 00 D7 90 06 CF 03 20 15 0F
+            13 12 20 05 0F 19 20 15 0F 0C 14 13 00 A1 0C 00
+            E0 0C BF 84 15 D3 08 03 01 20 0E 20 15 01 08 07
+            19 14 03 20 09 08 04 0C 00 AC 82 E0 C3 CB 0D 0F
+            20 05 01 02 0B 03 17 20 05 08 20 0E 0F 19 A7 15
+            05 12 E0 00 D7 A8 15 0F 20 14 06 0F 04 20 01 09
+            05 10 13 12 00 A1 0C 00 E0 0C C5 54 08 D4 12 05
+            20 05 13 09 0E 20 20 0F 13 05 01 03 05 10 0E 20
+            17 0F 20 AC 0F C3 05 0D 00 AE 6C E0 01 D1 03 03
+            10 05 20 14 08 14 20 05 09 0B 13 13 0F 20 20 06
+            05 04 14 01 AC 08 00 00 0C 0C 6A E0 C4 BF 0E 0F
+            14 A7 02 20 20 05 06 01 01 12 04 09 20 AC 20 C1
+            09 0C 14 14 05 0C E0 00 CB 64 01 10 0E 09 20 AE
+            08 14 0E 05 14 20 05 08 10 20 05 0C 13 01 12 15
+            20 05 06 0F E0 00 D7 7D 01 06 0C 0C 0E 09 20 07
+            0E 09 0F 14 04 20 12 01 0E 0B 13 05 AC 13 00 00
+            0C 0C 76 E0 C9 BF 0D A7 14 20 05 08 0D 20 13 0F
+            20 14 05 02 15 01 09 14 15 06 AC 0C E0 00 CB 8D
+            20 C9 01 03 A7 0E 20 14 0F 06 07 12 16 09 20 05
+            0F 19 00 15 89 E0 06 D7 12 0F 17 20 01 05 09 12
+            07 0E 0D 20 20 19 01 06 05 03 00 AC 0C 00 E0 0C
+            C5 76 0F D9 A7 15 05 12 01 20 20 0E 0C 09 15 0C
+            09 13 0E 0F AC AC 20 AC 00 01 53 E0 06 D1 0C 01
+            05 13 10 20 17 0F 12 05 02 20 12 0F 20 0E 06 0F
+            04 20 12 01 0E 0B 13 05 AC 13 00 00 0C 0C 8F E0
+            C4 C5 0E 0F 14 A7 13 20 19 01 A2 20 05 D2 05 0D
+            02 0D 12 05 E0 00 D1 71 08 14 13 09 A2 A1 D7 20
+            01 08 20 14 20 01 15 04 0C 0C 0C 20 0E 09 AC 05
+            00 00 0C 0C 58 E0 D4 C5 09 08 20 13 08 14 09 12
+            0C 0C AC AC 20 AC 20 C1 09 16 14 03 12 0F 20 19
+            0F 17 00 0E 66 E0 02 D1 20 19 20 01 01 08 12 09
+            09 20 20 13 0E 09 0F 14 09 18 01 03 09 14 07 0E
+            00 AC 0C 00 E0 0C BF 76 0D C1 C9 20 0E 20 14 0F
+            02 20 01 05 14 15 06 09 0C 15 17 20 05 08 00 0E
+            74 E0 C9 CB 06 20 07 09 14 08 20 BF 0F D9 20 15
+            01 03 0E 0E 14 0F 17 20 0E 09 E0 00 D7 8A 08 17
+            0C 09 20 05 14 13 12 01 0E 09 20 07 14 01 0D 20
+            AC 05 00 00 0C 0C 6A E0 C5 C5 03 18 14 09 20 05
+            05 0D 05 20 05 16 20 0E 0F 0D 05 12 20 AC 01 CD
+            05 0B E0 00 D1 6B 08 14 13 09 01 20 0E 20 07 09
+            14 08 14 20 20 0F 05 12 05 0D 02 0D 12 05 00 AC
+            0C 00 E0 0C CB 66 08 D4 14 01 06 20 0C 05 20 14
+            0F 07 04 0F 20 AC 08 D4 0E 01 20 0B 0F 19 AC 15
+            00 00 0C 0C 6A E0 C8 C5 17 0F 06 20 0E 15 19 0E
+            20 A1 09 C4 20 04 0F 19 20 15 05 12 0C 01 19 0C
+            E0 00 D1 87 08 14 0E 09 20 0B 0F 19 20 15 0F 03
+            0C 15 20 04 09 17 BF 0E 00 00 0C 0C B2 E0 D7 BF
+            01 08 A7 14 20 13 12 17 0E 0F BF 07 E0 00 CB 7C
+            0F D9 20 15 01 0D 20 19 0F 04 01 20 20 13 0F 19
+            20 15 09 0C 05 0B E0 00 D7 7E 09 17 08 14 0D 20
+            AC 05 AC AC 09 20 20 06 0F 19 20 15 01 03 AC 0E
+            00 00 0C 0C 60 E0 D7 C5 A7 05 0C 0C 0D 20 05 05
+            20 14 07 01 09 01 20 0E 0F 14 09 0E 08 07 AC 14
+            AC AC E0 00 D1 94 0E 09 19 20 15 0F 20 12 09 0E
+            08 07 0D 14 12 01 AC 05 00 00 05 06 54 E0 CF BF
+            01 12 0C 03 20 05 10 13 01 05 13 0B 1F 1F 20 1F
+            10 13 01 05 13 0B 1F 1F 20 1F 10 13 01 05 13 0B
+            00 A1 7B E0 C2 CB 05 0C 13 13 0E 09 13 07 14 20
+            20 0F 08 14 20 05 09 16 14 03 12 0F 00 AE 7B E0
+            04 D7 13 05 01 10 12 09 14 20 20 0F 08 14 20 05
+            05 04 05 06 14 01 04 05 00 A1 0C 00 E0 0C BF 72
+            0E CB 05 05 20 0C 05 02 0F 06 05 12 19 20 15 0F
+            20 12 0F 07 AC 04 AC AC E0 00 CB 5E 0F 07 AC 04
+            AC AC 07 20 04 0F 20 A1 20 C9 0D 01 14 20 05 08
+            0D 20 07 09 14 08 00 19 83 E0 0B D7 0E 09 AC 07
+            AC AC 0B 20 0E 09 AC 07 AC AC 0B 20 0E 09 A1 07
+            00 00 0C 0C 84 E0 CB BF 0F 0E 20 17 0F 19 12 15
+            13 20 12 14 0E 05 14 07 AC 08 AC AC E0 00 CB 64
+            14 13 05 12 07 0E 08 14 AC AC 20 AC 14 13 05 12
+            07 0E 08 14 20 A1 0F CE 05 0E E0 00 D7 66 01 03
+            20 0E 16 0F 12 05 0F 03 05 0D 01 20 07 20 04 0F
+            AC AC 20 AC 0F 07 A1 04 00 00 0C 0C BA E0 D0 C5
+            01 12 13 09 20 05 05 0D AC AC 00 AC 77 E0 10 D1
+            01 12 13 09 20 05 05 0D AC AC 20 AC 12 10 09 01
+            05 13 0D 20 A1 05 00 00 0C 0C 82 E0 C9 BF 20 0E
+            08 14 20 05 09 0B 07 0E 13 A7 0E 20 0D 01 AC 05
+            AC AC E0 00 CB B4 01 0E 05 0D AC AC 20 AC 01 0E
+            05 0D 00 AE 6A E0 C9 D7 17 20 0C 09 20 0C 0F 0E
+            20 14 09 19 0C 05 20 04 09 16 14 03 12 0F A1 19
+            00 00 0C 0C 8A E0 C4 C5 06 05 20 19 0F 0E 20 14
+            08 14 20 05 09 0B 07 0E AC AC 00 AC B3 E0 0B D1
+            0E 09 AC 07 AC AC 0B 20 0E 09 A1 07 00 00 0C 0C
+            5F E0 C6 BF 0F 0F 20 0C 08 17 20 0F 0C 02 13 01
+            08 10 0D 05 13 05 01 20 01 07 0E 09 14 13 E0 00
+            CB 7E 20 01 0F 07 A1 04 C6 20 0C 01 AC 0C AC AC
+            06 20 0C 01 AC 0C AC AC E0 00 D7 65 01 06 0C 0C
+            09 20 14 0E 20 0F 15 03 13 12 04 05 04 20 12 01
+            0E 0B 13 05 A1 13 00 00 0C 0C 78 E0 C4 BF 15 0F
+            14 02 09 20 0D 0D 12 0F 01 14 20 0C 0F 10 05 17
+            AC 12 AC AC E0 00 CB A5 0F 10 05 17 AC 12 AC AC
+            10 20 17 0F 12 05 00 BF 60 E0 D4 D7 09 08 20 13
+            09 0B 07 0E 17 20 0C 09 20 0C 05 04 14 13 0F 12
+            20 19 0F 19 A1 15 00 00 0C 0C 64 E0 D7 C5 0F 08
+            01 20 05 12 19 20 15 0F AC AC 20 AC 0F 19 AC 15
+            AC AC 19 20 15 0F 00 BF 7E E0 D2 D1 16 05 01 05
+            20 0C 0F 19 12 15 14 20 15 12 20 05 0F 06 0D 12
+            00 A1 0C 00 E0 0C C5 66 01 C6 05 0B 20 13 15 0D
+            14 13 02 20 20 05 05 04 14 13 0F 12 05 19 AC 04
+            AC AC E0 00 D1 78 05 04 14 13 0F 12 05 19 AC 04
+            AC AC 04 20 13 05 12 14 19 0F 04 05 00 A1 0C 00
+            E0 0C BF 9C 0E C5 15 0F 08 07 0D 20 03 0F 05 0B
+            19 12 AC AC 00 AC 83 E0 0D CB 03 0F 05 0B 19 12
+            20 A1 08 D4 12 05 20 05 13 09 02 20 14 15 E0 00
+            D7 6C 0E 0F 20 05 09 0B 07 0E AC AC 20 AC 09 0B
+            07 0E AC AC 20 AC 09 0B 07 0E 00 A1 0C 00 E0 0C
+            C5 94 0E C9 0F 13 05 0C 14 0E 17 20 05 12 03 14
+            AC 08 AC AC E0 00 D1 60 01 D6 09 0E 08 13 AC AC
+            20 AC 01 16 09 0E 08 13 AC AC 20 AC 01 16 09 0E
+            08 13 00 A1 0C 00 E0 0C C5 8A 15 C3 13 12 A1 05
+            C3 20 12 15 05 13 20 A1 15 C3 13 12 A1 05 E0 00
+            D1 8A 15 C3 13 12 A1 05 C3 20 12 15 05 13 20 A1
+            15 C3 13 12 A1 05 00 00 0C 0C 8A E0 C1 BF 05 12
+            19 20 15 0F 0C 20 13 09 05 14 09 0E 07 0E AC AC
+            00 AC 86 E0 0C CB 13 09 05 14 09 0E 07 0E 20 BF
+            0F D9 20 15 14 13 0E 01 00 04 72 E0 02 D7 06 05
+            12 0F 20 05 08 14 20 05 09 0B 07 0E AC AC 20 AC
+            09 0B 07 0E 00 A1 0C 00 E0 0C BF 64 20 C9 0D 01
+            0B 20 0E 09 AC 07 AC AC 0B 20 0E 09 AC 07 AC AC
+            0B 20 0E 09 A1 07 E0 00 CB 76 20 C9 0D 01 07 20
+            04 0F AC AC 20 AC 0F 07 AC 04 AC AC 07 20 04 0F
+            00 A1 7E E0 D3 D7 12 14 0E 0F 05 07 14 13 20 A1
+        </patch>
+        <patch offset="0x25baa">
+            0E C9 09 16 03 0E 02 09 05 0C 00 A1 0C 00 E0 0C
+            C5 6C 08 D7 14 01 09 20 20 13 20 01 09 0B 07 0E
+            AC AC 20 AC 09 0B 07 0E AC AC 00 AC 89 E0 0B D1
+            0E 09 BF 07 C5 20 05 14 0E 12 0C 01 10 20 17 0F
+            12 05 00 A1 0C 00 E0 0C BF 78 16 C5 0C 09 20 A1
+            16 C5 0C 09 20 A1 16 C5 0C 09 20 A1 15 D2 0E 09
+            00 A1 54 E0 D2 CB 09 15 A1 0E D2 20 09 15 A1 0E
+            C4 20 13 05 12 14 19 0F 20 A1 05 C4 14 13 0F 12
+            A1 19 E0 00 D7 66 05 C4 14 13 0F 12 A1 19 D3 20
+            01 0C A1 19 D3 20 01 0C A1 19 D3 20 01 0C A1 19
+            00 00 0C 0C 9A E0 D9 BF 15 0F 03 20 0E 01 0F 0E
+            20 14 0F 06 0C 0C 17 0F E0 00 CB 94 19 0D 17 20
+            12 0F 13 04 AC AC 20 AC 0F 17 04 12 BF 13 E0 00
+            D7 60 0F C6 07 12 16 09 20 05 05 0D AC AC 20 AC
+            0F 06 07 12 16 09 20 05 05 0D AC AC 00 AC 0C 00
+            E0 0C BF 54 19 CD 03 20 01 0C 13 17 07 20 0F 12
+            20 17 0F 13 06 20 13 01 20 14 01 0C 05 14 19 0C
+            00 AC 5F E0 D9 CB 15 0F 20 12 0F 02 19 04 0D 20
+            0B 01 13 05 14 20 05 08 10 20 12 05 05 06 14 03
+            E0 00 D7 93 03 13 01 12 03 14 09 08 07 0E 10 20
+            13 0F A1 14 1C 20 00 00 0C 0C 7C E0 C9 C5 20 13
+            08 14 13 09 17 20 01 08 20 14 08 14 19 05 03 20
+            0C 01 00 0C 5A E0 01 D1 20 0E 01 05 19 13 17 20
+            0E 09 20 BF 14 C9 06 20 05 05 13 0C 07 20 05 12
+            14 01 00 A1 0C 00 E0 0C C4 76 15 C8 BF 08 C9 20
+            A7 14 20 13 16 0F 12 05 01 20 12 0C 01 05 19 04
+            00 BF 96 E0 C1 D0 AE 17 14 20 01 08 A7 14 20 13
+            0F 0E 06 20 0E 15 00 AC 0C 00 E0 0C BF 81 20 C9
+            08 14 15 0F 08 07 20 14 20 C9 05 08 04 0C 02 20
+            03 01 00 0B 7D E0 01 CB 0C 20 14 09 0C 14 AC 05
+            CF 20 A1 08 C9 20 0D A7 0A 20 13 15 00 14 87 E0
+            14 D7 0F 0F 13 20 12 14 0E 0F AC 07 D3 20 12 0F
+            19 12 20 A1 00 1C 0C 00 E0 0C CB 82 20 C9 01 08
+            05 14 19 20 15 0F 20 A1 0F D3 14 20 05 08 05 12
+            00 A1 0C 00 E0 0C CA 56 20 C9 0F 17 AE 0E 02 20
+            14 15 0E 20 20 0F 05 12 01 0D 03 14 AE 08 0F 20
+            01 0B BF 19 00 00 0C 0C A8 E0 D4 C5 01 08 20 14
+            01 17 20 13 03 13 12 01 A1 19 E0 00 D1 76 20 C9
+            08 14 15 0F 08 07 20 14 20 C9 09 0D 08 07 20 14
+            0F 0C 05 13 00 AC 0C 00 E0 0C C5 54 0F C4 A7 0E
+            20 14 01 0D 05 0B 13 20 03 15 20 08 20 01 03 13
+            12 01 20 19 01 06 05 03 00 AC 6A E0 C9 D1 A7 14
+            20 13 0F 19 12 15 06 20 15 01 14 0C 19 20 15 0F
+            0C 20 13 0F A1 14 00 00 0C 0C 7E E0 D9 C5 15 0F
+            0C 20 0F 0F 20 0B 15 0A 14 13 0C 20 0B 09 20 05
+            05 0D 00 AC BA E0 C8 D1 17 0F 13 20 12 14 0E 01
+            05 07 00 A1 0C 00 E0 0C BF 81 14 C9 13 A7 0F 20
+            01 0B AC 19 CC 20 03 09 20 0B 08 14 13 0F 00 05
+            65 E0 13 CB 12 03 14 01 08 03 13 05 01 20 04 0E
+            14 20 05 08 A7 19 0C 0C 08 20 01 05 00 0C 7C E0
+            09 D7 20 0E 0F 0E 14 20 0D 09 AC 05 D3 20 05 05
+            20 BF 09 CC 0B 03 00 A1 0C 00 E0 0C C5 5E 01 C3
+            20 0E 20 C9 01 13 20 19 0F 13 05 0D 08 14 0E 09
+            BF 07 D9 20 15 0F 16 A7 00 05 66 E0 07 D1 14 0F
+            01 20 06 20 0E 15 19 0E 06 20 03 01 A1 05 CB 20
+            01 19 01 08 01 08 00 A1 0C 00 E0 0C CA 54 0B CF
+            19 01 20 AE 0F 0E 0D 20 12 0F 20 05 0F 06 0C 0F
+            0E 09 20 07 12 01 15 0F 04 0E 00 A1 0C 00 E0 0C
+            C5 64 0F D3 12 12 A1 19 C4 20 04 09 14 20 01 08
+            20 14 15 08 14 12 20 BF 14 C9 13 A7 E0 00 D1 59
+            0F 19 12 15 06 20 15 01 14 0C 06 20 12 0F 0F 20
+            05 16 04 12 09 0F 07 0E 09 20 AC 14 00 00 0C 0C
+            94 E0 C3 C5 01 0C 13 17 01 20 05 12 01 20 07 20
+            12 09 A7 0C 00 13 A8 E0 08 D1 01 05 14 12 13 A7
+            04 20 13 05 12 09 A1 05 00 00 0C 0C A2 E0 D4 C5
+            0F 0F 02 20 04 01 06 20 12 0F 19 20 15 0F 00 A1
+            A2 E0 D4 D1 05 08 17 20 0E 09 09 20 20 13 09 0D
+            05 0E 00 A1 0C 00 E0 0C C5 8E 09 D6 14 03 12 0F
+            20 19 01 14 14 13 13 05 0C 20 0B 09 00 05 7E E0
+            03 D1 14 01 09 0E AC 10 AC AC D7 20 01 08 20 14
+            20 01 15 12 08 13 00 A1 0C 00 E0 0C C5 7E 05 C7
+            20 14 20 01 09 0C 14 14 05 0C 13 20 12 14 0E 0F
+            05 07 AE 12 E0 00 D1 77 08 14 0E 05 17 20 20 05
+            01 03 20 0E 05 02 06 20 09 12 0E 05 13 04 00 AC
+            0C 00 E0 0C C5 8E 08 D4 13 05 20 05 01 04 13 19
+            20 AE 20 01 01 03 A7 14 00 13 72 E0 07 D1 14 0F
+            01 14 0B 20 0F 0E 20 17 01 0D 14 12 01 09 20 0C
+            12 01 13 14 00 A1 0C 00 E0 0C C4 60 0C D3 13 01
+            A1 08 D3 20 01 0C 08 13 20 A1 0C D3 13 01 AE 08
+            13 20 01 0C 08 13 00 AE 83 E0 13 D0 01 0C 08 13
+            20 AE 0C 13 13 01 AE 08 13 20 01 0C 08 13 A1 A1
+            00 00 0C 0C 8A E0 C2 C5 01 0C 05 04 20 A1 0C C2
+            04 01 A1 05 C2 20 01 0C 05 04 00 A1 72 E0 C2 D1
+            01 0C 05 04 20 A1 0F D9 A7 15 05 12 06 20 0E 09
+            13 09 05 08 A1 04 00 A1 0C 00 E0 0C CB 60 0C D3
+            01 01 13 01 A1 08 20 A1 09 D6 14 03 12 0F 20 19
+            13 09 0D 20 0E 09 A1 05 00 A1 0C 00 E0 0C CB 9C
+            13 C1 05 03 04 0E 14 20 20 0F 05 08 16 01 0E 05
+            00 A1 0C 00 E0 0C C5 90 0C C2 0F 0F A1 04 20 A1
+            0F D9 20 15 0F 03 01 17 04 12 00 A1 7E E0 CC D1
+            14 05 0D 20 20 05 15 03 20 14 0F 19 20 15 07 01
+            09 01 A1 0E 00 A1 0C 00 E0 0C C5 A2 14 D3 02 15
+            0F 02 0E 12 17 20 05 12 03 14 A1 08 E0 00 D1 60
+            05 C2 0F 03 05 0D 12 20 13 15 20 14 10 15 0E 0F
+            0D 20 20 19 0C 02 04 01 A1 05 00 A1 0C 00 E0 0C
+            C5 88 05 C8 20 08 05 08 20 08 05 08 AC 08 AC AC
+            C9 20 03 20 0E 01 E0 00 D1 78 05 08 12 01 19 20
+            15 0F 20 12 0F 13 0C 15 13 20 02 0F 09 02 07 0E
+            00 AC 0C 00 E0 0C C5 6A 08 C1 08 08 20 A1 20 C9
+            01 03 0E 0E 14 0F 07 20 14 05 05 20 0F 0E 07 15
+            00 08 5A E0 0F D1 20 06 08 14 20 05 0C 13 03 09
+            20 0B 05 06 0C 05 0F 20 20 06 0C 02 0F 0F A1 04
+            00 A1 0C 00 E0 0C C5 9C 0E CB 05 05 20 0C 05 02
+            0F 06 05 12 0D 20 A1 05 00 A1 64 E0 C9 D1 0C A7
+            20 0C 09 0D 03 0E 20 05 0F 19 20 15 0F 14 10 20
+            05 09 05 03 A1 13 00 A1 0C 00 E0 0C C5 6F 20 C9
+            01 08 05 16 13 20 05 05 20 0E 08 14 0F 12 07 15
+            20 08 0F 19 12 15 E0 00 D1 53 17 13 12 0F 10 04
+            01 0C AC 19 D7 20 01 08 20 14 20 01 15 04 0C 0C
+            02 20 01 0C 05 04 00 A1 0C 00 E0 0C BF 7C 16 C5
+            0E 05 01 20 03 20 09 08 04 0C 03 20 0E 01 13 20
+            09 17 07 0E E0 00 CB 95 20 01 17 13 12 0F AC 04
+            C9 20 20 14 13 09 14 20 0F 0F E0 00 D7 8F 09 06
+            05 0E 01 20 14 20 19 0F 06 20 12 0F 19 20 15 0F
+            00 A1 0C 00 E0 0C C4 7E 0C D3 13 01 A1 08 C3 20
+            15 12 03 0E A1 08 C8 20 08 01 08 01 A1 01 E0 00
+            D0 66 0C D3 13 01 AE 08 13 20 01 0C 08 13 20 A1
+            05 C8 20 08 05 08 20 08 05 08 A1 08 00 00 0C 0C
+            5F E0 CD BE 20 19 01 0E 05 0D 09 20 20 13 01 C8
+            0E 0E 01 19 20 AE 08 14 20 05 01 04 0B 12 E0 00
+            CA 88 12 01 0F 0D 20 12 08 14 14 01 10 20 13 0F
+            05 13 13 13 13 05 E0 00 D6 8F 08 14 13 09 0D 20
+            0E 01 20 AE 09 C2 08 13 0D 01 0E 0F 00 A1 0C 00
+            E0 0C C5 64 08 D7 14 01 09 20 20 13 12 17 0E 0F
+            BF 07 C1 20 12 06 09 01 BF 04 C1 20 05 12 E0 00
+            D1 53 0F 19 20 15 14 15 05 14 0C 12 20 19 05 14
+            12 12 06 09 05 09 20 04 06 0F 0D 20 BF 05 00 A1
+            0C 00 E0 0C C5 96 01 C8 08 20 20 01 01 08 20 A1
+            05 C8 20 08 05 08 A1 08 E0 00 D1 BA 01 C8 08 20
+            20 01 01 08 08 20 A1 01 00 00 0C 0C 6C E0 CE BF
+            0E 0F 20 05 01 03 20 0E 05 12 09 13 14 13 0D 20
+            20 19 15 03 13 12 A1 05 E0 00 CB AD 08 D4 13 09
+            0D 20 0E 01 13 20 01 08 0C 0C E0 00 D7 78 05 02
+            0D 20 20 19 15 10 10 10 14 05 06 20 12 0F 0C 20
+            06 09 A1 05 00 A1 0C 00 E0 0C C5 6B 05 C8 20 08
+            05 08 AE 08 14 20 01 08 20 14 01 06 05 03 AC AC
+            20 AC 05 CC 00 14 58 E0 09 D1 20 14 17 14 13 09
+            20 14 09 08 05 04 15 0F 0C 13 20 19 0E 09 10 20
+            09 01 A1 0E 00 A1 0C 00 E0 0C BF 7C 20 C9 01 08
+            05 16 0E 20 14 0F 03 20 14 15 05 20 0F 0E 07 15
+            AC 08 E0 00 CB 95 05 CC 20 14 19 0D 02 20 01 0C
+            05 04 04 20 09 12 0B 0E E0 00 D7 8A 0F 0D 05 12
+            0F 20 20 06 0F 19 12 15 02 20 0F 0C 04 0F A1 A1
+            00 00 0C 0C 66 E0 C4 C5 20 0F 0F 0E 20 14 0E 15
+            05 04 05 12 14 13 0D 09 14 01 20 05 05 0D 20 AC
+            00 C9 5A E0 01 D1 20 0D 14 13 0F 12 07 0E 05 20
+            05 16 20 0E 15 0F 20 14 06 0F 17 20 14 01 12 05
+            00 AC 0C 00 E0 0C BF 84 0F C6 20 12 0F 19 12 15
+            09 20 06 0E 12 0F 01 0D 09 14 0E 0F 00 AE 93 E0
+            15 CB 04 0E 12 05 01 17 05 14 20 12 20 C9 0F 17
+            0C 15 00 04 78 E0 08 D7 16 01 20 05 15 03 20 14
+            0F 19 20 15 0F 14 10 20 05 09 05 03 AC 13 00 00
+            0C 0C 59 E0 C2 C5 06 05 12 0F 20 05 0F 19 20 15
+            13 01 AE 0B C9 20 13 20 01 08 0C 0C 14 20 0C 05
+            00 0C 71 E0 19 D1 15 0F 20 AC 20 C9 0D 01 14 20
+            05 08 13 20 12 14 0E 0F 05 07 14 13 00 A1 0C 00
+            E0 0C C5 70 0F D9 20 15 12 01 20 05 05 02 0F 19
+            04 0E 13 20 16 01 0E 09 AC 07 C1 20 E0 00 D1 54
+            09 0D 0E 0E 17 0F 03 20 0E 01 0F 0E 20 14 05 04
+            05 06 14 01 01 20 13 20 01 08 0B 12 00 AC 0C 00
+            E0 0C C5 6C 08 D7 14 01 01 20 20 0E 0E 15 01 07
+            0E 09 19 0C 16 20 03 09 0F 14 19 12 00 AC 66 E0
+            C8 D1 0E 0F 13 05 0C 14 AC 19 AC AC 17 20 01 08
+            20 14 20 01 0F 02 08 14 12 05 00 AC 0C 00 E0 0C
+            BF 8D 14 C9 14 20 0F 0F 20 0B 05 0D 14 20 0F 0F
+            0C 20 0E 0F 00 07 71 E0 14 CB 20 0F 12 07 17 0F
+            15 20 05 13 20 04 0F 14 14 20 05 08 01 20 12 09
+            00 AC 84 E0 C5 D7 05 16 20 0E 20 C9 01 17 20 13
+            0E 09 04 20 0E 01 05 07 AC 12 00 00 0C 0C 8E E0
+            D4 BF 05 08 05 12 01 20 05 12 04 20 19 01 20 13
+            08 17 0E 05 E0 00 CB 90 0F 0E 08 14 0E 09 20 07
+            0F 07 13 05 12 20 07 09 14 08 00 AC 84 E0 D4 D7
+            04 0F 19 01 09 20 20 13 0E 0F 20 05 06 0F 0D 20
+            0E 09 AC 05 00 00 0C 0C A0 E0 C9 BF 0D 20 13 15
+            20 14 05 12 05 0D 02 0D 12 05 00 AC 82 E0 C5 CB
+            05 16 20 0E 20 01 0D 13 0C 01 20 0C 12 06 20 19
+            05 07 13 14 E0 00 D7 6C 0F 02 04 0C 17 20 05 08
+            20 0E 0E 15 05 04 05 12 14 13 0D 09 14 01 04 05
+            00 AC 0C 00 E0 0C BF 7B 20 C9 08 14 15 0F 08 07
+            20 14 0F 19 20 15 05 17 05 12 0F 20 05 0E E0 00
+            CB 84 06 0F 0D 20 20 19 05 10 10 0F 05 0C 20 AC
+            20 C1 09 10 19 14 00 AC 70 E0 C9 D7 0B 20 0F 0E
+            20 17 0F 0E 13 20 03 15 20 08 05 17 0B 01 09 0C
+            07 0E 00 AC 0C 00 E0 0C BF 9A 0F D3 14 20 05 08
+            0B 20 0E 09 C9 20 08 20 16 01 00 05 9F E0 13 CB
+            01 05 03 12 05 08 20 04 0F 06 20 12 01 0D 00 19
+            60 E0 0E D7 14 0F 02 20 20 05 0E 01 01 20 0C 0C
+            20 19 06 01 05 14 20 12 0C 01 AC 0C AC AC 00 00
+            0C 0C 54 E0 C4 BF 0E 0F 14 A7 17 20 12 0F 19 12
+            20 AE 20 C9 0F 17 A7 0E 20 14 01 05 20 14 0F 19
+            AC 15 E0 00 CB A4 20 C9 0E 0F 19 0C 05 20 14 01
+            10 20 05 12 00 19 94 E0 09 D7 20 0E 09 06 08 07
+            09 14 07 0E 13 20 01 08 05 10 00 AC 0C 00 E0 0C
+            BF 7E 0F C4 0E 20 14 0F 06 20 07 09 14 08 0D 20
+            20 05 07 01 09 01 AC 0E E0 00 CB A1 05 CE 14 18
+            14 20 0D 09 20 05 20 C9 09 17 0C 0C E0 00 D7 84
+            12 03 13 15 20 08 0F 19 20 15 0F 03 10 0D 05 0C
+            05 14 19 0C 00 AC 0C 00 E0 0C BF 94 0E CB 17 0F
+            0F 20 20 06 19 0D 10 20 0F 05 0C 10 BF 05 E0 00
+            CB 88 05 D4 0C 0C 0D 20 AC 05 AC AC CE 20 AC 0F
+            D4 20 0F 08 05 13 E0 00 D7 6C 0F 17 0E 15 13 04
+            08 20 16 01 20 05 09 13 05 0C 03 0E 04 05 19 20
+            15 0F 00 AC 0C 00 E0 0C C5 59 20 C1 0C 02 17 0F
+            06 20 05 12 04 05 06 20 0F 12 20 0D 08 14 20 05
+            05 17 07 09 14 08 E0 00 D1 5A 06 0F 17 20 14 01
+            12 05 03 20 0E 01 03 20 15 12 08 13 01 20 19 0E
+            08 14 0E 09 AC 07 00 00 0C 0C 57 E0 C9 C5 20 13
+            08 14 13 09 14 20 05 08 02 20 13 05 20 14 08 14
+            20 05 15 13 06 12 03 01 00 05 66 E0 17 D1 12 0F
+            04 0C 03 20 0E 01 0F 20 06 06 12 05 20 BF 0F C8
+            20 17 15 04 0C 0C 00 AC 0C 00 E0 0C BF A8 01 D7
+            05 14 20 12 13 09 01 20 09 0C 05 16 00 AC 5E E0
+            D4 CB 0F 08 05 13 17 20 0F 08 04 20 20 0F 0F 0E
+            20 14 0E 15 05 04 13 12 01 14 04 0E E0 00 D7 94
+            14 09 17 20 0C 09 20 0C 09 04 20 05 19 02 09 20
+            AC 14 00 00 0C 0C 66 E0 D7 C5 05 08 20 0E 20 C9
+            05 12 14 13 12 0F 20 05 19 0D 0B 20 0E 09 04 07
+            0D 0F 00 AE 83 E0 19 D1 15 0F 0D 20 19 01 13 20
+            12 05 05 16 0D 20 20 05 0F 14 AC 0F 00 00 0C 0C
+            71 E0 D3 C5 12 14 0E 01 05 07 AC AC 20 AC 20 C9
+            01 03 0E 0E 14 0F 08 20 01 05 00 12 83 E0 19 D1
+            15 0F 20 12 0F 17 04 12 20 13 06 0F 10 20 01 12
+            13 09 AC 05 00 00 0C 0C 8E E0 CE C5 02 0F 04 0F
+            20 19 0E 09 14 20 05 08 17 20 0F 08 05 0C E0 00
+            D1 5F 09 16 0C 0C 07 01 20 05 13 09 01 20 20 13
+            14 13 0F 12 07 0E 01 20 20 13 05 0D 00 A1 0C 00
+            E0 0C C5 72 05 C8 20 08 05 08 A1 08 C8 20 17 0F
+            17 20 13 01 14 20 01 08 BF 14 C9 20 E0 00 D1 84
+            09 17 0C 0C 0E 20 14 0F 0C 20 13 0F 20 05 0F 14
+            19 20 15 0F 00 A1 0C 00 E0 0C C5 AD 09 C4 0E 04
+            14 A7 19 20 15 0F 05 20 14 01 E0 00 D1 8D 0F 14
+            01 04 20 19 12 0F 13 20 0D 0F 14 05 09 08 07 0E
+            00 BF 0C 00 E0 0C CB 64 09 C4 20 04 0F 19 20 15
+            15 0A 14 13 04 20 20 0F 0F 13 05 0D 08 14 0E 09
+            BF 07 00 00 0C 0C 84 E0 D0 C5 05 08 A1 17 D4 20
+            01 08 20 14 01 17 20 13 0C 03 13 0F AC 05 E0 00
+            D1 90 0F D9 A7 15 05 12 10 20 05 12 14 14 20 19
+            0F 07 04 0F 00 A1 0C 00 E0 0C BF 88 05 CB 10 05
+            03 20 15 01 09 13 07 0E 14 20 0F 12 02 15 05 0C
+            E0 00 CB 83 0E 01 20 04 A7 C9 0C 0C 15 20 05 13
+            0D 20 20 19 15 13 05 10 00 12 83 E0 15 D7 14 0C
+            01 12 06 20 0E 09 13 09 09 08 07 0E 0D 20 16 0F
+            A1 05 00 00 0C 0C 72 E0 CF C5 A1 17 D9 20 15 0F
+            08 20 14 09 10 20 05 12 14 14 20 19 01 08 04 12
+            00 AC 60 E0 D9 D1 15 0F 01 20 05 12 01 20 0D 20
+            14 01 08 03 06 20 12 0F 0D 20 20 19 0F 0D A1 0D
+            00 00 0C 0C 78 E0 D9 BF 15 0F 13 20 12 15 20 05
+            0F 04 A7 0E 20 14 09 07 05 16 15 20 A1 10 E0 00
+            CB 9A 08 D4 14 01 08 20 14 09 20 13 01 08 04 12
+            0F 20 00 0E 9C E0 01 D7 20 0E 0D 05 14 10 20 19
+            14 13 0D 0F 03 01 A1 08 00 00 0C 0C 9C E0 D9 BF
+            15 0F 0C 20 0F 0F 20 0B 09 0C 05 0B 0D 20 AE 05
+            E0 00 CB 8C 15 02 20 14 0F 19 A7 15 05 12 0E 20
+            14 0F 06 20 0F 12 00 0D 84 E0 0F D7 12 15 16 20
+            0C 09 01 0C 05 07 20 AC 05 C7 20 14 15 0F A1 14
+            00 00 0C 0C 7C E0 D0 C5 0F 12 05 14 14 03 0E 09
+        </patch>
+        <patch offset="0x26baa">
+            20 07 08 14 20 05 09 16 0C 0C 07 01 00 05 5E E0
+            09 D1 20 13 19 0D 0A 20 02 0F 20 AC 0F D9 20 15
+            01 03 A7 0E 20 14 0F 04 09 20 A1 14 00 00 0C 0C
+            6A E0 C4 C5 20 0F 0F 0E 20 14 01 0D 05 0B 14 20
+            01 08 20 14 01 10 08 14 14 05 03 09 E0 00 D1 53
+            01 06 05 03 20 AC 0F D9 20 15 09 17 0C 0C 0D 20
+            0B 01 20 05 05 0D 0C 20 15 01 08 07 00 A1 0C 00
+            E0 0C BF 58 05 C8 A1 19 D9 20 15 0F 03 20 0D 01
+            20 05 0F 14 14 20 05 08 16 20 0C 09 01 0C 05 07
+            E0 00 CB 58 08 14 20 05 14 0F 05 08 20 12 01 04
+            A1 19 D3 20 09 14 0C 0C 08 20 16 01 0E 05 14 A7
+            E0 00 D7 86 05 0C 12 01 05 0E 20 04 0F 19 12 15
+            0C 20 13 05 0F 13 BF 0E 00 00 0C 0C 78 E0 D4 C5
+            01 08 20 14 15 10 03 0E 20 08 09 04 20 04 0F 0E
+            08 14 0E 09 A1 07 E0 00 D1 66 0F C3 05 0D 01 20
+            20 14 05 0D 0D 20 12 0F 20 05 05 13 09 12 15 0F
+            0C 13 A1 19 00 00 0C 0C 93 E0 C9 C5 0C A7 20 0C
+            15 14 0E 12 19 20 15 0F 09 20 14 0E 00 0F 71 E0
+            13 D1 01 08 05 16 20 04 03 09 20 05 0E 01 20 04
+            01 05 20 14 0F 19 A1 15 00 A1 0C 00 E0 0C BF AD
+            0F D9 20 15 0F 04 A7 0E 20 14 01 17 14 0E E0 00
+            CB 9B 0F 14 0D 20 0B 01 20 05 05 0D 01 20 07 0E
+            19 12 00 AC 70 E0 C9 D7 0C A7 20 0C 0C 06 14 01
+            05 14 20 0E 0F 19 12 15 08 20 01 05 A1 04 00 A1
+            0C 00 E0 0C CA 5A 08 C1 20 AE 20 C9 0F 03 0C 15
+            20 04 13 15 20 05 20 01 09 0E 05 03 02 20 14 01
+            AC 08 00 00 0C 0C 96 E0 D7 CA 0C 05 AE 0C 14 20
+            0D 09 20 05 0F 14 05 20 14 01 00 AC 0C 00 E0 0C
+            BF 9B 12 D0 14 05 0E 05 09 04 07 0E 04 20 06 05
+            01 05 00 14 82 E0 17 CB 0C 09 20 0C 0F 0E 20 14
+            0F 17 0B 12 20 AC 20 C9 01 08 05 16 E0 00 D7 78
+            0F 0E 20 14 09 08 20 14 0F 19 20 15 0E 05 15 0F
+            08 07 19 20 14 05 00 A1 0C 00 E0 0C C3 96 D5 CF
+            D0 D4 D4 D5 B5 20 20 B0 C5 D0 C3 D2 CE C5 AC D4
+            E0 00 D3 54 C1 D4 C7 D2 D4 C5 D2 20 D0 C5 CC C5
+            C5 CC 20 C4 D5 D3 C3 C3 D3 C5 C6 D3 CC D5 D9 CC
+            00 AC 0C 00 E0 0C BF AC C1 D7 CE D2 CE C9 A1 C7
+            CC 20 C1 C5 C5 D6 E0 00 CB 9A C8 D4 D3 C9 C1 20
+            C5 D2 20 C1 D4 C1 CF 20 C3 CE 00 C5 9C E0 CF D7
+            20 D2 C5 C2 C5 20 C9 CC C9 CD C1 CE C5 D4 AC C4
+            00 00 0C 0C A8 E0 C4 C3 CD C1 C7 C1 20 C5 C5 D4
+            D4 D3 CF 20 AC CB E0 00 D3 7E CF C2 D9 C4 C9 20
+            D4 CE C7 C5 C9 D2 D9 D4 CE 20 D2 CF C1 CD AC CC
+            00 00 0C 8C 86 E0 BE C3 C9 C8 C8 C7 D0 AD D7 CF
+            D2 C5 CD 20 C4 CF 20 C5 C6 CF 00 C6 86 E0 BE D3
+            CB CF 00 00 0C 0C 6C E0 C4 C3 CD C1 C7 C1 20 C5
+            D6 CF D2 C5 B5 20 20 B5 C5 D0 C3 D2 CE C5 AC D4
+            AC AC E0 00 D3 66 C1 D4 C7 D2 D4 C5 C6 20 CE C9
+            CC C1 D9 CC D2 20 D0 C5 CC C5 C5 CC AC C4 AC AC
+            00 00 0C 04 54 E0 CF C3 D4 D5 D5 D0 20 D4 C1 C6
+            CC CC CE C9 AC C7 CF 20 D4 D5 D5 D0 20 D4 C1 C6
+            CC CC CE C9 AC C7 E0 00 D3 54 D7 D3 D4 C9 C8 C3
+            CE C9 20 C7 CF D4 D2 20 D3 C5 D2 C5 C5 D6 C2 20
+            D4 C1 C5 D4 D9 D2 AC AC 00 AC 0C 00 E0 0C BF 9C
+            C1 D7 CE D2 CE C9 A1 C7 D7 20 D2 C1 C9 CE C7 CE
+            00 A1 88 E0 CD CB D3 C1 C1 D3 D2 C3 20 C5 CF CD
+            C5 C4 C2 20 C7 C5 CE C9 00 D3 AC E0 C9 D7 20 CE
+            B0 B1 D3 20 C3 C5 CE CF D3 C4 00 A1 8C 00 E0 0C
+            C3 B0 D3 BE D3 D9 C5 D4 20 CD C5 D2 C5 D3 00 D4
+            B0 E0 BE D3 CB CF 00 00 0C 08 5A E0 CD C3 20 D9
+            C5 D0 C6 D2 D2 CF C1 CD C3 CE 20 C5 D8 C5 C5 C3
+            C4 C5 20 D3 CF D9 D2 D5 AC D3 E0 00 D3 54 C1 D4
+            C7 D2 D4 C5 C4 20 D3 C5 D2 D4 D9 CF C4 C5 C1 20
+            20 D3 D2 D0 C4 C5 C3 C9 C5 D4 AC C4 00 00 0C 0C
+            7C E0 CF BF C4 CC CD 20 C4 CF CC C5 20 AC CF D9
+            D2 D5 C3 20 C1 C8 C3 CE 00 C5 A6 E0 CF CB 20 C6
+            C5 C4 C5 C6 D4 C1 CE C9 20 C7 C5 CD E0 00 D7 A2
+            D0 C1 D2 D0 C1 CF C8 C3 D3 C5 DA 20 D2 C5 AC CF
+            00 00 0C 0C 66 E0 D3 C3 C5 D0 C4 C5 C1 20 C4 CE
+            D0 20 D7 CF D2 C5 C1 20 C5 D2 C5 20 D5 D1 CC C1
+            00 AC 6C E0 CD D3 20 D9 D5 D3 C5 D0 C9 D2 D2 CF
+            D0 20 CF D2 D2 C7 CD C1 D7 20 CE C9 AC D3 00 00
+            0C 8C C2 E0 BE C3 CF D0 C5 D7 20 D2 C6 CF 00 C6
+            C2 E0 BE D3 CB CF 00 00 0C 0C A0 E0 D0 BF CF D2
+            D2 C7 CD C1 A2 20 C5 C4 D4 D3 CF D2 00 D9 B3 E0
+            C1 CB CC CC C8 20 D3 CF C9 D4 C5 CC A2 D3 E0 00
+            D7 90 D8 C5 C3 C5 D4 D5 CF C9 20 CE CF C3 D0 CD
+            C5 CC C5 D4 00 AC 0C 00 E0 0C BF 6C CE C5 CD C5
+            20 D9 C9 D7 CC CC D4 20 20 CF C9 C6 C8 C7 20 D4
+            CF CC D4 D3 00 AC 88 E0 C3 CB D5 CF D4 CE D2 C5
+            D4 C1 C1 D4 CB C3 C3 20 C1 C8 C3 CE 00 C5 96 E0
+            B5 D7 D0 20 D2 C5 C5 C3 D4 CE CF 20 20 D2 C5 CC
+            D3 D3 00 AC 8C 00 E0 0C C3 98 C2 BE D4 C1 CC D4
+            20 C5 CF C3 D0 CD C5 CC C5 D4 00 C4 98 E0 BE D3
+            CB CF 00 00 0C 0C 90 E0 CC C3 C6 C9 20 C5 C9 D3
+            CE C7 20 D3 C1 C6 CC CC CE C9 AC C7 E0 00 D3 7E
+            C1 D4 C7 D2 D4 C5 C6 20 CC D5 D9 CC D2 20 D0 C5
+            CC C5 C5 CC AC C4 00 00 0C 8C 98 E0 BE C3 CE C5
+            CD C5 20 D9 C5 D4 CD D2 CE C9 D4 C1 C4 C5 E0 00
+            D3 98 CF BE 00 CB 0C 00 E0 0C C3 5A D9 D3 D4 D3
+            CD C5 C6 20 CE D5 D4 C3 CF C9 C9 CE C7 CE CE 20
+            D2 CF C1 CD CC CC AC D9 E0 00 D3 96 D2 D0 C7 CF
+            C1 D2 20 CD CF C3 D4 CE CE C9 C5 D5 AC D3 00 00
+            0C 0C 78 E0 D3 BF 03 15 20 08 12 06 07 01 0C 09
+            20 05 12 03 01 05 15 14 05 12 AC 13 E0 00 CB A0
+            19 CD 10 20 17 0F 12 05 09 20 20 13 0F 0D 05 12
+            E0 00 D7 89 08 14 0E 01 C5 20 12 01 08 14 03 20
+            0E 01 02 20 01 05 AC 12 00 00 0C 0C 96 E0 C1 BF
+            0C 0C 0C 20 16 09 0E 09 20 07 08 14 0E 09 13 07
+            00 AE 9A E0 03 CB 01 05 05 13 19 20 15 0F 20 12
+            15 06 09 14 05 0C E0 00 D7 95 14 13 15 12 07 07
+            05 0C 20 13 14 01 0F 20 03 0E AC 05 00 00 0C 0C
+            72 E0 D7 CB 0C 05 0F 03 05 0D AC AC 20 AC 0E 01
+            20 04 01 06 05 12 05 17 0C 0C 00 AC 0C 00 E0 0C
+            C5 70 0F D9 12 15 04 20 13 05 05 10 01 12 05 14
+            13 20 12 14 07 15 0C 07 13 05 E0 00 D1 72 05 0E
+            05 16 20 12 05 03 13 01 20 05 0F 14 01 20 15 0D
+            05 13 0D 20 AC 05 00 00 0C 0C 96 E0 D9 BF 13 05
+            AC AC 20 AC 08 14 14 01 09 20 20 13 14 09 00 AC
+            82 E0 C3 CB 13 01 20 14 16 05 12 05 14 19 09 08
+            07 0E 01 20 09 13 05 04 E0 00 D7 7E 0E 01 20 04
+            09 06 08 07 20 14 05 02 15 01 09 14 15 06 0C 0C
+            A1 19 00 00 0C 0C 6C E0 C5 BF 12 01 08 14 09 20
+            20 13 20 01 14 13 01 12 07 0E 20 05 0C 10 03 01
+            AC 05 E0 00 CB 8D 14 C9 20 13 12 03 01 05 15 14
+            05 12 20 13 09 06 08 07 00 14 AE E0 0D D7 12 05
+            0C 05 20 19 0F 14 04 20 05 09 00 AC 08 00 E0 0C
+            BF 57 08 D4 20 05 14 13 0F 12 07 0E 13 05 20 14
+            0E 09 14 20 05 08 17 20 12 0F 04 0C 20 AE 12 0F
+            E0 00 CB 53 08 14 20 05 14 13 0F 12 07 0E 13 05
+            20 14 0E 09 14 20 05 08 15 20 09 0E 05 16 13 12
+            BF 05 E0 00 D7 78 08 D7 03 09 20 08 0F 04 19 20
+            15 0F 14 20 09 08 0B 0E 17 20 0E 09 BF 13 00 00
+            0C 0C 68 E0 C9 C5 03 20 0D 01 20 05 0C 01 20 0C
+            08 14 13 09 17 20 19 01 20 AC 08 D3 17 0F E0 00
+            D1 66 05 0D 02 20 14 05 05 14 20 12 0F 0D 05 16
+            20 13 08 14 0E 01 14 20 01 08 AC 14 00 00 0C 0C
+            59 E0 C8 C5 10 0D AC 08 CF 20 05 0E 13 20 05 10
+            0B 03 0F 20 20 06 15 04 14 13 14 20 0F 0F 00 0B
+            71 E0 14 D1 0F 0F 0C 20 0E 0F 20 07 0F 14 02 20
+            15 12 08 13 01 20 09 13 05 04 00 AC 0C 00 E0 0C
+            C5 70 08 D7 14 01 09 20 20 13 14 09 19 20 15 0F
+            13 20 19 01 20 BF D9 A2 15 0F E0 00 D1 6A 12 01
+            20 05 05 14 20 0E 05 19 12 01 20 13 0F 14 20 0F
+            01 05 0C 12 A2 19 00 BF 0C 00 E0 0C BF 95 05 D6
+            19 12 17 20 0C 05 AC 0C C9 20 13 20 01 08 0C 0C
+            E0 00 CB 7E 12 05 13 01 20 05 0F 19 20 15 13 01
+            19 20 15 0F 17 20 13 09 AC 08 E0 00 D7 66 05 C2
+            0F 03 05 0D 04 20 13 15 20 14 0E 09 14 20 05 08
+            03 20 13 0F 0F 0D A1 13 00 00 0C 0C A5 E0 C9 C5
+            17 20 0C 09 20 0C 0F 0E 20 14 09 07 05 16 E0 00
+            D1 A1 0F 19 20 15 08 14 13 09 10 20 01 0C 05 0E
+            AC 14 00 00 0C 0C 74 E0 C9 BF 03 20 0E 01 0F 0E
+            20 14 0E 15 05 04 13 12 01 14 04 0E 17 20 19 08
+            E0 00 CB 7C 0F 19 20 15 0F 17 0C 15 20 04 08 03
+            0C 01 05 0C 07 0E 20 05 05 0D E0 00 D7 78 09 17
+            08 14 13 20 03 15 20 08 05 06 02 05 05 0C 10 20
+            17 0F 12 05 00 AC 0C 00 E0 0C C5 8F 08 D4 13 09
+            13 20 09 08 09 0E 07 0E 10 20 01 0C 05 0E 00 14
+            5E E0 09 D1 20 13 01 17 14 13 04 05 0F 20 20 0E
+            05 0C 13 13 12 05 02 20 09 05 07 0E AC 13 00 00
+            0C 0C 94 E0 D9 BF 15 0F 17 20 12 05 20 05 0F 0E
+            20 14 0F 17 14 12 00 08 9F E0 06 CB 07 09 14 08
+            0E 09 AC 07 C9 20 0E 20 05 05 00 04 78 E0 01 D7
+            0D 20 12 0F 20 05 08 03 0C 01 05 0C 07 0E 0E 09
+            20 07 0F 06 AC 05 00 00 0C 0C 82 E0 D4 BF 09 08
+            20 13 0C 10 0E 01 14 05 17 20 0C 09 20 0C 0F 13
+            0E 0F E0 00 CB 6A 05 02 0D 20 0E 09 AC 05 C1 20
+            0C 0C 14 20 01 08 20 14 05 12 01 0D 0E 09 00 13
+            5E E0 09 D7 20 13 0F 14 03 20 05 0C 12 01 01 20
+            01 17 20 19 08 14 20 05 12 14 13 01 AC 08 00 00
+            0C 0C 9A E0 D9 BF 15 0F 08 20 16 01 20 05 0F 0E
+            10 20 01 0C 05 03 E0 00 CB 5C 0E 09 0D 20 20 19
+            0F 03 0C 0C 03 05 09 14 0E 0F 20 AC 0F D9 20 15
+            0F 17 0C 15 00 04 6C E0 0D D7 12 01 14 20 09 08
+            20 13 0C 10 0E 01 14 05 13 A7 02 20 01 05 14 15
+            AC 19 00 00 0C 0C 65 E0 C6 C5 0F 12 20 0D 0C D0
+            14 15 20 0F 0F 14 CD 20 12 05 15 03 19 12 20 AE
+            0C 01 00 0C 58 E0 09 D1 20 13 09 0D 05 0E 20 AC
+            0E CF 19 0C C5 20 12 01 08 14 12 20 0D 05 09 01
+            13 0E 00 AC 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00 00 00
+        </patch>
+        <patch offset="0x2fba4">
+            41 D9 FF 6F 4F 0C
+        </patch>
+        <patch offset="0x30522">
+            34 E1 0C 00 00 00 00 00 34 E5
+        </patch>
+        <patch offset="0x30612">
+            03 09 8A BC BF 3D 14 86 6F ED
+        </patch>
+        <patch offset="0x3066e">
+            B5 F1 94 4E CC 3D FA 6E
+        </patch>
+        <patch offset="0x31e8c">
+            65 3A 66 89 AA 72 C5 BA
+        </patch>
+        <patch offset="0x43d64">
+            F7 59
+        </patch>
+        <patch offset="0x44008">
+            6C 55
+        </patch>
+        <patch offset="0xbb0f8">
+            5E 96
+        </patch>
+        <patch offset="0xbb11e">
+            BA 22 16 40 46 41 FE 7F
+        </patch>
+        <patch offset="0xbb150">
+            37 59
+        </patch>
+        <patch offset="0xbb29a">
+            AF 6A DF 88 C1 28 3C BA
+        </patch>
+        <patch offset="0xc9608">
+            28 71
+        </patch>
+        <patch offset="0xc961e">
+            E1 10
+        </patch>
+        <patch offset="0xc967c">
+            BC F8
+        </patch>
+        <patch offset="0xc9d06">
+            5F C6
+        </patch>
+        <patch offset="0xc9d18">
+            DD 21
+        </patch>
+        <patch offset="0xc9d24">
+            25 1B
+        </patch>
+        <patch offset="0xcc244">
+            8E 9A AE 59 AD A5 41 F0 17 D4 B8 0E A6 AC
+        </patch>
+        <patch offset="0x373900">
+            30
+        </patch>
+        <patch offset="0x842751">
+            FF FF FF
+        </patch>
+        <patch offset="0x842760">
+            EF EF
+        </patch>
+        <patch offset="0x842772">
+            EF F7
+        </patch>
+        <patch offset="0x842783">
+            E7
+        </patch>
+        <patch offset="0x84a740">
+            FF FF FF FF FF FF FF FF
+        </patch>
+        <patch offset="0x84a751">
+            FF FF FF FF FF FF FF 90 08 63 00 86 26 A6 01 F3
+            F3 FF FF
+        </patch>
+        <patch offset="0x84a772">
+            F3
+        </patch>
+        <patch offset="0x84a780">
+            F3 FF F3 FD
+        </patch>
+        <patch offset="0x84a793">
+            F9
+        </patch>
+        <patch offset="0x860170">
+            F1 F1 EE
+        </patch>
+        <patch offset="0x860180">
+            FF FF FE F1 7F FF 7F
+        </patch>
+        <patch offset="0x860190">
+            F2 ED E0 FF 7F FF 7F BF
+        </patch>
+        <patch offset="0x8601a1">
+            DE DE E1 FF 7F 7F BF F8 E5 00 0B 7F 7F 7F 7F 9C
+            9C 9C EF 3F 3F 3F
+        </patch>
+        <patch offset="0x8601c0">
+            C1 C1 C1 FE 1F 1F 1F EF
+        </patch>
+        <patch offset="0x8601d3">
+            E0 FF FF FF 0F
+        </patch>
+        <patch offset="0x860240">
+            C7
+        </patch>
+        <patch offset="0x860251">
+            E7 FF FB
+        </patch>
+        <patch offset="0x860260">
+            E7 E7 FF FB
+        </patch>
+        <patch offset="0x860272">
+            E4 FB FF FF 3F
+        </patch>
+        <patch offset="0x860280">
+            E3 FF E3 FC 9F 7F 1F
+        </patch>
+        <patch offset="0x860290">
+            F7 EF E7 FB DF BF 9F
+        </patch>
+        <patch offset="0x8602a1">
+            E7 E7 FB FF 9F 9F EF CB CB C0 C0 E7 FF 00 00 C3
+            C3 C3 FF 3F 3F 3F CF E1 E1 E0 E0 CF FF 00 00 88
+            88 88 F7 7F 7F 7F 9F
+        </patch>
+        <patch offset="0x8602d3">
+            C0 FF FF FF 7F
+        </patch>
+        <patch offset="0x860370">
+            DF FF C0 FF FF FF 3F
+        </patch>
+        <patch offset="0x860380">
+            CF AF 8F F0 9F FF 9F 7F F8 F8 00 00 FF FF FF FF
+            9F FF 9F EF FF FF FF CF
+        </patch>
+        <patch offset="0x8603a1">
+            9F 9F EF
+        </patch>
+        <patch offset="0x8603b0">
+            8F 8F 8F FF 9F 9F 9F
+        </patch>
+        <patch offset="0x8603c0">
+            C0 C0 C0 FF 3F 3F 3F CF
+        </patch>
+        <patch offset="0x8603d3">
+            E0 FF FF FF 3F
+        </patch>
+        <patch offset="0x860440">
+            FC FF FF FF 7F
+        </patch>
+        <patch offset="0x860451">
+            FE FF FF FF 7F FF BF FF FF FF FF FF FF FF FF FE
+            FE FF FF 7F 7F FF BF FF FF FF FF FF FF FF FF DF
+            FF C2 FF FF FF 7F BF FF FF FF FF FF FF FF FF 9E
+            ED 8C F3 7F FF 7F BF FF FF FF FF FF FF FF FF 9E
+            FF 9E EF 7F FF 7F BF
+        </patch>
+        <patch offset="0x8604a1">
+            9E 9E EF FF 7F 7F BF FF FF FF FF FF FF FF FF CC
+            CC CC FF 3F 3F 3F DF FF FF FF FF FF FF FF FF E1
+            E1 E1 FE 1F 1F 1F EF
+        </patch>
+        <patch offset="0x8604d3">
+            F0 FF FF FF 07
+        </patch>
+        <patch offset="0x860570">
+            DF FF C0 FF BF FF 3F
+        </patch>
+        <patch offset="0x860580">
+            CF AF 8F F0 3F 5F 1F
+        </patch>
+        <patch offset="0x860590">
+            80 FF 80 FF 3F DF 1F EF
+        </patch>
+        <patch offset="0x8605a1">
+            9F 9F E0 FF FF FF 0F FF FF FF FF FF FF FF FF 8F
+            8F 8F FF 9F 9F 9F
+        </patch>
+        <patch offset="0x8605c0">
+            C0 C0 C0 FF 3F 3F 3F CF
+        </patch>
+        <patch offset="0x8605d3">
+            E0 FF FF FF 3F
+        </patch>
+        <patch offset="0x860770">
+            DF FF C0 FF FF FF 1F
+        </patch>
+        <patch offset="0x860780">
+            9E FF 9E E1 7F FF 7F 8F FF FF FF FF FF FF FF FF
+            BE DF 9E EF 7F FF 7F BF
+        </patch>
+        <patch offset="0x8607a1">
+            C0 C0 FF FF 7F 7F BF FF FF FF FF FF FF FF FF FE
+            FE FE E1 7F 7F 7F BF FF FF FF FF F8 F8 F8 F8 BE
+            BE BE FF 7F 7F 7F BF FF FF FF FF E5 E6 E0 E0 C0
+            C0 C0 FF FF FF FF 3F
+        </patch>
+        <patch offset="0x8607e3">
+            E0 FF FF FF 7F
+        </patch>
+        <patch offset="0x860840">
+            C7
+        </patch>
+        <patch offset="0x860851">
+            E7 FF FB
+        </patch>
+        <patch offset="0x860860">
+            E7 E7 FF FB
+        </patch>
+        <patch offset="0x860872">
+            E4 FB FF FF 7F
+        </patch>
+        <patch offset="0x860880">
+            E3 FF E3 FC 3F FF 3F
+        </patch>
+        <patch offset="0x860890">
+            F7 EF E7 F9 3F FF 3F DF
+        </patch>
+        <patch offset="0x8608a1">
+            E7 E7 FB FF 3F 3F DF C0 C0 C0 C0 30 7F 00 00 E7
+            E7 E7 FB 3F 3F 3F DF 99 E2 03 00 60 7F 00 00 82
+            82 82 FD 1F 1F 1F EF
+        </patch>
+        <patch offset="0x8608d3">
+            E0 FF FF FF 07
+        </patch>
+        <patch offset="0x860d70">
+            EE FF 88 F7 F7 FF C7 BF FF FF FF FF FF FF FF FF
+            C6 FF C6 F9 37 FB 33 CF FF FF FF FF FF FF FF FF
+            EE DF CE F3 7F F3 73 9D
+        </patch>
+        <patch offset="0x860da1">
+            CE CE F7 FF 73 73 BD FF FF FF FF FF FF FF FF CE
+            CE CE F7 73 73 73 BD FF FF FF FF FF FF FF FF 84
+            84 84 FB 21 21 21 DE
+        </patch>
+        <patch offset="0x860dd3">
+            C0 FF FF FF 00
+        </patch>
+        <patch offset="0x860e70">
+            F7 FF C4 FB BF FF 3F
+        </patch>
+        <patch offset="0x860e80">
+            E3 FF E3 FC BF DF 9F 7F FF FF FF FF FE FE FE FE
+            F7 EF E7 F9 9F FF 9F EF
+        </patch>
+        <patch offset="0x860ea1">
+            E7 E7 FB FF 9F 9F EF FF FF FF FF FD FC FD FC E7
+            E7 E7 FB 9F 9F 9F EF FF FF FF FF FC FD FD FC 83
+            83 83 FD 0F 0F 0F F7
+        </patch>
+        <patch offset="0x860ed3">
+            E1 FF FF FF 87
+        </patch>
+        <patch offset="0x860f70">
+            DF FF C0 FF 7F FF 7F
+        </patch>
+        <patch offset="0x860f80">
+            CE AE 8E F1 7F BF 3F
+        </patch>
+        <patch offset="0x860f90">
+            9F FF 9F EF 3F FF 3F DF
+        </patch>
+        <patch offset="0x860fa1">
+            9F 9F FF FF 3F 3F DF 0C 0A E0 0E 01 00 FF 00 8E
+            8E 8E FF 3F 3F 3F DF 8F 0A E1 0E 01 00 FF 00 C0
+            C0 C0 FF 7F 7F 7F 9F
+        </patch>
+        <patch offset="0x860fd3">
+            E0 FF FF FF 3F
+        </patch>
+        <patch offset="0x861772">
+            9D EE FF FF CF
+        </patch>
+        <patch offset="0x861780">
+            8C EE 8C F7 CF FF CF 77 FF FF FF FF FF FF FF FF
+            C8 BF 88 F7 9F EF 8F 77
+        </patch>
+        <patch offset="0x8617a1">
+            C0 C0 FF EF 0F 0F F7 87 47 C7 07 FF FF FF FF C2
+            C2 C2 FD 1F 1F 1F EF 31 09 F9 01 FF FF FF FF C7
+            C7 C7 FB 1F 1F 1F EF
+        </patch>
+        <patch offset="0x8617d3">
+            E3 FF FF FF 8F
+        </patch>
+        <patch offset="0x861872">
+            8F F7 FF FF 9F
+        </patch>
+        <patch offset="0x861880">
+            C6 FF C6 FB 3F BF 3F CF FF FF FF FF FF FF FF FF
+            F2 FC F0 FF FF FF FF 3F
+        </patch>
+        <patch offset="0x8618a1">
+            F8 F8
+        </patch>
+        <patch offset="0x8618b0">
+            E4 E4 E4 FB 3F 3F 3F
+        </patch>
+        <patch offset="0x8618c0">
+            9F 9F 9F E7 1F 1F 1F
+        </patch>
+        <patch offset="0x8618d3">
+            CF FF FF FF 8F
+        </patch>
+        <patch offset="0x861a72">
+            80 FF FF FF 7F
+        </patch>
+        <patch offset="0x861a80">
+            B8 FF B8 C7 FF FF FF 3F 00 01 00 01 60 90 00 F0
+            F1 FF F1 DE FF FF FF 7F
+        </patch>
+        <patch offset="0x861aa1">
+            E3 E3 FC
+        </patch>
+        <patch offset="0x861ab0">
+            C7 C7 C7 F9 7F 7F 7F
+        </patch>
+        <patch offset="0x861ac0">
+            80 80 80 FF 7F 7F 7F BF
+        </patch>
+        <patch offset="0x861ad3">
+            C0 FF FF FF 3F
+        </patch>
+    </rom>
+    <rom index="2">
+        <part>
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 03 00 04 00 01 01 00
+03 00 01 00 01 00 00 00 06 94 08 20 41 56 50 4D
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 03 00 04 00 01 01 00
+03 00 01 00 01 00 00 00 06 94 08 20 41 56 50 4D
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSWA/>
+        <DSWB/>
+        <DSWC/>
+    </switches>
+    <buttons names="Light Punch,Middle Punch,Heavy Punch,Light Kick,Middle Kick,Heavy Kick,Start,Coin,Core credits" default="A,B,X,Y,L,R,Start,Select,-" count="6"/>
+</misterromdescription>
