@@ -1,0 +1,105 @@
+<misterromdescription>
+    <name>Konami's Open Golf Championship (ver EAE)</name>
+    <setname>opengolf</setname>
+    <rbf>KonamiGXT1</rbf>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Arcade</category>
+    <rotation>horizontal</rotation>
+
+    <rom index="1"><part>25</part></rom>
+
+    <!-- the SDRAM image rtl/memory/gx_sdram_top.sv expects for this set
+         (rtl/gx_board_cfg.sv arm 37); written and proven by
+         scripts/build_mra.py, not by hand -->
+    <rom index="0" zip="opengolf.zip|konamigx.zip" md5="none" address="0x30000000">
+        <!-- maincpu, the CPU's window packed: BIOS, then 0x200000.. moved down by 0x1e0000 -->
+        <part name="300a01.34k" crc="d5fa95f5"/>
+        <interleave output="32">
+            <part name="218eae02.34n" crc="6f99ddb0" map="0012"/>
+            <part name="218eae03.31n" crc="c173cf3c" map="1200"/>
+        </interleave>
+        <interleave output="32">
+            <part name="218eae02.34n" crc="6f99ddb0" map="0012"/>
+            <part name="218eae03.31n" crc="c173cf3c" map="1200"/>
+        </interleave>
+        <interleave output="32">
+            <part name="218a04.34s" crc="e50043a7" map="0012"/>
+            <part name="218a05.31s" crc="46c6b5d3" map="1200"/>
+        </interleave>
+        <part repeat="2">00</part>
+        <!-- k056832: the four-byte part of each 5-byte row, then the last 1 byte of each (the core spreads rows to 8) -->
+        <part repeat="917502">00</part>
+        <part name="218a15.19y" crc="78ddc8af"/>  <!-- four-byte part -->
+        <part name="218a16.16y" crc="a41a3ec8"/>  <!-- four-byte part -->
+        <part repeat="2411724">00</part>
+        <part name="218a14.22y" crc="508cd75e"/>  <!-- second part -->
+        <part repeat="209715">00</part>
+        <!-- k055673: GX6, bytes 0-3 of each half-row, then bytes 4-5 -->
+        <part repeat="4194305">00</part>
+        <interleave output="32">
+            <part name="218a12.26y" crc="83158653" map="0021"/>
+            <part name="218a10.31y" crc="059bfee3" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="218a13.24y" crc="b9ffd12a" map="0021"/>
+            <part name="218a11.28y" crc="b57231e5" map="2100"/>
+        </interleave>
+        <part name="218a08.35y" crc="5b7098f3"/>  <!-- two-byte part -->
+        <part name="218a09.33y" crc="13627443"/>  <!-- two-byte part -->
+        <!-- soundcpu: MAME's region as it is -->
+        <part repeat="3145728">00</part>
+        <interleave output="16">
+            <part name="218a06.8p" crc="6755ccf9" map="01"/>
+            <part name="218a07.6p" crc="221e5293" map="10"/>
+        </interleave>
+        <!-- k054539: MAME's region as it is -->
+        <part name="218a17.14y" crc="0b525127"/>
+        <part name="218a18.12y" crc="98ec4cfb"/>
+        <part repeat="1048576">00</part>
+        <part repeat="786432">00</part>
+        <!-- gfx3: MAME's region as it is -->
+        <interleave output="32">
+            <part name="218a20.10d" crc="f0ac2d6f" map="0001"/>
+            <part name="218a21.7d" crc="cb15122a" map="0010"/>
+            <part name="218a22.5d" crc="1b08d7dc" map="0100"/>
+            <part name="218a23.3d" crc="1e4224b5" map="1000"/>
+        </interleave>
+        <!-- gfx4: MAME's region as it is -->
+        <interleave output="24">
+            <part name="218a24.10h" crc="e938d96a" map="001"/>
+            <part name="218a25.7h" crc="11600c2d" map="010"/>
+            <part name="218a26.5h" crc="b37e4b7a" map="100"/>
+        </interleave>
+    </rom>
+
+    <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
+    <rom index="2" zip="opengolf.zip" md5="none">
+        <part name="opengolf.nv" crc="d49bf7c3"/>
+    </rom>
+
+    <!-- the EEPROM saved: loaded after the ROM (ioctl index 4, over the default),
+         saved when the OSD opens after the game has written it -->
+    <nvram index="4" size="128"/>
+
+    <switches default="FA,FF">
+        <dip name="Sound Output" bits="0" ids="Stereo,Mono"/>
+        <dip name="Coin Slots" bits="1" ids="Independent,Common"/>
+        <dip name="Number of Players" bits="2" ids="4P,2P"/>
+    </switches>
+
+    <buttons names="Shoot,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
+
+    <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
+         as the CPU reads them (rtl/cheat/cheatengine.sv) -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits"     >00000010 00C00205 00000000 00000063</cheat>
+        <cheat name="P1 Infinite Lives"    >00000010 00C00283 00000000 00000002</cheat>
+        <cheat name="P1 Infinite Strokes"  >00000010 00C0028D 00000000 00000000</cheat>
+        <cheat name="P1 Reset Strokes Now!">00000010 00C0028D 00000000 00000000</cheat>
+        <cheat name="P2 Infinite Lives"    >00000010 00C00303 00000000 00000002</cheat>
+        <cheat name="P2 Infinite Strokes"  >00000010 00C0030D 00000000 00000000</cheat>
+        <cheat name="P2 Reset Strokes Now!">00000010 00C0030D 00000000 00000000</cheat>
+    </cheats>
+</misterromdescription>
