@@ -1,0 +1,33 @@
+<misterromdescription>
+  <name>Juezhan Tianhuang</name>
+  <setname>jzth</setname>
+  <rbf>bazset_JuezhanTianhuang</rbf>
+  <mameversion>current</mameversion>
+  <year>2000</year>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <manufacturer>&lt;unknown&gt;</manufacturer>
+  <category>Beat 'em up</category>
+  <rom index="0" zip="jzth.zip" md5="none">
+    
+    <interleave output="16">
+      <part name="s.y.u5" crc="a4a526b5" map="01"/>
+      <part name="s.y.u4" crc="c16654eb" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="s.y.u8" crc="b62e1068" map="01"/>
+      <part name="s.y.u7" crc="27fe424c" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="s.y.u64" crc="62f52886" map="01"/>
+      <part name="s.y.u63" crc="a6a32c8c" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="s.y.u66" crc="fa4a09f5" map="01"/>
+      <part name="s.y.u65" crc="de64e526" map="10"/>
+    </interleave>
+    
+    <part name="s.y.u3" crc="38eef2f2"/>
+  </rom>
+</misterromdescription>
