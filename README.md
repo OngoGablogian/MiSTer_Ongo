@@ -117,6 +117,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                         |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                    |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                   |
+| [SEGA Dreamcast (VMU)](https://discord.com/channels/647909397477195803/737506076806611064/1559397868714991626)                 |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                 |
 | [SEGA Model 1](https://github.com/alphanu1/sega-model1-mister)                                                                 |
 | [SEGA Model 2](https://github.com/alphanu1/sega-model2-mister)                                                                 |
