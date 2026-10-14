@@ -1,0 +1,99 @@
+<misterromdescription>
+    <!-- *** REQUIRES THE coh700b BOOT-SIGNATURE MECHANISM (core build 2026-08-01 or later): this is a MAME coh700b machine, whose boot ROM spins forever unless main RAM 0x80010000 holds the 12 signature bytes 4E 61 6D 63 6F 20 4C 74 64 2E 2D 2D (ASCII "Namco Ltd." followed by two dashes) taken from program ROM +0x20280, as MAME namcos12_state::driver_reset does when m_boot_hack is set. Platform byte 0xA4 (bit7 set) tells the core to copy those 12 bytes into RAM after every reset. On an older core build (platform byte 0x24, no bit7 handling) this title will not boot. *** -->
+	<name>Kart Duel (Japan, KTD1/VER.A)</name>
+	<setname>kartduelja</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>2000</year>
+	<manufacturer>Gaps / Namco</manufacturer>
+	<category>Racing</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM   16 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB  ioctl 7                        (S12_WAVE_START)
+	     top of image 0x3080000 (48.5 MB) - fits a 64 MB module.
+
+	     *** PROVISIONAL - ANALOG CONTROLS NOT SUPPORTED YET ***
+	     Kart Duel steers on the H8 ADC: ADC_0 = brake, ADC_1 = gas, ADC_2 = wheel.
+	     The core does not feed the H8 ADC inputs, so the car cannot be driven.
+	     Digital inputs that DO work: D-pad Up/Down (menu select) and JVS BUTTON1
+	     (= joystick button 1) which MAME labels 'Enter'.
+	     Two more MAME-side details that are NOT reproduced here:
+	       - kartduel_state adds a second H8/3002 'link_cpu' for linked cabinets;
+	         it is held in reset unless the game writes 0x1F796000, so it should be
+	         harmless for single-cabinet play.
+	       - the romset ships a PRE-INITIALISED at28c16 settings EEPROM, loaded at
+	         index 9 below (the game refuses its defaults without it: with a blank
+	         EEPROM the throttle reads pressed and the steering never responds).
+	-->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
+	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10").
+	     FIXED 2026-09-23: kartduelja is a MAME clone of kartduel and ships from
+	     kartduel.zip, but its own program ROMs (and its own at28c16, see ioctl 9
+	     below) are packed in that zip under a "kartduelja/" subfolder - they do not
+	     exist at the zip root at all (unzip -l kartduel.zip: only
+	     "kartduelja/ktd1vera.2l", "kartduelja/ktd1vera.2p"; the root-level files are
+	     the shared parent's banked ROM / H8 program / wave, reused below unprefixed).
+	     This MRA previously referenced the program ROMs without that prefix, which
+	     would not resolve inside the zip; added the prefix. -->
+	<rom index="0" zip="kartduelja.zip|kartduel.zip" md5="none">
+		<interleave output="16">
+			<part name="ktd1vera.2l" crc="0c207249" map="01"/>
+			<part name="ktd1vera.2p" crc="f6e2581f" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay
+	     CLEAR). bit6 = Tekken-3 JAMMA button remap. bit7 = coh700b boot signature
+	     (copy 12 bytes from program ROM +0x20280 to main RAM 0x80010000 on every
+	     reset, as MAME's namcos12_state::driver_reset does when m_boot_hack is set).
+	     0xA4 = System 12, STOCK namcos12 JVS button map (bit6 clear), boot signature ON.
+	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00.
+	     Third byte (feature flags) 0x24: bit2 WHEEL (H8 ADC steering/pedals from
+	     MiSTer analog + wheel OSD page) + bit5 KARTLINK (link-CPU 64KB RAM window at
+	     0x1F780000 + scratch regs, matching kartduel_state's m_link_cpu/
+	     m_link_sharedram; never combined with LIGHTGUN). Fourth byte 0x00: no
+	     feature-2 flags apply to this title. -->
+	<rom index="1"><part>A4 00 24 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 16 MB. Concatenated in MAME "bankedroms" region
+	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
+	<rom index="3" zip="kartduelja.zip|kartduel.zip" md5="none">
+		<interleave output="16">
+			<part name="kdt1rom0l.ic12" crc="f8a79aef" map="01"/>
+			<part name="kdt1rom0u.ic11" crc="bab0d328" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="kartduelja.zip|kartduel.zip" md5="none">
+		<part name="ktd1vera.11s" crc="c2ff1971"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
+	<rom index="7" zip="kartduelja.zip|kartduel.zip" md5="none">
+		<part name="ktd1wave0.ic2" crc="c54d5539"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM. Kart Duel ships a factory at28c16 image in the romset
+	     (game refuses defaults without it, per MAME); exactly the 2048-byte device, NO padding: the core loads this index with
+	     address bits 10..1 only, so bytes past 2048 wrap and overwrite the image.
+	     FIXED 2026-09-23: the root-level "at28c16" in kartduel.zip belongs to the
+	     PARENT set (crc 1be18a1b, kartduelja's own is crc dd9aba8f under
+	     "kartduelja/at28c16") - referencing it unprefixed pulled the wrong 2048-byte
+	     file (or none, if the loader validates crc). Added the prefix. -->
+	<rom index="9" zip="kartduelja.zip|kartduel.zip">
+		<part name="at28c16" crc="dd9aba8f"/>
+	</rom>
+
+	<!-- Button1 slot (P1 bit1) = Enter (MAME INPUT_PORTS_START(kartduel)); the core also
+	     reads the Button1/Button2 slots as the digital Gas/Brake pedals for pad players
+	     (the analog pedals are the A/D channels). P1 Button2 is unused by the game. -->
+	<buttons names="Enter / Gas,Brake,-,-,-,-,Start,Coin,Pause,Service,Test" default="A,B,,,,,Start,Select,L3,," count="2"/>
+</misterromdescription>

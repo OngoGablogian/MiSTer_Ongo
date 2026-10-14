@@ -1,0 +1,79 @@
+<misterromdescription>
+	<name>Kaiun Quiz (Japan, KW1/VER.A)</name>
+	<setname>kaiunqz</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1999</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Quiz</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM   48 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     C352 wave     8 MB  ioctl 7                        (S12_WAVE_START)
+	     (FIXED 2026-09-23: banked ROM corrected from 28 MB to the actual 48 MB; see
+	     byte3 BIGROM below - this title's banked ROM window is above the 32 MB
+	     threshold, so the core places H8 program/wave via the relocated layout rather
+	     than at the nominal S12_SPROG_START/S12_WAVE_START offsets shown for smaller
+	     titles.) -->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved -->
+	<rom index="0" zip="kaiunqz.zip" md5="none">
+		<interleave output="16">
+			<part name="kw1vera.2l" crc="fd1d2324" map="01"/>
+			<part name="kw1vera.2p" crc="d8bdea6b" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (kaiunqz uses coh700 directly -
+	     MAME namcos12.cpp GAME() line - so no coh700b boot signature is required;
+	     byte0 stays 0x24). byte2 0x08 = ALTBANK (bit3, namcos12_altbank_state
+	     bank-register semantics - matches the kaiunqz GAME() line's
+	     namcos12_altbank_state class). byte3 0x40 = BIGROM (bit6, banked ROM 48 MB
+	     > 32 MB uses the relocated SDRAM layout). -->
+	<rom index="1"><part>24 00 08 40</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 48 MB (MAME "bankedroms" region 0x3000000: three
+	     contiguous 8+8 MB ROM_LOAD16_BYTE pairs = 16 MB each). -->
+	<rom index="3" zip="kaiunqz.zip" md5="none">
+		<interleave output="16">
+			<part name="kw1rom0l.12" crc="e0768f0b" map="01"/>
+			<part name="kw1rom0u.11" crc="04101a16" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="kw1rom1l.10" crc="6a4edfa6" map="01"/>
+			<part name="kw1rom1u.9" crc="e6150b0d" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="kw1rom2l.7" crc="21c376e4" map="01"/>
+			<part name="kw1rom2u.8" crc="d850c222" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB -->
+	<rom index="6" zip="kaiunqz.zip" md5="none">
+		<part name="kw1vera.11s" crc="d863fafa"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB -->
+	<rom index="7" zip="kaiunqz.zip" md5="none">
+		<part name="kw1wave0.2" crc="060e52ae"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM (AT28C16, 2048 bytes) -->
+	<nvram index="9" size="2048"/>
+
+	<!-- FIXED 2026-09-23: all six JAMMA Button1-6 slots are wired IPT_UNUSED in MAME
+	     INPUT_PORTS_START(mdhorse) (kaiunqz's GAME() line reuses this ioport map;
+	     PORT_BIT(0x0000f003, IPT_UNUSED) covers bits 0,1,12-15 = every Button1-6
+	     JAMMA bit). The game's actual 4 buttons are wired to the P1 joystick
+	     UP/DOWN/LEFT/RIGHT pins instead (PORT_MODIFY reassigns those bits to
+	     IPT_BUTTON1-4) - a cabinet quirk, not JAMMA Button1-4. MRA <buttons> can only
+	     rename Button/Start/Coin/Service/Test/Pause slots, not joystick directions,
+	     so the 4 real buttons are used through the normal joystick Up/Down/Left/Right
+	     mapping and cannot be given text labels here. -->
+	<buttons names="-,-,-,-,-,-,Start,Coin,Pause" default=",,,,,,Start,Select,L3" count="0"/>
+</misterromdescription>

@@ -1,7 +1,7 @@
 <misterromdescription>
 	<name>Aqua Rush (Japan, AQ1/VER.A1)</name>
 	<setname>aquarush</setname>
-	<rbf>SYSTEM12</rbf>
+	<rbf>XNSYSTEM12</rbf>
 	<mameversion>0277</mameversion>
 	<year>1999</year>
 	<manufacturer>Namco</manufacturer>

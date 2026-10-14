@@ -1,0 +1,70 @@
+<misterromdescription>
+	<name>Attack Pla Rail (Japan, AP1/VER.A)</name>
+	<setname>aplarail</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1998</year>
+	<manufacturer>Namco / Tomy</manufacturer>
+	<category>Shooting</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved -->
+	<rom index="0" zip="aplarail.zip" md5="none">
+		<interleave output="16">
+			<part name="ap1vera.2e" crc="386ffe26" map="01"/>
+			<part name="ap1vera.2j" crc="cab954e1" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (aplarail uses coh700 directly -
+	     MAME namcos12.cpp aplarail_state::aplarail() calls coh700(config) - so no
+	     coh700b boot signature is required; byte0 stays 0x24). byte2 0x40 = JVS (bit6,
+	     JVS I/O-board responder required on H8 SCI0, matching
+	     m_jvs->set_default_option("namco_cyberlead")). byte3 0x60 = ADCMAP=2/aplarail
+	     (bits5:4 = 10: AN0 speed lever 0x08B-0x397, neutral 0x216, self-centering,
+	     reversed - matching PORT_MODIFY("ADC_0") in INPUT_PORTS_START(aplarail)) +
+	     BIGROM (bit6, banked ROM region 52 MB > 32 MB uses the relocated SDRAM
+	     layout). -->
+	<rom index="1"><part>24 00 40 60</part></rom>
+
+	<!-- ioctl 3: banked data ROM. Populated data is 32 MB (ap1rom0/1/2 are contiguous
+	     plain ROM_LOAD, 8 MB each = 24 MB, immediately followed by the ap1fl3/ap1fl4
+	     interleaved pairs, 4 MB + 4 MB); the MAME "bankedroms" region is declared
+	     0x3400000 (52 MB), with a further 20 MB unpopulated tail after ap1fl4 that is
+	     not reproduced here since nothing addresses banks past it. -->
+	<rom index="3" zip="aplarail.zip" md5="none">
+		<part name="ap1rom0.ic9" crc="c8042aad"/>
+		<part name="ap1rom1.ic10" crc="0f3210ec"/>
+		<part name="ap1rom2.ic11" crc="9ef8382d"/>
+		<interleave output="16">
+			<part name="ap1fl3l.ic7" crc="b52c2df6" map="01"/>
+			<part name="ap1fl3h.ic8" crc="050af45d" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="ap1fl4l.ic5" crc="9a4109e5" map="01"/>
+			<part name="ap1fl4h.ic6" crc="9a4109e5" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB -->
+	<rom index="6" zip="aplarail.zip" md5="none">
+		<part name="ap1vera.11s" crc="126aaebc"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB -->
+	<rom index="7" zip="aplarail.zip" md5="none">
+		<part name="ap1wave0.ic2" crc="003abebb"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM -->
+	<nvram index="9" size="2048"/>
+
+	<!-- FIXED 2026-09-23: "Trigger" was wrong - aplarail is not a light gun game (no
+	     GUN0-3 ports in MAME) and does not read the H8 gun ADC channels. The actual
+	     digital JAMMA buttons per INPUT_PORTS_START(aplarail): Button1 slot (P1 bit1)
+	     = "Left", Button2 slot (P1 bit0, tagged IPT_START1 in MAME but wired to the
+	     Button2 JAMMA bit) = "Ok/Horn", Button3 slot (P1 bit15) = "Right". Aiming/
+	     control is the analog "Speed Lever" (ADC_0, see byte3 ADCMAP above), not a
+	     button. -->
+	<buttons names="Left,Ok/Horn,Right,-,-,-,-,Coin,Pause,Service,Test" default="A,B,X,,,,,Select,L3,," count="3"/>
+</misterromdescription>

@@ -1,0 +1,65 @@
+<misterromdescription>
+	<name>Shin Nihon Pro Wrestling Toukon Retsuden 3 Arcade Edition (Japan, TR1/VER.A)</name>
+	<setname>toukon3</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1997</year>
+	<manufacturer>Namco / Tomy</manufacturer>
+	<category>Sports</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM    8 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB  ioctl 7                        (S12_WAVE_START)
+	     top of image 0x3080000 (48.5 MB) - fits a 64 MB module.
+
+	     MAME flags this set MACHINE_IMPERFECT_GRAPHICS. Uses the 0x1F300000
+	     exp_base DMA-5 style (main-ROM source) like Tenkomori Shooting.
+	-->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
+	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
+	<rom index="0" zip="toukon3.zip" md5="none">
+		<interleave output="16">
+			<part name="tr1vera.2e" crc="126ebb73" map="01"/>
+			<part name="tr1vera.2j" crc="2edb3ad2" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay
+	     CLEAR). bit6 = Tekken-3 JAMMA button remap. 0x24 = System 12 with the STOCK
+	     namcos12 JVS button map (bit6 clear).
+	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00. -->
+	<rom index="1"><part>24 00 00 00</part>  <!-- byte3 bit7 (480P_OK) deliberately clear: the 480i-as-480p option is hidden on every title (user decision 2026-10-13) --></rom>
+
+	<!-- ioctl 3: banked data ROM, 8 MB. Concatenated in MAME "bankedroms" region
+	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
+	<rom index="3" zip="toukon3.zip" md5="none">
+		<interleave output="16">
+			<part name="tr1rom0l.6" crc="42946d26" map="01"/>
+			<part name="tr1rom0u.9" crc="e3cd0be0" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="toukon3.zip" md5="none">
+		<part name="tr1vera.11s" crc="f9ecbd19"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
+	<rom index="7" zip="toukon3.zip" md5="none">
+		<part name="tr1wave0.5" crc="07d10e55"/>
+		<part name="tr1wave1.4" crc="34539cdd"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM, blank (all-FF). No proprietary nvram ships. -->
+	<rom index="9">
+		<part repeat="4096">FF</part>
+	</rom>
+
+	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Pause" default="A,B,X,Y,L,R,Start,Select,L3" count="6"/>
+</misterromdescription>

@@ -1,0 +1,88 @@
+<misterromdescription>
+	<name>Truck Kyosokyoku (US?, TKK2/VER.A)</name>
+	<setname>truckk</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>2000</year>
+	<manufacturer>Metro / Namco</manufacturer>
+	<category>Racing</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved -->
+	<rom index="0" zip="truckk.zip" md5="none">
+		<interleave output="16">
+			<part name="tkk2vera.2l" crc="321344e0" map="01"/>
+			<part name="tkk2vera.2p" crc="a7b5e4ea" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12. bit7 = coh700b boot signature
+	     (copy 12 bytes from program ROM +0x20280 to main RAM 0x80010000 on every reset,
+	     as MAME's namcos12_state::driver_reset does when m_boot_hack is set) - REQUIRED
+	     because truckk_state::truckk() calls cdxa_pcb(config), which calls coh700b(config)
+	     (MAME namcos12.cpp), so this is a coh700b machine like the light-gun titles.
+	     (FIXED 2026-09-23: this MRA previously shipped 0x24, no boot signature, which
+	     hangs the boot ROM on a coh700b title.)
+	     byte2 0x1C = WHEEL (bit2, H8 ADC steering/pedals) + ALTBANK (bit3,
+	     namcos12_altbank_state bank-register semantics) + CDXA (bit4, CD-XA PCB HLE
+	     stub at 0x1F7C0000-0x1F7FFFFF; the actual CD image is not shipped, matching
+	     the HLE approach). byte3 0x5A = VALVE (bit1, P2 BUTTON1 slot permanently
+	     asserted, "Valve presence") + PEDAL_INV (bit3, pedals electrically inverted -
+	     released = 0x3FF) + ADCMAP=1/truckk (bits5:4 = 01: AN0 steer 0-0x3FF, AN1
+	     brake, AN2 gas, all 10-bit) + BIGROM (bit6, banked ROM 52 MB > 32 MB uses the
+	     relocated SDRAM layout). -->
+	<rom index="1"><part>A4 00 1C 5A</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 52 MB (MAME "bankedroms" region 0x3400000: three
+	     8MB ROM_LOAD16_BYTE pairs + one 2MB ROM_LOAD16_BYTE pair = 48 MB + 4 MB = 52 MB). -->
+	<rom index="3" zip="truckk.zip" md5="none">
+		<interleave output="16">
+			<part name="tkk1rom0l.ic10" crc="5e1c8660" map="01"/>
+			<part name="tkk1rom0u.ic14" crc="ee4e6566" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="tkk1rom1l.ic11" crc="fde2863c" map="01"/>
+			<part name="tkk1rom1u.ic15" crc="e51a56d7" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="tkk1rom2l.ic12" crc="029cf107" map="01"/>
+			<part name="tkk1rom2u.ic16" crc="30c426dd" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="tkk1fl3l.ic4" crc="b0e98cb2" map="01"/>
+			<part name="tkk1fl3u.ic5" crc="16d9ede7" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB -->
+	<rom index="6" zip="truckk.zip" md5="none">
+		<part name="tkk2vera.11s" crc="d3d0a46a"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB -->
+	<rom index="7" zip="truckk.zip" md5="none">
+		<part name="tkk1wave0.ic1" crc="037d3095"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM -->
+	<nvram index="9" size="2048"/>
+
+	<!-- Buttons, by JAMMA slot (MAME INPUT_PORTS_START(truckk) comments give the wire;
+	     the production game's own I/O TEST lists exactly BRAKE, GAS, STEERING, VIEW CHANGE,
+	     HORN, MUSIC BACK, MUSIC NEXT, ENTER, SELECT DOWN, SELECT UP - there is NO shifter,
+	     the truck is automatic; the "SHIFT UP/DOWN" strings left in the program ROM belong
+	     to a development-only debug I/O test that the production test menu never shows).
+	       Button1 slot (P1 bit1)  = Enter; the core also reads it as the digital Gas pedal.
+	       Button2 slot            = digital Brake pedal only. The P1 Button2 pin doubles as
+	                                 Music Next on this cabinet, so the core keeps this slot
+	                                 off that pin for Truck (A/D map 1) - see SYSTEM12.sv.
+	       Button3 slot (P1 bit15) = Horn.
+	       Button4/Button5 slots   = Music Back / Music Next. The cabinet wires these to the
+	                                 P2 LEFT/RIGHT pins; the core drives those pins from the
+	                                 P1 Button4/Button5 slots for Truck so one pad has them.
+	       Start slot (P1 bit7)    = View Change.
+	     Steering, Gas and Brake are the analog A/D channels (WHEEL/ADCMAP feature bytes above);
+	     the digital Gas/Brake are the pad fallback. P2 BUTTON1 "Valve presence" is permanently
+	     asserted by the VALVE feature bit, not user-mappable. -->
+	<buttons names="Enter / Gas,Brake,Horn,Music Back,Music Next,-,View Change,Coin,Pause,Service,Test" default="A,B,X,Y,L,,Start,Select,L3,," count="5"/>
+</misterromdescription>

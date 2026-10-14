@@ -15,7 +15,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > * You can easily check out the files included with this database by using theypsilon's [Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip)
 
 > [!NOTE]
-> * In its current state, this repo totals around 10 GB of files.
+> * In its current state, this repo totals around **10 GB** of files.
 
 ----
 
@@ -89,7 +89,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Namco NB-2](https://github.com/kyledlester/Namco_NB2_MiSTer)                                                                  |
 | [Namco ND-1](https://www.patreon.com/Meathax/posts/namco-classic-1-170443635)                                                  |
 | [Namco System 11](https://github.com/XelaNotPu/SYSTEM11_MiSTer)                                                                |
-| [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-166884433)                                           |
+| [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-172302772)                                           |
 | [Namco System 22 / Super System 22](https://www.patreon.com/XelaNotPu/posts/namco-system-22-169006058)                         |
 | [Namco System FL](https://www.patreon.com/XelaNotPu/posts/namco-system-fl-170317789)                                           |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |

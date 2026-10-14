@@ -1,0 +1,79 @@
+<misterromdescription>
+	<name>Techno Drive (Japan, TH1/VER.B)</name>
+	<setname>technodr</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1998</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Racing</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved -->
+	<rom index="0" zip="technodr.zip" md5="none">
+		<interleave output="16">
+			<part name="th1verb.2l" crc="736fae08" map="01"/>
+			<part name="th1verb.2p" crc="1fafb2d2" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (technodr uses the coh700 machine
+	     config directly - MAME namcos12.cpp technodr_state::technodr() - so no coh700b
+	     boot signature is required; byte0 stays 0x24). byte2 0x44 = WHEEL (bit2, H8 ADC
+	     steering/pedals) + JVS (bit6, JVS I/O-board responder required on H8 SCI0,
+	     matching m_jvs->set_default_option("namco_emio102") and the JVS_ANALOG_INPUT1-3
+	     ports in INPUT_PORTS_START(technodr)). byte3 0x70 = ADCMAP=3/technodr (bits5:4
+	     = 11: JVS 16-bit analog channels 0/1/2, all reversed) + BIGROM (bit6, banked
+	     ROM 52 MB > 32 MB uses the relocated SDRAM layout). -->
+	<rom index="1"><part>24 00 44 70</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 52 MB (MAME "bankedroms" region 0x3400000).
+	     FIXED 2026-09-23: th1rom0/th1rom1 are contiguous (16 MB total), but th1fl3
+	     loads at MAME offset 0x1800000 - an 8 MB UNPOPULATED gap after th1rom1 (which
+	     ends at 0x1000000) - not immediately after it as this MRA previously shipped.
+	     Without the gap, th1fl3's bytes land 8 MB too early, corrupting every bank
+	     read at or after that offset. A further 24 MB of unpopulated space follows
+	     th1fl3 to fill the declared MAME region out to 0x3400000; that trailing gap
+	     is NOT reproduced here because nothing addresses banks past th1fl3's end. -->
+	<rom index="3" zip="technodr.zip" md5="none">
+		<interleave output="16">
+			<part name="th1rom0l.6" crc="f8274106" map="01"/>
+			<part name="th1rom0u.9" crc="260ae0c5" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="th1rom1l.7" crc="56d9b477" map="01"/>
+			<part name="th1rom1u.10" crc="a45d337e" map="10"/>
+		</interleave>
+		<!-- 8 MB gap: unpopulated bank between th1rom1 and th1fl3 on the real ROM board -->
+		<part repeat="131072">00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</part>
+		<interleave output="16">
+			<part name="th1fl3l.12" crc="c330116f" map="01"/>
+			<part name="th1fl3u.13" crc="cd4422c0" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB -->
+	<rom index="6" zip="technodr.zip" md5="none">
+		<part name="th1verb.11s" crc="85806e2e"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB -->
+	<rom index="7" zip="technodr.zip" md5="none">
+		<part name="th1wave0.5" crc="6cdd06fb"/>
+		<part name="th1wave1.4" crc="40fd413b"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM -->
+	<nvram index="9" size="2048"/>
+
+	<!-- FIXED 2026-09-23: "Accel,Brake,Shift" were fabricated - MAME has no digital
+	     Accel/Brake/Shift buttons for technodr. Gas and Brake are the analog
+	     JVS_ANALOG_INPUT2/3 pedal axes (handled by the WHEEL/ADCMAP feature bytes
+	     above, not the digital <buttons> map), and there is no Shift control at all.
+	     The only digital JAMMA button MAME defines is bit13/Button5 slot, named
+	     "Select" in INPUT_PORTS_START(technodr) (comment there: "// BUTTON5").
+	     The core reads the Button1/Button2 slots as the digital Gas/Brake pedals for pad
+	     players (JVS push1/push2, both unused by the game); the analog pedals are the
+	     JVS analog channels. -->
+	<buttons names="Gas,Brake,-,-,Select,-,-,Coin,Pause,Service,Test" default="A,B,,,X,,,Select,L3,," count="3"/>
+</misterromdescription>

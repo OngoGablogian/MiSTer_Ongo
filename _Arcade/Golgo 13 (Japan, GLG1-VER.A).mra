@@ -1,0 +1,81 @@
+<misterromdescription>
+	<name>Golgo 13 (Japan, GLG1/VER.A)</name>
+	<setname>golgo13</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1999</year>
+	<manufacturer>Eighting / Raizing / Namco</manufacturer>
+	<category>Shooting</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved -->
+	<rom index="0" zip="golgo13.zip" md5="none">
+		<interleave output="16">
+			<part name="glg1vera.2l" crc="aa15abfe" map="01"/>
+			<part name="glg1vera.2p" crc="37a4cf90" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12. bit7 = coh700b boot signature
+	     (copy 12 bytes from program ROM +0x20280 to main RAM 0x80010000 on every reset,
+	     as MAME's namcos12_state::driver_reset does when m_boot_hack is set) - REQUIRED
+	     because golgo13_state::golgo13() calls coh700b(config) (MAME namcos12.cpp), so
+	     this is a coh700b machine like the light-gun titles.
+	     (FIXED 2026-09-23: this MRA previously shipped 0x24, no boot signature, which
+	     hangs the boot ROM on a coh700b title.)
+	     byte2 0x88 = ALTBANK (bit3, namcos12_altbank_state bank-register semantics) +
+	     ADCGUN (bit7, analog light rifle: aim -> H8 AN1 X 0x07A-0x2BA / AN2 Y
+	     0x01F-0x1DE increasing = up, matching MAME's read_adc<1>/read_adc<2> gunx_r/
+	     guny_r hookup in golgo13_state::golgo13()). byte3 0x40 = BIGROM (bit6, banked
+	     ROM 60 MB > 32 MB uses the relocated SDRAM layout). -->
+	<rom index="1"><part>A4 00 88 40</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 60 MB (MAME "bankedroms" region 0x3C00000: three
+	     8MB ROM_LOAD16_BYTE pairs = 48 MB, plus three 2MB ROM_LOAD16_BYTE pairs = 12 MB). -->
+	<rom index="3" zip="golgo13.zip" md5="none">
+		<interleave output="16">
+			<part name="glg1rom0l.10" crc="2837524e" map="01"/>
+			<part name="glg1rom0u.14" crc="4482deff" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="glg1rom1l.11" crc="080f3550" map="01"/>
+			<part name="glg1rom1u.15" crc="b49e8613" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="glg1rom2l.12" crc="e1a79a87" map="01"/>
+			<part name="glg1rom2u.16" crc="cda22852" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="glg1fl3l.4" crc="16ddc2cb" map="01"/>
+			<part name="glg1fl3u.5" crc="d90d72d1" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="glg1fl4l.6" crc="820d8133" map="01"/>
+			<part name="glg1fl4u.7" crc="02d78160" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="glg1fl5l.8" crc="090b2508" map="01"/>
+			<part name="glg1fl5u.9" crc="2231a07c" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB -->
+	<rom index="6" zip="golgo13.zip" md5="none">
+		<part name="glg1vera.11s" crc="5c33f240"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 16 MB (2x 8MB) -->
+	<rom index="7" zip="golgo13.zip" md5="none">
+		<part name="glg1wave0.1" crc="672d4f7c"/>
+		<part name="glg1wave1.13" crc="480b0a1a"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM -->
+	<nvram index="9" size="2048"/>
+
+	<!-- Button slots follow the core's JAMMA-bit contract, not MAME's IPT_ names: Button1
+	     carries JVS_PLAYER1 bit1 (MAME golgo13 names it "Enter"), Button2 carries bit0
+	     ("Trigger" - the rifle's actual fire control), Button7 carries bit11/P1 BUTTON7
+	     ("Sensor" - the rifle's proximity/orientation sensor). -->
+	<buttons names="Enter,Trigger,-,-,-,-,Start,Coin,Pause,Service,Test,Sensor" default="B,A,,,,,Start,Select,L3,,,Y" count="2"/>
+</misterromdescription>

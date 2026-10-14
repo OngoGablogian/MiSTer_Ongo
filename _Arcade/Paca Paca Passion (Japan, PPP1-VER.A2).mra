@@ -2,7 +2,7 @@
     <!-- *** REQUIRES THE coh700b BOOT-SIGNATURE MECHANISM (core build 2026-08-01 or later): this is a MAME coh700b machine, whose boot ROM spins forever unless main RAM 0x80010000 holds the 12 signature bytes 4E 61 6D 63 6F 20 4C 74 64 2E 2D 2D (ASCII "Namco Ltd." followed by two dashes) taken from program ROM +0x20280, as MAME namcos12_state::driver_reset does when m_boot_hack is set. Platform byte 0xA4 (bit7 set) tells the core to copy those 12 bytes into RAM after every reset. On an older core build (platform byte 0x24, no bit7 handling) this title will not boot. *** -->
 	<name>Paca Paca Passion (Japan, PPP1/VER.A2)</name>
 	<setname>pacapp</setname>
-	<rbf>SYSTEM12</rbf>
+	<rbf>XNSYSTEM12</rbf>
 	<mameversion>0277</mameversion>
 	<year>1998</year>
 	<manufacturer>Produce / Namco</manufacturer>
@@ -78,5 +78,5 @@
 		<part repeat="4096">FF</part>
 	</rom>
 
-	<buttons names="Yellow,Red,Blue,Green,-,-,Start,Coin" default="A,B,X,Y,,,Start,Select" count="4"/>
+	<buttons names="Yellow,Red,Blue,Green,-,-,Start,Coin,Pause" default="A,B,X,Y,,,Start,Select,L3" count="4"/>
 </misterromdescription>

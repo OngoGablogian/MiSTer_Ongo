@@ -1,7 +1,7 @@
 <misterromdescription>
 	<name>Libero Grande (World, LG2/VER.A)</name>
 	<setname>lbgrande</setname>
-	<rbf>SYSTEM12</rbf>
+	<rbf>XNSYSTEM12</rbf>
 	<mameversion>0277</mameversion>
 	<year>1997</year>
 	<manufacturer>Namco</manufacturer>
@@ -69,5 +69,5 @@
 		<part repeat="4096">FF</part>
 	</rom>
 
-	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin" default="A,B,X,Y,L,R,Start,Select" count="6"/>
+	<buttons names="Tackle,Pass,Shoot,-,-,-,Start,Coin,Pause" default="A,B,X,,,,Start,Select,L3" count="3"/>
 </misterromdescription>

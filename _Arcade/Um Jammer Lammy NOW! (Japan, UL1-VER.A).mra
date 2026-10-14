@@ -1,0 +1,63 @@
+<misterromdescription>
+	<name>Um Jammer Lammy NOW! (Japan, UL1/VER.A)</name>
+	<setname>ujlnow</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1999</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Music</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved -->
+	<rom index="0" zip="ujlnow.zip" md5="none">
+		<interleave output="16">
+			<part name="ul1vera.2l" crc="40251bc3" map="01"/>
+			<part name="ul1vera.2p" crc="98181955" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12. bit7 = coh700b boot signature
+	     (copy 12 bytes from program ROM +0x20280 to main RAM 0x80010000 on every reset,
+	     as MAME's namcos12_state::driver_reset does when m_boot_hack is set) - REQUIRED
+	     because ujlnow's GAME() line uses the "cdxa_pcb" machine config, which calls
+	     coh700b(config) (MAME namcos12.cpp), so this is a coh700b machine.
+	     (FIXED 2026-09-23: this MRA previously shipped 0x24, no boot signature, which
+	     hangs the boot ROM on a coh700b title.)
+	     byte2 0x10 = CDXA (bit4, CD-XA PCB HLE stub decoded at 0x1F7C0000-0x1F7FFFFF;
+	     the actual CD image and the M148 EMI DRIVE PCB program ROM are not shipped,
+	     matching the HLE approach). byte3 0x05 = M148 (bit0, read 0x1F7D800A returns
+	     0x20) + UJL_P2UD (bit2, in_r P2 UP/DOWN permanently asserted to suppress
+	     I/O-error checks, matching the MAME ACTIVE_LOW IPT_UNUSED ports for P2 UP/DOWN
+	     in INPUT_PORTS_START(ujlnow)). No BIGROM: banked ROM is exactly 32 MB, not
+	     over the 32 MB threshold. -->
+	<rom index="1"><part>A4 00 18 05</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 32 MB (MAME "bankedroms" region 0x2000000: two
+	     8MB ROM_LOAD16_BYTE pairs -> 16 MB + 16 MB). -->
+	<rom index="3" zip="ujlnow.zip" md5="none">
+		<interleave output="16">
+			<part name="ul1rom0l.ic12" crc="7a77cffd" map="01"/>
+			<part name="ul1rom0u.ic11" crc="1fdb34b3" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="ul1rom1l.ic10" crc="2d300d8c" map="01"/>
+			<part name="ul1rom1u.ic9" crc="a4762002" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB -->
+	<rom index="6" zip="ujlnow.zip" md5="none">
+		<part name="ul1vera.11s" crc="2f466df3"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 16 MB (2x 8MB) -->
+	<rom index="7" zip="ujlnow.zip" md5="none">
+		<part name="ul1wave0.ic2" crc="4efbff5d"/>
+		<part name="ul1wave1.ic1" crc="ad512f4c"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM -->
+	<nvram index="9" size="2048"/>
+
+	<buttons names="Circle/Enter,Cross,Triangle,-,-,-,Start,Coin,Pause,Service,Test,Square" default="A,B,X,,,,Start,Select,L3,,,Y" count="4"/>
+</misterromdescription>

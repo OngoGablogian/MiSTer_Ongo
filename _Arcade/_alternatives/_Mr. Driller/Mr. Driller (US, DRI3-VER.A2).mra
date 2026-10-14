@@ -1,0 +1,67 @@
+<misterromdescription>
+    <!-- *** REQUIRES THE coh700b BOOT-SIGNATURE MECHANISM (core build 2026-08-01 or later): this is a MAME coh700b machine, whose boot ROM spins forever unless main RAM 0x80010000 holds the 12 signature bytes 4E 61 6D 63 6F 20 4C 74 64 2E 2D 2D (ASCII "Namco Ltd." followed by two dashes) taken from program ROM +0x20280, as MAME namcos12_state::driver_reset does when m_boot_hack is set. Platform byte 0xA4 (bit7 set) tells the core to copy those 12 bytes into RAM after every reset. On an older core build (platform byte 0x24, no bit7 handling) this title will not boot. *** -->
+	<name>Mr. Driller (US, DRI3/VER.A2)</name>
+	<setname>mrdrillr</setname>
+	<rbf>XNSYSTEM12</rbf>
+	<mameversion>0277</mameversion>
+	<year>1999</year>
+	<manufacturer>Namco</manufacturer>
+	<category>Puzzle</category>
+	<platform>Namco System 12</platform>
+
+	<!-- ==== SDRAM layout (see SYSTEM12.sv "ROM DETECT") ====
+	     0x0000000  Main RAM      4 MB  (COH-700)
+	     0x0400000  Program ROM   4 MB   ioctl 0 -> CPU 0x1FC00000 (boots directly, no BIOS)
+	     0x0800000  Banked ROM    8 MB  ioctl 3 -> DMA-5 source / CPU 2 MB window @0x1FA00000
+	     0x2800000  H8 program  512 KB   ioctl 6 -> H8/3002 external flash (S12_SPROG_START)
+	     0x2880000  C352 wave     8 MB  ioctl 7                        (S12_WAVE_START)
+	     top of image 0x3080000 (48.5 MB) - fits a 64 MB module.
+
+	     MAME's mrdrillr port set: 4-WAY joystick, a single game button (JVS
+	     BUTTON1; BUTTON2 is wired in parallel, BUTTON3-6 unused).
+	-->
+
+	<!-- ioctl 0: main program, 2x 2 MB 16-bit interleaved (first MAME ROM_LOAD16_BYTE
+	     is at offset 0 = even/low byte = map "01", second is at offset 1 = map "10"). -->
+	<rom index="0" zip="mrdrillr.zip" md5="none">
+		<interleave output="16">
+			<part name="dri3vera2.2l" crc="36b9eeab" map="01"/>
+			<part name="dri3vera2.2p" crc="811c00d5" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 1: platform byte. bit5 = Namco System 12 (bit4 = System 11, must stay
+	     CLEAR). bit6 = Tekken-3 JAMMA button remap. bit7 = coh700b boot signature
+	     (copy 12 bytes from program ROM +0x20280 to main RAM 0x80010000 on every
+	     reset, as MAME's namcos12_state::driver_reset does when m_boot_hack is set).
+	     0xA4 = System 12, STOCK namcos12 JVS button map (bit6 clear), boot signature ON.
+	     Second byte = KEYCUS/protection id; System 12 has no emulated KEYCUS -> 0x00. -->
+	<rom index="1"><part>A4 00</part></rom>
+
+	<!-- ioctl 3: banked data ROM, 8 MB. Concatenated in MAME "bankedroms" region
+	     order; interleaved pairs only where MAME uses ROM_LOAD16_BYTE. -->
+	<rom index="3" zip="mrdrillr.zip" md5="none">
+		<interleave output="16">
+			<part name="dri1rom0l.6" crc="021bb2fa" map="01"/>
+			<part name="dri1rom0u.9" crc="5aae85ea" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- ioctl 6: H8/3002 sound program, 512 KB (external flash; the H8 is ROMless).
+	     MAME uses ROM_LOAD16_WORD_SWAP; the core handles the swap, ship it plain. -->
+	<rom index="6" zip="mrdrillr.zip" md5="none">
+		<part name="dri1vera.11s" crc="33ea9c0e"/>
+	</rom>
+
+	<!-- ioctl 7: C352 wave ROM, 8 MB. -->
+	<rom index="7" zip="mrdrillr.zip" md5="none">
+		<part name="dri1wave0.5" crc="32928df1"/>
+	</rom>
+
+	<!-- ioctl 9: settings EEPROM, blank (all-FF). No proprietary nvram ships. -->
+	<rom index="9">
+		<part repeat="4096">FF</part>
+	</rom>
+
+	<buttons names="Drill,-,-,-,-,-,Start,Coin,Pause" default="A,,,,,,Start,Select,L3" count="1"/>
+</misterromdescription>
