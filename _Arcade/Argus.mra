@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Argus</name>
+  <setname>argus</setname>
+  <year>1986</year>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Argus</rbf>
+  <manufacturer>NMK (Jaleco license)</manufacturer>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>vertical (ccw)</rotation>
+  <num_buttons>2</num_buttons>
+  <switches default="CF,FF" base="16">
+    <dip name="Flip Screen" bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="1,2" ids="Easy,Normal,Hard,Very Hard" values="2,3,1,0"/>
+    <dip name="Free Play" bits="3" ids="Off,On" values="1,0"/>
+    <dip name="Cabinet" bits="4" ids="Upright,Cocktail" values="0,1"/>
+    <dip name="Demo Sounds" bits="5" ids="Off,On" values="1,0"/>
+    <dip name="Lives" bits="6,7" ids="2,3,4,5" values="2,3,1,0"/>
+    <dip name="Unused SW2:8" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Unused SW2:7" bits="9" ids="Off,On" values="1,0"/>
+    <dip name="Coin B" bits="10,12" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C" values="0,1,2,3,7,6,5,4"/>
+    <dip name="Coin A" bits="13,15" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C" values="0,1,2,3,7,6,5,4"/>
+  </switches>
+  <rom index="1">
+    <part>00</part>
+  </rom>
+  <rom index="0" zip="argus.zip" type="nonmerged" md5="71a0bf1a74dd49f8a6cc4aa389cf42af">
+    <part name="ag_02.bin" crc="278a3f3d"/>
+    <part repeat="0x8000">00</part>
+    <part name="ag_03.bin" crc="3a7f3bfa"/>
+    <part name="ag_04.bin" crc="76adc9f6"/>
+    <part name="ag_05.bin" crc="f76692d6"/>
+    <part repeat="0x8000">00</part>
+    <part name="ag_01.bin" crc="769e3f57"/>
+    <part repeat="0xc000">00</part>
+    <part name="ag_09.bin" crc="6dbc1c58"/>
+    <part name="ag_08.bin" crc="ce6e987e"/>
+    <part name="ag_07.bin" crc="bbb9638d"/>
+    <part name="ag_06.bin" crc="655b48f8"/>
+    <part name="ag_13.bin" crc="20274268"/>
+    <part name="ag_14.bin" crc="ceb8860b"/>
+    <part name="ag_11.bin" crc="99ce8556"/>
+    <part name="ag_12.bin" crc="e0e5377c"/>
+    <part name="ag_17.bin" crc="0f12d09b"/>
+    <part repeat="0x8000">00</part>
+    <part name="ag_10.bin" crc="2de696c4"/>
+    <part repeat="0x4000">00</part>
+    <part repeat="0x8000">00</part>
+    <part name="ag_15.bin" crc="99834c1b"/>
+    <part repeat="0x8000">00</part>
+    <part name="ag_16.bin" crc="39a51714"/>
+  </rom>
+  <rom index="3">
+    <part>00 00 00 00 04 00 00 02 00 02 00 01 00 00 04 00 00 00 FB 80 00 40 00 00 00 00 E0 39 00 07 00 00 00 00 E0 3D 00 01 07 07</part>
+  </rom>
+  <nvram index="4" size="72"/>
+  <buttons names="Air Beam,Ground Beam,Start,Coin,Pause" default="A,B,Start,R,L"/>
+</misterromdescription>

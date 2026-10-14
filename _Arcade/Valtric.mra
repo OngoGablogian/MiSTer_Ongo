@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Valtric</name>
+  <setname>valtric</setname>
+  <year>1986</year>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Argus</rbf>
+  <manufacturer>NMK (Jaleco license)</manufacturer>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>vertical (ccw)</rotation>
+  <num_buttons>2</num_buttons>
+  <switches default="CF,FF" base="16">
+    <dip name="Flip Screen" bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Difficulty" bits="1,2" ids="Normal,Hard,Very Hard,Hardest" values="3,2,1,0"/>
+    <dip name="Free Play" bits="3" ids="Off,On" values="1,0"/>
+    <dip name="Cabinet" bits="4" ids="Upright,Cocktail" values="0,1"/>
+    <dip name="Demo Sounds" bits="5" ids="Off,On" values="1,0"/>
+    <dip name="Lives" bits="6,7" ids="2,3,4,5" values="0,3,2,1"/>
+    <dip name="Invulnerable (Cheat)" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Unused SW2:7" bits="9" ids="Off,On" values="1,0"/>
+    <dip name="Coin B" bits="10,12" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C" values="0,1,2,3,7,6,5,4"/>
+    <dip name="Coin A" bits="13,15" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C" values="0,1,2,3,7,6,5,4"/>
+  </switches>
+  <rom index="1">
+    <part>01</part>
+  </rom>
+  <rom index="0" zip="valtric.zip" type="nonmerged" md5="a8cf419e2ca2e9ade3c128f0a9e711ac">
+    <part name="vt_04.bin" crc="709c705f"/>
+    <part repeat="0x8000">00</part>
+    <part name="vt_06.bin" crc="c9cbb4e4"/>
+    <part name="vt_05.bin" crc="7ab2684b"/>
+    <part name="vt_01.bin" crc="4616484f"/>
+    <part repeat="0x8000">00</part>
+    <part name="vt_02.bin" crc="66401977"/>
+    <part name="vt_03.bin" crc="9203bbce"/>
+    <part name="vt_08.bin" crc="661dd338"/>
+    <part name="vt_09.bin" crc="085a35b1"/>
+    <part name="vt_10.bin" crc="09c47323"/>
+    <part name="vt_11.bin" crc="4cf800b5"/>
+    <part name="vt_07.bin" crc="4b9771ae"/>
+    <part repeat="0x4000">00</part>
+    <part repeat="0x8000">00</part>
+    <part name="82s129.1s" crc="bc42f9b5"/>
+  </rom>
+  <rom index="3">
+    <part>00 00 00 00 04 00 00 02 00 02 00 01 00 00 04 00 00 00 FC A0 00 28 00 53 00 00 FC 38 00 04 00 00</part>
+  </rom>
+  <nvram index="4" size="44"/>
+  <buttons names="Fire,Jump,Start,Coin,Pause" default="A,B,Start,R,L"/>
+</misterromdescription>

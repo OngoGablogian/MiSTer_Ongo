@@ -106,6 +106,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
 | [Nintendo Super System](https://www.patreon.com/bazset/posts/nintendo-super-170678491)                                         |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                  |
+| [NMK Argus Hardware](https://www.patreon.com/Meathax/posts/argus-valtric-172291247)                                            |
 | [Nostradamus / Magical Cat Adventure (LINDA board)](https://github.com/kyledlester/Nostradamus_Magical_Cat_Adventure_MiSTer)   |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Butasan - Pig's &amp; Bomber's (Japan, English)</name>
+  <setname>butasan</setname>
+  <year>1987</year>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_Argus</rbf>
+  <manufacturer>NMK (Jaleco license)</manufacturer>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rotation>horizontal</rotation>
+  <num_buttons>2</num_buttons>
+  <switches default="FF,FF" base="16">
+    <dip name="Free Play" bits="0" ids="Off,On" values="1,0"/>
+    <dip name="Invulnerable (Cheat)" bits="1" ids="Off,On" values="1,0"/>
+    <dip name="Lives" bits="2,3" ids="3,4,5,6" values="3,2,1,0"/>
+    <dip name="Difficulty" bits="4,5" ids="Normal,Hard,Very Hard,Hardest" values="3,2,1,0"/>
+    <dip name="Unused SW1:2" bits="6" ids="Off,On" values="1,0"/>
+    <dip name="Unused SW1:1" bits="7" ids="Off,On" values="1,0"/>
+    <dip name="Flip Screen" bits="8" ids="Off,On" values="1,0"/>
+    <dip name="Unused SW2:7" bits="9" ids="Off,On" values="1,0"/>
+    <dip name="Coin B" bits="10,12" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C" values="0,1,2,3,7,6,5,4"/>
+    <dip name="Coin A" bits="13,15" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/1C,1C/2C,1C/3C,1C/4C" values="0,1,2,3,7,6,5,4"/>
+  </switches>
+  <rom index="1">
+    <part>02</part>
+  </rom>
+  <rom index="0" zip="butasan.zip" type="nonmerged" md5="b2d17c1bbd98664f3e76e68538971362">
+    <part name="4.t2" crc="1ba1d8e4"/>
+    <part repeat="0x8000">00</part>
+    <part name="3.s2" crc="a6b3ccc2"/>
+    <part name="2.p2" crc="96517fa9"/>
+    <part name="1.b2" crc="c9d23e2d"/>
+    <part name="16.k16" crc="e0ce51b6"/>
+    <part name="15.k15" crc="2105f6e1"/>
+    <part name="14.k14" crc="8ec891c1"/>
+    <part name="13.k13" crc="5023e74d"/>
+    <part name="12.k12" crc="44f59905"/>
+    <part name="11.k11" crc="b8929f1d"/>
+    <part name="10.k10" crc="fd4d3baf"/>
+    <part name="9.k9" crc="7da4c0fd"/>
+    <part name="5.l7" crc="b8e026b0"/>
+    <part name="6.n7" crc="8bbacb81"/>
+    <part name="7.a8" crc="3a48d531"/>
+    <part name="8.a7" crc="85153252"/>
+    <part repeat="0x8000">00</part>
+    <part name="buta-01.prm" crc="45baedd0"/>
+    <part name="buta-02.prm" crc="0dcb18fc"/>
+  </rom>
+  <rom index="3">
+    <part>00 00 00 00 04 00 00 02 00 02 00 01 00 00 04 00 00 00 FA B0 01 10 00 07 00 00 FC A0 00 05 00 00 00 00 FC A2 00 01 02 02</part>
+  </rom>
+  <nvram index="4" size="278"/>
+  <buttons names="Throw/Punch,Duck,Start,Coin,Pause,Service,Test Entry" default="A,B,Start,R,L,X,Y"/>
+</misterromdescription>
