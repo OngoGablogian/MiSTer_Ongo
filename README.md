@@ -228,6 +228,7 @@ main=MiSTer_Marty
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                                             |
 | [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)                       |
 | [Mortal Kombat II (rev L3.2W) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk2-for-wolf-unit-boards.34080/)                  |
+| [Muchi Muchi Pork! Roppaku](https://github.com/GalaxyBrian/Muchi_Muchi_Pork_Roppaku)                                                          |
 | [NBA Jam Tournament Edition SE (rev 5.02)](https://www.arcade-projects.com/threads/updated-release-nba-jam-tournament-edition-se-5-02.28249/) |
 | [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                                          |
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                                               |
