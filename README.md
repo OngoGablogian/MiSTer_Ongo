@@ -53,6 +53,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Gladiator](https://mister.blahm1d.com/core-gladiator.html)                                                                    |
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
+| [Heavy Unit](https://www.patreon.com/Meathax/posts/heavy-unit-172408285)                                                       |
 | [Hyperstone E1](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                             |
 | [I, Robot](https://www.patreon.com/Meathax/posts/i-robot-1984-169005879)                                                       |
 | [Ikki](https://www.patreon.com/Meathax/posts/fresh-meat-ikki-172031733)                                                        |
@@ -148,6 +149,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
 | [The Legend of Kage](https://mister.blahm1d.com/core-legendofkage.html)                                                        |
+| [The Lost Castle In Darkmist](https://www.patreon.com/Meathax/posts/lost-castle-in-172389752)                                  |
 | [The Pit](https://misterfpga.org/viewtopic.php?p=115950)                                                                       |
 | [Tumble Pop Bootleg](https://www.patreon.com/Meathax/posts/tumble-pop-pcb-171191206)                                           |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |

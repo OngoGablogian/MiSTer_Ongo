@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>The Lost Castle In Darkmist</name>
+  <setname>darkmist</setname>
+  <rbf>Meathax_Darkmist</rbf>
+  <mameversion>0289</mameversion>
+  <year>1986</year>
+  <manufacturer>Seibu Kaihatsu (Taito license)</manufacturer>
+  <category>Action</category>
+  <rotation>vertical (ccw)</rotation>
+  <buttons names="Sword,Magic,Start 1P,Start 2P,Coin 1,Coin 2,Service Mode,Pause" default="A,B,Start,R,Select,L,X,Y"/>
+  <switches default="bf,cf" base="0">
+    <dip name="Coin A" bits="0,1,2" ids="5C / 1C,1C / 5C,3C / 1C,1C / 2C,4C / 1C,1C / 3C,2C / 1C,1C / 1C"/>
+    <dip name="Coin B" bits="3,4" ids="2C / 3C,1C / 2C,2C / 1C,1C / 1C"/>
+    <dip name="Service Mode" bits="5" ids="On,Off"/>
+    <dip name="SW1:7 (Unknown)" bits="6" ids="On,Off"/>
+    <dip name="Free Play" bits="7" ids="On,Off"/>
+    <dip name="Cabinet" bits="8" ids="Cocktail,Upright"/>
+    <dip name="Difficulty" bits="9,10" ids="Hardest,Hard,Normal,Easy"/>
+    <dip name="Lives" bits="11,12" ids="4,3,2,1"/>
+    <dip name="Bonus Life" bits="13,14" ids="40K / 80K,30K / 60K,20K / 40K,10K / 20K"/>
+    <dip name="Demo Sounds" bits="15" ids="On,Off"/>
+  </switches>
+  <rom index="0" zip="darkmist.zip|t5182.zip" md5="0acd60f1bfef1cbd28287fecb0353084">
+    <!-- stream 0x00000: maincpu bank 0 (datum/opcode transforms in hardware) -->
+    <part name="dm_15.rom" crc="21e6503c"/>
+    <!-- stream 0x08000: maincpu bank 1 (raw) -->
+    <part name="dm_16.rom" crc="094579d9"/>
+    <!-- stream 0x10000: t5182 external (bitswap on write) -->
+    <part name="dm_17.rom" crc="7723dcae"/>
+    <!-- stream 0x18000: t5182 CPU ROM (raw) -->
+    <part name="t5182.rom" crc="d354c8fc"/>
+    <!-- stream 0x1a000: tx_gfx first half (pair with dm_14) -->
+    <part name="dm_13.rom" crc="38bb38d9"/>
+    <!-- stream 0x1c000: tx_gfx second half -->
+    <part name="dm_14.rom" crc="ac5a31f3"/>
+    <!-- stream 0x1e000: bg_gfx first half -->
+    <part name="dm_01.rom" crc="652aee6b"/>
+    <!-- stream 0x2e000: bg_gfx second half -->
+    <part name="dm_02.rom" crc="e2dd15aa"/>
+    <!-- stream 0x3e000: fg_gfx first half -->
+    <part name="dm_05.rom" crc="ca79a738"/>
+    <!-- stream 0x4e000: fg_gfx second half -->
+    <part name="dm_06.rom" crc="9629ed2c"/>
+    <!-- stream 0x5e000: spr_gfx first half 0 -->
+    <part name="dm_09.rom" crc="52154b50"/>
+    <!-- stream 0x6e000: spr_gfx first half 1 -->
+    <part name="dm_11.rom" crc="3118e2f9"/>
+    <!-- stream 0x76000: spr_gfx second half 0 -->
+    <part name="dm_10.rom" crc="34fd52b5"/>
+    <!-- stream 0x86000: spr_gfx second half 1 -->
+    <part name="dm_12.rom" crc="cc4b9839"/>
+    <!-- stream 0x8e000: bg_map low bytes (interleave offset 0) -->
+    <part name="dm_03.rom" crc="60b40c2a"/>
+    <!-- stream 0x96000: bg_map high bytes (interleave offset 1) -->
+    <part name="dm_04.rom" crc="d47b8cd9"/>
+    <!-- stream 0x9e000: fg_map low bytes (interleave offset 0) -->
+    <part name="dm_07.rom" crc="889b1277"/>
+    <!-- stream 0xa2000: fg_map high bytes (interleave offset 1) -->
+    <part name="dm_08.rom" crc="f76f6f46"/>
+    <!-- stream 0xa6000: bg CLUT -->
+    <part name="63s281n.m7" crc="897ef49f"/>
+    <!-- stream 0xa6100: fg CLUT -->
+    <part name="63s281n.d7" crc="a9975a96"/>
+    <!-- stream 0xa6200: spr CLUT -->
+    <part name="63s281n.f11" crc="8096b206"/>
+    <!-- stream 0xa6300: tx CLUT -->
+    <part name="63s281n.j15" crc="2ea780a4"/>
+    <!-- stream 0xa6400: PROM (not stored) -->
+    <part name="63s281n.l1" crc="208d17ca"/>
+    <!-- stream 0xa6500: PROM (not stored) -->
+    <part name="82s129.d11" crc="866eab0e"/>
+  </rom>
+  <rom index="3" md5="none">
+    <part>02 ee 00 00 00 ff 00 02 00 02 00 01 00 0f 04 00 00 00 00 1d 8c 00 20 00</part>
+  </rom>
+  <nvram index="4" size="140"/>
+</misterromdescription>

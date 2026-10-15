@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+    <!--DRAFT: staged only. Pause Mode is the five-set firmware-qualified correction to MAME Bonus; native timing and hiscore remain unqualified.-->
+    <name>Heavy Unit (Japan, older)</name>
+    <setname>hvyunitjo</setname>
+    <mameversion>0289</mameversion>
+    <year>1988</year>
+    <manufacturer>Kaneko / Taito</manufacturer>
+    <category>Shooter</category>
+    <rbf>Meathax_HeavyUnit</rbf>
+    <rotation>horizontal</rotation>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons names="Shot,Bomb,Start,Coin,Pause,Service,Game Pause" default="A,B,Start,Select"/>
+    <switches default="FE F7" base="0">
+        <dip name="Cabinet" bits="0" ids="Upright,Cocktail"/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Unused SW1:4" bits="3" ids="Low,High"/>
+        <dip name="Coin A" bits="4,5" ids="2C/3C,2C/1C,1C/2C,1C/1C"/>
+        <dip name="Coin B" bits="6,7" ids="2C/3C,2C/1C,1C/2C,1C/1C"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Allow Continue" bits="10" ids="Off,On"/>
+        <dip name="Pause Mode" bits="11" ids="Enabled,Normal"/>
+        <dip name="Lives" bits="12,13" ids="7,5,4,3"/>
+        <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+        <dip name="Unused SW2:8" bits="15" ids="Low,High"/>
+    </switches>
+    <rom index="3">
+        <part>00 00 00 00 00 01 00 00 00 00 00 01 00 01 01 00 00 00 01 90 28 00 50 00</part>
+    </rom>
+    <nvram index="4" size="40"/>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <rom index="0" address="0x30000000" zip="hvyunitjo.zip|hvyunit.zip" md5="e11be5484c75aa40395bf90f25ec5ea2">
+        <!--maincpu-->
+        <part name="b73_13.5c" crc="e2874601" offset="0x0" length="0x20000"/>
+        <!--subcpu-->
+        <part name="b73_14.5p" crc="0dfb51d4" offset="0x0" length="0x10000"/>
+        <!--soundcpu-->
+        <part name="b73_12.7e" crc="d1d24fab" offset="0x0" length="0x10000"/>
+        <!--mermaid-->
+        <part name="mermaid.bin" crc="88c5dd27" offset="0x0" length="0xE00"/>
+        <part repeat="0x200">00</part>
+        <!--sprites-->
+        <part name="b73_08.2f" crc="f83dd808" offset="0x0" length="0x80000"/>
+        <part repeat="0x80000">00</part>
+        <part name="b73_07.2c" crc="5cffa42c" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">00</part>
+        <part name="b73_06.2b" crc="a98e4aea" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">00</part>
+        <part name="b73_01.1b" crc="3a8a4489" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">00</part>
+        <part name="b73_02.1c" crc="025c536c" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">00</part>
+        <part name="b73_03.1d" crc="ec6020cf" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">00</part>
+        <part name="b73_04.1f" crc="f7badbb2" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">00</part>
+        <part name="b73_05.1h" crc="b8e829d2" offset="0x0" length="0x10000"/>
+        <part repeat="0x30000">00</part>
+        <!--tiles-->
+        <part name="b73_09.2p" crc="537c647f" offset="0x0" length="0x80000"/>
+    </rom>
+</misterromdescription>
