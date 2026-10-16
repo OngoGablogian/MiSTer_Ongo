@@ -1,0 +1,62 @@
+<misterromdescription>
+	<name>Pro Sports - Bowling, Tennis, and Golf</name>
+	<mameversion>0270</mameversion>
+	<setname>prosport</setname>
+	<year>1983</year>
+	<manufacturer>Data East Corporation</manufacturer>
+	<category>Sports</category>
+	<rbf>Meathax_DataEastLiberation</rbf>
+	<about author="aCORES" source="MAME liberate.cpp / liberate_v.cpp"/>
+	<resolution>15kHz</resolution><rotation>vertical</rotation><flip>yes</flip>
+	<players>2</players><joystick>8-way</joystick><num_buttons>2</num_buttons>
+	<buttons names="Swing/Throw,-,Start1P,Start2P,CoinA,CoinB,Service,Tilt" default="A,B,Start,Select,R,L,X,Y"/>
+	<switches default="7F,FF">
+		<!-- DSW1 -->
+		<dip bits="0,1" name="Coin A" ids="2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip bits="2" name="Unknown SW1-3" ids="On,Off"/>
+		<dip bits="3" name="Unknown SW1-4" ids="On,Off"/>
+		<dip bits="4" name="Service Mode" ids="On,Off"/>
+		<dip bits="5" name="Test Mode" ids="ROM Test,Maping Test"/>
+		<dip bits="6" name="Unknown SW1-7" ids="On,Off"/>
+		<dip bits="7" name="Cabinet" ids="Upright,Cocktail"/>
+		<!-- DSW2 -->
+		<dip bits="8" name="Unknown SW2-1" ids="On,Off"/>
+		<dip bits="9" name="Unknown SW2-2" ids="On,Off"/>
+		<dip bits="10" name="Unknown SW2-3" ids="On,Off"/>
+		<dip bits="11" name="Unknown SW2-4" ids="On,Off"/>
+		<dip bits="12" name="Unknown SW2-5" ids="On,Off"/>
+		<dip bits="13" name="Unknown SW2-6" ids="On,Off"/>
+		<dip bits="14" name="Unknown SW2-7" ids="On,Off"/>
+		<dip bits="15" name="Unknown SW2-8" ids="On,Off"/>
+	</switches>
+	<rom index="0" zip="prosport.zip" md5="none">
+		<!-- DELU v1, Liberation engine, Pro Sports variant, main nibble swap -->
+		<part>44 45 4C 55 01 00 03 01 00 00 00 00 00 00 00 00</part>
+		<part repeat="0x4000">00</part>
+		<part name="ic21ar09.bin" crc="4faa8d12"/>
+		<part name="ic22ar10.bin" crc="389e405b"/>
+		<part name="ic23ar11.bin" crc="c0bc7f2a"/>
+		<part name="ic24ar12.bin" crc="4acd3f0d"/>
+		<part name="ic25ar13.bin" crc="2bdabdf3"/>
+		<part name="ic26ar14.bin" crc="10ccfddb"/>
+		<part name="ic43ar16.bin" crc="113a4f89"/>
+		<part name="ic42ar15.bin" crc="635425a6"/>
+		<part name="ic52ar00.bin" crc="1e16adde"/>
+		<part name="ic53ar01.bin" crc="4b7a6431"/>
+		<part name="ic54ar02.bin" crc="039eba80"/>
+		<part name="ic55ar03.bin" crc="caecafcb"/>
+		<part name="ic56ar04.bin" crc="d555835e"/>
+		<part name="ic57ar05.bin" crc="9d05c4cc"/>
+		<part name="ic58ar06.bin" crc="903ea834"/>
+		<part name="ic59ar07.bin" crc="e6527838"/>
+		<part name="ic60ar08.bin" crc="ff1e6b01"/>
+		<part name="ic46ar18.bin" crc="d23998d3"/>
+		<part name="ic45ar17.bin" crc="5f1c621e"/>
+		<part repeat="0x6000">00</part>
+		<part name="ic46ar18.bin" crc="d23998d3"/>
+		<part name="ic45ar17.bin" crc="5f1c621e"/>
+		<part repeat="0x2020">00</part>
+	</rom>
+	<rom index="1"></rom><rom index="2"></rom><nvram></nvram>
+	<remark>Variant includes Pro Sports RAM tilemap, programmable BGR233 palette, dynamic Pro Golf character RAM, and its distinct IO map.</remark>
+</misterromdescription>

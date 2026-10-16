@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>S.P.Y.: Special Project Y. (World ver. N)</name>
+  <setname>spy</setname>
+  <rbf>Meathax_SPY</rbf>
+  <mameversion>0289</mameversion>
+  <year>1989</year>
+  <manufacturer>Konami</manufacturer>
+  <category>Shooter</category>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <buttons names="Punch/Kick,Kick/Shoot,Start,Coin,Service,Pause" default="A,B,Start,Select,Y,X"/>
+  <rom index="0" zip="spy.zip" md5="ec9441dd52a63a17fdc851861a6a227c">
+    <part repeat="0x8000">00</part>
+    <part name="857n02.bin" crc="31a97efe" offset="0x8000" length="0x8000"/>
+    <part name="857n03.bin" crc="97993b38"/>
+    <part name="857n02.bin" crc="31a97efe" offset="0x0" length="0x8000"/>
+    <interleave output="32">
+      <part name="857b09.bin" crc="b8780966" map="0021"/>
+      <part name="857b08.bin" crc="3e4d8d50" map="2100"/>
+    </interleave>
+    <interleave output="32">
+      <part name="857b06.bin" crc="7b515fb1" map="0021"/>
+      <part name="857b05.bin" crc="27b0f73b" map="2100"/>
+    </interleave>
+    <part name="857d01.bin" crc="aad4210f"/>
+    <part name="857b07.bin" crc="ce3512d4"/>
+    <part name="857b04.bin" crc="20b83c13"/>
+    <part name="857a10.bin" crc="32758507"/>
+  </rom>
+  <rom index="3" md5="f6b6d01071fbe858913284ac0c24b039">
+    <part>19 15 A4 20 00 FF 00 04 00 04 00 01 00 08 04 00 00 00 09 A0 50 11 00 00 00 00 08 36 04 00 00 00</part>
+  </rom>
+  <nvram index="4" size="84"/>
+  <remark>Qualified against MAME0.289 with individually documented raster-sampling exceptions. Release RBF passed all-corner timing, resource and compressed-conversion checks; hardware testing remains with the user.</remark>
+</misterromdescription>

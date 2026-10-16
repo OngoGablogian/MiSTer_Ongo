@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Mortal Race</name>
+  <setname>mortalr</setname>
+  <rbf>Meathax_SteelForce</rbf>
+  <mameversion>0289</mameversion>
+  <year>1995</year>
+  <manufacturer>New Dream Games</manufacturer>
+  <rotation>horizontal</rotation>
+  <buttons names="Accelerate,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,-,-" count="1"/>
+  <rom index="1">
+    <part>01</part>
+  </rom>
+  <rom index="0" zip="mortalr.zip" address="0x30000000" md5="66194a723f262ab38bf71e3723ad817b">
+    <interleave output="16">
+      <part name="2.u105" crc="550c48e3" map="01"/>
+      <part name="3.u104" crc="92fad747" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="8_bot.u27" crc="042297f3" map="01"/>
+      <part name="9_bot.u28" crc="ab330185" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="12_top.u27" crc="fa95773c" map="01"/>
+      <part name="13_top.u28" crc="f2342348" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="10.u29" crc="fb39b032" map="01"/>
+      <part name="11.u30" crc="a82f2421" map="10"/>
+    </interleave>
+    <part name="4.u36" crc="6d1e6367"/>
+    <part name="5.u31" crc="54b223bf"/>
+    <part name="6.u32" crc="dab08a04"/>
+    <part name="7.u33" crc="9a856797"/>
+    <part name="1.u1" crc="e5c730c2"/>
+  </rom>
+  <nvram index="2" size="128"/>
+  <rom index="5">
+    <part>01</part>
+  </rom>
+</misterromdescription>

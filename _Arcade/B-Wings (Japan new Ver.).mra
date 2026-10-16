@@ -1,0 +1,58 @@
+<misterromdescription>
+	<name>B-Wings (Japan new Ver.)</name>
+	<mameversion>0288</mameversion>
+	<setname>bwings</setname>
+	<year>1984</year>
+	<manufacturer>Data East Corporation</manufacturer>
+	<category>Shooter</category>
+	<rbf>Meathax_DataEastLiberation</rbf>
+	<about author="aCORES" source="MAME bwing.cpp"/>
+	<resolution>15kHz</resolution><rotation>vertical</rotation><flip>yes</flip>
+	<players>2</players><joystick>8-way</joystick><num_buttons>2</num_buttons>
+	<buttons names="Fire,Dive/Eject Wing,Start1P,Start2P,CoinA,CoinB,Service,Tilt" default="A,B,Start,Select,R,L,X,Y"/>
+	<switches default="DF,BF">
+		<!-- DSW0 -->
+		<dip bits="0,1" name="Coin A" ids="2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip bits="2,3" name="Coin B" ids="2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip bits="4" name="Diagnostics" ids="On,Off"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6" name="Invincibility" ids="On,Off"/>
+		<dip bits="7" name="Infinite" ids="On,Off"/>
+		<!-- DSW1 -->
+		<dip bits="8" name="Lives" ids="5,3"/>
+		<dip bits="9,10" name="Bonus Life" ids="40000,20000 80000,20000 60000,20000 40000"/>
+		<dip bits="11" name="Enemy Crafts" ids="Hard,Normal"/>
+		<dip bits="12" name="Enemy Missiles" ids="Hard,Normal"/>
+		<dip bits="13" name="Freeze" ids="On,Off"/>
+		<dip bits="14" name="Country" ids="Japan/US,Japan Only"/>
+		<dip bits="15" name="Unknown SW1-8" ids="On,Off"/>
+	</switches>
+	<rom index="0" zip="bwings.zip" md5="none">
+		<!-- DELU v1, B-Wings engine, B-Wings variant, ROT90 -->
+		<part>44 45 4C 55 01 01 10 08 00 00 00 00 00 00 00 00</part>
+		<part repeat="0x4000">00</part>
+		<part name="bw_bv-02-.10a" crc="6074a86b"/>
+		<part name="bw_bv-01.7a" crc="b960c707"/>
+		<part name="bw_bv-00-.4a" crc="1f83804c"/>
+		<part repeat="0xA000">00</part>
+		<part name="bw_bv-06-.10d" crc="eca00fcb"/>
+		<part name="bw_bv-05-.9d" crc="1e393300"/>
+		<part name="bw_bv-04-.7d" crc="6548c5bb"/>
+		<part name="bw_bv-03.13a" crc="e8ac9379"/>
+		<part name="bw_bv-10.5c" crc="edca6901"/>
+		<part name="bw_bv-07.1l" crc="3d5ab2be"/>
+		<part name="bw_bv-08.1k" crc="7a585f1e"/>
+		<part name="bw_bv-09.1h" crc="a14c0b57"/>
+	</rom>
+	<rom index="1"></rom><rom index="2"></rom>
+	<rom index="3">
+		<part>
+			03 00 00 00 FF FF 00 08 00 08 00 01 11 11 40 00
+			00 00 00 0D 03 00 04 00
+			00 00 0D 00 8C 34 20 00
+		</part>
+	</rom>
+	<nvram index="4" size="143"/>
+
+	<remark>Dual MC6809E B-Wings hardware; encrypted DECO16 sound ROM is nibble-swapped by the engine loader.</remark>
+</misterromdescription>

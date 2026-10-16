@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Steel Force</name>
+  <setname>stlforce</setname>
+  <rbf>Meathax_SteelForce</rbf>
+  <mameversion>0289</mameversion>
+  <year>1994</year>
+  <manufacturer>Electronic Devices Italy / Ecogames S.L. Spain</manufacturer>
+  <rotation>horizontal</rotation>
+  <buttons names="Fire,Grenade,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,-,-" count="2"/>
+  <rom index="1">
+    <part>00</part>
+  </rom>
+  <rom index="0" zip="stlforce.zip" address="0x30000000" md5="74b47170c8c1e821d3106102a920ac2f">
+    <interleave output="16">
+      <part name="stlforce.105" crc="3ec804ca" map="01"/>
+      <part name="stlforce.104" crc="69b5f429" map="10"/>
+    </interleave>
+    <part repeat="786432">FF</part>
+    <interleave output="16">
+      <part name="stlforce.u27" crc="c42ef365" map="01"/>
+      <part name="stlforce.u28" crc="6a4b7c98" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="stlforce.u29" crc="30488f44" map="01"/>
+      <part name="stlforce.u30" crc="cf19d43a" map="10"/>
+    </interleave>
+    <part repeat="1048576">FF</part>
+    <part name="stlforce.u36" crc="037dfa9f"/>
+    <part name="stlforce.u31" crc="305a8eb5"/>
+    <part name="stlforce.u32" crc="760e8601"/>
+    <part name="stlforce.u33" crc="19415cf3"/>
+    <part repeat="1048576">FF</part>
+    <part name="stlforce.u1" crc="0a55edf1"/>
+  </rom>
+  <rom index="3">
+    <part>00 00 FF FF 00 FF 00 04 00 04 00 01 00 00 04 00 00 10 57 72 32 4E 00 00 00 10 57 84 01 02 02 00</part>
+  </rom>
+  <rom index="2" zip="stlforce.zip">
+    <part name="eeprom-stlforce.bin" crc="3fb83951"/>
+  </rom>
+  <nvram index="2" size="180"/>
+  <rom index="5">
+    <part>01</part>
+  </rom>
+</misterromdescription>

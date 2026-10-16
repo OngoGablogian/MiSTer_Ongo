@@ -40,9 +40,11 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                  |
 | [Chase H.Q.](https://www.patreon.com/bazset/posts/chase-h-q-taito-171600711)                                                   |
 | [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                          |
+| [Data East Liberation Hardware](https://www.patreon.com/Meathax/posts/boomer-rangr-b-172526836)                                |
 | [Data East Simple 156](https://www.patreon.com/Meathax/posts/data-east-156-171562893)                                          |
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
+| [Electronic Devices Italy / Ecogames Hardware](https://www.patreon.com/Meathax/posts/s-p-y-special-y-172508459)                |
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
 | [Exidy 440](https://mister.blahm1d.com/core-exidy440.html)                                                                     |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
@@ -66,6 +68,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Kickle Cubicle / Meikyuu Jima](https://www.patreon.com/bazset/posts/kickle-cubicle-172196207)                                 |
 | [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1559340446617174098)                |
 | [Konami GX](https://github.com/ppriest/Arcade-KonamiGX_MiSTer)                                                                 |
+| [Konami GX857 Hardware](https://www.patreon.com/Meathax/posts/s-p-y-special-y-172508459)                                       |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [Krull](https://www.patreon.com/bazset/posts/krull-1983-d-co-169209991)                                                        |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
@@ -156,7 +159,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                    |
 | [Violent Storm](https://www.patreon.com/Meathax/posts/violent-storm-171663267)                                                 |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                       |
-| [Yellow Cab](https://www.patreon.com/Meathax/posts/yellow-cab-gta-6-165049146)                                                 |
 | [Zero Team](https://www.patreon.com/Meathax/posts/fresh-meat-zero-171867032)                                                   |
 | [Zet98 (PC-98)](http://fpga8801.seesaa.net/)                                                                                   |
 | [zx48 (ZX Spectrum 48K)](https://github.com/Kyp069/zx48-MiSTer)                                                                |

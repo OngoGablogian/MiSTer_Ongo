@@ -1,0 +1,63 @@
+<misterromdescription>
+	<name>Boomer Rang'r / Genesis (set 1)</name>
+	<mameversion>0270</mameversion>
+	<setname>boomrang</setname>
+	<year>1983</year>
+	<manufacturer>Data East Corporation</manufacturer>
+	<category>Platform</category>
+	<rbf>Meathax_DataEastLiberation</rbf>
+	<about author="aCORES" source="MAME liberate.cpp / liberate_v.cpp"/>
+	<resolution>15kHz</resolution>
+	<rotation>vertical</rotation>
+	<flip>yes</flip>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<num_buttons>2</num_buttons>
+	<buttons names="Throw Boomerang,Mount Dinosaur,Start1P,Start2P,CoinA,CoinB,Service,Tilt" default="A,B,Start,Select,R,L,X,Y"/>
+
+	<switches default="3F,BF">
+		<!-- DSW1 -->
+		<dip bits="0,1" name="Coin A" ids="2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip bits="2,3" name="Coin B" ids="2 Coins/1 Credit,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+		<dip bits="4" name="Unknown SW1-5" ids="On,Off"/>
+		<dip bits="5" name="Unknown SW1-6" ids="On,Off"/>
+		<dip bits="6" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="7" name="Manufacturer" ids="Data East USA,Data East"/>
+		<!-- DSW2 -->
+		<dip bits="8,9" name="Lives" ids="Infinite,5,4,3"/>
+		<dip bits="10,11" name="Bonus" ids="20K only,50K / every 70K,30K / every 50K,20K / every 40K"/>
+		<dip bits="12,13" name="Difficulty" ids="Hardest,Hard,Normal,Easy"/>
+		<dip bits="14" name="Demo Sounds" ids="On,Off"/>
+		<dip bits="15" name="Invincibility" ids="On,Off"/>
+	</switches>
+
+	<rom index="0" zip="boomrang.zip" md5="none">
+		<!-- DELU v1, Liberation engine, Boomer Rang'r, nibble swap -->
+		<part>44 45 4C 55 01 00 02 01 00 00 00 00 00 00 00 00</part>
+		<part repeat="0x8000">00</part>
+		<part name="bp13.9k" crc="b70439b1"/>
+		<part name="bp14.11k" crc="98050e13"/>
+		<part name="bp11.11f" crc="d6106f00"/>
+		<part name="bp04.7b" crc="5d4b12eb"/>
+		<part repeat="0x2000">00</part>
+		<part name="bp06.10b" crc="5a18296e"/>
+		<part repeat="0x2000">00</part>
+		<part name="bp08.13b" crc="4cdb30d9"/>
+		<part repeat="0x2000">00</part>
+		<part name="bp02.4b" crc="f3c2b84f"/>
+		<part name="bp00.1b" crc="3370cf6e"/>
+		<part name="bp10.10a" crc="dd18a96f"/>
+		<part name="82s123.5l" crc="a71e19ff"/>
+	</rom>
+	<rom index="1"></rom><rom index="2"></rom>
+	<rom index="3">
+		<part>
+			03 00 00 00 FF FF 00 08 00 08 00 01 11 11 40 00
+			00 00 00 10 03 07 00 00
+			00 00 62 A2 3F 07 89 00
+		</part>
+	</rom>
+	<nvram index="4" size="66"/>
+
+	<remark>Main ROM nibble-swapped on load; standard DECO16 bank bit 0.</remark>
+</misterromdescription>
