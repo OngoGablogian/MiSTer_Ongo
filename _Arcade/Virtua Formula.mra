@@ -141,7 +141,7 @@
          REQUIRED: the core runs the real Z80 and there is no
          behavioural fallback. MAME will not start this game without
          the same file, so a complete romset already has it. -->
-    <rom index="2" zip="model1io.zip|daytona93.zip" md5="none">
+    <rom index="2" zip="model1io.zip|daytona93.zip|daytona.zip" md5="none">
         <part name="epr-14869b.25" crc="2d093304"/>
     </rom>
 

@@ -1,0 +1,135 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Desert Tank. Derived from MAME 0.289 model2.cpp ROM_START(desert).
+      Study R835. The same original Model 2 board as Daytona: the same Model 1
+      I/O board (epr-14869c), the same sound board, no drive board.
+
+      THE '93 LAYOUT, BYTE FOR BYTE, as Virtua Cop's MRA does it (R726), so
+      nothing in the core moves for this game:
+        * every region at the '93 MRA's offset, Desert Tank's smaller ROMs
+          zero-padded to the slot - zeros because MAME's unloaded region
+          space reads 0 (comms is ROMREGION_ERASE00 there);
+        * MPCM1 is one 2 MB ROM in a 4 MB slot, MPCM2 two 2 MB ROMs;
+        * the program is 512 KB to Daytona's 256: its first half in the
+          slot, the second (epr-16970 / 16971, CPU 0x40000-0x7FFFF) after
+          the '93 image's end (0x2BE0000). The loader moves it to GAME_POLYX
+          (R725's XTRA) and the bridge reads program 0x40000-0x7FFFF from
+          there ONLY when the game ID below says Desert Tank (or Virtua Cop).
+        * index 4, the game ID (Model 1's scheme), is 2: Desert Tank. It also
+          selects Desert Tank's controls (machine gun, cannon, the forward /
+          reverse lever) in place of Daytona's gearbox.
+
+      mpr-16964 / mpr-16965: MAME 0.289 names them .20 / .21; sets from
+      before MAME's 2024-10 rename carry .21 / .20. MiSTer finds a part by
+      its CRC first, so either set loads; the CRC is the ROM's identity.
+
+      I/O BOARD FIRMWARE: epr-14869c, MAME's default BIOS for this game.
+      desert.zip does not carry it; it comes from model1io.zip or a Daytona
+      set, as on the Daytona MRAs.
+    -->
+    <name>Desert Tank</name>
+    <setname>desert</setname>
+    <rbf>Model2</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>02 00</part>
+    </rom>
+    <rom index="3" zip="model1io.zip|daytona93.zip|daytona.zip" md5="none">
+        <part name="epr-14869c.25" crc="24b68e64"/>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Sega / Martin Marietta</manufacturer>
+    <category>Shooter</category>
+
+    <rom index="0" zip="desert.zip" md5="none">
+
+        <!-- 0x0000000  i960 program, first 256 KB (the second is at the end) -->
+        <interleave output="32">
+            <part name="epr-16976.12" crc="d036dff0" map="0021"/>
+            <part name="epr-16977.13" crc="e91194bd" map="2100"/>
+        </interleave>
+
+        <!-- 0x0040000  i960 data, 0xa00000 slot: 9 MB + 1 MB of zeros -->
+        <interleave output="32">
+            <part name="mpr-16974.10" crc="2ab491c5" map="0021"/>
+            <part name="mpr-16975.11" crc="e24fe7d3" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16972.8" crc="23e53748" map="0021"/>
+            <part name="mpr-16973.9" crc="77d6f509" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-16978.6" crc="38b3e574" map="0021"/>
+            <part name="epr-16979.7" crc="c314eb8b" map="2100"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x0a40000  copro data, 0x400000 slot: 1 MB + 3 MB of zeros -->
+        <interleave output="32">
+            <part name="epr-16981.28" crc="ae847571" map="0021"/>
+            <part name="epr-16980.29" crc="5239b864" map="2100"/>
+        </interleave>
+        <part repeat="3145728">00</part>
+
+        <!-- 0x0e40000  textures, 0x800000 slot: 4 MB + 4 MB of zeros -->
+        <interleave output="32">
+            <part name="mpr-16967.25" crc="b8b84c9d" map="0021"/>
+            <part name="mpr-16966.24" crc="7484efe9" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1640000  polygons, 0xd00000 slot: 8 MB + 5 MB of zeros -->
+        <interleave output="32">
+            <part name="mpr-16968.16" crc="4a16f465" map="0021"/>
+            <part name="mpr-16964.20" crc="d4a769b6" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-16969.17" crc="887380ac" map="0021"/>
+            <part name="mpr-16965.21" crc="9ba7645f" map="2100"/>
+        </interleave>
+        <part repeat="5242880">00</part>
+
+        <!-- 0x2340000  68000 sound program, 0x40000 slot (16-bit, byte-swapped):
+             128 KB + 128 KB of zeros -->
+        <interleave output="16">
+            <part name="epr-16985.7" crc="8c4d9056" map="12"/>
+        </interleave>
+        <part repeat="131072">00</part>
+
+        <!-- 0x2380000  MPCM samples, 0x800000: MPCM1 2 MB + 2 MB of zeros, MPCM2 4 MB -->
+        <part name="mpr-16986.32" crc="559612f9"/>
+        <part repeat="2097152">00</part>
+        <part name="mpr-16988.4"  crc="bc705875"/>
+        <part name="mpr-16989.5"  crc="1b616b31"/>
+
+        <!-- 0x2b80000  comms program, 0x20000 slot: none (ROMREGION_ERASE00) -->
+        <part repeat="131072">00</part>
+
+        <!-- 0x2ba0000  TGP math tables, 0x40000 -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x2be0000  i960 program, second 256 KB (CPU 0x40000-0x7FFFF).
+             The loader moves it to GAME_POLYX; the bridge reads it there for
+             this game only (R726, R835). -->
+        <interleave output="32">
+            <part name="epr-16970.14" crc="4ea12d1f" map="0021"/>
+            <part name="epr-16971.15" crc="d630b220" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- The core's button list, renamed for this game (R835, R837). The
+         positions are the core's J1 line; only the names change. Forward and
+         Reverse (Daytona's Accel and Brake; put them on the triggers) each
+         press the one drive pedal fully and set the forward / reverse lever;
+         Shift flips the lever by hand. The right stick's Y aims the cannon
+         (the d-pad's up / down too); the left stick steers. -->
+    <buttons names="Coin,Start,Test,Service,VR1 Blue,Shift,Forward,Reverse,Machine Gun,Cannon,VR2 Green,VR3 Red"/>
+</misterromdescription>

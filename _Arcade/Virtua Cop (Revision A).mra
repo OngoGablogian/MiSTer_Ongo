@@ -1,0 +1,130 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Virtua Cop, Revision A. Derived from MAME 0.289 model2.cpp
+      ROM_START(vcopa). Study R726 (the layout) and R839 (the I/O board): the
+      game ID below selects the type-2 I/O board (MAME model1io2) in a core
+      built with VCOP_IO, and the i960 forms Virtua Cop needs (VCOP_FPU).
+
+      THE '93 LAYOUT, BYTE FOR BYTE, so nothing in the core moves for this
+      game (R299 moved it and broke Daytona '93; this does not):
+        * every region at the '93 MRA's offset, Virtua Cop's smaller ROMs
+          zero-padded to the slot - zeros because MAME's unloaded region
+          space reads 0 (copro data and comms are ROMREGION_ERASE00 there);
+        * the samples keep MAME's gaps: MPCM1 has a 1 MB ROM in each 2 MB half;
+        * the program is 512 KB to Daytona's 256: its first half in the
+          slot, the second (epr-17160a / 17161a, CPU 0x40000-0x7FFFF) after
+          the '93 image's end (0x2BE0000). The loader moves it to GAME_POLYX
+          (R725's XTRA) and the bridge reads program 0x40000-0x7FFFF from
+          there ONLY when the game ID below says Virtua Cop.
+        * index 4, the game ID (Model 1's scheme), is 1: Virtua Cop. The
+          Daytona MRAs send none and the core reads 0 - Daytona.
+
+      I/O BOARD FIRMWARE: the type-2 board's EPR-17181 (MAME model1io2,
+      BIOS epr17181), as the cabinet has it. The file is 64 KB and the board
+      maps 32 KB; the program ends at 0x31ff and the core loads the first
+      16 KB (R839). It is in MAME's vcop / vcopa sets and in model1io2.zip.
+      (R726 loaded the type-1 board's epr-14869c; on the board that core
+      showed a black screen.)
+    -->
+    <name>Virtua Cop (Revision A)</name>
+    <setname>vcopa</setname>
+    <rbf>Model2</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>01 00</part>
+    </rom>
+    <rom index="3" zip="vcopa.zip|vcop.zip|model1io2.zip" md5="none">
+        <part name="epr-17181.6" crc="1add2b82"/>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Shooter</category>
+
+    <rom index="0" zip="vcopa.zip|vcop.zip" md5="none">
+
+        <!-- 0x0000000  i960 program, first 256 KB (the second is at the end) -->
+        <interleave output="32">
+            <part name="epr-17166a.12" crc="702566e6" map="0021"/>
+            <part name="epr-17167a.13" crc="9b8e05a8" map="2100"/>
+        </interleave>
+
+        <!-- 0x0040000  i960 data, 0xa00000 slot: 9 MB + 1 MB of zeros -->
+        <interleave output="32">
+            <part name="mpr-17164.10" crc="ac5fc501" map="0021"/>
+            <part name="mpr-17165.11" crc="82296d00" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17162.8" crc="60ddd41e" map="0021"/>
+            <part name="mpr-17163.9" crc="8c1f9dc8" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-17168a.6" crc="59091a37" map="0021"/>
+            <part name="epr-17169a.7" crc="0495808d" map="2100"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x0a40000  copro data, 0x400000 slot: none (ROMREGION_ERASE00) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x0e40000  textures, 0x800000 slot: 4 MB + 4 MB of zeros -->
+        <interleave output="32">
+            <part name="mpr-17158.25" crc="1108d1ec" map="0021"/>
+            <part name="mpr-17157.24" crc="cf31e33d" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1640000  polygons, 0xd00000 slot: 4 MB + 9 MB of zeros -->
+        <interleave output="32">
+            <part name="mpr-17159.16" crc="e218727d" map="0021"/>
+            <part name="mpr-17156.20" crc="c4f4aabf" map="2100"/>
+        </interleave>
+        <part repeat="9437184">00</part>
+
+        <!-- 0x2340000  68000 sound program, 0x40000 (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-17170.7" crc="06a38ae2" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="epr-17171.8" crc="b5e436f8" map="12"/>
+        </interleave>
+
+        <!-- 0x2380000  MPCM samples, 0x800000: MPCM1 1 MB at 0 and at 2 MB, MPCM2 4 MB -->
+        <part name="mpr-17172.32" crc="ab22cac3"/>
+        <part repeat="1048576">00</part>
+        <part name="mpr-17173.33" crc="3cb4005c"/>
+        <part repeat="1048576">00</part>
+        <part name="mpr-17174.4"  crc="a50369cc"/>
+        <part name="mpr-17175.5"  crc="9136d43c"/>
+
+        <!-- 0x2b80000  comms program, 0x20000 slot: none (ROMREGION_ERASE00) -->
+        <part repeat="131072">00</part>
+
+        <!-- 0x2ba0000  TGP math tables, 0x40000 -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x2be0000  i960 program, second 256 KB (CPU 0x40000-0x7FFFF).
+             The loader moves it to GAME_POLYX; the bridge reads it there for
+             this game only (R726). -->
+        <interleave output="32">
+            <part name="epr-17160a.14" crc="267f3242" map="0021"/>
+            <part name="epr-17161a.15" crc="f7126876" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- The guns' buttons (R846), per player: joystick 1 is player 1's gun,
+         joystick 2 player 2's. Aim with the left stick (a USB light gun
+         arrives as that stick, calibrated in MiSTer's F10 menu) or the mouse
+         (OSD "Mouse"); the mouse's left / right buttons, where MiSTer puts a
+         USB gun's trigger, are Trigger / Reload too. Reload is "shoot off the
+         screen"; aiming off the screen and pulling the trigger does the same.
+         Test and Service are player 1's. -->
+    <buttons names="Trigger,Reload,Start,Coin,Test,Service"/>
+</misterromdescription>
