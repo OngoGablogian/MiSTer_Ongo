@@ -236,6 +236,7 @@ main=MiSTer_Marty
 | [Out Zone (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                                          |
 | [Pac-Yuyu Arcade (v1.0)](https://www.romhacking.net/hacks/6695)                                                                               |
 | [Pacu Pacu (v1.1)](https://discord.com/channels/647909397477195803/1046942006942900304/1408732261028860004)                                   |
+| [Pink Sweets Rosy Future](https://github.com/GalaxyBrian/Pink_Sweets_Rosy_Future)                                                             |
 | [Pollen Angel](https://arlagames.itch.io/pollen-angel-pacman-hardware)                                                                        |
 | [Pop Flamer (Bootleg conversion) (Fixed)](https://github.com/MiSTer-devel/Arcade-NaughtyBoy_MiSTer)                                           |
 | Salamander (SP ver. clone)                                                                                                                    |
