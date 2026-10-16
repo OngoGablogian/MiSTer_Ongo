@@ -228,6 +228,7 @@ main=MiSTer_Marty
 | [DoDonPachi Trainer (v1.11)](https://github.com/alamone/ddonpachj-trainer)                                                                    |
 | [Flying Shark (Visibility Hack)](https://www.romhacking.net/hacks/9236/)                                                                      |
 | [Gradius II (ver.xh)](https://github.com/Toryalai1/Arcade_Offset/tree/main/release/_Arcade%20Offset/_Gradius%20II)                            |
+| [Ibara Kuro Black Label - Show Time](https://github.com/GalaxyBrian/Ibara_Showtime_Patcher)                                                   |
 | [Kana Kong Arcade (v1.01)](https://www.romhacking.net/hacks/6689)                                                                             |
 | [Mortal Kombat (rev 5.5) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk1-for-wolf-unit-boards.36522/)                       |
 | [Mortal Kombat II (rev L3.2W) (Wolf Unit)](https://www.arcade-projects.com/threads/released-mk2-for-wolf-unit-boards.34080/)                  |
