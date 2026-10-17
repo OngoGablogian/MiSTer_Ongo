@@ -42,6 +42,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                          |
 | [Data East Liberation Hardware](https://www.patreon.com/Meathax/posts/boomer-rangr-b-172526836)                                |
 | [Data East Simple 156](https://www.patreon.com/Meathax/posts/data-east-156-171562893)                                          |
+| [Deniam-16](https://github.com/kyledlester/Deniam_MiSTer_FPGA)                                                                 |
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Electronic Devices Italy / Ecogames Hardware](https://www.patreon.com/Meathax/posts/s-p-y-special-y-172508459)                |
@@ -67,6 +68,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
 | [Kickle Cubicle / Meikyuu Jima](https://www.patreon.com/bazset/posts/kickle-cubicle-172196207)                                 |
 | [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1559340446617174098)                |
+| [Konami Bemani DJ-Main](https://github.com/kyledlester/Konami_Bemani_DJ-Main_MiSTer_FPGA)                                      |
 | [Konami GX](https://github.com/ppriest/Arcade-KonamiGX_MiSTer)                                                                 |
 | [Konami GX857 Hardware](https://www.patreon.com/Meathax/posts/s-p-y-special-y-172508459)                                       |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |

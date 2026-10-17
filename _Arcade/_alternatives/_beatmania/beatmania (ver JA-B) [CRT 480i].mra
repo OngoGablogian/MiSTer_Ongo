@@ -1,0 +1,68 @@
+<misterromdescription>
+	<!-- Konami DJ Main, MAME 0.289 machine "bm1stmix" (djmainj). The game's data is on its hard disk:
+	     convert 753jaa11.chd once with "chdman extracthd -i 753jaa11.chd -o 753jaa11.hdd" and mount the
+	     .hdd from the OSD ("Mount HDD"). The board waits in reset until it is mounted.
+	     CRT 480i: this MRA loads DJMainSD, whose analog output is 15 kHz 480i only, for a
+	     standard-definition CRT; HDMI shows the native picture. For a 24 kHz monitor, use
+	     the MRA of the same name without [480i] (DJMain).
+	     Written by scripts/build_mras.py. -->
+	<name>beatmania (ver JA-B) [CRT 480i]</name>
+	<setname>bm1stmix</setname>
+	<rbf>DJMainSD</rbf>
+	<mameversion>0289</mameversion>
+	<year>1997</year>
+	<manufacturer>Konami</manufacturer>
+	<category>Music / Rhythm</category>
+	<region>Japan</region>
+	<players>2</players>
+	<joystick>2-way</joystick>
+	<rotation>horizontal</rotation>
+
+	<!-- the set: map 0, inputs 0, ATA passwords none, disk 16 heads x 63 sectors (DJMain.sv) -->
+	<rom index="1"><part>
+		00 00 00 10 3F 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	</part></rom>
+
+	<!-- the SDRAM image dj_sdram_top expects: program 1 MB, sprites 2 MB, tiles 2 MB -->
+	<rom index="0" zip="bm1stmix.zip" md5="none">
+		<!-- maincpu -->
+		<interleave output="16">
+			<part name="753jab01.6a" crc="25bf8629" map="01"/>
+			<part name="753jab02.8a" crc="6ab951de" map="10"/>
+		</interleave>
+		<!-- sprites -->
+		<interleave output="16">
+			<part name="753jaa03.19a" crc="f2b2bce8" map="01"/>
+			<part name="753jaa04.20a" crc="85a18f9d" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="753jaa05.22a" crc="749b1e87" map="01"/>
+			<part name="753jaa06.24a" crc="6d86b0fd" map="10"/>
+		</interleave>
+		<!-- k056832 -->
+		<interleave output="16">
+			<part name="753jaa07.22d" crc="f03ab5d8" map="01"/>
+			<part name="753jaa08.23d" crc="6559f0c8" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="753jaa09.25d" crc="b50c3dbb" map="01"/>
+			<part name="753jaa10.27d" crc="391f4bfd" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- DSW1 (byte 0), DSW2 (byte 1), DSW3 (byte 2), active low as MAME's ports -->
+	<switches default="FF,FF,FF">
+		<dip name="Unknown (DSW1 bit 7)" bits="7" ids="On,Off" values="0,1"/>
+		<dip name="Coinage" bits="0,4" ids="Free_Play,1P 3C / 2P 6C / Continue 2C,1P 2C / 2P 4C / Continue 2C,1P 3C / 2P 4C / Continue 1C,1P 2C / 2P 2C / Continue 2C,1P 3C / 2P 4C / Continue 3C,1P 2C / 2P 3C / Continue 2C,1P 3C / 2P 3C / Continue 2C,1P 1C / 2P 2C / Continue 1C,1P 3C / 2P 6C / Continue 1C,1P 1C / 2P 1C / Continue 1C,1P 3C / 2P 3C / Continue 3C,1P 2C / 2P 2C / Continue 1C,1P 3C / 2P 4C / Continue 2C,1P 2C / 2P 3C / Continue 1C,1P 3C / 2P 3C / Continue 1C,1P 3C / 2P 6C / Continue 3C,1P 2C / 2P 4C / Continue 1C" values="0,1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,30,31"/>
+		<dip name="Enable Expert Mode" bits="15" ids="No,Yes" values="0,1"/>
+		<dip name="Demo Sounds" bits="13,14" ids="Silent,Medium,Low,Loud" values="0,1,2,3"/>
+		<dip name="Unknown (DSW2 bit 4)" bits="12" ids="On,Off" values="0,1"/>
+		<dip name="Unknown (DSW3 bit 5)" bits="21" ids="On,Off" values="0,1"/>
+	</switches>
+
+	<buttons names="Key 1,Key 2,Key 3,Key 4,Key 5,Scratch Up,Scratch Down,Start,Coin,Effect,Test,Service" default="Y,X,B,A,R,L,-,Start,Select,-,-,-" count="5"/>
+</misterromdescription>

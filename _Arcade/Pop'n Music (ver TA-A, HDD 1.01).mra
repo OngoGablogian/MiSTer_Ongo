@@ -1,0 +1,71 @@
+<misterromdescription>
+	<!-- Konami DJ Main, MAME 0.289 machine "popn1" (djmaina). The game's data is on its hard disk:
+	     convert 803_ta_hdd.chd once with "chdman extracthd -i 803_ta_hdd.chd -o 803_ta_hdd.hdd" and mount the
+	     .hdd from the OSD ("Mount HDD"). The board waits in reset until it is mounted.
+	     Written by scripts/build_mras.py. -->
+	<name>Pop'n Music (ver TA-A, HDD 1.01)</name>
+	<setname>popn1</setname>
+	<rbf>DJMain</rbf>
+	<mameversion>0289</mameversion>
+	<year>1998</year>
+	<manufacturer>Konami</manufacturer>
+	<category>Music / Rhythm</category>
+	<region>Taiwan</region>
+	<players>1</players>
+	<joystick>none</joystick>
+	<rotation>horizontal</rotation>
+
+	<!-- the set: map 2, inputs 1, ATA passwords none, disk 16 heads x 63 sectors (DJMain.sv) -->
+	<rom index="1"><part>
+		02 01 00 10 3F 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	</part></rom>
+
+	<!-- the SDRAM image dj_sdram_top expects: program 1 MB, sprites 2 MB, tiles 2 MB -->
+	<rom index="0" zip="popn1.zip" md5="none">
+		<!-- maincpu -->
+		<interleave output="16">
+			<part name="803t_a01.6a" crc="e85032bc" map="01"/>
+			<part name="803j_a02.8a" crc="17e90be0" map="10"/>
+		</interleave>
+		<!-- sprites -->
+		<interleave output="16">
+			<part name="803t_a03.19a" crc="a0970b32" map="01"/>
+			<part name="803t_a04.20a" crc="a158b950" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="803t_a05.22a" crc="8a23c18d" map="01"/>
+			<part name="803t_a06.24a" crc="bd6450ff" map="10"/>
+		</interleave>
+		<!-- k056832 -->
+		<interleave output="16">
+			<part name="803t_a07.22d" crc="4c97dbf0" map="01"/>
+			<part name="803t_a08.23d" crc="cc6b21d3" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="803t_a09.25d" crc="45ab3978" map="01"/>
+			<part name="803t_a10.27d" crc="a487ad02" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- DSW1 (byte 0), DSW2 (byte 1), DSW3 (byte 2), active low as MAME's ports -->
+	<switches default="FF,FF,FF">
+		<dip name="Jamming Gauge Blocks" bits="6,7" ids="8,7,5,6" values="0,1,2,3"/>
+		<dip name="Unknown (DSW1 bit 5)" bits="5" ids="On,Off" values="0,1"/>
+		<dip name="Coinage" bits="0,3" ids="Free Play,1P 5C / Continue 5C,1P 5C / Continue 4C,1P 5C / Continue 3C,1P 5C / Continue 2C,1P 5C / Continue 1C,1P 4C / Continue 4C,1P 4C / Continue 3C,1P 4C / Continue 2C,1P 4C / Continue 1C,1P 3C / Continue 3C,1P 3C / Continue 2C,1P 3C / Continue 1C,1P 2C / Continue 2C,1P 1C / Continue 1C,1P 2C / Continue 1C" values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"/>
+		<dip name="Score Display" bits="15" ids="Off,On" values="0,1"/>
+		<dip name="Demo Sounds" bits="13,14" ids="Silent,Medium,Low,Loud" values="0,1,2,3"/>
+		<dip name="Normal Mode Jamming" bits="12" ids="Off,On" values="0,1"/>
+		<dip name="Gauge Decrement Level" bits="10,11" ids="3,0,2,1" values="0,1,2,3"/>
+		<dip name="Gauge Increment Level" bits="8,9" ids="3,0,2,1" values="0,1,2,3"/>
+		<dip name="Unknown (DSW3 bit 5)" bits="21" ids="On,Off" values="0,1"/>
+		<dip name="All Song Mode [*A]" bits="20" ids="On,Off" values="0,1"/>
+		<dip name="Enable &quot;RAVE&quot; (with *A=On) [*B]" bits="17" ids="On,Off" values="0,1"/>
+		<dip name="Enable &quot;Bonus Track&quot; (with *A=O" bits="16" ids="On,Off" values="0,1"/>
+	</switches>
+
+	<buttons names="1 White,2 Yellow,3 Green,4 Blue,5 Red,6 Blue,7 Green,8 Yellow,9 White,Coin,Test,Service" default="Y,X,B,A,L,R,-,-,-,Select,-,-" count="9"/>
+</misterromdescription>

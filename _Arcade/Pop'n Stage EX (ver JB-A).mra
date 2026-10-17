@@ -1,0 +1,71 @@
+<misterromdescription>
+	<!-- Konami DJ Main, MAME 0.289 machine "popnstex" (djmainj). The game's data is on its hard disk:
+	     convert 970jba11.chd once with "chdman extracthd -i 970jba11.chd -o 970jba11.hdd" and mount the
+	     .hdd from the OSD ("Mount HDD"). The board waits in reset until it is mounted.
+	     Written by scripts/build_mras.py. -->
+	<name>Pop'n Stage EX (ver JB-A)</name>
+	<setname>popnstex</setname>
+	<rbf>DJMain</rbf>
+	<mameversion>0289</mameversion>
+	<year>1999</year>
+	<manufacturer>Konami</manufacturer>
+	<category>Music / Rhythm</category>
+	<region>Japan</region>
+	<players>1</players>
+	<joystick>none</joystick>
+	<rotation>horizontal</rotation>
+
+	<!-- the set: map 0, inputs 2, ATA passwords none, disk 16 heads x 32 sectors (DJMain.sv) -->
+	<rom index="1"><part>
+		00 02 00 10 20 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	</part></rom>
+
+	<!-- the SDRAM image dj_sdram_top expects: program 1 MB, sprites 2 MB, tiles 2 MB -->
+	<rom index="0" zip="popnstex.zip" md5="none">
+		<!-- maincpu -->
+		<interleave output="16">
+			<part name="970jba01.6a" crc="8fa0c957" map="01"/>
+			<part name="970jba02.8a" crc="7adb00a0" map="10"/>
+		</interleave>
+		<!-- sprites -->
+		<interleave output="16">
+			<part name="970jba03.19a" crc="e5d15d3c" map="01"/>
+			<part name="970jba04.20a" crc="687f9beb" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="970jba05.22a" crc="3bedc09c" map="01"/>
+			<part name="970jba06.24a" crc="1673a771" map="10"/>
+		</interleave>
+		<!-- k056832 -->
+		<interleave output="16">
+			<part name="970jba07.22d" crc="6fd06bdb" map="01"/>
+			<part name="970jba08.23d" crc="28256891" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="970jba09.25d" crc="5d2bda52" map="01"/>
+			<part name="970jba10.27d" crc="edc4a245" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- DSW1 (byte 0), DSW2 (byte 1), DSW3 (byte 2), active low as MAME's ports -->
+	<switches default="FF,FF,FF">
+		<dip name="Coinage (6 Buttons)" bits="5,7" ids="Free Play,1P 4C / Continue 2C,1P 3C / Continue 3C,1P 3C / Continue 2C,1P 3C / Continue 1C,1P 2C / Continue 2C,1P 1C / Continue 1C,1P 2C / Continue 1C" values="0,1,2,3,4,5,6,7"/>
+		<dip name="Coinage (10 Buttons)" bits="1,4" ids="Free Play,1P 5C / Continue 5C,1P 5C / Continue 4C,1P 5C / Continue 3C,1P 5C / Continue 2C,1P 4C / Continue 4C,1P 5C / Continue 1C,1P 4C / Continue 3C,1P 4C / Continue 2C,1P 4C / Continue 1C,1P 3C / Continue 3C,1P 3C / Continue 1C,1P 2C / Continue 2C,1P 2C / Continue 1C,1P 1C / Continue 1C,1P 3C / Continue 2C" values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"/>
+		<dip name="Unknown (DSW1 bit 0)" bits="0" ids="On,Off" values="0,1"/>
+		<dip name="Demo Sounds" bits="14,15" ids="Silent,Low,Medium,Loud" values="0,1,2,3"/>
+		<dip name="Gauge Decrement Level" bits="12,13" ids="3,2,0,1" values="0,1,2,3"/>
+		<dip name="Gauge Increment Level" bits="10,11" ids="3,2,0,1" values="0,1,2,3"/>
+		<dip name="Score Display" bits="9" ids="Off,On" values="0,1"/>
+		<dip name="Unknown (DSW2 bit 0)" bits="8" ids="On,Off" values="0,1"/>
+		<dip name="Enable Secret Mode (step1of3)" bits="21" ids="On,Off" values="0,1"/>
+		<dip name="Unknown (DSW3 bit 4)" bits="20" ids="On,Off" values="0,1"/>
+		<dip name="Enable Secret Mode (step2of3)" bits="19" ids="On,Off" values="0,1"/>
+		<dip name="Enable Secret Mode (step3of3)" bits="17" ids="On,Off" values="0,1"/>
+	</switches>
+
+	<buttons names="Panel 1,Panel 2,Panel 3,Panel 4,Panel 5,Panel 6,Panel 7,Panel 8,Panel 9,Panel 10,Left,OK,Right,Coin,Test,Service" default="Y,X,B,A,L,R,-,-,-,-,-,Start,-,Select,-,-" count="9"/>
+</misterromdescription>

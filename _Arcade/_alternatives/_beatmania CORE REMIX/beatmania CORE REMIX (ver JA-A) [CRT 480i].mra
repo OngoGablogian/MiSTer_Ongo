@@ -1,0 +1,73 @@
+<misterromdescription>
+	<!-- Konami DJ Main, MAME 0.289 machine "bmcorerm" (djmainj). The game's data is on its hard disk:
+	     convert a05jaa11.chd once with "chdman extracthd -i a05jaa11.chd -o a05jaa11.hdd" and mount the
+	     .hdd from the OSD ("Mount HDD"). The board waits in reset until it is mounted.
+	     CRT 480i: this MRA loads DJMainSD, whose analog output is 15 kHz 480i only, for a
+	     standard-definition CRT; HDMI shows the native picture. For a 24 kHz monitor, use
+	     the MRA of the same name without [480i] (DJMain).
+	     Written by scripts/build_mras.py. -->
+	<name>beatmania CORE REMIX (ver JA-A) [CRT 480i]</name>
+	<setname>bmcorerm</setname>
+	<rbf>DJMainSD</rbf>
+	<mameversion>0289</mameversion>
+	<year>2000</year>
+	<manufacturer>Konami</manufacturer>
+	<category>Music / Rhythm</category>
+	<region>Japan</region>
+	<players>2</players>
+	<joystick>2-way</joystick>
+	<rotation>horizontal</rotation>
+
+	<!-- the set: map 0, inputs 0, ATA passwords master + user, disk 15 heads x 63 sectors (DJMain.sv) -->
+	<rom index="1"><part>
+		00 00 03 0F 3F 00 00 00 00 00 00 00 00 00 00 00
+		4D 47 43 28 4B 29 4E 4F 4D 41 20 49 4C 41 20 4C
+		49 52 48 47 53 54 52 20 53 45 52 45 45 56 2E 44
+		44 42 56 4B 3F 4D 4A 27 5A 52 0C 3E 6A 04 63 6F
+		72 64 72 7F 1F 73 17 04 05 09 14 0D 7A 74 7D 7A
+	</part></rom>
+
+	<!-- the SDRAM image dj_sdram_top expects: program 1 MB, sprites 2 MB, tiles 2 MB -->
+	<rom index="0" zip="bmcorerm.zip" md5="none">
+		<!-- maincpu -->
+		<interleave output="16">
+			<part name="a05jaa01.6a" crc="cd6f1fc5" map="01"/>
+			<part name="a05jaa02.8a" crc="fe07785e" map="10"/>
+		</interleave>
+		<!-- sprites -->
+		<interleave output="16">
+			<part name="a05jaa03.19a" crc="8b88932a" map="01"/>
+			<part name="a05jaa04.20a" crc="cc72629f" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="a05jaa05.22a" crc="e241b22b" map="01"/>
+			<part name="a05jaa06.24a" crc="77eb08a3" map="10"/>
+		</interleave>
+		<!-- k056832 -->
+		<interleave output="16">
+			<part name="a05jaa07.22d" crc="4d79646d" map="01"/>
+			<part name="a05jaa08.23d" crc="f067494f" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="a05jaa09.25d" crc="1504d62c" map="01"/>
+			<part name="a05jaa10.27d" crc="99d75c36" map="10"/>
+		</interleave>
+	</rom>
+
+	<!-- DSW1 (byte 0), DSW2 (byte 1), DSW3 (byte 2), active low as MAME's ports -->
+	<switches default="FF,FF,FF">
+		<dip name="Unknown (DSW1 bit 7)" bits="7" ids="On,Off" values="0,1"/>
+		<dip name="Free Play (Ignore Coinage)" bits="5" ids="On,Off" values="0,1"/>
+		<dip name="Coinage" bits="0,4" ids="1P 8C / 2P 16C / Continue 8C,1P 8C / 2P 16C / Continue 7C,1P 8C / 2P 16C / Continue 6C,1P 7C / 2P 14C / Continue 7C,1P 7C / 2P 14C / Continue 6C,1P 7C / 2P 14C / Continue 5C,1P 6C / 2P 12C / Continue 6C,1P 6C / 2P 12C / Continue 5C,1P 6C / 2P 12C / Continue 4C,1P 5C / 2P 10C / Continue 5C,1P 5C / 2P 10C / Continue 4C,1P 5C / 2P 10C / Continue 3C,1P 4C / 2P 8C / Continue 4C,1P 4C / 2P 8C / Continue 3C,1P 4C / 2P 8C / Continue 2C,1P 3C / 2P 6C / Continue 3C,1P 3C / 2P 6C / Continue 2C,1P 3C / 2P 6C / Continue 1C,1P 3C / 2P 4C / Continue 3C,1P 3C / 2P 4C / Continue 2C,1P 3C / 2P 4C / Continue 1C,1P 3C / 2P 3C / Continue 3C,1P 3C / 2P 3C / Continue 2C,1P 3C / 2P 3C / Continue 1C,1P 2C / 2P 4C / Continue 2C,1P 1C / 2P 1C / Continue 1C,1P 2C / 2P 3C / Continue 2C,1P 2C / 2P 3C / Continue 1C,1P 2C / 2P 2C / Continue 2C,1P 2C / 2P 2C / Continue 1C,1P 1C / 2P 2C / Continue 1C,1P 2C / 2P 4C / Continue 1C" values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"/>
+		<dip name="Score Display" bits="15" ids="Off,On" values="0,1"/>
+		<dip name="Demo Sounds" bits="13,14" ids="Silent,Medium,Low,Loud" values="0,1,2,3"/>
+		<dip name="Level Display" bits="12" ids="Off,On" values="0,1"/>
+		<dip name="Normal / Hard Mode Difficulty" bits="10,11" ids="Level 3,Level 2,Level 0,Level 1" values="0,1,2,3"/>
+		<dip name="Expert Mode Difficulty" bits="8,9" ids="Level 3,Level 2,Level 0,Level 1" values="0,1,2,3"/>
+		<dip name="Event Mode (Ignore Coinage)" bits="21" ids="On,Off" values="0,1"/>
+		<dip name="Event Mode Stages" bits="18,20" ids="4 Stages,5 Stages,1 Stage,3 Stages,2 Stages" values="0,2,3,4,5"/>
+		<dip name="Unknown (DSW3 bit 1)" bits="17" ids="On,Off" values="0,1"/>
+	</switches>
+
+	<buttons names="Key 1,Key 2,Key 3,Key 4,Key 5,Scratch Up,Scratch Down,Start,Coin,Effect,Test,Service" default="Y,X,B,A,R,L,-,Start,Select,-,-,-" count="5"/>
+</misterromdescription>
