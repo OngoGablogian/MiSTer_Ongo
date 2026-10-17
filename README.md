@@ -58,7 +58,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
 | [Heavy Unit](https://www.patreon.com/Meathax/posts/heavy-unit-172408285)                                                       |
-| [Hyperstone E1](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                             |
+| [Hyperstone E1 (Eolith)](https://github.com/ppriest/Arcade-Eolith_MiSTer)                                                      |
+| [Hyperstone E1 (Vamphalf)](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                  |
 | [I, Robot](https://www.patreon.com/Meathax/posts/i-robot-1984-169005879)                                                       |
 | [IGS PolyGame Master 2](https://discord.com/channels/647909397477195803/1453063377436807410/1561069499715813487)               |
 | [Ikki](https://www.patreon.com/Meathax/posts/fresh-meat-ikki-172031733)                                                        |
@@ -115,6 +116,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nintendo Game Boy Advance (Accuracy)](https://github.com/MiSTer-devel/GBA_MiSTer/tree/accuracy)                               |
 | [Nintendo Super System](https://www.patreon.com/bazset/posts/nintendo-super-170678491)                                         |
 | [Nintendo VS. System](https://discord.com/channels/647909397477195803/737506076806611064/1532833570991636711)                  |
+| [NIX Pirates Hardware](https://github.com/ppriest/Arcade-NixPirates_MiSTer)                                                    |
 | [NMK Argus Hardware](https://www.patreon.com/Meathax/posts/argus-valtric-172291247)                                            |
 | [Nostradamus / Magical Cat Adventure (LINDA board)](https://github.com/kyledlester/Nostradamus_Magical_Cat_Adventure_MiSTer)   |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
