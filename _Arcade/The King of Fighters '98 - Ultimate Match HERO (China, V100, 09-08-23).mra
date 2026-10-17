@@ -1,0 +1,79 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>The King of Fighters '98: Ultimate Match HERO (China, V100, 09-08-23)</name>
+    <setname>kof98umh</setname>
+    <mameversion>0289</mameversion>
+    <year>2009</year>
+    <manufacturer>IGS / SNK Playmore / New Channel</manufacturer>
+    <players>4</players>
+    <joystick>8</joystick>
+    <rbf>PGM2</rbf>
+    <platform>IGS</platform>
+
+    <!--
+      ROM stream for the PGM2 core (tools/pgm2_mra.py; rtl/pgm2_loader.sv describes the format): a byte of flags, then per file
+      the region id, its size (4 bytes, big endian) and the file.  The core does the ROM_LOAD32_WORD interleave and the sprite ROM
+      decode of MAME's driver init itself while the data arrives.  The YMZ774 sample ROM comes last and stays in the DDR3.
+      address="0x32000000": fast load (a recent Main_MiSTer copies the image into the DDR3 at once; an older one streams it).
+      DIP switches (ioctl index 254): one byte, SW1:1-8 as MAME's port (bit 0 = SW1:1); a 1 is MAME's default setting.
+    -->
+    <switches default="FF" base="16">
+        <dip bits="0" name="Service Mode" ids="On,Off"/>
+        <dip bits="1" name="Music" ids="Off,On"/>
+        <dip bits="2" name="Voice" ids="Off,On"/>
+        <dip bits="3" name="Free Play" ids="On,Off"/>
+        <dip bits="4" name="Stop" ids="On,Off"/>
+        <dip bits="5" name="Unused" ids="On,Off"/>
+        <dip bits="6" name="Unused" ids="On,Off"/>
+        <dip bits="7" name="Debug" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
+
+    <!-- the sprite colour ROM (more than the SDRAM has room for) goes into the DDR3 as it is, before index 0 -->
+    <rom index="1" zip="kof98umh.zip" md5="None" address="0x26000000">
+        <part name="ig-d3_spa0.u9" crc="cfef8f7d"/>
+        <part name="ig-d3_spb0.u18" crc="f199d5c8"/>
+        <part name="ig-d3_spa2.u10" crc="03bfd35c" length="0x1000000"/>
+        <part name="ig-d3_spb2.u20" crc="9aaa840b" length="0x1000000"/>
+    </rom>
+    <!-- the YMZ774 sample ROM goes into the DDR3 as it is, before index 0 (index 0 stays small enough for the HPS) -->
+    <rom index="2" zip="kof98umh.zip" md5="None" address="0x37400000">
+        <part name="ig-d3_wave0.u12" crc="edf2332d"/>
+        <part name="ig-d3_wave1.u11" crc="62321b20"/>
+    </rom>
+    <rom index="0" zip="kof98umh.zip" md5="None" address="0x32000000">
+        <!-- flags: bit 0 = ROM board (program ROM stored 2 MB into a 4 MB window), bit 1 = colour ROM in index 1, bit 2 = vertical (ROT270) -->
+        <part>02</part>
+        <!-- internal ARM ROM -->
+        <part>00 00 00 40 00</part>
+        <part name="kof98umh_internal_rom.bin" crc="3ed2e50f"/>
+        <!-- program ROM -->
+        <part>01 01 00 00 00</part>
+        <part name="kof98umh_v100cn.u4" crc="2ea91e3b"/>
+        <!-- battery SRAM default -->
+        <part>06 00 01 00 00</part>
+        <part name="kof98umh_sram" crc="60460ed9"/>
+        <!-- text tiles -->
+        <part>02 00 20 00 00</part>
+        <part name="ig-d3_text.u1" crc="9a0ea82e"/>
+        <!-- BG tiles (low words) -->
+        <part>03 00 00 02 00</part>
+        <part repeat="512">00</part>
+        <!-- BG tiles (high words) -->
+        <part>0B 00 00 02 00</part>
+        <part repeat="512">00</part>
+        <!-- sprite mask ROM (low words) -->
+        <part>04 02 00 00 00</part>
+        <part name="ig-d3_mapl0.u13" crc="5571d63e" length="0x2000000"/>
+        <!-- sprite mask ROM (high words) -->
+        <part>0C 02 00 00 00</part>
+        <part name="ig-d3_maph0.u15" crc="0da7b1b8" length="0x2000000"/>
+        <!-- the colour ROM files of index 1: sizes of bank 0 l, bank 0 h, bank 1 l, bank 1 h -->
+        <part>09 00 00 00 10</part>
+        <part>04 00 00 00 04 00 00 00 01 00 00 00 01 00 00 00</part>
+    </rom>
+    <!-- battery SRAM (64 KB): Main_MiSTer keeps it on the SD card and sends it back after the ROMs; the core asks for a
+         save when the OSD opens after the game has written it (OSD Autosave Backup RAM) and on Save Backup RAM -->
+    <nvram index="4" size="65536"/>
+</misterromdescription>

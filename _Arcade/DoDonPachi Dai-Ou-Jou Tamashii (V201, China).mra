@@ -1,0 +1,73 @@
+<misterromdescription>
+    <rotation>vertical</rotation>
+    <name>DoDonPachi Dai-Ou-Jou Tamashii (V201, China)</name>
+    <setname>ddpdojt</setname>
+    <mameversion>0289</mameversion>
+    <year>2010</year>
+    <manufacturer>IGS / Cave (Tong Li Animation license)</manufacturer>
+    <players>4</players>
+    <joystick>8</joystick>
+    <rbf>PGM2</rbf>
+    <platform>IGS</platform>
+
+    <!--
+      ROM stream for the PGM2 core (tools/pgm2_mra.py; rtl/pgm2_loader.sv describes the format): a byte of flags, then per file
+      the region id, its size (4 bytes, big endian) and the file.  The core does the ROM_LOAD32_WORD interleave and the sprite ROM
+      decode of MAME's driver init itself while the data arrives.  The YMZ774 sample ROM comes last and stays in the DDR3.
+      address="0x32000000": fast load (a recent Main_MiSTer copies the image into the DDR3 at once; an older one streams it).
+      DIP switches (ioctl index 254): one byte, SW1:1-8 as MAME's port (bit 0 = SW1:1); a 1 is MAME's default setting.
+    -->
+    <switches default="FF" base="16">
+        <dip bits="0" name="Service Mode" ids="On,Off"/>
+        <dip bits="1" name="Music" ids="Off,On"/>
+        <dip bits="2" name="Voice" ids="Off,On"/>
+        <dip bits="3" name="Free Play" ids="On,Off"/>
+        <dip bits="4" name="Stop" ids="On,Off"/>
+        <dip bits="5" name="Unused" ids="On,Off"/>
+        <dip bits="6" name="Unused" ids="On,Off"/>
+        <dip bits="7" name="Debug" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
+
+    <rom index="0" zip="ddpdojt.zip" md5="None" address="0x32000000">
+        <!-- flags: bit 0 = ROM board (program ROM stored 2 MB into a 4 MB window), bit 1 = colour ROM in index 1, bit 2 = vertical (ROT270) -->
+        <part>05</part>
+        <!-- internal ARM ROM -->
+        <part>00 00 00 40 00</part>
+        <part name="ddpdoj_igs036_china.rom" crc="5db91464"/>
+        <!-- program ROM -->
+        <part>01 00 20 00 00</part>
+        <part name="ddpdoj_v201cn.u4" crc="89e4b760"/>
+        <!-- battery SRAM default -->
+        <part>06 00 01 00 00</part>
+        <part name="ddpdojt_sram" crc="af99e304"/>
+        <!-- text tiles -->
+        <part>02 00 20 00 00</part>
+        <part name="ddpdoj_text.u1" crc="f18141d1"/>
+        <!-- BG tiles (low words) -->
+        <part>03 01 00 00 00</part>
+        <part name="ddpdoj_bgl.u23" crc="ff65fdab"/>
+        <!-- BG tiles (high words) -->
+        <part>0B 01 00 00 00</part>
+        <part name="ddpdoj_bgh.u24" crc="bb84d2a6"/>
+        <!-- sprite mask ROM (low words) -->
+        <part>04 00 80 00 00</part>
+        <part name="ddpdoj_mapl0.u13" crc="bcfbb0fc"/>
+        <!-- sprite mask ROM (high words) -->
+        <part>0C 00 80 00 00</part>
+        <part name="ddpdoj_maph0.u15" crc="0cc75d4e"/>
+        <!-- sprite colour ROM (low words) -->
+        <part>05 01 00 00 00</part>
+        <part name="ddpdoj_spa0.u9" crc="1232c1b4"/>
+        <!-- sprite colour ROM (high words) -->
+        <part>0D 01 00 00 00</part>
+        <part name="ddpdoj_spb0.u18" crc="6a9e2cbf"/>
+        <!-- YMZ774 sample ROM -->
+        <part>07 01 00 00 00</part>
+        <part name="ddpdoj_wave0.u12" crc="2b71a324"/>
+    </rom>
+    <!-- battery SRAM (64 KB): Main_MiSTer keeps it on the SD card and sends it back after the ROMs; the core asks for a
+         save when the OSD opens after the game has written it (OSD Autosave Backup RAM) and on Save Backup RAM -->
+    <nvram index="4" size="65536"/>
+</misterromdescription>

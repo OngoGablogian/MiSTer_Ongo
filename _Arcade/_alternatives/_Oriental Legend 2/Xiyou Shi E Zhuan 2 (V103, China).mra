@@ -1,0 +1,73 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Xiyou Shi E Zhuan 2 (V103, China)</name>
+    <setname>orleg2_103cn</setname>
+    <mameversion>0289</mameversion>
+    <year>2007</year>
+    <manufacturer>IGS (Huatong license)</manufacturer>
+    <players>4</players>
+    <joystick>8</joystick>
+    <rbf>PGM2</rbf>
+    <platform>IGS</platform>
+
+    <!--
+      ROM stream for the PGM2 core (tools/pgm2_mra.py; rtl/pgm2_loader.sv describes the format): a byte of flags, then per file
+      the region id, its size (4 bytes, big endian) and the file.  The core does the ROM_LOAD32_WORD interleave and the sprite ROM
+      decode of MAME's driver init itself while the data arrives.  The YMZ774 sample ROM comes last and stays in the DDR3.
+      address="0x32000000": fast load (a recent Main_MiSTer copies the image into the DDR3 at once; an older one streams it).
+      DIP switches (ioctl index 254): one byte, SW1:1-8 as MAME's port (bit 0 = SW1:1); a 1 is MAME's default setting.
+    -->
+    <switches default="FF" base="16">
+        <dip bits="0" name="Service Mode" ids="On,Off"/>
+        <dip bits="1" name="Music" ids="Off,On"/>
+        <dip bits="2" name="Voice" ids="Off,On"/>
+        <dip bits="3" name="Free Play" ids="On,Off"/>
+        <dip bits="4" name="Stop" ids="On,Off"/>
+        <dip bits="5" name="Unused" ids="On,Off"/>
+        <dip bits="6" name="Unused" ids="On,Off"/>
+        <dip bits="7" name="Debug" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
+
+    <rom index="0" zip="orleg2_103cn.zip|orleg2.zip" md5="None" address="0x32000000">
+        <!-- flags: bit 0 = ROM board (program ROM stored 2 MB into a 4 MB window), bit 1 = colour ROM in index 1, bit 2 = vertical (ROT270) -->
+        <part>00</part>
+        <!-- internal ARM ROM -->
+        <part>00 00 00 40 00</part>
+        <part name="xyj2_cn.igs036" crc="bcce7641"/>
+        <!-- program ROM -->
+        <part>01 00 80 00 00</part>
+        <part name="xyj2_v103cn.u7" crc="21c1fae8"/>
+        <!-- battery SRAM default -->
+        <part>06 00 01 00 00</part>
+        <part name="xyj2_nvram" crc="ccccc71c"/>
+        <!-- text tiles -->
+        <part>02 00 20 00 00</part>
+        <part name="ig-a_text.u4" crc="fa444c32"/>
+        <!-- BG tiles (low words) -->
+        <part>03 00 80 00 00</part>
+        <part name="ig-a_bgl.u35" crc="083a8315"/>
+        <!-- BG tiles (high words) -->
+        <part>0B 00 80 00 00</part>
+        <part name="ig-a_bgh.u36" crc="e197221d"/>
+        <!-- sprite mask ROM (low words) -->
+        <part>04 01 00 00 00</part>
+        <part name="ig-a_bml.u12" crc="113a331c"/>
+        <!-- sprite mask ROM (high words) -->
+        <part>0C 01 00 00 00</part>
+        <part name="ig-a_bmh.u16" crc="fbf411c8"/>
+        <!-- sprite colour ROM (low words) -->
+        <part>05 02 00 00 00</part>
+        <part name="ig-a_cgl.u18" crc="43501fa6"/>
+        <!-- sprite colour ROM (high words) -->
+        <part>0D 02 00 00 00</part>
+        <part name="ig-a_cgh.u26" crc="7051d020"/>
+        <!-- YMZ774 sample ROM -->
+        <part>07 01 00 00 00</part>
+        <part name="ig-a_sp.u2" crc="8250688c"/>
+    </rom>
+    <!-- battery SRAM (64 KB): Main_MiSTer keeps it on the SD card and sends it back after the ROMs; the core asks for a
+         save when the OSD opens after the game has written it (OSD Autosave Backup RAM) and on Save Backup RAM -->
+    <nvram index="4" size="65536"/>
+</misterromdescription>

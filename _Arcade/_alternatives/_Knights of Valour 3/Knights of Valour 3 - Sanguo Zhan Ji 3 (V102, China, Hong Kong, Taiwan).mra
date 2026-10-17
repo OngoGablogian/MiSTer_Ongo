@@ -1,0 +1,80 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Knights of Valour 3 / Sanguo Zhan Ji 3 (V102, China, Hong Kong, Taiwan)</name>
+    <setname>kov3_102</setname>
+    <mameversion>0289</mameversion>
+    <year>2011</year>
+    <manufacturer>IGS (Huatong license)</manufacturer>
+    <players>4</players>
+    <joystick>8</joystick>
+    <rbf>PGM2</rbf>
+    <platform>IGS</platform>
+
+    <!--
+      ROM stream for the PGM2 core (tools/pgm2_mra.py; rtl/pgm2_loader.sv describes the format): a byte of flags, then per file
+      the region id, its size (4 bytes, big endian) and the file.  The core does the ROM_LOAD32_WORD interleave and the sprite ROM
+      decode of MAME's driver init itself while the data arrives.  The YMZ774 sample ROM comes last and stays in the DDR3.
+      address="0x32000000": fast load (a recent Main_MiSTer copies the image into the DDR3 at once; an older one streams it).
+      DIP switches (ioctl index 254): one byte, SW1:1-8 as MAME's port (bit 0 = SW1:1); a 1 is MAME's default setting.
+    -->
+    <switches default="FF" base="16">
+        <dip bits="0" name="Service Mode" ids="On,Off"/>
+        <dip bits="1" name="Music" ids="Off,On"/>
+        <dip bits="2" name="Voice" ids="Off,On"/>
+        <dip bits="3" name="Free Play" ids="On,Off"/>
+        <dip bits="4" name="Stop" ids="On,Off"/>
+        <dip bits="5" name="Unused" ids="On,Off"/>
+        <dip bits="6" name="Unused" ids="On,Off"/>
+        <dip bits="7" name="Debug" ids="On,Off"/>
+    </switches>
+
+    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
+
+    <!-- the sprite colour ROM (more than the SDRAM has room for) goes into the DDR3 as it is, before index 0 -->
+    <rom index="1" zip="kov3_102.zip|kov3.zip" md5="None" address="0x26000000">
+        <part name="kov3_spa0.u17" crc="3a1e58a9"/>
+        <part name="kov3_spb0.u10" crc="90396065"/>
+    </rom>
+    <rom index="0" zip="kov3_102.zip|kov3.zip" md5="None" address="0x32000000">
+        <!-- flags: bit 0 = ROM board (program ROM stored 2 MB into a 4 MB window), bit 1 = colour ROM in index 1, bit 2 = vertical (ROT270) -->
+        <part>02</part>
+        <!-- internal ARM ROM -->
+        <part>00 00 00 40 00</part>
+        <part name="kov3_igs036_china.rom" crc="c7d33764"/>
+        <!-- program ROM -->
+        <part>01 00 80 00 00</part>
+        <part name="kov3_v102cn_raw.bin" crc="61d0dabd"/>
+        <!-- battery SRAM default -->
+        <part>06 00 01 00 00</part>
+        <part name="kov3_sram" crc="d9608102"/>
+        <!-- text tiles -->
+        <part>02 00 20 00 00</part>
+        <part name="kov3_text.u1" crc="198b52d6"/>
+        <!-- BG tiles (low words) -->
+        <part>03 01 00 00 00</part>
+        <part name="kov3_bgl.u6" crc="49a4c5bc"/>
+        <!-- BG tiles (high words) -->
+        <part>0B 01 00 00 00</part>
+        <part name="kov3_bgh.u7" crc="adc1aff1"/>
+        <!-- sprite mask ROM (low words) -->
+        <part>04 02 00 00 00</part>
+        <part name="kov3_mapl0.u15" crc="9e569bf7"/>
+        <!-- sprite mask ROM (high words) -->
+        <part>0C 02 00 00 00</part>
+        <part name="kov3_maph0.u16" crc="6f200ad8"/>
+        <!-- program ROM module: key, checksum, address XOR, data XOR (MAME pgm2.cpp init_kov3_102) -->
+        <part>08 00 00 00 15</part>
+        <part>49 AC B0 EC 47 49 95 38 09 BD F1 31 E6 F0 65 2B 02 1D 37 81 D0</part>
+        <!-- the colour ROM files of index 1: sizes of bank 0 l, bank 0 h, bank 1 l, bank 1 h -->
+        <part>09 00 00 00 10</part>
+        <part>04 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00</part>
+        <!-- pad: the sample ROM must start on a multiple of 8 bytes of the image -->
+        <part>7F 00 00 00 06 00 00 00 00 00 00</part>
+        <!-- YMZ774 sample ROM -->
+        <part>07 04 00 00 00</part>
+        <part name="kov3_wave0.u13" crc="aa639152"/>
+    </rom>
+    <!-- battery SRAM (64 KB): Main_MiSTer keeps it on the SD card and sends it back after the ROMs; the core asks for a
+         save when the OSD opens after the game has written it (OSD Autosave Backup RAM) and on Save Backup RAM -->
+    <nvram index="4" size="65536"/>
+</misterromdescription>
