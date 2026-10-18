@@ -20,15 +20,18 @@
            0xB8000 banked ROM, version E      battlntsj/777_e03.8e
            0xC8000 fixed ROM, version E       battlntsj/777_e02.7e
          The file battlnts.zip must hold all of them, the F and E files inside the folders battlntsa and battlntsj. -->
+    <!-- High score table (the OSD option Save High Scores turns saving on or off): 80 bytes, the BEST 10 ranking table, saved by the core as an NVRAM file (index 1). -->
+    <nvram index="1" size="80"/>
+
     <rom index="0" zip="battlnts.zip" md5="none">
-        <part name="777_g03.8e" />            <!-- 64KB banked ROM, version G -->
-        <part name="777_g02.7e" />            <!-- 32KB fixed ROM, version G -->
-        <part name="777_c01.10a" />           <!-- 32KB sound ROM -->
-        <part name="777c05.13e" />            <!-- 256KB sprites -->
-        <part name="777c04.13a" />            <!-- 256KB tiles -->
-        <part name="battlntsa/777_f03.8e" />  <!-- 64KB banked ROM, version F -->
-        <part name="battlntsa/777_f02.7e" />  <!-- 32KB fixed ROM, version F -->
-        <part name="battlntsj/777_e03.8e" />  <!-- 64KB banked ROM, Japan version E -->
-        <part name="battlntsj/777_e02.7e" />  <!-- 32KB fixed ROM, Japan version E -->
+        <part name="777_g03.8e"/>            <!-- 64KB banked ROM, version G -->
+        <part name="777_g02.7e"/>            <!-- 32KB fixed ROM, version G -->
+        <part name="777_c01.10a"/>           <!-- 32KB sound ROM -->
+        <part name="777c05.13e"/>            <!-- 256KB sprites -->
+        <part name="777c04.13a"/>            <!-- 256KB tiles -->
+        <part name="battlntsa/777_f03.8e"/>  <!-- 64KB banked ROM, version F -->
+        <part name="battlntsa/777_f02.7e"/>  <!-- 32KB fixed ROM, version F -->
+        <part name="battlntsj/777_e03.8e"/>  <!-- 64KB banked ROM, Japan version E -->
+        <part name="battlntsj/777_e02.7e"/>  <!-- 32KB fixed ROM, Japan version E -->
     </rom>
 </misterromdescription>
