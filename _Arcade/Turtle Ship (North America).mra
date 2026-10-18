@@ -1,0 +1,97 @@
+
+
+<misterromdescription>
+    <about author="BAZSET; based on Jotego JTSARMS (GPL-3.0-or-later)" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
+    <name>Turtle Ship (North America)</name>
+    <setname>turtship</setname>
+    <mameversion>0289</mameversion>
+    <year>1988</year>
+    <manufacturer>Philko (Sharp Image license)</manufacturer>
+    <players>2</players>
+    <rbf>bazset_TurtleShip</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="turtship.zip" md5="None">
+        <!-- maincpu - starts at 0x0 - length 0x18000 (17 bits) -->
+        <part name="t-3.5g" crc="b73ed7f2"/>
+        <part name="t-2.3g" crc="2327b35a"/>
+        <part name="t-1.3e" crc="a258ffec"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- audiocpu - starts at 0x18000 - length 0x8000 (15 bits) -->
+        <part name="t-4.8a" crc="1cbe48e8"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- gfx1 - starts at 0x20000 - length 0x4000 (14 bits) -->
+        <interleave output="16">
+            <part name="t-5.8k" crc="35c3dbc5" map="12" length="0x4000"/>
+        </interleave>
+        <!-- SCR_START -->
+        <!-- gfx2 - starts at 0x24000 - length 0x80000 (19 bits) -->
+                <interleave output="16">
+            <part name="t-6.1a" crc="45ce41ad" map="01"/>
+            <part name="t-8.1d" crc="30a857f0" map="10"/>
+        </interleave>
+
+                <interleave output="16">
+            <part name="t-7.1c" crc="3ccf11b9" map="01"/>
+            <part name="t-10.3c" crc="76bb73bb" map="10"/>
+        </interleave>
+
+                <interleave output="16">
+            <part name="t-9.3a" crc="44762916" map="01"/>
+            <part name="t-11.3d" crc="53da6cb1" map="10"/>
+        </interleave>
+
+                <interleave output="16">
+            <part name="t-7.1c" crc="3ccf11b9" map="01"/>
+            <part name="t-10.3c" crc="76bb73bb" map="10"/>
+        </interleave>
+
+        
+        
+        
+        
+        <!-- JTFRAME_BA3_START -->
+        <!-- gfx3 - starts at 0xA4000 - length 0x40000 (18 bits) -->
+                <interleave output="16">
+            <part name="t-12.1g" crc="fb54cd33" map="01"/>
+            <part name="t-13.1i" crc="599f5246" map="10"/>
+        </interleave>
+
+                <interleave output="16">
+            <part name="t-14.3g" crc="1b67b674" map="01"/>
+            <part name="t-15.3i" crc="6489b7b4" map="10"/>
+        </interleave>
+
+        
+        
+        <!-- MAP_START -->
+        <!-- gfx4 - starts at 0xE4000 - length 0x8000 (15 bits) -->
+        <interleave output="16">
+            <part name="t-16.9f" crc="1a5a45d7" map="12"/>
+        </interleave>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0xEC000 - length 0x220 (10 bits) -->
+        <part name="82s129.11p" crc="75af3553"/>
+        <part name="82s129.11r" crc="c47c182a"/>
+        <part name="82s123.9e" crc="c5817816"/>
+        <!-- Total 0xEC220 bytes - 944 kBytes -->
+    </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="bd,eb,ff">
+        <DSW0/>
+        <dip name="Invulnerability (Cheat)" bits="0" ids="On,Off"/>
+        <dip name="Allow Continue" bits="1" ids="Yes,No"/>
+        <dip name="Flip Screen" bits="3" ids="On,Off"/>
+        <dip name="Difficulty" bits="4" ids="Hard,Normal"/>
+        <dip name="Lives" bits="5,7" ids="8,4,6,2,7,3,5,1"/>
+        <DSW1/>
+        <dip name="Service Mode" bits="8" ids="On,Off"/>
+        <dip name="Bonus Life" bits="10,11" ids="Every 200k,200k only,Every 150k,150k only"/>
+        <dip name="Demo Sounds" bits="12" ids="On,Off"/>
+        <dip name="Coinage" bits="13,15" ids="4/1,1/4,2/1,1/2,3/1,1/3,-,1/1"/>
+    </switches>
+    <buttons names="Gun,Missile,Thunder,Start,Coin,Pause / Credits" default="A,B,X,Start,Select,R" count="3"/>
+</misterromdescription>

@@ -1,0 +1,53 @@
+<!-- Aqua Jack / Taito Z, BAZSET. SOURCE-ONLY MRA, do not release before game-specific RTL boots.
+ROM layout: CPU A 0x000000; CPU B 0x040000; Z80 0x080000;
+SCN 0x090000; SPR 0x110000; ROD 0x310000; STY 0x390000;
+ADPCM-A 0x410000; ADPCM-B 0x490000; PROM 0x510000; end 0x510200.
+CRC/rom filenames extracted from project copy of mamedev/mame taito_z.cpp.
+-->
+<misterromdescription>
+<rbf>bazset_AquaJack</rbf>
+<name>Aqua Jack (World)</name>
+<setname>aquajack</setname>
+<year>1990</year>
+<manufacturer>Taito</manufacturer>
+<about author="bazset" source="https://github.com/bazset" patreon="https://www.patreon.com/cw/bazset"/>
+<players>1</players>
+<joystick>8way</joystick>
+<rotation>horizontal</rotation>
+<region>World</region>
+<rom index="0" zip="aquajack.zip" type="merged" md5="none">
+<interleave output="16">
+    <part name="b77-22.ic31" crc="67400dde" map="01"/>
+    <part name="b77-26.ic17" crc="cd4d0969" map="10"/>
+</interleave>
+<interleave output="16">
+    <part name="b77-24.ic69" crc="95e643ed" map="01"/>
+    <part name="b77-23.ic67" crc="395a7d1c" map="10"/>
+</interleave>
+<part name="b77-20.ic54" crc="84ba54b7"/>
+<interleave output="16"><part name="b77-05.ic105" crc="7238f0ff" map="12"/></interleave>
+<interleave output="64">
+    <part name="b77-04.ic16" crc="bed0be6c" map="00000012"/>
+    <part name="b77-03.ic15" crc="9a3030a7" map="00001200"/>
+    <part name="b77-02.ic14" crc="daea0d2e" map="00120000"/>
+    <part name="b77-01.ic13" crc="cdab000d" map="12000000"/>
+</interleave>
+<part name="b77-07.ic33" crc="7db1fc5e"/>
+<part name="b77-06.ic39" crc="ce2aed00"/>
+<part name="b77-09.ic58" crc="948e5ad9"/>
+<part name="b77-08.ic57" crc="119b9485"/>
+<part name="b77-17.ic1" crc="fbf81f30"/>
+<part name="b77-18.ic37" crc="7b7d8ff4"/>
+</rom>
+<switches default="7f,ff" base="16">
+<dip name="Cabinet" bits="7" ids="Upright,Cockpit"/>
+<dip name="Service" bits="5" ids="On,Off"/>
+<dip name="Demo Sounds" bits="4" ids="Off,On"/>
+<dip name="Coin A" bits="2,3" ids="4C 1C,2C 1C,3C 1C,1C 1C"/>
+<dip name="Coin B" bits="0,1" ids="1C 6C,1C 3C,1C 4C,1C 2C"/>
+<dip name="Difficulty" bits="14,15" ids="Hardest,Easy,Hard,Normal"/>
+<dip name="Lives" bits="10,11" ids="5,2,1,3"/>
+<dip name="Bonus Life" bits="12,13" ids="30k,80k,100k,50k"/>
+</switches>
+<buttons names="Fire Gun,Jump,Missile,Accelerate,Start,Coin,Coin2,Service,Pause" default="A,B,X,Y,Start,Select,R,L,C" count="9"/>
+</misterromdescription>
