@@ -45,6 +45,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Data East Liberation Hardware](https://www.patreon.com/Meathax/posts/boomer-rangr-b-172526836)                                |
 | [Data East Simple 156](https://www.patreon.com/Meathax/posts/data-east-156-171562893)                                          |
 | [Deniam-16](https://github.com/kyledlester/Deniam_MiSTer_FPGA)                                                                 |
+| [Devastators / The Main Event](https://www.patreon.com/Meathax/posts/devastators-main-172711008)                               |
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
 | [DVK MC1201](https://github.com/xolod79/MC1201)                                                                                |
 | [Electronic Devices Italy / Ecogames Hardware](https://www.patreon.com/Meathax/posts/s-p-y-special-y-172508459)                |

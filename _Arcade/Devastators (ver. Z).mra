@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Devastators (ver. Z)</name>
+  <setname>devstors</setname>
+  <rbf>Meathax_PWB351024A</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>Konami</manufacturer>
+  <category>Shooter</category>
+  <rotation>vertical</rotation>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <buttons names="Fire,Missile,Start,Coin,Service,Pause" default="A,B,Start,Select,Y,X"/>
+  <rom index="0" zip="devstors.zip" md5="64d490906acaaae0cbd9661a90e45356">
+    <part name="890z02.k11" crc="ebeb306f"/>
+    <part name="890k01.f7" crc="d44b3eb0"/>
+    <part repeat="0x8000">FF</part>
+    <interleave output="32">
+      <part name="890f06.f22" crc="26592155" map="0001"/>
+      <part name="890f07.h22" crc="6c74fa2e" map="0010"/>
+      <part name="890f08.j22" crc="29e12e80" map="0100"/>
+      <part name="890f09.k22" crc="67ca40d5" map="1000"/>
+    </interleave>
+    <part repeat="0xc0000">FF</part>
+    <interleave output="32">
+      <part name="890f04.h4" crc="f16cd1fa" map="0021"/>
+      <part name="890f05.k4" crc="da37db05" map="2100"/>
+    </interleave>
+    <part name="890f03.d4" crc="19065031"/>
+    <part repeat="0x80000">FF</part>
+  </rom>
+  <rom index="1" md5="93b885adfe0da089cdf634904fd59f71">
+    <part>00</part>
+  </rom>
+  <rom index="3" md5="dc3318678ace938f1a0548848f2d3088">
+    <part>00 00 00 00 00 FF 00 04 00 04 00 01 00 08 04 00 00 00 41 C4 2E 01 01 00</part>
+  </rom>
+  <nvram index="4" size="46"/>
+  <remark>Development scaffold. ROM pack verified against MAME 0.289; no playable-core, fitted timing, RBF or hardware acceptance claimed.</remark>
+</misterromdescription>

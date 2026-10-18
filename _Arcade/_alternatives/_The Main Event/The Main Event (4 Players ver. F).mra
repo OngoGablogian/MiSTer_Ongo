@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>The Main Event (4 Players ver. F)</name>
+  <setname>mainevto</setname>
+  <rbf>Meathax_PWB351024A</rbf>
+  <mameversion>0289</mameversion>
+  <year>1988</year>
+  <manufacturer>Konami</manufacturer>
+  <category>Wrestling</category>
+  <rotation>horizontal</rotation>
+  <players>4</players>
+  <joystick>8-way</joystick>
+  <buttons names="Action,Tag,Start,Coin,Service,Pause" default="A,B,Start,Select,Y,X"/>
+  <rom index="0" zip="mainevto.zip|mainevt.zip" md5="fc0caa100fe1a08295940bf34961b143">
+    <part name="799f02.k11" crc="c143596b"/>
+    <part name="799c01.f7" crc="447c4c5c"/>
+    <part repeat="0x8000">FF</part>
+    <interleave output="32">
+      <part name="799c06.f22" crc="f839cb58" map="0001"/>
+      <part name="799c07.h22" crc="176df538" map="0010"/>
+      <part name="799c08.j22" crc="d01e0078" map="0100"/>
+      <part name="799c09.k22" crc="9baec75e" map="1000"/>
+    </interleave>
+    <part repeat="0xe0000">FF</part>
+    <interleave output="32">
+      <part name="799b04.h4" crc="323e0c2b" map="0021"/>
+      <part name="799b05.k4" crc="571c5831" map="2100"/>
+    </interleave>
+    <part name="799b03.d4" crc="f1cfd342"/>
+    <part name="799b06.c22" crc="2c8c47d7"/>
+  </rom>
+  <rom index="1" md5="55a54008ad1ba589aa210d2629c1df41">
+    <part>01</part>
+  </rom>
+  <rom index="3" md5="b70411785e019fd01cf8908af24e8c75">
+    <part>00 00 00 00 00 FF 00 04 00 04 00 01 00 08 04 00 00 00 41 5D 45 AE 77 00</part>
+  </rom>
+  <nvram index="4" size="69"/>
+  <remark>Development scaffold. ROM pack verified against MAME 0.289; no playable-core, fitted timing, RBF or hardware acceptance claimed.</remark>
+</misterromdescription>
