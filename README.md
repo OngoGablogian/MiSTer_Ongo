@@ -30,7 +30,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Bally/Sente SAC-1](https://github.com/ppriest/Arcade-BallySente_MiSTer)                                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
-| [Battletoads](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                             |
+| [Battletoads (Meathax)](https://www.patreon.com/Meathax/posts/battletoads-its-172668452)                                       |
+| [Battletoads (srg320)](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                    |
 | [Birdie Try](https://www.patreon.com/bazset/posts/birdie-try-data-172593515)                                                   |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BrezzaSoft Crystal System](https://github.com/kyledlester/BrezzaSoft_Crystal_System_MiSTer)                                   |

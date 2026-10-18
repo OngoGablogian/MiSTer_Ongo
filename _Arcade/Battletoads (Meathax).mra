@@ -1,0 +1,32 @@
+<misterromdescription>
+	<name>Battletoads (Meathax)</name>
+	<setname>btoads_meathax</setname>
+	<rbf>Meathax_Battletoads</rbf>
+	<mameversion>0289</mameversion>
+	<year>1994</year>
+	<manufacturer>Rare / Electronic Arts</manufacturer>
+	<category>Beat 'em up</category>
+	<rotation>horizontal</rotation>
+	<buttons names="Attack,Jump,Coin,Start,Service Menu,Pause" default="A,B,Select,Start,R,L"/>
+	<switches page_id="3" page_name="DIP switches" base="0" default="f2">
+		<dip name="Demo Sounds" bits="0" ids="On,Off"/>
+		<dip name="Mono Sound" bits="1" ids="On,Off"/>
+		<dip name="Common Coin Mech" bits="2" ids="On,Off"/>
+		<dip name="Three Players" bits="3" ids="On,Off"/>
+		<dip name="Free Play" bits="4" ids="On,Off"/>
+		<dip name="Blood Free Mode" bits="5" ids="On,Off"/>
+		<dip name="Credit Retention" bits="6" ids="On,Off"/>
+		<dip name="Unknown" bits="7" ids="On,Off"/>
+	</switches>
+	<nvram index="4" size="8192"/>
+	<rom index="0" zip="btoads.zip" md5="None">
+		<!-- ROM_LOAD32_WORD: p0 is the low half, p1 the high half. -->
+		<interleave output="32">
+			<part name="btc0-p0.u120" crc="0dfd1e35" map="0021"/>
+			<part name="btc0-p1.u121" crc="df7487e1" map="2100"/>
+		</interleave>
+		<!-- Samples at 0x800000; Z80 program at 0xa00000. -->
+		<part name="btc0-s.u109" crc="d9612ddb"/>
+		<part name="bt.u102" crc="a90b911a"/>
+	</rom>
+</misterromdescription>
