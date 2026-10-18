@@ -160,6 +160,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Taito FX-1B “Taito Zoom”](https://github.com/XelaNotPu/ZN1-TaitoFX1B_MiSTer)                                                  |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
+| [Texas Instruments TI-82](https://github.com/Lentrave/TI82_MiSTer_Core)                                                        |
 | [The Legend of Kage](https://mister.blahm1d.com/core-legendofkage.html)                                                        |
 | [The Lost Castle In Darkmist](https://www.patreon.com/Meathax/posts/lost-castle-in-172389752)                                  |
 | [The Pit](https://misterfpga.org/viewtopic.php?p=115950)                                                                       |
