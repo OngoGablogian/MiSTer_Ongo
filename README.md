@@ -62,7 +62,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Hyperstone E1 (Eolith)](https://github.com/ppriest/Arcade-Eolith_MiSTer)                                                      |
 | [Hyperstone E1 (Vamphalf)](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                  |
 | [I, Robot](https://www.patreon.com/Meathax/posts/i-robot-1984-169005879)                                                       |
-| [IGS PolyGame Master 2](https://discord.com/channels/647909397477195803/1453063377436807410/1561069499715813487)               |
+| [IGS PolyGame Master 2](https://github.com/decoryah/Arcade-IGSPGM2_MiSTer)                                                     |
 | [Ikki](https://www.patreon.com/Meathax/posts/fresh-meat-ikki-172031733)                                                        |
 | [Intrepid](https://misterfpga.org/viewtopic.php?t=10823)                                                                       |
 | [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
