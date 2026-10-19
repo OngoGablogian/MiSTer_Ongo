@@ -1,0 +1,81 @@
+<misterromdescription>
+    <rotation>vertical (cw)</rotation>
+    <name>Jack Rabbit (set 1)</name>
+    <setname>jackrabt</setname>
+    <mameversion>0289</mameversion>
+    <year>1984</year>
+    <manufacturer>Zaccaria</manufacturer>
+    <players>2</players>
+    <rbf>Meathax_Zaccaria</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="jackrabt.zip" md5="None" address="0x30000000" asm_md5="b29de5145638335cd584cb98b67ac57b">
+        <!-- 
+  0[0]: jackrabt   Jack Rabbit protection PAL -->
+        <part>
+            01 00 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0xC000 (16 bits) -->
+        <part name="cpu-01.1a" crc="499efe97"/>
+        <part name="cpu-01.2l" crc="4772e557"/>
+        <part name="cpu-01.2h" crc="21f2be2a"/>
+        <part name="cpu-01.3l" crc="1e844228"/>
+        <part name="cpu-01.3h" crc="59077027"/>
+        <part name="cpu-01.4l" crc="ebffcc38"/>
+        <part name="cpu-01.4h" crc="0b9db007"/>
+        <part name="cpu-01.5l" crc="275e0ed6"/>
+        <part name="cpu-01.5h" crc="785e1a01"/>
+        <part name="cpu-01.6l" crc="8a20977a"/>
+        <part name="cpu-01.6h" crc="dd5979cf"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- melody - starts at 0xC000 - length 0x4000 (14 bits) -->
+        <part name="13snd.2g" crc="fc05654e"/>
+        <part name="9snd.1i" crc="3dab977f"/>
+        <!-- SPEECH_START -->
+        <!-- speech - starts at 0x10000 - length 0x4000 (14 bits) -->
+        <part name="8snd.1h" crc="f4507111"/>
+        <part name="7snd.1g" crc="c722eff8"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- gfx - starts at 0x14000 - length 0x8000 (15 bits) -->
+        <interleave output="32">
+            <part name="1bg.2d" crc="9f880ef5" map="0001"/>
+            <part name="2bg.1f" crc="afc04cd7" map="0010"/>
+            <part name="3bg.1e" crc="14f23cdd" map="0100"/>
+            <part name="3bg.1e" crc="14f23cdd" map="1000"/>
+        </interleave>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0x1C000 - length 0x400 (10 bits) -->
+        <part name="jr-ic9g" crc="85577107"/>
+        <part name="jr-ic9f" crc="085914d1"/>
+        <!-- Total 0x1C400 bytes - 113 kBytes -->
+    </rom>
+
+    <!-- Vertical screen. -->
+    <rom index="1">
+        <part>01 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="01,00,d6">
+        <DSW.0/>
+        <dip name="Lives" bits="0,1" ids="2,3,4,5"/>
+        <dip name="Infinite Lives (Cheat)" bits="2" ids="Off,On"/>
+        <dip name="Cabinet" bits="4" ids="Upright,Cocktail"/>
+        <dip name="Freeze" bits="5" ids="Off,On"/>
+        <dip name="Cross Hatch Pattern" bits="6" ids="Off,On"/>
+        <DSW.1/>
+        <dip name="Title" bits="10" ids="Todays,All time"/>
+        <dip name="Service Mode" bits="15" ids="Off,On"/>
+        <DSW.2/>
+        <dip name="Coin A" bits="16,17" ids="1/3,1/2,1/1,2/1"/>
+        <dip name="Coin B" bits="18,19" ids="1/6,1/5,1/4,1/3,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1/2,1/1,2/1,4/1"/>
+        <dip name="Coin C" bits="20,22" ids="1/7,1/5,1/4,1/3,1/2,1/1,2/1,4/1"/>
+        <dip name="QOL - flip" ids="Off,On" bits="24"/>
+    </switches>
+    <buttons names="Jump,Start,Coin" default="A,Start,Select" count="1"/>
+
+
+
+<!-- JTFRAME_HISCORE_BEGIN -->
+<rom index="3" md5="none"><part>0AC8976000FF000200020001000F0400000073BA480A00000000727D030000000000605E010000000000607E010000000000609E01FFFF00000060BE01FFFF00000060DE01FFFF00000060FE01FFFF00</part></rom>
+<nvram index="4" size="81"/>
+<!-- JTFRAME_HISCORE_END -->
+</misterromdescription>

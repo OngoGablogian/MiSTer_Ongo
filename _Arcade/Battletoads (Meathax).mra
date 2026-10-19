@@ -8,15 +8,16 @@
 	<category>Beat 'em up</category>
 	<rotation>horizontal</rotation>
 	<buttons names="Attack,Jump,Coin,Start,Service Menu,Pause" default="A,B,Select,Start,R,L"/>
-	<switches page_id="3" page_name="DIP switches" base="0" default="f2">
+	<!-- SW1 per MAME 0.289 btoads; 0 = On. Default f8 sets Three Players Off. -->
+	<switches default="f8" base="0">
 		<dip name="Demo Sounds" bits="0" ids="On,Off"/>
-		<dip name="Mono Sound" bits="1" ids="On,Off"/>
+		<dip name="Stereo" bits="1" ids="On,Off"/>
 		<dip name="Common Coin Mech" bits="2" ids="On,Off"/>
 		<dip name="Three Players" bits="3" ids="On,Off"/>
 		<dip name="Free Play" bits="4" ids="On,Off"/>
 		<dip name="Blood Free Mode" bits="5" ids="On,Off"/>
 		<dip name="Credit Retention" bits="6" ids="On,Off"/>
-		<dip name="Unknown" bits="7" ids="On,Off"/>
+		<dip name="Unknown SW1:8" bits="7" ids="On,Off"/>
 	</switches>
 	<nvram index="4" size="8192"/>
 	<rom index="0" zip="btoads.zip" md5="None">

@@ -34,6 +34,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Battletoads (Meathax)](https://www.patreon.com/Meathax/posts/battletoads-its-172668452)                                       |
 | [Battletoads (srg320)](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                    |
 | [Birdie Try](https://www.patreon.com/bazset/posts/birdie-try-data-172593515)                                                   |
+| [Black Panther](https://www.patreon.com/Meathax/posts/black-panther-172756432)                                                 |
 | [Break Thru](https://github.com/XelaNotPu/BreakThru_MiSTer)                                                                    |
 | [BrezzaSoft Crystal System](https://github.com/kyledlester/BrezzaSoft_Crystal_System_MiSTer)                                   |
 | [BrickBoy](https://github.com/kandowontu/BrickBoy_MiSTer)                                                                      |
@@ -53,6 +54,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Enigma2](https://github.com/nic24-rgb/Enigma2)                                                                                |
 | [Exidy 440](https://mister.blahm1d.com/core-exidy440.html)                                                                     |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
+| [Exterminator](https://www.patreon.com/Meathax/posts/exterminator-172770187)                                                   |
 | [FM Towns Marty](https://discord.com/channels/647909397477195803/1550527341237768235)                                          |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
@@ -67,6 +69,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [IGS PolyGame Master 2](https://github.com/decoryah/Arcade-IGSPGM2_MiSTer)                                                     |
 | [Ikki](https://www.patreon.com/Meathax/posts/fresh-meat-ikki-172031733)                                                        |
 | [Intrepid](https://misterfpga.org/viewtopic.php?t=10823)                                                                       |
+| [Jack Rabbit / Money Money](https://www.patreon.com/Meathax/posts/jack-rabbit-172788603)                                       | 
 | [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
 | [Juezhan Tianhuang (Fighting Emperor)](https://www.patreon.com/bazset/posts/juezhan-fighting-172205212)                        |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |

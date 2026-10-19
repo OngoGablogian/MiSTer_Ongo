@@ -1,0 +1,80 @@
+<misterromdescription>
+    <name>Exterminator</name>
+    <setname>exterm</setname>
+    <rbf>Meathax_Exterminator</rbf>
+    <mameversion>0289</mameversion>
+    <year>1989</year>
+    <manufacturer>Premier Technology</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <region>USA</region>
+    <category>Shooter</category>
+    <resolution>15kHz</resolution>
+    <buttons names="Fire,Pound,Rotate Left,Rotate Right,Start,Coin,Service" default="A,B,L,R,Start,Select,X"/>
+
+    <switches default="FF" base="16" page_id="1" page_name="DIP Switches">
+        <!-- MAME exterm DSW (0xFF = all defaults): bit0 Unused, bits1-2 Coin A, bits3-5 Coin B, bit6 Memory Test, bit7 Free Play -->
+        <dip name="Unused" bits="0" ids="On,Off"/>
+        <dip name="Coin A" bits="1,2" ids="1 Coin/4 Credits,1 Coin/2 Credits,1 Coin/3 Credits,1 Coin/1 Credit"/>
+        <dip name="Coin B" bits="3,5" ids="1 Coin/8 Credits,1 Coin/4 Credits,1 Coin/6 Credits,1 Coin/2 Credits,1 Coin/7 Credits,1 Coin/3 Credits,1 Coin/5 Credits,1 Coin/1 Credit"/>
+        <dip name="Memory Test" bits="6" ids="Continuous,Once"/>
+        <dip name="Free Play" bits="7" ids="On,Off"/>
+    </switches>
+
+    <!-- Index 0: maincpu 2 MB (ROM_REGION16_LE; ROM_LOAD16_BYTE pairs: even file = byte 0, odd file = byte 1),
+         then audiocpu v101d1 (32 KB), then speechcpu v101y1 (32 KB) = 0x210000 bytes -->
+    <rom index="0" zip="exterm.zip" md5="none">
+        <!-- BG: 0x000000-0x0BFFFF -->
+        <interleave output="16">
+            <part name="v101bg0" crc="8c8e72cf" map="01"/>
+            <part name="v101bg1" crc="cc2da0d8" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101bg2" crc="2dcb3653" map="01"/>
+            <part name="v101bg3" crc="4aedbba0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101bg4" crc="576922d4" map="01"/>
+            <part name="v101bg5" crc="a54a4bc2" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101bg6" crc="7584a676" map="01"/>
+            <part name="v101bg7" crc="a4f24ff6" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101bg8" crc="fda165d6" map="01"/>
+            <part name="v101bg9" crc="e112a4c4" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101bg10" crc="f1a5cf54" map="01"/>
+            <part name="v101bg11" crc="8677e754" map="10"/>
+        </interleave>
+        <!-- gap 0x0C0000-0x17FFFF (zero fill) -->
+        <part repeat="0xC0000">00</part>
+        <!-- FG + program tail: 0x180000-0x1FFFFF -->
+        <interleave output="16">
+            <part name="v101fg0" crc="38230d7d" map="01"/>
+            <part name="v101fg1" crc="22a2bd61" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101fg2" crc="9420e718" map="01"/>
+            <part name="v101fg3" crc="84992aa2" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101fg4" crc="38da606b" map="01"/>
+            <part name="v101fg5" crc="842de63a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="v101p0" crc="6c8ee79a" map="01"/>
+            <part name="v101p1" crc="557bfc84" map="10"/>
+        </interleave>
+        <!-- audiocpu (P5 sound board, loaded at 0x8000 in MAME) -->
+        <part name="v101d1" crc="83268b7d"/>
+        <!-- speechcpu (YM2151 CPU) -->
+        <part name="v101y1" crc="cbeaa837"/>
+    </rom>
+
+    <!-- 2K x 16 battery RAM at 0x02800000 (bookkeeping, adjustments and the high-score table) -->
+    <nvram index="4" size="4096"/>
+</misterromdescription>
