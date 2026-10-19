@@ -374,6 +374,12 @@ db_url = https://raw.githubusercontent.com/TheJesusFish/Slop-Core/db/db.json.zip
 db_url = https://raw.githubusercontent.com/rmonic79/rmcores/db/db.json.zip
 ```
 
+[MiSTer_decoryah](https://github.com/decoryah/MiSTer_decoryah#mister_decoryah)
+```
+[decoryah/MiSTer_decoryah]
+db_url = https://raw.githubusercontent.com/decoryah/MiSTer_decoryah/db/db.json.zip
+```
+
 ----
 
 > [!NOTE]
