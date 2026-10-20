@@ -1,8 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
 <misterromdescription>
   <name>Juezhan Tianhuang</name>
   <setname>jzth</setname>
   <rbf>bazset_JuezhanTianhuang</rbf>
-  <mameversion>current</mameversion>
+  <mameversion>0289</mameversion>
   <year>2000</year>
   <players>2</players>
   <joystick>8-way</joystick>
