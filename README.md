@@ -108,7 +108,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Namco System 12](https://www.patreon.com/XelaNotPu/posts/namco-system-12-172302772)                                           |
 | [Namco System 12 (Tenkomori Shooting)](https://github.com/kyledlester/Tenkomori_Shooting_MiSTer)                               |
 | [Namco System 21](https://www.patreon.com/XelaNotPu/posts/namco-system-21-172718008)                                           |
-| [Namco System 22 / Super System 22](https://www.patreon.com/XelaNotPu/posts/namco-system-22-169006058)                         |
+| [Namco System 22 / Super System 22](https://www.patreon.com/XelaNotPu/posts/namco-system-22-172947974)                         |
 | [Namco System FL](https://www.patreon.com/XelaNotPu/posts/namco-system-fl-170317789)                                           |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |
 | [NARC (blahm1d)](https://mister.blahm1d.com/core-narc.html)                                                                    |
