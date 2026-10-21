@@ -132,6 +132,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
 | [R-Shark / Super-X (Dooyong)](https://github.com/kyledlester/R_Shark_Super_X_MiSTer)                                           |
+| [Reaktor](https://www.patreon.com/bazset/posts/reaktor-1987-172959189)                                                         |
 | [Return of the Jedi](https://github.com/Usquebagh/Arcade-Jedi_MiSTer)                                                          |
 | [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                              |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                         |
