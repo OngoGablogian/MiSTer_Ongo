@@ -1,0 +1,175 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Dead or Alive (Model 2A) (Model 2A-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(doaab),
+      a clone of doa (the parent zip holds the shared parts).
+      For the Model 2A core (branch model2a, Model2.sv M2_2A). Study R887
+      (this set), R897 (the large layout).
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py): Sega Rally's whole image with
+      main_data 32 MB, then the texture-coordinate ROM and the polygons,
+      which the loader's third remap puts in the upper 64 MB:
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window)
+        0x2080000  4 MB of zeros
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  TGP copro data, 4 MB        -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x5AC0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      THE TEXTURE-COORDINATE ROM is MAME's 8 MB region, written twice: MAME
+      masks the word address to that size, so a[22] reads the first half
+      again.
+
+      THE 317-0229 (MAME: HACK_MODE_DOA, a fixed string) is not modelled
+      (R887). The boot probes it (0x2b90, called from 0x760) and 0x2bd0
+      (called from 0x778) uploads tables and reads 48 bytes back, compared
+      with a string; the result is a flag at 0x54fabc. THE PATCHES make the
+      two ROUTINES answer as the chip does: mov 1,g0 (5c801e01); ret
+      (0a000000) at 0x2b90 and at 0x2bd0, so the flag is 1 and the window is
+      never touched.
+      R921: NOT THE CALLS. The boot sums the low halfwords of the 30 words at
+      0x730-0x7a4 (0x6e0) against 0x5a61 at 0x87fe0 and keeps the answer at
+      0x54fab0; R887's patches were the calls at 0x760 / 0x778, inside that
+      range (sum 0x4ddb), so 0x54fab0 was 0 and the game's tamper check
+      armed a countdown of 300 + rand % 900 frames at each match's start
+      (0x3724) and, when it ran out, stopped every game task (0x3184): the
+      3D gone, the HUD and K.O. left over the stage's backdrop, the music
+      playing: GitHub #18, reproduced in MAME 0.289 with the old patches
+      (12.56 s into the first match) and gone with these.
+
+      THE i960's movre (0x6e.1), which the game uses to save and restore
+      fp0-fp3, is built under the 2A core's F2A (study R897).
+
+      Index 4, the game ID: 0x16 (R887). Bit 7 is SET in this MRA (0x96): the 15 kHz CRT flag (R795), which
+      starts the core in 15 kHz interlaced whatever the OSD says (R908).
+    -->
+    <name>Dead or Alive (Model 2A) [15kHz CRT]</name>
+    <setname>doaab</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>96 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Tecmo</manufacturer>
+    <category>Fighter</category>
+
+    <rom index="0" zip="doaab.zip|doa.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19310.12" crc="3c571e75" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19311.13" crc="8818363d" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19318.10" crc="ab431bfe" map="0021"/>
+            <part name="mpr-19319.11" crc="c5cb694d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19316.8" crc="2d2d1b1a" map="0021"/>
+            <part name="mpr-19317.9" crc="96b17bcf" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19314.6" crc="a8d963fb" map="0021"/>
+            <part name="mpr-19315.7" crc="90ae5682" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19312.4" crc="1dcedb10" map="0021"/>
+            <part name="mpr-19313.5" crc="8c63055e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19312.4" crc="1dcedb10" map="0021"/>
+            <part name="mpr-19313.5" crc="8c63055e" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19328.30" crc="400bdbfb" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-19329.31" crc="8fd2708a" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19330.32" crc="0c69787d" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19331.36" crc="c18ea0b8" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19332.37" crc="2877f96f" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19310.12" crc="3c571e75" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19311.13" crc="8818363d" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-19321.25" crc="9c49e845" map="0021"/>
+            <part name="mpr-19320.24" crc="190c017f" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19321.25" crc="9c49e845" map="0021"/>
+            <part name="mpr-19320.24" crc="190c017f" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 24 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-19322.16" crc="d0e6ecf0" map="0021"/>
+            <part name="mpr-19325.20" crc="7cbe432d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19323.17" crc="453d3f4a" map="0021"/>
+            <part name="mpr-19326.21" crc="b976da02" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19324.18" crc="0d6bf454" map="0021"/>
+            <part name="mpr-19327.22" crc="6a75634c" map="2100"/>
+        </interleave>
+
+        <!-- R921: the 317-0229 boot check's two routines -> mov 1,g0; ret
+             (R887 patched the calls at 0x760 / 0x778, which the boot's
+             checksum of 0x730-0x7a4 covers) -->
+        <patch offset="0x2b90">01 1e 80 5c</patch>
+        <patch offset="0x2b94">00 00 00 0a</patch>
+        <patch offset="0x2bd0">01 1e 80 5c</patch>
+        <patch offset="0x2bd4">00 00 00 0a</patch>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (VF2's order: R887's three-button profile). -->
+    <buttons names="Hold,Punch,Kick,Start,Coin,Test,Service"/>
+</misterromdescription>

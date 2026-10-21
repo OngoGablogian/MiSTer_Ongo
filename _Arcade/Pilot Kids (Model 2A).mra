@@ -1,0 +1,151 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Pilot Kids (Model 2A) (Model 2A-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(pltkidsa),
+      a clone of pltkids (the parent zip holds the shared parts).
+      For the Model 2A core (branch model2a, Model2.sv M2_2A). Study R887
+      (this set), R897 (the large layout).
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py): Sega Rally's whole image with
+      main_data 32 MB, then the texture-coordinate ROM and the polygons,
+      which the loader's third remap puts in the upper 64 MB:
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window)
+        0x2080000  4 MB of zeros
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  TGP copro data, 4 MB        -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x62C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      THE PATCH at 0x730 is MAME's init_pltkids: 0x08000004 ("b" to the next
+      instruction), the same program bug as Zero Gunner's 0x700 (R862): the
+      boot's work-RAM clear wipes the PRCB the processor was reinitialised
+      with, and the first interrupt would vector through a zeroed table.
+
+      THE 315-5881 (MAME's key 042e2dc1) is not modelled (R887): its window
+      reads 0. The game uses it once, at boot, to decrypt "98-PILOT" and
+      compare it byte by byte with the program's own copy (0x51900-0x51970);
+      on a mismatch it sets a flag (0x5092d4) whose readers quietly corrupt
+      play. THE PATCH at 0x51900: cmpibne (3dad0074) -> b 0x51980
+      (08000080), past the compare. Proved in MAME (R887): zeroed reads plus
+      the patch, the flag 0 for 229 s and every snapshot to 240 s
+      byte-identical to the run with the chip.
+
+      Index 4, the game ID: 0x15 (R887). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Pilot Kids (Model 2A)</name>
+    <setname>pltkidsa</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>15 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1998</year>
+    <manufacturer>Psikyo</manufacturer>
+    <category>Shooter</category>
+
+    <rom index="0" zip="pltkidsa.zip|pltkids.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-21281.pr0" crc="293ead5d" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-21282.pr1" crc="ed0e7b9e" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-21262.da0" crc="aa71353e" map="0021"/>
+            <part name="mpr-21263.da1" crc="d55d4509" map="2100"/>
+        </interleave>
+        <part repeat="25165824">00</part>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-21276.sd0" crc="8f415bc3" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-21277.sd1" crc="bfba0ff6" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-21278.sd2" crc="27e18e08" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-21279.sd3" crc="3a8dcf68" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-21280.sd4" crc="aa548124" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-21281.pr0" crc="293ead5d" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-21282.pr1" crc="ed0e7b9e" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-21274.tx1" crc="f045e3d1" map="0021"/>
+            <part name="mpr-21272.tx0" crc="dd605c21" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-21275.tx3" crc="c4870b7c" map="0021"/>
+            <part name="mpr-21273.tx2" crc="722ec8a2" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 32 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-21264.tp0" crc="6b35204d" map="0021"/>
+            <part name="mpr-21268.tp1" crc="16ce2147" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-21265.tp2" crc="f061e639" map="0021"/>
+            <part name="mpr-21269.tp3" crc="8c06255e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-21266.tp4" crc="f9c32021" map="0021"/>
+            <part name="mpr-21270.tp5" crc="b61f81c3" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-21267.tp6" crc="c42cc938" map="0021"/>
+            <part name="mpr-21271.tp7" crc="a5325c75" map="2100"/>
+        </interleave>
+
+        <!-- MAME init_pltkids: maincpu 0x730 = 0x08000004 (little-endian) -->
+        <patch offset="0x730">04 00 00 08</patch>
+
+        <!-- R887: the 315-5881 check, cmpibne -> b 0x51980 -->
+        <patch offset="0x51900">80 00 00 08</patch>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (Zero Gunner's order: R887's two-button profile). -->
+    <buttons names="Button 1,Button 2,Start,Coin,Test,Service"/>
+</misterromdescription>

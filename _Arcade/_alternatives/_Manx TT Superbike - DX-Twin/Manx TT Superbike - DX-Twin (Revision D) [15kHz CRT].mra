@@ -1,0 +1,173 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Manx TT Superbike - DX/Twin (Revision D) (Model 2A-CRX). Derived from
+      MAME 0.289 model2.cpp ROM_START(manxtt), which MAME runs on its
+      manxttdx machine (the 2A board plus a Model 1 sound board for the DX
+      cabinet's extra sounds). For the Model 2A core (branch model2a,
+      Model2.sv M2_2A). Study R852 (the layout), R862 (the extension), R887
+      (this set). The file name has "-" for MAME's "/".
+
+      THE 2A LAYOUT (VF2's MRA), each slot zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000, all of it)
+        0x0080000  main_data, 16 MB: 12 MB of mask ROMs, then the 1 MB pair
+                   epr-18862 / 18863 at 12 MB and its three copies to 16 MB
+                   (MAME's ROM_COPYs, written out here so no logic mirrors it)
+        0x1080000  textures, 8 MB (4 MB loaded; MAME's region is 4 MB)
+        0x1880000  polygons, 12 MB (all loaded; MAME's 16 MB region is 0xFF
+                   above 12 MB)
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB (256 KB loaded)
+        0x2540000  SCSP samples, 8 MB
+      R862, THE EXTENSION (the loader's second remap, SDRAM byte 0x2600000):
+        0x2D40000  i960 program 512 KB-2 MB: zeros, as MAME's region (R887:
+                   every 2A game from 0x10 takes the extension window)
+        0x2EC0000  TGP copro data, 4 MB (mpr-18761 / 18762)
+      Image: 0x32C0000 bytes.
+
+      NOT LOADED: the Model 1 sound board's program and MultiPCM samples
+      (epr-18742, mpr-18743: the DX cabinet's extra sounds; the 2A core has
+      no Model 1 sound board, R852), the comms program (epr-18643a), the
+      EEPROM's default (manxtt_dx_nvran: MAME's handcrafted DX setting; the
+      core's 93C46 starts blank and the game writes its own defaults), the
+      1/x and 1/sqrt tables and the 2A video board's ROMs (unused by MAME).
+
+      INPUTS (R887): the ANALOG profile, as Sega Rally's. THROTTLE is the
+      accelerator (the right stick's Y or Accel), BRAKE the brake, BANK the
+      steering reversed (MAME PORT_REVERSE): the left stick, the paddle or
+      the d-pad. Shift Up / Shift Down on the last two buttons. View and
+      Hand Brake are "-": the game has neither. MAME: calibrate in the input
+      test (press Service, then hold Shift Down while moving the control).
+
+      THE MOTION-SLIDER CHECK (R892): at boot the game shows "DANGER!
+      ACTIVE MOTION SLIDER NOW CHECKING SYSTEM" and talks to the DX
+      cabinet's drive board on the 315-5649's ports E (command) and D
+      (status). The core answers as a working motion base (Model2.sv
+      M2_2A_MANX_MOTION, game ID 0x19), so the screen passes in about a
+      second and the game goes on to its warning screen and attract with
+      no key pressed. Built without it (M2_NO_2A_MANX_MOTION), the screen
+      stays, as in MAME: press Test, then Test again on the menu's EXIT.
+
+      Index 4, the game ID: 0x19 (R887). Bit 7 is SET in this MRA (0x99): the 15 kHz CRT flag (R795), which
+      starts the core in 15 kHz interlaced whatever the OSD says (R908).
+    -->
+    <name>Manx TT Superbike - DX/Twin (Revision D) [15kHz CRT]</name>
+    <setname>manxtt</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>99 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="manxtt.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18822d.12" crc="4f435990" map="0021"/>
+            <part name="epr-18823d.13" crc="b8eddb5c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18824d.14" crc="aca9f61f" map="0021"/>
+            <part name="epr-18825d.15" crc="5a1d7799" map="2100"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-18751.10" crc="773ad43d" map="0021"/>
+            <part name="mpr-18752.11" crc="4da3719e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18749.8" crc="c3fe0eea" map="0021"/>
+            <part name="mpr-18750.9" crc="40b55494" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18747.6" crc="a65ec1e8" map="0021"/>
+            <part name="mpr-18748.7" crc="375e3748" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18862.4" crc="9adc3a30" map="0021"/>
+            <part name="epr-18863.5" crc="603742e9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18862.4" crc="9adc3a30" map="0021"/>
+            <part name="epr-18863.5" crc="603742e9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18862.4" crc="9adc3a30" map="0021"/>
+            <part name="epr-18863.5" crc="603742e9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18862.4" crc="9adc3a30" map="0021"/>
+            <part name="epr-18863.5" crc="603742e9" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB -->
+        <interleave output="32">
+            <part name="mpr-18760.25" crc="4e3a4a89" map="0021"/>
+            <part name="mpr-18759.24" crc="278d8742" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB -->
+        <interleave output="32">
+            <part name="mpr-18753.16" crc="33ddaa0d" map="0021"/>
+            <part name="mpr-18756.20" crc="28713617" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18754.17" crc="09aabde5" map="0021"/>
+            <part name="mpr-18757.21" crc="25fc92e9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18755.18" crc="bf094d9e" map="0021"/>
+            <part name="mpr-18758.22" crc="1b5473d0" map="2100"/>
+        </interleave>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18924a.30" crc="ad6f40ec" map="12"/>
+        </interleave>
+        <part repeat="262144">00</part>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+             loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18763.31" crc="1bcb2283" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18764.32" crc="0dc6a860" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18765.36" crc="ca4a803c" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18766.37" crc="e41892ea" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB: empty in MAME (R862, R887) -->
+        <part repeat="1572864">00</part>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <interleave output="32">
+            <part name="mpr-18761.28" crc="4e39ec05" map="0021"/>
+            <part name="mpr-18762.29" crc="4ab165d8" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- The ANALOG profile's order (R887), Sega Rally's: the bike leans on
+         either stick, the paddle or the d-pad; throttle and brake on the
+         right stick's Y or the Accel / Brake buttons. -->
+    <buttons names="Coin,Start,Test,Service,-,-,Accel,Brake,Shift Up,Shift Down"/>
+</misterromdescription>

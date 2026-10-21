@@ -1,0 +1,142 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Zero Gunner (Export, Model 2A) (Model 2A-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(zeroguna), a clone of zerogun (the parent zip
+      holds the shared parts). For the Model 2A core (branch model2a,
+      Model2.sv M2_2A). Study R852 (the layout), R862 (this set).
+
+      THE 2A LAYOUT (VF2's MRA), each slot zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB
+        0x1080000  textures, 8 MB (4 MB loaded)
+        0x1880000  polygons, 12 MB (8 MB loaded)
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB (4 MB loaded)
+      R862, THE EXTENSION after VF2's image (the loader's second remap puts
+      it in the 2A SDRAM hole, byte 0x2600000):
+        0x2D40000  i960 program 512 KB-2 MB (MAME maincpu 0x080000; 512 KB
+                   loaded, the rest 0 as MAME's region)
+      Image: 0x2EC0000 bytes. No copro data (ROMREGION_ERASE00).
+
+      THE PATCH at 0x700 is MAME's init_zerogun: 0x08000004 ("b" to the next
+      instruction) over "st g14,(g5)" in the boot's work-RAM clear, which
+      otherwise wipes the PRCB the boot copied to 0x5000b0 and reinitialised
+      the processor with. MAME's i960 (and this core's) re-reads the
+      interrupt table pointer from the PRCB on every interrupt; the silicon
+      evidently does not (study R862). Without the patch the first interrupt
+      vectors through a zeroed table.
+
+      THE 315-5881 (MAME's key 042c0d13, ROM_PARAMETER) is not modelled on
+      this core (study R862): its decryption window at 0x01d90000 reads 0.
+      The game uses the chip only as a check (study R873): eleven copies of
+      one sequence decrypt 8 bytes, compare them as a double with a table
+      in the program, and on a mismatch add 1 to a counter at 0x513000; the
+      main loop stops the game once the counter passes 10 (the black screen
+      after the first credit). THE ELEVEN PATCHES below turn each check's
+      "be" past the increment into "b" (opcode 0x12 -> 0x08, the same
+      displacement), so the counter stays 0 as with the chip. The code runs
+      from the boot's copy of program 0x40000-0xcebff at 0x540000, so the
+      patches are on the program image the copy is made from. The game's
+      random number generator adds program words to its seed, so its
+      sequence parts from MAME's when it lands on a patched word (as with
+      the 0x700 patch); in MAME the game is otherwise identical (R873).
+
+      Index 4, the game ID: 0x12 (R862). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Zero Gunner (Export, Model 2A)</name>
+    <setname>zeroguna</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>12 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Psikyo</manufacturer>
+    <category>Shooter</category>
+
+    <rom index="0" zip="zeroguna.zip|zerogun.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-20437.12" crc="fad30cc0" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-20438.13" crc="ca364408" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-20296.10" crc="072d8a5e" map="0021"/>
+            <part name="mpr-20297.11" crc="ba6a825b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20294.8" crc="a0bd1474" map="0021"/>
+            <part name="mpr-20295.9" crc="c548cced" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB -->
+        <interleave output="32">
+            <part name="mpr-20301.25" crc="52010fb2" map="0021"/>
+            <part name="mpr-20300.24" crc="6f042792" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB -->
+        <interleave output="32">
+            <part name="mpr-20298.16" crc="8ab782fc" map="0021"/>
+            <part name="mpr-20299.20" crc="90e20cdb" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-20302.30" crc="44ff50d2" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+             loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-20303.31" crc="c040973f" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20304.32" crc="6decfe83" map="12"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-20437.12" crc="fad30cc0" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-20438.13" crc="ca364408" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- MAME init_zerogun: maincpu 0x700 = 0x08000004 (little-endian) -->
+        <patch offset="0x700">04 00 00 08</patch>
+
+        <!-- R873: the 315-5881 checks, "be" -> "b" (run from RAM 0x5xxxxx) -->
+        <patch offset="0x443c8">28 00 00 08</patch>
+        <patch offset="0x446e0">18 00 00 08</patch>
+        <patch offset="0x449bc">18 00 00 08</patch>
+        <patch offset="0x44bac">18 00 00 08</patch>
+        <patch offset="0x44e14">18 00 00 08</patch>
+        <patch offset="0x474dc">18 00 00 08</patch>
+        <patch offset="0x475e8">18 00 00 08</patch>
+        <patch offset="0x477f4">18 00 00 08</patch>
+        <patch offset="0x4cc34">18 00 00 08</patch>
+        <patch offset="0x55cd4">18 00 00 08</patch>
+        <patch offset="0x56204">18 00 00 08</patch>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons. -->
+    <buttons names="Button 1,Button 2,Start,Coin,Test,Service"/>
+</misterromdescription>

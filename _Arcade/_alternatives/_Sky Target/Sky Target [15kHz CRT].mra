@@ -1,0 +1,197 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Sky Target (Model 2A-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(skytargt).
+      For the Model 2A core (branch model2a, Model2.sv M2_2A). Study R887
+      (this set), R897 (the large layout).
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py): Sega Rally's whole image with
+      main_data 32 MB, then the texture-coordinate ROM and the polygons,
+      which the loader's third remap puts in the upper 64 MB:
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window)
+        0x2080000  4 MB of zeros
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  TGP copro data, 4 MB        -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x52C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      main_data's last pair (epr-18404 / 18405, 1 MB at MAME 0x1000000) is
+      written sixteen times, MAME's ROM_COPYs to 0x1F00000; the game reads it
+      at mirrored addresses through the 0x06000000 window (R887). The TGP
+      copro data is 4 MB. MAME marks the set MACHINE_NOT_WORKING; R887's
+      240 s sessions boot, attract and play with no trap on the 2A core.
+
+      Index 4, the game ID: 0x18 (R887). Bit 7 is SET in this MRA (0x98): the 15 kHz CRT flag (R795), which
+      starts the core in 15 kHz interlaced whatever the OSD says (R908).
+    -->
+    <name>Sky Target [15kHz CRT]</name>
+    <setname>skytargt</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>98 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Shooter</category>
+
+    <rom index="0" zip="skytargt.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18406.12" crc="fde9c00a" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-18407.13" crc="35f8b529" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-18415.10" crc="d7a1bbd7" map="0021"/>
+            <part name="mpr-18416.11" crc="b77c9243" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18417.8" crc="a0d03f63" map="0021"/>
+            <part name="mpr-18418.9" crc="c7a6f97f" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18404.6" crc="f1407ec4" map="0021"/>
+            <part name="epr-18405.7" crc="00b40f9e" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18408.30" crc="6deb9657" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18424.31" crc="590a4338" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18423.32" crc="c356d765" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18422.36" crc="b4f3cea6" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18421.37" crc="00522390" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-18406.12" crc="fde9c00a" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-18407.13" crc="35f8b529" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <interleave output="32">
+            <part name="mpr-18420.28" crc="92b87817" map="0021"/>
+            <part name="mpr-18419.29" crc="74542d87" map="2100"/>
+        </interleave>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-18412.25" crc="4db52f8b" map="0021"/>
+            <part name="mpr-18411.24" crc="9c2dc40c" map="2100"/>
+        </interleave>
+        <part repeat="8388608">00</part>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-18413.16" crc="1c4d416c" map="0021"/>
+            <part name="mpr-18409.20" crc="666037ef" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18414.17" crc="858885ba" map="0021"/>
+            <part name="mpr-18410.21" crc="b821a695" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- R887's analog profile, Sky Target's: the left stick is the flight
+         stick (X reversed, as MAME); View Change, Machine Gun and Missile on
+         the buttons named. -->
+    <buttons names="Coin,Start,Test,Service,View Change,-,-,-,Machine Gun,Missile"/>
+</misterromdescription>

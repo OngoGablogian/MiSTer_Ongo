@@ -1,0 +1,134 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Sega Rally Championship - Twin/DX (Revision C) (Model 2A-CRX). Derived
+      from MAME 0.289 model2.cpp ROM_START(srallyc). For the Model 2A core
+      (branch model2a, Model2.sv M2_2A); the original Model 2 core cannot run
+      it. Study R852 (the layout), R862 (this set). The file name has "-"
+      for MAME's "/", which a file name cannot hold.
+
+      THE 2A LAYOUT (VF2's MRA), each slot zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB (12 MB loaded)
+        0x1080000  textures, 8 MB (4 MB loaded)
+        0x1880000  polygons, 12 MB (8 MB loaded)
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB (256 KB loaded)
+        0x2540000  SCSP samples, 8 MB
+      R862, THE EXTENSION after VF2's image (the loader's second remap puts
+      it in the 2A SDRAM hole, byte 0x2600000):
+        0x2D40000  i960 program 512 KB-2 MB (MAME maincpu 0x080000; 512 KB
+                   loaded, the rest 0 as MAME's region)
+        0x2EC0000  TGP copro data, 4 MB (MAME copro_data; its upper 4 MB are
+                   empty in MAME)
+      Image: 0x32C0000 bytes. The drive board's Z80 program (epr-17891), the
+      comms program (epr-16726), the 1/x and 1/sqrt tables and the 2A video
+      board's ROMs are not loaded (not modelled, or unused by MAME).
+
+      Index 4, the game ID: 0x10 (R862; 2A games from 0x10, clear of the
+      original core's 1 and 2). Bit 7 is SET in this MRA (0x90): the 15 kHz CRT flag (R795), which
+      starts the core in 15 kHz interlaced whatever the OSD says (R908).
+    -->
+    <name>Sega Rally Championship - Twin/DX (Revision C) [15kHz CRT]</name>
+    <setname>srallyc</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>90 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="srallyc.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-17888c.12" crc="3d6808aa" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-17889c.13" crc="f43c7802" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-17746.10" crc="8fe311f4" map="0021"/>
+            <part name="mpr-17747.11" crc="543593fd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17744.8" crc="71fed098" map="0021"/>
+            <part name="mpr-17745.9" crc="8ecca705" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17884.6" crc="4cfc95e1" map="0021"/>
+            <part name="mpr-17885.7" crc="a08d2467" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1080000  textures, 8 MB -->
+        <interleave output="32">
+            <part name="mpr-17753.25" crc="6db0eb36" map="0021"/>
+            <part name="mpr-17752.24" crc="d6aa86ce" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB -->
+        <interleave output="32">
+            <part name="mpr-17748.16" crc="3148a2b2" map="0021"/>
+            <part name="mpr-17750.20" crc="232aec29" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17749.17" crc="0838d184" map="0021"/>
+            <part name="mpr-17751.21" crc="ed87ac62" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-17890a.30" crc="5bac3fa1" map="12"/>
+        </interleave>
+        <part repeat="262144">00</part>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+             loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-17756.31" crc="7725f111" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-17757.32" crc="1616e649" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-17886.36" crc="54a72923" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-17887.37" crc="38c31fdd" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-17888c.12" crc="3d6808aa" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-17889c.13" crc="f43c7802" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <interleave output="32">
+            <part name="mpr-17754.28" crc="81a84f67" map="0021"/>
+            <part name="mpr-17755.29" crc="2a6e7da4" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Steering on either stick (or the paddle); pedals on the right
+         stick's Y or the Accel / Brake buttons; the shifter steps N-1-2-3-4
+         with Gear Up / Gear Down. OSD: Pedals, Steering, Steering smoothing,
+         Right stick (shown for this game). -->
+    <buttons names="Coin,Start,Test,Service,View,Hand Brake,Accel,Brake,Gear Up,Gear Down"/>
+</misterromdescription>

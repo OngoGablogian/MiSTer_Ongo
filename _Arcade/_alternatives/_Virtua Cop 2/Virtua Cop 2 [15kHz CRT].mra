@@ -1,0 +1,144 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Virtua Cop 2 (Model 2A-CRX). Derived from MAME 0.289 model2.cpp
+      ROM_START(vcop2). For the Model 2A core (branch model2a, Model2.sv
+      M2_2A); the original Model 2 core cannot run it. Study R852 (the
+      layout), R862 (this set).
+
+      THE 2A LAYOUT (VF2's MRA), each slot zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB: 12 MB of mask ROM, then epr-18520 /
+                   18521 (1 MB) four times, MAME's ROM_COPY mirrors of
+                   0xc00000 at 0xd00000, 0xe00000 and 0xf00000
+        0x1080000  textures, 8 MB (4 MB loaded)
+        0x1880000  polygons, 12 MB (4 MB loaded)
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB
+      R862, THE EXTENSION after VF2's image (the loader's second remap puts
+      it in the 2A SDRAM hole, byte 0x2600000):
+        0x2D40000  i960 program 512 KB-2 MB (MAME maincpu 0x080000-0x1fffff)
+      Image: 0x2EC0000 bytes. No copro data (MAME: ROMREGION_ERASE00; the
+      core answers the TGP's reads of it with 0).
+
+      Index 4, the game ID: 0x11 (R862). Bit 7 is SET in this MRA (0x91): the 15 kHz CRT flag (R795), which
+      starts the core in 15 kHz interlaced whatever the OSD says (R908).
+      THE GUNS (R870): Virtua Cop's driver, read by the game through the
+      315-5649's serial channel 2 (M2_2A_VCOP2_GUN, on by default). Aim with
+      the left stick or the mouse, crosshairs and the OSD's Crosshair /
+      Mouse lines as Virtua Cop (study R846, R850, R870).
+    -->
+    <name>Virtua Cop 2 [15kHz CRT]</name>
+    <setname>vcop2</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>91 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Shooter / Gun</category>
+
+    <rom index="0" zip="vcop2.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18524.12" crc="1858988b" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-18525.13" crc="0c13df3f" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-18516.10" crc="a3928ff0" map="0021"/>
+            <part name="mpr-18517.11" crc="4bd73da4" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18514.8" crc="791283c5" map="0021"/>
+            <part name="mpr-18515.9" crc="6ba1ffec" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18522.6" crc="61d18536" map="0021"/>
+            <part name="mpr-18523.7" crc="61d08dc4" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18520.4" crc="1d4ec5e8" map="0021"/>
+            <part name="epr-18521.5" crc="b8b3781c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18520.4" crc="1d4ec5e8" map="0021"/>
+            <part name="epr-18521.5" crc="b8b3781c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18520.4" crc="1d4ec5e8" map="0021"/>
+            <part name="epr-18521.5" crc="b8b3781c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18520.4" crc="1d4ec5e8" map="0021"/>
+            <part name="epr-18521.5" crc="b8b3781c" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB -->
+        <interleave output="32">
+            <part name="mpr-18512.25" crc="d9bc7e71" map="0021"/>
+            <part name="mpr-18511.24" crc="cae77a4f" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB -->
+        <interleave output="32">
+            <part name="mpr-18513.16" crc="777a3633" map="0021"/>
+            <part name="mpr-18510.20" crc="e83de997" map="2100"/>
+        </interleave>
+        <part repeat="8388608">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18530.30" crc="ac9c8357" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+             loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18529.31" crc="f76715b1" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18528.32" crc="287a2f9a" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18527.36" crc="e6a49314" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18526.37" crc="6516d9b5" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-18524.12" crc="1858988b" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-18525.13" crc="0c13df3f" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18518.14" crc="7842951b" map="0021"/>
+            <part name="epr-18519.15" crc="31a30edc" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- The guns' buttons, Virtua Cop's (R846, R870), per player: joystick 1
+         is player 1's gun, joystick 2 player 2's. Aim with the left stick (a
+         USB light gun arrives as that stick, calibrated in MiSTer's F10 menu)
+         or the mouse (OSD "Mouse"); the mouse's left / right buttons, where
+         MiSTer puts a USB gun's trigger, are Trigger / Reload too. Reload is
+         "shoot off the screen"; aiming off the screen and pulling the trigger
+         does the same. Test and Service are player 1's. -->
+    <buttons names="Trigger,Reload,Start,Coin,Test,Service"/>
+</misterromdescription>

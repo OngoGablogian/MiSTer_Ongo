@@ -1,0 +1,124 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Virtua Fighter 2, Version 2.1 (Model 2A-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(vf2). For the Model 2A core (branch model2a,
+      Model2.sv M2_2A); the original Model 2 core cannot run it. Study R852.
+
+      THE 2A LAYOUT (Model2.sv's GAME_* constants with M2A):
+        0x0000000  i960 program, 512 KB, whole (no second half elsewhere)
+        0x0080000  main_data, 16 MB
+        0x1080000  textures, 8 MB: MAME's 0-4 MB then its 8-12 MB (the
+                   hole between them collapsed, as on the original board)
+        0x1880000  polygons, 12 MB
+        0x2480000  TGP math tables, 256 KB (the CPU board's)
+        0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped)
+        0x2540000  SCSP samples, 8 MB (byte-swapped); the loader moves these
+                   above the RAMs, to SDRAM byte 0x3400000
+      No copro data: MAME's region is ROMREGION_ERASE00 for this set and
+      the core answers those reads with 0. The CPU board's 1/x and 1/sqrt
+      tables and the 2A video board's ROMs (mpr-16310..16312) are not used
+      by MAME's emulation and are not loaded. Image: 0x2D40000 bytes.
+
+      Index 4, the game ID, is 0 with bit 7 set: the 15 kHz CRT flag (R795),
+      which starts the core in 15 kHz interlaced whatever the OSD says.
+    -->
+    <name>Virtua Fighter 2 (Version 2.1) [15kHz CRT]</name>
+    <setname>vf2</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>80 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Fighter</category>
+
+    <rom index="0" zip="vf2.zip" md5="none">
+
+        <!-- 0x0000000  i960 program, 512 KB -->
+        <interleave output="32">
+            <part name="epr-18385.12" crc="78ed2d41" map="0021"/>
+            <part name="epr-18386.13" crc="3418f428" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18387.14" crc="124a8453" map="0021"/>
+            <part name="epr-18388.15" crc="8d347980" map="2100"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-17560.10" crc="d1389864" map="0021"/>
+            <part name="mpr-17561.11" crc="b98d0101" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17558.8" crc="4b15f5a6" map="0021"/>
+            <part name="mpr-17559.9" crc="d3264de6" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17566.6" crc="fb41ef98" map="0021"/>
+            <part name="mpr-17567.7" crc="c3396922" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17564.4" crc="d8062489" map="0021"/>
+            <part name="mpr-17565.5" crc="0517c6e9" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB -->
+        <interleave output="32">
+            <part name="mpr-17553.25" crc="5da1c5d3" map="0021"/>
+            <part name="mpr-17552.24" crc="e91e7427" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17547.27" crc="be940431" map="0021"/>
+            <part name="mpr-17546.26" crc="042a194b" map="2100"/>
+        </interleave>
+
+        <!-- 0x1880000  polygons, 12 MB -->
+        <interleave output="32">
+            <part name="mpr-17554.16" crc="27896d82" map="0021"/>
+            <part name="mpr-17548.20" crc="c95facc2" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17555.17" crc="4df2810b" map="0021"/>
+            <part name="mpr-17549.21" crc="e0bce0e6" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-17556.18" crc="41a47616" map="0021"/>
+            <part name="mpr-17550.22" crc="c36ff3f5" map="2100"/>
+        </interleave>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-17574.30" crc="4d4c3a55" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+             loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-17573.31" crc="e43557fe" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-17572.32" crc="4febecc8" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-17571.36" crc="51caa584" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-17570.37" crc="bccd324b" map="12"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons. -->
+    <buttons names="Punch,Kick,Guard,Start,Coin,Test,Service"/>
+</misterromdescription>

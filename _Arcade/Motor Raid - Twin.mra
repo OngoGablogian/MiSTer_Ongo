@@ -1,0 +1,176 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Motor Raid - Twin (Model 2A-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(motoraid).
+      For the Model 2A core (branch model2a, Model2.sv M2_2A). Study R887
+      (this set), R897 (the large layout).
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py): Sega Rally's whole image with
+      main_data 32 MB, then the texture-coordinate ROM and the polygons,
+      which the loader's third remap puts in the upper 64 MB:
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window)
+        0x2080000  4 MB of zeros
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  TGP copro data, 4 MB        -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x5AC0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      main_data's last pair (epr-20013 / 20014, 1 MB at MAME 0x1800000) is
+      written eight times, MAME's ROM_COPYs to 0x1F00000. The TGP copro data
+      is 2 MB (the slot's other 2 MB 0, as MAME's region).
+
+      THE i960's sqrtrl (0x69.8), which the game runs (R887: 20 times by
+      240 s), is built under the 2A core's F2A (study R897). The game reads
+      the comm board (the Twin link) and gets 0; it does not wait on it
+      (R887). Motor Raid Twin has no drive-board check (R892).
+
+      Index 4, the game ID: 0x1A (R887). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Motor Raid - Twin</name>
+    <setname>motoraid</setname>
+    <rbf>Model2A</rbf>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>1A 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="motoraid.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-20007.12" crc="f040c108" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-20008.13" crc="78976e1a" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-20019.10" crc="49053727" map="0021"/>
+            <part name="mpr-20020.11" crc="cc5ddb15" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20017.8" crc="4e206acd" map="0021"/>
+            <part name="mpr-20018.9" crc="e7ed0e85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20015.6" crc="23427339" map="0021"/>
+            <part name="mpr-20016.7" crc="c99a83f4" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20013.4" crc="a4478f52" map="0021"/>
+            <part name="epr-20014.5" crc="1aa541be" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-20029.30" crc="927d31b9" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-20030.31" crc="b70ab686" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20031.32" crc="84da70e4" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20032.36" crc="15516d35" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20033.37" crc="8c8ed187" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-20007.12" crc="f040c108" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-20008.13" crc="78976e1a" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-20011.28" crc="794c026c" map="0021"/>
+            <part name="epr-20012.29" crc="f53db4e3" map="2100"/>
+        </interleave>
+        <part repeat="2097152">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-20022.25" crc="9e47b3c2" map="0021"/>
+            <part name="mpr-20021.24" crc="3cbf36cb" map="2100"/>
+        </interleave>
+        <part repeat="8388608">00</part>
+
+        <!-- 0x42C0000  polygons, 24 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-20023.16" crc="016be8d6" map="0021"/>
+            <part name="mpr-20026.20" crc="20044a30" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20024.17" crc="62fd2d5b" map="0021"/>
+            <part name="mpr-20027.21" crc="b2504ea6" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20025.18" crc="d4ecd0be" map="0021"/>
+            <part name="mpr-20028.22" crc="3147e0e1" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- R887's analog profile, Manx TT's: steering (the bank, reversed) on
+         either stick or the paddle; throttle and brake on the right stick's
+         Y or the Accel / Brake buttons; Punch / Kick on the last two. -->
+    <buttons names="Coin,Start,Test,Service,-,-,Accel,Brake,Punch,Kick"/>
+</misterromdescription>

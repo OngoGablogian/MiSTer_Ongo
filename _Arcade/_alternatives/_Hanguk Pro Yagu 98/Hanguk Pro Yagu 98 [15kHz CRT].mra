@@ -1,0 +1,159 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Hanguk Pro Yagu 98 (Model 2A-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(hpyagu98).
+      For the Model 2A core (branch model2a, Model2.sv M2_2A). Study R887
+      (this set), R897 (the large layout).
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py): Sega Rally's whole image with
+      main_data 32 MB, then the texture-coordinate ROM and the polygons,
+      which the loader's third remap puts in the upper 64 MB:
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window)
+        0x2080000  4 MB of zeros
+        0x2480000  TGP math tables, 256 KB
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  TGP copro data, 4 MB        -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x52C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      THE FACTORY SETTINGS. The game stops at "Error #1" unless its EEPROM
+      holds fa e3 a6 29 at bytes 8-11 and its backup RAM "98KOREA PRO
+      B.B.", the word 0x5042c660 at 0x398 and a checksum (MAME's note; the
+      program checks them at boot, 0xc34-0xc74, and again during play,
+      0xce8.. and 0xdec..: a failure there hangs). MAME 0.289 with a blank
+      EEPROM, a blank backup RAM, either one blank, or only bytes 8-11 set:
+      "Error #1" every time (R897): the game does not write its own.
+      So the MRA loads MAME's two images from the zip (hpyagu98_nvram,
+      hpyagu98_backup: handcrafted by MAME's developers to match dynabb97's
+      defaults), no bytes of them in this file: the EEPROM on index 5
+      through the 93C46's load port (Model2.sv M2_2A_EE_LOAD, R897), the
+      backup RAM on index 2 BEFORE the <nvram> element, so a saved .nvm
+      (sent when that element is read) replaces it. The EEPROM is not saved;
+      every load starts from the factory image.
+
+      Index 4, the game ID: 0x13 (R887). Bit 7 is SET in this MRA (0x93): the 15 kHz CRT flag (R795), which
+      starts the core in 15 kHz interlaced whatever the OSD says (R908).
+    -->
+    <name>Hanguk Pro Yagu 98 [15kHz CRT]</name>
+    <setname>hpyagu98</setname>
+    <rbf>Model2A</rbf>
+    <!-- R897: the factory images from the zip (see above). The backup RAM
+         image comes first, so the saved .nvm the next element sends (if
+         there is one) replaces it. -->
+    <rom index="5" zip="hpyagu98.zip" md5="none">
+        <part name="hpyagu98_nvram" crc="3634c60f"/>
+    </rom>
+    <rom index="2" zip="hpyagu98.zip" md5="none">
+        <part name="hpyagu98_backup" crc="979751d5"/>
+    </rom>
+    <nvram index="2" size="16384"/>
+    <rom index="4" md5="none">
+        <part>93 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1998</year>
+    <manufacturer>Deniam</manufacturer>
+    <category>Sports</category>
+
+    <rom index="0" zip="hpyagu98.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="hn27c4096.12" crc="be721c2d" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="hn27c4096.13" crc="bd86a3f9" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="bb-dt-0.10" crc="f3c7a573" map="0021"/>
+            <part name="bb-dt-1.11" crc="dc755bf8" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="bb-dt-2.8" crc="0eb6f7f8" map="0021"/>
+            <part name="bb-dt-3.9" crc="40d78440" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="bb-dt-4.6" crc="c02187d9" map="0021"/>
+            <part name="bb-dt-5.7" crc="546b61cd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="bb-dt-6.4" crc="2107281c" map="0021"/>
+            <part name="bb-dt-7.5" crc="05f1b8e7" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <interleave output="32">
+            <part name="opr-14742a.45" crc="90c6b117" map="0021"/>
+            <part name="opr-14743a.46" crc="ae7f446b" map="2100"/>
+        </interleave>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="am27c1024.30" crc="023c64f1" map="12"/>
+        </interleave>
+        <part repeat="393216">00</part>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="bb-sn-1.31" crc="83b5f404" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="bb-sn-2.32" crc="dcf9ffd9" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="bb-sn-3.36" crc="e4c938b2" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="bb-sn-4.37" crc="8692fbf3" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="hn27c4096.12" crc="be721c2d" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="hn27c4096.13" crc="bd86a3f9" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="hn27c4096.14" crc="01867b65" map="0021"/>
+            <part name="hn27c4096.15" crc="e8d43bdc" map="2100"/>
+        </interleave>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="bb-tx-1.25" crc="ac04ce3c" map="0021"/>
+            <part name="bb-tx-0.24" crc="d241a138" map="2100"/>
+        </interleave>
+        <part repeat="8388608">FF</part>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="bb-tp-0.16" crc="562f98b3" map="0021"/>
+            <part name="bb-tp-1.20" crc="e731bdb4" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="bb-tp-2.17" crc="095c0357" map="0021"/>
+            <part name="bb-tp-3.21" crc="dbadc020" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (VF2's order: R887's three-button profile). -->
+    <buttons names="Button 1,Button 2,Button 3,Start,Coin,Test,Service"/>
+</misterromdescription>
