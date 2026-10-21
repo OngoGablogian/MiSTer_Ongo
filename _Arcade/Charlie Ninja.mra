@@ -6,7 +6,7 @@
     <year>1995</year>
     <manufacturer>Mitchell</manufacturer>
     <players>2</players>
-    <rbf>Arcade-SIMPLE156</rbf>
+    <rbf>Meathax_Simple156</rbf>
     <joystick>8</joystick>
     <region>World</region>
     <rom index="0" zip="charlien.zip" md5="None" address="0x30000000">

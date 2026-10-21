@@ -6,7 +6,7 @@
     <year>1995</year>
     <manufacturer>Data East Corporation</manufacturer>
     <players>2</players>
-    <rbf>Arcade-SIMPLE156</rbf>
+    <rbf>Meathax_Simple156</rbf>
     <joystick>4</joystick>
     <region>World</region>
     <rom index="0" zip="magdrop.zip|chainrec.zip" md5="None" address="0x30000000">

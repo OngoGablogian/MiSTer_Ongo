@@ -128,6 +128,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [NIX Pirates Hardware](https://github.com/ppriest/Arcade-NixPirates_MiSTer)                                                    |
 | [NMK Argus Hardware](https://www.patreon.com/Meathax/posts/argus-valtric-172291247)                                            |
 | [Nostradamus / Magical Cat Adventure (LINDA board)](https://github.com/kyledlester/Nostradamus_Magical_Cat_Adventure_MiSTer)   |
+| [Penguin Brothers](https://www.patreon.com/Meathax/posts/penguin-brothers-172950070)                                           |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
 | [R-Shark / Super-X (Dooyong)](https://github.com/kyledlester/R_Shark_Super_X_MiSTer)                                           |
