@@ -28,7 +28,7 @@
         <dip bits="7" name="Debug" ids="On,Off"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
+    <buttons names="Attack,Jump,View Items,Use Items,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
 
     <!-- the sprite colour ROM (more than the SDRAM has room for) goes into the DDR3 as it is, before index 0 -->
     <rom index="1" zip="kov3_100.zip|kov3.zip" md5="None" address="0x26000000">

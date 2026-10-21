@@ -28,7 +28,7 @@
         <dip bits="7" name="Debug" ids="On,Off"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,Button 3,Button 4,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
+    <buttons names="Attack,Jump,View Items,Use Items,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
 
     <rom index="0" zip="kov2nl_300.zip|kov2nl.zip" md5="None" address="0x32000000">
         <!-- flags: bit 0 = ROM board (program ROM stored 2 MB into a 4 MB window), bit 1 = colour ROM in index 1, bit 2 = vertical (ROT270) -->
