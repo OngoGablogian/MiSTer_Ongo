@@ -1,0 +1,62 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Chain Reaction (World, Master Version 2.2, 1995.09.25)</name>
+    <setname>chainrec</setname>
+    <mameversion>0288</mameversion>
+    <year>1995</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <rbf>Arcade-SIMPLE156</rbf>
+    <joystick>4</joystick>
+    <region>World</region>
+    <rom index="0" zip="chainrec.zip" md5="None" address="0x30000000">
+        <!-- 
+  0[0]: jm         Joe & Mac Returns
+  0[1]: cr         Chain Reaction
+  0[2]: md         Magical Drop
+  0[3]: mdp        Magical Drop Plus
+  0[4]: cn         Charlie Ninja
+  0[5]: hv         Heavy Smash -->
+        <part>
+            02 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <interleave output="16">
+            <part name="e1" crc="8a8340ef" map="12"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- tiles - starts at 0x100000 - length 0x200000 (21 bits) -->
+        <part name="mcc-00" crc="646b03ec"/>
+        <part repeat="0x100000"> FF</part>
+        <!-- JTFRAME_BA2_START -->
+        <!-- PCM1_START -->
+        <!-- oki1 - starts at 0x300000 - length 0x80000 (19 bits) -->
+        <part name="mcc-04" crc="86ee6ade"/>
+        <part repeat="0x40000"> FF</part>
+        <!-- PCM2_START -->
+        <!-- oki2 - starts at 0x380000 - length 0x200000 (21 bits) -->
+        <part name="mcc-03" crc="da2ebba0"/>
+        <part repeat="0x100000"> FF</part>
+        <!-- JTFRAME_BA3_START -->
+        <!-- sprites - starts at 0x580000 - length 0x200000 (21 bits) -->
+        <interleave output="16">
+            <part name="u3" crc="92659721" map="01"/>
+            <part name="u4" crc="e304eb32" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="u5" crc="1b6f01ea" map="01"/>
+            <part name="u6" crc="531a56f2" map="10"/>
+        </interleave>
+        <!-- Total 0x780000 bytes - 7680 kBytes -->
+    </rom>
+    <rom index="2" zip="chainrec.zip">
+        <part name="eeprom-chainrec.bin" crc="b6da3fbf"/>
+    </rom>
+    <nvram index="2" size="128"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <buttons names="Grab,Throw,-,Start,Coin" default="A,B,Start,Select" count="2"/>
+</misterromdescription>

@@ -1,26 +1,65 @@
-<?xml version='1.0' encoding='utf-8'?>
 <misterromdescription>
-  <name>Joe &amp; Mac Returns (World, Master Version 1.1, 1994.05.27)</name>
-  <setname>joemacr</setname>
-  <rbf>Meathax_Simple156</rbf>
-  <mameversion>0289</mameversion>
-  <year>1994</year>
-  <manufacturer>Data East Corporation</manufacturer>
-  <buttons names="Club Attack,Jump,-,Start,Coin,Pause,Service,Test" default="A,B,Start,Select,R"/>
-  <rotation>horizontal</rotation>
-  <rom index="0" zip="joemacr.zip" md5="55a4bbd082177b01af2528346cfb9532" address="0x30000000">
-    <part> 53 31 35 36 01 00 02 00 00 00 00 00 00 00 00 00 </part>
-    <part name="05.u29" crc="74e9a158"/>
-    <part name="01.u8l" crc="4da4a2c1"/>
-    <part name="02.u8h" crc="642c08db"/>
-    <part name="mbn02" crc="aa2230c5"/>
-    <part name="mbn01" crc="a3a37353"/>
-    <part name="mbn04" crc="dcbd4771"/>
-    <part name="mbn03" crc="70b71a2a"/>
-    <part>FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF</part>
-  </rom>
-  <nvram index="4" size="128"/>
-  <rom index="255">
-    <part>A5</part>
-  </rom>
+    <rotation>horizontal</rotation>
+    <name>Joe &amp; Mac Returns (World, Master Version 1.1, 1994.05.27)</name>
+    <setname>joemacr</setname>
+    <mameversion>0288</mameversion>
+    <year>1994</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <rbf>Arcade-SIMPLE156</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="joemacr.zip" md5="None" address="0x30000000">
+        <!-- 
+  0[0]: jm         Joe & Mac Returns
+  0[1]: cr         Chain Reaction
+  0[2]: md         Magical Drop
+  0[3]: mdp        Magical Drop Plus
+  0[4]: cn         Charlie Ninja
+  0[5]: hv         Heavy Smash -->
+        <part>
+            01 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <interleave output="16">
+            <part name="05.u29" crc="74e9a158" map="12"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- tiles - starts at 0x100000 - length 0x200000 (21 bits) -->
+        <part name="01.u8l" crc="4da4a2c1"/>
+        <part name="02.u8h" crc="642c08db"/>
+        <part repeat="0x100000"> FF</part>
+        <!-- JTFRAME_BA2_START -->
+        <!-- PCM1_START -->
+        <!-- oki1 - starts at 0x300000 - length 0x80000 (19 bits) -->
+        <part name="mbn04" crc="dcbd4771"/>
+        <part repeat="0x40000"> FF</part>
+        <!-- PCM2_START -->
+        <!-- oki2 - starts at 0x380000 - length 0x200000 (21 bits) -->
+        <part name="mbn03" crc="70b71a2a"/>
+        <!-- JTFRAME_BA3_START -->
+        <!-- sprites - starts at 0x580000 - length 0x100000 (20 bits) -->
+        <part name="mbn02" crc="aa2230c5"/>
+        <part name="mbn01" crc="a3a37353"/>
+        <!-- Total 0x680000 bytes - 6656 kBytes -->
+    </rom>
+    <rom index="2">
+        <part>
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <buttons names="Club Attack,Jump,-,Start,Coin" default="A,B,Start,Select" count="2"/>
 </misterromdescription>

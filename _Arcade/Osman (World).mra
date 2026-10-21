@@ -1,27 +1,56 @@
-<?xml version='1.0' encoding='utf-8'?>
 <misterromdescription>
-  <name>Osman (World)</name>
-  <setname>osman</setname>
-  <rbf>Meathax_Simple156</rbf>
-  <mameversion>0289</mameversion>
-  <year>1996</year>
-  <manufacturer>Mitchell</manufacturer>
-  <buttons names="Attack,Jump,Special Attack,Start,Coin,Pause,Service,Test" default="A,B,X,Start,Select,R"/>
-  <rotation>horizontal</rotation>
-  <rom index="0" zip="osman.zip" md5="ec57564998f170b0ff7fa552fc5fbdc0" address="0x30000000">
-    <part>53 31 35 36 01 00 00 00 00 00 00 00 00 00 00 00</part>
-    <part name="sa00-0.1e" crc="ec6b3257"/>
-    <part name="mcf-00.9a" crc="247712dc"/>
-    <part name="mcf-04.14h" crc="4fa55577"/>
-    <part name="mcf-03.14d" crc="faf1d51d"/>
-    <part name="mcf-02.14a" crc="21251b33"/>
-    <part name="mcf-01.13a" crc="83881e25"/>
-    <part name="sa01-0.13h" crc="cea8368e"/>
-    <part name="mcf-05.12f" crc="f007d376"/>
-    <part name="eeprom-osman.bin" crc="509552b2"/>
-  </rom>
-  <nvram index="4" size="384"/>
-  <rom index="255">
-    <part>A5</part>
-  </rom>
+    <rotation>horizontal</rotation>
+    <name>Osman (World)</name>
+    <setname>osman</setname>
+    <mameversion>0288</mameversion>
+    <year>1996</year>
+    <manufacturer>Mitchell</manufacturer>
+    <players>2</players>
+    <rbf>Arcade-SIMPLE156</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="osman.zip" md5="None" address="0x30000000">
+        <!-- 
+  0[0]: jm         Joe & Mac Returns
+  0[1]: cr         Chain Reaction
+  0[2]: md         Magical Drop
+  0[3]: mdp        Magical Drop Plus
+  0[4]: cn         Charlie Ninja
+  0[5]: hv         Heavy Smash -->
+        <part>
+            00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <interleave output="16">
+            <part name="sa00-0.1e" crc="ec6b3257" map="12"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- tiles - starts at 0x100000 - length 0x200000 (21 bits) -->
+        <part name="mcf-00.9a" crc="247712dc"/>
+        <!-- PCM1_START -->
+        <!-- JTFRAME_BA2_START -->
+        <!-- oki1 - starts at 0x300000 - length 0x80000 (19 bits) -->
+        <part name="sa01-0.13h" crc="cea8368e"/>
+        <part repeat="0x40000"> FF</part>
+        <!-- PCM2_START -->
+        <!-- oki2 - starts at 0x380000 - length 0x200000 (21 bits) -->
+        <part name="mcf-05.12f" crc="f007d376"/>
+        <!-- JTFRAME_BA3_START -->
+        <!-- sprites - starts at 0x580000 - length 0x800000 (23 bits) -->
+        <part name="mcf-04.14h" crc="4fa55577"/>
+        <part name="mcf-03.14d" crc="faf1d51d"/>
+        <part name="mcf-02.14a" crc="21251b33"/>
+        <part name="mcf-01.13a" crc="83881e25"/>
+        <!-- Total 0xD80000 bytes - 13824 kBytes -->
+    </rom>
+    <rom index="2" zip="osman.zip">
+        <part name="eeprom-osman.bin" crc="509552b2"/>
+    </rom>
+    <nvram index="2" size="128"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <buttons names="Attack,Jump,Special,Start,Coin" default="A,B,X,Start,Select" count="3"/>
 </misterromdescription>

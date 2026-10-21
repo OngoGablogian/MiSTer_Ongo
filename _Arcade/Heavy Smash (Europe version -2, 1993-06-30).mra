@@ -1,0 +1,64 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Heavy Smash (Europe version -2, 1993/06/30)</name>
+    <setname>hvysmsh</setname>
+    <mameversion>0288</mameversion>
+    <year>1993</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <rbf>Arcade-SIMPLE156</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="hvysmsh.zip" md5="None" address="0x30000000">
+        <!-- 
+  0[0]: jm         Joe & Mac Returns
+  0[1]: cr         Chain Reaction
+  0[2]: md         Magical Drop
+  0[3]: mdp        Magical Drop Plus
+  0[4]: cn         Charlie Ninja
+  0[5]: hv         Heavy Smash -->
+        <part>
+            20 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <interleave output="32">
+            <part name="lt01-2.3j" crc="ce2a75e2" map="0012" length="0x80000"/>
+            <part name="lt00-2.2j" crc="f6e10fc0" map="1200" length="0x80000"/>
+        </interleave>
+        <!-- JTFRAME_BA1_START -->
+        <!-- tiles - starts at 0x100000 - length 0x200000 (21 bits) -->
+        <part name="mbg-00.9a" crc="7d94eb16"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- PCM1_START -->
+        <!-- oki1 - starts at 0x300000 - length 0x80000 (19 bits) -->
+        <part name="mbg-03.10k" crc="4b809420"/>
+        <!-- PCM2_START -->
+        <!-- oki2 - starts at 0x380000 - length 0x200000 (21 bits) -->
+        <part name="mbg-04.11k" crc="2281c758"/>
+        <!-- JTFRAME_BA3_START -->
+        <!-- sprites - starts at 0x580000 - length 0x800000 (23 bits) -->
+        <part name="mbg-02.11a" crc="0cc16440"/>
+        <part repeat="0x200000"> FF</part>
+        <part name="mbg-01.10a" crc="bcd7fb29"/>
+        <part repeat="0x200000"> FF</part>
+        <!-- Total 0xD80000 bytes - 13824 kBytes -->
+    </rom>
+    <rom index="2">
+        <part>
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <buttons names="Shoot-Tackle,Jump,Pass-Weapon,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+</misterromdescription>

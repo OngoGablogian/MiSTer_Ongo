@@ -31,7 +31,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bally Midway MCR-68K](https://www.patreon.com/Meathax/posts/bally-midway-mcr-168306783)                                       |
 | [Bally/Sente SAC-1](https://github.com/ppriest/Arcade-BallySente_MiSTer)                                                       |
 | [Battlantis](https://github.com/Eggsecutioner528/Battlantis_Mister_Core)                                                       |
-| [Battletoads (Meathax)](https://www.patreon.com/Meathax/posts/battletoads-its-172668452)                                       |
+| [Battletoads (Meathax)](https://www.patreon.com/Meathax/posts/battletoads-and-172862509)                                       |
 | [Battletoads (srg320)](https://github.com/srg320/Arcade-Battletoads_MiSTer)                                                    |
 | [Birdie Try](https://www.patreon.com/bazset/posts/birdie-try-data-172593515)                                                   |
 | [Black Panther](https://www.patreon.com/Meathax/posts/black-panther-172756432)                                                 |
@@ -45,7 +45,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Chase H.Q.](https://www.patreon.com/bazset/posts/chase-h-q-taito-171600711)                                                   |
 | [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                          |
 | [Data East Liberation Hardware](https://www.patreon.com/Meathax/posts/boomer-rangr-b-172526836)                                |
-| [Data East Simple 156](https://www.patreon.com/Meathax/posts/data-east-156-171562893)                                          |
+| [Data East Simple 156](https://www.patreon.com/Meathax/posts/heavy-smash-drop-172946929)                                       |
 | [Deniam-16](https://github.com/kyledlester/Deniam_MiSTer_FPGA)                                                                 |
 | [Devastators / The Main Event](https://www.patreon.com/Meathax/posts/devastators-main-172711008)                               |
 | [Dr. Micro](https://github.com/meathax/drmicro)                                                                                |
@@ -65,11 +65,11 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Heavy Unit](https://www.patreon.com/Meathax/posts/heavy-unit-172408285)                                                       |
 | [Hyperstone E1 (Eolith)](https://github.com/ppriest/Arcade-Eolith_MiSTer)                                                      |
 | [Hyperstone E1 (Vamphalf)](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                  |
-| [I, Robot](https://www.patreon.com/Meathax/posts/i-robot-1984-169005879)                                                       |
+| [I, Robot](https://www.patreon.com/Meathax/posts/battletoads-and-172862509)                                                    |
 | [IGS PolyGame Master 2](https://github.com/decoryah/Arcade-IGSPGM2_MiSTer)                                                     |
 | [Ikki](https://www.patreon.com/Meathax/posts/fresh-meat-ikki-172031733)                                                        |
 | [Intrepid](https://misterfpga.org/viewtopic.php?t=10823)                                                                       |
-| [Jack Rabbit / Money Money](https://www.patreon.com/Meathax/posts/jack-rabbit-172788603)                                       | 
+| [Jack Rabbit / Money Money](https://www.patreon.com/Meathax/posts/jack-rabbit-172788603)                                       |
 | [Jaleco MegaSystem 32](https://github.com/ppriest/Arcade-JalecoMS32_MiSTer)                                                    |
 | [Juezhan Tianhuang (Fighting Emperor)](https://www.patreon.com/bazset/posts/juezhan-fighting-172205212)                        |
 | [Kaneko 16](https://github.com/alphanu1/kaneko16-mister)                                                                       |
@@ -112,7 +112,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Namco System FL](https://www.patreon.com/XelaNotPu/posts/namco-system-fl-170317789)                                           |
 | [Nand2Tetris (Hack)](https://github.com/sajattack/Hack_MiSTer)                                                                 |
 | [NARC (blahm1d)](https://mister.blahm1d.com/core-narc.html)                                                                    |
-| [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-1988-v1-0-165736329)                                               |
+| [NARC (Meathax)](https://www.patreon.com/Meathax/posts/narc-15khz-crt-172860340)                                               |
 | [Nemesis (Konami GX400)](https://github.com/GX400-Friends/gx400-bin)                                                           |
 | [Neratte Chu (Seta ST-0016)](https://github.com/kyledlester/MiSTer_Neratte_Chu)                                                |
 | [Nintendo 64 (Turbo)](https://github.com/MiSTer-devel/N64_MiSTer/tree/main/releases_turbo)                                     |

@@ -1,26 +1,64 @@
-<?xml version='1.0' encoding='utf-8'?>
 <misterromdescription>
-  <name>Charlie Ninja</name>
-  <setname>charlien</setname>
-  <rbf>Meathax_Simple156</rbf>
-  <mameversion>0289</mameversion>
-  <year>1995</year>
-  <manufacturer>Mitchell</manufacturer>
-  <buttons names="Attack,Jump,-,Start,Coin,Pause,Service,Test" default="A,B,Start,Select,R"/>
-  <rotation>horizontal</rotation>
-  <rom index="0" zip="charlien.zip" md5="f5c57d82bcbc00078513cccce0004fb3" address="0x30000000">
-    <part>53 31 35 36 01 00 03 00 00 00 00 00 00 00 00 00</part>
-    <part name="nd00-1.1e" crc="f18f4b23"/>
-    <part name="mbr-00.9a" crc="ecf2c7f0"/>
-    <part name="mbr-03.14h" crc="c448a68a"/>
-    <part name="mbr-01.14a" crc="46c90215"/>
-    <part name="nd01-0.13h" crc="635a100a"/>
-    <part name="mbr-02.12f" crc="4f67d333"/>
-    <part repeat="1048576">00</part>
-    <part repeat="128">FF</part>
-  </rom>
-  <nvram index="4" size="384"/>
-  <rom index="255">
-    <part>A5</part>
-  </rom>
+    <rotation>horizontal</rotation>
+    <name>Charlie Ninja</name>
+    <setname>charlien</setname>
+    <mameversion>0288</mameversion>
+    <year>1995</year>
+    <manufacturer>Mitchell</manufacturer>
+    <players>2</players>
+    <rbf>Arcade-SIMPLE156</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="charlien.zip" md5="None" address="0x30000000">
+        <!-- 
+  0[0]: jm         Joe & Mac Returns
+  0[1]: cr         Chain Reaction
+  0[2]: md         Magical Drop
+  0[3]: mdp        Magical Drop Plus
+  0[4]: cn         Charlie Ninja
+  0[5]: hv         Heavy Smash -->
+        <part>
+            10 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+        </part>
+        <!-- maincpu - starts at 0x0 - length 0x100000 (20 bits) -->
+        <interleave output="16">
+            <part name="nd00-1.1e" crc="f18f4b23" map="12"/>
+        </interleave>
+        <part repeat="0x80000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- tiles - starts at 0x100000 - length 0x200000 (21 bits) -->
+        <part name="mbr-00.9a" crc="ecf2c7f0"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- PCM1_START -->
+        <!-- oki1 - starts at 0x300000 - length 0x80000 (19 bits) -->
+        <part name="nd01-0.13h" crc="635a100a"/>
+        <part repeat="0x40000"> FF</part>
+        <!-- PCM2_START -->
+        <!-- oki2 - starts at 0x380000 - length 0x200000 (21 bits) -->
+        <part name="mbr-02.12f" crc="4f67d333"/>
+        <part repeat="0x100000"> FF</part>
+        <!-- JTFRAME_BA3_START -->
+        <!-- sprites - starts at 0x580000 - length 0x200000 (21 bits) -->
+        <part name="mbr-03.14h" crc="c448a68a"/>
+        <part name="mbr-01.14a" crc="46c90215"/>
+        <!-- Total 0x780000 bytes - 7680 kBytes -->
+    </rom>
+    <rom index="2">
+        <part>
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <buttons names="Attack,Jump,-,Start,Coin" default="A,B,Start,Select" count="2"/>
 </misterromdescription>
