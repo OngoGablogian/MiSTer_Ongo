@@ -20,7 +20,7 @@
 -->
 
 <!--
-    Street Fighter Alpha 2, English restoration patch (rc1)
+    Street Fighter Alpha 2, English restoration patch (rc2)
     An unofficial fan restoration of Street Fighter Alpha 2: the Japanese game's content in English, in USA and Asia builds, plus a Japanese build.
 
     Patch by Steve Gordon (https://x.com/strygo).
@@ -28,7 +28,7 @@
     This is a patch-overlay MRA: it references the ORIGINAL, unmodified
     MAME romset (sfz2j.zip) and applies the restoration in memory
     while the game loads. It contains no ROM data. Settings and saves use
-    the name 'sfz2rj'.
+    the name 'sfz2ra'.
 
     Base MRA and jtcps2 core by Jose Tejada (jotego); see his header below.
     Not affiliated with or endorsed by Capcom. Free patch; do not sell.
@@ -36,20 +36,20 @@
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
     <rotation>horizontal</rotation>
-    <name>Street Fighter Zero 2 (Japan) (Restoration) [RC1]</name>
-    <setname>sfz2rj</setname>
+    <name>Street Fighter Zero 2 (Asia) (Restoration) [RC2]</name>
+    <setname>sfz2ra</setname>
     <mameversion>0282</mameversion>
     <year>1996</year>
     <manufacturer>Capcom</manufacturer>
     <players>2</players>
     <rbf>jtcps2</rbf>
     <joystick>8</joystick>
-    <region>Japan</region>
+    <region>Asia</region>
     <platform>CPS-2</platform>
     <category>Fighting</category>
     <catver>Fighter / Versus</catver>
     <mraauthor>jotego,strygo</mraauthor>
-    <rom index="0" zip="sfz2j.zip|sfa2.zip|qsound.zip" md5="None" address="0x30000000" asm_md5="77b8e8419e53f856190bf01d647e52f7">
+    <rom index="0" zip="sfz2j.zip|sfa2.zip|qsound.zip" md5="None" address="0x30000000" asm_md5="20c20b364872d9564b1e67c36943862f">
         <!--  -->
         <part>
             00 0C 00 0D 00 1D 00 6D
@@ -99,6 +99,9 @@
         <patch offset="0xeaa">
             6A 4C D8 BA
         </patch>
+        <patch offset="0x103c">
+            DB F3
+        </patch>
         <patch offset="0x2674">
             4C F6 40 CA
         </patch>
@@ -135,6 +138,9 @@
         </patch>
         <patch offset="0x8f24">
             43 24 45 B7 A1 00
+        </patch>
+        <patch offset="0x8f5e">
+            92 A0 10 27 7D B7 48 3F
         </patch>
         <patch offset="0x9118">
             44 E7 EC 83
@@ -1650,32 +1656,32 @@
             8F 8C 4A B5 F2 0F 4C 5B 28 2F 47 76 38 D6 33 78
             DF 22 8C 06 87 69 B3 1B B3 65 20 56 72 3F 8F 26
             C6 D4 6E EC 6B FC 53 DA 7E 8B 33 A8 AA 19 AC 54
-            06 13 D0 20 C7 AF 3D F9 97 40 0E DA 82 79 F4 49
-            FE 4C 76 4A B6 9B 32 3C E7 DD 14 ED AA E7 5A AA
-            BE 8A BD ED 04 C1 9C 22 A2 B0 B7 8D 3A 5B 82 C0
-            A1 E2 54 71 98 56 86 5B EB E9 6A 5F B2 88 95 B7
-            1A 76 24 3D 99 10 12 D0 AC 1A EA CE 4A 70 80 DB
-            79 79 7F 73 9E 30 0E 48 2F 37 23 C9 03 C1 B1 69
-            5A 46 7A A1 F4 9F BB 68 72 4A 07 61 6F 2D 5B EC
-            77 DD 9E 47 7F 2B 09 B8 42 20 0C C4 CE CC 56 25
-            AE 94 C1 A1 8D 4C FE 0A 27 77 28 32 38 EC 2E B9
-            3B 28 09 3D C4 02 3E 00 D5 96 9C A5 D0 AE D0 6A
-            F7 09 97 44 F8 48 49 7F 4C BF 7E BA 0F E3 80 14
-            F0 A3 C8 AF E2 CF D1 91 CD 41 04 E0 82 CC E9 90
-            D6 21 DE E1 1F CE 3A 2B AE DD B5 62 60 81 FB 7B
-            3F 0B C4 48 2F 6E 46 70 7B C9 FB 27 26 91 45 3B
-            B8 14 FB 3E F0 DE 66 B4 49 74 52 D1 4E 87 E4 D7
-            D3 46 27 D4 4B 36 16 35 43 59 D7 4C FB E8 67 98
-            C7 11 1D C8 51 48 0D 86 D0 BC 01 C0 27 61 EF 04
-            C7 BB AC 9A 4E 01 1A 80 F2 9B E4 E0 7D B7 12 1B
-            16 96 CD 96 4C C5 CE 76 1E 68 F3 FE 47 2F F4 80
-            DC E6 75 AC 5F 34 35 C4 A6 9D DC 47 F3 CC A3 E8
-            91 AF 52 CD E3 1A 8A B4 16 ED F8 69 70 B2 68 3E
-            90 19 11 F0 D3 A1 B9 9B 1E D2 43 7D 79 18 09 E5
-            FA C3 46 86 AB 25 B2 82 3C 9D C4 29 BB 68 2D 4A
+            06 13 D0 20 C7 AF 3D F9 97 40 0E DA 82 79 EF 00
+            FE 4C BF C9 97 CF BB 6E 3C FE F2 C5 9F CA 8B 53
+            B5 31 75 34 8B 35 09 F0 FA 31 8C 5B 92 9E 92 58
+            7C B4 4D 4E 88 55 95 25 0D E1 7E 88 A2 A9 B2 6D
+            81 ED D4 FF 7E B7 28 27 51 9F 5E A8 F3 DC 65 EB
+            C7 FC E8 66 F2 E2 0E 48 2F 37 23 C9 25 30 A9 7A
+            29 85 F4 7F F4 9F BB 68 93 E0 07 61 9C F4 36 95
+            77 DD 9E 47 EC 8E B2 D8 90 91 09 7E 04 9B 13 C2
+            19 E6 36 2E F6 70 11 A6 9C 37 27 CC 37 DB 2F 69
+            7D 72 09 3D 7B 5C E3 E2 C0 51 92 3E B3 51 CF 9F
+            CE 24 28 95 E9 D0 07 81 66 95 CA C8 C9 52 CD BD
+            68 25 6C 6D E2 CF 93 FC 75 DE 96 C2 DA 63 91 48
+            91 09 DE E1 E3 7D 45 81 AE DD B3 89 0F 1F BE B3
+            07 70 1B A5 C2 B5 46 70 B8 6E 08 EB 5B 06 8A 60
+            B8 14 1B 7F 42 BD BB 2F 76 F3 AF 63 36 40 83 C3
+            D3 46 DC BC 2B F2 E7 5D 43 59 CE 13 FB E8 2F AF
+            C7 11 F3 F2 98 A7 0D 86 D0 BC 01 C0 27 61 EF 04
+            C7 BB 6C FF E9 E4 69 26 7C 6D 23 77 7D B7 28 69
+            1D 00 88 5E 19 93 62 EC F1 6E 79 F1 10 EA 23 01
+            70 EF F4 74 48 C3 4F 57 06 95 D0 BF D0 BB F6 69
+            6E 4C 47 CE 99 68 B8 4D 5E 55 6B 4D 91 A5 11 0C
+            49 CB BD 89 DC 7A EE 4C 9B 72 8A C2 BD 76 50 0B
+            49 BB AC 64 35 4A AC 1F 22 06 6F 02 A6 95 F9 DA
             39 D7 CF 66 36 F1 A9 FA A6 26 76 61 34 83 BD F0
             62 C7 41 FB DB 0B B9 3C 5A 4B 65 19 D0 B1 CE 54
-            87 F4 7E 20 40 D5 FB DE 91 7A 88 19 A5 B6 E7 B3
+            87 F4 7E 20 C6 A3 13 B9 DB F1 10 3C 1E D3 D0 27
             85 80 6C AC E8 03 60 6D 54 B5 81 97 8F AB 24 BD
             30 99 53 56 EC D6 1D D9 B5 B6 C2 B4 3A 89 79 20
             2E BD DE 58 04 81 42 6C BB CB A7 72 93 BD 93 81
@@ -8704,16 +8710,16 @@
             20 46
         </patch>
         <patch offset="0xb1e6e">
-            03 2B E4 E7 90 FF
+            03 2B E4 E7 A0 D0
         </patch>
         <patch offset="0xb1f00">
-            83 B3 BE 02 37 02
+            83 B3 BE 02 40 81
         </patch>
         <patch offset="0xb22f0">
-            BC 8F C3 66 BC 95
+            BC 8F C3 66 14 18
         </patch>
         <patch offset="0xb241c">
-            F8 91 54 D0 61 AA
+            F8 91 54 D0 2C 84
         </patch>
         <patch offset="0xb2bb6">
             23 00 20 87 23 00 96 A1 23 00 10 B2 23 00 DA C0

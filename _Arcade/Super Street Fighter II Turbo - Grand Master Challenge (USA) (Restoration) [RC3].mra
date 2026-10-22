@@ -20,7 +20,7 @@
 -->
 
 <!--
-    Super Street Fighter II Turbo: Grand Master Challenge, English restoration patch (rc2)
+    Super Street Fighter II Turbo: Grand Master Challenge, English restoration patch (rc3)
     An unofficial fan restoration of Super Street Fighter II X: Grand Master Challenge (Japan 940311): the Japanese game, in English, under a US identity.
 
     Patch by Steve Gordon (https://x.com/strygo).
@@ -36,7 +36,7 @@
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
     <rotation>horizontal</rotation>
-    <name>Super Street Fighter II Turbo: Grand Master Challenge (USA) (English Restoration) [RC2]</name>
+    <name>Super Street Fighter II Turbo: Grand Master Challenge (USA) (Restoration) [RC3]</name>
     <setname>ssf2tgmc</setname>
     <mameversion>0282</mameversion>
     <year>1994</year>
@@ -49,7 +49,7 @@
     <category>Fighting</category>
     <catver>Fighter / Versus</catver>
     <mraauthor>jotego,strygo</mraauthor>
-    <rom index="0" zip="ssf2xj.zip|ssf2t.zip|qsound.zip" md5="None" address="0x30000000" asm_md5="a85a91c9ba5f9915d687e552597fc3c0">
+    <rom index="0" zip="ssf2xj.zip|ssf2t.zip|qsound.zip" md5="None" address="0x30000000" asm_md5="633d0331da05301a820a02e63272e554">
         <!--  -->
         <part>
             00 0E 00 0F 00 1F 00 5F
@@ -126,6 +126,12 @@
         </patch>
         <patch offset="0xdec0">
             AF B2
+        </patch>
+        <patch offset="0xe852">
+            A1 CE 66 3F B0 46 89 CE 91 A0 09 76
+        </patch>
+        <patch offset="0xe87a">
+            53 C4 C0 84
         </patch>
         <patch offset="0xf5d2">
             EA D2
@@ -235,12 +241,14 @@
             59 42 20 20 20 20 20 20 20 20 20 20 20 20 2A 2F
             3B 11
         </patch>
-        <patch offset="0x1c1bf">
-            54
-        </patch>
-        <patch offset="0x1c1d0">
-            33 20 31 20 31 20 52 20 09 2F 01 44 20 20 20 20
-            20 20 20 20 20 20 55 20 53 20 41
+        <patch offset="0x1c187">
+            12 53 01 55 20 50 20 45 20 52 20 09 2F 01 34 20
+            53 20 54 20 52 20 45 20 45 20 54 20 20 20 46 20
+            49 20 47 20 48 20 54 20 45 20 52 32 20 54 20 11
+            2F 01 3C 20 39 20 34 20 30 20 33 20 31 2F 31 44
+            14 55 01 53 20 41 20 0C 2F 01 54 20 52 20 45 20
+            53 20 54 20 4F 20 52 20 41 20 54 20 49 20 4F 2F
+            4E 5C 11 32 01 36 20 31 20 30 20 32 20 31
         </patch>
         <patch offset="0x1cab2">
             5A 01 74 01 9E 01 C0 01 F4 01 1A 02 34 02 54 02
@@ -2203,6 +2211,12 @@
             FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
             FF FF FF FF FF FF FF FF
         </patch>
+        <patch offset="0x33a94">
+            40
+        </patch>
+        <patch offset="0x33e08">
+            EB 0F DA 0E B8 0D 97 0C 75 0A 53 08 30
+        </patch>
         <patch offset="0x4610c">
             38 E4 C9 0D
         </patch>
@@ -2313,6 +2327,9 @@
             8C EC AB 54 76 96 2A D7 5B 17 FF 5C 94 F6 57 C0
             86 46 34 05 73 5F AC C4 1C AC
         </patch>
+        <patch offset="0xccf5a">
+            0C
+        </patch>
         <patch offset="0xceeca">
             C5 0C
         </patch>
@@ -2371,19 +2388,19 @@
             FF FF 6D 00 6E 00 6F 00 FF FF 70 00 71 00 FF FF
             72 00 73 00 FF FF 80 00 81 00 82 00 FF FF 85 00
             FF FF 92 00 93 00 FF FF 95 00 96 00 97 00 FF FF
-            98 00 FF FF 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-            00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+            98 00 FF FF 4D 47 31 54 0E 00 70 83 0E 00 E4 83
+            0E 00 70 83 0E 00 26 84 54 76 65 73 99 6D E9 0F
+            AF 90 45 DC FB E8 33 8D F6 F1 F2 D0 0A 9F CD 11
+            87 4B 75 D9 5B 08 46 B9 01 9F 7D 94 99 03 39 75
+            FE 66 2A 0F 1F 8C 03 33 8F 5B 43 D5 87 BE F0 16
+            23 CE F3 13 3C 6F 1A 09 8B 78 EC 20 7A AA 4F 2F
+            7E E3 80 36 8D 48 ED DA 4D 08 E9 D5 A0 39 C2 4E
+            35 15 7A D9 D7 E3 68 C0 BC 5C 84 03 30 F9 EC 69
+            27 1B C0 46 18 12 AB 05 30 0A 6E 83 C4 F0 A7 78
+            8E 76 EA 3C A6 2A B7 A7 36 22 C5 14 21 47 B6 4D
+            45 AE 33 42 C5 50 43 0E 36 CE 96 D4 90 E7 FA E8
+            06 79 4D 50 DD 63 CA 79 4E BB C8 69 0D E2 03 85
+            1F 8D C6 0C FB D5 22 FF E3 A2 ED E3 35 2E 00 00
             00 00 00 00 00 00
         </patch>
         <patch offset="0xe995e">
@@ -2400,6 +2417,54 @@
         </patch>
         <patch offset="0x2e6822">
             00 00
+        </patch>
+        <patch offset="0x30a86c">
+            45 19 02
+        </patch>
+        <patch offset="0x3128e8">
+            01 00 1F 00 13 04 20
+        </patch>
+        <patch offset="0x3294a0">
+            79 DF 17 00 76 DF 05 00 77 DF 05 00 78 DF 05
+        </patch>
+        <patch offset="0x3294e0">
+            6E DF 17 00 4D DF 05 00 4E DF 05 00 4F DF 05
+        </patch>
+        <patch offset="0x329520">
+            49 DF 17
+        </patch>
+        <patch offset="0x329560">
+            48 DF 17
+        </patch>
+        <patch offset="0x329f20">
+            48 DF 37
+        </patch>
+        <patch offset="0x329f60">
+            49 DF 37
+        </patch>
+        <patch offset="0x329fa0">
+            6E DF 37 00 4D DF 25 00 4E DF 25 00 4F DF 25
+        </patch>
+        <patch offset="0x329fe0">
+            79 DF 37 00 76 DF 25 00 77 DF 25 00 78 DF 25
+        </patch>
+        <patch offset="0x33aae0">
+            4A DF 01
+        </patch>
+        <patch offset="0x33ab20">
+            4B DF 01
+        </patch>
+        <patch offset="0x33ab60">
+            5C DF 01
+        </patch>
+        <patch offset="0x33aba0">
+            77 18 01
+        </patch>
+        <patch offset="0x33abe0">
+            77 18 01
+        </patch>
+        <patch offset="0x33ac20">
+            77 18 01
         </patch>
         <patch offset="0xbca740">
             FF FF FF FF FF FF FF FF
@@ -2887,6 +2952,410 @@
         </patch>
         <patch offset="0xc0de37">
             FF
+        </patch>
+        <patch offset="0x1149f38">
+            00 00 00 00 00 00
+        </patch>
+        <patch offset="0x114be39">
+            00 00 00
+        </patch>
+        <patch offset="0x114bf38">
+            00 00 00 00 00 00
+        </patch>
+        <patch offset="0x114df38">
+            00 00 00 00 00 00 00
+        </patch>
+        <patch offset="0x114ff3c">
+            00 00 00
+        </patch>
+        <patch offset="0x1150038">
+            00 00 00
+        </patch>
+        <patch offset="0x115b939">
+            00 00 00
+        </patch>
+        <patch offset="0x115ba3c">
+            00 00 00 00
+        </patch>
+        <patch offset="0x115bb3e">
+            00 00
+        </patch>
+        <patch offset="0x115be3c">
+            00 00 00 00
+        </patch>
+        <patch offset="0x115bf3c">
+            00 00 00
+        </patch>
+        <patch offset="0x115c038">
+            00 00 00
+        </patch>
+        <patch offset="0x115da3a">
+            00 00
+        </patch>
+        <patch offset="0x115e038">
+            00 00 00 00 00 00
+        </patch>
+        <patch offset="0x115ff3d">
+            00 00 00
+        </patch>
+        <patch offset="0x1160038">
+            00 00 00 00 00 00
+        </patch>
+        <patch offset="0x1625354">
+            7F 7F 7F 7F
+        </patch>
+        <patch offset="0x1625364">
+            7F 7F 7F 7F
+        </patch>
+        <patch offset="0x1625374">
+            7F 7F 7F 7F
+        </patch>
+        <patch offset="0x1625384">
+            7F 7F 7F 7F
+        </patch>
+        <patch offset="0x1625394">
+            7F 7F 7F 7F
+        </patch>
+        <patch offset="0x16253a4">
+            7F 7F 7F 7F
+        </patch>
+        <patch offset="0x16253b4">
+            7F 7F 7F 7F
+        </patch>
+        <patch offset="0x17b4909">
+            00 00 FF FF 00 00
+        </patch>
+        <patch offset="0x17b4918">
+            F8 00 F8 07 B8 00 B8 47 DD DD 22 00 DD DD 22 00
+            4A 00 FF 00 97 00 FF 00 AA AA 55 00 AA AA 55 00
+            4E 4E B1 00 E4 FF 00 00
+        </patch>
+        <patch offset="0x17b4a09">
+            00 00 FF FF 00 00
+        </patch>
+        <patch offset="0x17b4a18">
+            FE 00 FE 01 91 00 91 6E DD DD 22 00 DD DD 22 00
+            98 00 FF 00 81 00 FF 00
+        </patch>
+        <patch offset="0x17b4a39">
+            00 FF 00 FF 00 FF 00
+        </patch>
+        <patch offset="0x17b4b38">
+            AA 99 FB E4 83 DC FF 00
+        </patch>
+        <patch offset="0x17b4c38">
+            32 49 FF 00 B2 1D E0 00
+        </patch>
+        <patch offset="0x17b4d48">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4d58">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4d68">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4d78">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4d88">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4d98">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4da8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4db8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4dc8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4dd8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4de8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4df8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4e08">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4e18">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4e28">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4e38">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4e48">
+            1A E0 FF FF 4C 03
+        </patch>
+        <patch offset="0x17b4e58">
+            00 FF FF FF 86 70
+        </patch>
+        <patch offset="0x17b4e68">
+            00 FF FF FF 21 DE
+        </patch>
+        <patch offset="0x17b4e78">
+            00 FF FF FF 0E F1
+        </patch>
+        <patch offset="0x17b4e88">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4e98">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4ea8">
+            00 FF FF FF 05 FA
+        </patch>
+        <patch offset="0x17b4eb8">
+            00 FF FF FF 08 F7
+        </patch>
+        <patch offset="0x17b4ec8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b4ed8">
+            0E 21 FF FF 00
+        </patch>
+        <patch offset="0x17b4ee8">
+            7F 7F 80 FF 30 0F
+        </patch>
+        <patch offset="0x17b4ef8">
+            00 1F FF FF 00
+        </patch>
+        <patch offset="0x17b4f08">
+            82 52 FD FF 01 00
+        </patch>
+        <patch offset="0x17b4f18">
+            05 F2 FF FF 1C 9F E0
+        </patch>
+        <patch offset="0x17b4f28">
+            00 FF FF FF CE 10
+        </patch>
+        <patch offset="0x17b4f38">
+            0E F1 FF FF 03 FC
+        </patch>
+        <patch offset="0x17b4f48">
+            01 FC FF FF B7 30 CF
+        </patch>
+        <patch offset="0x17b4f58">
+            20 DF FF FF 43 A3 FC
+        </patch>
+        <patch offset="0x17b4f68">
+            00 FF FF FF F6 00
+        </patch>
+        <patch offset="0x17b4f78">
+            00 FF FF FF 2C C3
+        </patch>
+        <patch offset="0x17b4f88">
+            00 FF FF FF 23 DC
+        </patch>
+        <patch offset="0x17b4f98">
+            60 9F FF FF 00
+        </patch>
+        <patch offset="0x17b4fa8">
+            03 38 FF FF 80 7F
+        </patch>
+        <patch offset="0x17b4fb8">
+            1E DE 21 FF 0C 03
+        </patch>
+        <patch offset="0x17b4fc8">
+            42 7D 80 FF 3E FD 03
+        </patch>
+        <patch offset="0x17b4fd8">
+            06 8D F3 FF 0D F2
+        </patch>
+        <patch offset="0x17b4fe8">
+            84 7F FB FF 70 FF 80
+        </patch>
+        <patch offset="0x17b4ff8">
+            46 1D FB FF 83 73 FC
+        </patch>
+        <patch offset="0x17b5008">
+            31 4A FF FF 8C 23
+        </patch>
+        <patch offset="0x17b5018">
+            60 9B FF FF 40 B8
+        </patch>
+        <patch offset="0x17b5028">
+            00 FF FF FF 66 98
+        </patch>
+        <patch offset="0x17b5038">
+            00 FF FF FF 0C F3
+        </patch>
+        <patch offset="0x17b5d38">
+            25 FE 00 00 66 F8 00 00
+        </patch>
+        <patch offset="0x17b6f09">
+            00 00 FF FE 01 00
+        </patch>
+        <patch offset="0x17b6f19">
+            00 FF 00 FF 00 FF 00 FF FF FF FF FF FF FF FF DD
+            00 FF 00 D4 00 FF 00
+        </patch>
+        <patch offset="0x17b6f39">
+            00 FF 00 FF 00 FF 00
+        </patch>
+        <patch offset="0x17b7648">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7658">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7668">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7678">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7688">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7698">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b76a8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b76b8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b76c8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b76d8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b76e8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b76f8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7708">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7718">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7728">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7738">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7748">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7758">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7768">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7778">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7788">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7798">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b77a8">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b77b8">
+            10 EF FF FF 00
+        </patch>
+        <patch offset="0x17b77c8">
+            C8 00 FF FF 3C 03
+        </patch>
+        <patch offset="0x17b77d8">
+            30 CE FF FF 05 00
+        </patch>
+        <patch offset="0x17b77e8">
+            02 FD FF FF 74 80
+        </patch>
+        <patch offset="0x17b77f8">
+            00 FF FF FF 23 DC
+        </patch>
+        <patch offset="0x17b7808">
+            00 FF FF FF 04 FB
+        </patch>
+        <patch offset="0x17b7818">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7828">
+            00 FF FF FF 12 ED
+        </patch>
+        <patch offset="0x17b7838">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7848">
+            00 FF FF FF 01 FE
+        </patch>
+        <patch offset="0x17b7858">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7868">
+            40 BF FF FF 00
+        </patch>
+        <patch offset="0x17b7878">
+            35 C2 FF FF C0 3F
+        </patch>
+        <patch offset="0x17b7888">
+            64 00 FF FF 7C 01
+        </patch>
+        <patch offset="0x17b7898">
+            11 EE FF FF 4F B0
+        </patch>
+        <patch offset="0x17b78a8">
+            01 FD FE FF E1 E0 1F
+        </patch>
+        <patch offset="0x17b78b8">
+            08 E7 FF FF 06 67 F8
+        </patch>
+        <patch offset="0x17b78c8">
+            0B F4 FF FF 40 38
+        </patch>
+        <patch offset="0x17b78d8">
+            01 FE FF FF 50 A7
+        </patch>
+        <patch offset="0x17b78e8">
+            00 FF FF FF 86 70
+        </patch>
+        <patch offset="0x17b78f8">
+            00 FF FF FF 02 FC
+        </patch>
+        <patch offset="0x17b7908">
+            00 FF FF FF 0B F0
+        </patch>
+        <patch offset="0x17b7918">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7928">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7938">
+            00 FF FF FF 00
+        </patch>
+        <patch offset="0x17b7a09">
+            00 00 FF FF 00 00
+        </patch>
+        <patch offset="0x17b7a19">
+            00 FF 00 FF 00 FF 00 55 FF FF AA 55 FF FF AA 77
+            00 FF 00 90 00 FF 00
+        </patch>
+        <patch offset="0x17b7a39">
+            00 FF 00 FF 00 FF 00
         </patch>
     </rom>
     <rom index="2">

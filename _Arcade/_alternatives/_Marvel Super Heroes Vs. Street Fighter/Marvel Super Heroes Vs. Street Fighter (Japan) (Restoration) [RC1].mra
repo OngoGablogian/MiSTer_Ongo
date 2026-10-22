@@ -28,7 +28,7 @@
     This is a patch-overlay MRA: it references the ORIGINAL, unmodified
     MAME romset (mshvsfj.zip) and applies the restoration in memory
     while the game loads. It contains no ROM data. Settings and saves use
-    the name 'mshvsfru'.
+    the name 'mshvsfrj'.
 
     Base MRA and jtcps2 core by Jose Tejada (jotego); see his header below.
     Not affiliated with or endorsed by Capcom. Free patch; do not sell.
@@ -36,20 +36,20 @@
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
     <rotation>horizontal</rotation>
-    <name>Marvel Super Heroes Vs. Street Fighter (USA) (English Restoration) [RC1]</name>
-    <setname>mshvsfru</setname>
+    <name>Marvel Super Heroes Vs. Street Fighter (Japan) (Restoration) [RC1]</name>
+    <setname>mshvsfrj</setname>
     <mameversion>0282</mameversion>
     <year>1997</year>
     <manufacturer>Capcom</manufacturer>
     <players>2</players>
     <rbf>jtcps2</rbf>
     <joystick>8</joystick>
-    <region>USA</region>
+    <region>Japan</region>
     <platform>CPS-2</platform>
     <category>Fighting</category>
     <catver>Fighter / Versus</catver>
     <mraauthor>jotego,strygo</mraauthor>
-    <rom index="0" zip="mshvsfj.zip|mshvsf.zip|qsound.zip" md5="None" address="0x30000000" asm_md5="90418d902fb8b2038d97db32bf964957">
+    <rom index="0" zip="mshvsfj.zip|mshvsf.zip|qsound.zip" md5="None" address="0x30000000" asm_md5="794ae4870620c3579aff63674c3153d3">
         <!--  -->
         <part>
             00 10 00 11 00 31 00 B1
@@ -95,9 +95,6 @@
         <!-- firmware - starts at 0x2C40014 - length 0x2000 (13 bits) -->
         <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000"/>
         <!-- Total 0x2C42014 bytes - 45320 kBytes -->
-        <patch offset="0x102">
-            02
-        </patch>
         <patch offset="0xf66">
             9A 2F 8A 68 65 CA
         </patch>
