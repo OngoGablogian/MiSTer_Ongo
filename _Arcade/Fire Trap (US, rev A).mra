@@ -1,0 +1,84 @@
+<misterromdescription>
+	<name>Fire Trap (US, rev A)</name>
+	<region>US</region>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<version></version>
+	<alternative></alternative>
+	<platform>Data East</platform>
+	<series></series>
+	<year>1986</year>
+	<manufacturer>Wood Place (Data East USA license)</manufacturer>
+	<category>Climbing</category>
+
+	<setname>firetrap</setname>
+	<parent>firetrap</parent>
+	<mameversion>0289</mameversion>
+	<rbf>FireTrap</rbf>
+	<about author="Usquebagh" webpage="https://github.com/Usquebagh/Arcade-FireTrap_MiSTer">Fire Trap (1986): Z80, i8751 MCU, 6502, YM3526, MSM5205.</about>
+
+	<rotation>vertical (cw)</rotation>
+	<flip>yes</flip>
+
+	<players>2 (alternating)</players>
+	<joystick>4-way</joystick>
+	<special_controls>dual joystick</special_controls>
+	<num_buttons>1</num_buttons>
+	<buttons default="R,X,B,Y,A,Start,Select" names="Fire,R-Stick Up,R-Stick Down,R-Stick Left,R-Stick Right,Start,Coin"/>
+
+	<switches default="DF,FF">
+		<dip bits="0,2" name="Coin A" ids="1C/6C,1C/4C,1C/3C,1C/2C,1C/1C" values="4,3,5,6,7"/>
+		<dip bits="3,4" name="Coin B" ids="4C/1C,3C/1C,2C/1C,1C/1C" values="0,1,2,3"/>
+		<dip bits="5" name="Cabinet" ids="Upright,Cocktail"/>
+		<dip bits="6" name="Demo Sounds" ids="Off,On"/>
+		<dip bits="7" name="Flip Screen" ids="On,Off"/>
+		<dip bits="8,9" name="Difficulty" ids="Hardest,Hard,Easy,Normal" values="0,1,2,3"/>
+		<dip bits="10,11" name="Lives" ids="2,5,4,3" values="0,1,2,3"/>
+		<dip bits="12,13" name="Bonus Life" ids="50k and 100k,30k and 70k,50k only,30k only" values="0,1,2,3"/>
+		<dip bits="14" name="Allow Continue" ids="No,Yes"/>
+		<dip bits="15" name="Service Mode" ids="On,Off"/>
+	</switches>
+
+	<!-- Layout must match the download decode in rtl/ft_core.v -->
+	<rom index="0" md5="none" zip="firetrap.zip">
+		<!-- 00000 main CPU: 0000-7FFF, then banks 0-3 -->
+		<part crc="3d1e4bf7" name="di-02.4a"/>
+		<part crc="9bbae38b" name="di-01.3a"/>
+		<part crc="f39e2cf4" name="di-00-a.2a"/>
+		<!-- 18000 sound CPU: 8000-FFFF, then banks 0-1 -->
+		<part crc="8605f6b9" name="di-17.10j"/>
+		<part crc="49508c93" name="di-18.12j"/>
+		<!-- 28000 i8751 -->
+		<part crc="6340a4d7" name="di-12.16h"/>
+		<!-- 29000 FG characters -->
+		<part crc="46721930" name="di-03.17c"/>
+		<!-- 2B000 palette PROMs (R/G, B) and priority PROM -->
+		<part crc="8bb45337" name="firetrap.3b"/>
+		<part crc="d5abfc64" name="firetrap.4b"/>
+		<part crc="d67f3514" name="firetrap.1a"/>
+		<part repeat="0xD00">FF</part>
+		<!-- 2C000 BG1, 4C000 BG2, 6C000 sprites (to SDRAM) -->
+		<part crc="441d9154" name="di-06.3e"/>
+		<part crc="8e6e7eec" name="di-04.2e"/>
+		<part crc="ef0a7e23" name="di-07.6e"/>
+		<part crc="ec080082" name="di-05.4e"/>
+		<part crc="d11e28e8" name="di-09.3j"/>
+		<part crc="c32a21d8" name="di-08.2j"/>
+		<part crc="6424d5c3" name="di-11.6j"/>
+		<part crc="9b89300a" name="di-10.4j"/>
+		<part crc="0de055d7" name="di-16.17h"/>
+		<part crc="869219da" name="di-13.13h"/>
+		<part crc="6b65812e" name="di-14.14h"/>
+		<part crc="3e27f77d" name="di-15.15h"/>
+	</rom>
+
+	<!-- Cheats converted from the MAME cheat file (https://www.mamecheat.co.uk; same addresses
+	     in all sets). Format: flags(4) address(4) compare(4) value(4); applied to Z80 reads. -->
+	<cheats>
+		<cheat name="P1 Infinite Lives">000000 10 0000C143 00000000 00000008</cheat>
+		<cheat name="P1 Infinite Time">000000 10 0000C149 00000000 0000009A</cheat>
+		<cheat name="P2 Infinite Lives">000000 10 0000C151 00000000 00000008</cheat>
+		<cheat name="P2 Infinite Time">000000 10 0000C157 00000000 0000009A</cheat>
+		<cheat name="3-Way Powerup">000000 10 0000C145 00000000 00000002</cheat>
+	</cheats>
+</misterromdescription>

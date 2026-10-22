@@ -56,7 +56,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Exidy 440](https://mister.blahm1d.com/core-exidy440.html)                                                                     |
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                |
 | [Exterminator](https://www.patreon.com/Meathax/posts/exterminator-172770187)                                                   |
-| [FM Towns Marty](https://discord.com/channels/647909397477195803/1550527341237768235)                                          |
+| [Fire Trap](https://github.com/Usquebagh/Arcade-FireTrap_MiSTer)                                                               |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
@@ -64,6 +64,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                               |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                      |
 | [Heavy Unit](https://www.patreon.com/Meathax/posts/heavy-unit-172408285)                                                       |
+| [Hunchback](https://github.com/Usquebagh/Arcade-Hunchback_MiSTer)                                                              |
 | [Hyperstone E1 (Eolith)](https://github.com/ppriest/Arcade-Eolith_MiSTer)                                                      |
 | [Hyperstone E1 (Vamphalf)](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                  |
 | [I, Robot](https://www.patreon.com/Meathax/posts/battletoads-and-172862509)                                                    |
@@ -96,6 +97,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Midway Y Unit (ADPCM)](https://mister.blahm1d.com/core-yunitadpcm.html)                                                       |
 | [Midway Zeus (Invasion: The Abductors)](https://mister.blahm1d.com/core-invasion.html)                                         |
 | [Midway Zeus (Mortal Kombat 4)](https://mister.blahm1d.com/core-mk4.html)                                                      |
+| [Millipede](https://github.com/Usquebagh/Arcade-Millipede_MiSTer)                                                              |
 | [MiSTer IFS Fractals](https://github.com/movievertigo/MiSTer-IFSFractals)                                                      |
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                            |
 | [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                     |

@@ -1,0 +1,64 @@
+<misterromdescription>
+    <name>Hunchback (set 1)</name>
+    <year>1983</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Platform</category>
+    <setname>hunchbak</setname>
+    <rbf>Hunchback</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>2-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="Usquebagh">Beta / work in progress; tested on MiSTer. Discrete sound effects incomplete.</about>
+    <buttons names="Jump,Start 2,Start 1,Coin" default="A,X,Start,Select"/>
+    <!-- Converted byte-read codes from Pugsy's MAME cheat collection. -->
+    <cheats size="16" max="16">
+        <cheat name="Infinite Credits">000000 10 00001E86 00000000 00000099</cheat>
+        <cheat name="Infinite Time (F6)">000000 10 00001F6D 00000000 00000000</cheat>
+        <cheat name="Next Bell = Super Bonus Now!">000000 10 00001EEB 00000000 00000004</cheat>
+        <cheat name="Invincibility">
+            000000 10 000008D0 00000000 0000001B
+            000000 10 000009AE 00000000 0000001B
+            000000 10 00002806 00000000 00000000
+            000000 10 00002965 00000000 00000000
+            000000 10 00002E56 00000000 00000017
+        </cheat>
+        <cheat name="P1 Infinite Lives">000000 10 00001C84 00000000 00000005</cheat>
+        <cheat name="P2 Infinite Lives">000000 10 00001C85 00000000 00000005</cheat>
+    </cheats>
+    <rom index="0" zip="hunchbak.zip" md5="none">
+        <part name="hb-gp1.bin" crc="af801d54" offset="0x0000" length="0x0400"/>
+        <part name="hb-gp2.bin" crc="b448cc8e" offset="0x0000" length="0x0400"/>
+        <part name="hb-gp3.bin" crc="57c6ea7b" offset="0x0000" length="0x0400"/>
+        <part name="hb-gp4.bin" crc="7f91287b" offset="0x0000" length="0x0400"/>
+        <part name="hb-gp5.bin" crc="1dd5755c" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="hb-gp1.bin" crc="af801d54" offset="0x0400" length="0x0400"/>
+        <part name="hb-gp2.bin" crc="b448cc8e" offset="0x0400" length="0x0400"/>
+        <part name="hb-gp3.bin" crc="57c6ea7b" offset="0x0400" length="0x0400"/>
+        <part name="hb-gp4.bin" crc="7f91287b" offset="0x0400" length="0x0400"/>
+        <part name="hb-gp5.bin" crc="1dd5755c" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="hb-gp1.bin" crc="af801d54" offset="0x0800" length="0x0400"/>
+        <part name="hb-gp2.bin" crc="b448cc8e" offset="0x0800" length="0x0400"/>
+        <part name="hb-gp3.bin" crc="57c6ea7b" offset="0x0800" length="0x0400"/>
+        <part name="hb-gp4.bin" crc="7f91287b" offset="0x0800" length="0x0400"/>
+        <part name="hb-gp5.bin" crc="1dd5755c" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="hb-gp1.bin" crc="af801d54" offset="0x0c00" length="0x0400"/>
+        <part name="hb-gp2.bin" crc="b448cc8e" offset="0x0c00" length="0x0400"/>
+        <part name="hb-gp3.bin" crc="57c6ea7b" offset="0x0c00" length="0x0400"/>
+        <part name="hb-gp4.bin" crc="7f91287b" offset="0x0c00" length="0x0400"/>
+        <part name="hb-gp5.bin" crc="1dd5755c" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="6c.sdp1" crc="f9ba2854"/>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="8a.sp1" crc="ed1cd201"/>
+        <part repeat="0x0800">00</part>
+        <part name="11a.cp1" crc="f256b047"/>
+        <part name="10a.cp2" crc="b870c64f"/>
+        <part name="9a.cp3" crc="9a7dab88"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+    </rom>
+</misterromdescription>
