@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================ -->
+<!-- BAZSET CORE - CORE BY bazset                            -->
+<!-- BUILD: b01 -->
+<!-- RBF FILE: bazsetpushman.rbf                                 -->
+<!-- REQUIRED ROM ZIP FILE(S): pushmans.zip | pushman.zip -->
+<!-- ============================================================ -->
+<misterromdescription>
+    <bazset_runtime version="1">
+      <pause>
+        <title>Pushman (American Sammy license)</title>
+        <build>b01</build>
+        <core_by>bazset</core_by>
+        <patreon>patreon.com/c/bazset</patreon>
+        <x>x.com/bazset_</x>
+        <patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters>
+      </pause>
+      <osd>
+        <visibility>CRT Adjust=show | Native Refresh=show</visibility>
+        <defaults>CRT Adjust=On | Refresh=Compatibility</defaults>
+      </osd>
+      <pause_style>
+        <colors background="#170B10" card="#260E18" border="#F0C6CC"
+                text="#FFF2E8" dim="#C29AAB" accent="#F6BFCB"/>
+        <layout preset="compact"/>
+        <marquee frames="24"/>
+      </pause_style>
+    </bazset_runtime>
+
+    <rotation>horizontal</rotation>
+    <name>Pushman (American Sammy license)</name>
+    <setname>pushmans</setname>
+    <mameversion>0289</mameversion>
+    <year>1990</year>
+    <manufacturer>Comad (American Sammy license)</manufacturer>
+    <category>Arcade</category>
+    <players>2</players>
+    <rbf>bazset_Pushman</rbf>
+    <joystick>4</joystick>
+    <region>World</region>
+    <rom index="0" zip="pushmans.zip|pushman.zip" md5="None">
+        <!--  Header to identify the PCB type
+        Byte 0 = 0 for Tiger Road, 1 for F1-Dream, 2 for Tora e no michi
+ -->
+        <part>
+            00 00 00 00 </part>
+        <!-- maincpu - starts at 0x0 - length 0x40000 (18 bits) -->
+        <interleave output="16">
+            <part name="pman-11.ic197" crc="1167ed9f" map="01"/>
+            <part name="pman-12.ic212" crc="4251109d" map="10"/>
+        </interleave>
+        <part repeat="0x20000"> FF</part>
+        <!-- JTFRAME_BA1_START -->
+        <!-- bgmap - starts at 0x40000 - length 0x8000 (15 bits) -->
+        <interleave output="16">
+            <part name="pman-10.ic189" crc="5f9ae9a1" map="12"/>
+        </interleave>
+        <!-- SCR_START -->
+        <!-- tiles - starts at 0x48000 - length 0x100000 (20 bits) -->
+        <interleave output="16">
+            <part name="pman-6.ic131" crc="bd0f9025" map="01"/>
+            <part name="pman-7.ic132" crc="208cb197" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="pman-8.ic148" crc="591bd5c0" map="01"/>
+            <part name="pman-9.ic149" crc="77ee8577" map="10"/>
+        </interleave>
+        <part repeat="0xC0000"> FF</part>
+        <!-- JTFRAME_BA2_START -->
+        <!-- audiocpu - starts at 0x148000 - length 0x18000 (17 bits) -->
+        <part name="pman-13.ic216" crc="bc03827a"/>
+        <part repeat="0x10000"> FF</part>
+        <!-- JTFRAME_BA3_START -->
+        <!-- text - starts at 0x160000 - length 0x8000 (15 bits) -->
+        <interleave output="16">
+            <part name="pman-1.ic130" crc="14497754" map="12"/>
+        </interleave>
+        <!-- OBJ_START -->
+        <!-- spritegen - starts at 0x168000 - length 0x80000 (19 bits) -->
+        <interleave output="32">
+            <part name="pman-3.57" crc="8ab957c8" map="0001"/>
+            <part name="pman-2.56" crc="2cb2ac29" map="0010"/>
+            <part name="pman-5.ic59" crc="b82140b8" map="0100"/>
+            <part name="pman-4.ic58" crc="16e5ce6b" map="1000"/>
+        </interleave>
+        <part repeat="0x40000"> FF</part>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0x1E8000 - length 0x1000 (12 bits) -->
+        <part name="n82s129an.ic82" crc="ec80ae36"/>
+        <part repeat="0xF00"> FF</part>
+        <!-- MCU_START -->
+        <!-- mcu - starts at 0x1E9000 - length 0x1000 (12 bits) -->
+        <part name="pushman68705r3p.ic23" crc="d7916657"/>
+        <!-- Total 0x1EA000 bytes - 1960 kBytes -->
+    </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSW/>
+        <dip name="Debug Mode (Cheat)" bits="0" ids="On,Off"/>
+        <dip name="Pull Option" bits="1" ids="9,5"/>
+        <dip name="Level Select" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="4" ids="Off,On"/>
+        <dip name="Service Mode" bits="5" ids="On,Off"/>
+        <dip name="Unused" bits="6" ids="On,Off"/>
+        <dip name="Unused" bits="7" ids="On,Off"/>
+        <dip name="Coinage" bits="8,10" ids="5/1,4/1,3/1,2/1,1/4,1/3,1/2,1/1"/>
+        <dip name="Difficulty" bits="11" ids="Hard,Easy"/>
+        <dip name="Unused" bits="12" ids="On,Off"/>
+        <dip name="Unused" bits="13" ids="On,Off"/>
+        <dip name="Unused" bits="14" ids="On,Off"/>
+        <dip name="Unused" bits="15" ids="On,Off"/>
+    </switches>
+    <buttons names="Pull/Shoot,Next Stage (Cheat),Prev Stage (Cheat),Start,Coin,Pause" default="A,B,X,Start,Select,-" count="3"/>
+
+    <rom index="249"><part>425A4D31CA020000E5D2C4927B226F7364223A7B2264656661756C7473223A224352542041646A7573743D4F6E207C20526566726573683D436F6D7061746962696C697479222C227669736962696C697479223A224352542041646A7573743D73686F77207C204E617469766520526566726573683D73686F77227D2C227061757365223A7B22626574615F74657374657273223A224E4F20424554412054455354455253204C4953544544222C226275675F70726F6D7074223A22425547533F20434F4E54414354204F4E2050415452454F4E222C226275696C64223A22623031222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224D656174686178207C20506978656C4368657272794E696E6A61222C227469746C65223A22507573686D616E2028416D65726963616E2053616D6D79206C6963656E736529222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223463642464342222C226261636B67726F756E64223A2223313730423130222C22626F72646572223A2223463043364343222C2263617264223A2223323630453138222C2264696D223A2223433239414142222C2274657874223A2223464646324538227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A32347D2C2276657273696F6E223A317D</part></rom>
+</misterromdescription>
