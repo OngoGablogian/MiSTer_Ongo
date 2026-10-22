@@ -1,0 +1,84 @@
+<misterromdescription>
+    <name>Garyo Retsuden (Japan)</name>
+    <setname>garyoret</setname>
+    <rbf>Meathax_DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="FF,FF">
+        <dip name="Coin A" bits="0,1" ids="2C/1C,1C/3C,1C/2C,1C/1C"/>
+        <dip name="Coin B" bits="2,3" ids="2C/1C,1C/3C,1C/2C,1C/1C"/>
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <dip name="Flip Screen" bits="6" ids="On,Off"/>
+        <dip name="Lives" bits="8" ids="5,3"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Leave Off" bits="14" ids="On,Off"/>
+    </switches>
+    <buttons names="Shoot,Bomb,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-"/>
+    <rom index="1">
+        <part>08</part>
+    </rom>
+    <rom index="0" zip="garyoret.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="dv00" crc="cceaaf05" offset="0x0" length="0x8000"/>
+        <part name="dv01" crc="c33fc18a" offset="0x0" length="0x10000"/>
+        <part name="dv02" crc="f9e26ce7" offset="0x0" length="0x10000"/>
+        <part name="dv03" crc="55d8d699" offset="0x0" length="0x10000"/>
+        <part name="dv04" crc="ed3d00ee" offset="0x0" length="0x10000"/>
+        <part repeat="0x18000">00</part>
+        <part name="dv05" crc="c97c347f" offset="0x0" length="0x8000"/>
+        <part repeat="0x10000">00</part>
+        <part name="dv__.mcu" crc="37cacec6" offset="0x0" length="0x1000"/>
+        <part repeat="0x7F000">00</part>
+        <interleave output="32">
+            <part name="dv08" crc="89c13e15" offset="0x0" length="0x8000" map="0001"/>
+            <part name="dv06" crc="1eb52a20" offset="0x0" length="0x8000" map="0010"/>
+            <part name="dv12" crc="46ba5af4" offset="0x0" length="0x8000" map="0100"/>
+            <part name="dv10" crc="68b6d75c" offset="0x0" length="0x8000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dv09" crc="6a345a23" offset="0x0" length="0x8000" map="0001"/>
+            <part name="dv07" crc="e7346ef8" offset="0x0" length="0x8000" map="0010"/>
+            <part name="dv13" crc="a7af6dfd" offset="0x0" length="0x8000" map="0100"/>
+            <part name="dv11" crc="b5948aee" offset="0x0" length="0x8000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dv08" crc="89c13e15" offset="0x8000" length="0x8000" map="0001"/>
+            <part name="dv06" crc="1eb52a20" offset="0x8000" length="0x8000" map="0010"/>
+            <part name="dv12" crc="46ba5af4" offset="0x8000" length="0x8000" map="0100"/>
+            <part name="dv10" crc="68b6d75c" offset="0x8000" length="0x8000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dv09" crc="6a345a23" offset="0x8000" length="0x8000" map="0001"/>
+            <part name="dv07" crc="e7346ef8" offset="0x8000" length="0x8000" map="0010"/>
+            <part name="dv13" crc="a7af6dfd" offset="0x8000" length="0x8000" map="0100"/>
+            <part name="dv11" crc="b5948aee" offset="0x8000" length="0x8000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dv22" crc="cef0367e" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dv20" crc="451a2d8c" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dv18" crc="7043bead" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dv16" crc="37e4971e" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dv21" crc="90042fb7" offset="0x0" length="0x8000" map="0001"/>
+            <part name="dv19" crc="14e1475b" offset="0x0" length="0x8000" map="0010"/>
+            <part name="dv17" crc="28f449d7" offset="0x0" length="0x8000" map="0100"/>
+            <part name="dv15" crc="ca41b6ac" offset="0x0" length="0x8000" map="1000"/>
+        </interleave>
+        <part repeat="0x20000">00</part>
+        <interleave output="32">
+            <part name="dv14" crc="fb2bc581" offset="0x2000" length="0x2000" map="0001"/>
+            <part name="dv14" crc="fb2bc581" offset="0x4000" length="0x2000" map="0010"/>
+            <part name="dv14" crc="fb2bc581" offset="0x6000" length="0x2000" map="0100"/>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 13 5F 00 28 00 00 00 00 13 8B 00 1E 13 1C</part>
+    </rom>
+    <nvram index="4" size="70"/>
+</misterromdescription>

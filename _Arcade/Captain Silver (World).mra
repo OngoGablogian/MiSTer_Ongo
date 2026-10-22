@@ -1,0 +1,68 @@
+<misterromdescription>
+    <name>Captain Silver (World)</name>
+    <setname>csilver</setname>
+    <rbf>Meathax_DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="7F,FF">
+        <dip name="Coin B" bits="0,1" ids="1C/6C,1C/4C,1C/3C,1C/2C"/>
+        <dip name="Coin A" bits="2,3" ids="4C/1C,3C/1C,2C/1C,1C/1C"/>
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <dip name="Flip Screen" bits="6" ids="On,Off"/>
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail"/>
+        <dip name="Lives" bits="8,9" ids="255 (Cheat),1,5,3"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Allow Continue" bits="12" ids="No,Yes"/>
+        <dip name="No Key for Door (Cheat)" bits="14" ids="On,Off"/>
+    </switches>
+    <buttons names="Sword,Jump,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-"/>
+    <rom index="1">
+        <part>0B</part>
+    </rom>
+    <rom index="0" zip="csilver.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="dx03-12.18d" crc="2d926e7c" offset="0x0" length="0x8000"/>
+        <part name="dx01.12d" crc="570fb50c" offset="0x0" length="0x10000"/>
+        <part name="dx02.13d" crc="58625890" offset="0x0" length="0x10000"/>
+        <part repeat="0x20000">00</part>
+        <part name="dx04-1.19d" crc="29432691" offset="0x0" length="0x10000"/>
+        <part name="dx05.3f" crc="eb32cf25" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">00</part>
+        <part name="dx-8.19a" crc="c0266263" offset="0x0" length="0x1000"/>
+        <part name="dx-15.b10" crc="dcbfec4e" offset="0x0" length="0x400"/>
+        <part repeat="0x7EC00">00</part>
+        <interleave output="32">
+            <part name="dx06.5f" crc="b6fb208c" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dx08.8f" crc="705900fe" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dx10.12f" crc="3ef77a32" offset="0x0" length="0x10000" map="0100"/>
+            <part repeat="0x10000" map="1000">00</part>
+        </interleave>
+        <interleave output="32">
+            <part name="dx07.7f" crc="ee3e1817" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dx09.10f" crc="3192571d" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dx11.13f" crc="9cf3d5b8" offset="0x0" length="0x10000" map="0100"/>
+            <part repeat="0x10000" map="1000">00</part>
+        </interleave>
+        <interleave output="32">
+            <part name="dx14.15k" crc="80f07915" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dx13.13k" crc="d32c02e7" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dx12.10k" crc="ac78b76b" offset="0x0" length="0x10000" map="0100"/>
+            <part repeat="0x10000" map="1000">00</part>
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="dx00.3d" crc="f01ef985" offset="0x2000" length="0x2000" map="0001"/>
+            <part name="dx00.3d" crc="f01ef985" offset="0x4000" length="0x2000" map="0010"/>
+            <part name="dx00.3d" crc="f01ef985" offset="0x6000" length="0x2000" map="0100"/>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 0C 7A 00 01 0F 0F 00 00 0E 3C 00 3C 00 00 00 00 00 09 00 03 00 00</part>
+    </rom>
+    <nvram index="4" size="64"/>
+</misterromdescription>

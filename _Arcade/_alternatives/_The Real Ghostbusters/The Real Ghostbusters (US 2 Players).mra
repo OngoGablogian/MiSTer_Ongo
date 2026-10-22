@@ -1,0 +1,73 @@
+<misterromdescription>
+    <name>The Real Ghostbusters (US 2 Players)</name>
+    <setname>ghostb2a</setname>
+    <rbf>Meathax_DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Data East USA</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="FF,BF">
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <dip name="Flip Screen" bits="6" ids="On,Off"/>
+        <dip name="Lives" bits="8,9" ids="Invulnerability (Cheat),1,5,3"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Max Scene Time" bits="12,13" ids="4:00,4:30,6:00,5:00"/>
+        <dip name="Allow Continue" bits="14" ids="Yes,No"/>
+        <dip name="Energy Bonus" bits="15" ids="+50%,None"/>
+    </switches>
+    <buttons names="Fire,Beam,-,-,-,-,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-"/>
+    <rom index="1">
+        <part>29</part>
+    </rom>
+    <rom index="0" zip="ghostb2a.zip|ghostb.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="dz01.1d" crc="7c5bb4b1" offset="0x0" length="0x8000"/>
+        <part name="dz02.3d" crc="8e117541" offset="0x0" length="0x10000"/>
+        <part name="dz03.4d" crc="5606a8f4" offset="0x0" length="0x10000"/>
+        <part name="dz04.6d" crc="d09bad99" offset="0x0" length="0x10000"/>
+        <part name="dz05.7d" crc="0315f691" offset="0x0" length="0x10000"/>
+        <part repeat="0x18000">00</part>
+        <part name="dz06.5f" crc="798f56df" offset="0x0" length="0x8000"/>
+        <part repeat="0x10000">00</part>
+        <part name="dz-1.1b" crc="9f5f3cb5" offset="0x0" length="0x1000"/>
+        <part name="dz19a.10d" crc="47e1f83b" offset="0x0" length="0x400"/>
+        <part name="dz20a.11d" crc="d8fe2d99" offset="0x0" length="0x400"/>
+        <part repeat="0x7E800">00</part>
+        <interleave output="32">
+            <part name="dz08.14f" crc="32f9ddfe" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dz10.17f" crc="6ef9963b" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dz07.12f" crc="e7455167" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dz09.15f" crc="bb6efc02" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dz08.14f" crc="32f9ddfe" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dz10.17f" crc="6ef9963b" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dz07.12f" crc="e7455167" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dz09.15f" crc="bb6efc02" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dz15.14f" crc="a01a5fd9" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dz12.9f" crc="817fae99" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dz11.8f" crc="a5e19c24" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dz17.17f" crc="40361b8b" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dz16.15f" crc="5a9a344a" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dz14.12f" crc="0abbf76d" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dz13.1f" crc="3e7c0405" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dz18.18f" crc="8d219489" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dz00.16b" crc="992b4f31" offset="0x2000" length="0x2000" map="0001"/>
+            <part name="dz00.16b" crc="992b4f31" offset="0x4000" length="0x2000" map="0010"/>
+            <part name="dz00.16b" crc="992b4f31" offset="0x6000" length="0x2000" map="0100"/>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 01 C0 00 76 01 10</part>
+    </rom>
+    <nvram index="4" size="118"/>
+</misterromdescription>

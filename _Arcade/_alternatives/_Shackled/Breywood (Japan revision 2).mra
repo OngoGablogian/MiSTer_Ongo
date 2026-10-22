@@ -1,0 +1,68 @@
+<misterromdescription>
+    <name>Breywood (Japan revision 2)</name>
+    <setname>breywood</setname>
+    <rbf>Meathax_DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1986</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="FF,7F">
+        <dip name="Flip Screen" bits="0" ids="On,Off"/>
+        <dip name="Leave Off" bits="4" ids="On,Off"/>
+        <dip name="Freeze" bits="7" ids="On,Off"/>
+        <dip name="Power" bits="8,11" ids="8000,800,4000,400,6000,600,2000,200,7000,700,3000,300,5000,500,900,1000"/>
+        <dip name="Difficulty" bits="12,13" ids="Hardest,Very Hard,Hard,Normal"/>
+        <dip name="Demo Sounds" bits="15" ids="On,Off"/>
+    </switches>
+    <buttons names="Shoot,Change Member,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-"/>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <rom index="0" zip="breywood.zip|shackled.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="dj02-2.13h" crc="c19856b9" offset="0x0" length="0x8000"/>
+        <part name="dj06-2.7h" crc="2860ea02" offset="0x0" length="0x10000"/>
+        <part name="dj05-2.9h" crc="0fdd915e" offset="0x0" length="0x10000"/>
+        <part name="dj04-2.10h" crc="71036579" offset="0x0" length="0x10000"/>
+        <part name="dj03-2.11h" crc="308f4893" offset="0x0" length="0x8000"/>
+        <part name="dj03-2.11h" crc="308f4893" offset="0x0" length="0x8000"/>
+        <part name="dj1-2y.18h" crc="3d9fb623" offset="0x0" length="0x10000"/>
+        <part repeat="0x8000">00</part>
+        <part name="dj07-1.5h" crc="4a471c38" offset="0x0" length="0x8000"/>
+        <part repeat="0x10000">00</part>
+        <part name="dj.18a" crc="4cb20332" offset="0x0" length="0x1000"/>
+        <part name="dk-20.9c" crc="ff3cd588" offset="0x0" length="0x100"/>
+        <part repeat="0x7EF00">00</part>
+        <interleave output="32">
+            <part name="dj11.12k" crc="067e2a43" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dj10.14k" crc="c19733aa" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dj09.15k" crc="e37d5dbe" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dj08.17k" crc="beee880f" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="dj12.15k" crc="2b7634f2" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dj14.13k" crc="87c28833" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dj16.10k" crc="f9848cc4" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dj18.8k" crc="12afe533" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dj13.14k" crc="4530a952" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dj15.11k" crc="bfb43a4d" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dj17.9k" crc="baa3d218" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dj19.6k" crc="03373755" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dj-00.2a" crc="815a891a" offset="0x2000" length="0x2000" map="0001"/>
+            <part name="dj-00.2a" crc="815a891a" offset="0x4000" length="0x2000" map="0010"/>
+            <part name="dj-00.2a" crc="815a891a" offset="0x6000" length="0x2000" map="0100"/>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 01 08 00 28 31 00 00 00 00 6D 00 03 04 00</part>
+    </rom>
+    <nvram index="4" size="43"/>
+</misterromdescription>

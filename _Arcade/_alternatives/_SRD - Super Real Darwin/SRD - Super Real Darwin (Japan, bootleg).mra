@@ -1,0 +1,83 @@
+<misterromdescription>
+    <name>SRD: Super Real Darwin (Japan, bootleg)</name>
+    <setname>srdarwinb</setname>
+    <rbf>Meathax_DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>bootleg</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>vertical (ccw)</rotation>
+    <switches default="7F,FF">
+        <dip name="Coin B" bits="0,1" ids="2C/1C,1C/3C,1C/2C,1C/1C"/>
+        <dip name="Coin A" bits="2,3" ids="2C/1C,1C/3C,1C/2C,1C/1C"/>
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <dip name="Flip Screen" bits="6" ids="On,Off"/>
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail"/>
+        <dip name="Lives" bits="8,9" ids="28 (Cheat),1,5,3"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Bonus Life" bits="12" ids="Every 100k,Every 50k"/>
+        <dip name="After Stage 10" bits="13" ids="Game Over,Back to Stage 1"/>
+        <dip name="Allow Continue" bits="15" ids="No,Yes"/>
+    </switches>
+    <buttons names="Fire,Bomb,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-"/>
+    <rom index="1">
+        <part>06</part>
+    </rom>
+    <rom index="0" zip="srdarwinb.zip|srdarwin.zip" md5="none">
+        <part name="3.bin" crc="7942b43f" offset="0x0" length="0x10000"/>
+        <part name="4.bin" crc="2bf6b461" offset="0x0" length="0x10000"/>
+        <part name="3.bin" crc="7942b43f" offset="0x0" length="0x10000"/>
+        <part repeat="0x38000">00</part>
+        <part name="5.bin" crc="2ae3591c" offset="0x0" length="0x8000"/>
+        <part repeat="0x90000">00</part>
+        <interleave output="32">
+            <part name="2.bin" crc="522d9a9e" offset="0x0" length="0x2000" map="0001"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0x0" length="0x2000" map="0010"/>
+            <part name="2.bin" crc="522d9a9e" offset="0x2000" length="0x2000" map="0100"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0x2000" length="0x2000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="2.bin" crc="522d9a9e" offset="0x4000" length="0x2000" map="0001"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0x4000" length="0x2000" map="0010"/>
+            <part name="2.bin" crc="522d9a9e" offset="0x6000" length="0x2000" map="0100"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0x6000" length="0x2000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="2.bin" crc="522d9a9e" offset="0x8000" length="0x2000" map="0001"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0x8000" length="0x2000" map="0010"/>
+            <part name="2.bin" crc="522d9a9e" offset="0xA000" length="0x2000" map="0100"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0xA000" length="0x2000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="2.bin" crc="522d9a9e" offset="0xC000" length="0x2000" map="0001"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0xC000" length="0x2000" map="0010"/>
+            <part name="2.bin" crc="522d9a9e" offset="0xE000" length="0x2000" map="0100"/>
+            <part name="1.bin" crc="44f2a4f9" offset="0xE000" length="0x2000" map="1000"/>
+        </interleave>
+        <part repeat="0x60000">00</part>
+        <interleave output="32">
+            <part name="6.bin" crc="3c84a2c6" offset="0x0" length="0x8000" map="0001"/>
+            <part name="8.bin" crc="cc39b73f" offset="0x0" length="0x8000" map="0010"/>
+            <part name="10.bin" crc="cf7dcdc1" offset="0x0" length="0x8000" map="0100"/>
+            <part repeat="0x8000" map="1000">00</part>
+        </interleave>
+        <interleave output="32">
+            <part name="7.bin" crc="990cfc7b" offset="0x0" length="0x8000" map="0001"/>
+            <part name="9.bin" crc="d15aaa08" offset="0x0" length="0x8000" map="0010"/>
+            <part name="11.bin" crc="3674e392" offset="0x0" length="0x8000" map="0100"/>
+            <part repeat="0x8000" map="1000">00</part>
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="12.bin" crc="f5c835cd" offset="0x6000" length="0x2000" map="0001"/>
+            <part name="12.bin" crc="f5c835cd" offset="0x4000" length="0x2000" map="0010"/>
+            <part repeat="0x2000" map="0100">00</part>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 13 42 00 46 00 4D 00 00 13 32 00 03 05 00</part>
+    </rom>
+    <nvram index="4" size="73"/>
+</misterromdescription>

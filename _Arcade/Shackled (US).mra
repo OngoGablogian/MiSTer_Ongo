@@ -1,0 +1,68 @@
+<misterromdescription>
+    <name>Shackled (US)</name>
+    <setname>shackled</setname>
+    <rbf>Meathax_DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1986</year>
+    <manufacturer>Data East USA</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="FF,7F">
+        <dip name="Flip Screen" bits="0" ids="On,Off"/>
+        <dip name="Leave Off" bits="4" ids="On,Off"/>
+        <dip name="Freeze" bits="7" ids="On,Off"/>
+        <dip name="Coin/Heart/Help/6-Help" bits="8,10" ids="2/100/50/200,4/100/60/300,6/200/70/300,8/200/80/400,20/500/200/800,18/400/200/700,12/300/100/600,10/200/100/500"/>
+        <dip name="Difficulty" bits="12,13" ids="Hardest,Very Hard,Hard,Normal"/>
+        <dip name="Demo Sounds" bits="15" ids="On,Off"/>
+    </switches>
+    <buttons names="Shoot,Change Member,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-"/>
+    <rom index="1">
+        <part>03</part>
+    </rom>
+    <rom index="0" zip="shackled.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="dk-02.13h" crc="87f8fa85" offset="0x0" length="0x8000"/>
+        <part name="dk-06.7h" crc="69ad62d1" offset="0x0" length="0x10000"/>
+        <part name="dk-05.9h" crc="598dd128" offset="0x0" length="0x10000"/>
+        <part name="dk-04.10h" crc="36d305d4" offset="0x0" length="0x10000"/>
+        <part name="dk-03.11h" crc="6fd90fd1" offset="0x0" length="0x8000"/>
+        <part name="dk-03.11h" crc="6fd90fd1" offset="0x0" length="0x8000"/>
+        <part name="dk-01.18h" crc="71fe3bda" offset="0x0" length="0x10000"/>
+        <part repeat="0x8000">00</part>
+        <part name="dk-07.5h" crc="887e4bcc" offset="0x0" length="0x8000"/>
+        <part repeat="0x10000">00</part>
+        <part name="dk-e.18a" crc="1af06149" offset="0x0" length="0x1000"/>
+        <part name="dk-20.9c" crc="ff3cd588" offset="0x0" length="0x100"/>
+        <part repeat="0x7EF00">00</part>
+        <interleave output="32">
+            <part name="dk-11.12k" crc="5cf5719f" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dk-10.14k" crc="408e6d08" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dk-09.15k" crc="c1557fac" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dk-08.17k" crc="5e54e9f5" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <part repeat="0x40000">00</part>
+        <interleave output="32">
+            <part name="dk-12.15k" crc="615c2371" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dk-14.13k" crc="cdc24246" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dk-16.10k" crc="061a76bd" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dk-18.8k" crc="4d466757" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dk-13.14k" crc="479aa503" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dk-15.11k" crc="88db811b" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dk-17.9k" crc="a6c5d8af" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dk-19.6k" crc="1911e83e" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dk-00.2a" crc="69b975aa" offset="0x2000" length="0x2000" map="0001"/>
+            <part name="dk-00.2a" crc="69b975aa" offset="0x4000" length="0x2000" map="0010"/>
+            <part name="dk-00.2a" crc="69b975aa" offset="0x6000" length="0x2000" map="0100"/>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 01 08 00 28 31 00 00 00 00 6B 00 03 04 00</part>
+    </rom>
+    <nvram index="4" size="43"/>
+</misterromdescription>

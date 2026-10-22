@@ -1,0 +1,73 @@
+<misterromdescription>
+    <name>Meikyuu Hunter G (Japan)</name>
+    <setname>meikyuh</setname>
+    <rbf>Meathax_DEC8</rbf>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Data East Corporation</manufacturer>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <switches default="FF,BF">
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <dip name="Flip Screen" bits="6" ids="On,Off"/>
+        <dip name="Lives" bits="8,9" ids="Invulnerability (Cheat),1,5,3"/>
+        <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Energy Bonus" bits="12" ids="+50%,None"/>
+        <dip name="Allow Continue" bits="14" ids="Yes,No"/>
+        <dip name="Freeze" bits="15" ids="On,Off"/>
+    </switches>
+    <buttons names="Fire,Circular Fire,-,-,-,Start,Coin,Service,Pause" default="A,B,-,-,-,Start,Select,-,-"/>
+    <rom index="1">
+        <part>0A</part>
+    </rom>
+    <rom index="0" zip="meikyuh.zip" md5="none">
+        <part repeat="0x8000">00</part>
+        <part name="dw01-5.1d" crc="87610c39" offset="0x0" length="0x8000"/>
+        <part name="dw02.3d" crc="40c9b0b8" offset="0x0" length="0x10000"/>
+        <part name="dw03.4d" crc="5606a8f4" offset="0x0" length="0x10000"/>
+        <part name="dw04.6d" crc="235c0c36" offset="0x0" length="0x10000"/>
+        <part repeat="0x10000">FF</part>
+        <part repeat="0x18000">00</part>
+        <part name="dw05.5f" crc="c28c4d82" offset="0x0" length="0x8000"/>
+        <part repeat="0x10000">00</part>
+        <part name="dw.1b" crc="28e9ced9" offset="0x0" length="0x1000"/>
+        <part name="dw18.9d" crc="75f1945f" offset="0x0" length="0x400"/>
+        <part name="dw19.10d" crc="cc16f3fa" offset="0x0" length="0x400"/>
+        <part repeat="0x7E800">00</part>
+        <interleave output="32">
+            <part name="dw07.14f" crc="668d995d" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dw09.17f" crc="6a528d13" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dw06.12f" crc="b65e029d" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dw08.15f" crc="bb2cf4a0" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dw07.14f" crc="668d995d" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dw09.17f" crc="6a528d13" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dw06.12f" crc="b65e029d" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dw08.15f" crc="bb2cf4a0" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dw14.14f" crc="9b0dbfa9" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dw11.9f" crc="1b1fcca7" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dw10.8f" crc="57667546" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dw16.17f" crc="e5bcf927" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dw15.15f" crc="95683fda" offset="0x0" length="0x10000" map="0001"/>
+            <part name="dw13.12f" crc="e7413056" offset="0x0" length="0x10000" map="0010"/>
+            <part name="dw12.1f" crc="4c548db8" offset="0x0" length="0x10000" map="0100"/>
+            <part name="dw17.18f" crc="9e10f723" offset="0x0" length="0x10000" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="dw00.16b" crc="3d25f15c" offset="0x2000" length="0x2000" map="0001"/>
+            <part name="dw00.16b" crc="3d25f15c" offset="0x4000" length="0x2000" map="0010"/>
+            <part name="dw00.16b" crc="3d25f15c" offset="0x6000" length="0x2000" map="0100"/>
+            <part repeat="0x2000" map="1000">00</part>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>00 00 00 00 FF FF 00 02 00 02 00 01 00 00 04 00 00 00 01 90 00 50 01 20</part>
+    </rom>
+    <nvram index="4" size="80"/>
+</misterromdescription>
