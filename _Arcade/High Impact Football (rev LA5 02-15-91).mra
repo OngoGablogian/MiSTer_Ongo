@@ -1,120 +1,65 @@
 <misterromdescription>
-    <about author="blahm1d"/>
-    <rotation>horizontal</rotation>
-    <name>High Impact Football (rev LA5 02/15/91)</name>
-    <setname>hiimpact</setname>
-    <mameversion>0280</mameversion>
-    <year>1990</year>
-    <manufacturer>Williams</manufacturer>
-    <players>4</players>
-    <rbf>blahm1d_yunit</rbf>
-    <joystick>8</joystick>
-    <rom index="3"><part>02</part></rom>
-    <!-- Factory-initialised CMOS (MAME 0.289, written by the game itself; no credits).
-         Default only: a saved NVRAM loads over it. sha256 ffecd673e55e9c0511e4bd6a6f50f6973488af715326a0fbf79732bb038868a9 -->
-    <rom index="4">
+	<name>High Impact Football (rev LA5 02/15/91)</name>
+	<mratimestamp>20261015</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>hiimpact</setname>
+	<year>1990</year>
+	<manufacturer>Williams</manufacturer>
+	<category>Sports / Football</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>4 players</remark>
+	<switches default="FF,FF,00">
+		<dip bits="12" name="Coin Counters" ids="One,Two" values="1,0"/>
+		<dip bits="3,6" name="Coinage" ids="1 Coin/1 Credit,2 Coins/1 Credit,2C/1C - 4C/3C,2C/1C - 4C/4C,ECA,Free Play" values="15,11,13,9,14,8"/>
+		<dip bits="14,15" name="Country" ids="French,German,Unused,USA" values="2,1,0,3"/>
+		<dip bits="7" name="Players" ids="2,4"/>
+		<dip bits="13" name="Power-Up Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+	</switches>
+	<buttons names="Action,-,-,-,-,-,Start,Coin,Test,Pause" default="A,-,-,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<!-- game id; game state 010528A0 (tools/yunit_fmoves.py) -->
 		<part>
-			25 00 12 00 21 00 40 00 00 00 00 00 42 00 55 00 4E 00 82 00 01 00 10 00
-			08 00 60 00 00 00 00 00 45 00 4A 00 42 00 B5 00 01 00 10 00 01 00 00 00
-			00 00 00 00 4A 00 52 00 4E 00 03 00 01 00 09 00 41 00 50 00 00 00 00 00
-			44 00 52 00 4A 00 84 00 01 00 08 00 72 00 00 00 00 00 00 00 54 00 49 00
-			4D 00 9A 00 00 00 97 00 19 00 20 00 00 00 00 00 4A 00 50 00 47 00 4E 00
-			00 00 86 00 19 00 10 00 00 00 00 00 44 00 57 00 46 00 6F 00 00 00 75 00
-			11 00 10 00 00 00 00 00 44 00 54 00 57 00 7A 00 00 00 74 00 76 00 30 00
-			00 00 00 00 53 00 4E 00 4F 00 F5 00 00 00 63 00 90 00 20 00 00 00 00 00
-			4C 00 4F 00 46 00 0B 00 00 00 53 00 20 00 10 00 00 00 00 00 4D 00 4A 00
-			54 00 91 00 00 00 51 00 21 00 20 00 00 00 00 00 47 00 4E 00 50 00 88 00
-			00 00 51 00 21 00 20 00 00 00 00 00 54 00 4F 00 44 00 86
+		03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		8A 52 10 00 00 00 00 00 01 00
 		</part>
-		<part repeat="7953">00</part>
-		<part>
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 29 00 FF 00 D6 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 29 00
-			FF 00 D6 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			FF 00 FF 00 00 00 00 00 00 00 00 00 FF 00 FF 00 00 00 00 00 00 00 00 00
-			00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 88 00
-			FF 00 FF 00 EC 00 77
-		</part>
-		<part repeat="1483">00</part>
-		<part>
-			01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			02 00 00 00 00 00 13 00 88 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-			1E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-			02 00 00 00 00 00 00 00 01
-		</part>
-		<part repeat="121">00</part>
-		<part>
-			FF 00 2F 00 52 00 45 00 56 00 49 00 53 00 49 00 4F 00 4E 00 20 00 4C 00
-			41 00 20 00 35 00 20 00 2D 00 20 00 32 00 2F 00 31 00 35 00 2F 00 39 00
-			31
-		</part>
-		<part repeat="5759">00</part>
-		<part>
-			25 00 12 00 21 00 45 00 00 00 00 00 47 00 4E 00 50 00 7D 00 02 00 00 00
-			05 00 00 00 00 00 00 00 4A 00 52 00 4E 00 0E 00 02 00 00 00 00 00 10 00
-			00 00 00 00 45 00 4A 00 42 00 1C 00 01 00 90 00 34 00 00 00 00 00 00 00
-			54 00 49 00 4D 00 50 00 01 00 89 00 62 00 40 00 00 00 00 00 45 00 50 00
-			4A 00 F4 00 01 00 69 00 62 00 10 00 00 00 00 00 4A 00 49 00 4D 00 43 00
-			01 00 40 00 01 00 70 00 00 00 00 00 47 00 4E 00 50 00 68 00 01 00 20 00
-			01 00 70 00 00 00 00 00 54 00 52 00 41 00 86 00 01 00 19 00 10 00 00 00
-			00 00 00 00 54 00 4D 00 4D 00 E7 00 01 00 06 00 10 00 00 00 00 00 00 00
-			4D 00 44 00 50 00 07 00 01 00 00 00 89 00 50 00 00 00 00 00 53 00 53 00
-			52 00 2D 00 01 00 00 00 09 00 30 00 00 00 00 00 4C 00 45 00 44 00 F0 00
-			01 00 00 00 01 00 10 00 00 00 00 00 4A 00 45 00 48 00 16 00 01 00 00 00
-			00 00 10 00 00 00 00 00 41 00 4C 00 49 00 18 00 01 00 00 00 00 00 00 00
-			00 00 00 00 4D 00 49 00 4B 00 1D
-		</part>
-		<part repeat="16085">00</part>
-    </rom>
-    <nvram index="4" size="32768"></nvram>
-    <rom index="0" zip="hiimpact.zip">
-        <part name="la1_high_impact_game_rom_u111.u111" crc="49560560"/>
-        <part name="la1_high_impact_game_rom_u112.u112" crc="4dd879dc"/>
-        <part name="la1_high_impact_game_rom_u113.u113" crc="b67aeb70"/>
-        <part name="la1_high_impact_game_rom_u114.u114" crc="9a4bc44b"/>
-        <part name="la1_high_impact_game_rom_u95.u95" crc="e1352dc0"/>
-        <part name="la1_high_impact_game_rom_u96.u96" crc="197d0f34"/>
-        <part name="la1_high_impact_game_rom_u97.u97" crc="908ea575"/>
-        <part name="la1_high_impact_game_rom_u98.u98" crc="6dcbab11"/>
-        <part name="la1_high_impact_game_rom_u106.u106" crc="7d0ead0d"/>
-        <part name="la1_high_impact_game_rom_u107.u107" crc="ef48e8fa"/>
-        <part name="la1_high_impact_game_rom_u108.u108" crc="5f363e12"/>
-        <part name="la1_high_impact_game_rom_u109.u109" crc="3689fbbc"/>
-    </rom>
-    <rom index="1" zip="hiimpact.zip">
-        <part repeat="0x60000">00</part>
-        <part name="la5_high_impact_game_rom_u105.u105" crc="104c30e7"/>
-        <part repeat="0x60000">00</part>
-        <part name="la5_high_impact_game_rom_u89.u89" crc="07aa0010"/>
-    </rom>
-    <rom index="2" zip="hiimpact.zip">
-        <part name="sl1_high_impact_sound_u4.u4" crc="28effd6a"/>
-        <part name="sl1_high_impact_sound_u19.u19" crc="0ea22c89"/>
-        <part name="sl1_high_impact_sound_u20.u20" crc="4e747ab5"/>
-    </rom>
-    <switches default="FF,FF"><dip name="Test Switch" bits="8" ids="On,Off"/></switches>
-    <buttons names="Action,Start,Coin" default="A,Start,Select" count="1"/>
+	</rom>
+	<rom index="0" zip="hiimpact.zip" md5="2bd445c1acfb04cddad079076509e78b" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="104c30e7" name="la5_high_impact_game_rom_u105.u105" map="01"/>
+			<part crc="07aa0010" name="la5_high_impact_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="49560560" name="la1_high_impact_game_rom_u111.u111"/>
+		<part crc="4dd879dc" name="la1_high_impact_game_rom_u112.u112"/>
+		<part crc="b67aeb70" name="la1_high_impact_game_rom_u113.u113"/>
+		<part crc="9a4bc44b" name="la1_high_impact_game_rom_u114.u114"/>
+		<part repeat="0x180000">00</part>
+		<part crc="e1352dc0" name="la1_high_impact_game_rom_u95.u95"/>
+		<part crc="197d0f34" name="la1_high_impact_game_rom_u96.u96"/>
+		<part crc="908ea575" name="la1_high_impact_game_rom_u97.u97"/>
+		<part crc="6dcbab11" name="la1_high_impact_game_rom_u98.u98"/>
+		<part repeat="0x180000">00</part>
+		<part crc="7d0ead0d" name="la1_high_impact_game_rom_u106.u106"/>
+		<part crc="ef48e8fa" name="la1_high_impact_game_rom_u107.u107"/>
+		<part crc="5f363e12" name="la1_high_impact_game_rom_u108.u108"/>
+		<part crc="3689fbbc" name="la1_high_impact_game_rom_u109.u109"/>
+		<part repeat="0x380000">00</part>
+		<!-- sound CPU -->
+		<part crc="28effd6a" name="sl1_high_impact_sound_u4.u4"/>
+		<part crc="0ea22c89" name="sl1_high_impact_sound_u19.u19"/>
+		<part crc="4e747ab5" name="sl1_high_impact_sound_u20.u20"/>
+	</rom>
+	<nvram index="2" size="32768"/>
 </misterromdescription>

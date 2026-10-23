@@ -1,28 +1,55 @@
 <misterromdescription>
-    <about author="rejectedcoins"/>
-    <rotation>horizontal</rotation>
-    <name>Y-Unit Test ROM (v1.40)</name>
-    <setname>yunittst</setname>
-    <mameversion>0280</mameversion>
-    <year>199?</year>
-    <manufacturer>Midway</manufacturer>
-    <players>2</players>
-    <rbf>blahm1d_yunit</rbf>
-    <joystick>8</joystick>
-    <rom index="3"><part>08</part></rom>
-    <nvram index="4" size="32768"></nvram>
-    <rom index="0" zip="yunittst.zip">
-        <part repeat="0x120000">00</part>
-    </rom>
-    <rom index="1" zip="yunittst.zip">
-        <part repeat="0x60000">00</part>
-        <part name="y_unit_test_u105.u105" crc="bd29a7d1"/>
-        <part repeat="0x60000">00</part>
-        <part name="y_unit_test_u89.u89" crc="6db6e0cd"/>
-    </rom>
-    <rom index="2" zip="yunittst.zip">
-        <part repeat="0x60000">00</part>
-    </rom>
-    <switches default="FF,FF"/>
-    <buttons names="Action,Start,Coin" default="A,Start,Select" count="1"/>
+	<name>Y-Unit Test ROM (v1.40)</name>
+	<mratimestamp>20261012</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>yunittst</setname>
+	<year>199?</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Utility / Test</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>4 players</remark>
+	<switches default="FF,FF,00">
+		<dip bits="6" name="CMOS Test" ids="Off,On" values="1,0"/>
+		<dip bits="1" name="Coin Counter Test" ids="Off,On" values="1,0"/>
+		<dip bits="14,15" name="Display Type" ids="4 Bit Y-Unit,6 Bit Y-Unit,8 Bit Y-Unit,Auto Sense" values="1,2,0,3"/>
+		<dip bits="4" name="Harsh DMA Test" ids="Off,On" values="1,0"/>
+		<dip bits="5" name="Quick DMA Test" ids="Off,On" values="1,0"/>
+		<dip bits="7" name="RAM Test" ids="Off,On" values="1,0"/>
+		<dip bits="3" name="ROM Checksums" ids="Off,On" values="1,0"/>
+		<dip bits="13" name="Screen Alignment" ids="Off,On" values="1,0"/>
+		<dip bits="11,12" name="Screen Fills" ids="Blue,Green,Nothing,Red" values="0,2,3,1"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="0" name="Sound Port Test" ids="Off,On" values="1,0"/>
+		<dip bits="2" name="Switch Input Test" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="8" name="Williams Logo" ids="Off,On" values="1,0"/>
+	</switches>
+	<buttons names="Action,-,-,-,-,-,Start,Coin,Test,Pause" default="A,-,-,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<!-- game id; no hidden menu (tools/yunit_fmoves.py) -->
+		<part>
+		04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 02 00
+		</part>
+	</rom>
+	<rom index="0" zip="yunittst.zip" md5="89982d490926a7aa579ae86a74529a8a" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="bd29a7d1" name="y_unit_test_u105.u105" map="01"/>
+			<part crc="6db6e0cd" name="y_unit_test_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part repeat="0x800000">00</part>
+		<!-- sound CPU -->
+		<part repeat="0x100000">00</part>
+	</rom>
+	<nvram index="2" size="32768"/>
 </misterromdescription>

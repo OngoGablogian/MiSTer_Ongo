@@ -1,0 +1,65 @@
+<misterromdescription>
+	<name>High Impact Football (rev LA1 12/16/90)</name>
+	<mratimestamp>20261015</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>hiimpact1</setname>
+	<year>1990</year>
+	<manufacturer>Williams</manufacturer>
+	<category>Sports / Football</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>4 players</remark>
+	<switches default="FF,FF,00">
+		<dip bits="12" name="Coin Counters" ids="One,Two" values="1,0"/>
+		<dip bits="3,6" name="Coinage" ids="1 Coin/1 Credit,2 Coins/1 Credit,2C/1C - 4C/3C,2C/1C - 4C/4C,ECA,Free Play" values="15,11,13,9,14,8"/>
+		<dip bits="14,15" name="Country" ids="French,German,Unused,USA" values="2,1,0,3"/>
+		<dip bits="7" name="Players" ids="2,4"/>
+		<dip bits="13" name="Power-Up Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+	</switches>
+	<buttons names="Action,-,-,-,-,-,Start,Coin,Test,Pause" default="A,-,-,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<!-- game id; game state 010528A0 (tools/yunit_fmoves.py) -->
+		<part>
+		03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		8A 52 10 00 00 00 00 00 01 00
+		</part>
+	</rom>
+	<rom index="0" zip="hiimpact1.zip|hiimpact.zip" md5="634e5d77cf3cc6d040069e44b1fa54c1" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="e86228ba" name="la1_high_impact_game_rom_u105.u105" map="01"/>
+			<part crc="f23e972e" name="la1_high_impact_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="49560560" name="la1_high_impact_game_rom_u111.u111"/>
+		<part crc="4dd879dc" name="la1_high_impact_game_rom_u112.u112"/>
+		<part crc="b67aeb70" name="la1_high_impact_game_rom_u113.u113"/>
+		<part crc="9a4bc44b" name="la1_high_impact_game_rom_u114.u114"/>
+		<part repeat="0x180000">00</part>
+		<part crc="e1352dc0" name="la1_high_impact_game_rom_u95.u95"/>
+		<part crc="197d0f34" name="la1_high_impact_game_rom_u96.u96"/>
+		<part crc="908ea575" name="la1_high_impact_game_rom_u97.u97"/>
+		<part crc="6dcbab11" name="la1_high_impact_game_rom_u98.u98"/>
+		<part repeat="0x180000">00</part>
+		<part crc="7d0ead0d" name="la1_high_impact_game_rom_u106.u106"/>
+		<part crc="ef48e8fa" name="la1_high_impact_game_rom_u107.u107"/>
+		<part crc="5f363e12" name="la1_high_impact_game_rom_u108.u108"/>
+		<part crc="3689fbbc" name="la1_high_impact_game_rom_u109.u109"/>
+		<part repeat="0x380000">00</part>
+		<!-- sound CPU -->
+		<part crc="28effd6a" name="sl1_high_impact_sound_u4.u4"/>
+		<part crc="0ea22c89" name="sl1_high_impact_sound_u19.u19"/>
+		<part crc="4e747ab5" name="sl1_high_impact_sound_u20.u20"/>
+	</rom>
+	<nvram index="2" size="32768"/>
+</misterromdescription>

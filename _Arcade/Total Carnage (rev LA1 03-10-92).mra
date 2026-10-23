@@ -1,100 +1,70 @@
 <misterromdescription>
-    <about author="blahm1d"/>
-    <rotation>horizontal</rotation>
-    <name>Total Carnage (rev LA1 03/10/92)</name>
-    <setname>totcarn</setname>
-    <mameversion>0280</mameversion>
-    <year>1992</year>
-    <manufacturer>Midway</manufacturer>
-    <players>2</players>
-    <rbf>blahm1d_yunitadpcm</rbf>
-    <joystick>8</joystick>
-    <rom index="3"><part>07</part></rom>
-    <!-- Factory-initialised CMOS (MAME 0.289, written by the game itself; no credits).
-         Default only: a saved NVRAM loads over it. sha256 72de568cde3dc9706d85cc30ad4e6b44e9f59d5c9e97694ad2d5c66c2f4bc134 -->
-    <rom index="4">
-		<part>
-			22 00 12 00 21 00 45 00 45 00 50 00 4A 00 86 00 00 00 10 00 04 00 10 00
-			53 00 4C 00 21 00 1B 00 00 00 09 00 44 00 77 00 45 00 50 00 4A 00 5C 00
-			00 00 08 00 04 00 86 00 4C 00 45 00 44 00 98 00 00 00 07 00 08 00 82 00
-			44 00 41 00 4E 00 9B 00 00 00 06 00 80 00 40 00 44 00 4A 00 54 00 57 00
-			00 00 05 00 91 00 04 00 4A 00 50 00 57 00 74 00 00 00 04 00 04 00 50 00
-			4E 00 45 00 44 00 D0 00 00 00 03 00 87 00 80 00 4D 00 4A 00 54 00 0A 00
-			00 00 02 00 80 00 88 00 42 00 55 00 59 00 05 00 00 00 01 00 65 00 02 00
-			57 00 4D 00 53 00 A0
-		</part>
-		<part repeat="8613">00</part>
-		<part>
-			FF 00 FF
-		</part>
-		<part repeat="75">00</part>
-		<part>
-			FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 00 FF 00 FF 00
-			FF
-		</part>
-		<part repeat="1363">00</part>
-		<part>
-			01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			03 00 00 00 00 00 13 00 88 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 01
-		</part>
-		<part repeat="155">00</part>
-		<part>
-			FF 00 2E 00 54 00 4F 00 54 00 41 00 4C 00 20 00 43 00 41 00 52 00 4E 00
-			41 00 47 00 45 00 20 00 52 00 45 00 56 00 49 00 53 00 49 00 4F 00 4E 00
-			20 00 4C 00 41 00 31 00 20 00 2D 00 20 00 33
-		</part>
-		<part repeat="5735">00</part>
-		<part>
-			22 00 12 00 21 00 45 00 45 00 50 00 4A 00 86 00 00 00 48 00 46 00 92 00
-			4D 00 4A 00 54 00 F4 00 00 00 43 00 40 00 10 00 53 00 4C 00 21 00 AC 00
-			00 00 41 00 89 00 13 00 52 00 4A 00 52 00 34 00 00 00 36 00 68 00 92 00
-			4A 00 4F 00 4E 00 E8 00 00 00 29 00 60 00 96 00 53 00 59 00 44 00 F0 00
-			00 00 26 00 52 00 37 00 48 00 45 00 59 00 6A 00 00 00 21 00 57 00 82 00
-			45 00 4A 00 42 00 34 00 00 00 18 00 20 00 74 00 44 00 52 00 4A 00 73 00
-			00 00 14 00 68 00 92 00 50 00 4A 00 53 00 04 00 00 00 10 00 08 00 65 00
-			47 00 4E 00 50 00 9D
-		</part>
-		<part repeat="12109">00</part>
-		<part>
-			B4 B4 69 69
-		</part>
-		<part repeat="4096">00</part>
-    </rom>
-    <nvram index="4" size="32768"></nvram>
-    <rom index="0" zip="totcarn.zip">
-        <part name="la1_total_carnage_game_rom_u111.u111" crc="13f3f231"/>
-        <part name="la1_total_carnage_game_rom_u112.u112" crc="72e45007"/>
-        <part name="la1_total_carnage_game_rom_u113.u113" crc="2c8ec753"/>
-        <part name="la1_total_carnage_game_rom_u114.u114" crc="6210c36c"/>
-        <part name="la1_total_carnage_game_rom_u95.u95" crc="579caeba"/>
-        <part name="la1_total_carnage_game_rom_u96.u96" crc="f43f1ffe"/>
-        <part name="la1_total_carnage_game_rom_u97.u97" crc="1675e50d"/>
-        <part name="la1_total_carnage_game_rom_u98.u98" crc="ab06c885"/>
-        <part name="la1_total_carnage_game_rom_u106.u106" crc="146e3863"/>
-        <part name="la1_total_carnage_game_rom_u107.u107" crc="95323320"/>
-        <part name="la1_total_carnage_game_rom_u108.u108" crc="ed152acc"/>
-        <part name="la1_total_carnage_game_rom_u109.u109" crc="80715252"/>
-    </rom>
-    <rom index="1" zip="totcarn.zip">
-        <part repeat="0x40000">00</part>
-        <part name="la1_total_carnage_game_rom_u105.u105" crc="7c651047"/>
-        <part repeat="0x40000">00</part>
-        <part name="la1_total_carnage_game_rom_u89.u89" crc="6761daf3"/>
-    </rom>
-    <rom index="2" zip="totcarn.zip">
-        <part name="sl1_total_carnage_sound_rom_u3.u3" crc="5bdb4665"/>
-        <part name="sl1_total_carnage_sound_rom_u3.u3" crc="5bdb4665"/>
-        <part name="sl1_total_carnage_sound_rom_u12.u12" crc="d0000ac7"/>
-        <part name="sl1_total_carnage_sound_rom_u12.u12" crc="d0000ac7"/>
-        <part name="sl1_total_carnage_sound_rom_u13.u13" crc="e48e6f0c"/>
-        <part name="sl1_total_carnage_sound_rom_u13.u13" crc="e48e6f0c"/>
-    </rom>
-    <switches default="BF,FF"><dip name="Test Switch" bits="8" ids="On,Off"/></switches>
-    <buttons names="Fire Up,Fire Down,Fire Left,Fire Right,Start,Coin" default="X,B,Y,A,Start,Select" count="4"/>
+	<name>Total Carnage (rev LA1 03/10/92)</name>
+	<mratimestamp>20261012</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>totcarn</setname>
+	<year>1992</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Shooter / Multi-directional</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="BF,FF,00">
+		<dip bits="0,5" name="Coinage" ids="Australia 1,Austria 1,Belgium 1,Belgium 2,Denmark 1,Denmark 2,Finland,France 2,France 3,France 4,German 1,German 2,German 3,Italy,Japan 1,Japan 2,Netherlands,New Zealand 1,Norway,Spain 1,Sweden,Swiss 1,U.K. 1,U.K. 2,U.K. ECA,USA 1,USA 2,USA 3" values="48,45,44,43,37,0,39,57,56,55,60,59,58,53,47,46,40,41,38,49,42,54,52,51,50,63,62,61"/>
+		<dip bits="6" name="Coinage Source" ids="CMOS,Dipswitch" values="1,0"/>
+		<dip bits="7" name="Keys for Pleasure Dome" ids="200,220"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="15" name="Unknown (DS2:1)" ids="Off,On" values="1,0"/>
+		<dip bits="14" name="Unknown (DS2:2)" ids="Off,On" values="1,0"/>
+		<dip bits="13" name="Unknown (DS2:3)" ids="Off,On" values="1,0"/>
+		<dip bits="12" name="Unknown (DS2:4)" ids="Off,On" values="1,0"/>
+		<dip bits="11" name="Unknown (DS2:5)" ids="Off,On" values="1,0"/>
+		<dip bits="10" name="Unknown (DS2:6)" ids="Off,On" values="1,0"/>
+		<dip bits="9" name="Unknown (DS2:7)" ids="Off,On" values="1,0"/>
+	</switches>
+	<buttons names="Fire Up,Fire Down,Fire Left,Fire Right,-,-,Start/Bomb,Coin,Test,Pause" default="X,B,Y,A,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+0xA00000 OKI M6295 samples (1 MB)
+	</romstruct>
+	<rom index="1">
+		<part>0D</part>
+	</rom>
+	<rom index="0" zip="totcarn.zip" md5="bb29635f104fb668065c4759e261a2d8" type="merged">
+		<!-- program ROM -->
+		<part repeat="0x80000">00</part>
+		<interleave output="16">
+			<part crc="7c651047" name="la1_total_carnage_game_rom_u105.u105" map="01"/>
+			<part crc="6761daf3" name="la1_total_carnage_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="13f3f231" name="la1_total_carnage_game_rom_u111.u111"/>
+		<part crc="72e45007" name="la1_total_carnage_game_rom_u112.u112"/>
+		<part crc="2c8ec753" name="la1_total_carnage_game_rom_u113.u113"/>
+		<part crc="6210c36c" name="la1_total_carnage_game_rom_u114.u114"/>
+		<part repeat="0x100000">00</part>
+		<part crc="579caeba" name="la1_total_carnage_game_rom_u95.u95"/>
+		<part crc="f43f1ffe" name="la1_total_carnage_game_rom_u96.u96"/>
+		<part crc="1675e50d" name="la1_total_carnage_game_rom_u97.u97"/>
+		<part crc="ab06c885" name="la1_total_carnage_game_rom_u98.u98"/>
+		<part repeat="0x100000">00</part>
+		<part crc="146e3863" name="la1_total_carnage_game_rom_u106.u106"/>
+		<part crc="95323320" name="la1_total_carnage_game_rom_u107.u107"/>
+		<part crc="ed152acc" name="la1_total_carnage_game_rom_u108.u108"/>
+		<part crc="80715252" name="la1_total_carnage_game_rom_u109.u109"/>
+		<part repeat="0x300000">00</part>
+		<!-- sound CPU -->
+		<part crc="5bdb4665" name="sl1_total_carnage_sound_rom_u3.u3"/>
+		<part crc="5bdb4665" name="sl1_total_carnage_sound_rom_u3.u3"/>
+		<part repeat="0xC0000">00</part>
+		<!-- OKI samples -->
+		<part crc="d0000ac7" name="sl1_total_carnage_sound_rom_u12.u12"/>
+		<part crc="d0000ac7" name="sl1_total_carnage_sound_rom_u12.u12"/>
+		<part crc="e48e6f0c" name="sl1_total_carnage_sound_rom_u13.u13"/>
+		<part crc="e48e6f0c" name="sl1_total_carnage_sound_rom_u13.u13"/>
+	</rom>
+	<nvram index="2" size="32768"/>
 </misterromdescription>

@@ -1,94 +1,63 @@
 <misterromdescription>
-    <about author="blahm1d"/>
-    <rotation>horizontal</rotation>
-    <name>Saurian Front (proto v5.0 8/07/90)</name>
-    <setname>saurnfrnt</setname>
-    <mameversion>0280</mameversion>
-    <year>1991</year>
-    <manufacturer>Williams</manufacturer>
-    <players>2</players>
-    <rbf>blahm1d_yunit</rbf>
-    <joystick>8</joystick>
-    <rom index="3"><part>09</part></rom>
-    <!-- Factory-initialised CMOS (MAME 0.289, written by the game itself; no credits).
-         Default only: a saved NVRAM loads over it. sha256 b37db5540e8add9c15a1cab1886449eae51179ea95e7006ca57123f26ef0356a -->
-    <rom index="4">
-		<part>
-			02 00 12 00 21 00 45 00 45 00 50 00 4A 00 A6 00 00 00 00 00 11 00 20 00
-			54 00 52 00 41 00 E7 00 00 00 00 00 11 00 00 00 45 00 4C 00 50 00 0D 00
-			00 00 00 00 01 00 90 00 4A 00 43 00 56 00 8B 00 00 00 00 00 01 00 80 00
-			4A 00 50 00 47 00 9D 00 00 00 00 00 01 00 55 00 41 00 49 00 45 00 DA 00
-			00 00 00 00 01 00 50 00 4E 00 4C 00 4E 00 C6 00 00 00 00 00 01 00 40 00
-			4D 00 54 00 4E 00 CF 00 00 00 00 00 01 00 10 00 43 00 44 00 52 00 15 00
-			00 00 00 00 00 00 90 00 44 00 45 00 46 00 A0 00 00 00 00 00 00 00 80 00
-			45 00 4E 00 44 00 A8 00 00 00 00 00 00 00 70 00 45 00 52 00 20 00 D8 00
-			00 00 00 00 00 00 60 00 53 00 54 00 41 00 B7 00 00 00 00 00 00 00 40 00
-			52 00 47 00 41 00 E5 00 00 00 00 00 00 00 30 00 54 00 45 00 20 00 16 00
-			00 00 00 00 00 00 20 00 53 00 20 00 46 00 26 00 00 00 00 00 00 00 10 00
-			4C 00 41 00 52 00 10
-		</part>
-		<part repeat="16113">00</part>
-		<part>
-			02 00 12 00 21 00 45 00 45 00 50 00 4A 00 A6 00 00 00 02 00 02 00 00 00
-			54 00 52 00 41 00 14 00 00 00 02 00 00 00 00 00 45 00 4C 00 50 00 1C 00
-			00 00 01 00 88 00 00 00 4A 00 43 00 56 00 93 00 00 00 01 00 82 00 00 00
-			4A 00 50 00 47 00 9B 00 00 00 00 00 77 00 70 00 45 00 50 00 4A 00 39 00
-			00 00 00 00 69 00 90 00 42 00 55 00 4E 00 21 00 00 00 00 00 66 00 60 00
-			4D 00 20 00 54 00 78 00 00 00 00 00 65 00 10 00 4D 00 44 00 50 00 A9 00
-			00 00 00 00 57 00 00 00 54 00 49 00 4D 00 BE 00 00 00 00 00 55 00 50 00
-			4A 00 4F 00 4E 00 73 00 00 00 00 00 54 00 20 00 4A 00 4B 00 4D 00 A9 00
-			00 00 00 00 54 00 10 00 4C 00 45 00 44 00 C6 00 00 00 00 00 48 00 40 00
-			52 00 41 00 59 00 8B 00 00 00 00 00 44 00 40 00 4C 00 45 00 50 00 9A 00
-			00 00 00 00 32 00 80 00 47 00 4E 00 50 00 68 00 00 00 00 00 23 00 90 00
-			47 00 20 00 53 00 92 00 00 00 00 00 23 00 80 00 41 00 20 00 4C 00 AF 00
-			00 00 00 00 21 00 80 00 43 00 4D 00 4D 00 81 00 00 00 00 00 13 00 10 00
-			53 00 53 00 52 00 E4 00 00 00 00 00 13 00 00 00 4C 00 41 00 41 00 1E 00
-			00 00 00 00 12 00 60 00 4D 00 52 00 20 00 CE 00 00 00 00 00 12 00 50 00
-			42 00 49 00 47 00 CB 00 00 00 00 00 02 00 50 00 41 00 4D 00 59 00 C6 00
-			00 00 00 00 02 00 45 00 53 00 20 00 4F 00 F6 00 00 00 00 00 02 00 30 00
-			41 00 43 00 53 00 F6 00 00 00 00 00 02 00 20 00 58 00 54 00 43 00 EE 00
-			00 00 00 00 01 00 60 00 45 00 4C 00 56 00 B7 00 00 00 00 00 01 00 20 00
-			49 00 53 00 20 00 22 00 00 00 00 00 00 00 80 00 4C 00 49 00 56 00 94 00
-			00 00 00 00 00 00 79 00 45 00 53 00 20 00 CE 00 00 00 00 00 00 00 77 00
-			41 00 4B 00 44 00 B8 00 00 00 00 00 00 00 76 00 41 00 4B 00 48 00 B5 00
-			00 00 00 00 00 00 75 00 41 00 4B 00 44 00 BA 00 00 00 00 00 00 00 74 00
-			41 00 4B 00 44 00 BB 00 00 00 00 00 00 00 73 00 41 00 4B 00 44 00 BC 00
-			00 00 00 00 00 00 72 00 41 00 4B 00 44 00 BD 00 00 00 00 00 00 00 71 00
-			41 00 4B 00 44 00 BE 00 00 00 00 00 00 00 70 00 41 00 4B 00 44 00 BF 00
-			00 00 00 00 00 00 50 00 41 00 4B 00 44 00 DF 00 00 00 00 00 00 00 30 00
-			41 00 4B 00 44 00 FF
-		</part>
-		<part repeat="15729">00</part>
-    </rom>
-    <nvram index="4" size="32768"></nvram>
-    <rom index="0" zip="saurnfrnt.zip|strkforc.zip">
-        <part name="pa1_saurian_front_game_rom_u111.u111" crc="ee7a733d"/>
-        <part name="pa1_saurian_front_game_rom_u112.u112" crc="3a1a0656"/>
-        <part name="pa1_saurian_front_game_rom_u113.u113" crc="0cba3a22"/>
-        <part name="pa1_saurian_front_game_rom_u114.u114" crc="1cce75a8"/>
-        <part name="pa1_saurian_front_game_rom_u106.u106" crc="5d6a6c39"/>
-        <part name="pa1_saurian_front_game_rom_u107.u107" crc="5d178b62"/>
-        <part name="pa1_saurian_front_game_rom_u95.u95" crc="8918d0c3"/>
-        <part name="pa1_saurian_front_game_rom_u96.u96" crc="6de6e648"/>
-        <part name="pa1_saurian_front_game_rom_u97.u97" crc="6fba9290"/>
-        <part name="pa1_saurian_front_game_rom_u98.u98" crc="298939f9"/>
-        <part name="pa1_saurian_front_game_rom_u90.u90" crc="ff87ab13"/>
-        <part name="pa1_saurian_front_game_rom_u91.u91" crc="67bd128a"/>
-    </rom>
-    <rom index="1" zip="saurnfrnt.zip|strkforc.zip">
-        <part repeat="0x60000">00</part>
-        <part name="pa1_saurian_front_game_rom_u105.u105" crc="6cd469f3"/>
-        <part repeat="0x60000">00</part>
-        <part name="pa1_saurian_front_game_rom_u89.u89" crc="bf5188df"/>
-    </rom>
-    <rom index="2" zip="saurnfrnt.zip|strkforc.zip">
-        <part name="pa1_saurian_front_sound_rom_u4.u4" crc="f22a09b8"/>
-        <part name="pa1_saurian_front_sound_rom_u4.u4" crc="f22a09b8"/>
-        <part name="pa1_saurian_front_sound_rom_u19.u19" crc="a2dfce0f"/>
-        <part name="pa1_saurian_front_sound_rom_u19.u19" crc="a2dfce0f"/>
-        <part name="pa1_saurian_front_sound_rom_u20.u20" crc="b0e8f6fd"/>
-        <part name="pa1_saurian_front_sound_rom_u20.u20" crc="b0e8f6fd"/>
-    </rom>
-    <switches default="FF,36"><dip name="Test Switch" bits="14" ids="Off,On"/></switches>
-    <buttons names="Fire,Weapon,Weapon Select,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+	<name>Saurian Front (proto v5.0 8/07/90)</name>
+	<mratimestamp>20261015</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>saurnfrnt</setname>
+	<year>1991</year>
+	<manufacturer>Williams</manufacturer>
+	<category>Shooter / Flying</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="FF,36,00">
+		<dip bits="0" name="Coin Meter" ids="Independent,Shared"/>
+		<dip bits="8,13" name="Coinage" ids="Australia 1,Austria,Belgium 1,Belgium 2,Denmark,Findland,France 1,France 2,France 3,German 1,German 2,German 3,Italy 1,Japan 1,Japan 2,Netherlands,New Zealand,Norway,Spain 1,Sweden 1,Swiss 1,Swiss 1,U.K. 1,U.K. 2,U.K. 3,USA 1,USA 2,USA 3" values="42,45,46,47,53,51,60,61,62,57,58,59,37,43,44,50,49,52,41,48,63,36,38,39,40,54,55,56"/>
+		<dip bits="1" name="Credits to Start" ids="1,2" values="1,0"/>
+		<dip bits="5,7" name="Difficulty" ids="Level 0,Level 1,Level 2,Level 3,Level 4,Level 5,Level 6,Level 7" values="3,1,2,0,4,5,6,7"/>
+		<dip bits="2,3" name="Extra Ship Points" ids="40000,50000,100000,750000" values="1,0,3,2"/>
+		<dip bits="15" name="Free Play" ids="Off,On"/>
+		<dip bits="4" name="Lives" ids="3,4"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="14" name="Test Switch" ids="Off,On"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+	</switches>
+	<buttons names="Fire,Weapon,Weapon Select,-,-,-,Start/Transform,Coin,Test,Pause" default="A,B,X,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<part>05</part>
+	</rom>
+	<rom index="0" zip="saurnfrnt.zip|strkforc.zip" md5="ba10c037529dfb85a01d5762bcb7075e" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="6cd469f3" name="pa1_saurian_front_game_rom_u105.u105" map="01"/>
+			<part crc="bf5188df" name="pa1_saurian_front_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="ee7a733d" name="pa1_saurian_front_game_rom_u111.u111"/>
+		<part crc="3a1a0656" name="pa1_saurian_front_game_rom_u112.u112"/>
+		<part crc="0cba3a22" name="pa1_saurian_front_game_rom_u113.u113"/>
+		<part crc="1cce75a8" name="pa1_saurian_front_game_rom_u114.u114"/>
+		<part crc="5d6a6c39" name="pa1_saurian_front_game_rom_u106.u106"/>
+		<part crc="5d178b62" name="pa1_saurian_front_game_rom_u107.u107"/>
+		<part repeat="0x140000">00</part>
+		<part crc="8918d0c3" name="pa1_saurian_front_game_rom_u95.u95"/>
+		<part crc="6de6e648" name="pa1_saurian_front_game_rom_u96.u96"/>
+		<part crc="6fba9290" name="pa1_saurian_front_game_rom_u97.u97"/>
+		<part crc="298939f9" name="pa1_saurian_front_game_rom_u98.u98"/>
+		<part crc="ff87ab13" name="pa1_saurian_front_game_rom_u90.u90"/>
+		<part crc="67bd128a" name="pa1_saurian_front_game_rom_u91.u91"/>
+		<part repeat="0x540000">00</part>
+		<!-- sound CPU -->
+		<part crc="f22a09b8" name="pa1_saurian_front_sound_rom_u4.u4"/>
+		<part crc="f22a09b8" name="pa1_saurian_front_sound_rom_u4.u4"/>
+		<part crc="a2dfce0f" name="pa1_saurian_front_sound_rom_u19.u19"/>
+		<part crc="a2dfce0f" name="pa1_saurian_front_sound_rom_u19.u19"/>
+		<part crc="b0e8f6fd" name="pa1_saurian_front_sound_rom_u20.u20"/>
+		<part crc="b0e8f6fd" name="pa1_saurian_front_sound_rom_u20.u20"/>
+	</rom>
+	<nvram index="2" size="32768"/>
 </misterromdescription>

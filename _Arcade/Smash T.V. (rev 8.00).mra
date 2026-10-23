@@ -1,96 +1,64 @@
 <misterromdescription>
-    <about author="blahm1d"/>
-    <rotation>horizontal</rotation>
-    <name>Smash T.V. (rev 8.00)</name>
-    <setname>smashtv</setname>
-    <mameversion>0280</mameversion>
-    <year>1990</year>
-    <manufacturer>Williams</manufacturer>
-    <players>2</players>
-    <rbf>blahm1d_yunit</rbf>
-    <joystick>8</joystick>
-    <rom index="3"><part>00</part></rom>
-    <!-- Factory-initialised CMOS (MAME 0.289, written by the game itself; no credits).
-         Default only: a saved NVRAM loads over it. sha256 aac94443200068a7bcb5acdea9537f6e0cae0e26b5f57457461fe5b026cabc8c -->
-    <rom index="4">
-		<part>
-			22 00 12 00 21 00 45 00 45 00 50 00 4A 00 86 00 00 00 20 00 01 00 27 00
-			4D 00 4A 00 54 00 CC 00 00 00 19 00 01 00 69 00 44 00 52 00 4A 00 9C 00
-			00 00 10 00 08 00 65 00 44 00 4A 00 54 00 A0 00 00 00 08 00 21 00 64 00
-			4E 00 4C 00 4E 00 8A 00 00 00 05 00 72 00 18 00 4D 00 54 00 4E 00 81 00
-			00 00 05 00 12 00 55 00 54 00 4C 00 43 00 B0 00 00 00 04 00 12 00 50 00
-			46 00 41 00 57 00 BB 00 00 00 03 00 19 00 20 00 46 00 4F 00 4F 00 DF 00
-			00 00 02 00 99 00 44 00 42 00 41 00 54 00 49 00 00 00 02 00 57 00 38 00
-			4D 00 41 00 4E 00 92
-		</part>
-		<part repeat="8421">00</part>
-		<part>
-			FF 00 FF
-		</part>
-		<part repeat="147">00</part>
-		<part>
-			FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 00 FF 00 FF 00
-			FF
-		</part>
-		<part repeat="1483">00</part>
-		<part>
-			01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			03 00 00 00 00 00 13 00 88 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 3C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-			01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00
-			00 00 00 00 00 00 00 00 01
-		</part>
-		<part repeat="155">00</part>
-		<part>
-			FF 00 10 00 53 00 4D 00 41 00 53 00 48 00 20 00 54 00 56 00 20 00 52 00
-			45 00 56 00 49 00 53 00 49 00 4F 00 4E 00 20 00 38 00 2E 00 30 00 30
-		</part>
-		<part repeat="5751">00</part>
-		<part>
-			22 00 12 00 21 00 45 00 45 00 50 00 4A 00 86 00 03 00 05 00 10 00 48 00
-			4A 00 4F 00 4E 00 B8 00 01 00 84 00 80 00 00 00 54 00 49 00 4D 00 10 00
-			01 00 79 00 82 00 18 00 54 00 4A 00 45 00 08 00 01 00 75 00 00 00 72 00
-			4C 00 49 00 50 00 32 00 01 00 69 00 11 00 96 00 4D 00 4C 00 5A 00 FB 00
-			01 00 65 00 10 00 08 00 47 00 57 00 53 00 90 00 01 00 60 00 62 00 33 00
-			41 00 4C 00 54 00 28 00 00 00 57 00 02 00 18 00 42 00 4C 00 53 00 AD 00
-			00 00 50 00 00 00 01 00 4A 00 4F 00 4E 00 C7 00 00 00 45 00 65 00 71 00
-			48 00 45 00 59 00 FE
-		</part>
-		<part repeat="12109">00</part>
-		<part>
-			B4 B4 69 69
-		</part>
-		<part repeat="4096">00</part>
-    </rom>
-    <nvram index="4" size="32768"></nvram>
-    <rom index="0" zip="smashtv.zip">
-        <part name="la1_smash_tv_game_rom_u111.u111" crc="72f0ba84"/>
-        <part name="la1_smash_tv_game_rom_u112.u112" crc="436f0283"/>
-        <part name="la1_smash_tv_game_rom_u113.u113" crc="4a4b8110"/>
-        <part name="la1_smash_tv_game_rom_u95.u95" crc="e864a44b"/>
-        <part name="la1_smash_tv_game_rom_u96.u96" crc="15555ea7"/>
-        <part name="la1_smash_tv_game_rom_u97.u97" crc="ccac9d9e"/>
-        <part name="la1_smash_tv_game_rom_u106.u106" crc="5c718361"/>
-        <part name="la1_smash_tv_game_rom_u107.u107" crc="0fba1e36"/>
-        <part name="la1_smash_tv_game_rom_u108.u108" crc="cb0a092f"/>
-    </rom>
-    <rom index="1" zip="smashtv.zip">
-        <part repeat="0x60000">00</part>
-        <part name="la8_smash_tv_game_rom_u105.u105" crc="48cd793f"/>
-        <part repeat="0x60000">00</part>
-        <part name="la8_smash_tv_game_rom_u89.u89" crc="8e7fe463"/>
-    </rom>
-    <rom index="2" zip="smashtv.zip">
-        <part name="sl2_smash_tv_sound_rom_u4.u4" crc="29d3f6c8"/>
-        <part name="sl2_smash_tv_sound_rom_u4.u4" crc="29d3f6c8"/>
-        <part name="sl2_smash_tv_sound_rom_u19.u19" crc="ac5a402a"/>
-        <part name="sl2_smash_tv_sound_rom_u19.u19" crc="ac5a402a"/>
-        <part name="sl2_smash_tv_sound_rom_u20.u20" crc="875c66d9"/>
-        <part name="sl2_smash_tv_sound_rom_u20.u20" crc="875c66d9"/>
-    </rom>
-    <switches default="FF,FF"><dip name="Test Switch" bits="15" ids="On,Off"/></switches>
-    <buttons names="Fire Up,Fire Down,Fire Left,Fire Right,Service Credit,Start,Coin" default="Y,A,X,B,L,Start,Select" count="5"/>
+	<name>Smash T.V. (rev 8.00)</name>
+	<mratimestamp>20261012</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>smashtv</setname>
+	<year>1990</year>
+	<manufacturer>Williams</manufacturer>
+	<category>Shooter / Multi-directional</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="FF,FF,00">
+		<dip bits="0,5" name="Coinage" ids="Australia 1,Austria 1,Belgium 1,Belgium 2,Denmark 1,Finland,France 1,France 2,France 3,German 1,German 2,German 3,Italy,Japan 1,Japan 2,Netherlands,New Zealand 1,Norway,Spain 1,Sweden,Swiss 1,U.K. 1,U.K. 2,U.K. ECA,USA 1,USA 2,USA 3" values="48,45,44,43,37,39,57,56,55,60,59,58,53,47,46,40,41,38,49,42,54,52,51,50,63,62,61"/>
+		<dip bits="14" name="Rotary Joystick Enable?" ids="Off,On" values="1,0"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="15" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="7" name="Unknown (DS1:1)" ids="Off,On" values="1,0"/>
+		<dip bits="6" name="Unknown (DS1:2)" ids="Off,On" values="1,0"/>
+		<dip bits="13" name="Unknown (DS2:3)" ids="Off,On" values="1,0"/>
+		<dip bits="12" name="Unknown (DS2:4)" ids="Off,On" values="1,0"/>
+		<dip bits="11" name="Unknown (DS2:5)" ids="Off,On" values="1,0"/>
+		<dip bits="10" name="Unknown (DS2:6)" ids="Off,On" values="1,0"/>
+		<dip bits="9" name="Unknown (DS2:7)" ids="Off,On" values="1,0"/>
+		<dip bits="8" name="Unknown (DS2:8)" ids="Off,On" values="1,0"/>
+	</switches>
+	<buttons names="Fire Up,Fire Down,Fire Left,Fire Right,-,-,Start,Coin,Test,Pause" default="X,B,Y,A,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<part>02</part>
+	</rom>
+	<rom index="0" zip="smashtv.zip" md5="d3250ab125e01220f2980aeb705a2f94" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="48cd793f" name="la8_smash_tv_game_rom_u105.u105" map="01"/>
+			<part crc="8e7fe463" name="la8_smash_tv_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="72f0ba84" name="la1_smash_tv_game_rom_u111.u111"/>
+		<part crc="436f0283" name="la1_smash_tv_game_rom_u112.u112"/>
+		<part crc="4a4b8110" name="la1_smash_tv_game_rom_u113.u113"/>
+		<part repeat="0x1A0000">00</part>
+		<part crc="e864a44b" name="la1_smash_tv_game_rom_u95.u95"/>
+		<part crc="15555ea7" name="la1_smash_tv_game_rom_u96.u96"/>
+		<part crc="ccac9d9e" name="la1_smash_tv_game_rom_u97.u97"/>
+		<part repeat="0x1A0000">00</part>
+		<part crc="5c718361" name="la1_smash_tv_game_rom_u106.u106"/>
+		<part crc="0fba1e36" name="la1_smash_tv_game_rom_u107.u107"/>
+		<part crc="cb0a092f" name="la1_smash_tv_game_rom_u108.u108"/>
+		<part repeat="0x3A0000">00</part>
+		<!-- sound CPU -->
+		<part crc="29d3f6c8" name="sl2_smash_tv_sound_rom_u4.u4"/>
+		<part crc="29d3f6c8" name="sl2_smash_tv_sound_rom_u4.u4"/>
+		<part crc="ac5a402a" name="sl2_smash_tv_sound_rom_u19.u19"/>
+		<part crc="ac5a402a" name="sl2_smash_tv_sound_rom_u19.u19"/>
+		<part crc="875c66d9" name="sl2_smash_tv_sound_rom_u20.u20"/>
+		<part crc="875c66d9" name="sl2_smash_tv_sound_rom_u20.u20"/>
+	</rom>
+	<nvram index="2" size="32768"/>
 </misterromdescription>

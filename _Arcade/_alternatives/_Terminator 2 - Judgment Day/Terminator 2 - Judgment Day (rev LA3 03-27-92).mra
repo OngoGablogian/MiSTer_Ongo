@@ -1,0 +1,69 @@
+<misterromdescription>
+	<name>Terminator 2 - Judgment Day (rev LA3 03/27/92)</name>
+	<mratimestamp>20261012</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>term2la3</setname>
+	<year>1991</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Shooter / Gun</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="FB,DF,00">
+		<dip bits="10" name="Cabinet?" ids="Dedicated,Kit" values="1,0"/>
+		<dip bits="3,5" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
+		<dip bits="6" name="Coinage Source" ids="CMOS,Dipswitch"/>
+		<dip bits="12" name="Counters" ids="One,Two" values="1,0"/>
+		<dip bits="14,15" name="Country" ids="French,German,Unused,USA" values="2,1,0,3"/>
+		<dip bits="0,2" name="Credits" ids="1 Start/1 Continue,2 Start/1 Continue,2 Start/2 Continue,3 Start/1 Continue,3 Start/2 Continue,3 Start/3 Continue,4 Start/1 Continue,4 Start/2 Continue" values="3,7,5,1,2,0,6,4"/>
+		<dip bits="19" name="Crosshair" ids="Off,On" values="1,0"/>
+		<dip bits="7" name="Display" ids="Mirrored,Normal"/>
+		<dip bits="18" name="Gun Control" ids="Joystick,Mouse"/>
+		<dip bits="11" name="Players" ids="1 Player,2 Players"/>
+		<dip bits="13" name="Power-Up Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="9" name="Video Freeze" ids="Off,On" values="1,0"/>
+	</switches>
+	<buttons names="Trigger,Bomb,-,-,-,-,Start,Coin,Test,Pause" default="A,B,-,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+0xA00000 OKI M6295 samples (1 MB)
+	</romstruct>
+	<rom index="1">
+		<part>0A</part>
+	</rom>
+	<rom index="0" zip="term2la3.zip|term2.zip" md5="0959d12db4a331e011235a86941efade" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="34142b28" name="la3_terminator_2_game_rom_u105.u105" map="01"/>
+			<part crc="5ffea427" name="la3_terminator_2_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="916d0197" name="la1_terminator_2_game_rom_u111.u111"/>
+		<part crc="39ae1c87" name="la1_terminator_2_game_rom_u112.u112"/>
+		<part crc="cb5084e5" name="la1_terminator_2_game_rom_u113.u113"/>
+		<part crc="53c516ec" name="la1_terminator_2_game_rom_u114.u114"/>
+		<part crc="dd39cf73" name="la1_terminator_2_game_rom_u95.u95"/>
+		<part crc="31f4fd36" name="la1_terminator_2_game_rom_u96.u96"/>
+		<part crc="7f72e775" name="la1_terminator_2_game_rom_u97.u97"/>
+		<part crc="1a20ce29" name="la1_terminator_2_game_rom_u98.u98"/>
+		<part crc="f08a9536" name="la1_terminator_2_game_rom_u106.u106"/>
+		<part crc="268d4035" name="la1_terminator_2_game_rom_u107.u107"/>
+		<part crc="379fdaed" name="la1_terminator_2_game_rom_u108.u108"/>
+		<part crc="306a9366" name="la1_terminator_2_game_rom_u109.u109"/>
+		<part repeat="0x200000">00</part>
+		<!-- sound CPU -->
+		<part crc="73c3f5c4" name="sl1_terminator_2_u3_sound_rom.u3"/>
+		<part crc="73c3f5c4" name="sl1_terminator_2_u3_sound_rom.u3"/>
+		<part repeat="0xC0000">00</part>
+		<!-- OKI samples -->
+		<part crc="e192a40d" name="sl1_terminator_2_u12_sound_rom.u12"/>
+		<part crc="e192a40d" name="sl1_terminator_2_u12_sound_rom.u12"/>
+		<part crc="956fa80b" name="sl1_terminator_2_u13_sound_rom.u13"/>
+		<part crc="956fa80b" name="sl1_terminator_2_u13_sound_rom.u13"/>
+	</rom>
+	<nvram index="2" size="32768"/>
+</misterromdescription>

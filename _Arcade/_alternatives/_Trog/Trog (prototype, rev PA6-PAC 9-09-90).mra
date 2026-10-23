@@ -1,0 +1,64 @@
+<misterromdescription>
+	<name>Trog (prototype, rev PA6-PAC 9/09/90)</name>
+	<mratimestamp>20261012</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>trogpa6</setname>
+	<year>1990</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Maze / Collect</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>4 players</remark>
+	<switches default="FF,DF,00">
+		<dip bits="7" name="Cabinet" ids="Cocktail,Upright"/>
+		<dip bits="12" name="Coin Counters" ids="One,Two" values="1,0"/>
+		<dip bits="3,5" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
+		<dip bits="6" name="Coinage Source" ids="CMOS,Dipswitch"/>
+		<dip bits="14,15" name="Country" ids="French,German,Unused,USA" values="2,1,0,3"/>
+		<dip bits="10,11" name="Players" ids="1 Player,2 Players,3 Players,4 Players" values="0,2,1,3"/>
+		<dip bits="13" name="Power-Up Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="9" name="Video Freeze" ids="Off,On" values="1,0"/>
+	</switches>
+	<buttons names="Punch,-,-,-,-,-,Start,Coin,Test,Pause" default="A,-,-,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<part>00</part>
+	</rom>
+	<rom index="0" zip="trogpa6.zip|trog.zip" md5="754a3361c645db17253b966e2af61f9e" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="71ad1903" name="trog_ii_u-105_rev.6.u105" map="01"/>
+			<part crc="04473da8" name="trog_ii_u-89_rev.6.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="9ded08c1" name="trog_ii_u-111_la-1.u111"/>
+		<part crc="42293843" name="trog_ii_u-112_la-1.u112"/>
+		<part crc="ae50e5ea" name="trog_ii_u-113_rev.5.u113"/>
+		<part repeat="0x20000">00</part>
+		<part crc="af2eb0d8" name="trog_ii_u-106_la-1.u106"/>
+		<part crc="88a7b3f6" name="trog_ii_u-107_la-1.u107"/>
+		<part repeat="0x140000">00</part>
+		<part crc="f3ba2838" name="trog_ii_u-95_la-1.u95"/>
+		<part crc="cfed2e77" name="trog_ii_u-96_la-1.u96"/>
+		<part crc="354b1cb3" name="trog_ii_u-97_rev.5.u97"/>
+		<part repeat="0x20000">00</part>
+		<part crc="16e06753" name="trog_ii_u-90_la-1.u90"/>
+		<part crc="880a02c7" name="trog_ii_u-91_la-1.u91"/>
+		<part repeat="0x540000">00</part>
+		<!-- sound CPU -->
+		<part crc="759d0bf4" name="trog_ii_u-4_sl_1.u4"/>
+		<part crc="759d0bf4" name="trog_ii_u-4_sl_1.u4"/>
+		<part crc="960c333d" name="trog_ii_u-19_sl_1.u19"/>
+		<part crc="960c333d" name="trog_ii_u-19_sl_1.u19"/>
+		<part crc="67f1658a" name="trog_ii_u-20_sl_1.u20"/>
+		<part crc="67f1658a" name="trog_ii_u-20_sl_1.u20"/>
+	</rom>
+	<nvram index="2" size="32768"/>
+</misterromdescription>

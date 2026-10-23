@@ -1,0 +1,66 @@
+<misterromdescription>
+	<name>Super High Impact (prototype, proto 5.0 09/15/91)</name>
+	<mratimestamp>20261015</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>shimpactp5</setname>
+	<year>1991</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Sports / Football</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>4 players</remark>
+	<switches default="FE,FF,00">
+		<dip bits="0" name="Card Dispenser" ids="Off,On"/>
+		<dip bits="12" name="Coin Counters" ids="One,Two" values="1,0"/>
+		<dip bits="3,6" name="Coinage" ids="1 Coin/1 Credit,2 Coins/1 Credit,2C/1C - 4C/3C,2C/1C - 4C/4C,ECA,Free Play" values="15,11,13,9,14,8"/>
+		<dip bits="14,15" name="Country" ids="French,German,Unused,USA" values="2,1,0,3"/>
+		<dip bits="7" name="Players" ids="2,4"/>
+		<dip bits="13" name="Power-Up Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+	</switches>
+	<buttons names="Action,-,-,-,-,-,Start,Coin,Test,Pause" default="A,-,-,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<!-- game id; no hidden menu (tools/yunit_fmoves.py) -->
+		<part>
+		04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 02 00
+		</part>
+	</rom>
+	<rom index="0" zip="shimpactp5.zip|shimpact.zip" md5="d42c880e1139b841801631cce119e582" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="4342cd45" name="proto5_super_high_impact_game_rom_u105.u105" map="01"/>
+			<part crc="cda47b73" name="proto5_super_high_impact_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="80ae2a86" name="proto3_super_high_impact_game_rom_u111.u111"/>
+		<part crc="3ffc27e9" name="proto3_super_high_impact_game_rom_u112.u112"/>
+		<part crc="01549d00" name="proto3_super_high_impact_game_rom_u113.u113"/>
+		<part crc="56f96a67" name="proto3_super_high_impact_game_rom_u114.u114"/>
+		<part repeat="0x100000">00</part>
+		<part crc="e8f56ef5" name="proto3_super_high_impact_game_rom_u95.u95"/>
+		<part crc="24ed04f9" name="proto3_super_high_impact_game_rom_u96.u96"/>
+		<part crc="dd7f41a9" name="proto3_super_high_impact_game_rom_u97.u97"/>
+		<part crc="28418723" name="proto3_super_high_impact_game_rom_u98.u98"/>
+		<part repeat="0x100000">00</part>
+		<part crc="6f5bf337" name="proto3_super_high_impact_game_rom_u106.u106"/>
+		<part crc="a8815dad" name="proto3_super_high_impact_game_rom_u107.u107"/>
+		<part crc="d39685a3" name="proto3_super_high_impact_game_rom_u108.u108"/>
+		<part crc="58f71141" name="proto3_super_high_impact_game_rom_u109.u109"/>
+		<part repeat="0x300000">00</part>
+		<!-- sound CPU -->
+		<part crc="1e5a012c" name="sl1_super_high_impact_u4_sound_rom.u4"/>
+		<part crc="10f9684e" name="sl1_super_high_impact_u19_sound_rom.u19"/>
+		<part crc="1b4a71c1" name="sl1_super_high_impact_u20_sound_rom.u20"/>
+	</rom>
+	<nvram index="2" size="32768"/>
+</misterromdescription>

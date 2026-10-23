@@ -1,0 +1,70 @@
+<misterromdescription>
+	<name>Total Carnage (prototype, proto v 2.0 02/10/92)</name>
+	<mratimestamp>20261012</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>totcarnp2</setname>
+	<year>1992</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Shooter / Multi-directional</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="BF,FF,00">
+		<dip bits="0,5" name="Coinage" ids="Australia 1,Austria 1,Belgium 1,Belgium 2,Denmark 1,Denmark 2,Finland,France 2,France 3,France 4,German 1,German 2,German 3,Italy,Japan 1,Japan 2,Netherlands,New Zealand 1,Norway,Spain 1,Sweden,Swiss 1,U.K. 1,U.K. 2,U.K. ECA,USA 1,USA 2,USA 3" values="48,45,44,43,37,0,39,57,56,55,60,59,58,53,47,46,40,41,38,49,42,54,52,51,50,63,62,61"/>
+		<dip bits="6" name="Coinage Source" ids="CMOS,Dipswitch" values="1,0"/>
+		<dip bits="7" name="Keys for Pleasure Dome" ids="200,220"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="15" name="Unknown (DS2:1)" ids="Off,On" values="1,0"/>
+		<dip bits="14" name="Unknown (DS2:2)" ids="Off,On" values="1,0"/>
+		<dip bits="13" name="Unknown (DS2:3)" ids="Off,On" values="1,0"/>
+		<dip bits="12" name="Unknown (DS2:4)" ids="Off,On" values="1,0"/>
+		<dip bits="11" name="Unknown (DS2:5)" ids="Off,On" values="1,0"/>
+		<dip bits="10" name="Unknown (DS2:6)" ids="Off,On" values="1,0"/>
+		<dip bits="9" name="Unknown (DS2:7)" ids="Off,On" values="1,0"/>
+	</switches>
+	<buttons names="Fire Up,Fire Down,Fire Left,Fire Right,-,-,Start/Bomb,Coin,Test,Pause" default="X,B,Y,A,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+0xA00000 OKI M6295 samples (1 MB)
+	</romstruct>
+	<rom index="1">
+		<part>0D</part>
+	</rom>
+	<rom index="0" zip="totcarnp2.zip|totcarn.zip" md5="1f13b20e019a7ff895c46fb59f38a9f0" type="merged">
+		<!-- program ROM -->
+		<part repeat="0x80000">00</part>
+		<interleave output="16">
+			<part crc="e273d43c" name="proto2_total_carnage_game_rom_u105.u105" map="01"/>
+			<part crc="e759078b" name="proto2_total_carnage_game_rom_u89.u89" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="13f3f231" name="la1_total_carnage_game_rom_u111.u111"/>
+		<part crc="72e45007" name="la1_total_carnage_game_rom_u112.u112"/>
+		<part crc="2c8ec753" name="la1_total_carnage_game_rom_u113.u113"/>
+		<part crc="6210c36c" name="la1_total_carnage_game_rom_u114.u114"/>
+		<part repeat="0x100000">00</part>
+		<part crc="579caeba" name="la1_total_carnage_game_rom_u95.u95"/>
+		<part crc="f43f1ffe" name="la1_total_carnage_game_rom_u96.u96"/>
+		<part crc="1675e50d" name="la1_total_carnage_game_rom_u97.u97"/>
+		<part crc="ab06c885" name="la1_total_carnage_game_rom_u98.u98"/>
+		<part repeat="0x100000">00</part>
+		<part crc="146e3863" name="la1_total_carnage_game_rom_u106.u106"/>
+		<part crc="95323320" name="la1_total_carnage_game_rom_u107.u107"/>
+		<part crc="ed152acc" name="la1_total_carnage_game_rom_u108.u108"/>
+		<part crc="80715252" name="la1_total_carnage_game_rom_u109.u109"/>
+		<part repeat="0x300000">00</part>
+		<!-- sound CPU -->
+		<part crc="5bdb4665" name="sl1_total_carnage_sound_rom_u3.u3"/>
+		<part crc="5bdb4665" name="sl1_total_carnage_sound_rom_u3.u3"/>
+		<part repeat="0xC0000">00</part>
+		<!-- OKI samples -->
+		<part crc="d0000ac7" name="sl1_total_carnage_sound_rom_u12.u12"/>
+		<part crc="d0000ac7" name="sl1_total_carnage_sound_rom_u12.u12"/>
+		<part crc="e48e6f0c" name="sl1_total_carnage_sound_rom_u13.u13"/>
+		<part crc="e48e6f0c" name="sl1_total_carnage_sound_rom_u13.u13"/>
+	</rom>
+	<nvram index="2" size="32768"/>
+</misterromdescription>

@@ -93,8 +93,9 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Midway V Unit (War Gods)](https://mister.blahm1d.com/core-wargods.html)                                                       |
 | [Midway Wolf Unit](https://mister.blahm1d.com/core-wolfunit.html)                                                              |
 | [Midway X Unit](https://mister.blahm1d.com/core-xunit.html)                                                                    |
-| [Midway Y Unit](https://mister.blahm1d.com/core-yunit.html)                                                                    |
-| [Midway Y Unit (ADPCM)](https://mister.blahm1d.com/core-yunitadpcm.html)                                                       |
+| [Midway Y Unit (blahm1d)](https://mister.blahm1d.com/core-yunit.html)                                                          |
+| [Midway Y Unit (ADPCM) (blahm1d)](https://mister.blahm1d.com/core-yunitadpcm.html)                                             |
+| [Midway Y Unit (Gm0rk)](https://github.com/Gm0rk/Arcade-Midway-Y-Unit_MiSTer)                                                  |
 | [Midway Zeus (Invasion: The Abductors)](https://mister.blahm1d.com/core-invasion.html)                                         |
 | [Midway Zeus (Mortal Kombat 4)](https://mister.blahm1d.com/core-mk4.html)                                                      |
 | [Millipede](https://github.com/Usquebagh/Arcade-Millipede_MiSTer)                                                              |
