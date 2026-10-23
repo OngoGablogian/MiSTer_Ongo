@@ -78,7 +78,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Kaneko Family](https://www.patreon.com/bazset/posts/blood-warrior-172051209)                                                  |
 | [Kaneko Super Nova System](https://github.com/srg320/Arcade-SKNS_MiSTer)                                                       |
 | [Kickle Cubicle / Meikyuu Jima](https://www.patreon.com/bazset/posts/kickle-cubicle-172196207)                                 |
-| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1559340446617174098)                |
+| [Killer Instinct 1 & 2](https://discord.com/channels/647909397477195803/737506076806611064/1562882311811236014)                |
 | [Konami Bemani DJ-Main](https://github.com/kyledlester/Konami_Bemani_DJ-Main_MiSTer_FPGA)                                      |
 | [Konami GX](https://github.com/ppriest/Arcade-KonamiGX_MiSTer)                                                                 |
 | [Konami GX857 Hardware](https://www.patreon.com/Meathax/posts/s-p-y-special-y-172508459)                                       |
