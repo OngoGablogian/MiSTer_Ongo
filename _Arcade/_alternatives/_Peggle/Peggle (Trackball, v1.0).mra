@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Peggle (Trackball, v1.0)</name>
+    <setname>pegglet</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261004</mratimestamp>
+    <year>1991</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Puzzle / Pachinko</category>
+    <players>1</players>
+    <joystick>dial</joystick>
+    <rotation>vertical (cw)</rotation>
+    <num_buttons>1</num_buttons>
+    <buttons names="Start,Coin,Service" default="Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 0B = itech8 6809 board (3), 64 KB program
+(bit 3); second byte 8B = MAME's lo memory map (bit 0), 2 page large
+display at 8 MHz (bits 2-1 = 1), YM3812 sound board with a PIA (bits 4-3
+= 1), vertical, turned clockwise (bit 7, MAME ROT90); third byte 07 =
+Peggle's inputs (dial on blitter register 13).
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (128K used) -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region (384K used)-> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>0B 8B 07</part>
+    </rom>
+
+    <rom index="0" zip="pegglet.zip|peggle.zip" md5="40030537c2ebe6d93c7c6e6a48b16c3d">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="sound.u27" crc="b99beb70"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="trakball.u5" crc="d2694868"/>
+        <!-- OKI M6295 samples -->
+        <part name="srom0" crc="001846ea"/>
+        <part repeat="0x20000">00</part>
+        <!-- graphics ROMs -->
+        <part name="grom0.bin" crc="5c02348d"/>
+        <part name="grom1.bin" crc="85a7a3a2"/>
+        <part name="grom2.bin" crc="bfe11f18"/>
+        <part repeat="0x60000">00</part>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

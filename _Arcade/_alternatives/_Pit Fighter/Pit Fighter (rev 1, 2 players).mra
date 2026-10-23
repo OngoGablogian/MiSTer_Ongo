@@ -1,0 +1,115 @@
+<misterromdescription>
+    <name>Pit Fighter (rev 1, 2 players)</name>
+    <mratimestamp>20260926</mratimestamp>
+    <mameversion>0264</mameversion>
+    <setname>pitfight1p2</setname>
+    <year>1990</year>
+    <manufacturer>Atari Games</manufacturer>
+    <category>Fighter</category>
+    <rbf>Gm0rk_Atari-G1</rbf>
+    <rotation>horizontal</rotation>
+    <players>2</players>
+    <num_buttons>3</num_buttons>
+    <buttons names="Punch,Kick,Jump,Start,Coin" default="A,B,X,Start,R"/>
+
+    <romstruct>
+SDRAM layout, the same for every Atari G1 set (unused space is zero-filled):
+000000 - 07FFFF  512K  68000 program
+080000 - 27FFFF    2M  RLE motion objects
+280000 - 2FFFFF  512K  playfield planes 0-3
+300000 - 31FFFF  128K  playfield plane 4
+320000 - 33FFFF  128K  alpha characters
+340000 - 37FFFF  256K  OKI6295 samples
+380000 - 38FFFF   64K  JSA II 6502 program
+390000 - 3905FF  1.5K  motion object PROMs
+    </romstruct>
+
+    <rom index="0" zip="pitfight1p2.zip|pitfight.zip" md5="92449598d404ca3e9f40a566abcdf81f">
+
+        <!-- $000000  68000 program -->
+        <interleave output="16">
+            <part name="136081-1628.05d" crc="63bb8d56" map="01"/>
+            <part name="136081-1629.05b" crc="d732b382" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1630.15d" crc="8c4a166d" map="01"/>
+            <part name="136081-1631.15b" crc="69857cc0" map="10"/>
+        </interleave>
+        <part repeat="262144">00</part>
+
+        <!-- $080000  RLE motion objects -->
+        <interleave output="16">
+            <part name="136081-1002.65n" crc="f1d76a4c" map="01"/>
+            <part name="136081-1001.65r" crc="3af31444" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1004.70n" crc="977744da" map="01"/>
+            <part name="136081-1003.70r" crc="28c41c2a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1006.75n" crc="b6ccd77e" map="01"/>
+            <part name="136081-1005.75r" crc="ae59aef2" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1008.90n" crc="09bd047c" map="01"/>
+            <part name="136081-1007.90r" crc="ba33b0c0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1010.100n" crc="eca94bdc" map="01"/>
+            <part name="136081-1009.100r" crc="ab85b00b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1012.115n" crc="efd1152d" map="01"/>
+            <part name="136081-1011.115r" crc="a86582fd" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1014.120n" crc="93bfcc15" map="01"/>
+            <part name="136081-1013.120r" crc="a141379e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136081-1016.130n" crc="19c3fbe0" map="01"/>
+            <part name="136081-1015.130r" crc="9378ad0b" map="10"/>
+        </interleave>
+
+        <!-- $280000  playfield planes 0-3 (EVEN ROM first) -->
+        <interleave output="32">
+            <part name="136081-1021.90m" crc="777efee3" map="0021"/>
+            <part name="136081-1017.130m" crc="ad3cfea5" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="136081-1022.75m" crc="524319d0" map="0021"/>
+            <part name="136081-1018.120m" crc="1a0f8bcf" map="2100"/>
+        </interleave>
+        <part repeat="131072">00</part>
+        <part repeat="131072">00</part>
+
+        <!-- $300000  playfield plane 4 -->
+        <part name="136081-1025.45m" crc="fc41691a"/>
+        <part repeat="65536">00</part>
+
+        <!-- $320000  alpha characters (already linear) -->
+        <part name="136081-1027.15l" crc="a59f381d"/>
+        <part repeat="65536">00</part>
+
+        <!-- $340000  OKI6295 samples -->
+        <part name="136081-1061.7k" crc="5b0468c6"/>
+        <part name="136081-1062.7j" crc="f73fe3cb"/>
+        <part name="136081-1063.7e" crc="aa93421d"/>
+        <part name="136081-1064.7d" crc="33f045d5"/>
+
+        <!-- $380000  JSA II 6502 program -->
+        <part name="136081-1060.1b" crc="231d71d7"/>
+
+        <!-- $390000  growth renderer microcode PROMs -->
+        <part name="136081-1040.30s" crc="9b0f8b95"/>
+        <part name="136081-1041.25s" crc="f7ba6153"/>
+        <part name="136081-1042.20s" crc="3572fe68"/>
+    </rom>
+
+    <!-- game, slapstic, window base, clipL, clipR low, pfXoff, flags, objcount hi/lo -->
+    <rom index="1">
+        <part>01 72 03 28 27 02 06 05 20</part>
+    </rom>
+
+    <nvram index="2" size="2048"/>
+</misterromdescription>

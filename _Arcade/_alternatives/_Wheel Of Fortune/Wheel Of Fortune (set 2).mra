@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Wheel Of Fortune (set 2)</name>
+    <setname>wfortunea</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261004</mratimestamp>
+    <year>1989</year>
+    <manufacturer>GameTek</manufacturer>
+    <category>Quiz</category>
+    <players>3</players>
+    <joystick>dial</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>1</num_buttons>
+    <buttons names="Button,Coin,Service" default="A,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 0B = itech8 6809 board (3), 64 KB program
+(bit 3), horizontal; second byte 00 = two-layer display, YM2203 sound
+board; third byte 01 = Wheel Of Fortune's inputs (dial on blitter
+register 13).
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (128K used) -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region (256K used)-> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>0B 00 01</part>
+    </rom>
+
+    <rom index="0" zip="wfortunea.zip|wfortune.zip" md5="50d8799370346ac7e474701400af832c">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="wof_snd-wof.u27" crc="0a6aa5dc"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="wof-pgm_r1.u5" crc="c3d3eb21"/>
+        <!-- OKI M6295 samples -->
+        <part name="wof_vr-sbom0.srom0" crc="5c28c3fe"/>
+        <part repeat="0x20000">00</part>
+        <!-- graphics ROMs -->
+        <part name="grom0-wof.grom0" crc="9a157b2c"/>
+        <part name="grom1-wof.grom1" crc="5064739b"/>
+        <part name="grom2-wof.grom2" crc="3d393b2b"/>
+        <part name="grom3-wof.grom3" crc="117a2ce9"/>
+        <part repeat="0x80000">00</part>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

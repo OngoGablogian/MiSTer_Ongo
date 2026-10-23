@@ -1,0 +1,58 @@
+<misterromdescription>
+    <name>Grudge Match (Yankee Game Technology)</name>
+    <setname>grmatch</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261010</mratimestamp>
+    <year>1989</year>
+    <manufacturer>Yankee Game Technology</manufacturer>
+    <category>Sports / Wrestling</category>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Button 1,Button 2,Start,Coin,Service" default="A,B,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 0B = itech8 6809 board (3), 64 KB program
+(bit 3); second byte 1E = Grudge Match's display, two 4-bit layers with
+TMS34070 palettes (bits 2-1 = 3), YM2608 sound board (bits 4-3 = 3);
+third byte 02 = Grudge Match's inputs.
+Needs MAME's ym2608.zip (the YM2608's internal rhythm ROM) next to
+grmatch.zip.
+Download stream (ioctl index 0), 1,277,952 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 037FFF  128K  YM2608 ADPCM-B samples          -> SDRAM bank 2
+038000 - 039FFF    8K  YM2608 rhythm ROM               -> SDRAM bank 2
+03A000 - 057FFF  120K  padding                         -> SDRAM bank 2
+058000 - 137FFF  896K  graphics ROMs                   -> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>0B 1E 02</part>
+    </rom>
+
+    <rom index="0" zip="grmatch.zip|ym2608.zip" md5="9630a1dccb661810e164ea86e8326029">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="grudgematch.u27" crc="59c18e63"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="grudgematch.u5" crc="11cadec9"/>
+        <!-- YM2608 ADPCM-B samples -->
+        <part name="srom0.bin" crc="49bce954"/>
+        <!-- YM2608 internal rhythm ROM (ym2608.zip) -->
+        <part name="ym2608_adpcm_rom.bin" crc="23c9e0d8"/>
+        <part repeat="0x1E000">00</part>
+        <!-- graphics ROMs -->
+        <part name="grom0.bin" crc="9064eff9"/>
+        <part name="grom1.bin" crc="6919c314"/>
+        <part name="grom2.bin" crc="36b1682c"/>
+        <part name="grom3.bin" crc="7bf05f61"/>
+        <part name="grom4.bin" crc="55bded89"/>
+        <part name="grom5.bin" crc="37b47b2e"/>
+        <part name="grom6.bin" crc="860ee822"/>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

@@ -1,0 +1,99 @@
+<misterromdescription>
+    <name>Guardians of the 'Hood</name>
+    <mratimestamp>20260927</mratimestamp>
+    <mameversion>0264</mameversion>
+    <setname>guardian</setname>
+    <year>1992</year>
+    <manufacturer>Atari Games</manufacturer>
+    <category>Fighter</category>
+    <rbf>Gm0rk_Atari-G42</rbf>
+    <rotation>horizontal</rotation>
+    <players>3</players>
+    <num_buttons>5</num_buttons>
+    <buttons names="Punch 1,Kick 1,Defend,Punch 2,Kick 2,Coin,Start" default="Y,B,R,X,A,Select,Start"/>
+
+    <romstruct>
+SDRAM layout, the same for every Atari G42 set (gaps and unused space are zero-filled):
+000000 - 07FFFF  512K  68000 program
+080000 - 0FFFFF  512K  OKI6295 samples
+100000 - 11FFFF  128K  alphanumerics
+120000 - 12FFFF   64K  JSA III 6502 program
+130000 - 1307FF    2K  EEPROM factory image
+131000 - 132FFF    8K  ASIC65 TMS32010 program (Road Riot)
+140000 - 1BFFFF  512K  playfield, first third
+1C0000 - 23FFFF  512K  playfield, second third
+240000 - 2BFFFF  512K  playfield, last third
+2C0000 - 8BFFFF    6M  RLE motion objects (this set; the image ends here)
+    </romstruct>
+
+    <rom index="0" zip="guardian.zip" md5="fb0915dcac3ae1daf0c375d953ffe88a">
+
+        <!-- $000000  68000 program, 512K: big-endian words, the even-offset ROMs (8e, 9e) are the high bytes -->
+        <interleave output="16">
+            <part name="136092-2021.8e" crc="efea1e02" map="01"/>
+            <part name="136092-2020.8cd" crc="a8f655ba" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136092-2023.9e" crc="cfa29316" map="01"/>
+            <part name="136092-2022.9cd" crc="ed2abc91" map="10"/>
+        </interleave>
+
+        <!-- $080000  OKI6295 samples, 512K -->
+        <part name="136092-0010-snd.19e" crc="bca27f40"/>
+
+        <!-- $100000  alphanumerics, 128K -->
+        <part name="136092-0030.23k" crc="0fd7baa1"/>
+
+        <!-- $120000  JSA III 6502 program, 64K -->
+        <part name="136092-0080-snd.12c" crc="0388f805"/>
+
+        <!-- $130000  EEPROM factory image, 2K; zero to $131000 -->
+        <part name="guardian-eeprom.5c" crc="85835fab"/>
+        <part repeat="0x800">00</part>
+
+        <!-- $131000  ASIC65 TMS32010 program: none, this set's ASIC65 is simulated; zero to $140000 -->
+        <part repeat="0xF000">00</part>
+
+        <!-- $140000  playfield, first third, 512K: MAME "tiles" $000000-$07FFFF, 32768 tiles of 16 bytes -->
+        <part name="136092-0037a.23e" crc="ca10b63e"/>
+
+        <!-- $1C0000  playfield, second third, 512K: MAME "tiles" $080000-$0FFFFF, 32768 tiles of 16 bytes -->
+        <part name="136092-0038a.22e" crc="cb1431a1"/>
+
+        <!-- $240000  playfield, last third, 512K: MAME "tiles" $100000-$17FFFF, 32768 tiles of 16 bytes -->
+        <part name="136092-0039a.20e" crc="2eee7188"/>
+
+        <!-- $2C0000  RLE motion objects, 6M: big-endian words, the "s" ROMs are the high bytes, the "p" ROMs the low -->
+        <interleave output="16">
+            <part name="136092-0041.2s" crc="a2a5ae08" map="01"/>
+            <part name="136092-0040.2p" crc="ef95132e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136092-0043.3s" crc="6438b8e4" map="01"/>
+            <part name="136092-0042.3p" crc="46bf7c0d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136092-0045.4s" crc="4f4f2bee" map="01"/>
+            <part name="136092-0044.4p" crc="20a4250b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136092-0063a.6s" crc="93933bcf" map="01"/>
+            <part name="136092-0062a.6p" crc="613e6f1d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136092-0065a.7s" crc="6bcd1205" map="01"/>
+            <part name="136092-0064a.7p" crc="7b4dce05" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136092-0067a.9s" crc="15845fba" map="01"/>
+            <part name="136092-0066a.9p" crc="7130c575" map="10"/>
+        </interleave>
+    </rom>
+
+    <!-- g42_cfg_t: game 2 (Guardians), SLOOP 2 (Guardians), flags $0C (RTS at $080000, 32768 tiles), MO palette $400, PF palette $000, MO colour mask $3F, 4750 objects -->
+    <rom index="1">
+        <part>02 02 0C 04 00 3F 12 8E</part>
+    </rom>
+
+    <nvram index="2" size="2048"/>
+</misterromdescription>

@@ -1,0 +1,48 @@
+<misterromdescription>
+    <name>Arlington Horse Racing (v1.40-D)</name>
+    <setname>arlingtn</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261004</mratimestamp>
+    <year>1991</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Sports / Horse Racing</category>
+    <players>1</players>
+    <joystick>2-way vertical</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>5</num_buttons>
+    <buttons names="Win,Place,Show,Collect,Start Race,Coin,Service" default="A,B,X,Y,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 1B = itech8 6809 board (3), 64 KB program
+(bit 3), program bank bit inverted (bit 4), horizontal; second byte 0A =
+2 page large display at 8 MHz (bits 2-1 = 1), YM3812 sound board with a
+PIA (bits 4-3 = 1); third byte 05 = Arlington's inputs.
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples                    -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region (320K used)-> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>1B 0A 05</part>
+    </rom>
+
+    <rom index="0" zip="arlingtn.zip" md5="9bcc4669c5cd247ccd064fdc5e8aadba">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="ahr_snd_v1.1_u27.u27" crc="dec57dca"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="ahr-d_v_1.40_u5.u5" crc="02338ddd"/>
+        <!-- OKI M6295 samples -->
+        <part name="ahr_srom0.srom0" crc="56087f81"/>
+        <!-- graphics ROMs -->
+        <part name="ahr_grom0.grom0" crc="5ef57fe5"/>
+        <part name="ahr_grom1.grom1" crc="6aca95c0"/>
+        <part name="ahr_grom2.grom2" crc="6d6fde1b"/>
+        <part repeat="0x70000">00</part>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

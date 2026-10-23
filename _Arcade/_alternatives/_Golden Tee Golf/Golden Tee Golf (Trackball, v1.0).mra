@@ -1,0 +1,49 @@
+<misterromdescription>
+    <name>Golden Tee Golf (Trackball, v1.0)</name>
+    <setname>gtgt10</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261003</mratimestamp>
+    <year>1989</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Sports / Golf</category>
+    <players>4</players>
+    <joystick>trackball</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Face Left,Face Right,Start,Coin,Service" default="A,B,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 4B = itech8 6809 board (3), 64 KB program
+(bit 3), trackball (bit 6), horizontal.
+Download stream (ioctl index 0), 1,081,344 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (128K used) -> SDRAM bank 2
+058000 - 107FFF  704K  graphics ROM region            -> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>4B</part>
+    </rom>
+
+    <rom index="0" zip="gtgt10.zip|gtg.zip" md5="a774d5b227377986ef41f05112e751ec">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="golf_snd_u27.u27" crc="471da557"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="gtg_bim_1.0.u5" crc="ec70b510"/>
+        <!-- OKI M6295 samples -->
+        <part name="golf_srom0.srom0" crc="d041e0c9"/>
+        <part repeat="0x20000">00</part>
+        <!-- graphics ROMs -->
+        <part name="golf_grom00.grom0" crc="a29c688a"/>
+        <part name="golf_grom01.grom1" crc="b52a23f6"/>
+        <part name="golf_grom02.grom2" crc="9b8e3a61"/>
+        <part name="golf_grom03.grom3" crc="b6e9fb15"/>
+        <part name="golf_grom04.grom4" crc="faa16729"/>
+        <part name="golf_grom05.grom5" crc="44b47015"/>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

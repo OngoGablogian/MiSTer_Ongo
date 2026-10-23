@@ -1,0 +1,128 @@
+<misterromdescription>
+    <name>Hydra (prototype 5/14/90)</name>
+    <mratimestamp>20260926</mratimestamp>
+    <mameversion>0264</mameversion>
+    <setname>hydrap</setname>
+    <year>1990</year>
+    <manufacturer>Atari Games</manufacturer>
+    <category>Racing</category>
+    <rbf>Gm0rk_Atari-G1</rbf>
+    <rotation>horizontal</rotation>
+    <players>1</players>
+    <num_buttons>6</num_buttons>
+    <buttons names="Left Trigger,Right Trigger,Left Thumb,Right Thumb,Boost,Pedal,Coin" default="A,B,X,Y,L,R,Select"/>
+
+    <romstruct>
+SDRAM layout, the same for every Atari G1 set (unused space is zero-filled):
+000000 - 07FFFF  512K  68000 program
+080000 - 27FFFF    2M  RLE motion objects
+280000 - 2FFFFF  512K  playfield planes 0-3
+300000 - 31FFFF  128K  playfield plane 4
+320000 - 33FFFF  128K  alpha characters
+340000 - 37FFFF  256K  OKI6295 samples
+380000 - 38FFFF   64K  JSA II 6502 program
+390000 - 3905FF  1.5K  motion object PROMs
+    </romstruct>
+
+    <rom index="0" zip="hydrap.zip|hydra.zip" md5="7c838aa04c5d4071322d5b3721bdca31">
+
+        <!-- $000000  68000 program -->
+        <interleave output="16">
+            <part name="hydhi0.bin" crc="dab2e8a2" map="01"/>
+            <part name="hydlo0.bin" crc="c18d4f16" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydhi1.bin" crc="50c12bb9" map="01"/>
+            <part name="hydlo1.bin" crc="5ee0a846" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydhi2.bin" crc="436a6d81" map="01"/>
+            <part name="hydlo2.bin" crc="182bfd6a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydhi3.bin" crc="29e9e03e" map="01"/>
+            <part name="hydlo3.bin" crc="7b5047f0" map="10"/>
+        </interleave>
+
+        <!-- $080000  RLE motion objects -->
+        <interleave output="16">
+            <part name="hydmlo0.bin" crc="6d49650c" map="01"/>
+            <part name="hydmhi0.bin" crc="3c83b42d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydmlo1.bin" crc="c81a4e88" map="01"/>
+            <part name="hydmhi1.bin" crc="689b3376" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydmlo2.bin" crc="40015d9d" map="01"/>
+            <part name="hydmhi2.bin" crc="77098e14" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydmlo3.bin" crc="213c407c" map="01"/>
+            <part name="hydmhi3.bin" crc="dfebdcbd" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydmlo4.bin" crc="730157f3" map="01"/>
+            <part name="hydmhi4.bin" crc="2897765f" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydmlo5.bin" crc="a5a08c53" map="01"/>
+            <part name="hydmhi5.bin" crc="ecd061ae" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydmlo6.bin" crc="db8ea56f" map="01"/>
+            <part name="hydmhi6.bin" crc="aa3f2903" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="hydmlo7.bin" crc="7960b0c2" map="01"/>
+            <part name="hydmhi7.bin" crc="71fc3e43" map="10"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- $280000  playfield planes 0-3 (EVEN ROM first) -->
+        <interleave output="32">
+            <part name="136079-1021.bin" crc="f88cdac2" map="0021"/>
+            <part name="136079-1017.bin" crc="bd77b747" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="136079-1022.bin" crc="a9c612ff" map="0021"/>
+            <part name="136079-1018.bin" crc="7c24e637" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="136079-1023.bin" crc="b706aa6e" map="0021"/>
+            <part name="136079-1019.bin" crc="aa2fb07b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="hydphi3.bin" crc="917e250c" map="0021"/>
+            <part name="hydpl03.bin" crc="1f0dfe60" map="2100"/>
+        </interleave>
+
+        <!-- $300000  playfield plane 4 -->
+        <part name="136079-1025.bin" crc="98b5b1a1"/>
+        <part name="hydpl41.bin" crc="85f9afa6"/>
+
+        <!-- $320000  alpha characters (already linear) -->
+        <part name="hydalph.bin" crc="7dd2b062"/>
+
+        <!-- $340000  OKI6295 samples -->
+        <part name="136079-1037.bin" crc="b974d3d0"/>
+        <part name="136079-1038.bin" crc="a2eda15b"/>
+        <part name="136079-1039.bin" crc="eb9eaeb7"/>
+        <part repeat="65536">00</part>
+
+        <!-- $380000  JSA II 6502 program -->
+        <part name="hydraa0.bin" crc="619d7319"/>
+
+        <!-- $390000  growth renderer microcode PROMs -->
+        <part name="136079-1040.bin" crc="43d6f3d4"/>
+        <part name="136079-1041.bin" crc="341dc4bb"/>
+        <part name="136079-1042.bin" crc="2e49b52e"/>
+    </rom>
+
+    <!-- game, slapstic, window base, clipL, clipR low, pfXoff, flags, objcount hi/lo -->
+    <rom index="1">
+        <part>00 00 07 00 FF 00 01 03 00</part>
+    </rom>
+
+    <nvram index="2" size="2048"/>
+</misterromdescription>

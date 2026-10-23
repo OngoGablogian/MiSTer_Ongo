@@ -1,0 +1,116 @@
+<misterromdescription>
+    <name>Danger Express (prototype)</name>
+    <mratimestamp>20260927</mratimestamp>
+    <mameversion>0264</mameversion>
+    <setname>dangerex</setname>
+    <year>1992</year>
+    <manufacturer>Atari Games</manufacturer>
+    <category>Shooter</category>
+    <rbf>Gm0rk_Atari-G42</rbf>
+    <rotation>horizontal</rotation>
+    <players>2</players>
+    <num_buttons>3</num_buttons>
+    <buttons names="Fire,Jump,Duck,Coin,Start" default="A,B,X,Select,Start"/>
+
+    <romstruct>
+SDRAM layout, the same for every Atari G42 set (gaps and unused space are zero-filled):
+000000 - 07FFFF  512K  68000 program
+080000 - 0FFFFF  512K  OKI6295 samples
+100000 - 11FFFF  128K  alphanumerics
+120000 - 12FFFF   64K  JSA III 6502 program
+130000 - 1307FF    2K  EEPROM factory image
+131000 - 132FFF    8K  ASIC65 TMS32010 program (Road Riot)
+140000 - 1BFFFF  512K  playfield, first third
+1C0000 - 23FFFF  512K  playfield, second third
+240000 - 2BFFFF  512K  playfield, last third
+2C0000 - ABFFFF    8M  RLE motion objects (this set; the image ends here)
+    </romstruct>
+
+    <rom index="0" zip="dangerex.zip" md5="bf3f82ad1102c49ee55b10c820edb833">
+
+        <!-- $000000  68000 program, 512K: big-endian words, the even-offset ROMs (8d, 9d) are the high bytes -->
+        <interleave output="16">
+            <part name="dx8d-0h.8d" crc="4957b65d" map="01"/>
+            <part name="dx8c-0l.8c" crc="aedcb497" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx9d-1h.9d" crc="2eb943e2" map="01"/>
+            <part name="dx9c-1l.9c" crc="79de4c91" map="10"/>
+        </interleave>
+
+        <!-- $080000  OKI6295 samples, 512K -->
+        <part name="dx19e-0.19e" crc="e7d9d5fb"/>
+        <part name="dx17e-1.17e" crc="ccb73a18"/>
+        <part name="dx15e-2.15e" crc="11596234"/>
+        <part name="dx12e-3.12e" crc="c0ffd43c"/>
+
+        <!-- $100000  alphanumerics, 128K -->
+        <part name="dxc187-22j.22j" crc="7231ecc2"/>
+
+        <!-- $120000  JSA III 6502 program, 64K: the file as-is; MAME's ROM_CONTINUE only moves its first 16K, which is zero, to $10000 where the JSA never reads -->
+        <part name="dx12c-5.12c" crc="d72621f7"/>
+
+        <!-- $130000  EEPROM factory image, 2K; zero to $131000 -->
+        <part name="dx-eeprom.5c" crc="d14e813d"/>
+        <part repeat="0x800">00</part>
+
+        <!-- $131000  ASIC65 TMS32010 program: none, this set's ASIC65 is simulated; zero to $140000 -->
+        <part repeat="0xF000">00</part>
+
+        <!-- $140000  playfield, first third, 256K: MAME "tiles" $000000-$03FFFF, 16384 tiles of 16 bytes; zero to $1C0000 -->
+        <part name="dxc117-22d.22d" crc="5532995a"/>
+        <part name="dx82-22c.22c" crc="9548599b"/>
+        <part repeat="0x40000">00</part>
+
+        <!-- $1C0000  playfield, second third, 256K: MAME "tiles" $040000-$07FFFF, 16384 tiles of 16 bytes; zero to $240000 -->
+        <part name="dxc116-20-21d.21d" crc="ebbf0fd8"/>
+        <part name="dxc81-22-21c.21c" crc="24cb1d34"/>
+        <part repeat="0x40000">00</part>
+
+        <!-- $240000  playfield, last third, 256K: MAME "tiles" $080000-$0BFFFF, 16384 tiles of 16 bytes; zero to $2C0000 -->
+        <part name="dxc115-20d.20d" crc="2819ce54"/>
+        <part name="dxc80-20c.20c" crc="a8ffe459"/>
+        <part repeat="0x40000">00</part>
+
+        <!-- $2C0000  RLE motion objects, 8M: big-endian words, the "s" ROMs are the high bytes, the "p" ROMs the low -->
+        <interleave output="16">
+            <part name="dx2s-0h.2s" crc="89902ce2" map="01"/>
+            <part name="dx2p-0l.2p" crc="dabe7e1c" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx3s-1h.3s" crc="ffeec3d1" map="01"/>
+            <part name="dx3p-1l.3p" crc="40b0a300" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx4s-2h.4s" crc="1e4d0c50" map="01"/>
+            <part name="dx4p-2l.4p" crc="00d586e1" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx5s-3h.5s" crc="98e26315" map="01"/>
+            <part name="dx5p-3l.5p" crc="e37b1413" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx6s-4h.6s" crc="b2bc538c" map="01"/>
+            <part name="dx6p-4l.6p" crc="5e3aefb8" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx7s-5h.7s" crc="396d706e" map="01"/>
+            <part name="dx7p-5l.7p" crc="102c827d" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx8s-6h.8s" crc="af3b1f90" map="01"/>
+            <part name="dx8p-6l.8p" crc="a0e7311b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="dx9s-7h.7h" crc="5bf0ce01" map="01"/>
+            <part name="dx9p-7l.7l" crc="e6f1d9fa" map="10"/>
+        </interleave>
+    </rom>
+
+    <!-- g42_cfg_t: game 1 (Danger Express), SLOOP 0 (none), flags $00 (none), MO palette $400, PF palette $000, MO colour mask $3F, 4096 objects -->
+    <rom index="1">
+        <part>01 00 00 04 00 3F 10 00</part>
+    </rom>
+
+    <nvram index="2" size="2048"/>
+</misterromdescription>

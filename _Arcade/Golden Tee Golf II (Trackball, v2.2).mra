@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Golden Tee Golf II (Trackball, v2.2)</name>
+    <setname>gtg2</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261003</mratimestamp>
+    <year>1992</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Sports / Golf</category>
+    <players>4</players>
+    <joystick>trackball</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Face Left,Face Right,Start,Coin,Service" default="A,B,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 7B = itech8 6809 board (3), 64 KB program
+(bit 3), program bank bit inverted (bit 4), 1992 board layout with the
+YM3812 sound board (bit 5), trackball (bit 6), horizontal.
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (128K used) -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region            -> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>7B</part>
+    </rom>
+
+    <rom index="0" zip="gtg2.zip" md5="443435e0e810f0b7bceb043bc1314ee0">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="sndv1.u27" crc="55734876"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="gtg2_v2_2.u5" crc="4a61580f"/>
+        <!-- OKI M6295 samples -->
+        <part name="srom00.bin" crc="4dd4db42"/>
+        <part repeat="0x20000">00</part>
+        <!-- graphics ROMs -->
+        <part name="grom0.bin" crc="a29c688a"/>
+        <part name="grom1.bin" crc="a4182776"/>
+        <part name="grom2.bin" crc="0580bb99"/>
+        <part name="grom3.bin" crc="89edb624"/>
+        <part name="grom4.bin" crc="f6557950"/>
+        <part name="grom5.bin" crc="a680ce6a"/>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

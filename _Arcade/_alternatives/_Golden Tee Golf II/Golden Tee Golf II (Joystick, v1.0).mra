@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Golden Tee Golf II (Joystick, v1.0)</name>
+    <setname>gtg2j</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261003</mratimestamp>
+    <year>1991</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Sports / Golf</category>
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>1</num_buttons>
+    <buttons names="Swing,Start,Coin,Service" default="A,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 0F = itech8 6809 board (3), joystick and
+swing button (bit 2), 64 KB program (bit 3), horizontal; second byte 01
+= MAME's lo memory map (TMS34061 at $0000, I/O at $1100).
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (128K used) -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region            -> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>0F 01</part>
+    </rom>
+
+    <rom index="0" zip="gtg2j.zip|gtg2.zip" md5="c64bdcce822049e1a238432f53e60e2f">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="gtgii_snd_v1_u27.u27" crc="dd2a5905"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="gtg2.bim_1.0.u5" crc="9c95ceaa"/>
+        <!-- OKI M6295 samples -->
+        <part name="srom0.bin" crc="1cccbfdf"/>
+        <part repeat="0x20000">00</part>
+        <!-- graphics ROMs -->
+        <part name="gtgii-grom0.grom0" crc="a29c688a"/>
+        <part name="gtgii-grom1.grom1" crc="a4182776"/>
+        <part name="gtgii-grom2.grom2" crc="0580bb99"/>
+        <part name="gtgii-grom3.grom3" crc="89edb624"/>
+        <part name="gtgii-grom4.grom4" crc="f6557950"/>
+        <part name="gtgii-grom5.grom5" crc="a680ce6a"/>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

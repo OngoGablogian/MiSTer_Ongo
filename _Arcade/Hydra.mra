@@ -1,0 +1,128 @@
+<misterromdescription>
+    <name>Hydra</name>
+    <mratimestamp>20260926</mratimestamp>
+    <mameversion>0264</mameversion>
+    <setname>hydra</setname>
+    <year>1990</year>
+    <manufacturer>Atari Games</manufacturer>
+    <category>Racing</category>
+    <rbf>Gm0rk_Atari-G1</rbf>
+    <rotation>horizontal</rotation>
+    <players>1</players>
+    <num_buttons>6</num_buttons>
+    <buttons names="Left Trigger,Right Trigger,Left Thumb,Right Thumb,Boost,Pedal,Coin" default="A,B,X,Y,L,R,Select"/>
+
+    <romstruct>
+SDRAM layout, the same for every Atari G1 set (unused space is zero-filled):
+000000 - 07FFFF  512K  68000 program
+080000 - 27FFFF    2M  RLE motion objects
+280000 - 2FFFFF  512K  playfield planes 0-3
+300000 - 31FFFF  128K  playfield plane 4
+320000 - 33FFFF  128K  alpha characters
+340000 - 37FFFF  256K  OKI6295 samples
+380000 - 38FFFF   64K  JSA II 6502 program
+390000 - 3905FF  1.5K  motion object PROMs
+    </romstruct>
+
+    <rom index="0" zip="hydra.zip" md5="ef536dc4c3685e40cce0ec6c9c53391d">
+
+        <!-- $000000  68000 program -->
+        <interleave output="16">
+            <part name="136079-3028.bin" crc="43475f73" map="01"/>
+            <part name="136079-3029.bin" crc="886e1de8" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-3034.bin" crc="5115aa36" map="01"/>
+            <part name="136079-3035.bin" crc="a28ba44b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1032.bin" crc="ecd1152a" map="01"/>
+            <part name="136079-1033.bin" crc="2ebe1939" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1030.bin" crc="b31fd41f" map="01"/>
+            <part name="136079-1031.bin" crc="453d076f" map="10"/>
+        </interleave>
+
+        <!-- $080000  RLE motion objects -->
+        <interleave output="16">
+            <part name="136079-1002.bin" crc="a1169469" map="01"/>
+            <part name="136079-1001.bin" crc="3f757a53" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1004.bin" crc="c0a2be66" map="01"/>
+            <part name="136079-1003.bin" crc="aa21ec33" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1006.bin" crc="ad831c59" map="01"/>
+            <part name="136079-1005.bin" crc="80c285b3" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1008.bin" crc="e6827f6b" map="01"/>
+            <part name="136079-1007.bin" crc="e0688cc0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1010.bin" crc="9de4c689" map="01"/>
+            <part name="136079-1009.bin" crc="33624d07" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1012.bin" crc="43af45d0" map="01"/>
+            <part name="136079-1011.bin" crc="d55c6e49" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1014.bin" crc="8897d5e9" map="01"/>
+            <part name="136079-1013.bin" crc="2647a82b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136079-1016.bin" crc="61aaf14f" map="01"/>
+            <part name="136079-1015.bin" crc="cf7f69fd" map="10"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- $280000  playfield planes 0-3 (EVEN ROM first) -->
+        <interleave output="32">
+            <part name="136079-1021.bin" crc="f88cdac2" map="0021"/>
+            <part name="136079-1017.bin" crc="bd77b747" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="136079-1022.bin" crc="a9c612ff" map="0021"/>
+            <part name="136079-1018.bin" crc="7c24e637" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="136079-1023.bin" crc="b706aa6e" map="0021"/>
+            <part name="136079-1019.bin" crc="aa2fb07b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="136079-1024.bin" crc="c49eac53" map="0021"/>
+            <part name="136079-1020.bin" crc="906ccd98" map="2100"/>
+        </interleave>
+
+        <!-- $300000  playfield plane 4 -->
+        <part name="136079-1025.bin" crc="98b5b1a1"/>
+        <part name="136079-1026.bin" crc="d68d44aa"/>
+
+        <!-- $320000  alpha characters (already linear) -->
+        <part name="136079-1027.bin" crc="f9135b9b"/>
+
+        <!-- $340000  OKI6295 samples -->
+        <part name="136079-1037.bin" crc="b974d3d0"/>
+        <part name="136079-1038.bin" crc="a2eda15b"/>
+        <part name="136079-1039.bin" crc="eb9eaeb7"/>
+        <part repeat="65536">00</part>
+
+        <!-- $380000  JSA II 6502 program -->
+        <part name="hydraa0.bin" crc="619d7319"/>
+
+        <!-- $390000  growth renderer microcode PROMs -->
+        <part name="136079-1040.bin" crc="43d6f3d4"/>
+        <part name="136079-1041.bin" crc="341dc4bb"/>
+        <part name="136079-1042.bin" crc="2e49b52e"/>
+    </rom>
+
+    <!-- game, slapstic, window base, clipL, clipR low, pfXoff, flags, objcount hi/lo -->
+    <rom index="1">
+        <part>00 74 07 00 FF 00 01 03 00</part>
+    </rom>
+
+    <nvram index="2" size="2048"/>
+</misterromdescription>

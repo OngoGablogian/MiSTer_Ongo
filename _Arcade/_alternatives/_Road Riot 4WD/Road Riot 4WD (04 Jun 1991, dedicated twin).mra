@@ -1,0 +1,117 @@
+<misterromdescription>
+    <name>Road Riot 4WD (04 Jun 1991, dedicated twin)</name>
+    <mratimestamp>20260927</mratimestamp>
+    <mameversion>0264</mameversion>
+    <setname>roadriotb</setname>
+    <year>1991</year>
+    <manufacturer>Atari Games</manufacturer>
+    <category>Racing</category>
+    <rbf>Gm0rk_Atari-G42</rbf>
+    <rotation>horizontal</rotation>
+    <players>1</players>
+    <num_buttons>3</num_buttons>
+    <buttons names="Left Trigger,Right Trigger,Start,Coin,Pedal" default="A,B,Start,Select,R"/>
+
+    <romstruct>
+SDRAM layout, the same for every Atari G42 set (gaps and unused space are zero-filled):
+000000 - 07FFFF  512K  68000 program
+080000 - 0FFFFF  512K  OKI6295 samples
+100000 - 11FFFF  128K  alphanumerics
+120000 - 12FFFF   64K  JSA III 6502 program
+130000 - 1307FF    2K  EEPROM factory image
+131000 - 132FFF    8K  ASIC65 TMS32010 program (Road Riot)
+140000 - 1BFFFF  512K  playfield, first third
+1C0000 - 23FFFF  512K  playfield, second third
+240000 - 2BFFFF  512K  playfield, last third
+2C0000 - 4BFFFF    2M  RLE motion objects (this set; the image ends here)
+    </romstruct>
+
+    <rom index="0" zip="roadriotb.zip|roadriot.zip" md5="9ee310cae6aaabb866473144a0d0fb3b">
+
+        <!-- $000000  68000 program, 512K: big-endian words, the even-offset ROMs (8d, 9d) are the high bytes -->
+        <interleave output="16">
+            <part name="136089-2014.8d" crc="bf8aaafc" map="01"/>
+            <part name="136089-2013.8c" crc="5dd2dd70" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-2016.9d" crc="6191653c" map="01"/>
+            <part name="136089-2015.9c" crc="0d34419a" map="10"/>
+        </interleave>
+
+        <!-- $080000  OKI6295 samples, 512K -->
+        <part name="136089-1048.19e" crc="2db638a7"/>
+        <part name="136089-1049.17e" crc="e1dd7f9e"/>
+        <part name="136089-1050.15e" crc="64d410bb"/>
+        <part name="136089-1051.12e" crc="bffd01c8"/>
+
+        <!-- $100000  alphanumerics, 128K -->
+        <part name="136089-1046.22j" crc="0005bab0"/>
+
+        <!-- $120000  JSA III 6502 program, 64K -->
+        <part name="136089-1047.12c" crc="849dd26c"/>
+
+        <!-- $130000  EEPROM factory image, 2K; zero to $131000 -->
+        <part name="roadriot-eeprom.5c" crc="8d9b957d"/>
+        <part repeat="0x800">00</part>
+
+        <!-- $131000  ASIC65 TMS32010 program, $A80 bytes of big-endian words; zero to $140000 -->
+        <part name="136089-1012.3f" crc="7c5498e7"/>
+        <part repeat="0xE580">00</part>
+
+        <!-- $140000  playfield, first third, 256K: MAME "tiles" $000000-$03FFFF, 16384 tiles of 16 bytes; zero to $1C0000 -->
+        <part name="136089-1041.22d" crc="b7451f92"/>
+        <part name="136089-1038.22c" crc="90f3c6ee"/>
+        <part repeat="0x40000">00</part>
+
+        <!-- $1C0000  playfield, second third, 256K: MAME "tiles" $040000-$07FFFF, 16384 tiles of 16 bytes; zero to $240000 -->
+        <part name="136089-1037.2021d" crc="d40de62b"/>
+        <part name="136089-1039.2021c" crc="a7e836b1"/>
+        <part repeat="0x40000">00</part>
+
+        <!-- $240000  playfield, last third, 256K: MAME "tiles" $080000-$0BFFFF, 16384 tiles of 16 bytes; zero to $2C0000 -->
+        <part name="136089-1040.20d" crc="a81ae93f"/>
+        <part name="136089-1042.20c" crc="b8a6d15a"/>
+        <part repeat="0x40000">00</part>
+
+        <!-- $2C0000  RLE motion objects, 2M: big-endian words, the "s" ROMs are the high bytes, the "p" ROMs the low -->
+        <interleave output="16">
+            <part name="136089-1018.2s" crc="19590a94" map="01"/>
+            <part name="136089-1017.2p" crc="c2bf3f69" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-1020.3s" crc="bab110e4" map="01"/>
+            <part name="136089-1019.3p" crc="791ad2c5" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-1022.4s" crc="79cba484" map="01"/>
+            <part name="136089-1021.4p" crc="86a2e257" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-1024.5s" crc="67d28478" map="01"/>
+            <part name="136089-1023.5p" crc="74638838" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-1026.6s" crc="24933c37" map="01"/>
+            <part name="136089-1025.6p" crc="054a163b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-1028.7s" crc="31ff090a" map="01"/>
+            <part name="136089-1027.7p" crc="bbe5b69b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-1030.8s" crc="6c89d2c5" map="01"/>
+            <part name="136089-1029.8p" crc="40d9bde5" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="136089-1032.9s" crc="eca3c595" map="01"/>
+            <part name="136089-1031.9p" crc="88acdb53" map="10"/>
+        </interleave>
+    </rom>
+
+    <!-- g42_cfg_t: game 0 (Road Riot), SLOOP 1 (Road Riot), flags $03 (ADC0809, ROM-based ASIC65), MO palette $200, PF palette $400, MO colour mask $1F, 832 objects -->
+    <rom index="1">
+        <part>00 01 03 02 04 1F 03 40</part>
+    </rom>
+
+    <nvram index="2" size="2048"/>
+</misterromdescription>

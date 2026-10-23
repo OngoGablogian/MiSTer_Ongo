@@ -1,0 +1,49 @@
+<misterromdescription>
+    <name>Neck-N-Neck (v1.2)</name>
+    <setname>neckneck</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261004</mratimestamp>
+    <year>1992</year>
+    <manufacturer>Bundra Games / Incredible Technologies</manufacturer>
+    <category>Sports / Horse Racing</category>
+    <players>1</players>
+    <joystick>none</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>7</num_buttons>
+    <buttons names="Horse 1,Horse 2,Horse 3,Horse 4,Horse 5,Horse 6,Start,Coin,Service" default="A,B,X,Y,L,R,Start,Select"/>
+
+    <romstruct>
+Board select (ioctl index 1): 0B = itech8 6809 board (3), 64 KB program
+(bit 3), horizontal; second byte 0B = MAME's lo memory map (bit 0), 2
+page large display at 8 MHz (bits 2-1 = 1), YM3812 sound board with a
+PIA (bits 4-3 = 1); third byte 08 = Neck-N-Neck's inputs.
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples                    -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region (512K used)-> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>0B 0B 08</part>
+    </rom>
+
+    <rom index="0" zip="neckneck.zip" md5="7356857592fad295209baabbdb3fea1e">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="nn_snd10.u27" crc="74771b2f"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="nn_prg12.u5" crc="8e51734a"/>
+        <!-- OKI M6295 samples -->
+        <part name="nn_srom0.bin" crc="33687201"/>
+        <!-- graphics ROMs -->
+        <part name="nn_grom0.bin" crc="064d1464"/>
+        <part name="nn_grom1.bin" crc="622d9a0b"/>
+        <part name="nn_grom2.bin" crc="e7eb4020"/>
+        <part name="nn_grom3.bin" crc="765c8593"/>
+        <part repeat="0x40000">00</part>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

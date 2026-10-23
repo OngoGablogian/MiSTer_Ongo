@@ -1,0 +1,52 @@
+<misterromdescription>
+    <name>Hot Shots Tennis (v1.1)</name>
+    <setname>hstennis</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261004</mratimestamp>
+    <year>1990</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Sports / Tennis</category>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>vertical (cw)</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Hard,Soft,Coin,Service" default="A,B,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 0B = itech8 6809 board (3), 64 KB program
+(bit 3); second byte CA = 2 page large display at 8 MHz (bits 2-1 = 1),
+YM3812 sound board with a PIA (bits 4-3 = 1), NVRAM starts as 00 (bit
+6), vertical, turned clockwise (bit 7, MAME ROT90); third byte 04 = Hot
+Shots Tennis's inputs.
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (128K used) -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region (640K used)-> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>0B CA 04</part>
+    </rom>
+
+    <rom index="0" zip="hstennis.zip" md5="95ad4a6d539758de80ecb56aca8a0d68">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="tensnd.bim_v1_u27.u27" crc="f034a694"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="ten.bim_v1.1_u5.u5" crc="faffab5c"/>
+        <!-- OKI M6295 samples -->
+        <part name="tennis.vr_srom0.srom0" crc="d9ce58c3"/>
+        <part repeat="0x20000">00</part>
+        <!-- graphics ROMs -->
+        <part name="t_grom0.bim.grom0" crc="1e69ebae"/>
+        <part name="t_grom1.bim.grom1" crc="4e6a22d5"/>
+        <part name="t_grom2.bim.grom2" crc="c0b643a9"/>
+        <part name="t_grom3.bim.grom3" crc="54afb456"/>
+        <part name="t_grom4.bim.grom4" crc="ee09d645"/>
+        <part repeat="0x20000">00</part>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

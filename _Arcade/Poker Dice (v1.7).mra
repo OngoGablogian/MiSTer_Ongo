@@ -1,0 +1,48 @@
+<misterromdescription>
+    <name>Poker Dice (v1.7)</name>
+    <setname>pokrdice</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261004</mratimestamp>
+    <year>1991</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Casino / Dice</category>
+    <players>1</players>
+    <joystick>none</joystick>
+    <rotation>vertical (cw)</rotation>
+    <num_buttons>7</num_buttons>
+    <buttons names="Play,Raise,Upper Left,Upper Right,Middle,Lower Left,Lower Right,Coin,Service" default="Start,B,X,Y,A,L,R,Select"/>
+
+    <romstruct>
+Board select (ioctl index 1): 0B = itech8 6809 board (3), 64 KB program
+(bit 3); second byte 85 = MAME's lo memory map (bit 0), one 8-bit page
+display (bits 2-1 = 2), YM2203 sound board, vertical, turned clockwise
+(bit 7, MAME ROT90); third byte 03 = Poker Dice's inputs.
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program                   -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (64K used)  -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region (256K used)-> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>0B 85 03</part>
+    </rom>
+
+    <rom index="0" zip="pokrdice.zip" md5="63cbd6ee4abe30063e61ab7fa9190e7e">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="pd-snd.u27" crc="4925401c"/>
+        <!-- main program (64 KB: banks at $4000, last 32 KB at $8000) -->
+        <part name="pd-v1.7_u5.u5" crc="5e24be82"/>
+        <!-- OKI M6295 samples -->
+        <part name="pd-srom0.srom0" crc="f85dbd6f"/>
+        <part repeat="0x30000">00</part>
+        <!-- graphics ROMs -->
+        <part name="pd-grom0.grom0" crc="7c2573e7"/>
+        <part name="pd-grom1.grom1" crc="e7c06aeb"/>
+        <part repeat="0x80000">00</part>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

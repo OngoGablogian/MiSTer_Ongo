@@ -1,0 +1,48 @@
+<misterromdescription>
+    <name>Strata Bowling (v3)</name>
+    <setname>stratab</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20260929</mratimestamp>
+    <year>1990</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Sports / Bowling</category>
+    <players>2</players>
+    <joystick>trackball</joystick>
+    <rotation>vertical (ccw)</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Hook Left,Hook Right,Start,Coin,Service" default="A,B,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): C3 = itech8 6809 board (3), trackball (bit 6),
+vertical (bit 7).
+Download stream (ioctl index 0), 1,146,880 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 017FFF   64K  main program region (32K used) -> SDRAM bank 0
+018000 - 057FFF  256K  OKI samples region (128K used) -> SDRAM bank 2
+058000 - 117FFF  768K  graphics ROM region (384K used)-> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>C3</part>
+    </rom>
+
+    <rom index="0" zip="stratab.zip" md5="2fb62431c335e1d8860b85c4de8f6925">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="sb_snds_u27.u27" crc="b36c8f0a"/>
+        <!-- main program (CPU $8000-$FFFF; banks at $4000) -->
+        <part name="sb_prog_v3_u5.u5" crc="a5ae728f"/>
+        <part repeat="0x8000">00</part>
+        <!-- OKI M6295 samples -->
+        <part name="sb_srom0.srom0" crc="6ff390b9"/>
+        <part repeat="0x20000">00</part>
+        <!-- graphics ROMs -->
+        <part name="sb_grom0_0.grom0" crc="a915b0bd"/>
+        <part name="sb_grom0_1.grom1" crc="340c661f"/>
+        <part name="sb_grom0_2.grom2" crc="5df9f1cf"/>
+        <part repeat="0x60000">00</part>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

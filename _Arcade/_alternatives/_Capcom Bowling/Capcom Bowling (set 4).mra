@@ -1,0 +1,43 @@
+<misterromdescription>
+    <name>Capcom Bowling (set 4)</name>
+    <setname>capbowl4</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20260928</mratimestamp>
+    <year>1988</year>
+    <manufacturer>Incredible Technologies / Capcom</manufacturer>
+    <category>Sports / Bowling</category>
+    <players>2</players>
+    <joystick>trackball</joystick>
+    <rotation>vertical (ccw)</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Hook Left,Hook Right,Start,Coin,Service" default="A,B,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 01 = Capcom Bowling board.
+Download stream (ioctl index 0), 163,840 bytes:
+00000 - 07FFF   32K  program ROM (CPU 8000-FFFF)   -> SDRAM bank 0
+08000 - 1FFFF   96K  graphics ROMs GR0-GR2         -> SDRAM bank 0
+20000 - 27FFF   32K  sound program                 -> SDRAM bank 2
+    </romstruct>
+
+    <rom index="1">
+        <part>01</part>
+    </rom>
+
+    <rom index="0" zip="capbowl4.zip|capbowl.zip" md5="5fa78b0acf52d71167dc3e04daf47683">
+        <!-- program (CPU $8000-$FFFF) -->
+        <part name="bfb.u6" crc="79f1d083"/>
+        <!-- graphics ROM GR0 -->
+        <part name="grom0-gr0.gr0" crc="2b5eb091"/>
+        <!-- graphics ROM GR1 -->
+        <part name="grom1-gr1.gr1" crc="880e4e1c"/>
+        <!-- graphics ROM GR2 -->
+        <part name="grom2-gr2.gr2" crc="f3d2468d"/>
+        <!-- sound program -->
+        <part name="bfb.u30" crc="6fe2c4ff"/>
+    </rom>
+
+    <!-- 2 KB battery-backed RAM (CPU $5000-$57FF) -->
+    <nvram index="4" size="2048"/>
+</misterromdescription>

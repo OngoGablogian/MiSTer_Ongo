@@ -1,0 +1,49 @@
+<misterromdescription>
+    <name>Rim Rockin' Basketball (v1.2)</name>
+    <setname>rimrockn12</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20261010</mratimestamp>
+    <year>1991</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Sports / Basketball</category>
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Shoot,Pass,Start,Coin,Service" default="A,B,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 03 = itech8 6809 board (3); second byte 32 =
+2 page large display at 8 MHz (bits 2-1 = 1), YM3812 sound board with a VIA
+(bits 4-3 = 2), Rim Rockin' Basketball's board (bit 5: 3 MHz CPU, bank
+register at $01A0, 128 KB program, ports $0161-$0165); third byte 09 =
+Rim Rockin' Basketball's inputs (four players).
+Download stream (ioctl index 0), 1,474,560 bytes:
+000000 - 007FFF   32K  sound program                  -> block RAM
+008000 - 027FFF  128K  main program                   -> SDRAM bank 0
+028000 - 067FFF  256K  OKI samples                    -> SDRAM bank 2
+068000 - 167FFF    1M  graphics ROMs                  -> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>03 32 09</part>
+    </rom>
+
+    <rom index="0" zip="rimrockn12.zip|rimrockn.zip" md5="15a071e67d78e4b29b6c21a8c682465a">
+        <!-- sound program (sound CPU $8000-$FFFF) -->
+        <part name="rrbsnd_v1_u27.u27" crc="8eda5f53"/>
+        <!-- main program (128 KB: banks 0-3 of its first 64 KB at $4000, last 32 KB at $8000) -->
+        <part name="rrb.bim_1.2_u5.u5" crc="661761a6"/>
+        <!-- OKI M6295 samples -->
+        <part name="rbb-srom0" crc="7ad42be0"/>
+        <!-- graphics ROMs -->
+        <part name="rbb-grom00" crc="3eacbad9"/>
+        <part name="rbb-grom01" crc="864cc269"/>
+        <part name="rbb-grom02" crc="34e567d5"/>
+        <part name="rbb-grom03" crc="fd18045d"/>
+    </rom>
+
+    <!-- 8 KB battery-backed RAM (CPU $2000-$3FFF) -->
+    <nvram index="4" size="8192"/>
+</misterromdescription>

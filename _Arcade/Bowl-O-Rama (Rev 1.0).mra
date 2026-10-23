@@ -1,0 +1,42 @@
+<misterromdescription>
+    <name>Bowl-O-Rama (Rev 1.0)</name>
+    <setname>bowlrama</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20260928</mratimestamp>
+    <year>1991</year>
+    <manufacturer>P&amp;P Marketing</manufacturer>
+    <category>Sports / Bowling</category>
+    <players>2</players>
+    <joystick>trackball</joystick>
+    <rotation>vertical (ccw)</rotation>
+    <num_buttons>2</num_buttons>
+    <buttons names="Hook Left,Hook Right,Start,Coin,Service" default="A,B,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 02 = Capcom Bowling board with the turbo board.
+Download stream (ioctl index 0), 425,984 bytes:
+00000 - 07FFF   32K  program ROM (CPU 8000-FFFF)   -> SDRAM bank 0
+08000 - 1FFFF   96K  unused (no graphics ROMs)     -> SDRAM bank 0
+20000 - 27FFF   32K  sound program                 -> SDRAM bank 2
+28000 - 67FFF  256K  turbo board ROM (UX7)         -> SDRAM bank 1
+    </romstruct>
+
+    <rom index="1">
+        <part>02</part>
+    </rom>
+
+    <rom index="0" zip="bowlrama.zip" md5="dbd6c6b201a3a54d8603af5bd465f3ca">
+        <!-- program (CPU $8000-$FFFF) -->
+        <part name="bowl-o-rama_rev_1.0_u6.u6" crc="7103ad55"/>
+        <!-- no graphics ROMs on this board: the turbo board sits in the GR0 socket -->
+        <part repeat="0x18000">FF</part>
+        <!-- sound program -->
+        <part name="bowl-o-rama_rev_1.0_u30.u30" crc="f3168834"/>
+        <!-- turbo board ROM -->
+        <part name="bowl-o-rama_rev_1.0_ux7.ux7" crc="8727432a"/>
+    </rom>
+
+    <!-- 2 KB battery-backed RAM (CPU $5000-$57FF) -->
+    <nvram index="4" size="2048"/>
+</misterromdescription>

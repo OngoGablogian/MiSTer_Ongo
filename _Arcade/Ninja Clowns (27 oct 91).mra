@@ -1,0 +1,54 @@
+<misterromdescription>
+    <name>Ninja Clowns (27 oct 91)</name>
+    <setname>ninclown</setname>
+    <rbf>Gm0rk_ITech8</rbf>
+    <mameversion>0289</mameversion>
+    <mratimestamp>20260928</mratimestamp>
+    <year>1991</year>
+    <manufacturer>Strata / Incredible Technologies</manufacturer>
+    <category>Fighter</category>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <rotation>horizontal</rotation>
+    <num_buttons>3</num_buttons>
+    <buttons names="Punch,Kick,Throw,Start,Coin,Service" default="A,B,X,Start,R,L"/>
+
+    <romstruct>
+Board select (ioctl index 1): 00 = IT 8-bit 68000 board.
+Download stream (ioctl index 0), 2,129,920 bytes:
+000000 - 03FFFF  256K  68000 program, 68000 byte order  -> SDRAM bank 0
+040000 - 1BFFFF  1.5M  graphics ROMs 0-5 (blitter)      -> SDRAM bank 1
+1C0000 - 1FFFFF  256K  OKI M6295 samples                -> SDRAM bank 2
+200000 - 207FFF   32K  6809 sound program               -> block RAM
+    </romstruct>
+
+    <rom index="1">
+        <part>00</part>
+    </rom>
+
+    <rom index="0" zip="ninclown.zip" md5="f449778faa393bf8080bf702f40c72f6">
+
+        <!-- $000000  68000 program: PROG1 = even (upper) bytes, PROG0 = odd -->
+        <interleave output="16">
+            <part name="prog1" crc="fabfdcd2" map="01"/>
+            <part name="prog0" crc="eca63db5" map="10"/>
+        </interleave>
+
+        <!-- $040000  graphics ROMs -->
+        <part name="nc-grom0" crc="532f7bff"/>
+        <part name="nc-grom1" crc="45640d4a"/>
+        <part name="nc-grom2" crc="c8281d06"/>
+        <part name="nc-grom3" crc="2a6d33ac"/>
+        <part name="nc-grom4" crc="910876ba"/>
+        <part name="nc-grom5" crc="2533279b"/>
+
+        <!-- $1C0000  OKI M6295 samples -->
+        <part name="srom0.bin" crc="f6b501e1"/>
+
+        <!-- $200000  6809 sound program -->
+        <part name="nc-snd" crc="f9d5b4e1"/>
+    </rom>
+
+    <!-- 16 KB battery-backed RAM (68000 $000000-$003FFF) -->
+    <nvram index="4" size="16384"/>
+</misterromdescription>
