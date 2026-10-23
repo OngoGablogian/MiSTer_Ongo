@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================ -->
+<!-- BAZSET CORE — CORE BY bazset -->
+<!-- RBF FILE: bouncingballs.rbf -->
+<!-- REQUIRED ROM ZIP FILE(S): bballs.zip -->
+<!-- ============================================================ -->
+<!-- Original arcade game by Comad (1991). Independent experimental hardware BRINGUP; not hardware tested. -->
+<!-- GPL source derivation / component licenses retained in source project's provenance documents. -->
+<misterromdescription>
+    <name>Bouncing Balls</name>
+    <setname>bballs</setname>
+    <mameversion>0289</mameversion>
+    <year>1991</year>
+    <manufacturer>Comad</manufacturer>
+    <category>Arcade</category>
+    <players>2</players>
+    <rotation>horizontal</rotation>
+    <rbf>bazset_BouncingBalls</rbf>
+    <joystick>4</joystick>
+    <region>World</region>
+    <rom index="0" zip="bballs.zip" md5="None">
+        <!-- 4-byte JTFRAME loader header, not a game ROM. -->
+        <part>00 00 00 00</part>
+        <!-- MC68000 program 0x00000..0x3FFFF -->
+        <interleave output="16">
+            <part name="bb11.l17" crc="55e45b60" map="01"/>
+            <part name="bb12.m17" crc="4501c245" map="10"/>
+        </interleave>
+        <part repeat="0x20000">FF</part>
+        <!-- Background map 0x40000..0x47FFF -->
+        <interleave output="16">
+            <part name="bb10.l6" crc="d06498f9" map="12"/>
+        </interleave>
+        <!-- Graphics tile region starts 0x48000: Comad pairs match Tiger Road donor transform -->
+        <interleave output="16">
+            <part name="bb6.h1" crc="0cada9ce" map="01"/>
+            <part name="bb7.h2" crc="a352d53b" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="bb8.j1" crc="d55fe7c1" map="01"/>
+            <part name="bb9.j2" crc="78d185ac" map="10"/>
+        </interleave>
+        <part repeat="0xC0000">FF</part>
+        <!-- Z80 program 0x148000..0x15FFFF -->
+        <part name="bb13.n4" crc="1ef78175"/>
+        <part repeat="0x10000">FF</part>
+        <!-- Text characters 0x160000..0x167FFF -->
+        <interleave output="16">
+            <part name="bb1.g20" crc="b62dbcb8" map="12"/>
+        </interleave>
+        <!-- Sprite tiles 0x168000..0x1E7FFF. MAME byte lanes 0,1,2,3 -->
+        <interleave output="32">
+            <part name="bb3.b2" crc="e35b383d" map="0001"/>
+            <part name="bb2.b1" crc="a5b13236" map="0010"/>
+            <part name="bb5.d2" crc="ffffccbf" map="0100"/>
+            <part name="bb4.d1" crc="b77de5f8" map="1000"/>
+        </interleave>
+        <part repeat="0x40000">FF</part>
+        <!-- Priority PROM 0x1E8000..0x1E8FFF -->
+        <part name="bb_prom.e9" crc="ec80ae36"/>
+        <part repeat="0xF00">FF</part>
+        <!-- MC68705 firmware 0x1E9000..0x1E9FFF; MAME bballs uses substitute BAD_DUMP -->
+        <part name="mc68705r3.bin" crc="4b37b853"/>
+    </rom>
+    <!-- JTFRAME core-mod/volume bytes; game DIP switches are below. -->
+    <!-- JTFRAME core_mod bit 1 is LIGHTGUN enable, not four-way: keep 00. -->
+    <!-- Preserve donor's 0x80 default sound volume without enabling lightgun. -->
+    <rom index="1"><part>00 80</part></rom>
+    <switches page_id="1" page_name="Switches" base="16" default="cf,fd">
+        <DSW/>
+        <dip name="Coinage" bits="0,2" ids="5C/1C,4C/1C,3C/1C,2C/1C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+        <dip name="Difficulty" bits="3" ids="Hard,Easy"/>
+        <dip name="Game Music" bits="4" ids="On,Off"/>
+        <dip name="Attract Music" bits="5" ids="On,Off"/>
+        <dip name="Lives" bits="6,7" ids="4,3,2,1"/>
+        <dip name="Zaps" bits="8" ids="2,1"/>
+        <dip name="Show Next Ball" bits="9" ids="Yes,No"/>
+        <dip name="Service Mode" bits="14,15" ids="Graphics,Inputs/Outputs,Unused,Off"/>
+    </switches>
+    <buttons names="Open/Close Gate,Zap,Unused,Start,Coin,Pause" default="A,B,X,Start,Select,-" count="3"/>
+</misterromdescription>

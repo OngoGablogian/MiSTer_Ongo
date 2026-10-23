@@ -14,7 +14,7 @@
     <year>1988</year>
     <manufacturer>Data East Corporation</manufacturer>
     <players>2</players>
-    <rbf>bazset_bazbirdtry</rbf>
+    <rbf>bazset_BirdieTry</rbf>
     <joystick>8</joystick>
     <region>World</region>
     <rom index="0" zip="birdtry.zip" md5="None">
