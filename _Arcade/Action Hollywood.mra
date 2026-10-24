@@ -8,8 +8,8 @@
     <rbf>Meathax_ActionHollywood</rbf>
     <rotation>horizontal</rotation>
     <joystick>8-way</joystick>
-    <num_buttons>1</num_buttons>
-    <buttons names="Stun,Start,Coin,Pause,Service" default="A,Start,Select,R,L"/>
+    <num_buttons>2</num_buttons>
+    <buttons names="Stun,Start,Coin,Pause,Service,Run" default="A,Start,Select,R,L,B"/>
     <!-- one nvram file (Main_MiSTer keeps a single index/size pair): bytes 0..127 = 93C46 EEPROM, bytes 128..167 = high-score table (hiscore.sv dump) -->
     <nvram index="4" size="168"/>
     <rom index="1"><part>00</part></rom>
