@@ -171,6 +171,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Special Criminal Investigation](https://www.patreon.com/bazset/posts/s-c-i-taito-1989-171266717)                              |
 | [Stone Ball](https://www.patreon.com/Meathax/posts/stone-ball-chase-171312474)                                                 |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                        |
+| [Super Dodge Ball](https://github.com/kyledlester/Super_Dodge_Ball_MiSTer)                                                     |
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                       |
 | [Taito Air System](https://github.com/retrogarage/tas-mister)                                                                  |
 | [Taito B System](https://github.com/Mezzow/Arcade-TaitoB_MiSTer)                                                               |
