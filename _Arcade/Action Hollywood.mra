@@ -1,0 +1,50 @@
+<misterromdescription>
+    <name>Action Hollywood</name>
+    <setname>actionhw</setname>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>TCH / Proyesel</manufacturer>
+    <category>Action</category>
+    <rbf>Meathax_ActionHollywood</rbf>
+    <rotation>horizontal</rotation>
+    <joystick>8-way</joystick>
+    <num_buttons>1</num_buttons>
+    <buttons names="Stun,Start,Coin,Pause,Service" default="A,Start,Select,R,L"/>
+    <!-- one nvram file (Main_MiSTer keeps a single index/size pair): bytes 0..127 = 93C46 EEPROM, bytes 128..167 = high-score table (hiscore.sv dump) -->
+    <nvram index="4" size="168"/>
+    <rom index="1"><part>00</part></rom>
+    <rom index="0" zip="actionhw.zip" md5="d03f00d2a7ed057f765d068658ba8b09">
+        <!-- 0x000000 maincpu (68000 big endian): ic6 = even bytes, ic5 = odd bytes -->
+        <interleave output="16">
+            <part name="2.ic6" crc="2b71d58c" map="01"/>
+            <part name="1.ic5" crc="136b9711" map="10"/>
+        </interleave>
+        <!-- 0x100000 oki samples -->
+        <part name="3.ic13" crc="b8f6705d"/>
+        <!-- 0x180000 padding up to the GFX base -->
+        <part repeat="0x80000">00</part>
+        <!-- 0x200000 gfx, one byte per bitplane (quarter q = ic29+ic33 / ic30+ic34 / ic31+ic35 / ic32+ic36 -> byte q of each dword) -->
+        <interleave output="32">
+            <part name="4.ic29" crc="df076744" map="0001"/>
+            <part name="6.ic30" crc="5cb005a5" map="0010"/>
+            <part name="8.ic31" crc="50dffa47" map="0100"/>
+            <part name="10.ic32" crc="5ee5db3e" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="5.ic33" crc="8551fdd4" map="0001"/>
+            <part name="7.ic34" crc="c2f7d284" map="0010"/>
+            <part name="9.ic35" crc="c1ea0370" map="0100"/>
+            <part name="11.ic36" crc="8d376b1e" map="1000"/>
+        </interleave>
+    </rom>
+    <!-- standard MiSTer hiscore config (index 3): 16-byte header, then entries ADDR(4) LEN START END PAD.
+         header: START_WAIT=120 frames, CHECK_WAIT=120 frames, CHECK_HOLD=2, WRITE_HOLD=2, WRITE_REPEATCOUNT=1, WRITE_REPEATWAIT=0x0010, ACCESS_PAUSEPAD=2 frames, CHANGEMASK=0.
+         entry: work RAM 0xFF5A2A, 0x28 bytes = 5 x {3 ASCII initials, 0x00, score/100 (16-bit BE), 2 level bytes};
+         the table is restored only while byte 0 = 4A ('J' of the default JOE entry) and the last byte = 01 (MAME defaults). -->
+    <rom index="3" md5="none">
+        <part>
+        00 00 00 78 00 78 00 02 00 02 00 01 00 10 02 00
+        00 FF 5A 2A 28 4A 01 00
+        </part>
+    </rom>
+</misterromdescription>

@@ -1,52 +1,75 @@
-<?xml version='1.0' encoding='utf-8'?>
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
 <misterromdescription>
-  <rotation>horizontal</rotation>
-  <name>Black Panther</name>
-  <setname>blkpnthr</setname>
-  <mameversion>0289</mameversion>
-  <year>1987</year>
-  <manufacturer>Konami</manufacturer>
-  <players>2</players>
-  <rbf>Meathax_BlackPanther</rbf>
-  <joystick>8</joystick>
-  <region>World</region>
-  <rom index="0" zip="blkpnthr.zip" md5="None" address="0x30000000" asm_md5="abf658a21d2451a2b4d5fee1ffac0244">
-    <interleave output="16">
-      <part name="604-f05.18c" crc="b08f8ca2" map="01"/>
-      <part name="604-f02.18b" crc="487bf8da" map="10"/>
-    </interleave>
-    <part repeat="0x20000"> FF</part>
-    <interleave output="16">
-      <part name="604-c06.17c" crc="4af6bf7f" map="01"/>
-      <part name="604-c03.17b" crc="815bc3b0" map="10"/>
-    </interleave>
-    <part name="604-a08.11j" crc="aff88a2b"/>
-    <part name="604-a01.10a" crc="eceb64a6"/>
-  </rom>
-  <rom index="1">
-    <part>00 80</part>
-  </rom>
-  <switches page_id="2" page_name="DIP Switches" base="16" default="ff,53,bf,ff">
-    <DSW0/>
-    <dip name="Coin A" bits="0,3" ids="Free Play,4/3,4/1,3/4,3/2,3/1,2/5,2/3,2/1,1/7,1/6,1/5,1/4,1/3,1/2,1/1"/>
-    <dip name="Coin B" bits="4,7" ids="None,4/3,4/1,3/4,3/2,3/1,2/5,2/3,2/1,1/7,1/6,1/5,1/4,1/3,1/2,1/1"/>
-    <DSW1/>
-    <dip name="Lives" bits="8,9" ids="7,5,4,3"/>
-    <dip name="Cabinet" bits="10" ids="Upright,Cocktail"/>
-    <dip name="Bonus Life" bits="11,12" ids="80k 150k,30k 70k,20k 50k,50k 100k"/>
-    <dip name="Difficulty" bits="13,14" ids="Hardest,Hard,Normal,Easy"/>
-    <dip name="Demo Sounds" bits="15" ids="On,Off"/>
-    <IN0/>
-    <dip name="Flip Screen" bits="21" ids="On,Off"/>
-    <dip name="Continue" bits="22,23" ids="4 Areas,3 Areas,2 Areas,Off"/>
-    <IN1/>
-    <dip name="Service Mode" bits="31" ids="On,Off"/>
-  </switches>
-  <buttons names="Shoot,Jump,Start,Coin" default="A,B,Start,Select" count="2"/>
-  <rom index="3">
-    <part>00 00 00 00 FF FF 00 04 00 04 00 01 00 10 08 00
-00 00 04 00 99 00 59 00
-00 00 03 00 04 00 00 00</part>
-  </rom>
-  <nvram index="4" size="157"/>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
+    <name>Black Panther</name>
+    <setname>blkpnthr</setname>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Konami</manufacturer>
+    <players>2</players>
+    <rbf>Meathax_BlackPanther</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="blkpnthr.zip" md5="None" address="0x30000000">
+        <!-- maincpu - starts at 0x0 - length 0x80000 (19 bits) -->
+        <interleave output="16">
+            <part name="604-f05.18c" crc="b08f8ca2" map="01"/>
+            <part name="604-f02.18b" crc="487bf8da" map="10"/>
+        </interleave>
+        <part repeat="0x20000"> FF</part>
+        <interleave output="16">
+            <part name="604-c06.17c" crc="4af6bf7f" map="01"/>
+            <part name="604-c03.17b" crc="815bc3b0" map="10"/>
+        </interleave>
+        <!-- SND_START -->
+        <!-- audiocpu - starts at 0x80000 - length 0x8000 (15 bits) -->
+        <part name="604-a08.11j" crc="aff88a2b"/>
+        <!-- PCM_START -->
+        <!-- k007232 - starts at 0x88000 - length 0x20000 (17 bits) -->
+        <part name="604-a01.10a" crc="eceb64a6"/>
+        <!-- Total 0xA8000 bytes - 672 kBytes -->
+    </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="2" page_name="DIP Switches" base="16" default="ff,53,bf,ff">
+        <DSW0/>
+        <dip name="Coin A" bits="0,3" ids="Free Play,4/3,4/1,3/4,3/2,3/1,2/5,2/3,2/1,1/7,1/6,1/5,1/4,1/3,1/2,1/1"/>
+        <dip name="Coin B" bits="4,7" ids="None,4/3,4/1,3/4,3/2,3/1,2/5,2/3,2/1,1/7,1/6,1/5,1/4,1/3,1/2,1/1"/>
+        <DSW1/>
+        <dip name="Lives" bits="8,9" ids="7,5,4,3"/>
+        <dip name="Cabinet" bits="10" ids="Upright,Cocktail"/>
+        <dip name="Bonus Life" bits="11,12" ids="80k 150k,30k 70k,20k 50k,50k 100k"/>
+        <dip name="Difficulty" bits="13,14" ids="Hardest,Hard,Normal,Easy"/>
+        <dip name="Demo Sounds" bits="15" ids="On,Off"/>
+        <IN0/>
+        <dip name="Flip Screen" bits="21" ids="On,Off"/>
+        <dip name="Continue" bits="22,23" ids="4 Areas,3 Areas,2 Areas,Off"/>
+        <IN1/>
+        <dip name="Service Mode" bits="31" ids="On,Off"/>
+    </switches>
+    <buttons names="Shoot,Jump,Start,Coin" default="A,B,Start,Select" count="2"/>
+<rom index="3"><part>00 00 00 00 FF FF 00 04 00 04 00 01 00 10 08 00 00 00 04 00 99 00 59 00 00 00 03 00 04 00 00 00</part></rom>
+<nvram index="4" size="157"/>
 </misterromdescription>
