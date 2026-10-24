@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================ -->
+<!-- BAZSET CORE - CORE BY bazset -->
+<!-- RBF FILE: BAZDIAMRUN.rbf -->
+<!-- REQUIRED ROM ZIP FILE(S): diamrun.zip; only owner-provided ROM, not included -->
+<!-- ============================================================ -->
+<misterromdescription>
+  <bazset_runtime version="1">
+    <pause>
+      <title>Diamond Run</title>
+      <build>B01</build>
+      <core_by>bazset</core_by>
+      <patreon>patreon.com/c/bazset</patreon>
+      <x>x.com/bazset_</x>
+      <beta_testers>No verified testers</beta_testers>
+      <patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters>
+      <special_thanks>Meathax | PixelCherryNinja</special_thanks>
+      <bug_prompt>FOUND A BUG? REPORT IT ON MY PATREON</bug_prompt>
+    </pause>
+    <osd>
+      <visibility>B200 MRA index3 CRC pause title runtime enabled; other metadata fields beta-unverified</visibility>
+      <defaults>4-way: Action A, Start Start, Coin Select; DIP 81,07. Stock MiSTer uses MRA buttons as input labels and defaults; CONF_STR J1 is fallback.</defaults>
+    </osd>
+    <pause_style>
+      <!-- BAZSET Time Vault canonical palette; exact source screenshot still UNVERIFIED. -->
+      <colors background="#080B18" card="#101522" border="#D9A441" text="#F0E9D7" dim="#71798A" accent="#5DE4FF"/>
+      <layout preset="compact"/>
+      <marquee frames="30"/>
+    </pause_style>
+  </bazset_runtime>
+
+  <!-- BAZSET MRA14 ENGINEERING HEADER v1: editable AUTHORING values, NOT all runtime bindings.
+       01 GAME TITLE: Diamond Run (KH Video)
+       02 GAME INFORMATION: 1989 KH Video, four-way movement, one action button, horizontal arcade screen.
+       03 ROM VERSIONS: original MAME set diamrun; 16 pinned chips; MAME 0.289 checked; no ROM patches.
+       04 BUTTON NAMES: Action (main game), Start1/Start2 and Coin1/Coin2 are HPS cabinet controls.
+       05 DEFAULT BUTTON LAYOUT: Action=A; controller directions=four-way; native defaults need J1/jn/jp HDL proof.
+       06 DIP NAMES: Lives, Coin A, Coinage, Energy Loss, Coin B.
+       07 DIP DEFAULTS: 81,07 hexadecimal as described by switches below; game CPU parity pending.
+       08 DIP ARRANGEMENT: bits 0..5 bank A; bits 8..13 bank B; bit positions documented by dip entries below.
+       09 OSD VISIBILITY: menu from compiled MiSTer CONF_STR, not controlled by this XML comment.
+       10 OSD DEFAULTS: existing core status bits, unverified game-specific J1/jn/jp mapping.
+       11 PAUSE TEXT: Diamond Run | KH Video (1989) | BAZSET engineering | hardware unverified.
+       12 PAUSE COLORS: PENDING verified RTL/HPS metadata path and exact approved OSD reference.
+       13 PAUSE LAYOUT: PENDING verified RTL/HPS metadata path and exact approved OSD reference.
+       14 PAUSE SCROLL SPEED: PENDING verified RTL/HPS metadata path.
+       PAUSE DATA CONTRACT: Future editable metadata must be transferred through a real supported
+       MRA indexed ROM/config route and consumed by the fitted RTL or supported MiSTer host.
+       XML comments are ignored at runtime. Do not release an RBF or report MRA14 PASS
+       until the above pause text/colors/layout/scroll fields are wired and regression-tested.
+       Editing this block currently changes DOCUMENTATION ONLY, never what appears on screen.
+  -->
+  <!-- B199 source includes second dedicated MiSTer cabinet start/coin route plus original YM path; new fitted RBF required, physical audio unverified. -->
+  <rbf>bazset_DiamondRun</rbf>
+  <mratimestamp>20261021</mratimestamp>
+  <mameversion>0289</mameversion>
+  <region>World</region>
+  <category>Arcade</category>
+  <name>Diamond Run</name>
+  <setname>diamrun</setname>
+  <year>1989</year>
+  <manufacturer>KH Video</manufacturer>
+  <players>2</players>
+  <joystick>4way</joystick>
+  <rotation>horizontal</rotation>
+  <rom index="0" zip="diamrun.zip" md5="none">
+    <part repeat="0x4000">00</part>
+    <part name="d3o" crc="ba4bf9f1"/>
+    <part name="d3" crc="f436d6fa"/>
+    <part name="d5o" crc="ae58bd3a"/>
+    <part name="d5" crc="453f3f9e"/>
+    <part name="d1" crc="3a24e504"/>
+    <part name="d2" crc="615f5b6f"/>
+    <part name="d11" crc="754357d7"/>
+    <part name="d10" crc="7531edcd"/>
+    <part name="d9" crc="22eeca08"/>
+    <part name="d8" crc="6b61be60"/>
+    <part name="d7" crc="fd595274"/>
+    <part name="d6" crc="7f51dcd2"/>
+    <part name="d17" crc="8164b005"/>
+    <part repeat="0xc000">FF</part>
+    <part name="d14" crc="6f132163"/>
+    <part repeat="0xc000">FF</part>
+  </rom>
+  <rom index="3">
+    <part>425A4D315E03000016FBDC247B226F7364223A7B2264656661756C7473223A22342D7761793A20416374696F6E20412C2053746172742053746172742C20436F696E2053656C6563743B204449502038312C30372E2053746F636B204D69535465722075736573204D524120627574746F6E7320617320696E707574206C6162656C7320616E642064656661756C74733B20434F4E465F535452204A312069732066616C6C6261636B2E222C227669736962696C697479223A224D6953546572204F534420417564696F204C616220616E6420646961676E6F7374696373206578706572696D656E74616C207265766973696F6E227D2C227061757365223A7B22626574615F74657374657273223A224E6F2076657269666965642074657374657273222C226275675F70726F6D7074223A22464F554E442041204255473F205245504F5254204954204F4E204D592050415452454F4E222C226275696C64223A2242415A53455420415544494F204C414220423031202D20464D2050534720444941474E4F5354494353222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224D656174686178207C20506978656C4368657272794E696E6A61222C227469746C65223A224469616D6F6E642052756E222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223354445344646222C226261636B67726F756E64223A2223303830423138222C22626F72646572223A2223443941343431222C2263617264223A2223313031353232222C2264696D223A2223373137393841222C2274657874223A2223463045394437227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A33307D2C2276657273696F6E223A317D</part>
+  </rom>
+  <switches default="81,07" base="16">
+    <dip name="Lives" bits="0,1" ids="2,3,4,5"/>
+    <dip name="Coin A" bits="2,3" ids="*1,*2,*3,*4"/>
+    <dip name="Coinage" bits="4,5" ids="1C/1C,2C/1C,3C/1C,4C/1C"/>
+    <dip name="SW1:7 (Unknown)" bits="6" ids="On,Off"/>
+    <dip name="Flip Screen" bits="7" ids="On,Off"/>
+    <dip name="Energy Loss" bits="8,9,10,11" ids="Slowest,-6 Slower,-5 Slower,-4 Slower,-3 Slower,-2 Slower,-1 Slower,Normal,+1 Faster,+2 Faster,+3 Faster,+4 Faster,+5 Faster,+6 Faster,+7 Faster,Fastest"/>
+    <dip name="Coin B" bits="12,13" ids="*1,*2,*3,*4"/>
+    <dip name="SW2:7 (Unknown)" bits="14" ids="On,Off"/>
+    <dip name="SW2:8 (Unknown)" bits="15" ids="On,Off"/>
+  </switches>
+  <buttons names="Action,Start,Coin" default="A,Start,Select" count="1"/>
+</misterromdescription>
