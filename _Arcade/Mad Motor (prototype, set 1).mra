@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Mad Motor (prototype, set 1)</name>
+  <setname>madmotor</setname>
+  <mameversion>0289</mameversion>
+  <rbf>Meathax_MadMotor</rbf>
+  <year>1989</year>
+  <manufacturer>Mitchell</manufacturer>
+  <category>Beat em up</category>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <buttons names="Accelerate,Attack,Start,Coin,Pause" default="A,B,Start,Select,-" count="2"/>
+  <switches default="7F,4F">
+    <dip name="Coin A" bits="0,2" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+    <dip name="Coin B" bits="3,5" ids="3 Coins/1 Credit,2 Coins/1 Credit,1 Coin/6 Credits,1 Coin/5 Credits,1 Coin/4 Credits,1 Coin/3 Credits,1 Coin/2 Credits,1 Coin/1 Credit"/>
+    <dip name="Flip Screen" bits="6" ids="On,Off"/>
+    <dip name="Unknown DSW1:8" bits="7" ids="On,Off"/>
+    <dip name="Lives" bits="8,9" ids="2,5,4,3"/>
+    <dip name="Difficulty" bits="10,11" ids="Hardest,Hard,Easy,Normal"/>
+    <dip name="Unknown DSW2:5" bits="12" ids="On,Off"/>
+    <dip name="Unknown DSW2:6" bits="13" ids="On,Off"/>
+    <dip name="Allow Continue" bits="14" ids="No,Yes"/>
+    <dip name="Demo Sounds" bits="15" ids="On,Off"/>
+  </switches>
+  <rom index="0" zip="madmotor.zip" md5="7a5348110b844ca914e776ceec1a5016" address="0x30000000">
+    <interleave output="16">
+      <part name="02-2.b4" crc="50b554e0" map="01" offset="0x0" length="0x20000"/>
+      <part name="00-2.b1" crc="2d6a1b3f" map="10" offset="0x0" length="0x20000"/>
+    </interleave>
+    <interleave output="16">
+      <part name="03-2.b6" crc="442a0a52" map="01" offset="0x0" length="0x20000"/>
+      <part name="01-2.b3" crc="e246876e" map="10" offset="0x0" length="0x20000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="04.a9" crc="833ca3ab" map="0001" offset="0x8000" length="0x8000"/>
+      <part name="05.a11" crc="a691fbfe" map="0010" offset="0x8000" length="0x8000"/>
+      <part name="04.a9" crc="833ca3ab" map="0100" offset="0x0" length="0x8000"/>
+      <part name="05.a11" crc="a691fbfe" map="1000" offset="0x0" length="0x8000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="10.a19" crc="9dbf482b" map="0001" offset="0x10000" length="0x10000"/>
+      <part name="11.a21" crc="593c48a9" map="0010" offset="0x10000" length="0x10000"/>
+      <part name="10.a19" crc="9dbf482b" map="0100" offset="0x0" length="0x10000"/>
+      <part name="11.a21" crc="593c48a9" map="1000" offset="0x0" length="0x10000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="07.a14" crc="ede4d141" map="0001" offset="0x0" length="0x20000"/>
+      <part name="09.a18" crc="1ee3326a" map="0010" offset="0x0" length="0x20000"/>
+      <part name="06.a13" crc="448850e5" map="0100" offset="0x0" length="0x20000"/>
+      <part name="08.a16" crc="c380e5e5" map="1000" offset="0x0" length="0x20000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="19.j13" crc="cbd8c9b8" map="0001" offset="0x0" length="0x20000"/>
+      <part name="15.h11" crc="90ae9f74" map="0010" offset="0x0" length="0x20000"/>
+      <part name="21.j16" crc="9c72d364" map="0100" offset="0x0" length="0x20000"/>
+      <part name="17.h14" crc="abad9a1b" map="1000" offset="0x0" length="0x20000"/>
+    </interleave>
+    <interleave output="32">
+      <part name="20.j14" crc="47f706a8" map="0001" offset="0x0" length="0x20000"/>
+      <part name="16.h13" crc="e96ac815" map="0010" offset="0x0" length="0x20000"/>
+      <part name="22.j18" crc="1e78aa60" map="0100" offset="0x0" length="0x20000"/>
+      <part name="18.h16" crc="96d8d64b" map="1000" offset="0x0" length="0x20000"/>
+    </interleave>
+    <part name="14.l7" crc="1c28a7e5" length="0x10000"/>
+    <part name="12.h1" crc="c202d200" length="0x20000"/>
+    <part name="13.h3" crc="cc4d65e9" length="0x20000"/>
+    <patch offset="0xf2fc">6a dd 00 a2 ff 41</patch>
+    <patch offset="0x7ffc0">16 00 02 c0 ff ef 96 c1 00 98 00 12 6a dd 00 00 d7 02</patch>
+    <patch offset="0x68ce">6a dd 00 a2 f7 00 6a d4</patch>
+    <patch offset="0x7f700">08 8c 00 8a 00 02 e6 00 00 0a 02 40 aa ff 00 40 40 00 0a 40 01 00 94 40 00 20 34 8c 00 02 c5 4a 53 cc 00 20 02 c0 80 ff 03 42 14 81 08 00 00 08 e6 00 00 3a 28 00 00 55 46 00 00 32 08 02 00 88 66 00 00 2a 08 02 00 0a 66 00 00 22 08 11 00 a2 4a c0 6a f4</patch>
+    <patch offset="0x2a2a8">00 a2 5d 00</patch>
+    <patch offset="0x7f800">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 72 05 09 ff 55 00 00 02 70 05 09 ff 55 ff 55 02 58 05 01 00 10 ff 55 02 d8 05 01 00 10 00 00 02 7a 05 09 00 00 ff 45</patch>
+    <patch offset="0x2a2b8">00 a2 5d 4a</patch>
+    <patch offset="0x7f84a">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 78 05 09 ff 55 00 00 02 5a 05 09 ff 55 ff 55 02 58 05 01 00 10 ff 55 02 d8 05 01 00 10 00 00 02 7a 05 09 00 00 ff 45</patch>
+    <patch offset="0x2a2d4">00 a2 5d 31</patch>
+    <patch offset="0x7f894">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 46 05 09 ff 55 00 00 02 44 05 09 ff 55 ff 55 02 64 05 01 00 10 ff 55 02 e4 05 01 00 10 00 00 02 66 05 01 00 10 ff 45</patch>
+    <patch offset="0x2a2e8">00 a2 5d 7b</patch>
+    <patch offset="0x7f8de">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 6c 05 09 ff 55 00 00 02 4e 05 09 ff 55 ff 55 02 4c 05 01 00 10 ff 55 02 cc 05 01 00 10 00 00 02 e6 05 01 00 10 ff 45</patch>
+    <patch offset="0x2a2fc">00 a2 dd 0c</patch>
+    <patch offset="0x7f928">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 54 05 09 ff 55 00 00 02 6e 05 09 ff 55 ff 55 02 64 05 01 00 10 ff 55 02 e4 05 01 00 10 00 00 02 66 05 01 00 10 ff 45</patch>
+    <patch offset="0x2a310">00 a2 dd 56</patch>
+    <patch offset="0x7f972">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 74 05 09 ff 55 00 00 02 56 05 09 ff 55 ff 55 02 76 05 01 00 10 ff 55 02 f6 05 01 00 10 00 00 02 5c 05 01 00 10 ff 45</patch>
+    <patch offset="0x2a324">00 a2 dd 3d</patch>
+    <patch offset="0x7f9bc">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 46 05 09 ff 55 00 00 02 44 05 09 ff 55 ff 55 02 09 05 09 00 10 ff 55 02 e4 05 01 00 10 00 00 02 0b 05 01 00 10 ff 45</patch>
+    <patch offset="0x2a334">00 a2 5f 22</patch>
+    <patch offset="0x7fa06">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 6c 05 09 ff 55 00 00 02 4e 05 09 ff 55 ff 55 02 09 05 09 00 10 ff 55 02 cc 05 01 00 10 00 00 02 0b 05 01 00 10 ff 45</patch>
+    <patch offset="0x2a344">00 a2 5f 50</patch>
+    <patch offset="0x7fa50">00 08 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 46 05 09 ff 55 00 00 02 44 05 09 ff 55 ff 55 02 8b 05 01 00 10 ff 55 02 e4 05 01 00 10 00 00</patch>
+    <patch offset="0x2a354">00 a2 5f 13</patch>
+    <patch offset="0x7fa92">00 08 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 6c 05 09 ff 55 00 00 02 4e 05 09 ff 55 ff 55 02 8b 05 01 00 10 ff 55 02 cc 05 01 00 10 00 00</patch>
+    <patch offset="0x2a3e0">00 a2 5f 71</patch>
+    <patch offset="0x7fad4">00 88 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 7e 05 09 ff 55 00 00 02 7c 05 09 ff 55 ff 55 02 5e 05 01 00 10 ff 55 02 de 05 01 00 10 00 00 02 dc 05 01 00 00 ff 45</patch>
+    <patch offset="0x2a2c8">00 a2 df 3a</patch>
+    <patch offset="0x7fb1e">00 08 a0 02 48 09 ff 55 ff 45 a0 20 48 09 ff 55 ff 55 a0 22 48 09 ff 55 00 00 a0 08 48 09 ff 55 00 10 02 81 05 01 ff 55 00 00 02 23 05 09 00 00 00 00 02 21 05 09 00 00 ff 55 02 03 05 09 00 00 ff 45</patch>
+  </rom>
+</misterromdescription>
