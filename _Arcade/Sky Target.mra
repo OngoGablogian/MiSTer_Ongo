@@ -36,7 +36,11 @@
     <name>Sky Target</name>
     <setname>skytargt</setname>
     <rbf>Model2A</rbf>
-    <nvram index="2" size="16384"/>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. Needs a core built
+         with R945 or later; an earlier core would wrap the extra bytes onto
+         the start of backup RAM. -->
+    <nvram index="2" size="16520"/>
     <rom index="4" md5="none">
         <part>18 00</part>
     </rom>

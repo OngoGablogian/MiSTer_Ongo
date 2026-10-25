@@ -36,25 +36,30 @@
       hpyagu98_backup: handcrafted by MAME's developers to match dynabb97's
       defaults), no bytes of them in this file: the EEPROM on index 5
       through the 93C46's load port (Model2.sv M2_2A_EE_LOAD, R897), the
-      backup RAM on index 2 BEFORE the <nvram> element, so a saved .nvm
-      (sent when that element is read) replaces it. The EEPROM is not saved;
-      every load starts from the factory image.
+      backup RAM on index 2, both BEFORE the <nvram> element, so a saved
+      .nvm (sent when that element is read) replaces both: since R945 the
+      file carries the EEPROM too. With no .nvm, or one saved by an earlier
+      core (16 KB, no EEPROM), the game starts from the factory images.
 
       Index 4, the game ID: 0x13 (R887). Bit 7 would be the 15 kHz CRT flag.
     -->
     <name>Hanguk Pro Yagu 98</name>
     <setname>hpyagu98</setname>
     <rbf>Model2A</rbf>
-    <!-- R897: the factory images from the zip (see above). The backup RAM
-         image comes first, so the saved .nvm the next element sends (if
-         there is one) replaces it. -->
+    <!-- R897: the factory images from the zip (see above). Both come
+         first, so the saved .nvm the next element sends (if there is one)
+         replaces them (R945: the EEPROM only from a file that carries it). -->
     <rom index="5" zip="hpyagu98.zip" md5="none">
         <part name="hpyagu98_nvram" crc="3634c60f"/>
     </rom>
     <rom index="2" zip="hpyagu98.zip" md5="none">
         <part name="hpyagu98_backup" crc="979751d5"/>
     </rom>
-    <nvram index="2" size="16384"/>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. Needs a core built
+         with R945 or later; an earlier core would wrap the extra bytes onto
+         the start of backup RAM. -->
+    <nvram index="2" size="16520"/>
     <rom index="4" md5="none">
         <part>13 00</part>
     </rom>
