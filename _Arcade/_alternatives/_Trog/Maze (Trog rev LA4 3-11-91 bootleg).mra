@@ -1,0 +1,58 @@
+<misterromdescription>
+	<name>Maze (Trog rev LA4 3/11/91 bootleg)</name>
+	<mratimestamp>20261024</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>mazebl</setname>
+	<year>1990</year>
+	<manufacturer>bootleg</manufacturer>
+	<category>Maze / Collect</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>4 players</remark>
+	<switches default="FF,DF,00">
+		<dip bits="7" name="Cabinet" ids="Cocktail,Upright"/>
+		<dip bits="12" name="Coin Counters" ids="One,Two" values="1,0"/>
+		<dip bits="3,5" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
+		<dip bits="6" name="Coinage Source" ids="CMOS,Dipswitch"/>
+		<dip bits="14,15" name="Country" ids="French,German,Unused,USA" values="2,1,0,3"/>
+		<dip bits="10,11" name="Players" ids="1 Player,2 Players,3 Players,4 Players" values="0,2,1,3"/>
+		<dip bits="13" name="Power-Up Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="9" name="Video Freeze" ids="Off,On" values="1,0"/>
+	</switches>
+	<buttons names="Punch,-,-,-,-,-,Start,Coin,Test,Pause" default="A,-,-,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (MAME region from 0x10000)
+	</romstruct>
+	<rom index="1">
+		<part>00</part>
+	</rom>
+	<rom index="0" zip="mazebl.zip|trog.zip" md5="99d34496722cee7590bde5efca8750f3" type="merged">
+		<!-- program ROM -->
+		<part repeat="0xC0000">00</part>
+		<interleave output="16">
+			<part crc="e6095189" name="2" map="01"/>
+			<part crc="fdd7cc65" name="3" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="dd7cd402" name="4"/>
+		<part crc="9c001d17" name="6"/>
+		<part repeat="0x140000">00</part>
+		<part crc="e036e21a" name="5"/>
+		<part crc="c5ce99fa" name="7"/>
+		<part repeat="0x540000">00</part>
+		<!-- sound CPU -->
+		<part crc="cf3a206e" name="1" length="0x10000"/>
+		<part crc="cf3a206e" name="1" length="0x10000"/>
+		<part crc="cf3a206e" name="1" offset="0x10000" length="0x10000"/>
+		<part crc="cf3a206e" name="1" offset="0x10000" length="0x10000"/>
+		<part crc="cf3a206e" name="1" offset="0x20000" length="0x10000"/>
+		<part crc="cf3a206e" name="1" offset="0x20000" length="0x10000"/>
+		<part crc="cf3a206e" name="1" offset="0x30000" length="0x10000"/>
+		<part crc="cf3a206e" name="1" offset="0x30000" length="0x10000"/>
+	</rom>
+	<nvram index="2" size="32768"/>
+</misterromdescription>

@@ -1,0 +1,77 @@
+<misterromdescription>
+	<name>Mortal Kombat (Yawdim bootleg, set 1)</name>
+	<mratimestamp>20261023</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>mkyawdim</setname>
+	<year>1992</year>
+	<manufacturer>bootleg (Yawdim)</manufacturer>
+	<category>Fighter / Versus</category>
+	<rbf>Gm0rk_Midway-Y-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="FF,DF,00">
+		<dip bits="4" name="Attract Sound" ids="Off,On"/>
+		<dip bits="6" name="Blood" ids="Off,On"/>
+		<dip bits="10,14" name="Coinage" ids="French-1,French-2,French-3,French-4,French-ECA,French-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play" values="30,14,22,6,26,2,29,13,21,5,25,9,1,31,15,23,7,27,3"/>
+		<dip bits="15" name="Coinage Source" ids="CMOS,Dipswitch"/>
+		<dip bits="3" name="Comic Book Offer" ids="Off,On"/>
+		<dip bits="9" name="Counters" ids="One,Two" values="1,0"/>
+		<dip bits="5" name="Low Blows" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Press,Press"/>
+		<dip bits="8" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Press,Press"/>
+		<dip bits="7" name="Violence" ids="Off,On"/>
+	</switches>
+	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
+	<romstruct>
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB, MAME gfx region)
+0x900000 sound CPU ROM (Z80 program, MAME audiocpu region)
+0xA00000 OKI M6295 samples (1 MB, MAME oki region: banks of 256 KB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id; finishing moves: round state 0104D700, P1 character 0104CFB0, object pointer 0104CF50; Reptile: 6 program patches, flag 0104E660; game state 0104CEB0 (tools/yunit_fmoves.py) -->
+		<part>
+		0F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		01 00 00 00 70 4D 10 00 FB 4C 10 00 29 4D 10 00 02 4D 10 00 30 4D 10 00 F5 4C 10 00 23 4D 10 00
+		F9 4C 10 00 27 4D 10 00 54 4D 10 00 5A 4D 10 00 80 32 DF FF A0 51 CE FF 00 00 00 00 00 00 00 00
+		EB 4C 10 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		A2 B1 04 01 E0 0D A0 05 A3 B1 04 01 60 09 40 D5 6B B8 04 02 00 03 08 CB AD B1 04 02 00 03 1A CB
+		1C A1 04 03 00 03 1D C8 20 A1 04 03 09 C0 C0 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		66 4E 10 00
+		</part>
+	</rom>
+	<rom index="0" zip="mkyawdim.zip|mk.zip" md5="8f0b8c2c054a1b3e24eea609ace81b9e" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="b12b3bf2" name="4.u25" map="01"/>
+			<part crc="7a37dc5c" name="5.u26" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<part crc="d17096c4" name="l1_mortal_kombat_game_rom_u-111.u111"/>
+		<part crc="993bc2e4" name="l1_mortal_kombat_game_rom_u-112.u112"/>
+		<part crc="6fb91ede" name="l1_mortal_kombat_game_rom_u-113.u113"/>
+		<part crc="ed1ff88a" name="l1_mortal_kombat_game_rom_u-114.u114"/>
+		<part crc="a002a155" name="l1_mortal_kombat_game_rom_u-95.u95"/>
+		<part crc="dcee8492" name="l1_mortal_kombat_game_rom_u-96.u96"/>
+		<part crc="de88caef" name="l1_mortal_kombat_game_rom_u-97.u97"/>
+		<part crc="37eb01b4" name="l1_mortal_kombat_game_rom_u-98.u98"/>
+		<part crc="45acaf21" name="l1_mortal_kombat_game_rom_u-106.u106"/>
+		<part crc="2a6c10a0" name="l1_mortal_kombat_game_rom_u-107.u107"/>
+		<part crc="23308979" name="l1_mortal_kombat_game_rom_u-108.u108"/>
+		<part crc="cafc47bb" name="l1_mortal_kombat_game_rom_u-109.u109"/>
+		<part repeat="0x200000">00</part>
+		<!-- sound CPU (Z80) -->
+		<part crc="b58d229e" name="1.u67"/>
+		<part repeat="0xF0000">00</part>
+		<!-- OKI samples -->
+		<part crc="a72ad81e" name="2.u59" length="0x20000"/>
+		<part crc="6e68e0b0" name="3.u60" length="0x20000"/>
+		<part crc="a72ad81e" name="2.u59" offset="0x20000" length="0x20000"/>
+		<part crc="6e68e0b0" name="3.u60" offset="0x20000" length="0x20000"/>
+		<part crc="a72ad81e" name="2.u59" offset="0x40000" length="0x20000"/>
+		<part crc="6e68e0b0" name="3.u60" offset="0x40000" length="0x20000"/>
+		<part crc="a72ad81e" name="2.u59" offset="0x60000" length="0x20000"/>
+		<part crc="6e68e0b0" name="3.u60" offset="0x60000" length="0x20000"/>
+	</rom>
+	<nvram index="2" size="32768"/>
+</misterromdescription>

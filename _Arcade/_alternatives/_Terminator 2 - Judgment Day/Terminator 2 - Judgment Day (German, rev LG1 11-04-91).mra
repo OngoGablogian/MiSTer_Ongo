@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Terminator 2 - Judgment Day (German, rev LG1 11/04/91)</name>
-	<mratimestamp>20261012</mratimestamp>
+	<mratimestamp>20261022</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>term2lg1</setname>
 	<year>1991</year>
@@ -9,13 +9,12 @@
 	<rbf>Gm0rk_Midway-Y-Unit</rbf>
 	<remark>2 players</remark>
 	<switches default="FB,DF,00">
-		<dip bits="10" name="Cabinet?" ids="Dedicated,Kit" values="1,0"/>
+		<dip bits="10" name="Cabinet" ids="Dedicated,Kit" values="1,0"/>
 		<dip bits="3,5" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
 		<dip bits="6" name="Coinage Source" ids="CMOS,Dipswitch"/>
 		<dip bits="12" name="Counters" ids="One,Two" values="1,0"/>
 		<dip bits="14,15" name="Country" ids="French,German,Unused,USA" values="2,1,0,3"/>
 		<dip bits="0,2" name="Credits" ids="1 Start/1 Continue,2 Start/1 Continue,2 Start/2 Continue,3 Start/1 Continue,3 Start/2 Continue,3 Start/3 Continue,4 Start/1 Continue,4 Start/2 Continue" values="3,7,5,1,2,0,6,4"/>
-		<dip bits="19" name="Crosshair" ids="Off,On" values="1,0"/>
 		<dip bits="7" name="Display" ids="Mirrored,Normal"/>
 		<dip bits="18" name="Gun Control" ids="Joystick,Mouse"/>
 		<dip bits="11" name="Players" ids="1 Player,2 Players"/>
