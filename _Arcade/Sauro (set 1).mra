@@ -1,0 +1,34 @@
+﻿<misterromdescription>
+  <name>Sauro (set 1)</name>
+  <setname>sauro</setname>
+  <rbf>bazset_Sauro</rbf>
+  <year>1987</year>
+  <manufacturer>Tecfri</manufacturer>
+  <category>Shooter - Flying Horizontal</category>
+  <players>2 (alternating)</players>
+  <joystick>8-way</joystick>
+  <num_buttons>2</num_buttons>
+  <buttons default="A,B,Start,Select" names="Button 1,Button 2,Start,Coin"/>
+  <resolution>15kHz</resolution>
+  <rotation>horizontal</rotation>
+  <about>Experimental: original sauro set only; no gameplay/voice/speech proof, RGB tile/sprite parity pending.</about>
+  <rom index="0" zip="sauro.zip|sp0256.zip" md5="none">
+    <part name="sauro-2.bin" crc="2e356e2d"/>
+    <part name="sauro-1.bin" crc="95d03e5e"/>
+    <part name="sauro-3.bin" crc="0d501e1b"/>
+    <part name="sauro-6.bin" crc="4b77cb0f"/>
+    <part name="sauro-7.bin" crc="187da060"/>
+    <part name="sauro-4.bin" crc="9b617cda"/>
+    <part name="sauro-5.bin" crc="a6e2640d"/>
+    <part name="sauro-8.bin" crc="e08b5d5e"/>
+    <part name="sauro-9.bin" crc="7c707195"/>
+    <part name="sauro-10.bin" crc="c93380d1"/>
+    <part name="sauro-11.bin" crc="f47982a8"/>
+    <part name="82s137-3.bin" crc="d52c4cd0"/>
+    <part name="82s137-2.bin" crc="c3e96d5d"/>
+    <part name="82s137-1.bin" crc="bdfcf00c"/>
+    <part name="sp0256-al2.bin" crc="b504ac15"/>
+  </rom>
+  <rom index="1"/>
+</misterromdescription>
+
