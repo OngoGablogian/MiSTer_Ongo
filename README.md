@@ -192,6 +192,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [The Pit](https://misterfpga.org/viewtopic.php?p=115950)                                                                       |
 | [Tumble Pop Bootleg](https://www.patreon.com/Meathax/posts/tumble-pop-pcb-171191206)                                           |
 | [Turtle Ship](https://www.patreon.com/bazset/posts/turtle-ship-1988-172701403)                                                 |
+| [Unico SR2001A (The Legend of Silkroad)](https://github.com/ppriest/Arcade-Silkroad_MiSTer)                                    |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                     |
 | [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                    |
 | [Violent Storm](https://www.patreon.com/Meathax/posts/violent-storm-171663267)                                                 |
