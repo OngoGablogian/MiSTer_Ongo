@@ -1,0 +1,63 @@
+<misterromdescription>
+    <name>Lethal Enforcers (ver EAD, 11/11/92 10:52)</name>
+    <setname>lethalenead</setname>
+    <rbf>LethalEnforcers</rbf>
+    <mameversion>0289</mameversion>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <category>Shooter / Gun</category>
+    <rotation>horizontal</rotation>
+
+    <!-- bit 0: MAME's FLIP_X orientation (else FLIP_Y); bit 1: gun axes reversed -->
+    <rom index="1"><part>00</part></rom>
+
+    <!-- the download rtl/lethal_sdram.sv expects (its DL_* order); written and
+         checked by scripts/build_mra.py -->
+    <rom index="0" zip="lethalenead.zip|lethalen.zip" md5="none" address="0x30000000">
+        <part name="191ead01.u4" crc="ce2e13ce"/>  <!-- main program -->
+        <!-- k056832, first half -->
+        <interleave output="32">
+            <part name="191a10" crc="2fa9bf51" map="0021"/>
+            <part name="191a08" crc="555bd4db" map="2100"/>
+        </interleave>
+        <!-- k056832, second half -->
+        <interleave output="32">
+            <part name="191a09" crc="e2028531" map="0021"/>
+            <part name="191a07" crc="1dad184c" map="2100"/>
+        </interleave>
+        <!-- k053244, first half -->
+        <interleave output="32">
+            <part name="191a05" crc="f2e3b58b" map="0021"/>
+            <part name="191a04" crc="5c3eeb2b" map="2100"/>
+        </interleave>
+        <part name="191a06" crc="ee11fc08"/>  <!-- k053244's second half as the file: the RTL places its words -->
+        <part name="191a02.f4" crc="72b843cc"/>  <!-- Z80 program -->
+        <part name="191a03" crc="9b13fbe8"/>  <!-- 054539 samples -->
+    </rom>
+
+    <!-- the default EEPROM image (ROM_START's eeprom region) -->
+    <rom index="2" zip="lethalenead.zip|lethalen.zip" md5="none">
+        <part name="lethalenead.nv" crc="e1dc2bc0"/>
+    </rom>
+
+    <!-- the EEPROM as the game left it: loaded over the default, saved when the
+         OSD opens after the game has written it; then hiscore.v's tables -->
+    <nvram index="4" size="209"/>
+
+    <!-- MAME's hiscore.dat entries for hiscore.v (rtl/hiscore) -->
+    <rom index="3">
+        <part>
+        12 A9 68 00 3F FF 00 02 00 02 00 01 00 0F 20 00
+        00 00 33 90 00 50 41 00
+        00 00 33 DE 00 01 70 70
+        </part>
+    </rom>
+
+    <switches default="FD">
+        <dip name="Game Type" bits="1" ids="Arcade,Street"/>
+        <dip name="Coin Mechanism" bits="2" ids="Independent,Common"/>
+        <dip name="Sound Output" bits="3" ids="Mono,Stereo"/>
+    </switches>
+
+    <buttons names="Trigger,Reload,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+</misterromdescription>

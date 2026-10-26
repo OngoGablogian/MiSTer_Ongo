@@ -92,6 +92,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Konami GX857 Hardware](https://www.patreon.com/Meathax/posts/s-p-y-special-y-172508459)                                       |
 | [Konix Multisystem](https://github.com/SavourySnaX/MiSTer_KonixMultisystem)                                                    |
 | [Krull](https://www.patreon.com/bazset/posts/krull-1983-d-co-169209991)                                                        |
+| [Lethal Enforcers](https://github.com/ppriest/Arcade-LethalEnforcers_MiSTer)                                                   |
 | [LM80C](https://github.com/JasonA-dev/LM80C_MiSTer)                                                                            |
 | [Mad Gear / Last Duel](https://github.com/fiermanb/LastDuel-MadGear_MiSTer)                                                    |
 | [Mad Motor](https://www.patreon.com/Meathax/posts/mad-motor-173354738)                                                         |
