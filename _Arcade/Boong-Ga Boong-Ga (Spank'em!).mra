@@ -3,7 +3,7 @@
          rtl/vh_sdram_map.svh. Do not edit by hand. -->
     <name>Boong-Ga Boong-Ga (Spank'em!)</name>
     <setname>boonggab</setname>
-    <rbf>Vamphalf</rbf>
+    <rbf>ppriest_Vamphalf</rbf>
     <mameversion>0289</mameversion>
     <year>2001</year>
     <manufacturer>Taff System</manufacturer>

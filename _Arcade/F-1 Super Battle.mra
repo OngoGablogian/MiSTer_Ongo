@@ -7,7 +7,7 @@
   <setname>f1superb</setname>
   <year>1994</year>
   <manufacturer>Jaleco</manufacturer>
-  <rbf>JalecoMS32F1</rbf>
+  <rbf>ppriest_JalecoMS32F1</rbf>
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
   <buttons names="Accelerator,Brake,Shifter,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>

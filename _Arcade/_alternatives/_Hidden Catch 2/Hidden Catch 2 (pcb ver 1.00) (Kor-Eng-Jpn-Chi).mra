@@ -3,7 +3,7 @@
          rtl/eo_sdram_map.svh. Do not edit by hand. -->
     <name>Hidden Catch 2 (pcb ver 1.00) (Kor/Eng/Jpn/Chi)</name>
     <setname>hidctch2a</setname>
-    <rbf>Eolith</rbf>
+    <rbf>ppriest_Eolith</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>Eolith</manufacturer>

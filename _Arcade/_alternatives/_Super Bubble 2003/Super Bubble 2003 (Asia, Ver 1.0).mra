@@ -3,7 +3,7 @@
          rtl/lm_sdram_map.svh. Do not edit by hand. -->
     <name>Super Bubble 2003 (Asia, Ver 1.0)</name>
     <setname>sb2003a</setname>
-    <rbf>Limenko</rbf>
+    <rbf>ppriest_Limenko</rbf>
     <mameversion>0289</mameversion>
     <year>2003</year>
     <manufacturer>Limenko</manufacturer>

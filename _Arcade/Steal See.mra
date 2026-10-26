@@ -3,7 +3,7 @@
          rtl/eo_sdram_map.svh. Do not edit by hand. -->
     <name>Steal See</name>
     <setname>stealsee</setname>
-    <rbf>Eolith</rbf>
+    <rbf>ppriest_Eolith</rbf>
     <mameversion>0289</mameversion>
     <year>2000</year>
     <manufacturer>Moov Generation / Eolith</manufacturer>

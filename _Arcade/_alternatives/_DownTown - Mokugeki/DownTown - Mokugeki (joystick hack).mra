@@ -1,7 +1,7 @@
 <misterromdescription>
     <name>DownTown / Mokugeki (joystick hack)</name>
     <setname>downtownj</setname>
-    <rbf>SetaDowntown</rbf>
+    <rbf>ppriest_SetaDowntown</rbf>
     <mameversion>0289</mameversion>
     <year>1989</year>
     <manufacturer>Seta</manufacturer>

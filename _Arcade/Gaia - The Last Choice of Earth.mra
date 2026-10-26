@@ -4,7 +4,7 @@
     <about author="Paul Priest" webpage="" source="MAME dreamwld.cpp"/>
     <name>Gaia - The Last Choice of Earth</name>
     <setname>gaialast</setname>
-    <rbf>DreamWorld</rbf>
+    <rbf>ppriest_DreamWorld</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>SemiCom / XESS</manufacturer>

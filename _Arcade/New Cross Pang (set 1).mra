@@ -3,7 +3,7 @@
          rtl/vh_sdram_map.svh. Do not edit by hand. -->
     <name>New Cross Pang (set 1)</name>
     <setname>newxpang</setname>
-    <rbf>Vamphalf</rbf>
+    <rbf>ppriest_Vamphalf</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>F2 System</manufacturer>

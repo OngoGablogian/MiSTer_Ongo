@@ -2,7 +2,7 @@
 	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
 	<name>Sente Diagnostic Cartridge</name>
 	<setname>sentetst</setname>
-	<rbf>BallySente</rbf>
+	<rbf>ppriest_BallySente</rbf>
 	<mameversion>0289</mameversion>
 	<year>1984</year>
 	<manufacturer>Bally/Sente</manufacturer>

@@ -3,7 +3,7 @@
          rtl/gs_sdram_map.svh. Do not edit by hand. -->
     <name>G-Stream G2020</name>
     <setname>gstream</setname>
-    <rbf>GStream</rbf>
+    <rbf>ppriest_GStream</rbf>
     <mameversion>0289</mameversion>
     <year>2002</year>
     <manufacturer>Oriental Soft Japan</manufacturer>

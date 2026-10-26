@@ -4,7 +4,7 @@
     <about author="Paul Priest" webpage="" source="MAME dreamwld.cpp"/>
     <name>Dream World</name>
     <setname>dreamwld</setname>
-    <rbf>DreamWorld</rbf>
+    <rbf>ppriest_DreamWorld</rbf>
     <mameversion>0289</mameversion>
     <year>2000</year>
     <manufacturer>SemiCom</manufacturer>

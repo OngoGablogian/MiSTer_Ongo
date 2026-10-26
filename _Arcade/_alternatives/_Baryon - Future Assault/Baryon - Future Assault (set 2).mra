@@ -4,7 +4,7 @@
     <about author="Paul Priest" webpage="" source="MAME dreamwld.cpp"/>
     <name>Baryon - Future Assault (set 2)</name>
     <setname>baryona</setname>
-    <rbf>DreamWorld</rbf>
+    <rbf>ppriest_DreamWorld</rbf>
     <mameversion>0289</mameversion>
     <year>1997</year>
     <manufacturer>SemiCom / Tirano</manufacturer>

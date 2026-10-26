@@ -1,7 +1,7 @@
 <misterromdescription>
     <name>Thundercade / Twin Formation</name>
     <setname>tndrcade</setname>
-    <rbf>SetaDowntown</rbf>
+    <rbf>ppriest_SetaDowntown</rbf>
     <mameversion>0289</mameversion>
     <year>1987</year>
     <manufacturer>Seta (Taito license)</manufacturer>

@@ -2,7 +2,7 @@
 	<about author="Paul Priest" webpage="https://github.com/ppriest/Arcade-BallySente_MiSTer" source="MAME balsente.cpp"/>
 	<name>Rescue Raider (5/11/87) (non-cartridge)</name>
 	<setname>rescraid</setname>
-	<rbf>BallySente</rbf>
+	<rbf>ppriest_BallySente</rbf>
 	<mameversion>0289</mameversion>
 	<year>1987</year>
 	<manufacturer>Bally Midway</manufacturer>

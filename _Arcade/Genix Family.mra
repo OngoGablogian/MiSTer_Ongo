@@ -3,7 +3,7 @@
          rtl/np_rom_map.svh. Do not edit by hand. -->
     <name>Genix Family</name>
     <setname>genix</setname>
-    <rbf>NixPirates</rbf>
+    <rbf>ppriest_NixPirates</rbf>
     <mameversion>0289</mameversion>
     <year>1994</year>
     <manufacturer>NIX</manufacturer>

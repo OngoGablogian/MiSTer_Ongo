@@ -7,7 +7,7 @@
   <setname>hayaosi2</setname>
   <year>1994</year>
   <manufacturer>Jaleco</manufacturer>
-  <rbf>JalecoMS32</rbf>
+  <rbf>ppriest_JalecoMS32</rbf>
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
   <buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>

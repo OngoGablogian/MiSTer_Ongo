@@ -3,7 +3,7 @@
          rtl/eo_sdram_map.svh. Do not edit by hand. -->
     <name>Candy Candy</name>
     <setname>candy</setname>
-    <rbf>Eolith</rbf>
+    <rbf>ppriest_Eolith</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>Eolith</manufacturer>

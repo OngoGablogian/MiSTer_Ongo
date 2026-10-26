@@ -3,7 +3,7 @@
          rtl/vh_sdram_map.svh. Do not edit by hand. -->
     <name>Vamf x1/2 (Europe, version 1.0.0903)</name>
     <setname>vamphalfr1</setname>
-    <rbf>Vamphalf</rbf>
+    <rbf>ppriest_Vamphalf</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>Danbi / F2 System</manufacturer>

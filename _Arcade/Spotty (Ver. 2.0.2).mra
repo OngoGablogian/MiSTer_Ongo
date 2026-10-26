@@ -3,7 +3,7 @@
          rtl/lm_sdram_map.svh. Do not edit by hand. -->
     <name>Spotty (Ver. 2.0.2)</name>
     <setname>spotty</setname>
-    <rbf>Limenko</rbf>
+    <rbf>ppriest_Limenko</rbf>
     <mameversion>0289</mameversion>
     <year>2001</year>
     <manufacturer>Prince Co.</manufacturer>

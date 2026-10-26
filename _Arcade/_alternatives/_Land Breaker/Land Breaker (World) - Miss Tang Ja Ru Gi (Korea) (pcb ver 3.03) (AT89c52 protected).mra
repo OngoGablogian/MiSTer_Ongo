@@ -3,7 +3,7 @@
          rtl/eo_sdram_map.svh. Do not edit by hand. -->
     <name>Land Breaker (World) / Miss Tang Ja Ru Gi (Korea) (pcb ver 3.03) (AT89c52 protected)</name>
     <setname>landbrka</setname>
-    <rbf>Eolith</rbf>
+    <rbf>ppriest_Eolith</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>Eolith</manufacturer>

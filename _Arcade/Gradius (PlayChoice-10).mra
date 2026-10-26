@@ -1,0 +1,48 @@
+<misterromdescription>
+	<name>Gradius (PlayChoice-10)</name>
+	<setname>pc_grdus</setname>
+	<mameversion>0289</mameversion>
+	<year>1986</year>
+	<manufacturer>Konami</manufacturer>
+	<rbf>ppriest_PlayChoice10</rbf>
+	<rotation>horizontal</rotation>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<buttons names="A,B,Game Select,Start,Coin,Enter,Channel Select,Service Coin,Reset" default="A,B,Back,Start,R,L,Y,X"/>
+	<rom index="4" zip="pc_grdus.zip|playch10.zip" md5="None">
+		<!-- the BIOS board (PlayChoice10.sv, PC10_IDX_BIOS); channel 1 is pc_grdus -->
+		<part crc="d52fa07a" name="pch1-c__8t_e-2.8t"/>  <!-- 0000 Z80 BIOS (dual) -->
+		<part crc="27d76160" name="gr-u4"/>  <!-- 4000 INST ROM -->
+		<part crc="b8d5bf8a" name="security.prm"/>  <!-- 6000 RP5H01 -->
+		<part repeat="0x1FF0">FF</part>
+		<part crc="9acffb30" name="pch1-c__8k.8k"/>  <!-- 8000 characters -->
+		<part crc="c1232eee" name="pch1-c__8m_e-1.8m"/>
+		<part crc="30c15e23" name="pch1-c__8p_e-1.8p"/>
+		<part crc="e5414ca3" name="pch1-c-6f.82s129an.6f"/>  <!-- E000 colour PROMs 6F 6E 6D -->
+		<part crc="a2625c6e" name="pch1-c-6e.82s129an.6e"/>
+		<part crc="1213ebd4" name="pch1-c-6d.82s129an.6d"/>
+		<part repeat="0x1D00">FF</part>
+		<part crc="503ee8b1" name="pck1-c.8t"/>  <!-- 10000 Z80 BIOS (single), OSD BIOS option -->
+	</rom>
+	<rom index="3" zip="pc_grdus.zip|playch10.zip" md5="None">
+		<!-- the RP2C03's palette: NES_MiSTer's custom palette, widened in PlayChoice10.sv -->
+		<part crc="48de65dc" name="rp2c0x.pal"/>
+	</rom>
+	<rom index="1" zip="pc_grdus.zip|playch10.zip" md5="None">
+		<!-- channel 1's cart -->
+		<!-- pc_grdus: iNES header, mapper 3, PRG 32 KB, CHR 32 KB, vertical -->
+		<part>4E 45 53 1A 02 04 31 00 00 00 00 00 00 00 00 00</part>
+		<part crc="aa96889c" name="gr-u2"/>
+		<part crc="de963bec" name="gr-u3"/>
+	</rom>
+	<switches default="40,3F">
+		<dip name="Time/coin A/B" bits="0,3" ids="300/+0,300/+100,300/+200,300/+300,300/+400,300/+500,300/+600,300/+700,300/+800,300/+900,150/+0,150/+200,150/+400,150/+600,150/+800,150/+500"/>
+		<dip name="Coin B time" bits="4,5" ids="+0,+1000,+2000,+3000"/>
+		<dip name="Demo Sounds" bits="6" ids="Off,On"/>
+		<dip name="Service Mode" bits="7" ids="Off,On"/>
+		<dip name="Frames/unit" bits="8,12" ids="252,253,254,255,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27"/>
+		<dip name="Frames/unit +32" bits="13" ids="Off,On"/>
+		<dip name="Coin Mode" bits="14" ids="Mode 1,Mode 2"/>
+		<dip name="Free Play" bits="15" ids="Off,On"/>
+	</switches>
+</misterromdescription>

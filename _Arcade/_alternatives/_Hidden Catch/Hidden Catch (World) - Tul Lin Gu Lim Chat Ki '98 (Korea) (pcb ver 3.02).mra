@@ -3,7 +3,7 @@
          rtl/eo_sdram_map.svh. Do not edit by hand. -->
     <name>Hidden Catch (World) / Tul Lin Gu Lim Chat Ki '98 (Korea) (pcb ver 3.02)</name>
     <setname>hidnctcha</setname>
-    <rbf>Eolith</rbf>
+    <rbf>ppriest_Eolith</rbf>
     <mameversion>0289</mameversion>
     <year>1998</year>
     <manufacturer>Eolith</manufacturer>

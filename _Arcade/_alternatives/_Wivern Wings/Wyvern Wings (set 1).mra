@@ -3,7 +3,7 @@
          rtl/vh_sdram_map.svh. Do not edit by hand. -->
     <name>Wyvern Wings (set 1)</name>
     <setname>wyvernwg</setname>
-    <rbf>Vamphalf</rbf>
+    <rbf>ppriest_Vamphalf</rbf>
     <mameversion>0289</mameversion>
     <year>2001</year>
     <manufacturer>SemiCom (Game Vision license)</manufacturer>

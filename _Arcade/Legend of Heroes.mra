@@ -3,7 +3,7 @@
          rtl/lm_sdram_map.svh. Do not edit by hand. -->
     <name>Legend of Heroes</name>
     <setname>legendoh</setname>
-    <rbf>Limenko</rbf>
+    <rbf>ppriest_Limenko</rbf>
     <mameversion>0289</mameversion>
     <year>2000</year>
     <manufacturer>Limenko</manufacturer>

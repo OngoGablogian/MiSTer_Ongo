@@ -4,7 +4,7 @@
     <about author="Paul Priest" webpage="" source="MAME silkroad.cpp"/>
     <name>The Legend of Silkroad (larger ROMs)</name>
     <setname>silkroada</setname>
-    <rbf>Silkroad</rbf>
+    <rbf>ppriest_Silkroad</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>Unico</manufacturer>

@@ -3,7 +3,7 @@
          rtl/vh_sdram_map.svh. Do not edit by hand. -->
     <name>Lup Lup Puzzle / Zhuan Zhuan Puzzle (version 2.9 / 990108)</name>
     <setname>luplup29</setname>
-    <rbf>Vamphalf</rbf>
+    <rbf>ppriest_Vamphalf</rbf>
     <mameversion>0289</mameversion>
     <year>1999</year>
     <manufacturer>Omega System</manufacturer>

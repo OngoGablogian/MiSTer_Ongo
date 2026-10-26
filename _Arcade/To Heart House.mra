@@ -3,7 +3,7 @@
          rtl/lm_sdram_map.svh. Do not edit by hand. -->
     <name>To Heart House</name>
     <setname>hrthouse</setname>
-    <rbf>Limenko</rbf>
+    <rbf>ppriest_Limenko</rbf>
     <mameversion>0289</mameversion>
     <year>200?</year>
     <manufacturer>Limenko</manufacturer>
