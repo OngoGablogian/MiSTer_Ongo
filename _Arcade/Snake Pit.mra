@@ -30,12 +30,12 @@
 		<part name="spit-gr5.u4b" crc="dc27c970"/>
 		<part repeat="0x4000">00</part>
 		<part name="8002-10 9-25-84.5" crc="4dd0a525"/>
-		<part>00 00 00 00 10 88 01 00 00 00 00 00 00 00 00 00 03 02 00 01 FF FF 09 80 08 28 04 FF FF FF 29 FE</part>
+		<part>00 08 00 00 10 88 01 00 00 00 00 00 00 00 00 00 03 02 00 01 FF FF 09 80 08 28 04 FF FF FF 29 FE</part>
 	</rom>
 
 	<nvram index="4" size="512"/>
 
-	<buttons names="Whip,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+	<buttons names="Alaron,-,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
 
 	<switches default="FF,74,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
