@@ -14,8 +14,8 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 > [!NOTE]
 > * You can easily check out the files included with this database by using theypsilon's [Custom Database Inspector](https://theypsilon.github.io/DB-Inspector_MiSTer/?database-url=https%3A%2F%2Fraw.githubusercontent.com%2FOngoGablogian%2FMiSTer_Ongo%2Fdb%2Fdb.json.zip)
 
-> [!NOTE]
-> * In its current state, this repo totals around **10 GB** of files.
+> [!WARNING]
+> * In its current state, this repo totals around **12 GB** of files.
 
 ----
 
@@ -25,6 +25,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [240p Test Suite](https://github.com/burabure/240p_MiSTer)                                                                     |
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                           |
 | [Action Hollywood](https://www.patreon.com/Meathax/posts/action-hollywood-173157497)                                           |
+| [Agress - Missile Daisenryaku](https://www.patreon.com/bazset/posts/agress-missile-172960889)                                  |
 | [Alpha Denshi 68000 (Type Alpha N)](https://www.patreon.com/Meathax/posts/fresh-meat-kyros-172051005)                          |
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                  |
 | [Aqua Jack](https://www.patreon.com/bazset/posts/aqua-jack-taito-172198822)                                                    |
@@ -144,6 +145,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Nostradamus / Magical Cat Adventure (LINDA board)](https://github.com/kyledlester/Nostradamus_Magical_Cat_Adventure_MiSTer)   |
 | [Penguin Brothers](https://www.patreon.com/Meathax/posts/penguin-brothers-172950070)                                           |
 | [PICO-8](https://github.com/MiSTerOrganize/MiSTer_PICO-8)                                                                      |
+| [Plump Pop](https://www.patreon.com/bazset/posts/plump-pop-taito-173359151)                                                    |
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)      |
 | [Pushman](https://www.patreon.com/bazset/posts/pushman-1990-172953620)                                                         |
 | [R-Shark / Super-X (Dooyong)](https://github.com/kyledlester/R_Shark_Super_X_MiSTer)                                           |
@@ -186,10 +188,12 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Taito FX-1B “Taito Zoom”](https://github.com/XelaNotPu/ZN1-TaitoFX1B_MiSTer)                                                  |
 | [Tamagotchi P1](https://github.com/agg23/fpga-tamagotchi)                                                                      |
 | [Technos 16 (Coin-Op Collection)](https://www.patreon.com/posts/coin-op-presents-120641719)                                    |
+| [Tee'd Off](https://www.patreon.com/bazset/posts/teed-off-1986-172816305)                                                      |
 | [Texas Instruments TI-82](https://github.com/Lentrave/TI82_MiSTer_Core)                                                        |
 | [Texas Instruments TI-83 Plus](https://github.com/Lentrave/TI83Plus_MiSTer_Core)                                               |
 | [The Legend of Kage](https://mister.blahm1d.com/core-legendofkage.html)                                                        |
 | [The Lost Castle In Darkmist](https://www.patreon.com/Meathax/posts/lost-castle-in-172389752)                                  |
+| [The Masters of Kin](https://www.patreon.com/bazset/posts/masters-of-kin-173238309)                                            |
 | [The Pit](https://misterfpga.org/viewtopic.php?p=115950)                                                                       |
 | [Tumble Pop Bootleg](https://www.patreon.com/Meathax/posts/tumble-pop-pcb-171191206)                                           |
 | [Turtle Ship](https://www.patreon.com/bazset/posts/turtle-ship-1988-172701403)                                                 |
@@ -231,7 +235,7 @@ main=MiSTer_Uneon
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
-filter = !arcade-bazset_AquaJack !arcade-bazset_BirdieTry !arcade-bazset_BouncingBalls !arcade-bazset_BRapBoys !arcade-bazset_ChaseHQ !arcade-bazset_ContinentalCircus !arcade-bazset_DiamondRun !arcade-bazset_JuezhanTianhuang !arcade-bazset_KanekoFamily !arcade-bazset_kickle !arcade-bazset_Krull !arcade-bazset_MilleMiglia2 !arcade-bazset_Pushman !arcade-bazset_Reaktor !arcade-bazset_Sauro !arcade-bazset_SCI !arcade-bazset_ShogunWarriors !arcade-bazset_TurtleShip !arcade-blahm1d_exidy440 !arcade-blahm1d_gladiator !arcade-blahm1d_invasion !arcade-blahm1d_legendofkage !arcade-blahm1d_mk4 !arcade-blahm1d_narc !arcade-blahm1d_tunit !arcade-blahm1d_tunitdcs !arcade-blahm1d_vunit !arcade-blahm1d_wargods !arcade-blahm1d_wolfunit !arcade-blahm1d_xunit !arcade-blahm1d_yunit !arcade-blahm1d_yunitadpcm !arcade-Gm0rk_Atari-G1 !arcade-Gm0rk_Atari-G42 !arcade-Gm0rk_ITech8 !arcade-Gm0rk_Midway-Y-Unit !arcade-Meathax_ActionHollywood !arcade-Meathax_Alpha68kN !arcade-Meathax_Appoooh !arcade-Meathax_Argus !arcade-Meathax_Battletoads !arcade-Meathax_BlackPanther !arcade-Meathax_Bucky !arcade-Meathax_Darkmist !arcade-Meathax_DataEastLiberation !arcade-Meathax_DEC8 !arcade-Meathax_DoCastle !arcade-Meathax_DrMicro !arcade-Meathax_Exterminator !arcade-Meathax_HeavyUnit !arcade-Meathax_I-Robot !arcade-Meathax_IkkiSunsoft !arcade-Meathax_MadMotor !arcade-Meathax_MCR68 !arcade-Meathax_MysteriousStones !arcade-Meathax_NamcoND1 !arcade-Meathax_Nintendo8080 !arcade-Meathax_Penguin !arcade-Meathax_PWB351024A !arcade-Meathax_SegaSystem24 !arcade-Meathax_SegaSystem32 !arcade-Meathax_SegaSystem32Multi !arcade-Meathax_Simple156 !arcade-Meathax_SPY !arcade-Meathax_SSV !arcade-Meathax_SteelForce !arcade-Meathax_StoneBall !arcade-Meathax_StunRunner !arcade-Meathax_Suna8bit !arcade-Meathax_Tumble !arcade-Meathax_VioStorm !arcade-Meathax_Zaccaria !arcade-Meathax_ZeroTeam
+filter = !arcade-bazset_Agress !arcade-bazset_AquaJack !arcade-bazset_BirdieTry !arcade-bazset_BouncingBalls !arcade-bazset_BRapBoys !arcade-bazset_ChaseHQ !arcade-bazset_ContinentalCircus !arcade-bazset_DiamondRun !arcade-bazset_JuezhanTianhuang !arcade-bazset_KanekoFamily !arcade-bazset_kickle !arcade-bazset_Krull !arcade-bazset_MastersofKin !arcade-bazset_MilleMiglia2 !arcade-bazset_PlumpPop !arcade-bazset_Pushman !arcade-bazset_Reaktor !arcade-bazset_Sauro !arcade-bazset_SCI !arcade-bazset_ShogunWarriors !arcade-bazset_TeedOff !arcade-bazset_TurtleShip !arcade-blahm1d_exidy440 !arcade-blahm1d_gladiator !arcade-blahm1d_invasion !arcade-blahm1d_legendofkage !arcade-blahm1d_mk4 !arcade-blahm1d_narc !arcade-blahm1d_tunit !arcade-blahm1d_tunitdcs !arcade-blahm1d_vunit !arcade-blahm1d_wargods !arcade-blahm1d_wolfunit !arcade-blahm1d_xunit !arcade-blahm1d_yunit !arcade-blahm1d_yunitadpcm !arcade-Gm0rk_Atari-G1 !arcade-Gm0rk_Atari-G42 !arcade-Gm0rk_ITech8 !arcade-Gm0rk_Midway-Y-Unit !arcade-Meathax_ActionHollywood !arcade-Meathax_Alpha68kN !arcade-Meathax_Appoooh !arcade-Meathax_Argus !arcade-Meathax_Battletoads !arcade-Meathax_BlackPanther !arcade-Meathax_Bucky !arcade-Meathax_Darkmist !arcade-Meathax_DataEastLiberation !arcade-Meathax_DEC8 !arcade-Meathax_DoCastle !arcade-Meathax_DrMicro !arcade-Meathax_Exterminator !arcade-Meathax_HeavyUnit !arcade-Meathax_I-Robot !arcade-Meathax_IkkiSunsoft !arcade-Meathax_MadMotor !arcade-Meathax_MCR68 !arcade-Meathax_MysteriousStones !arcade-Meathax_NamcoND1 !arcade-Meathax_Nintendo8080 !arcade-Meathax_Penguin !arcade-Meathax_PWB351024A !arcade-Meathax_SegaSystem24 !arcade-Meathax_SegaSystem32 !arcade-Meathax_SegaSystem32Multi !arcade-Meathax_Simple156 !arcade-Meathax_SPY !arcade-Meathax_SSV !arcade-Meathax_SteelForce !arcade-Meathax_StoneBall !arcade-Meathax_StunRunner !arcade-Meathax_Suna8bit !arcade-Meathax_Tumble !arcade-Meathax_VioStorm !arcade-Meathax_Zaccaria !arcade-Meathax_ZeroTeam
 ```
 
 ----

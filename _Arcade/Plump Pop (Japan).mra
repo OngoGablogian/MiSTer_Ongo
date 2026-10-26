@@ -1,0 +1,132 @@
+<!--
+*******************************************************************************
+  BAZSET CORE - PLUMP POP (JAPAN)
+  RBF FILE: PlumpPop_BAZSET_B01
+  REQUIRED ROM ZIP FILE(S): plumppop.zip (user-supplied; never bundled)
+  EXPERIMENTAL BUILD_FIRST - HARDWARE / GAMEPLAY NOT VERIFIED
+*******************************************************************************
+-->
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <!-- BAZSET ROM3: editable CRC-checked pause, palette, and OSD metadata. -->
+    <bazset_runtime version="1"><pause><title>Plump Pop (Japan)</title><build>K240 EGRET SPINNER + PP406 GOOD COLOURS V3 - HARDWARE UNVERIFIED</build><core_by>bazset</core_by><patreon>patreon.com/c/bazset</patreon><x>x.com/bazset_</x><beta_testers>Big Al</beta_testers><patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters><special_thanks>MAME hardware researchers</special_thanks><bug_prompt>FOUND A BUG? REPORT IT ON MY PATREON</bug_prompt></pause><osd><visibility>Video Settings,Game Settings,DIP Switches,Credits,Reset</visibility><defaults>Aspect=Original;Rotation=No;CRT Adjust=On;CRT H-Size=0;CRT H-Position=0;CRT V-Shift=0;Scandoubler Fx=None</defaults></osd><pause_style><colors background="#120C16" card="#201125" border="#CEBCCF" text="#F7F1F7" dim="#C8B5C8" accent="#F4D8F0"/><layout preset="compact"/><marquee frames="12"/></pause_style></bazset_runtime>
+
+    <about author="bazset" webpage="https://patreon.com/c/bazset" twitter="@bazset_"/>
+    <rotation>horizontal</rotation>
+    <name>Plump Pop (Japan)</name>
+    <setname>plumppop</setname>
+    <mameversion>0289</mameversion>
+    <year>1987</year>
+    <manufacturer>Taito</manufacturer>
+    <players>2</players>
+    <rbf>PlumpPop_BAZSET_B01</rbf>
+    <joystick/>
+    <region>Japan</region>
+    <category>Arcade</category>
+    <rom index="0" zip="plumppop.zip" md5="None">
+        <!-- bit 0 = MCU
+             bit 1 = color PROM
+             bit 2 = Kabuki Z (specific sound features)
+             bit 3 = Kageki   (specific sound features)
+             bit 4 = banked RAM
+             bit 5 = coin XOR
+             bit 6 = dip_flip XOR
+             bit 7 = HB delay
+             Byte 1:
+             bit 0 = service XOR
+             bit 1 = button aid
+             bit 2 = 3 MHz for FM module
+             bit 3 = Kabuki Z with different memory map
+             bit 4 = 13 bits tilemap code
+             bit 5 = PSG channels summed, not shorted -->
+        <part>
+            13 04 01 00 </part>
+        <!-- maincpu - starts at 0x0 - length 0x20000 (17 bits) -->
+        <part name="a98__09.11c" crc="107f9e06"/>
+        <part name="a98__10.9c" crc="df6e6af2"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- sub - starts at 0x20000 - length 0x10000 (16 bits) -->
+        <part name="a98__11.4e" crc="bc56775c"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- audiocpu - starts at 0x30000 - length 0x10000 (16 bits) -->
+        <part repeat="0x10000"> FF</part>
+        <!-- PCM_START -->
+        <!-- samples - starts at 0x40000 - length 0x10000 (16 bits) -->
+        <part repeat="0x10000"> FF</part>
+        <!-- JTFRAME_BA3_START -->
+        <!-- gfx1 - starts at 0x50000 - length 0x200000 (21 bits) -->
+        <interleave output="32">
+            <part name="a98__05.mbm27c512.7a" crc="45c36963" map="0001"/>
+            <part name="a98__01.mbm27c512.13a" crc="f3033dca" map="0010"/>
+            <part name="a98__07.mbm27c512.4a" crc="8e16cd81" map="0100"/>
+            <part name="a98__03.mbm27c512.10a" crc="1a519b0a" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="a98__05.mbm27c512.7a" crc="45c36963" map="0001"/>
+            <part name="a98__01.mbm27c512.13a" crc="f3033dca" map="0010"/>
+            <part name="a98__07.mbm27c512.4a" crc="8e16cd81" map="0100"/>
+            <part repeat="0x10000" map="1000">00</part>
+        </interleave>
+        <interleave output="32">
+            <part name="a98__06.mbm27c512.5a" crc="e075341b" map="0001"/>
+            <part name="a98__02.mbm27c512.12a" crc="f2d17b0c" map="0010"/>
+            <part name="a98__08.mbm27c512.2a" crc="bfa7609a" map="0100"/>
+            <part name="a98__04.mbm27c512.8a" crc="b64501a1" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="a98__06.mbm27c512.5a" crc="e075341b" map="0001"/>
+            <part name="a98__02.mbm27c512.12a" crc="f2d17b0c" map="0010"/>
+            <part name="a98__08.mbm27c512.2a" crc="bfa7609a" map="0100"/>
+            <part name="a98__04.mbm27c512.8a" crc="b64501a1" map="1000"/>
+        </interleave>
+        <part repeat="0x100000"> FF</part>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0x250000 - length 0x1000 (12 bits) -->
+        <part name="a98-13.15f" crc="7cde2da5"/>
+        <part name="a98-12.17f" crc="90dc9da7"/>
+        <part repeat="0xC00"> FF</part>
+        <!-- MCU_START -->
+        <!-- mcu - starts at 0x251000 - length 0x800 (11 bits) -->
+        <part name="b06__14.1g" crc="28907072"/>
+        <!-- Total 0x251800 bytes - 2374 kBytes -->
+    </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <rom index="3"><part>425A4D31490300002886837E7B226F7364223A7B2264656661756C7473223A224173706563743D4F726967696E616C3B526F746174696F6E3D4E6F3B4352542041646A7573743D4F6E3B43525420482D53697A653D303B43525420482D506F736974696F6E3D303B43525420562D53686966743D303B5363616E646F75626C65722046783D4E6F6E65222C227669736962696C697479223A22566964656F2053657474696E67732C47616D652053657474696E67732C4449502053776974636865732C437265646974732C5265736574227D2C227061757365223A7B22626574615F74657374657273223A2242696720416C222C226275675F70726F6D7074223A22464F554E442041204255473F205245504F5254204954204F4E204D592050415452454F4E222C226275696C64223A224B323430204547524554205350494E4E4552202B20505034303620474F4F4420434F4C4F555253205633202D20484152445741524520554E5645524946494544222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224D414D45206861726477617265207265736561726368657273222C227469746C65223A22506C756D7020506F7020284A6170616E29222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223463444384630222C226261636B67726F756E64223A2223313230433136222C22626F72646572223A2223434542434346222C2263617264223A2223323031313235222C2264696D223A2223433842354338222C2274657874223A2223463746314637227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A31327D2C2276657273696F6E223A317D</part></rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSWA/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="2/3,2/1,1/2,1/1"/>
+        <dip name="Coin B" bits="6,7" ids="2/3,2/1,1/2,1/1"/>
+        <DSWB/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Bonus Life" bits="10,11" ids="100k 400k 300k+,100k 300k 200k+,50k 200k 150k+,50k 250k 200k+"/>
+        <dip name="Lives" bits="12,13" ids="5,4,2,3"/>
+        <dip name="P1/P2 Collision" bits="14" ids="Yes,No"/>
+        <dip name="Allow Continue" bits="15" ids="No,Yes"/>
+    </switches>
+    <buttons names="button 1,button 2,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>

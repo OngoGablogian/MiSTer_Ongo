@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BAZSET development test build 20261025. Recoloured approximation; original PCB colour PROMs remain undumped. No game ROM data is distributed. -->
+<misterromdescription>
+ <about author="BAZSET / Track &amp; Field donor by Jotego" webpage="https://patreon.com/c/bazset"/>
+ <name>The Masters of Kin</name>
+ <setname>mastkin</setname>
+ <mameversion>0289</mameversion>
+ <year>1988</year>
+ <manufacturer>Du Tech</manufacturer>
+ <rotation>horizontal</rotation>
+ <players>1</players>
+ <rbf>mastkin</rbf>
+ <joystick/>
+ <rom index="0" zip="mastkin.zip" md5="None">
+  <part repeat="0x8000">FF</part>
+  <part name="mk3" crc="9f80d6ae"/>
+  <part name="mk4" crc="99f361e7"/>
+  <part repeat="0x2000">FF</part>
+  <part name="mk5" crc="143d76ce"/>
+  <part name="mk1" crc="95bf79b6"/>
+  <interleave output="16"><part name="mk12" crc="8b1a19cf" length="0x2000" map="12"/></interleave>
+  <interleave output="16"><part name="mk11" crc="1a56d24d" length="0x2000" map="12"/></interleave>
+  <interleave output="16"><part name="mk10" crc="e7d05634" length="0x2000" map="12"/></interleave>
+  <part repeat="0x8000">FF</part>
+  <interleave output="16">
+   <part name="mk6" crc="18fbe047" length="0x2000" map="01"/>
+   <part name="mk8" crc="9c091ead" length="0x2000" map="10"/>
+  </interleave>
+  <interleave output="16">
+   <part name="mk7" crc="47dee791" length="0x2000" map="01"/>
+   <part name="mk9" crc="5c8ed3fe" length="0x2000" map="10"/>
+  </interleave>
+  <part repeat="0x8000">FF</part>
+  <part name="mk2" crc="f546a56b"/>
+  <part>00 04 08 0c 10 14 18 1c 20 24 28 2c 30 34 38 3c 40 44 48 4c 50 54 58 5c 60 64 68 6c 70 74 78 7c 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 00 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 00 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 00 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 00 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 00 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 00 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 00 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 07 00 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 07 08 00 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 07 08 09 00 0c 0d 0e 0f 00 01 02 03 04 05 06 07 08 09 0a 00 0d 0e 0f 00 01 02 03 04 05 06 07 08 09 0a 0b 00 0e 0f 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 00 0f 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 00 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 00 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 00 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 00 05 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 00 06 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 00 07 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 00 08 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 00 09 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 07 00 0a 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 07 08 00 0b 0c 0d 0e 0f 00 01 02 03 04 05 06 07 08 09 00 0c 0d 0e 0f 00 01 02 03 04 05 06 07 08 09 0a 00 0d 0e 0f 00 01 02 03 04 05 06 07 08 09 0a 0b 00 0e 0f 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 00 0f 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 00 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e</part>
+ </rom>
+ <nvram index="2" size="1024"/>
+ <rom index="1"><part>00 B9</part></rom>
+ <switches page_id="1" page_name="DIP Switches" base="16" default="d6,00">
+  <!-- M013: match the reference OSD order without altering any real MAME DIP bit. -->
+  <DSW2/>
+  <dip name="Coin A" bits="12,13,14,15" ids="1C/1C,1C/2C,1C/3C,1C/4C,1C/5C,2C/1C,2C/2C,2C/3C,2C/4C,3C/1C,4C/1C,N/A,N/A,N/A,N/A,N/A"/>
+  <dip name="Coin B" bits="8,9,10,11" ids="1C/1C,1C/2C,1C/3C,1C/4C,1C/5C,2C/1C,2C/2C,2C/3C,2C/4C,3C/1C,4C/1C,N/A,N/A,N/A,N/A,N/A"/>
+  <DSW1/>
+  <dip name="Allow Continue" bits="0" ids="On,Off"/>
+  <dip name="Timer Speed" bits="1" ids="Fast,Normal"/>
+  <dip name="Difficulty" bits="2,3" ids="Very Hard,Normal,Hard,Easy"/>
+  <dip name="Lives" bits="4" ids="5,4"/>
+  <dip name="Internal Speed" bits="5" ids="Fast,Slow"/>
+ </switches>
+ <buttons names="Attack,Jump,Start,Coin" default="A,B,Start,Select" count="4"/>
+</misterromdescription>

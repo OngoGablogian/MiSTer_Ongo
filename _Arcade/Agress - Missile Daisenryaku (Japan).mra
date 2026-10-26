@@ -1,0 +1,63 @@
+<!--
+=============================================================================
+ BAZSET CORE: AGRESS / MISSILE DAISENRYAKU
+ BAZSET PRE-BETA / ROM-FREE MISTER FPGA EXPERIMENTAL BRING-UP
+ RBF FILE: AArcade-Agress.rbf
+ REQUIRED ROM ZIP FILE(S): agress.zip (user-provided; NOT distributed)
+ Original arcade hardware manufacturer: Palco.
+ Legal notices for derived work are preserved separately in the accompanying
+ AGRESS_UPSTREAM_MRA_LEGAL_NOTICES.txt.
+=============================================================================
+-->
+<misterromdescription>
+  <!-- BAZSET MRA-driven credits: real index249 HPS receiver and native pause pixel A/B checked. Experimental hardware unverified. -->
+<bazset_runtime version="1"><pause><title>Agress - Missile Daisenryaku</title><build>b01</build><core_by>bazset</core_by><patreon>patreon.com/c/bazset</patreon><x>x.com/bazset_</x><beta_testers>No enrolled beta testers yet</beta_testers><patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters><special_thanks>Meathax | PixelCherryNinja</special_thanks><bug_prompt>FOUND A BUG? REPORT IT ON MY PATREON</bug_prompt></pause><osd><visibility>CRT H-Position=show | CRT V-Shift=show</visibility><defaults>CRT H-Position=0 | CRT V-Shift=0</defaults></osd><pause_style><colors background="#080B18" card="#101522" border="#D9A441" text="#F0E9D7" dim="#71798A" accent="#5DE4FF"/><layout preset="compact"/><marquee frames="12"/></pause_style></bazset_runtime>
+    <about author="BAZSET" webpage="https://www.patreon.com/c/bazset"/>
+    <rotation>horizontal</rotation>
+    <name>Agress - Missile Daisenryaku (Japan)</name>
+    <setname>agress</setname>
+    <mameversion>0289</mameversion>
+    <year>1991</year>
+    <manufacturer>Palco</manufacturer>
+    <category>Arcade</category>
+    <players>2</players>
+    <rbf>Arcade-Agress</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="agress.zip" md5="None">
+        <!--  Header to identify the PCB type
+        Byte 0: b0 Block Out, b1 Japanese Block Out, b2 Agress
+
+  0[0]: blockout   Blockout
+  0[1]: blockoutj  Blockoutj
+  0[2]: agress     Agress -->
+        <part>
+            04 00 00 00 </part>
+        <!-- maincpu - starts at 0x0 - length 0x40000 (18 bits) -->
+        <interleave output="16">
+            <part name="palco2.91" crc="abfd5bcc" map="01"/>
+            <part name="palco1.81" crc="3acc917a" map="10"/>
+        </interleave>
+        <!-- JTFRAME_BA1_START -->
+        <!-- audiocpu - starts at 0x40000 - length 0x8000 (15 bits) -->
+        <part name="palco3.73" crc="2a21c97d"/>
+        <!-- PCM_START -->
+        <!-- oki - starts at 0x48000 - length 0x20000 (17 bits) -->
+        <part name="palco4.78" crc="9dfd9cfe"/>
+        <!-- Total 0x68000 bytes - 416 kBytes -->
+    </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSW1/>
+        <dip name="Coinage" bits="0,1" ids="3/1,2/1,1/2,1/1"/>
+        <dip name="Opening Cut" bits="2" ids="Off,On"/>
+        <dip name="Demo Sounds" bits="5" ids="Off,On"/>
+        <DSW2/>
+        <dip name="Difficulty" bits="8,9" ids="Very Hard,Hard,Easy,Normal"/>
+        <dip name="Lives" bits="10" ids="1,2"/>
+    </switches>
+    <buttons names="Stop 1,Stop 2,Bomb,-,Start,Coin,Core credits" default="A,B,X,Start,Select,-" count="3"/>
+    <rom index="249"><part>425A4D31D4020000108D5C567B226F7364223A7B2264656661756C7473223A2243525420482D506F736974696F6E3D30207C2043525420562D53686966743D30222C227669736962696C697479223A2243525420482D506F736974696F6E3D73686F77207C2043525420562D53686966743D73686F77227D2C227061757365223A7B22626574615F74657374657273223A224E6F20656E726F6C6C65642062657461207465737465727320796574222C226275675F70726F6D7074223A22464F554E442041204255473F205245504F5254204954204F4E204D592050415452454F4E222C226275696C64223A22623031222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224D656174686178207C20506978656C4368657272794E696E6A61222C227469746C65223A22416772657373202D204D697373696C652044616973656E7279616B75222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223354445344646222C226261636B67726F756E64223A2223303830423138222C22626F72646572223A2223443941343431222C2263617264223A2223313031353232222C2264696D223A2223373137393841222C2274657874223A2223463045394437227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A31327D2C2276657273696F6E223A317D</part></rom>
+</misterromdescription>
