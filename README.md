@@ -162,6 +162,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA System C / C-2](https://github.com/Mezzow/Arcade-SystemC2_MiSTer)                                                        |
 | [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                            |
 | [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                |
+| [SemiCom 68020](https://github.com/ppriest/Arcade-DreamWorld_MiSTer)                                                           |
 | [Seta 1st Generation Hardware (X1-010)](https://github.com/ppriest/Arcade-Seta_MiSTer)                                         |
 | [Shogun Warriors](https://www.patreon.com/bazset/posts/shogun-warriors-171613142)                                              |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
