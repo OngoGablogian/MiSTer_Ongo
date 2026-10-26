@@ -64,6 +64,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Fire Trap](https://github.com/Usquebagh/Arcade-FireTrap_MiSTer)                                                               |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                 |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                    |
+| [G-Stream G2020](https://github.com/ppriest/Arcade-GStream_MiSTer)                                                             |
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                            |
 | [Gladiator](https://mister.blahm1d.com/core-gladiator.html)                                                                    |
 | [Great 1000 Miles Rally 2 (Mille Miglia 2)](https://www.patreon.com/bazset/posts/great-1000-miles-173244427)                   |
