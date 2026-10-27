@@ -1,0 +1,75 @@
+<misterromdescription>
+    <name>Big Fight - Big Trouble In The Atlantic Ocean</name>
+    <mameversion>0289</mameversion>
+    <setname>bigfight</setname>
+    <year>1992</year>
+    <manufacturer>Tatsumi</manufacturer>
+    <region>World</region>
+    <category>Fighter / Beat 'em up</category>
+    <rbf>Meathax_BigFight</rbf>
+    <rotation>horizontal</rotation>
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="A,B,Start,Select,R,L" names="Attack,Jump,Start,Coin,Service,Pause"/>
+    <switches default="ff,7f,0d" base="8">
+        <dip bits="0,3" ids="5C/1C,4C/3C,4C/1C,3C/4C,3C/2C,3C/1C,2C/5C,2C/3C,2C/1C,1C/7C,1C/6C,1C/5C,1C/4C,1C/3C,1C/2C,1C/1C" name="Coin A"/>
+        <dip bits="4,7" ids="6C/1C,5C/1C,4C/1C,3C/4C,3C/2C,3C/1C,2C/5C,2C/3C,2C/1C,1C/7C,1C/6C,1C/5C,1C/4C,1C/3C,1C/2C,1C/1C" name="Coin B"/>
+        <dip bits="8,9" ids="1,4,3,2" name="Lives"/>
+        <dip bits="10" ids="150000,100000" name="Ticket Dispenser"/>
+        <dip bits="11" ids="On,Off" name="Continue Coin"/>
+        <dip bits="12" ids="None,100000" name="Extend"/>
+        <dip bits="13,14" ids="Very Hard,Hard,Easy,Normal" name="Difficulty"/>
+        <dip bits="15" ids="On,Off" name="Demo Sounds"/>
+        <dip bits="17" ids="Select SW,Coin Slot" name="Player Select"/>
+        <dip bits="18" ids="On,Off" name="Service Mode"/>
+        <dip bits="19" ids="On,Off" name="Hardware Test Mode"/>
+    </switches>
+    <rom index="0" zip="bigfight.zip" md5="None">
+        <!-- 000000 packed tiles: plane0,plane1,plane2,0 per 32-bit row -->
+        <interleave output="32">
+            <part name="rom24.ic73" crc="c564185d" map="0001"/>
+            <part name="rom23.ic72" crc="f8bb340b" map="0010"/>
+            <part name="rom22.ic71" crc="fb505074" map="0100"/>
+            <part map="1000" repeat="0x20000">00</part>
+        </interleave>
+        <!-- 080000 Z80, 090000 OKI, 0d0000 tile CLUT, 0f0000 zero -->
+        <part name="rom20.ic91" crc="b3add091"/>
+        <part name="rom15.ic39" crc="58d136e8"/>
+        <part name="rom21.ic128" crc="da027dcf"/>
+        <part repeat="0x10000">00</part>
+        <!-- 100000 sprites_l -->
+        <interleave output="32">
+            <part name="rom0.ic26" crc="a4a3c8d6" map="0001"/>
+            <part name="rom8.ic45" crc="220956ed" map="0010"/>
+            <part name="rom2.ic28" crc="c4f6d243" map="0100"/>
+            <part name="rom10.ic47" crc="0212d472" map="1000"/>
+        </interleave>
+        <!-- 300000 sprites_h -->
+        <interleave output="32">
+            <part name="rom4.ic30" crc="999ff7e9" map="0001"/>
+            <part name="rom12.ic49" crc="cb4c1f0b" map="0010"/>
+            <part name="rom6.ic32" crc="f70e2d47" map="0100"/>
+            <part name="rom14.ic51" crc="77430bc9" map="1000"/>
+        </interleave>
+        <!-- 500000 master_rom (ROM_LOAD16_BYTE, copies per ROM_COPY) -->
+        <interleave output="16">
+            <part name="rom16.ic77" crc="e7304ec8" map="01"/>
+            <part name="rom17.ic98" crc="4cf090f6" map="10"/>
+        </interleave>
+        <part repeat="0x180000">00</part>
+        <!-- 700000 slave_rom (ROM_LOAD16_BYTE, copies per ROM_COPY) -->
+        <interleave output="16">
+            <part name="rom18.ic100" crc="49df6207" map="01"/>
+            <part name="rom19.ic102" crc="c12aa9e9" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="rom18.ic100" crc="49df6207" map="01"/>
+            <part name="rom19.ic102" crc="c12aa9e9" map="10"/>
+        </interleave>
+    </rom>
+    <rom index="3">
+        <part>0B EB C2 00 FF FF 00 04 00 04 00 01 00 10 08 00 00 00 22 A8 3A 00 2E 00</part>
+    </rom>
+    <nvram index="4" size="58"/>
+</misterromdescription>

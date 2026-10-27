@@ -1,0 +1,143 @@
+<misterromdescription>
+    <name>Cycle Warriors</name>
+    <mameversion>0289</mameversion>
+    <setname>cyclwarrb</setname>
+    <year>1991</year>
+    <manufacturer>Tatsumi</manufacturer>
+    <category>Fighter / Beat 'em up</category>
+    <rbf>Meathax_BigFight</rbf>
+    <rotation>horizontal</rotation>
+    <players>4</players>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <parent>cyclwarr</parent>
+    <buttons default="B,A,Start,Select,R,L" names="Jump,Attack,Start,Coin,Service Coin,Pause"/>
+    <switches default="ff,6e,0d" base="8">
+        <dip bits="0,3" ids="5C/1 Credit,4C/3 Credits,4C/1 Credit,3C/4 Credits,3C/2 Credits,3C/1 Credit,2C/5 Credits,2C/3 Credits,2C/1 Credit,1C/7 Credits,1C/6 Credits,1C/5 Credits,1C/4 Credits,1C/3 Credits,1C/2 Credits,1C/1 Credit" name="Coin A"/>
+        <dip bits="4,7" ids="6C/1 Credit,5C/1 Credit,4C/1 Credit,3C/4 Credits,3C/2 Credits,3C/1 Credit,2C/5 Credits,2C/3 Credits,2C/1 Credit,1C/7 Credits,1C/6 Credits,1C/5 Credits,1C/4 Credits,1C/3 Credits,1C/2 Credits,1C/1 Credit" name="Coin B"/>
+        <dip bits="8,9" ids="5,3,2,1" name="Lives"/>
+        <dip bits="10" ids="15000,10000" name="Ticket"/>
+        <dip bits="11,12" ids="Unused,2P,3P,4P" name="Machine Type"/>
+        <dip bits="13,14" ids="Very Hard,Hard,Easy,Normal" name="Difficulty"/>
+        <dip bits="15" ids="On,Off" name="Demo Sounds"/>
+        <dip bits="17" ids="Select SW,Coin Slot" name="Player Select"/>
+        <dip bits="18" ids="On,Off" name="Service Mode"/>
+    </switches>
+    <rom index="0" zip="cyclwarrb.zip|cyclwarr.zip" md5="None">
+        <interleave output="32">
+            <part name="cw30.ic73" crc="331d0711" map="0001"/>
+            <part name="cw29.ic72" crc="64dd519c" map="0010"/>
+            <part name="cw28.ic71" crc="3fc568ed" map="0100"/>
+            <part map="1000" repeat="0x20000">00</part>
+        </interleave>
+        <part name="cw26.ic91" crc="a6485a3a"/>
+        <part name="cw24.ic39" crc="08656756"/>
+        <part name="cw25.ic40" crc="36c0b8a6"/>
+        <part name="cw27.ic128" crc="2db48a9e"/>
+        <part repeat="0x10000">00</part>
+        <interleave output="32">
+            <part name="cw00.ic26" crc="ba00c582" map="0001"/>
+            <part name="cw08.ic45" crc="1583e576" map="0010"/>
+            <part name="cw02.ic28" crc="8376a744" map="0100"/>
+            <part name="cw10.ic47" crc="901d849d" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="cw01.ic27" crc="35979022" map="0001"/>
+            <part name="cw09.ic46" crc="8114be09" map="0010"/>
+            <part name="cw03.ic29" crc="951ed812" map="0100"/>
+            <part name="cw11.ic48" crc="a7e5bf0b" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="cw00.ic26" crc="ba00c582" map="0001"/>
+            <part name="cw08.ic45" crc="1583e576" map="0010"/>
+            <part name="cw02.ic28" crc="8376a744" map="0100"/>
+            <part name="cw10.ic47" crc="901d849d" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="cw01.ic27" crc="35979022" map="0001"/>
+            <part name="cw09.ic46" crc="8114be09" map="0010"/>
+            <part name="cw03.ic29" crc="951ed812" map="0100"/>
+            <part name="cw11.ic48" crc="a7e5bf0b" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="cw04.ic30" crc="890ea7b1" map="0001"/>
+            <part name="cw12.ic49" crc="1587e96d" map="0010"/>
+            <part name="cw06.ic32" crc="47decb23" map="0100"/>
+            <part name="cw14.ic51" crc="a75072a1" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="cw05.ic31" crc="4e49fcc5" map="0001"/>
+            <part name="cw13.ic50" crc="51aee710" map="0010"/>
+            <part name="cw07.ic33" crc="4f6b3c72" map="0100"/>
+            <part name="cw15.ic52" crc="9cfc3b14" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="cw04.ic30" crc="890ea7b1" map="0001"/>
+            <part name="cw12.ic49" crc="1587e96d" map="0010"/>
+            <part name="cw06.ic32" crc="47decb23" map="0100"/>
+            <part name="cw14.ic51" crc="a75072a1" map="1000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="cw05.ic31" crc="4e49fcc5" map="0001"/>
+            <part name="cw13.ic50" crc="51aee710" map="0010"/>
+            <part name="cw07.ic33" crc="4f6b3c72" map="0100"/>
+            <part name="cw15.ic52" crc="9cfc3b14" map="1000"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw16.ic77" crc="47d57cf9" map="01"/>
+            <part name="cw18.ic98" crc="7d541f9e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw16.ic77" crc="47d57cf9" map="01"/>
+            <part name="cw18.ic98" crc="7d541f9e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw16.ic77" crc="47d57cf9" map="01"/>
+            <part name="cw18.ic98" crc="7d541f9e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw16.ic77" crc="47d57cf9" map="01"/>
+            <part name="cw18.ic98" crc="7d541f9e" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw17.ic78" crc="008bdf09" map="01"/>
+            <part name="cw19.ic99" crc="e82244e0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw17.ic78" crc="008bdf09" map="01"/>
+            <part name="cw19.ic99" crc="e82244e0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw17.ic78" crc="008bdf09" map="01"/>
+            <part name="cw19.ic99" crc="e82244e0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw17.ic78" crc="008bdf09" map="01"/>
+            <part name="cw19.ic99" crc="e82244e0" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw20.ic100" crc="c7a6fa85" map="01"/>
+            <part name="cw22.ic102" crc="917c1a2a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw20.ic100" crc="c7a6fa85" map="01"/>
+            <part name="cw22.ic102" crc="917c1a2a" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw21.ic101" crc="ed90d956" map="01"/>
+            <part name="cw23.ic103" crc="009cdc78" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="cw21.ic101" crc="ed90d956" map="01"/>
+            <part name="cw23.ic103" crc="009cdc78" map="10"/>
+        </interleave>
+    </rom>
+    <rom index="1">
+        <part>01</part>
+    </rom>
+    <rom index="3">
+        <part>0B EB C2 00 FF FF 00 04 00 04 00 01 00 10 08 00 00 00 6B 04 C8 00 2E 00 00 00 6B CC C8 2E 2E 00 00 00 6C 94 C8 2E 00 00 00 00 6D 5C C8 00 3A 00 00 00 6E 24 C8 2E 20 00 00 00 6E EC C8 2E 20 00 00 00 6F B4 C8 00 66 00</part>
+    </rom>
+    <nvram index="4" size="1400"/>
+    <remark>MAME 0.289 marks Cycle Warriors not working / imperfect graphics; this core follows the documented shared hardware.</remark>
+</misterromdescription>
