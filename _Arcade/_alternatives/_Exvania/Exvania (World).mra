@@ -33,7 +33,8 @@
     <!-- board record: C350, ROT0 cabinet, two-button joystick panel -->
     <rom index="2"><part>01 5E 01 02 00 02</part></rom>
 
-    <rom index="0" zip="exvania.zip|namcoc69.zip" md5="none">
+    <!-- address: fast loading (Main_MiSTer puts the stream in DDR3; the core copies it to SDRAM) -->
+    <rom index="0" zip="exvania.zip|namcoc69.zip" md5="none" address="0x30000000">
         <!-- program ROM: stream $000000-$1FFFFF -->
         <interleave output="16">
             <part name="ex2-ep0l.4c" crc="ccf46677" map="01"/>

@@ -32,7 +32,8 @@
     <!-- board record: C348, ROT0 cabinet, 4-button quiz panel -->
     <rom index="2"><part>01 5C 01 02 00 01</part></rom>
 
-    <rom index="0" zip="bkrtmaq.zip|namcoc69.zip" md5="none">
+    <!-- address: fast loading (Main_MiSTer puts the stream in DDR3; the core copies it to SDRAM) -->
+    <rom index="0" zip="bkrtmaq.zip|namcoc69.zip" md5="none" address="0x30000000">
         <!-- program ROM: stream $000000-$1FFFFF -->
         <interleave output="16">
             <part name="mq1-ep0l.bin" crc="f029bc57" map="01"/>

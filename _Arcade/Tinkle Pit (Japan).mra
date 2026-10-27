@@ -30,7 +30,8 @@
     <!-- board record: C367 (KEYCUS mode 2, the stateful LFSR), ROT0 cabinet, two-button joystick panel -->
     <rom index="2"><part>02 6F 01 07 00 02</part></rom>
 
-    <rom index="0" zip="tinklpit.zip|namcoc69.zip" md5="none">
+    <!-- address: fast loading (Main_MiSTer puts the stream in DDR3; the core copies it to SDRAM) -->
+    <rom index="0" zip="tinklpit.zip|namcoc69.zip" md5="none" address="0x30000000">
         <!-- program ROM: stream $000000-$1FFFFF -->
         <interleave output="16">
             <part name="tk1-ep0l.6c" crc="fdccae42" map="01"/>

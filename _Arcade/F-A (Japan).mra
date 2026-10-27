@@ -32,7 +32,8 @@
     <!-- board record: C349, ROT90 cabinet, two-button joystick panel -->
     <rom index="2"><part>01 5D 01 02 01 02</part></rom>
 
-    <rom index="0" zip="fa.zip|fghtatck.zip|namcoc69.zip" md5="none">
+    <!-- address: fast loading (Main_MiSTer puts the stream in DDR3; the core copies it to SDRAM) -->
+    <rom index="0" zip="fa.zip|fghtatck.zip|namcoc69.zip" md5="none" address="0x30000000">
         <!-- program ROM: stream $000000-$1FFFFF -->
         <interleave output="16">
             <part name="fa1-ep0l.4c" crc="182eee5c" map="01"/>

@@ -37,7 +37,8 @@
     <!-- board record: C356, ROT0 cabinet, joystick panel -->
     <rom index="2"><part>01 64 01 01 00 00</part></rom>
 
-    <rom index="0" zip="cgangpzlj.zip|cgangpzl.zip|namcoc69.zip" md5="none">
+    <!-- address: fast loading (Main_MiSTer puts the stream in DDR3; the core copies it to SDRAM) -->
+    <rom index="0" zip="cgangpzlj.zip|cgangpzl.zip|namcoc69.zip" md5="none" address="0x30000000">
         <!-- program ROM: stream $000000-$1FFFFF -->
         <interleave output="16">
             <part name="cp1-ep0l.4c" crc="2825f7ba" map="01"/>

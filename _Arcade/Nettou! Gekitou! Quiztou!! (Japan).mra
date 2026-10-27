@@ -38,7 +38,8 @@
     <!-- board record: C365 (KEYCUS mode 1, ID $016D on word 2), ROT0 cabinet, 4-button quiz panel, plain ROM board -->
     <rom index="2"><part>01 6D 01 02 00 01 00</part></rom>
 
-    <rom index="0" zip="quiztou.zip|namcoc70.zip" md5="none">
+    <!-- address: fast loading (Main_MiSTer puts the stream in DDR3; the core copies it to SDRAM) -->
+    <rom index="0" zip="quiztou.zip|namcoc70.zip" md5="none" address="0x30000000">
         <!-- program ROM: stream $000000-$1FFFFF -->
         <interleave output="16">
             <part name="qt1ep0l.6c" crc="b680e543" map="01"/>
