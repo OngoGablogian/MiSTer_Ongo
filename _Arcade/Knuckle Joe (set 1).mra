@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BAZSET CORE: Knuckle Joe -->
+<!-- RBF FILE: Arcade-KnuckleJoe.rbf -->
+<!-- REQUIRED ROM ZIP: kncljoe.zip (MAME parent set, 18 parts) -->
+<!-- B06 V3.3 VIDEO AND MRA DIAGNOSTIC; real AY SFX + STA incomplete -->
+<!-- Original ROM bytes/CRCs untouched. CRT physical tests PENDING. -->
+<!-- No ROM data redistributed. Hardware acceptance EXPERIMENTAL. -->
+<!-- MRA index 0 main Z80: 0xC000 bytes -->
+<!-- MRA index 1 assets: sound 0x2000, tiles 0xC000, -->
+<!-- sprites1 0x18000, sprites2 0xC000, PROMs 0x0420 -->
+<misterromdescription>
+  <name>Knuckle Joe (set 1)</name>
+  <setname>kncljoe</setname>
+  <mameversion>0289</mameversion>
+  <year>1985</year>
+  <category>Arcade</category>
+  <manufacturer>Seibu Kaihatsu (Taito license)</manufacturer>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <rbf>bazset_KnuckleJoe</rbf>
+  <joystick>8</joystick>
+
+  <!-- Stock MiSTer index254 DIP packet; source addresses D803/D804.
+       MAME defaults DSWA=FF, DSWB=7F. Actual 1985 board options. -->
+  <switches page_id="1" page_name="DIP Switches" base="16" default="FF,7F">
+    <DSWA/>
+    <dip name="Coin A" bits="0,1,2" ids="5C 1C,1C 5C,3C 1C,1C 2C,4C 1C,1C 3C,2C 1C,1C 1C"/>
+    <dip name="Coin B" bits="3,4" ids="3C 1C,1C 2C,2C 1C,1C 1C"/>
+    <dip name="Infinite Energy (Cheat)" bits="5" ids="On,Off"/>
+    <dip name="Free Play (Not Working)" bits="6" ids="On,Off"/>
+    <dip name="Service Mode" bits="7" ids="On,Off"/>
+    <DSWB/>
+    <dip name="SW B-0 (Unknown)" bits="8" ids="On,Off"/>
+    <dip name="Cabinet" bits="9" ids="Cocktail,Upright"/>
+    <dip name="Lives" bits="10" ids="5,3"/>
+    <dip name="Bonus Life" bits="11,12" ids="40K / 80K,30K / 60K,20K / 40K,10K / 20K"/>
+    <dip name="Difficulty" bits="13,14" ids="Hardest,Hard,Medium,Easy"/>
+    <dip name="Demo Sounds" bits="15" ids="On,Off"/>
+  </switches>
+  <buttons names="Button 1,Button 2,Coin,Start 1P,Start 2P" default="A,B,Select,Start,R" count="2"/>
+  <rom index="0" zip="kncljoe.zip">
+    <part name="kj-1.bin" crc="4e4f5ff2"/>
+    <part name="kj-2.bin" crc="cb11514b"/>
+    <part name="kj-3.bin" crc="0f50697b"/>
+  </rom>
+  <rom index="1" zip="kncljoe.zip">
+    <part name="kj-13.bin" crc="0a0be3f5"/>
+    <part name="kj-10.bin" crc="74d3ba33"/>
+    <part name="kj-11.bin" crc="8ea01455"/>
+    <part name="kj-12.bin" crc="33367c41"/>
+    <part name="kj-4.bin" crc="a499ea10"/>
+    <part name="kj-6.bin" crc="815f5c0a"/>
+    <part name="kj-5.bin" crc="11111759"/>
+    <part name="kj-7.bin" crc="121fcccb"/>
+    <part name="kj-9.bin" crc="affbe3eb"/>
+    <part name="kj-8.bin" crc="e057e72a"/>
+    <part name="kjclr1.bin" crc="c3378ac2"/>
+    <part name="kjclr2.bin" crc="2126da97"/>
+    <part name="kjclr3.bin" crc="fde62164"/>
+    <part name="kjprom5.bin" crc="5a81dd9f"/>
+    <part name="kjprom4.bin" crc="48dc2066"/>
+  </rom>
+</misterromdescription>

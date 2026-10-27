@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ========================================================== -->
+<!-- BAZSET CORE: CHACK'N POP - B01 PATREON RELEASE                  -->
+<!-- RBF FILE: Arcade-ChacknPop.rbf                               -->
+<!-- REQUIRED ROM ZIP FILE(S): chaknpop.zip (owner-supplied)     -->
+<!-- B01 IN ENGINEERING: NOT CERTIFIED. ORIGINAL ROM NOT INCLUDED -->
+<!-- ========================================================== -->
+<misterromdescription>
+  <!-- MRA Pause V4 authoring; BZM1 V1 on-wire packet.
+       BZM1 CRC receiver and V4 pause renderer in B01 candidate. -->
+  <bazset_runtime version="1">
+    <pause>
+      <title>Chack'n Pop</title>
+      <build>B01 V3.3 DEVELOPMENT - 2026-10-27</build>
+      <core_by>bazset</core_by>
+      <patreon>patreon.com/c/bazset</patreon>
+      <x>x.com/bazset_</x>
+      <beta_testers>No beta testers yet</beta_testers>
+      <patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters>
+      <special_thanks>MAME hardware researchers</special_thanks>
+      <bug_prompt>FOUND A BUG? REPORT IT ON MY PATREON</bug_prompt>
+    </pause>
+    <osd>
+      <visibility>Video Settings,Game Settings,DIP Switches,Credits,Reset</visibility>
+      <defaults>Aspect=Original;CRT Adjust=On;CRT H Position=0;CRT V Position=0</defaults>
+    </osd>
+    <pause_style>
+      <colors background="#080B18" card="#101522" border="#D9A441"
+              text="#F0E9D7" dim="#71798A" accent="#5DE4FF"/>
+      <layout preset="compact"/>
+      <marquee frames="12"/>
+    </pause_style>
+  </bazset_runtime>
+  <name>Chack'n Pop</name>
+  <setname>chaknpop</setname>
+  <mameversion>0289</mameversion>
+  <year>1983</year>
+  <manufacturer>Taito</manufacturer>
+  <region>Japan</region>
+  <category>Arcade</category>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <rbf>bazset_ChacknPop</rbf>
+  <joystick/>
+  <!-- MAME 0.289 hiscore.dat: CPU 8449 len 0x1f, guards 04/00 and 8466=14. -->
+  <nvram index="2" size="31"/>
+  <!-- Original ROM0 packed stream for active HPS ROM loader:
+       00000-07fff main ROM bank 0000-7fff (4 x 0x2000)
+       08000-09fff main ROM a000-bfff (0x2000)
+       0a000-0a7ff MC68705P5 ROM (0x0800)
+       0a800-0e7ff sprites (0x4000; MAME physical order)
+       0e800-127ff chars (0x4000)
+       12800-12fff palette PROMs (0x0800)
+       END 0x13000. DO NOT confuse packed stream with CPU address. -->
+  <rom index="0" zip="chaknpop.zip">
+    <part name="ao4_01.ic28" crc="386fe1c8"/>
+    <part name="ao4_02.ic27" crc="5562a6a7"/>
+    <part name="ao4_03.ic26" crc="3e2f0a9c"/>
+    <part name="ao4_04.ic25" crc="5209c7d4"/>
+    <part name="ao4_05.ic3" crc="8720e024"/>
+    <part name="ao4_06.ic23" crc="9c78c24c"/>
+    <part name="ao4_08.ic14" crc="5575a021"/>
+    <part name="ao4_07.ic15" crc="ae687c18"/>
+    <part name="ao4_09.ic98" crc="757a723a"/>
+    <part name="ao4_10.ic97" crc="3e3fd608"/>
+    <part name="ao4-11.ic96" crc="9bf0e85f"/>
+    <part name="ao4-12.ic95" crc="954ce8fc"/>
+  </rom>
+  <!-- Important: ROM0 MUST precede the config index ROM for reset semantics. -->
+  <rom index="249"><part>425A4D3107030000A6E366C77B226F7364223A7B2264656661756C7473223A224173706563743D4F726967696E616C3B4352542041646A7573743D4F6E3B435254204820506F736974696F6E3D303B435254205620506F736974696F6E3D30222C227669736962696C697479223A22566964656F2053657474696E67732C47616D652053657474696E67732C4449502053776974636865732C437265646974732C5265736574227D2C227061757365223A7B22626574615F74657374657273223A224E6F2062657461207465737465727320796574222C226275675F70726F6D7074223A22464F554E442041204255473F205245504F5254204954204F4E204D592050415452454F4E222C226275696C64223A224230312056332E3320444556454C4F504D454E54202D20323032362D31302D3237222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224D414D45206861726477617265207265736561726368657273222C227469746C65223A22436861636B276E20506F70222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223354445344646222C226261636B67726F756E64223A2223303830423138222C22626F72646572223A2223443941343431222C2263617264223A2223313031353232222C2264696D223A2223373137393841222C2274657874223A2223463045394437227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A31327D2C2276657273696F6E223A317D</part></rom>
+  <!-- Original board DIP defaults A=00, B=4F, C=7D.
+       Data path to FPGA is not implemented/verified yet. -->
+  <switches page_id="1" page_name="DIP Switches" base="16" default="00,4F,7D">
+    <DSWA/>
+    <dip name="Coin A" bits="0,1,2,3" ids="1C 1C,1C 2C,1C 3C,1C 4C,1C 5C,1C 6C,1C 7C,1C 8C,2C 1C,3C 1C,4C 1C,5C 1C,6C 1C,7C 1C,8C 1C,9C 1C"/>
+    <dip name="Coin B" bits="4,5,6,7" ids="1C 1C,1C 2C,1C 3C,1C 4C,1C 5C,1C 6C,1C 7C,1C 8C,2C 1C,3C 1C,4C 1C,5C 1C,6C 1C,7C 1C,8C 1C,9C 1C"/>
+    <DSWB/>
+    <dip name="Bonus Life" bits="8,9" ids="80K/100K,60K/100K,40K/100K,20K/100K"/>
+    <dip name="Free Play" bits="10" ids="On,Off"/>
+    <dip name="Lives" bits="11,12" ids="6,3,2,1"/>
+    <dip name="Training" bits="13" ids="On,Off"/>
+    <dip name="Flip Screen" bits="14" ids="On,Off"/>
+    <dip name="Cabinet" bits="15" ids="Upright,Cocktail"/>
+    <DSWC/>
+    <dip name="Language" bits="16" ids="English,Japanese"/>
+    <dip name="Demo Sounds" bits="17" ids="On,Off"/>
+    <dip name="Super Chack'n" bits="18" ids="1st Chance,pi"/>
+    <dip name="Endless (Cheat)" bits="19" ids="On,Off"/>
+    <dip name="Credit Info" bits="20" ids="Off,On"/>
+    <dip name="Show Year" bits="21" ids="Off,On"/>
+    <dip name="Infinite (Cheat)" bits="22" ids="On,Off"/>
+    <dip name="Coinage" bits="23" ids="1 Way,2 Way"/>
+  </switches>
+  <buttons names="Left Bomb,Right Bomb,P1 Start,P2 Start,Coin,Service,Pause"
+           default="Y,B,Start,R,Select,X,L"/>
+</misterromdescription>
