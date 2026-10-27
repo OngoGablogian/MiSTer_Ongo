@@ -29,6 +29,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Alpha Denshi 68000 (Type Alpha N)](https://www.patreon.com/Meathax/posts/fresh-meat-kyros-172051005)                          |
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                  |
 | [Aqua Jack](https://www.patreon.com/bazset/posts/aqua-jack-taito-172198822)                                                    |
+| [Asylum (prototype)](https://www.patreon.com/Meathax/posts/asylum-prototype-173502338)                                         |
 | [Atari G1](https://github.com/Gm0rk/Arcade-Atari-G1_MiSTer)                                                                    |
 | [Atari G42](https://github.com/Gm0rk/Arcade-Atari-G42_MiSTer)                                                                  |
 | [B.Rap Boys](https://www.patreon.com/bazset/posts/b-rap-boys-1992-171451712)                                                   |
@@ -245,7 +246,7 @@ If you use any of these databases, please add the filters below to your **`downl
 ```
 [OngoGablogian/MiSTer_Ongo]
 db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.zip
-filter = !arcade-bazset_Agress !arcade-bazset_AquaJack !arcade-bazset_BirdieTry !arcade-bazset_BouncingBalls !arcade-bazset_BRapBoys !arcade-bazset_ChaseHQ !arcade-bazset_ContinentalCircus !arcade-bazset_DiamondRun !arcade-bazset_JuezhanTianhuang !arcade-bazset_KanekoFamily !arcade-bazset_kickle !arcade-bazset_Krull !arcade-bazset_MastersofKin !arcade-bazset_MilleMiglia2 !arcade-bazset_PlumpPop !arcade-bazset_Pushman !arcade-bazset_Reaktor !arcade-bazset_Sauro !arcade-bazset_SCI !arcade-bazset_ShogunWarriors !arcade-bazset_TeedOff !arcade-bazset_TurtleShip !arcade-blahm1d_exidy440 !arcade-blahm1d_gladiator !arcade-blahm1d_invasion !arcade-blahm1d_legendofkage !arcade-blahm1d_mk4 !arcade-blahm1d_narc !arcade-blahm1d_tunit !arcade-blahm1d_tunitdcs !arcade-blahm1d_vunit !arcade-blahm1d_wargods !arcade-blahm1d_wolfunit !arcade-blahm1d_xunit !arcade-blahm1d_yunit !arcade-blahm1d_yunitadpcm !arcade-Gm0rk_Atari-G1 !arcade-Gm0rk_Atari-G42 !arcade-Gm0rk_ITech8 !arcade-Gm0rk_Midway-Y-Unit !arcade-Meathax_ActionHollywood !arcade-Meathax_Alpha68kN !arcade-Meathax_Appoooh !arcade-Meathax_Argus !arcade-Meathax_Battletoads !arcade-Meathax_BlackPanther !arcade-Meathax_Bucky !arcade-Meathax_Darkmist !arcade-Meathax_DataEastLiberation !arcade-Meathax_DEC8 !arcade-Meathax_DoCastle !arcade-Meathax_DrMicro !arcade-Meathax_Exterminator !arcade-Meathax_HeavyUnit !arcade-Meathax_I-Robot !arcade-Meathax_IkkiSunsoft !arcade-Meathax_MadMotor !arcade-Meathax_MCR68 !arcade-Meathax_MysteriousStones !arcade-Meathax_NamcoND1 !arcade-Meathax_Nintendo8080 !arcade-Meathax_Penguin !arcade-Meathax_PWB351024A !arcade-Meathax_SegaSystem24 !arcade-Meathax_SegaSystem32 !arcade-Meathax_SegaSystem32Multi !arcade-Meathax_Simple156 !arcade-Meathax_SPY !arcade-Meathax_SSV !arcade-Meathax_SteelForce !arcade-Meathax_StoneBall !arcade-Meathax_StunRunner !arcade-Meathax_Suna8bit !arcade-Meathax_Tumble !arcade-Meathax_VioStorm !arcade-Meathax_Zaccaria !arcade-Meathax_ZeroTeam !arcade-ppriest_BallySente !arcade-ppriest_DreamWorld !arcade-ppriest_Eolith !arcade-ppriest_GStream !arcade-ppriest_JalecoMS32 !arcade-ppriest_JalecoMS32F1 !arcade-ppriest_KonamiGX !arcade-ppriest_KonamiGXT1 !arcade-ppriest_KonamiGXT34 !arcade-ppriest_LethalEnforcers !arcade-ppriest_Limenko !arcade-ppriest_NixPirates !arcade-ppriest_PlayChoice10 !arcade-ppriest_Seta !arcade-ppriest_SetaDowntown !arcade-ppriest_Silkroad !arcade-ppriest_Vamphalf
+filter = !arcade-bazset_Agress !arcade-bazset_AquaJack !arcade-bazset_BirdieTry !arcade-bazset_BouncingBalls !arcade-bazset_BRapBoys !arcade-bazset_ChaseHQ !arcade-bazset_ContinentalCircus !arcade-bazset_DiamondRun !arcade-bazset_JuezhanTianhuang !arcade-bazset_KanekoFamily !arcade-bazset_kickle !arcade-bazset_Krull !arcade-bazset_MastersofKin !arcade-bazset_MilleMiglia2 !arcade-bazset_PlumpPop !arcade-bazset_Pushman !arcade-bazset_Reaktor !arcade-bazset_Sauro !arcade-bazset_SCI !arcade-bazset_ShogunWarriors !arcade-bazset_TeedOff !arcade-bazset_TurtleShip !arcade-blahm1d_exidy440 !arcade-blahm1d_gladiator !arcade-blahm1d_invasion !arcade-blahm1d_legendofkage !arcade-blahm1d_mk4 !arcade-blahm1d_narc !arcade-blahm1d_tunit !arcade-blahm1d_tunitdcs !arcade-blahm1d_vunit !arcade-blahm1d_wargods !arcade-blahm1d_wolfunit !arcade-blahm1d_xunit !arcade-blahm1d_yunit !arcade-blahm1d_yunitadpcm !arcade-Gm0rk_Atari-G1 !arcade-Gm0rk_Atari-G42 !arcade-Gm0rk_ITech8 !arcade-Gm0rk_Midway-Y-Unit !arcade-Meathax_ActionHollywood !arcade-Meathax_Alpha68kN !arcade-Meathax_Appoooh !arcade-Meathax_Argus !arcade-Meathax_Battletoads !arcade-Meathax_BlackPanther !arcade-Meathax_Bucky !arcade-Meathax_Darkmist !arcade-Meathax_DataEastLiberation !arcade-Meathax_DEC8 !arcade-Meathax_DoCastle !arcade-Meathax_DrMicro !arcade-Meathax_Exterminator !arcade-Meathax_HeavyUnit !arcade-Meathax_I-Robot !arcade-Meathax_IkkiSunsoft !arcade-Meathax_Leland !arcade-Meathax_MadMotor !arcade-Meathax_MCR68 !arcade-Meathax_MysteriousStones !arcade-Meathax_NamcoND1 !arcade-Meathax_Nintendo8080 !arcade-Meathax_Penguin !arcade-Meathax_PWB351024A !arcade-Meathax_SegaSystem24 !arcade-Meathax_SegaSystem32 !arcade-Meathax_SegaSystem32Multi !arcade-Meathax_Simple156 !arcade-Meathax_SPY !arcade-Meathax_SSV !arcade-Meathax_SteelForce !arcade-Meathax_StoneBall !arcade-Meathax_StunRunner !arcade-Meathax_Suna8bit !arcade-Meathax_Tumble !arcade-Meathax_VioStorm !arcade-Meathax_Zaccaria !arcade-Meathax_ZeroTeam !arcade-ppriest_BallySente !arcade-ppriest_DecoMLC156 !arcade-ppriest_DecoMLC !arcade-ppriest_DreamWorld !arcade-ppriest_Eolith !arcade-ppriest_GStream !arcade-ppriest_JalecoMS32 !arcade-ppriest_JalecoMS32F1 !arcade-ppriest_KonamiGX !arcade-ppriest_KonamiGXT1 !arcade-ppriest_KonamiGXT34 !arcade-ppriest_LethalEnforcers !arcade-ppriest_Limenko !arcade-ppriest_NixPirates !arcade-ppriest_Pandora !arcade-ppriest_PlayChoice10 !arcade-ppriest_Seta !arcade-ppriest_SetaDowntown !arcade-ppriest_Silkroad !arcade-ppriest_Vamphalf
 ```
 
 ----
@@ -418,6 +419,18 @@ db_url = https://raw.githubusercontent.com/rmonic79/rmcores/db/db.json.zip
 ```
 [decoryah/MiSTer_decoryah]
 db_url = https://raw.githubusercontent.com/decoryah/MiSTer_decoryah/db/db.json.zip
+```
+
+[Rodimus_MiSTer_DB](https://github.com/RodimusFVC/Rodimus_MiSTer_DB)
+```
+[RodimusFVC/Rodimus_MiSTer_DB]
+db_url = https://raw.githubusercontent.com/RodimusFVC/Rodimus_MiSTer_DB/db/db.json.zip
+```
+
+[asturur MiSTer Cores](https://github.com/RodimusFVC/Rodimus_MiSTer_DB)
+```
+[asturur/Mister-cores]
+db_url = https://raw.githubusercontent.com/asturur/Mister-cores/db/db.json.zip
 ```
 
 ----

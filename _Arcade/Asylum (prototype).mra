@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+	<name>Asylum (prototype)</name>
+	<mameversion>0.289</mameversion>
+	<setname>asylum</setname>
+	<year>1991</year>
+	<manufacturer>Leland Corporation</manufacturer>
+	<category>Action</category>
+	<rbf>Meathax_Leland</rbf>
+	<rotation>vertical (ccw)</rotation>
+	<resolution>15kHz</resolution>
+	<!-- Source descriptor; release RBF timing qualification is separate. -->
+	<rom index="0" zip="asylum.zip" md5="30d580b4a6d781b5b6269430c23ed886">
+		<part>4C 01 05 06 02 4E 00 00 00 00 00 00 00 00 00 00 </part>
+		<part name="asy-m0.64" crc="f5ca36fd" length="0x20000"/>
+		<part name="asy-m1.65" crc="14d91d09" length="0x20000"/>
+		<part name="asy-m2.66" crc="a34a6ef9" length="0x20000"/>
+		<part name="asy-m3.67" crc="9db4c2b1" length="0x20000"/>
+		<interleave output="16">
+			<part name="asy-m4.68" crc="77c8de62" length="0x20000" map="01"/>
+			<part name="asy-m5.69" crc="bfc50d6c" length="0x20000" map="10"/>
+		</interleave>
+		<part repeat="0x40000">00</part>
+		<part name="asy-sp0.151" crc="5ad5e3b0" length="0x20000"/>
+		<part name="asy-sp2.152" crc="6d2997ec" length="0x20000"/>
+		<part name="asy-sp4.153" crc="7c61973c" length="0x20000"/>
+		<part name="asy-sp6.154" crc="f0a4f9d3" length="0x20000"/>
+		<part name="asy-sp8.155" crc="2ad0640e" length="0x20000"/>
+		<part name="asy-spa.156" crc="9d584fb4" length="0x20000"/>
+		<part name="asy-spc.157" crc="8485e48c" length="0x20000"/>
+		<part name="asy-spe.158" crc="49d19520" length="0x20000"/>
+		<part repeat="0x20000">00</part>
+		<part name="asy-sp2.152" crc="6d2997ec" length="0x20000" offset="0x20000"/>
+		<part name="asy-sp4.153" crc="7c61973c" length="0x20000" offset="0x20000"/>
+		<part name="asy-sp6.154" crc="f0a4f9d3" length="0x20000" offset="0x20000"/>
+		<part name="asy-sp8.155" crc="2ad0640e" length="0x20000" offset="0x20000"/>
+		<part name="asy-spa.156" crc="9d584fb4" length="0x20000" offset="0x20000"/>
+		<part name="asy-spc.157" crc="8485e48c" length="0x20000" offset="0x20000"/>
+		<part repeat="0x20000">00</part>
+		<part name="asy-65.8" crc="624ad02f" length="0x20000"/>
+		<part name="asy-65.9" crc="c92ff376" length="0x20000"/>
+		<part name="asy-65.10" crc="744dbf25" length="0x20000"/>
+		<part name="asy-65.11" crc="4b185d22" length="0x20000"/>
+		<part repeat="0x80000">00</part>
+		<part repeat="0x20000">00</part>
+		<interleave output="16">
+			<part name="asy-65.6" crc="d019fb2e" length="0x20000" map="01"/>
+			<part name="asy-65.3" crc="709bdc78" length="0x20000" map="10"/>
+		</interleave>
+		<interleave output="16">
+			<part name="asy-65.5" crc="5814b307" length="0x20000" map="01"/>
+			<part name="asy-65.4" crc="1882c3b2" length="0x20000" map="10"/>
+		</interleave>
+		<part repeat="0x20000">00</part>
+		<interleave output="16">
+			<part name="asy-65.5" crc="5814b307" length="0x20000" map="01"/>
+			<part name="asy-65.4" crc="1882c3b2" length="0x20000" map="10"/>
+		</interleave>
+		<interleave output="64">
+			<part name="asy-chr0.145" crc="4dbcae49" length="0x40000" map="00000001"/>
+			<part name="asy-chr1.146" crc="34e7762d" length="0x40000" map="00000010"/>
+			<part name="asy-chr2.147" crc="f9b0d375" length="0x40000" map="00000100"/>
+			<part name="asy-chr3.148" crc="5efcae94" length="0x40000" map="00001000"/>
+			<part name="asy-chr4.149" crc="dbc2b155" length="0x40000" map="00010000"/>
+			<part name="asy-chr5.150" crc="9675e44f" length="0x40000" map="00100000"/>
+			<part name="asy-chr0.145" crc="4dbcae49" length="0x40000" map="01000000"/>
+			<part name="asy-chr0.145" crc="4dbcae49" length="0x40000" map="10000000"/>
+		</interleave>
+		<part repeat="0x100000">00</part>
+		<part name="eeprom-asylum.bin" crc="9a9a361b" length="0x100"/>
+	</rom>
+	<buttons names="Attack,Jump,Start,Coin,Service/Test"/>
+	<nvram index="4" size="256"/>
+</misterromdescription>
