@@ -51,5 +51,5 @@
         <dip name="License" bits="22,23" ids="Athena (Japan Only),Visco (Japan Only),Seta U.S.A,Romstar"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+    <buttons names="Turbo,Jump,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
 </misterromdescription>

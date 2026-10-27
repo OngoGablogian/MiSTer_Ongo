@@ -40,5 +40,5 @@
         <dip name="Title" bits="20" ids="Block Carnival,Thunder &amp; Lightning 2"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+    <buttons names="Shot,-,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
 </misterromdescription>

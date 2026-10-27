@@ -48,5 +48,5 @@
         <dip name="Lives" bits="12,13" ids="2,1,5,3"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+    <buttons names="Shot,Special,-,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
 </misterromdescription>

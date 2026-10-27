@@ -40,5 +40,5 @@
         <dip name="Service Mode" bits="15" ids="On,Off"/>
     </switches>
 
-    <buttons names="Button 1,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
+    <buttons names="Attack,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
 </misterromdescription>

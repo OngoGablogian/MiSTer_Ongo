@@ -9,7 +9,7 @@
     <manufacturer>Eolith</manufacturer>
     <category>Puzzle</category>
     <rotation>horizontal</rotation>
-    <buttons names="Button 1,Button 2,-,-,Start,Coin,Pause,Service Coin,Service Mode" default="A,B,Start,Select,L,R" count="2"/>
+    <buttons names="Rotate CW,Rotate CCW,Hard Drop,-,Start,Coin,Pause,Service Coin,Service Mode" default="A,B,X,Start,Select,L,R" count="3"/>
 
     <!-- mod byte (Eolith.sv): [1:0] board type, 0 Vega, 1 Gradation 2D, 2 eolith16; [2] light pens; then the
          memory wait states, clocks per MEM3 and per MEM0-2 access (rtl/eo_busws.sv) -->

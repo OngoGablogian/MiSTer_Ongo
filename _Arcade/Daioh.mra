@@ -51,5 +51,5 @@
         <dip name="Country" bits="23" ids="Japan (2 buttons),USA (6 buttons)"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select,L,R" count="6"/>
+    <buttons names="Shot (Vulcan),Shot (Lightning),Shot (Missile),Bomb (Vulcan),Bomb (Lightning),Bomb (Missile),Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select,L,R" count="6"/>
 </misterromdescription>

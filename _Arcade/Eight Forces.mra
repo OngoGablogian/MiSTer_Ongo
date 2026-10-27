@@ -52,5 +52,5 @@
         <dip name="Credits To Start" bits="15" ids="2,1"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+    <buttons names="Shot,Bomb,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
 </misterromdescription>

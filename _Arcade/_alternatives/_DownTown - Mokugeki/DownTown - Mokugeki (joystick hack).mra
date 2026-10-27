@@ -62,5 +62,5 @@
         <dip name="Coin B (1|2)" bits="14,15" ids="2C/3C|1C/6C,2C/1C|1C/4C,1C/2C|1C/3C,1C/1C|1C/2C"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,Rotate Left,Rotate Right,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,Start,Select,L,R" count="4"/>
+    <buttons names="Punch,Kick,Rotate Left,Rotate Right,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,Start,Select,L,R" count="4"/>
 </misterromdescription>

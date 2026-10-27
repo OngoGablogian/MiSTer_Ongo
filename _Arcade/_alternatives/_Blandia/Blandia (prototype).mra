@@ -96,5 +96,5 @@
         <dip name="Coin B (1|2)" bits="13,15" ids="Free Play,3C/1C|2C/5C,4C/1C|2C/6C,2C/1C|2C/4C,5C/1C|3C/7C,1C/3C,1C/2C,1C/1C"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,Button 3,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+    <buttons names="Attack High,Attack Mid,Attack Low,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
 </misterromdescription>

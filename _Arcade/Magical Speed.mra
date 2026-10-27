@@ -49,5 +49,5 @@
         <dip name="Flip Screen" bits="15" ids="On,Off"/>
     </switches>
 
-    <buttons names="Button 1,Button 2,Card 1,Card 2,Card 3,Card 4,Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select,L,R" count="6"/>
+    <buttons names="Button A,Button B,Card 1,Card 2,Card 3,Card 4,Start,Coin,Pause,Service" default="A,B,X,Y,L,R,Start,Select,L,R" count="6"/>
 </misterromdescription>

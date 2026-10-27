@@ -11,17 +11,18 @@
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
   <buttons names="Accelerator,Brake,Shifter,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
-  <switches default="3F,FF,FF,FF,00,FF,FF,FF" base="0">
+  <switches default="3F,FF,FF,00" base="0">
     <dip name="Credit Counter" bits="0" ids="Eremite,Display"/>
     <dip name="Speed Meter Display" bits="1" ids="mph,km/h"/>
     <dip name="Demo Sounds" bits="2" ids="Off,On"/>
     <dip name="Time Up Mode" bits="3" ids="Off,On"/>
     <dip name="Difficulty" bits="4,5" ids="Easy,Hard,Hardest,Normal"/>
     <dip name="Region" bits="6,7" ids="Europe,Europe,USA,Japan"/>
+    <dip name="Free Play" bits="9" ids="On,Off"/>
     <dip name="Coin B" bits="10,11,12" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
     <dip name="Coin A" bits="13,14,15" ids="5 Coins/1 Credit,1 Coin/4 Credits,3 Coins/1 Credit,1 Coin/2 Credits,4 Coins/1 Credit,1 Coin/3 Credits,2 Coins/1 Credit,1 Coin/1 Credit"/>
-    <dip name="Communication Mode" bits="32" ids="Master,Slave"/>
-    <dip name="Car ID" bits="33,34,35" ids="1,2,3,4,5,6,7,8"/>
+    <dip name="Communication Mode" bits="24" ids="Master,Slave"/>
+    <dip name="Car ID" bits="25,26,27" ids="1,2,3,4,5,6,7,8"/>
   </switches>
   <rom index="1"><part>51</part></rom>   <!-- mod byte: key ss92046_01, F1 map -->
   <rom index="0" zip="f1superb.zip" md5="none" address="0x30000000">
