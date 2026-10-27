@@ -50,6 +50,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Chase H.Q.](https://www.patreon.com/bazset/posts/chase-h-q-taito-171600711)                                                   |
 | [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                          |
 | [Data East Liberation Hardware](https://www.patreon.com/Meathax/posts/boomer-rangr-b-172526836)                                |
+| [Data East MLC](https://github.com/ppriest/Arcade-DecoMLC_MiSTer)                                                              |
 | [Data East Simple 156](https://www.patreon.com/Meathax/posts/heavy-smash-drop-172946929)                                       |
 | [DECO-8](https://www.patreon.com/Meathax/posts/deco-8-bit-10-173059632)                                                        |
 | [Deniam-16](https://github.com/kyledlester/Deniam_MiSTer_FPGA)                                                                 |
@@ -167,10 +168,12 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                            |
 | [Seibu SPI](https://github.com/zakk4223/Arcade-SeibuSPI_MiSTer)                                                                |
 | [SemiCom 68020](https://github.com/ppriest/Arcade-DreamWorld_MiSTer)                                                           |
-| [Seta 1st Generation Hardware (X1-010)](https://github.com/ppriest/Arcade-Seta_MiSTer)                                         |
+| [Seta 1st Generation Hardware](https://github.com/ppriest/Arcade-Seta_MiSTer)                                                  |
+| [Seta 1st Generation Hardware (Downtown)](https://github.com/ppriest/Arcade-SetaDowntown_MiSTer)                               |
 | [Shogun Warriors](https://www.patreon.com/bazset/posts/shogun-warriors-171613142)                                              |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                      |
 | [SNK Neo Geo (Turbo)](https://misterfpga.org/viewtopic.php?p=115829#p115829)                                                   |
+| [Snow Bros. / SemiCom Pandora](https://github.com/ppriest/Arcade-Pandora_MiSTer)                                               |
 | [Sony PocketStation](https://discord.com/channels/647909397477195803/1543102626265174146)                                      |
 | [Sony PS1 (2X CPU)](https://github.com/RobertPeip/PSX_MiSTer/tree/main/releases)                                               |
 | [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                           |
