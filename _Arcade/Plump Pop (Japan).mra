@@ -1,7 +1,7 @@
 <!--
 *******************************************************************************
   BAZSET CORE - PLUMP POP (JAPAN)
-  RBF FILE: PlumpPop_BAZSET_B01
+  RBF FILE: bazset_PlumpPop
   REQUIRED ROM ZIP FILE(S): plumppop.zip (user-supplied; never bundled)
   EXPERIMENTAL BUILD_FIRST - HARDWARE / GAMEPLAY NOT VERIFIED
 *******************************************************************************
@@ -39,7 +39,7 @@
     <year>1987</year>
     <manufacturer>Taito</manufacturer>
     <players>2</players>
-    <rbf>PlumpPop_BAZSET_B01</rbf>
+    <rbf>bazset_PlumpPop</rbf>
     <joystick/>
     <region>Japan</region>
     <category>Arcade</category>

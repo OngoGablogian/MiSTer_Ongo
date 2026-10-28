@@ -2,7 +2,7 @@
 =============================================================================
  BAZSET CORE: AGRESS / MISSILE DAISENRYAKU
  BAZSET PRE-BETA / ROM-FREE MISTER FPGA EXPERIMENTAL BRING-UP
- RBF FILE: AArcade-Agress.rbf
+ RBF FILE: bazset_Agress.rbf
  REQUIRED ROM ZIP FILE(S): agress.zip (user-provided; NOT distributed)
  Original arcade hardware manufacturer: Palco.
  Legal notices for derived work are preserved separately in the accompanying
@@ -21,7 +21,7 @@
     <manufacturer>Palco</manufacturer>
     <category>Arcade</category>
     <players>2</players>
-    <rbf>Arcade-Agress</rbf>
+    <rbf>bazset_Agress</rbf>
     <joystick>8</joystick>
     <region>World</region>
     <rom index="0" zip="agress.zip" md5="None">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ============================================================ -->
 <!-- BAZSET CORE - CORE BY bazset                                 -->
-<!-- RBF FILE: Tee_d_Off_bazset_V8_VIDEO_ISOLATED.rbf                            -->
+<!-- RBF FILE: bazset_TeedOff.rbf                            -->
 <!-- REQUIRED ROM ZIP FILE(S): teedoff.zip                         -->
 <!-- ============================================================ -->
 <misterromdescription>
@@ -13,7 +13,7 @@
     <year>1987</year>
     <manufacturer>Tecmo</manufacturer>
     <players>2</players>
-    <rbf>Tee_d_Off_bazset</rbf>
+    <rbf>bazset_TeedOff</rbf>
     <joystick/>
     <region>World</region>
     <rom index="0" zip="teedoff.zip" md5="None">

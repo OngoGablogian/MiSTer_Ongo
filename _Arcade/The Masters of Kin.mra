@@ -9,7 +9,7 @@
  <manufacturer>Du Tech</manufacturer>
  <rotation>horizontal</rotation>
  <players>1</players>
- <rbf>mastkin</rbf>
+ <rbf>bazset_MastersofKin</rbf>
  <joystick/>
  <rom index="0" zip="mastkin.zip" md5="None">
   <part repeat="0x8000">FF</part>
