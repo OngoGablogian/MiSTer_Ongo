@@ -1,0 +1,85 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="Chris Watson" webpage="https://github.com/niknakniknak/FixItFelixArcadeForMister" source="https://github.com/niknakniknak/FixItFelixArcadeForMister"/>
+    <rotation>vertical (ccw)</rotation>
+    <name>Fix-It Felix Jr.</name>
+    <setname>felixjr</setname>
+    <mameversion>0282</mameversion>
+    <year>1982</year>
+    <manufacturer>Tobikomi</manufacturer>
+    <players>2</players>
+    <rbf>fifelix</rbf>
+    <joystick>4</joystick>
+    <region>World</region>
+    <rom index="0" zip="felixjr.zip" md5="None">
+        <!-- maincpu - starts at 0x0 - length 0x20000 (17 bits) -->
+        <part name="fj-p1.1d" crc="08c5f3ef"/>
+        <part name="fj-p2.1e" crc="c691b8ed"/>
+        <part name="fj-p3.1f" crc="8fa3f930"/>
+        <part name="fj-p4.1g" crc="a2d798ae"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- gfx1 - starts at 0x20000 - length 0x10000 (16 bits) -->
+        <part name="fj-t1.5h" crc="0a739c86"/>
+        <part name="fj-t2.5j" crc="4e13ca76"/>
+        <!-- JTFRAME_BA2_START -->
+        <!-- gfx2 - starts at 0x30000 - length 0x40000 (18 bits) -->
+        <part name="fj-s1.7a" crc="c34f3849"/>
+        <part name="fj-s2.7b" crc="0c55475c"/>
+        <part name="fj-s3.7c" crc="10ef81e8"/>
+        <part name="fj-s4.7d" crc="c7f3f68c"/>
+        <part name="fj-s5.7e" crc="1a2663d9"/>
+        <part name="fj-s6.7f" crc="e267fb43"/>
+        <part name="fj-s7.7g" crc="011ffca6"/>
+        <part name="fj-s8.7h" crc="011ffca6"/>
+        <!-- JTFRAME_BA3_START -->
+        <!-- samples - starts at 0x70000 - length 0x200000 (21 bits) -->
+        <part name="fj-v1.3a" crc="d1bf75b1"/>
+        <part name="fj-v2.3b" crc="46a2323e"/>
+        <part name="fj-v3.3c" crc="7f50a363"/>
+        <part name="fj-v4.3d" crc="605babf0"/>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0x270000 - length 0x800 (11 bits) -->
+        <part name="fj-pl.6b" crc="99eb64c2"/>
+        <part name="fj-ph.6c" crc="bf08463a"/>
+        <!-- Total 0x270800 bytes - 2498 kBytes -->
+    </rom>
+    <nvram index="2" size="1024"/>
+    <!-- Vertical screen. -->
+    <rom index="1">
+        <part>01 FF</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="00,00">
+        <DSW1/>
+        <dip name="Lives" bits="0,1" ids="3,2,4,5"/>
+        <dip name="Bonus Life" bits="2,3" ids="Every 5000,Every 10k,Every 20k,None"/>
+        <dip name="Difficulty" bits="4,5" ids="Normal,Easy,Hard,Hardest"/>
+        <dip name="Demo Sounds" bits="6" ids="On,Off"/>
+        <dip name="Cabinet" bits="7" ids="Upright,Cocktail"/>
+        <DSW2/>
+        <dip name="Coin A" bits="8,11" ids="1/1,2/1,3/1,4/1,1/2,1/3,1/4,1/5,1/6,Free Play"/>
+        <dip name="Coin B" bits="12,15" ids="1/1,2/1,3/1,4/1,1/2,1/3,1/4,1/5,1/6"/>
+        <DSW3/>
+        <dip name="Invulnerability" bits="16" ids="Off,On"/>
+    </switches>
+    <buttons names="Jump,Fix,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>

@@ -67,6 +67,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Exidy Sorcerer](https://github.com/JasonA-dev/Sorcerer_MiSTer)                                                                  |
 | [Exterminator](https://www.patreon.com/Meathax/posts/exterminator-172770187)                                                     |
 | [Fire Trap](https://github.com/Usquebagh/Arcade-FireTrap_MiSTer)                                                                 |
+| [Fix-It Felix Jr.](https://github.com/niknakniknak/FixItFelixArcadeForMister)                                                    |
 | [Fujitsu FM Towns](http://fpga8801.seesaa.net)                                                                                   |
 | [Fujitsu FMR50](http://fpga8801.seesaa.net)                                                                                      |
 | [G-Stream G2020](https://github.com/ppriest/Arcade-GStream_MiSTer)                                                               |
