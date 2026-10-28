@@ -4,7 +4,7 @@
 	<year>1990</year>
 	<manufacturer>Taito</manufacturer>
 	<rbf>TaitoB</rbf>
-	<rotation>vertical</rotation>
+	<rotation>vertical (ccw)</rotation>
 	<mameversion>277</mameversion>
 	<about author="slopcore" webpage="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" source="https://github.com/Mezzow/Arcade-TaitoB_MiSTer" twitter=""/>
 	<buttons default="A,B,Start,Select,L" names="Button 1,Button 2,-,-,-,-,Start,Coin,Pause"/>
@@ -15,8 +15,8 @@
 	-->
 
 	<rom index="0" address="0x30000000" zip="ashuraj.zip|ashura.zip">
-		<!--Board config: game_t index 2 (ashura)-->
-		<part>02 00</part>
+		<!--Board config: game_t index 2 (ashura), MAME ROT270-->
+		<part>02 03</part>
 
 		<!--Region 0: maincpu, 68000 program, 524288 bytes-->
 		<part>00080000</part>
