@@ -1,0 +1,53 @@
+<misterromdescription>
+  <name>SWAT Police</name>
+  <setname>swatpolc</setname>
+  <rbf>Meathax_ESD16</rbf>
+  <mameversion>0289</mameversion>
+  <year>2001</year>
+  <manufacturer>ESD</manufacturer>
+  <category>Shooter</category>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <region>Korea</region>
+  <!-- ROM image (index 0) = byte-exact MAME region images, in this order (core: rtl/mem/esd16_sdram.sv):
+       0x000000 maincpu 512 KB   (68000; MAME ROM_LOAD16_BYTE: cu02 = even bytes, cu03 = odd bytes)
+       0x080000 audiocpu 256 KB  (Z80)
+       0x0C0000 spr 3 MB         (3 x 1 MB: ju06/ju05, ju04/ju03 even/odd; ju07 even bytes + 512 KB of zeros as odd bytes)
+       0x3C0000 bgs 4 MB         (ROM_LOAD32_WORD: fu35 = bytes 0,1 and fu34 = bytes 2,3 of every 32-bit group)
+       0x7C0000 oki 256 KB       (OKI MSM6295 samples)
+       Interleave maps follow Main_MiSTer mra_loader rom_data(): map "01" = byte offset 0 of the pair (even address),
+       "10" = byte offset 1 (odd address); 32-bit "0021" = offsets 0,1 and "2100" = offsets 2,3.
+       The map digits and the padding were derived from the MAME ROM definitions and the mra_loader source,
+       verified by sim/mra/check_mra.py (mra_loader rom_data() re-implementation, 8 MiB image vs MAME regions). -->
+  <rom index="0" zip="swatpolc.zip" md5="none">
+    <interleave output="16">
+      <part name="esd.cu02" crc="29e0c126" map="01"/>
+      <part name="esd.cu03" crc="1070208b" map="10"/>
+    </interleave>
+    <part name="esd3.su06" crc="80e97dbe"/>
+    <interleave output="16">
+      <part name="esd4.ju06" crc="bde1b130" map="01"/>
+      <part name="esd3.ju05" crc="e8d9c092" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="esd2.ju04" crc="9c1752f2" map="01"/>
+      <part name="esd1.ju03" crc="17fcc5e7" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="esd5.ju07" crc="d2c27f03" map="01"/>
+      <part repeat="0x80000" map="10">00</part>
+    </interleave>
+    <interleave output="32">
+      <part name="fu35" crc="c55897c5" map="0021"/>
+      <part name="fu34" crc="7117a6a2" map="2100"/>
+    </interleave>
+    <part name="at27c020.su10" crc="c43efec2"/>
+  </rom>
+  <!-- 93C46 EEPROM (64 x 16 bit): service-menu settings and scores are kept here (index 4, 128 bytes) -->
+  <nvram index="4" size="128"/>
+  <!-- Controls: MAME ports P1_P2 / SYSTEM. No DIP switches in MAME (settings are in the EEPROM service menu).
+       Control-panel graphic labels BUTTON1..3 left-to-right as Fire, Dodge, Bomb. Service Coin is MAME IPT_SERVICE1; F2 is service/test mode.
+       Pause is a core toggle on the L button; it is not a SWAT PCB input. -->
+  <buttons names="Fire,Dodge,Bomb,Start,Coin,Service Coin,Pause" default="A,B,X,Start,Select,Y,L"/>
+</misterromdescription>
