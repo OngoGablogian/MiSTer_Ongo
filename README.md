@@ -174,6 +174,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SemiCom 68020](https://github.com/ppriest/Arcade-DreamWorld_MiSTer)                                                             |
 | [Seta 1st Generation Hardware](https://github.com/ppriest/Arcade-Seta_MiSTer)                                                    |
 | [Seta 1st Generation Hardware (Downtown)](https://github.com/ppriest/Arcade-SetaDowntown_MiSTer)                                 |
+| [Shanghai III](https://github.com/YoAaronD/Shanghai3_MiSTer)                                                                     |
 | [Shogun Warriors](https://www.patreon.com/bazset/posts/shogun-warriors-171613142)                                                |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                        |
 | [SNK Neo Geo (Turbo)](https://misterfpga.org/viewtopic.php?p=115829#p115829)                                                     |
