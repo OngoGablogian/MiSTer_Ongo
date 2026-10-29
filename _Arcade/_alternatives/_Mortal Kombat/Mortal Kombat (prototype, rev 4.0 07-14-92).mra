@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Mortal Kombat (prototype, rev 4.0 07/14/92)</name>
-	<mratimestamp>20261012</mratimestamp>
+	<mratimestamp>20261026</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mkprot4</setname>
 	<year>1992</year>
@@ -28,12 +28,15 @@
 0xA00000 OKI M6295 samples (1 MB)
 	</romstruct>
 	<rom index="1">
-		<!-- game id; finishing moves: round state 0104D6F0, P1 character 0104CF90, object pointer 0104CF30; no hidden menu (tools/yunit_fmoves.py) -->
+		<!-- game id; finishing moves: round state 0104D6F0, P1 character 0104CF90, object pointer 0104CF30; Fixed AI Difficulty: CPU level word 0104D6D0; no hidden menu (tools/yunit_fmoves.py) -->
 		<part>
 		07 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		01 00 00 00 6F 4D 10 00 F9 4C 10 00 27 4D 10 00 00 4D 10 00 2E 4D 10 00 F3 4C 10 00 21 4D 10 00
 		F7 4C 10 00 25 4D 10 00 52 4D 10 00 59 4D 10 00 20 CC DC FF 70 90 CD FF 00 00 00 00 00 00 00 00
-		00 00 00 00 00 00 00 00 02 00
+		00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 6D 4D
 		</part>
 	</rom>
 	<rom index="0" zip="mkprot4.zip|mk.zip" md5="d480bacf1839c4ef5d4a6e9d52290324" type="merged">

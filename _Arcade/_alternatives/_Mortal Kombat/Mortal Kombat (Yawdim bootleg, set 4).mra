@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Mortal Kombat (Yawdim bootleg, set 4)</name>
-	<mratimestamp>20261023</mratimestamp>
+	<mratimestamp>20261026</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mkyawdim4</setname>
 	<year>1992</year>
@@ -29,7 +29,7 @@
 0xA00000 OKI M6295 samples (1 MB, MAME oki region: banks of 256 KB)
 	</romstruct>
 	<rom index="1">
-		<!-- game id; finishing moves: round state 0104D700, P1 character 0104CFB0, object pointer 0104CF50; Reptile: 6 program patches, flag 0104E660; game state 0104CEB0 (tools/yunit_fmoves.py) -->
+		<!-- game id; finishing moves: round state 0104D700, P1 character 0104CFB0, object pointer 0104CF50; Reptile: 6 program patches, flag 0104E660; Fixed AI Difficulty: CPU level word 0104D6E0; game state 0104CEB0 (tools/yunit_fmoves.py) -->
 		<part>
 		0F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		01 00 00 00 70 4D 10 00 FB 4C 10 00 29 4D 10 00 02 4D 10 00 30 4D 10 00 F5 4C 10 00 23 4D 10 00
@@ -37,7 +37,7 @@
 		EB 4C 10 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		A2 B1 04 01 E0 0D A0 05 A3 B1 04 01 60 09 40 D5 6B B8 04 02 00 03 08 CB AD B1 04 02 00 03 1A CB
 		1C A1 04 03 00 03 1D C8 20 A1 04 03 09 C0 C0 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-		66 4E 10 00
+		66 4E 10 00 6E 4D
 		</part>
 	</rom>
 	<rom index="0" zip="mkyawdim4.zip|mk.zip" md5="14d78c3f72e648665073c10ce1dc40b6" type="merged">
