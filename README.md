@@ -26,6 +26,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [ABC 80](https://github.com/JasonA-dev/ABC80_MiSTer)                                                                             |
 | [Action Hollywood](https://www.patreon.com/Meathax/posts/action-hollywood-173157497)                                             |
 | [Agress - Missile Daisenryaku](https://www.patreon.com/bazset/posts/agress-missile-172960889)                                    |
+| [Air Buster - Trouble Specialty Raid Unit](https://www.patreon.com/Meathax/posts/air-buster-173705424)                           |
 | [Alpha Denshi 68000 (Type Alpha N)](https://www.patreon.com/Meathax/posts/fresh-meat-kyros-172051005)                            |
 | [Appoooh](https://github.com/meathax/appoooh)                                                                                    |
 | [Aqua Jack](https://www.patreon.com/bazset/posts/aqua-jack-taito-172198822)                                                      |
@@ -52,6 +53,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Chack'n Pop](https://www.patreon.com/bazset/posts/chackn-pop-taito-173498656)                                                   |
 | [Chase H.Q.](https://www.patreon.com/bazset/posts/chase-h-q-taito-171600711)                                                     |
 | [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                            |
+| [Daikaiju no Gyakushu (Giant Monster Counterattack)](https://www.patreon.com/Meathax/posts/daikaiju-no-173613372)                |
 | [Data East Liberation Hardware](https://www.patreon.com/Meathax/posts/boomer-rangr-b-172526836)                                  |
 | [Data East MLC](https://github.com/ppriest/Arcade-DecoMLC_MiSTer)                                                                |
 | [Data East Simple 156](https://www.patreon.com/Meathax/posts/heavy-smash-drop-172946929)                                         |

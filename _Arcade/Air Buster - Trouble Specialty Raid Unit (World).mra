@@ -1,0 +1,48 @@
+<misterromdescription>
+    <name>Air Buster: Trouble Specialty Raid Unit (World)</name>
+    <setname>airbustr</setname>
+    <mameversion>0289</mameversion>
+    <year>1990</year>
+    <manufacturer>Kaneko (Namco license)</manufacturer>
+    <category>Shooter</category>
+    <rbf>Meathax_AirBuster</rbf>
+    <rotation>horizontal</rotation>
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons names="Shot,Buster,Start,Coin,Pause,Service" default="A,B,Start,Select,R,L"/>
+    <switches default="FF,FF" base="0">
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Coin Mode" bits="3" ids="Mode 2,Mode 1"/>
+        <dip name="Coin A (Mode1|Mode2)" bits="4,5" ids="1C/6C|1C/4C,1C/2C|1C/3C,2C/1C,1C/1C"/>
+        <dip name="Coin B (Mode1|Mode2)" bits="6,7" ids="1C/6C|1C/4C,1C/2C|1C/3C,2C/1C,1C/1C"/>
+        <dip name="Difficulty" bits="8,9" ids="Very Difficult,Difficult,Easy,Normal"/>
+        <dip name="Freeze" bits="11" ids="On,Off"/>
+        <dip name="Lives" bits="12,13" ids="7,5,4,3"/>
+        <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+    </switches>
+    <rom index="1">
+        <part>00</part>
+    </rom>
+    <rom index="3" description="hiscore">
+        <part>00 00 00 00 00 01 00 00 00 00 00 01 00 01 01 00</part>
+        <part>00 00 E1 60 40 01 01 00</part>
+    </rom>
+    <nvram index="4" size="64"/>
+    <rom index="0" zip="airbustr.zip" md5="fe1333c6e135ed348d39d6af2e431e13">
+        <!--maincpu-->
+        <part name="pr12.h19" crc="91362eb2"/>
+        <!--subcpu-->
+        <part name="pr13.l15" crc="13b2257b"/>
+        <!--audiocpu-->
+        <part name="pr-21.bin" crc="6e0a5df0"/>
+        <!--oki-->
+        <part name="pr-200.bin" crc="a4dd3390"/>
+        <!--tiles-->
+        <part name="pr-000.bin" crc="8ca68f0d"/>
+        <!--sprites-->
+        <part name="pr-001.bin" crc="7e6cb377"/>
+        <part name="pr-02.bin" crc="6bbd5e46"/>
+        <part repeat="0x70000">00</part>
+    </rom>
+</misterromdescription>

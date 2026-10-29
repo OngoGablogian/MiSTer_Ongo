@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+	<name>Daikaiju no Gyakushu (rev 1)</name>
+	<setname>daikaiju</setname>
+	<mameversion>0289</mameversion>
+	<rbf>Meathax_Daikaiju</rbf>
+	<year>1986</year>
+	<manufacturer>Taito</manufacturer>
+	<category>Shooter</category>
+	<players>2</players>
+	<joystick>8-way</joystick>
+	<num_buttons>2</num_buttons>
+	<rotation>vertical (ccw)</rotation>
+	<buttons names="Fire,Secondary,Start 1,Start 2,Coin 1,Coin 2,Service Mode,Pause"/>
+	<switches base="0" default="fc,ff">
+		<dip name="Cabinet" bits="0" ids="Upright,Cocktail"/>
+		<dip name="Flip Screen" bits="1" ids="Off,On"/>
+		<dip name="Service Mode" bits="2" ids="Off,On" values="1,0"/>
+		<dip name="Demo Sounds" bits="3" ids="Off,On"/>
+		<dip name="Coin A" bits="4,5" ids="2C/3C,2C/1C,1C/2C,1C/1C"/>
+		<dip name="Coin B" bits="6,7" ids="2C/3C,2C/1C,1C/2C,1C/1C"/>
+		<dip name="Difficulty" bits="8,9" ids="Hardest,Easy,Hard,Medium"/>
+		<dip name="Bonus Life" bits="10,11" ids="None,50000,100000,30000"/>
+		<dip name="Lives" bits="12,13" ids="Infinite (Cheat),5,4,3"/>
+		<dip name="Invulnerability (Cheat)" bits="14" ids="On,Off"/>
+		<dip name="Freeze" bits="15" ids="On,Off"/>
+	</switches>
+	<!-- 175 MAME hiscore bytes plus one WIDE transfer pad byte; ROMs use 0-7. -->
+	<nvram index="8" size="176"/>
+	<rom index="0" zip="daikaiju.zip" md5="none">
+		<part crc="89c13d7f" name="a74_01-1.ic4"/>
+		<part crc="8ddf6131" name="a74_02.ic3"/>
+		<part crc="3911ffed" name="a74_03.ic2"/>
+	</rom>
+	<rom index="1" zip="daikaiju.zip" md5="none">
+		<part crc="98a6a703" name="a74_04.ic44"/>
+	</rom>
+	<rom index="2" zip="daikaiju.zip" md5="none">
+		<part crc="d66df06f" name="a74_05.ic35"/>
+	</rom>
+	<rom index="3" zip="daikaiju.zip" md5="none">
+		<part crc="3123158e" name="a74_10.ic27"/>
+		<part crc="8a4e6c3a" name="a74_12.ic28"/>
+		<part crc="6432ae38" name="a74_11.ic40"/>
+		<part crc="1a1be4bb" name="a74_13.ic41"/>
+	</rom>
+	<rom index="4" zip="daikaiju.zip" md5="none">
+		<part crc="c28e9c35" name="a74_14.ic2"/>
+		<part crc="4b1c7921" name="a74_16.ic3"/>
+		<part crc="ef4d1945" name="a74_16.ic25"/>
+		<part crc="d1077878" name="a74_17.ic26"/>
+	</rom>
+	<rom index="5" zip="daikaiju.zip" md5="none">
+		<part crc="66132341" name="a74_07.ic22"/>
+	</rom>
+	<rom index="6" zip="daikaiju.zip" md5="none">
+		<part crc="fb3f0273" name="a74_08.ic23"/>
+	</rom>
+	<rom index="7" zip="daikaiju.zip" md5="none">
+		<part crc="bed6709d" name="a74_09.ic24"/>
+	</rom>
+</misterromdescription>
