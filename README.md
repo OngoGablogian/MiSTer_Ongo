@@ -187,7 +187,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Sony ZN-1](https://github.com/XelaNotPu/ZN1_MiSTer)                                                                             |
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                  |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                             |
-| [SparcStation 20](https://github.com/Grabulosaure/ss)                                                                            |
 | [Special Criminal Investigation](https://www.patreon.com/bazset/posts/s-c-i-taito-1989-171266717)                                |
 | [Stone Ball](https://www.patreon.com/Meathax/posts/stone-ball-chase-171312474)                                                   |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                          |
