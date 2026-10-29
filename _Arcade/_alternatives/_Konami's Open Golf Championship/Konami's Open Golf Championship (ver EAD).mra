@@ -89,7 +89,7 @@
         <dip name="Number of Players" bits="2" ids="4P,2P"/>
     </switches>
 
-    <buttons names="Shoot,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="1"/>
+    <buttons names="Advice,Stance Left,Stance Right,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
 
     <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
          as the CPU reads them (rtl/cheat/cheatengine.sv) -->

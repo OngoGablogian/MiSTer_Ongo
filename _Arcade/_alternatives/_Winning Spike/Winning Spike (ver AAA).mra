@@ -54,7 +54,7 @@
         <dip name="Flip Screen" bits="1" ids="On,Off"/>
     </switches>
 
-    <buttons names="Button A,Button B,Button C,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+    <buttons names="Normal Spike,Feint,Power Spike,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
 
     <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
          as the CPU reads them (rtl/cheat/cheatengine.sv) -->

@@ -79,7 +79,7 @@
     <switches default="E7,FF">
         <dip name="Flip Screen" bits="2" ids="Yes,No"/>
         <dip name="Cabinet" bits="3,4" ids="Upright (Stereo),Unused,Upright (Mono),2in1"/>
-        <dip name="Car" bits="5,7" ids="No. 8 (Green),No. 7 (Yellow),No. 6 (Blue),No. 5 (Red),No. 4 (Green),No. 3 (Yellow),No. 2 (Blue),No. 1 (Red)"/>
+        <dip name="Car" bits="5,7" ids="No. 8 (White/Green),No. 7 (Yellow/White),No. 6 (White/Blue),No. 5 (White/Red),No. 4 (Green/White),No. 3 (White/Yellow),No. 2 (Blue/White),No. 1 (Red/White)"/>
     </switches>
 
     <buttons names="Gas,Brake,Gear Shift,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
