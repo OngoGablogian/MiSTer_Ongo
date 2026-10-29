@@ -76,6 +76,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [GameTank](https://github.com/nikiiv/gametank_fpga)                                                                              |
 | [Gladiator](https://mister.blahm1d.com/core-gladiator.html)                                                                      |
 | [Great 1000 Miles Rally 2 (Mille Miglia 2)](https://www.patreon.com/bazset/posts/great-1000-miles-173244427)                     |
+| [Hangzo](https://www.patreon.com/Meathax/posts/hangzo-173722109)                                                                 |
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                                 |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                        |
 | [Heavy Unit](https://www.patreon.com/Meathax/posts/heavy-unit-172408285)                                                         |

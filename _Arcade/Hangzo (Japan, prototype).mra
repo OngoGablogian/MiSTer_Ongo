@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <!--Timing-qualified development build Arcade-Hangzo_20261029.rbf; approved provisional 7 MHz, 448x272 raster; physical hardware validation pending.-->
+  <about author="Hangzo core contributors" source="Pinned MAME 0.289 rohga.cpp; native input captures"/>
+  <name>Hangzo (Japan, prototype)</name>
+  <setname>hangzo</setname>
+  <mameversion>0289</mameversion>
+  <year>1992</year>
+  <manufacturer>Hot-B</manufacturer>
+  <category>Run and Gun</category>
+  <rbf>Meathax_Hangzo_20261029</rbf>
+  <rotation>horizontal</rotation>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <rom index="1">
+    <part>00</part>
+  </rom>
+  <rom index="0" zip="hangzo.zip" md5="none" address="0x30000000">
+    <interleave output="16">
+      <part name="pro0h 12.18.2a.27c1001" crc="ac8087db" map="01"/>
+      <part name="pro0h 12.18.2d.27c1001" crc="a6b7f4f4" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="pro1h 12.10.4a.27c010" crc="0d04f43d" map="01"/>
+      <part name="pro1l 12.10.4d.27c010" crc="2e323918" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="pro2h 12.10.6a.27c010" crc="bb3185a6" map="01"/>
+      <part name="pro2l 12.10.6d.27c010" crc="11ce97bb" map="10"/>
+    </interleave>
+    <part repeat="0x40000">00</part>
+    <part name="snd 12.18.18p.27c512" crc="97c592dc"/>
+    <part repeat="0xf0000">FF</part>
+    <part name="pcm8k 11.5.15p.27c020" crc="02682a9a"/>
+    <part repeat="0xc0000">FF</part>
+    <part name="pcm16k 11.5.14p.574000" crc="5b95c6c7"/>
+    <part repeat="0x80000">FF</part>
+    <part name="bk1l 12.10.9a.574200" crc="5199729b" offset="0" length="0x20000"/>
+    <part name="bk1h 12.10.11a.574200" crc="85887bd8" offset="0" length="0x20000"/>
+    <part repeat="0xc0000">FF</part>
+    <part name="bk1l 12.10.9a.574200" crc="5199729b"/>
+    <part name="bk1h 12.10.11a.574200" crc="85887bd8"/>
+    <part name="bk23l 12.10.17d.574200" crc="ed4e47c6"/>
+    <part repeat="0x80000">00</part>
+    <part name="bk23h 12.10.18d.574200" crc="6a725fb2"/>
+    <part repeat="0x80000">00</part>
+    <part name="obj01l 12.10.19a.27c4000" crc="c141e310"/>
+    <part repeat="0x80000">00</part>
+    <part name="obj01h 12.10.20a.27c4000" crc="6a7b4252"/>
+    <part repeat="0x80000">00</part>
+    <part name="obj23l 12.10.19d.27c4000" crc="0db6df6c"/>
+    <part repeat="0x80000">00</part>
+    <part name="obj23h 12.10.20d.27c4000" crc="165031a1"/>
+    <part repeat="0x80000">00</part>
+  </rom>
+  <rom index="3">
+    <part>00 00 00 00 00 01 00 02 00 02 00 01 00 01 01 00 00 3F 00 3A 8C 00 20 00</part>
+  </rom>
+  <nvram index="4" size="140"/>
+  <buttons names="Sword,Jump,Shuriken,-,-,-,Start,Coin,Pause,Service" default="Y,B,A,Start,Select,R,L" count="3"/>
+  <switches default="FF,7F,FF">
+    <dip name="Coin A" bits="0,2" ids="3C 1C,2C 1C,1C 1C,1C 2C,1C 3C,1C 4C,1C 5C,1C 6C" values="0x0,0x1,0x7,0x6,0x5,0x4,0x3,0x2"/>
+    <dip name="Coin B" bits="3,5" ids="3C 1C,2C 1C,1C 1C,1C 2C,1C 3C,1C 4C,1C 5C,1C 6C" values="0x0,0x1,0x7,0x6,0x5,0x4,0x3,0x2"/>
+    <dip name="Flip Screen" bits="6" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Start Price" bits="7" ids="Normal,2C/1C" values="0x1,0x0"/>
+    <dip name="Lives" bits="8,9" ids="1,2,3,4" values="0x1,0x0,0x3,0x2"/>
+    <dip name="Unknown SW2:3" bits="10" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Unknown SW2:4" bits="11" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Unknown SW2:5" bits="12" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Unknown SW2:6" bits="13" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Allow Continue" bits="14" ids="Off,On" values="0x0,0x1"/>
+    <dip name="Demo Sounds" bits="15" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Unknown SW3:1" bits="16" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Freeze Player" bits="17" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Freeze Frame" bits="18" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Unknown SW3:4" bits="19" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Unknown SW3:5" bits="20" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Freeze Screen" bits="21" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Unknown SW3:7" bits="22" ids="Off,On" values="0x1,0x0"/>
+    <dip name="Debug Mode" bits="23" ids="Off,On" values="0x1,0x0"/>
+  </switches>
+</misterromdescription>
