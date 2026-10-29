@@ -1,0 +1,225 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Sega Touring Car Championship (newer) (Model 2C-CRX). Derived from MAME
+      0.289 model2.cpp ROM_START(stcc), the parent set (epr-19570 / 19571).
+      For the Model 2C build of the 2A core (branch model2c, Model2.sv M2_2C);
+      the 2A and original cores cannot run it. Study R933.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window; epr-19270 /
+                   19271 written eight times, MAME's ROM_COPY mirrors; the
+                   upper 16 MB zeros, as MAME's region)
+        0x2080000  4 MB of zeros (the 2C core keeps the TGPx4's program copy
+                   at its start, SDRAM byte 0x2080000, written by the upload)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2C has none)
+        0x24C0000  68000 sound program, 512 KB (128 KB loaded)
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the TGPx4's external ROM) -> SDRAM byte
+                   0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons, 16 MB             -> SDRAM byte 0x5000000
+      Image: 0x52C0000 bytes. NOT LOADED (no model in this core): the Digital
+      Sound Board's Z80 program and MPEG data (epr-19275, mpr-19262-19265:
+      the music; the SCSP's effects play), the comm board's program
+      (epr-18643a) and the drive board's (epr-18261; MAME's stcc has no
+      drive board either).
+
+      Index 4, the game ID: 0x1D (R933; 0x18-0x1B are the 2A analog games'
+      decodes, 0x1C Over Rev). Bit 7 is SET in this MRA (0x9D): the
+      15 kHz CRT flag (R795), which starts the core in 15 kHz interlaced
+      whatever the OSD says (R908).
+    -->
+    <name>Sega Touring Car Championship (newer) [15kHz CRT]</name>
+    <setname>stcc</setname>
+    <rbf>Model2C</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. Needs a core built
+         with R945 or later; an earlier core would wrap the extra bytes onto
+         the start of backup RAM. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>9D 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="stcc.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19570.15" crc="9d6a1965" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19571.16" crc="97254d16" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19257.11" crc="ac28ee24" map="0021"/>
+            <part name="mpr-19258.12" crc="f5ba7d78" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19270.9" crc="7bd1d04e" map="0021"/>
+            <part name="epr-19271.10" crc="d2d74f85" map="2100"/>
+        </interleave>
+        <part repeat="16777216">00</part>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19274.31" crc="2dcc08ae" map="12"/>
+        </interleave>
+        <part repeat="393216">00</part>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-19259.32" crc="4d55dbfc" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19261.34" crc="b88878ff" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19570.15" crc="9d6a1965" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19571.16" crc="97254d16" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  TGP copro data, 4 MB (R862) -->
+        <interleave output="32">
+            <part name="mpr-19255.29" crc="d78bf030" map="0021"/>
+            <part name="mpr-19256.30" crc="cb2b2d9e" map="2100"/>
+        </interleave>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-19254.27" crc="1ec49c02" map="0021"/>
+            <part name="mpr-19253.25" crc="41ba79fb" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19254.27" crc="1ec49c02" map="0021"/>
+            <part name="mpr-19253.25" crc="41ba79fb" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19269.28" crc="01881121" map="0021"/>
+            <part name="epr-19268.26" crc="bc4e081c" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-19251.17" crc="e06ff7ba" map="0021"/>
+            <part name="mpr-19252.21" crc="68509993" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19266.18" crc="41464ee2" map="0021"/>
+            <part name="epr-19267.22" crc="780f994d" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Steering on either stick (or the paddle); pedals on the right
+         stick's Y or the Accel / Brake buttons, over MAME's whole 0x00-0xFF
+         (indy500's ports: released 0x00, not reversed); Shift Up / Shift
+         Down for the manual gearbox; View 1 (zoom in) / View 2 (zoom out).
+         OSD: Pedals, Steering, Steering smoothing, Right stick (shown for
+         this game). -->
+    <buttons names="Coin,Start,Test,Service,View 1,View 2,Accel,Brake,Shift Up,Shift Down"/>
+</misterromdescription>

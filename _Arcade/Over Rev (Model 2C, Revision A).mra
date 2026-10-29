@@ -1,0 +1,114 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Over Rev (Model 2C, Revision A) (Jaleco, Model 2C-CRX). Derived from
+      MAME 0.289 model2.cpp ROM_START(overrev). For the Model 2C build of the
+      2A core (branch model2c, Model2.sv M2_2C); the 2A and original cores
+      cannot run it, nor the 2B sets overrevb / overrevba. Study R928.
+
+      THE 2A LAYOUT (Sega Rally's MRA; no 128 MB module needed), each slot
+      zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB (all 16 MB of MAME's region that load;
+                   its upper 16 MB are empty in MAME)
+        0x1080000  textures, 8 MB (MAME's 4 MB region, then zeros)
+        0x1880000  polygons, 12 MB (4 MB loaded; MAME's region is 8 MB). The
+                   2C core keeps the TGPx4's program copy at SDRAM byte
+                   0x2080000, the slot's last 4 MB, which no address in
+                   MAME's 8 MB region reaches
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2C has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+                   (512 KB loaded, the rest 0 as MAME's region)
+      Image: 0x2EC0000 bytes. MAME's copro_data region is empty for this set
+      (the TGPx4's program is uploaded by the i960), so the image ends before
+      that slot. The comms program (epr-18643) is not loaded (not modelled).
+
+      Index 4, the game ID: 0x1C (R928; 0x18-0x1B are the 2A analog games'
+      decodes, live in this build too). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Over Rev (Model 2C, Revision A)</name>
+    <setname>overrev</setname>
+    <rbf>Model2C</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. Needs a core built
+         with R945 or later; an earlier core would wrap the extra bytes onto
+         the start of backup RAM. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>1C 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Jaleco</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="overrev.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-20124a.15" crc="74beb8d7" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-20125a.16" crc="def64456" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-19996.11" crc="21928a00" map="0021"/>
+            <part name="mpr-19997.12" crc="2a169cab" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19994.9" crc="e691fbd5" map="0021"/>
+            <part name="mpr-19995.10" crc="82a7828e" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB (4 MB loaded) -->
+        <interleave output="32">
+            <part name="mpr-20001.27" crc="6ca236aa" map="0021"/>
+            <part name="mpr-20000.25" crc="894d8ded" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB (4 MB loaded) -->
+        <interleave output="32">
+            <part name="mpr-19998.17" crc="6a834574" map="0021"/>
+            <part name="mpr-19999.21" crc="ff590a2d" map="2100"/>
+        </interleave>
+        <part repeat="8388608">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2C (the TGPx4 has no tables) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-20002.31" crc="7efb069e" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+             loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-20003.32" crc="149ac22b" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20004.34" crc="0b9c5410" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-20124a.15" crc="74beb8d7" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-20125a.16" crc="def64456" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+    </rom>
+
+    <!-- Steering on either stick (or the paddle); pedals on the right
+         stick's Y or the Accel / Brake buttons, over MAME's whole 0x00-0xFF
+         and reversed as MAME's ports (the game's default with no NVRAM);
+         Shift Up / Shift Down for the manual gearbox; View 1 / View 2. OSD:
+         Pedals, Steering, Steering smoothing, Right stick (shown for this
+         game). -->
+    <buttons names="Coin,Start,Test,Service,View 1,View 2,Accel,Brake,Shift Up,Shift Down"/>
+</misterromdescription>

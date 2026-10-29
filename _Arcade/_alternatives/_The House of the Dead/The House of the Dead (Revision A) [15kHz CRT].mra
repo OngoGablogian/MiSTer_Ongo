@@ -1,0 +1,179 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      The House of the Dead (Revision A) (Model 2C-CRX). Derived from MAME
+      0.289 model2.cpp ROM_START(hotd). For the Model 2C build of the 2A core
+      (branch model2c, Model2.sv M2_2C); the 2A and original cores cannot run
+      it. Study R924.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window; epr-19698 /
+                   19699 written eight times, MAME's ROM_COPY mirrors)
+        0x2080000  4 MB of zeros (the 2C core keeps the TGPx4's program copy
+                   at its start, SDRAM byte 0x2080000, written by the upload)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2C has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (1 MB loaded) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons, 32 MB             -> SDRAM byte 0x5000000
+      Image: 0x62C0000 bytes.
+
+      Index 4, the game ID: 0x17 (R924). Bit 7 would be the 15 kHz CRT flag.
+      [15kHz CRT]: game ID bit 7 set - the core starts in 15 kHz
+      interlaced whatever the OSD's Video line holds (R795, R801).
+      THE GUNS: Virtua Cop 2's driver (R870), read by the game through the
+      315-5649's serial channel 2 as MAME's hotd config does. NOT YET SCALED
+      to House of the Dead's ranges (MAME: X 173-596, Y 87-380 against
+      Virtua Cop 2's 137-630 / 36-425), so the aim is off towards the edges.
+    -->
+    <name>The House of the Dead (Revision A) [15kHz CRT]</name>
+    <setname>hotd</setname>
+    <rbf>Model2C</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. Needs a core built
+         with R945 or later; an earlier core would wrap the extra bytes onto
+         the start of backup RAM. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>97 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Shooter / Gun</category>
+
+    <rom index="0" zip="hotd.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19696a.15" crc="42adc32e" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19697a.16" crc="1e247cd5" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19704.11" crc="aa80dbb0" map="0021"/>
+            <part name="mpr-19705.12" crc="f906843b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19702.9" crc="fc8aa3b7" map="0021"/>
+            <part name="mpr-19703.10" crc="208d993d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19700.7" crc="0558cfd3" map="0021"/>
+            <part name="mpr-19701.8" crc="224a8929" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19698.5" crc="e7a7b6ea" map="0021"/>
+            <part name="epr-19699.6" crc="8160b3d9" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2C (the TGPx4 has no tables) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19720.31" crc="b367d21d" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-19721.32" crc="f5d8fa9a" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19722.34" crc="a56fa539" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19696a.15" crc="42adc32e" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19697a.16" crc="1e247cd5" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19694.13" crc="e85ca1a3" map="0021"/>
+            <part name="epr-19695.14" crc="cd52b461" map="2100"/>
+        </interleave>
+
+        <!-- 0x2EC0000  copro data (MAME's "TGPx4 program" region, 8 MB; 1 MB loaded), 4 MB (R862, R924) -->
+        <interleave output="32">
+            <part name="epr-19707.29" crc="384fd133" map="0021"/>
+            <part name="epr-19706.30" crc="1277531c" map="2100"/>
+        </interleave>
+        <part repeat="3145728">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-19718.27" crc="a9de5924" map="0021"/>
+            <part name="mpr-19716.25" crc="45c7dcce" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19719.28" crc="838f8343" map="0021"/>
+            <part name="mpr-19717.26" crc="393e440b" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 32 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-19715.17" crc="3ff7dda7" map="0021"/>
+            <part name="mpr-19711.21" crc="080d13f1" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19714.18" crc="3e55ab49" map="0021"/>
+            <part name="mpr-19710.22" crc="80df1036" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19713.19" crc="4d092cd3" map="0021"/>
+            <part name="mpr-19709.23" crc="d08937bf" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19712.20" crc="41577943" map="0021"/>
+            <part name="mpr-19708.24" crc="5cb790f2" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- The guns' buttons, Virtua Cop 2's (R846, R870): joystick 1 is player
+         1's gun, joystick 2 player 2's. Aim with the left stick (a USB light
+         gun arrives as that stick, calibrated in MiSTer's F10 menu) or the
+         mouse (OSD "Mouse"). Reload is "shoot off the screen". Test and
+         Service are player 1's. -->
+    <buttons names="Trigger,Reload,Start,Coin,Test,Service"/>
+</misterromdescription>
