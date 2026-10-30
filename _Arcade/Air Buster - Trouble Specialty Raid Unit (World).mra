@@ -14,8 +14,8 @@
         <dip name="Flip Screen" bits="1" ids="On,Off"/>
         <dip name="Service Mode" bits="2" ids="On,Off"/>
         <dip name="Coin Mode" bits="3" ids="Mode 2,Mode 1"/>
-        <dip name="Coin A (Mode1|Mode2)" bits="4,5" ids="1C/6C|1C/4C,1C/2C|1C/3C,2C/1C,1C/1C"/>
-        <dip name="Coin B (Mode1|Mode2)" bits="6,7" ids="1C/6C|1C/4C,1C/2C|1C/3C,2C/1C,1C/1C"/>
+        <dip name="Coin A (M1|M2)" bits="4,5" ids="1C/6C|1C/4C,1C/2C|1C/3C,2C/1C,1C/1C"/>
+        <dip name="Coin B (M1|M2)" bits="6,7" ids="1C/6C|1C/4C,1C/2C|1C/3C,2C/1C,1C/1C"/>
         <dip name="Difficulty" bits="8,9" ids="Very Difficult,Difficult,Easy,Normal"/>
         <dip name="Freeze" bits="11" ids="On,Off"/>
         <dip name="Lives" bits="12,13" ids="7,5,4,3"/>
