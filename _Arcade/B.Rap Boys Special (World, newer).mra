@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BAZSET CORE - RELEASE NAME
+ RBF FILE: bazset_BRapBoysSpecial.rbf
+ REQUIRED ROM ZIP FILE(S): brapboys.zip (merged); or brapboysp.zip plus brapboys.zip (split/nonmerged)
+ -->
+<misterromdescription>
+  <name>B.Rap Boys Special (World, newer)</name>
+  <setname>brapboysp</setname>
+  <mratimestamp>20261010</mratimestamp>
+  <mameversion>0289</mameversion>
+  <year>1992</year>
+  <manufacturer>Kaneko</manufacturer>
+  <category>Beat'em Up</category>
+  <rbf>bazset_BRapBoysSpecial</rbf>
+  <nvram index="2" size="128"/>
+  <!-- Standard split/nonmerged brapboysp.zip plus brapboys.zip parent;
+       or the original merged brapboys.zip with brapboysp/ clone files.
+       MiSTer searches the archives in order, using each part's CRC. -->
+  <rom index="0" zip="brapboysp.zip|brapboys.zip" type="merged|nonmerged|split" md5="none">
+    <!-- 68000 program, 0x000000 - 0x03ffff -->
+    <interleave input="8" output="16">
+      <part name="rb-030.a0.u61" crc="fed2ecea" map="0001"/>
+      <part name="rb-031.a0.u62" crc="f64b9763" map="0010"/>
+    </interleave>
+    <!-- CALC3 protected ROM, 0x040000 - 0x05ffff -->
+    <part name="rb-040.a0.u33" crc="7b856d27"/>
+    <!-- VIEW2 tiles, 0x060000 - 0x45ffff -->
+    <part name="rb-010.u65" crc="ffd73f87"/>
+    <part name="rb-011.u66" crc="d9325f78"/>
+    <part name="rb-012.u67" crc="bfdbe0d1"/>
+    <part name="rb-013.u68" crc="28c37fe8"/>
+    <!-- Two OKI sample regions, 0x460000 - 0x75ffff -->
+    <part name="rb-000.u43" crc="58ad1a62"/>
+    <part name="rb-003.00.u101" crc="2cac25d7"/>
+    <part name="rb-001.u44" crc="7cf774b3"/>
+    <part name="rb-002.u45" crc="e4b30444"/>
+    <!-- Kaneko VU sprites, 0x760000 - 0xd5ffff -->
+    <part name="rb-020.u100" crc="ce220d38"/>
+    <part name="rb-021.u76" crc="74001407"/>
+    <part name="rb-022.u77" crc="cb3f42dc"/>
+    <part name="rb-023.u78" crc="0e6530c5"/>
+    <part name="rb-024.u79" crc="65fa6447"/>
+    <part name="rb-024.u79" crc="65fa6447"/>
+    <part name="rb-025.a0.u80a" crc="aa795ba5"/>
+    <part name="rb-026.10.u80b" crc="bb7604d4"/>
+    <part repeat="0x200000">00</part>
+  </rom>
+  <!-- B.Rap Boys hardware selection; copied from verified existing MRA. -->
+  <rom index="1"><part>05 00</part></rom>
+  <romstruct>0xF60000-byte BRapBoys stream. CALC3 game ID 5. Standard MAME ROM names; no synthetic ZIP.</romstruct>
+</misterromdescription>

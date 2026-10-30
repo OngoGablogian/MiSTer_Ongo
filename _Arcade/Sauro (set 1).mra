@@ -1,9 +1,9 @@
-<!-- BAZSET CORE | original Sauro (Tecfri 1987) | SOURCE ONLY - NOT RELEASE CERTIFIED
-RBF FILE: Arcade-Sauro.rbf
+<!-- BAZSET CORE | original Sauro (Tecfri 1987) | B01.1 PRIVATE OWNER-TEST CREDITS UPDATE - NOT CERTIFIED
+RBF FILE: bazset_Sauro.rbf
 REQUIRED ROM ZIP FILE(S): sauro.zip
 The parent original set contains all 15 parts including sp0256-al2.bin.
 This candidate has YM3812 music but speech/data-ready NMI NOT IMPLEMENTED.
-Do not distribute an RBF until legal, fitted timing, and PVM/HDMI gates pass.
+PRIVATE OWNER B01.1 TEST ONLY; official six-area engineer approval not yet signed, existing timing risks remain.
 -->
 <misterromdescription>
   <name>Sauro (set 1)</name>
@@ -18,7 +18,7 @@ Do not distribute an RBF until legal, fitted timing, and PVM/HDMI gates pass.
   <buttons default="A,B,Start,Select" names="Button 1,Button 2,Start,Coin"/>
   <resolution>15kHz</resolution>
   <rotation>horizontal</rotation>
-  <about>Original Sauro only; YM3812 register-write source verified; SP0256 speech and hardware V3.3 timing not complete. SOURCE-ONLY BRINGUP.</about>
+  <about>Original Sauro only; YM3812 register-write source verified; SP0256 speech and hardware V3.3 timing not complete. B01.1 PRIVATE OWNER TEST; 9 PATREON NAMES IN OSD.</about>
   <rom index="0" zip="sauro.zip" md5="none">
     <part name="sauro-2.bin" crc="2e356e2d"/>
     <part name="sauro-1.bin" crc="95d03e5e"/>

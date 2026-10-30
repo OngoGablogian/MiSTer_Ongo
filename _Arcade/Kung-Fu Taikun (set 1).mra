@@ -1,0 +1,36 @@
+<misterromdescription>
+  <name>Kung-Fu Taikun (set 1)</name>
+  <setname>kungfut</setname>
+  <mameversion>0289</mameversion>
+  <year>1984</year>
+  <manufacturer>Seibu Kaihatsu</manufacturer>
+  <category>Arcade</category>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <rbf>bazset_KungFuTaikun</rbf>
+  <joystick>2</joystick>
+  <!-- Active-high controls in MAME; RTL must apply correct polarity. -->
+  <buttons names="Button 1,Button 2,Microphone,Coin,Start 1P,Start 2P" default="A,B,X,Select,Start,R" count="3"/>
+  <!-- Default DIP0 20; DIP1 0C. DIP transport index254 must be integrated in RTL. -->
+  <switches page_id="1" page_name="DIP Switches" base="16" default="20,0C">
+    <dip name="Difficulty" bits="8" ids="Easy,Hard"/>
+    <dip name="Microphone" bits="10" ids="On,Off"/>
+    <dip name="Lives" bits="11,12" ids="2,3,4,5"/>
+  </switches>
+  <!-- Single contiguous index0: MAIN 0x00000; AUDIO 0x0C000; GFX1 0x0E000; GFX2 0x14000; PROMS 0x1A000. -->
+  <rom index="0" zip="kungfut.zip">
+    <part name="p1.bin" crc="b1e56960"/>
+    <part name="p3.bin" crc="6fc346f8"/>
+    <part name="p2.bin" crc="042cc9c5"/>
+    <part name="1.bin" crc="68028a5d"/>
+    <part name="2.bin" crc="5c3ef697"/>
+    <part name="3.bin" crc="905e81fa"/>
+    <part name="4.bin" crc="965bb5d1"/>
+    <part name="5.bin" crc="763bb61a"/>
+    <part name="6.bin" crc="c9649fce"/>
+    <part name="7.bin" crc="32f02c13"/>
+    <part name="82s129.0" crc="eb823177"/>
+    <part name="82s129.1" crc="6eec5dd9"/>
+    <part name="82s129.2" crc="c31eb3e6"/>
+  </rom>
+</misterromdescription>

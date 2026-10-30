@@ -1,0 +1,88 @@
+<misterromdescription>
+  <!-- B124: editable candidate authoring; NOT YET consumed by FPGA pause/OSD RTL.
+       Changes require sync of the inline BZM1 ROM packet via global MRA14 helper.
+       Do not distribute as MRA14 compliant until runtime RTL+hardware A/B PASS. -->
+  <bazset_runtime version="1">
+    <pause>
+      <title>BUCCANEERS</title>
+      <build>BUCCANEERS B2030 EXPERIMENTAL OWNER HARDWARE TEST</build>
+      <core_by>bazset</core_by>
+      <patreon>patreon.com/c/bazset</patreon>
+      <x>x.com/bazset_</x>
+      <beta_testers>None</beta_testers>
+      <patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters>
+      <special_thanks>Meathax // PixelCherryNinja</special_thanks>
+      <bug_prompt>BUGS? REPORT ON MY PATREON</bug_prompt>
+    </pause>
+    <osd>
+      <!-- Planned MRA-selected visibility and launch defaults. Not yet wired. -->
+      <visibility>Video Settings=show | Game Settings=show | Credits=show</visibility>
+      <defaults>Aspect ratio=Original | CRT H-Position=0 | CRT V-Shift=0</defaults>
+    </osd>
+    <pause_style>
+      <colors background="#080B18" card="#080B18" border="#D9A441" text="#F0E9D7" dim="#71798A" accent="#5DE4FF"/>
+      <layout preset="compact"/>
+      <marquee frames="12"/>
+    </pause_style>
+  </bazset_runtime>
+  <about author="BAZSET (original design in development)" webpage="https://patreon.com/c/bazset"
+         source="https://github.com/mamedev/mame"/>
+  <rotation>horizontal</rotation>
+  <name>Buccaneers (set 1)</name>
+  <setname>buccanrs</setname>
+  <mameversion>0289</mameversion>
+  <year>1989</year>
+  <manufacturer>Duintronic</manufacturer>
+  <region>Undetermined (set 1)</region>
+  <category>Arcade action</category>
+  <players>2</players>
+  <rbf>bazset_Buccaneers</rbf>
+  <joystick>8</joystick>
+  <rom index="0" zip="buccanrs.zip" md5="114d3ebf1696e6bb125609bd882bb7d5">
+    <!-- maincpu: 0x000000-02ffff; fixed 0000-7fff, banked 10000-2ffff -->
+    <part name="bc-011_k-163.u58" crc="bf1d7e6f"/>
+    <part name="bc-012_k-163.u25" crc="87303ba8"/>
+    <part repeat="0x10000">FF</part>
+    <!-- soundcpu: 0x030000-03ffff -->
+    <part name="bc-001_k-0161.u128" crc="eb65f8c3"/>
+    <!-- chars: 0x040000-05ffff -->
+    <part name="bc-003_k-0161.u212" crc="95e3c517"/>
+    <part name="bc-004_k-0161.u189" crc="fe2377ab"/>
+    <!-- sprites: 0x060000-0dffff; preserve MAME ROM_CONTINUE -->
+    <part name="bc-005_k-0161.u113" crc="16dc435f" offset="0x00000" length="0x10000"/>
+    <part name="bc-006_k-161.u80" crc="4fe3bf97"/>
+    <part name="bc-005_k-0161.u113" crc="16dc435f" offset="0x10000" length="0x10000"/>
+    <part repeat="0x10000">FF</part>
+    <part name="bc-008_k-161.u52" crc="078aef7f" offset="0x00000" length="0x10000"/>
+    <part name="bc-007_k-161.u70" crc="f650fa90"/>
+    <part name="bc-008_k-161.u52" crc="078aef7f" offset="0x10000" length="0x10000"/>
+    <part repeat="0x10000">FF</part>
+    <!-- bgtiles: 0x0e0000-11ffff; bank/page #4 is retained -->
+    <part name="bc-010_k-163.u27" crc="2d383ff8"/>
+    <part name="bc-009_k-163.u49" crc="0c6188fb"/>
+    <!-- sample m72: 0x120000-12ffff -->
+    <part name="bc-002_k-0161.u74" crc="36ee1dac"/>
+    <!-- color/timing PROMs: 0x130000-1303ff (not silently discarded) -->
+    <part name="prom1.u54" crc="c324835e"/>
+    <part name="prom4.u79" crc="e6506ef4"/>
+    <part name="prom3.u88" crc="b43d094f"/>
+    <part name="prom2.u99" crc="e0aa8869"/>
+  </rom>
+  <!-- B124: nonzero 249 BZM1 runtime metadata stream. Until the new
+       receiver and renderer are implemented the FPGA safely ignores it. -->
+  <rom index="249"><part>425A4D31F80200008AEC76C67B226F7364223A7B2264656661756C7473223A2241737065637420726174696F3D4F726967696E616C207C2043525420482D506F736974696F6E3D30207C2043525420562D53686966743D30222C227669736962696C697479223A22566964656F2053657474696E67733D73686F77207C2047616D652053657474696E67733D73686F77207C20437265646974733D73686F77227D2C227061757365223A7B22626574615F74657374657273223A224E6F6E65222C226275675F70726F6D7074223A22425547533F205245504F5254204F4E204D592050415452454F4E222C226275696C64223A2242554343414E45455253204232303330204558504552494D454E54414C204F574E45522048415244574152452054455354222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224D656174686178202F2F20506978656C4368657272794E696E6A61222C227469746C65223A2242554343414E45455253222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223354445344646222C226261636B67726F756E64223A2223303830423138222C22626F72646572223A2223443941343431222C2263617264223A2223303830423138222C2264696D223A2223373137393841222C2274657874223A2223463045394437227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A31327D2C2276657273696F6E223A317D</part></rom>
+  <!-- Switch bytes supplied to production ports; verify OSD serialization when wired. -->
+  <switches page_id="1" page_name="Switches" base="16" default="ff,7f">
+    <DSW1/>
+    <dip name="Coin A" bits="0,1,2,3" ids="5C_2C,Reserved,Reserved,4C_3C,4C_1C,3C_5C,3C_2C,3C_1C,Reserved,Reserved,2C_1C,1C_5C,1C_4C,1C_3C,1C_2C,1C_1C"/>
+    <dip name="Coin B" bits="4,5,6,7" ids="5C_2C,Reserved,Reserved,4C_3C,4C_1C,3C_5C,3C_2C,3C_1C,Reserved,Reserved,2C_1C,1C_5C,1C_4C,1C_3C,1C_2C,1C_1C"/>
+    <DSW2/>
+    <dip name="Flip Screen" bits="8" ids="On,Off"/>
+    <dip name="Lives" bits="9,10" ids="5,4,3,2"/>
+    <dip name="Difficulty" bits="11,12" ids="Invincible,Medium,Hard,Normal"/>
+    <dip name="Cabinet" bits="13" ids="Cocktail,Upright"/>
+    <dip name="Demo Sounds" bits="14" ids="Off,On"/>
+    <dip name="Allow Continue" bits="15" ids="Yes,No"/>
+  </switches>
+  <buttons names="Punch,Kick,Coin,Start 1P,Start 2P,Pause,Service" default="B,A,Select,Start,R,L,X" count="2"/>
+</misterromdescription>

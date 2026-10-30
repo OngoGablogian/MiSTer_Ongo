@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- BAZSET CORE: Knuckle Joe -->
-<!-- RBF FILE: Arcade-KnuckleJoe.rbf -->
+<!-- RBF FILE: bazset_KnuckleJoe.rbf -->
 <!-- REQUIRED ROM ZIP: kncljoe.zip (MAME parent set, 18 parts) -->
-<!-- B06 V3.3 VIDEO AND MRA DIAGNOSTIC; real AY SFX + STA incomplete -->
+<!-- KJ555 EXPERIMENTAL CRT-native VGA output + HDMI preserved; hardware analog retest needed -->
 <!-- Original ROM bytes/CRCs untouched. CRT physical tests PENDING. -->
 <!-- No ROM data redistributed. Hardware acceptance EXPERIMENTAL. -->
 <!-- MRA index 0 main Z80: 0xC000 bytes -->

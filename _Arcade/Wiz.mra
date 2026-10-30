@@ -1,0 +1,40 @@
+<misterromdescription>
+  <name>Wiz</name>
+  <setname>wiz</setname>
+  <mameversion>0289</mameversion>
+  <year>1985</year>
+  <manufacturer>Seibu Kaihatsu</manufacturer>
+  <category>Arcade</category>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <rbf>bazset_Wiz</rbf>
+  <joystick>8</joystick>
+  <buttons names="Shoot,Magic,Coin,Start 1P,Start 2P" default="A,B,Select,Start,R" count="2"/>
+  <!-- Original MAME DIP defaults DSWA=00, DSWB=10. Index 254 path not yet RTL-qualified. -->
+  <switches page_id="1" page_name="DIP Switches" base="16" default="00,10">
+    <dip name="Coin A" bits="0,1,2" ids="1C 1C,2C 1C,1C 3C,4C 1C,1C 2C,3C 1C,1C 5C,5C 1C"/>
+    <dip name="Coin B" bits="3,4" ids="1C 1C,2C 1C,1C 2C,2C 3C"/>
+    <dip name="Free Play" bits="7" ids="Off,On"/>
+    <dip name="Cabinet" bits="8" ids="Upright,Cocktail"/>
+    <dip name="Difficulty" bits="9,10" ids="Easy,Normal,Hard,Hardest"/>
+    <dip name="Lives" bits="11,12" ids="255 (Cheat),1,3,5"/>
+    <dip name="Bonus Life" bits="13,14" ids="10K 30K,20K 40K,30K 60K,40K 80K"/>
+    <dip name="Service Mode" bits="15" ids="Off,On"/>
+  </switches>
+  <!-- ROM0: CPU C000, SOUND 2000, GFX1 6000, GFX2 C000, PROM 300 => 20300. -->
+  <rom index="0" zip="wiz.zip">
+    <part name="ic07_01.bin" crc="c05f2c78"/>
+    <part name="ic05_03.bin" crc="7978d879"/>
+    <part name="ic06_02.bin" crc="9c406ad2"/>
+    <part name="ic57_10.bin" crc="8a7575bd"/>
+    <part name="ic12_04.bin" crc="8969acdd"/>
+    <part name="ic13_05.bin" crc="2868e6a5"/>
+    <part name="ic14_06.bin" crc="b398e142"/>
+    <part name="ic03_07.bin" crc="297c02fc"/>
+    <part name="ic02_08.bin" crc="ede77d37"/>
+    <part name="ic01_09.bin" crc="4d86b041"/>
+    <part name="ic23_3-1.bin" crc="2dd52fb2"/>
+    <part name="ic23_3-2.bin" crc="8c2880c9"/>
+    <part name="ic23_3-3.bin" crc="a488d761"/>
+  </rom>
+</misterromdescription>
