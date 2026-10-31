@@ -1,0 +1,88 @@
+<misterromdescription>
+  <name>ThunderJaws (rev 3)</name>
+  <setname>thunderj</setname>
+  <rbf>Meathax_ThunderJaws</rbf>
+  <mameversion>0289</mameversion>
+  <year>1990</year>
+  <manufacturer>Atari Games</manufacturer>
+  <homebrew>no</homebrew>
+  <bootleg>no</bootleg>
+  <players>2</players>
+  <rotation>horizontal</rotation>
+  <about>Atari Games action game for one or two players.</about>
+  <buttons names="Fire,Jump,Start,Coin" default="A,B,Start,Select"/>
+  <nvram index="4" size="2164"/>
+  <rom index="3" description="hiscore">
+    <part>00 00 00 00 00 02 00 02 00 02 00 01 00 01 01 00</part>
+    <part>00 3F FD 9C 64 00 95 00</part>
+  </rom>
+  <rom index="0" zip="thunderj.zip" md5="aacd6bae8de4d64cba5438d1127e4848">
+    <interleave output="16">
+      <part name="136076-3001.14e" crc="cda7f027" map="01"/>
+      <part name="136076-3002.14c" crc="752cead3" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136076-2003.15e" crc="6e155469" map="01"/>
+      <part name="136076-2004.15c" crc="e9ff1e42" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136076-2005.16e" crc="a40242e7" map="01"/>
+      <part name="136076-2006.16c" crc="aa18b94c" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136076-1009.15h" crc="05474ebb" map="01"/>
+      <part name="136076-1010.16h" crc="ccff21c8" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136076-1007.17e" crc="9c2a8aba" map="01"/>
+      <part name="136076-1008.17c" crc="22109d16" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136076-1011.17l" crc="bbbbca45" map="01"/>
+      <part name="136076-1012.17n" crc="53e5e638" map="10"/>
+    </interleave>
+    <part repeat="0x40000">00</part>
+    <interleave output="16">
+      <part name="136076-1009.15h" crc="05474ebb" map="01"/>
+      <part name="136076-1010.16h" crc="ccff21c8" map="10"/>
+    </interleave>
+    <part name="136076-1021.5s" crc="d8432766"/>
+    <part name="136076-1025.5r" crc="839feed5"/>
+    <part name="136076-1029.3p" crc="fa887662"/>
+    <part name="136076-1033.6p" crc="2addda79"/>
+    <part name="136076-1022.9s" crc="dcf50371"/>
+    <part name="136076-1026.9r" crc="216e72c8"/>
+    <part name="136076-1030.10s" crc="dc51f606"/>
+    <part name="136076-1034.10r" crc="f8e35516"/>
+    <part name="136076-1023.13s" crc="b6dc3f13"/>
+    <part name="136076-1027.13r" crc="621cc2ce"/>
+    <part name="136076-1031.14s" crc="4682ceb5"/>
+    <part name="136076-1035.14r" crc="7a0e1b9e"/>
+    <part name="136076-1024.17s" crc="d84452b5"/>
+    <part name="136076-1028.17r" crc="0cc20245"/>
+    <part name="136076-1032.14p" crc="f639161a"/>
+    <part name="136076-1036.16p" crc="b342443d"/>
+    <part name="136076-1037.2s" crc="07addba6"/>
+    <part name="136076-1041.2r" crc="1e9c29e4"/>
+    <part name="136076-1045.34s" crc="e7235876"/>
+    <part name="136076-1049.34r" crc="a6eb8265"/>
+    <part name="136076-1038.6s" crc="2ea543f9"/>
+    <part name="136076-1042.6r" crc="efabdc2b"/>
+    <part name="136076-1046.7s" crc="6692151f"/>
+    <part name="136076-1050.7r" crc="ad7bb5f3"/>
+    <part name="136076-1039.11s" crc="cb563a40"/>
+    <part name="136076-1043.11r" crc="b7565eee"/>
+    <part name="136076-1047.12s" crc="60877136"/>
+    <part name="136076-1051.12r" crc="d4715ff0"/>
+    <part name="136076-1040.15s" crc="6e910fc2"/>
+    <part name="136076-1044.15r" crc="ff67a17a"/>
+    <part name="136076-1048.16s" crc="200d45b3"/>
+    <part name="136076-1052.16r" crc="74711ef1"/>
+    <part name="136076-1020.4m" crc="65470354"/>
+    <part name="136076-2015.1b" crc="d8feb7fb"/>
+    <part name="136076-1016.7k" crc="c10bdf73"/>
+    <part name="136076-1017.7j" crc="4e5e25e8"/>
+    <part name="136076-1018.7e" crc="ec81895d"/>
+    <part name="136076-1019.7d" crc="a4009037"/>
+  </rom>
+</misterromdescription>
