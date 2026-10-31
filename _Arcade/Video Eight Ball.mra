@@ -1,0 +1,51 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): 8ball.zip -->
+<misterromdescription>
+    <name>Video Eight Ball</name>
+    <year>1982</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Arcade</category>
+    <setname>8ball</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>8-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,-" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="8ball.zip" md5="none">
+        <part name="8b-gp1.bin" crc="1b4fb37f" offset="0x0000" length="0x0400"/>
+        <part name="8b-gp2.bin" crc="f193cdb5" offset="0x0000" length="0x0400"/>
+        <part name="8b-gp3.bin" crc="191989bf" offset="0x0000" length="0x0400"/>
+        <part name="8b-gp4.bin" crc="9c64519e" offset="0x0000" length="0x0400"/>
+        <part name="8b-gp5.bin" crc="c50d0f9d" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="8b-gp1.bin" crc="1b4fb37f" offset="0x0400" length="0x0400"/>
+        <part name="8b-gp2.bin" crc="f193cdb5" offset="0x0400" length="0x0400"/>
+        <part name="8b-gp3.bin" crc="191989bf" offset="0x0400" length="0x0400"/>
+        <part name="8b-gp4.bin" crc="9c64519e" offset="0x0400" length="0x0400"/>
+        <part name="8b-gp5.bin" crc="c50d0f9d" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="8b-gp1.bin" crc="1b4fb37f" offset="0x0800" length="0x0400"/>
+        <part name="8b-gp2.bin" crc="f193cdb5" offset="0x0800" length="0x0400"/>
+        <part name="8b-gp3.bin" crc="191989bf" offset="0x0800" length="0x0400"/>
+        <part name="8b-gp4.bin" crc="9c64519e" offset="0x0800" length="0x0400"/>
+        <part name="8b-gp5.bin" crc="c50d0f9d" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="8b-gp1.bin" crc="1b4fb37f" offset="0x0c00" length="0x0400"/>
+        <part name="8b-gp2.bin" crc="f193cdb5" offset="0x0c00" length="0x0400"/>
+        <part name="8b-gp3.bin" crc="191989bf" offset="0x0c00" length="0x0400"/>
+        <part name="8b-gp4.bin" crc="9c64519e" offset="0x0c00" length="0x0400"/>
+        <part name="8b-gp5.bin" crc="c50d0f9d" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="8b-sdp1.bin" crc="a571daf4"/>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="8b-sp1.bin" crc="1ee167f3"/>
+        <part repeat="0x0800">00</part>
+        <part name="8b-cp1.bin" crc="c1f68754"/>
+        <part name="8b-cp2.bin" crc="6ec1d711"/>
+        <part name="8b-cp3.bin" crc="4a9afce4"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>0B</part>
+    </rom>
+</misterromdescription>

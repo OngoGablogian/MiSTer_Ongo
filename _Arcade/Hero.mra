@@ -1,0 +1,52 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): hero.zip -->
+<misterromdescription>
+    <name>Hero</name>
+    <year>1984</year>
+    <manufacturer>Seatongrove UK, Ltd.</manufacturer>
+    <category>Arcade</category>
+    <setname>hero</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>8-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,-" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="hero.zip" md5="none">
+        <part name="hr-gp1.bin" crc="82f39788" offset="0x0000" length="0x0400"/>
+        <part name="hr-gp2.bin" crc="79607812" offset="0x0000" length="0x0400"/>
+        <part name="hr-gp3.bin" crc="2902715c" offset="0x0000" length="0x0400"/>
+        <part name="hr-gp4.bin" crc="696d2f8e" offset="0x0000" length="0x0400"/>
+        <part name="hr-gp5.bin" crc="936a4ba6" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="hr-gp1.bin" crc="82f39788" offset="0x0400" length="0x0400"/>
+        <part name="hr-gp2.bin" crc="79607812" offset="0x0400" length="0x0400"/>
+        <part name="hr-gp3.bin" crc="2902715c" offset="0x0400" length="0x0400"/>
+        <part name="hr-gp4.bin" crc="696d2f8e" offset="0x0400" length="0x0400"/>
+        <part name="hr-gp5.bin" crc="936a4ba6" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="hr-gp1.bin" crc="82f39788" offset="0x0800" length="0x0400"/>
+        <part name="hr-gp2.bin" crc="79607812" offset="0x0800" length="0x0400"/>
+        <part name="hr-gp3.bin" crc="2902715c" offset="0x0800" length="0x0400"/>
+        <part name="hr-gp4.bin" crc="696d2f8e" offset="0x0800" length="0x0400"/>
+        <part name="hr-gp5.bin" crc="936a4ba6" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="hr-gp1.bin" crc="82f39788" offset="0x0c00" length="0x0400"/>
+        <part name="hr-gp2.bin" crc="79607812" offset="0x0c00" length="0x0400"/>
+        <part name="hr-gp3.bin" crc="2902715c" offset="0x0c00" length="0x0400"/>
+        <part name="hr-gp4.bin" crc="696d2f8e" offset="0x0c00" length="0x0400"/>
+        <part name="hr-gp5.bin" crc="936a4ba6" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="hr-sdp1.bin" crc="c34ecf79"/>
+        <part repeat="0x0800">FF</part>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="hr-sp1.bin" crc="a5c33cb1"/>
+        <part repeat="0x0800">00</part>
+        <part name="hr-cp1.bin" crc="2d201496"/>
+        <part name="hr-cp2.bin" crc="21b61fe3"/>
+        <part name="hr-cp3.bin" crc="9c8e3f9e"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>03</part>
+    </rom>
+</misterromdescription>

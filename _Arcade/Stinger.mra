@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BAZSET CORE — CORE BY bazset -->
+<!-- RBF FILE: bazset_Stinger.rbf -->
+<!-- REQUIRED ROM ZIP FILE(S): stinger.zip -->
+<!-- B01 Patreon preview: owner-tested predecessor works; silent-pause rebuild pending its own MiSTer test. ROM bytes not included. -->
+<misterromdescription>
+<name>Stinger</name><setname>stinger</setname><mameversion>0289</mameversion>
+<year>1983</year><manufacturer>Seibu Denshi</manufacturer><category>Arcade</category>
+<players>2</players><rotation>horizontal</rotation><rbf>bazset_Stinger</rbf>
+<joystick>8</joystick>
+<buttons names="Fire 1,Fire 2,Coin,Start 1P,Start 2P,Pause" default="A,B,Select,Start,R,L" count="2"/>
+<switches page_id="1" page_name="DIP Switches" base="16" default="ef,ae">
+ <dip name="Coin A" bits="0,1,2" ids="3C 2C,4C 1C,3C 1C,2C 3C,2C 1C,1C 3C,1C 2C,1C 1C"/>
+ <dip name="Lives" bits="3,4" ids="2,3,4,5"/>
+ <dip name="Bonus Life" bits="5,6,7" ids="None,30000 90000,30000 80000,20000 90000,20000 80000,20000 70000,20000 60000,20000 50000"/>
+ <dip name="Debug Mode" bits="8" ids="Off,On"/>
+ <dip name="Coin B" bits="9,10,11" ids="5C 1C,2C 3C,3C 2C,1C 2C,4C 1C,2C 1C,3C 1C,1C 1C"/>
+ <dip name="Bongo Time" bits="12,13" ids="Shortest,Short,Medium,Long"/>
+ <dip name="Difficulty" bits="14" ids="Normal,Hard"/>
+ <dip name="Cabinet" bits="15" ids="Cocktail,Upright"/>
+</switches>
+<rom index="0" zip="stinger.zip">
+ <part name="1-5j.bin" crc="1a2ca600"/>
+ <part name="2-6j.bin" crc="957cd39c"/>
+ <part name="3-8j.bin" crc="404c932e"/>
+ <part name="4-9j.bin" crc="2d570f91"/>
+ <part name="5-10j.bin" crc="c841795c"/>
+ <part name="6-9f.bin" crc="79757f0c"/>
+ <part name="7-9e.bin" crc="775489be"/>
+ <part name="8-11e.bin" crc="43c61b3f"/>
+ <part name="9-14e.bin" crc="c9ed8fc7"/>
+ <part name="10-9h.bin" crc="6fc3a22d"/>
+ <part name="11-11h.bin" crc="3df1f57e"/>
+ <part name="12-14h.bin" crc="2fbe1391"/>
+ <part name="stinger.a7" crc="52c06fc2"/>
+ <part name="stinger.b7" crc="9985e575"/>
+ <part name="stinger.a8" crc="76b57629"/>
+</rom>
+<rom index="3" md5="none">
+ <part>
+ 02 00 00 00 00 FF 00 02 00 02 00 01 00 FF 02 00
+ 00 00 C0 31 00 1E 00 00
+ 00 00 C0 79 00 06 00 00
+ 00 00 C2 00 00 13 1D 23
+ </part>
+</rom>
+<nvram index="4" size="55"/>
+</misterromdescription>

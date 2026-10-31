@@ -51,6 +51,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Bucky O'Hare](https://github.com/meathax/Bucky)                                                                                 |
 | [Capcom ZN-1](https://github.com/XelaNotPu/ZN1-Capcom_MiSTer)                                                                    |
 | [Capcom ZN-2](https://github.com/XelaNotPu/ZN2-Capcom_MiSTer)                                                                    |
+| [Century Video System](https://www.patreon.com/bazset/posts/century-video-16-173892812)                                          |
 | [Chack'n Pop](https://www.patreon.com/bazset/posts/chackn-pop-taito-173498656)                                                   |
 | [Chase H.Q.](https://www.patreon.com/bazset/posts/chase-h-q-taito-171600711)                                                     |
 | [Continental Circus](https://www.patreon.com/bazset/posts/continental-1897-171742379)                                            |
@@ -81,7 +82,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Hard Drivin'](https://github.com/retrogarage/harddrivin-mister)                                                                 |
 | [HCRF Test Core](https://discord.com/channels/637336939212701757/1043059930543951932/1212906158608748624)                        |
 | [Heavy Unit](https://www.patreon.com/Meathax/posts/heavy-unit-172408285)                                                         |
-| [Hunchback](https://github.com/Usquebagh/Arcade-Hunchback_MiSTer)                                                                |
 | [Hyperstone E1 (Eolith)](https://github.com/ppriest/Arcade-Eolith_MiSTer)                                                        |
 | [Hyperstone E1 (Vamphalf)](https://github.com/ppriest/Arcade-Vamphalf_MiSTer)                                                    |
 | [I, Robot](https://www.patreon.com/Meathax/posts/battletoads-and-172862509)                                                      |
@@ -166,6 +166,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                           |
 | [Sauro](https://www.patreon.com/bazset/posts/sauro-tecfri-173408965)                                                             |
 | [SBC7](https://forge.djehuti.com/bcox/sbc7)                                                                                      |
+| [Scion](https://www.patreon.com/bazset/posts/scion-seibu-1984-173893879)                                                         |
 | [SEGA Channel Revival](https://archive.org/details/sega-channel-revival-complete-collection)                                     |
 | [SEGA Dreamcast (VMU)](https://discord.com/channels/647909397477195803/737506076806611064/1559397868714991626)                   |
 | [SEGA Genesis](https://github.com/MiSTer-devel/Genesis_MiSTer)                                                                   |
@@ -191,6 +192,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Soyuz-Neon PC-11/16 (Uneon)](https://github.com/xolod79/UNEON)                                                                  |
 | [SparcStation 5](https://github.com/Grabulosaure/ss)                                                                             |
 | [Special Criminal Investigation](https://www.patreon.com/bazset/posts/s-c-i-taito-1989-171266717)                                |
+| [Stinger](https://www.patreon.com/bazset/posts/stinger-seibu-173854537)                                                          |
 | [Stone Ball](https://www.patreon.com/Meathax/posts/stone-ball-chase-171312474)                                                   |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                          |
 | [Super Dodge Ball](https://github.com/kyledlester/Super_Dodge_Ball_MiSTer)                                                       |

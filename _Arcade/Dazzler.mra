@@ -1,0 +1,51 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): dazzler.zip -->
+<misterromdescription>
+    <name>Dazzler</name>
+    <year>1982</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Arcade</category>
+    <setname>dazzler</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>8-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,-" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="dazzler.zip" md5="none">
+        <part name="dz-gp1.bin" crc="2c5d75de" offset="0x0000" length="0x0400"/>
+        <part name="dz-gp2.bin" crc="d0db80d6" offset="0x0000" length="0x0400"/>
+        <part name="dz-gp3.bin" crc="d5f07796" offset="0x0000" length="0x0400"/>
+        <part name="dz-gp4.bin" crc="84e41a46" offset="0x0000" length="0x0400"/>
+        <part name="dz-gp5.bin" crc="2ae59c41" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dz-gp1.bin" crc="2c5d75de" offset="0x0400" length="0x0400"/>
+        <part name="dz-gp2.bin" crc="d0db80d6" offset="0x0400" length="0x0400"/>
+        <part name="dz-gp3.bin" crc="d5f07796" offset="0x0400" length="0x0400"/>
+        <part name="dz-gp4.bin" crc="84e41a46" offset="0x0400" length="0x0400"/>
+        <part name="dz-gp5.bin" crc="2ae59c41" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dz-gp1.bin" crc="2c5d75de" offset="0x0800" length="0x0400"/>
+        <part name="dz-gp2.bin" crc="d0db80d6" offset="0x0800" length="0x0400"/>
+        <part name="dz-gp3.bin" crc="d5f07796" offset="0x0800" length="0x0400"/>
+        <part name="dz-gp4.bin" crc="84e41a46" offset="0x0800" length="0x0400"/>
+        <part name="dz-gp5.bin" crc="2ae59c41" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dz-gp1.bin" crc="2c5d75de" offset="0x0c00" length="0x0400"/>
+        <part name="dz-gp2.bin" crc="d0db80d6" offset="0x0c00" length="0x0400"/>
+        <part name="dz-gp3.bin" crc="d5f07796" offset="0x0c00" length="0x0400"/>
+        <part name="dz-gp4.bin" crc="84e41a46" offset="0x0c00" length="0x0400"/>
+        <part name="dz-gp5.bin" crc="2ae59c41" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dz-sdp1.bin" crc="89847352"/>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="dz-sp1.bin" crc="25da1fc1"/>
+        <part repeat="0x0800">00</part>
+        <part name="dz-cp1.bin" crc="0a8a9034"/>
+        <part name="dz-cp2.bin" crc="3868dd82"/>
+        <part name="dz-cp3.bin" crc="755d9ed2"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>05</part>
+    </rom>
+</misterromdescription>

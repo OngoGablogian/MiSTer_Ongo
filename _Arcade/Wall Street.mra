@@ -1,0 +1,51 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): wallst.zip -->
+<misterromdescription>
+    <name>Wall Street</name>
+    <year>1982</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Arcade</category>
+    <setname>wallst</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>8-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,-" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="wallst.zip" md5="none">
+        <part name="ws-gp1.bin" crc="bdac81b6" offset="0x0000" length="0x0400"/>
+        <part name="ws-gp2.bin" crc="9ca67cdd" offset="0x0000" length="0x0400"/>
+        <part name="ws-gp3.bin" crc="c2f407f2" offset="0x0000" length="0x0400"/>
+        <part name="ws-gp4.bin" crc="1e4b2fe1" offset="0x0000" length="0x0400"/>
+        <part name="ws-gp5.bin" crc="eec7bfd0" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="ws-gp1.bin" crc="bdac81b6" offset="0x0400" length="0x0400"/>
+        <part name="ws-gp2.bin" crc="9ca67cdd" offset="0x0400" length="0x0400"/>
+        <part name="ws-gp3.bin" crc="c2f407f2" offset="0x0400" length="0x0400"/>
+        <part name="ws-gp4.bin" crc="1e4b2fe1" offset="0x0400" length="0x0400"/>
+        <part name="ws-gp5.bin" crc="eec7bfd0" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="ws-gp1.bin" crc="bdac81b6" offset="0x0800" length="0x0400"/>
+        <part name="ws-gp2.bin" crc="9ca67cdd" offset="0x0800" length="0x0400"/>
+        <part name="ws-gp3.bin" crc="c2f407f2" offset="0x0800" length="0x0400"/>
+        <part name="ws-gp4.bin" crc="1e4b2fe1" offset="0x0800" length="0x0400"/>
+        <part name="ws-gp5.bin" crc="eec7bfd0" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="ws-gp1.bin" crc="bdac81b6" offset="0x0c00" length="0x0400"/>
+        <part name="ws-gp2.bin" crc="9ca67cdd" offset="0x0c00" length="0x0400"/>
+        <part name="ws-gp3.bin" crc="c2f407f2" offset="0x0c00" length="0x0400"/>
+        <part name="ws-gp4.bin" crc="1e4b2fe1" offset="0x0c00" length="0x0400"/>
+        <part name="ws-gp5.bin" crc="eec7bfd0" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="ws-sdp1.bin" crc="faed2ac0"/>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="ws-sp1.bin" crc="84b72637"/>
+        <part repeat="0x0800">00</part>
+        <part name="ws-cp1.bin" crc="5aca11df"/>
+        <part name="ws-cp2.bin" crc="ca530d85"/>
+        <part name="ws-cp3.bin" crc="1e0225d6"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>0A</part>
+    </rom>
+</misterromdescription>

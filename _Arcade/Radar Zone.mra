@@ -1,0 +1,52 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): radarzon.zip -->
+<misterromdescription>
+    <name>Radar Zone</name>
+    <year>1982</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Arcade</category>
+    <setname>radarzon</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>8-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,-" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="radarzon.zip" md5="none">
+        <part name="rd-gp1.bin" crc="775786ba" offset="0x0000" length="0x0400"/>
+        <part name="rd-gp2.bin" crc="9f6be426" offset="0x0000" length="0x0400"/>
+        <part name="rd-gp3.bin" crc="61d11b29" offset="0x0000" length="0x0400"/>
+        <part name="rd-gp4.bin" crc="2fbc778c" offset="0x0000" length="0x0400"/>
+        <part name="rd-gp5.bin" crc="692a99d5" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="rd-gp1.bin" crc="775786ba" offset="0x0400" length="0x0400"/>
+        <part name="rd-gp2.bin" crc="9f6be426" offset="0x0400" length="0x0400"/>
+        <part name="rd-gp3.bin" crc="61d11b29" offset="0x0400" length="0x0400"/>
+        <part name="rd-gp4.bin" crc="2fbc778c" offset="0x0400" length="0x0400"/>
+        <part name="rd-gp5.bin" crc="692a99d5" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="rd-gp1.bin" crc="775786ba" offset="0x0800" length="0x0400"/>
+        <part name="rd-gp2.bin" crc="9f6be426" offset="0x0800" length="0x0400"/>
+        <part name="rd-gp3.bin" crc="61d11b29" offset="0x0800" length="0x0400"/>
+        <part name="rd-gp4.bin" crc="2fbc778c" offset="0x0800" length="0x0400"/>
+        <part name="rd-gp5.bin" crc="692a99d5" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="rd-gp1.bin" crc="775786ba" offset="0x0c00" length="0x0400"/>
+        <part name="rd-gp2.bin" crc="9f6be426" offset="0x0c00" length="0x0400"/>
+        <part name="rd-gp3.bin" crc="61d11b29" offset="0x0c00" length="0x0400"/>
+        <part name="rd-gp4.bin" crc="2fbc778c" offset="0x0c00" length="0x0400"/>
+        <part name="rd-gp5.bin" crc="692a99d5" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="rd-sdp1.bin" crc="cd5aea6d"/>
+        <part repeat="0x0800">FF</part>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="rd-sp1.bin" crc="43b17734"/>
+        <part repeat="0x0800">00</part>
+        <part name="rd-cp1.bin" crc="ed601677"/>
+        <part name="rd-cp2.bin" crc="35e317ff"/>
+        <part name="rd-cp3.bin" crc="90f2c43f"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>09</part>
+    </rom>
+</misterromdescription>

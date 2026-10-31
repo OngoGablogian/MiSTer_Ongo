@@ -1,0 +1,51 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): logger.zip -->
+<misterromdescription>
+    <name>Logger (Rev.3)</name>
+    <year>1982</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Arcade</category>
+    <setname>logger</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>8-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,-" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="logger.zip" md5="none">
+        <part name="1clog3.gp1" crc="0022b9ed" offset="0x0000" length="0x0400"/>
+        <part name="2clog3.gp2" crc="23c5c8dc" offset="0x0000" length="0x0400"/>
+        <part name="3clog3.gp3" crc="f9288f74" offset="0x0000" length="0x0400"/>
+        <part name="4clog3.gp4" crc="e52ef7bf" offset="0x0000" length="0x0400"/>
+        <part name="5clog3.gp5" crc="4ee04359" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="1clog3.gp1" crc="0022b9ed" offset="0x0400" length="0x0400"/>
+        <part name="2clog3.gp2" crc="23c5c8dc" offset="0x0400" length="0x0400"/>
+        <part name="3clog3.gp3" crc="f9288f74" offset="0x0400" length="0x0400"/>
+        <part name="4clog3.gp4" crc="e52ef7bf" offset="0x0400" length="0x0400"/>
+        <part name="5clog3.gp5" crc="4ee04359" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="1clog3.gp1" crc="0022b9ed" offset="0x0800" length="0x0400"/>
+        <part name="2clog3.gp2" crc="23c5c8dc" offset="0x0800" length="0x0400"/>
+        <part name="3clog3.gp3" crc="f9288f74" offset="0x0800" length="0x0400"/>
+        <part name="4clog3.gp4" crc="e52ef7bf" offset="0x0800" length="0x0400"/>
+        <part name="5clog3.gp5" crc="4ee04359" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="1clog3.gp1" crc="0022b9ed" offset="0x0c00" length="0x0400"/>
+        <part name="2clog3.gp2" crc="23c5c8dc" offset="0x0c00" length="0x0400"/>
+        <part name="3clog3.gp3" crc="f9288f74" offset="0x0c00" length="0x0400"/>
+        <part name="4clog3.gp4" crc="e52ef7bf" offset="0x0c00" length="0x0400"/>
+        <part name="5clog3.gp5" crc="4ee04359" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="6clog3.sdp1" crc="5af8da17"/>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="8clog3.sp1" crc="74f67815"/>
+        <part repeat="0x0800">00</part>
+        <part name="11clog3.cp1" crc="e4ede80e"/>
+        <part name="10clog3.cp2" crc="d3de8e5b"/>
+        <part name="9clog3.cp3" crc="9b8d1031"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>06</part>
+    </rom>
+</misterromdescription>

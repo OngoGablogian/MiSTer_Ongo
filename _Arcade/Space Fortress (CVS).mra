@@ -1,0 +1,51 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): spacefrt.zip -->
+<misterromdescription>
+    <name>Space Fortress (CVS)</name>
+    <year>1981</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Arcade</category>
+    <setname>spacefrt</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>2-way</joystick>
+    <num_buttons>2</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,Button 2" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="spacefrt.zip" md5="none">
+        <part name="sf-gp1.bin" crc="1158fc3a" offset="0x0000" length="0x0400"/>
+        <part name="sf-gp2.bin" crc="8b4e1582" offset="0x0000" length="0x0400"/>
+        <part name="sf-gp3.bin" crc="48f05102" offset="0x0000" length="0x0400"/>
+        <part name="sf-gp4.bin" crc="c5b14631" offset="0x0000" length="0x0400"/>
+        <part name="sf-gp5.bin" crc="d7eca1b6" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="sf-gp1.bin" crc="1158fc3a" offset="0x0400" length="0x0400"/>
+        <part name="sf-gp2.bin" crc="8b4e1582" offset="0x0400" length="0x0400"/>
+        <part name="sf-gp3.bin" crc="48f05102" offset="0x0400" length="0x0400"/>
+        <part name="sf-gp4.bin" crc="c5b14631" offset="0x0400" length="0x0400"/>
+        <part name="sf-gp5.bin" crc="d7eca1b6" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="sf-gp1.bin" crc="1158fc3a" offset="0x0800" length="0x0400"/>
+        <part name="sf-gp2.bin" crc="8b4e1582" offset="0x0800" length="0x0400"/>
+        <part name="sf-gp3.bin" crc="48f05102" offset="0x0800" length="0x0400"/>
+        <part name="sf-gp4.bin" crc="c5b14631" offset="0x0800" length="0x0400"/>
+        <part name="sf-gp5.bin" crc="d7eca1b6" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="sf-gp1.bin" crc="1158fc3a" offset="0x0c00" length="0x0400"/>
+        <part name="sf-gp2.bin" crc="8b4e1582" offset="0x0c00" length="0x0400"/>
+        <part name="sf-gp3.bin" crc="48f05102" offset="0x0c00" length="0x0400"/>
+        <part name="sf-gp4.bin" crc="c5b14631" offset="0x0c00" length="0x0400"/>
+        <part name="sf-gp5.bin" crc="d7eca1b6" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="sf-sdp1.bin" crc="339a327f"/>
+        <part repeat="0x0800">FF</part>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="sf-sp1.bin" crc="c5628d30"/>
+        <part name="sf-cp1.bin" crc="da194a68"/>
+        <part name="sf-cp2.bin" crc="b96977c7"/>
+        <part name="sf-cp3.bin" crc="f5d67b9a"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>0F</part>
+    </rom>
+</misterromdescription>

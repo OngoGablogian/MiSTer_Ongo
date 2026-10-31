@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BAZSET CORE â€” CORE BY bazset -->
+<!-- RBF FILE: bazset_Scion.rbf -->
+<!-- REQUIRED ROM ZIP FILE(S): scion.zip -->
+<!-- B01 PREBUILD SOURCE ONLY â€” no compiled or tested Scion RBF yet. ROM-free. -->
+<misterromdescription>
+  <!-- Scion MRA14 V4 authoring for future MRA-driven pause/OSD.
+       BZM1 receiver/consumer and real RBF/hardware test are not complete. -->
+  <bazset_runtime version="1">
+    <pause>
+      <title>Scion</title>
+      <build>B02 AUDIO PREBUILD - NOT RELEASED</build>
+      <core_by>bazset</core_by>
+      <patreon>patreon.com/c/bazset</patreon>
+      <x>x.com/bazset_</x>
+      <beta_testers>No verified beta testers yet</beta_testers>
+      <patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters>
+      <special_thanks>MAME hardware researchers</special_thanks>
+      <bug_prompt>FOUND A BUG? REPORT IT ON MY PATREON</bug_prompt>
+    </pause>
+    <osd>
+      <visibility>Video Settings,Game Settings,DIP Switches,Credits,Reset</visibility>
+      <defaults>Aspect=Original;Rotation=Normal;CRT Adjust=Off;CRT H-Position=0;CRT V-Shift=0;CRT H-Size=0;CRT V-Size=0;Background Hiss=Reduced</defaults>
+    </osd>
+    <pause_style>
+      <colors background="#080B18" card="#101522" border="#D9A441"
+          text="#F0E9D7" dim="#71798A" accent="#5DE4FF"/>
+      <layout preset="compact"/>
+      <marquee frames="12"/>
+    </pause_style>
+  </bazset_runtime>
+
+<name>Scion</name><setname>scion</setname><mameversion>0289</mameversion>
+<!-- MAME official ROT0. CW and CCW are optional core Video Settings; default Normal. -->
+<region>Region unspecified (MAME parent)</region>
+<year>1984</year><manufacturer>Seibu Denshi</manufacturer><category>Arcade</category>
+<players>2</players><rbf>bazset_Scion</rbf><joystick>8</joystick>
+<buttons names="Shoot,Bomb,Coin,Start 1P,Start 2P" default="A,B,Select,Start,R" count="2"/>
+<switches page_id="1" page_name="DIP Switches" base="16" default="05,00">
+<dip name="Cabinet" bits="0" ids="Cocktail,Upright"/>
+<dip name="Difficulty" bits="1" ids="Easy,Hard"/>
+<dip name="Lives" bits="2,3" ids="2,3,4,5"/>
+<dip name="Bonus Life" bits="4,5" ids="20K 40K,20K 80K,20K 60K,30K 90K"/>
+<dip name="Coin A" bits="8,9,10" ids="1C 1C,2C 1C,1C 3C,4C 1C,1C 2C,3C 1C,1C 5C,5C 1C"/>
+<dip name="Coin B" bits="11,12" ids="1C 1C,2C 1C,1C 2C,3C 1C"/>
+</switches>
+<rom index="0" zip="scion.zip">
+<part name="sc1" crc="8dcad575"/>
+<part name="sc2" crc="f608e0ba"/>
+<part name="sc3" crc="915289b9"/>
+<part name="4.9j" crc="0f40d002"/>
+<part name="5.10j" crc="dc4923b7"/>
+<part name="sc6" crc="09f5f9c1"/>
+<part name="7.10e" crc="223e0d2a"/>
+<part name="8.12e" crc="d3e39b48"/>
+<part name="9.15e" crc="630861b5"/>
+<part name="10.10h" crc="0d2a0d1e"/>
+<part name="11.12h" crc="dc6ef8ab"/>
+<part name="12.15h" crc="c82c28bf"/>
+<part name="82s129.7a" crc="2f89d9ea"/>
+<part name="82s129.7b" crc="ba151e6a"/>
+<part name="82s129.8a" crc="f681ce59"/>
+</rom>
+  <!-- Non-colliding MRA14 V4 configuration index249 follows original ROM0. -->
+  <rom index="249"><part>425A4D31500300000282A44F7B226F7364223A7B2264656661756C7473223A224173706563743D4F726967696E616C3B526F746174696F6E3D4E6F726D616C3B4352542041646A7573743D4F66663B43525420482D506F736974696F6E3D303B43525420562D53686966743D303B43525420482D53697A653D303B43525420562D53697A653D303B4261636B67726F756E6420486973733D52656475636564222C227669736962696C697479223A22566964656F2053657474696E67732C47616D652053657474696E67732C4449502053776974636865732C437265646974732C5265736574227D2C227061757365223A7B22626574615F74657374657273223A224E6F2076657269666965642062657461207465737465727320796574222C226275675F70726F6D7074223A22464F554E442041204255473F205245504F5254204954204F4E204D592050415452454F4E222C226275696C64223A22423031205052454255494C4420454E47494E454552494E47202D204E4F542052454C4541534544222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224D414D45206861726477617265207265736561726368657273222C227469746C65223A225363696F6E222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223354445344646222C226261636B67726F756E64223A2223303830423138222C22626F72646572223A2223443941343431222C2263617264223A2223313031353232222C2264696D223A2223373137393841222C2274657874223A2223463045394437227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A31327D2C2276657273696F6E223A317D</part></rom>
+</misterromdescription>

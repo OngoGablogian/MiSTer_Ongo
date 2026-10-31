@@ -1,0 +1,51 @@
+<!-- BAZSET CORE | CORE BY bazset | BRINGUP DESCRIPTOR ONLY | RBF FILE: BAZSET_CVS.rbf | REQUIRED ROM ZIP FILE(S): darkwar.zip -->
+<misterromdescription>
+    <name>Dark Warrior</name>
+    <year>1981</year>
+    <manufacturer>Century Electronics</manufacturer>
+    <category>Arcade</category>
+    <setname>darkwar</setname>
+    <rbf>bazset_CVS</rbf>
+    <rotation>vertical</rotation>
+    <players>2 (alternating)</players>
+    <joystick>2-way</joystick>
+    <num_buttons>1</num_buttons>
+    <about author="BAZSET; source: Usquebagh">Engineering descriptor only; no verified 16-game RBF. Based on Usquebagh's BSD-3-Clause Hunchback MiSTer core.</about>
+    <buttons names="Button 1,Start 2,Start 1,Coin,-" default="A,X,Start,Select,B"/>
+    <rom index="0" zip="darkwar.zip" md5="none">
+        <part name="dw-gp1.bin" crc="f10ccf24" offset="0x0000" length="0x0400"/>
+        <part name="dw-gp2.bin" crc="b77d0483" offset="0x0000" length="0x0400"/>
+        <part name="dw-gp3.bin" crc="c01c3281" offset="0x0000" length="0x0400"/>
+        <part name="dw-gp4.bin" crc="0b0bffaf" offset="0x0000" length="0x0400"/>
+        <part name="dw-gp5.bin" crc="7fdbcaff" offset="0x0000" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dw-gp1.bin" crc="f10ccf24" offset="0x0400" length="0x0400"/>
+        <part name="dw-gp2.bin" crc="b77d0483" offset="0x0400" length="0x0400"/>
+        <part name="dw-gp3.bin" crc="c01c3281" offset="0x0400" length="0x0400"/>
+        <part name="dw-gp4.bin" crc="0b0bffaf" offset="0x0400" length="0x0400"/>
+        <part name="dw-gp5.bin" crc="7fdbcaff" offset="0x0400" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dw-gp1.bin" crc="f10ccf24" offset="0x0800" length="0x0400"/>
+        <part name="dw-gp2.bin" crc="b77d0483" offset="0x0800" length="0x0400"/>
+        <part name="dw-gp3.bin" crc="c01c3281" offset="0x0800" length="0x0400"/>
+        <part name="dw-gp4.bin" crc="0b0bffaf" offset="0x0800" length="0x0400"/>
+        <part name="dw-gp5.bin" crc="7fdbcaff" offset="0x0800" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dw-gp1.bin" crc="f10ccf24" offset="0x0c00" length="0x0400"/>
+        <part name="dw-gp2.bin" crc="b77d0483" offset="0x0c00" length="0x0400"/>
+        <part name="dw-gp3.bin" crc="c01c3281" offset="0x0c00" length="0x0400"/>
+        <part name="dw-gp4.bin" crc="0b0bffaf" offset="0x0c00" length="0x0400"/>
+        <part name="dw-gp5.bin" crc="7fdbcaff" offset="0x0c00" length="0x0400"/>
+        <part repeat="0x0c00">FF</part>
+        <part name="dw-sdp1.bin" crc="b385b669"/>
+        <part repeat="0x0800">FF</part>
+        <part name="5b.bin" crc="f055a624"/>
+        <part name="dw-sp1.bin" crc="ce815074"/>
+        <part name="dw-cp1.bin" crc="7a0f9f3e"/>
+        <part name="dw-cp2.bin" crc="232e5120"/>
+        <part name="dw-cp3.bin" crc="573e0a17"/>
+        <part name="82s185.10h" crc="c205bca6"/>
+        <part name="82s123.10k" crc="b5221cec"/>
+        <part>0E</part>
+    </rom>
+</misterromdescription>
