@@ -161,6 +161,20 @@
         <part name="mpr-16487.33" crc="31b28dfa"/>
         <part name="mpr-16484.4" crc="9d4c334d"/>
         <part name="mpr-16485.5" crc="95aadcad"/>
+        <!--
+             STAR WARS' DIGITAL SOUND BOARD, 2026-10-28: the music. Appended to
+             the same stream, which the loader maps linearly on past PCM2 into
+             free SDRAM (nothing else moves):
+
+               0x880000  DSB Z80 program, epr-16471.2   128 KB
+               0x8A0000  DSB MPEG data, mpr-16514 + 16515  4 MB
+               0xCA0000  end
+
+             Plain bytes, as MAME loads them (ROM_LOAD, no swap).
+        -->
+        <part name="epr-16471.2" crc="f4ee84a4"/>
+        <part name="mpr-16514.57" crc="3175b0be"/>
+        <part name="mpr-16515.58" crc="3114d748"/>
     </rom>
 
     <nvram index="255" size="256"/>
