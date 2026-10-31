@@ -1,6 +1,6 @@
 <misterromdescription>
   <name>Killer Instinct (proto v4.7)</name>
-  <mratimestamp>20261007</mratimestamp>
+  <mratimestamp>20261027</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>kinst</setname>
   <year>1994</year>
@@ -23,11 +23,6 @@
     <dip bits="15" name="Test Switch" ids="On,Off"/>
   </switches>
 
-  <remark>
-    Killer Instinct prototype ROM v4.7. Convert kinst.chd to a raw .img with
-    chdman.
-  </remark>
-
   <!-- Game selector: 00 = Killer Instinct -->
   <rom index="0">
     <part>00</part>
@@ -45,4 +40,10 @@
     <part name="u35-l1"      crc="0aaef4fc"/>
     <part name="u36-l1"      crc="0577bb60"/>
   </rom>
+  
+  <remark>
+    Convert kinst.chd to a raw .img with chdman.
+  </remark>
+  
+  <file type="s" index="0" path="kinst.img" delay="0"/>
 </misterromdescription>

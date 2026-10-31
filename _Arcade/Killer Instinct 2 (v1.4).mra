@@ -1,6 +1,6 @@
 <misterromdescription>
   <name>Killer Instinct 2 (v1.4)</name>
-  <mratimestamp>20261007</mratimestamp>
+  <mratimestamp>20261027</mratimestamp>
   <mameversion>0287</mameversion>
   <setname>kinst2</setname>
   <year>1996</year>
@@ -22,11 +22,6 @@
     <dip bits="15" name="Test Switch" ids="On,Off"/>
   </switches>
 
-  <remark>
-    Killer Instinct 2 dedicated-board ROM v1.4. Convert kinst2.chd to a raw
-    .img with chdman.
-  </remark>
-
   <!-- Game selector: 01 = Killer Instinct 2 -->
   <rom index="0">
     <part>01</part>
@@ -44,4 +39,10 @@
     <part name="ki2_l1.u35" crc="7245ce69"/>
     <part name="ki2_l1.u36" crc="8920acbb"/>
   </rom>
+  
+  <remark>
+    Convert kinst2.chd to a raw .img with chdman.
+  </remark>
+  
+  <file type="s" index="0" path="kinst2.img" delay="0"/>
 </misterromdescription>
