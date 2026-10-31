@@ -216,7 +216,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Turtle Ship](https://www.patreon.com/bazset/posts/turtle-ship-1988-172701403)                                                   |
 | [Unico SR2001A (The Legend of Silkroad)](https://github.com/ppriest/Arcade-Silkroad_MiSTer)                                      |
 | [Video System Co.](https://discord.com/channels/647909397477195803/737506076806611064/1549795076627112146)                       |
-| [VideoBrain Family Computer](https://github.com/meauxdal/VideoBrain_MiSTer)                                                      |
 | [Violent Storm](https://www.patreon.com/Meathax/posts/violent-storm-171663267)                                                   |
 | [VTech Laser 350/500/700](https://github.com/JasonA-dev/Laser500_MiSTer)                                                         |
 | [Wiz](https://www.patreon.com/bazset/posts/wiz-seibu-1985-173616848)                                                             |
