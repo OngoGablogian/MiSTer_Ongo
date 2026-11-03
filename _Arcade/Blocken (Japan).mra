@@ -1,0 +1,55 @@
+<!--
+  Blocken (Japan) - MRA for the SunsoftGA9201 MiSTer core.
+  MAME set blocken (MAME 0.289 sunelectronics/shangha3.cpp). No ROM data is embedded in this file.
+  Put blocken.zip in games/mame/.
+-->
+<misterromdescription>
+    <name>Blocken (Japan)</name>
+    <setname>blocken</setname>
+    <year>1994</year>
+    <manufacturer>Visco / KID</manufacturer>
+    <category>Puzzle</category>
+    <rbf>SunsoftGA9201</rbf>
+    <mameversion>0289</mameversion>
+    <players>2</players>
+    <rotation>horizontal</rotation>
+
+    <joystick>8-way</joystick>
+    <num_buttons>3</num_buttons>
+    <buttons default="A,B,X,Start,Select,R" names="Button 1,Button 2,Button 3,Start,Coin,Service"></buttons>
+
+    <!-- 16-bit DSW read by the 68000 at 100004: SW1 = bits 0-7, SW2 = bits 8-15. MAME default FFBF. -->
+    <switches default="BF FF">
+        <dip bits="0" ids="On,Off" name="Service Mode"></dip>
+        <dip bits="1,2" ids="Very Hard,Hard,Easy,Normal" name="Difficulty"></dip>
+        <dip bits="3" ids="B,A" name="Game Type"></dip>
+        <dip bits="4,5" ids="4,3,2,1" name="Players"></dip>
+        <dip bits="6" ids="On,Off" name="Demo Sounds"></dip>
+        <dip bits="7" ids="On,Off" name="Flip Screen"></dip>
+        <dip bits="8,11" ids="Free Play,4C/3C,4C/1C,3C/4C,3C/2C,3C/1C,2C/5C,2C/3C,2C/1C,1C/7C,1C/6C,1C/5C,1C/4C,1C/3C,1C/2C,1C/1C" name="Coin A"></dip>
+        <dip bits="12,15" ids="5C/3C,4C/3C,4C/1C,3C/4C,3C/2C,3C/1C,2C/5C,2C/3C,2C/1C,1C/7C,1C/6C,1C/5C,1C/4C,1C/3C,1C/2C,1C/1C" name="Coin B"></dip>
+    </switches>
+
+    <!-- Uniform GA9201 download stream (see the heberpop draft). Blocken's ROMs
+         are smaller; the padding reproduces MAME's ROMREGION_ERASEFF fill:
+         program 000000-0FFFFF reads FF beyond the 2 x 128 KB EPROMs (the attract
+         mode depends on FF there), graphics 100000-1FFFFF and 280000-37FFFF are empty. -->
+    <!-- Game select for the GA9201 core: 0 = Shanghai III, 1 = Hebereke no Popoon, 2 = Blocken -->
+    <rom index="1">
+        <part>02</part>
+    </rom>
+
+    <rom index="0" zip="blocken.zip" md5="None">
+        <part name="ic31j.ic31" crc="ec8de2a3"/>
+        <part repeat="0x60000">FF</part>
+        <part name="ic32j.ic32" crc="79b96240"/>
+        <part repeat="0x60000">FF</part>
+        <part name="ic34.ic34" crc="23e446ff"/>
+        <part name="ic98j.ic98" crc="35dda273"/>
+        <part name="ic99j.ic99" crc="ce43762b"/>
+        <part repeat="0x100000">FF</part>
+        <part name="ic100j.ic100" crc="a34786fd"/>
+        <part repeat="0x100000">FF</part>
+        <part name="ic53.ic53" crc="86108c56"/>
+    </rom>
+</misterromdescription>

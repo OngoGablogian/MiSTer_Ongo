@@ -1,5 +1,5 @@
 <!--
-  Shanghai III (Japan) - Sunsoft 1993 - MRA for the Shanghai3 MiSTer core.
+  Shanghai III (Japan) - Sunsoft 1993 - MRA for the SunsoftGA9201 MiSTer core (formerly Shanghai3).
   MAME set shangha3j (MAME 0.289 sunelectronics/shangha3.cpp). No ROM data is embedded in this file.
   Put shangha3j.zip in games/mame/; with a split set, also its parent shangha3.zip
   (the graphics and sample ROMs are in the parent). A merged shangha3.zip alone also works.
@@ -11,14 +11,14 @@
     <year>1993</year>
     <manufacturer>Sunsoft</manufacturer>
     <category>Puzzle</category>
-    <rbf>Shanghai3</rbf>
+    <rbf>SunsoftGA9201</rbf>
     <mameversion>0289</mameversion>
     <players>2</players>
     <rotation>horizontal</rotation>
 
     <joystick>8-way</joystick>
     <num_buttons>2</num_buttons>
-    <buttons default="A,B,Start,Select,R" names="Button 1,Button 2,Start,Coin,Service"></buttons>
+    <buttons default="A,B,X,Start,Select,R" names="Button 1,Button 2,-,Start,Coin,Service"></buttons>
 
     <!-- DSW1 = bits 0-7, DSW2 = bits 8-15 (values from MAME shangha3.cpp).
          Default FF BF = every switch OFF except Demo Sounds On (a stock PCB, all switches off, has it Off). -->
@@ -32,12 +32,26 @@
         <dip bits="15" ids="On,Off" name="Flip Screen"></dip>
     </switches>
 
-    <!-- One byte stream; the core interleaves the two program EPROMs itself.
+    <!-- Game select for the GA9201 core: 0 = Shanghai III, 1 = Hebereke no Popoon, 2 = Blocken -->
+    <rom index="1">
+        <part>00</part>
+    </rom>
+
+    <!-- One byte stream in the core's layout for all three games (smaller ROMs padded with FF):
+         000000 even program EPROM (512 KB)   080000 odd program EPROM (512 KB)
+         100000 Z80 program (64 KB, unused here)   110000 graphics (3.5 MB)
+         490000 OKI samples (512 KB)          total 510000
+         The core interleaves the two program EPROMs itself.
          Looks in shangha3j.zip first, then shangha3.zip (split, non-merged or merged sets). -->
     <rom index="0" zip="shangha3j.zip|shangha3.zip" md5="None">
         <part name="s3j_v11.ic3" crc="e98ce9c8"/>
+        <part repeat="0x40000">FF</part>
         <part name="s3j_v11.ic2" crc="09174620"/>
+        <part repeat="0x40000">FF</part>
+        <part repeat="0x10000">FF</part>
         <part name="s3j_char-a1.ic43" crc="2dbf9d17"/>
+        <part repeat="0x180000">FF</part>
         <part name="s3j_v10.ic75" crc="f0cdc86a"/>
+        <part repeat="0x40000">FF</part>
     </rom>
 </misterromdescription>

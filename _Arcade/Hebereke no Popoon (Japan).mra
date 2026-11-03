@@ -1,0 +1,58 @@
+<!--
+  Hebereke no Popoon (Japan) - MRA for the SunsoftGA9201 MiSTer core.
+  MAME set heberpop (MAME 0.289 sunelectronics/shangha3.cpp). No ROM data is embedded in this file.
+  Put heberpop.zip in games/mame/.
+-->
+<misterromdescription>
+    <name>Hebereke no Popoon (Japan)</name>
+    <setname>heberpop</setname>
+    <year>1994</year>
+    <manufacturer>Sunsoft / Atlus</manufacturer>
+    <category>Puzzle</category>
+    <rbf>SunsoftGA9201</rbf>
+    <mameversion>0289</mameversion>
+    <players>2</players>
+    <rotation>horizontal</rotation>
+
+    <joystick>8-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="A,B,X,Start,Select,R" names="Button 1,Button 2,-,Start,Coin,Service"></buttons>
+
+    <!-- 16-bit DSW read by the 68000 at 200004: SW1 = bits 0-7, SW2 = bits 8-15. MAME default FFFF. -->
+    <switches default="FF FF">
+        <dip bits="0,1" ids="Hard,Easy,Very Easy,Normal" name="Difficulty"></dip>
+        <dip bits="2" ids="On,Off" name="Unknown (SW1:3)"></dip>
+        <dip bits="3" ids="On,Off" name="Unknown (SW1:4)"></dip>
+        <dip bits="4" ids="No,Yes" name="Allow Diagonal Moves"></dip>
+        <dip bits="5" ids="Off,On" name="Demo Sounds"></dip>
+        <dip bits="6" ids="On,Off" name="Unknown (SW1:7)"></dip>
+        <dip bits="7" ids="On,Off" name="Unknown (SW1:8)"></dip>
+        <dip bits="8,10" ids="5C/1C,1C/4C,3C/1C,1C/2C,4C/1C,1C/3C,2C/1C,1C/1C" name="Coin A"></dip>
+        <dip bits="11,13" ids="5C/1C,1C/4C,3C/1C,1C/2C,4C/1C,1C/3C,2C/1C,1C/1C" name="Coin B"></dip>
+        <dip bits="14" ids="On,Off" name="Unknown (SW2:7)"></dip>
+        <dip bits="15" ids="On,Off" name="Unknown (SW2:8)"></dip>
+    </switches>
+
+    <!-- Uniform GA9201 download stream (all games):
+         000000 program high bytes (512 KB)   080000 program low bytes (512 KB)
+         100000 Z80 program (64 KB)           110000 graphics (3.5 MB)
+         490000 OKI samples (512 KB)          total 510000 -->
+    <!-- Game select for the GA9201 core: 0 = Shanghai III, 1 = Hebereke no Popoon, 2 = Blocken -->
+    <rom index="1">
+        <part>01</part>
+    </rom>
+
+    <rom index="0" zip="heberpop.zip" md5="None">
+        <part name="hbp_ic31.ic31" crc="c430d264"/>
+        <part name="hbp_ic32.ic32" crc="bfa555a8"/>
+        <part name="hbp_ic34_v1.0.ic34" crc="0cf056c6"/>
+        <part name="hbp_ic98_v1.0.ic98" crc="a599100a"/>
+        <part name="hbp_ic99_v1.0.ic99" crc="fb8bb12f"/>
+        <part name="hbp_ic100_v1.0.ic100" crc="05a0f765"/>
+        <part name="hbp_ic101_v1.0.ic101" crc="151ba025"/>
+        <part name="hbp_ic102_v1.0.ic102" crc="2b5e341a"/>
+        <part name="hbp_ic103_v1.0.ic103" crc="efa0e745"/>
+        <part name="hbp_ic104_v1.0.ic104" crc="bb896bbb"/>
+        <part name="hbp_ic53_v1.0.ic53" crc="a4483aa0"/>
+    </rom>
+</misterromdescription>

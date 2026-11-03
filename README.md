@@ -181,7 +181,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SemiCom 68020](https://github.com/ppriest/Arcade-DreamWorld_MiSTer)                                                             |
 | [Seta 1st Generation Hardware](https://github.com/ppriest/Arcade-Seta_MiSTer)                                                    |
 | [Seta 1st Generation Hardware (Downtown)](https://github.com/ppriest/Arcade-SetaDowntown_MiSTer)                                 |
-| [Shanghai III](https://github.com/YoAaronD/Shanghai3_MiSTer)                                                                     |
 | [Shogun Warriors](https://www.patreon.com/bazset/posts/shogun-warriors-171613142)                                                |
 | [Snake Game](https://github.com/dimonp/SnakeGame_MiSTer/)                                                                        |
 | [SNK Neo Geo (Turbo)](https://misterfpga.org/viewtopic.php?p=115829#p115829)                                                     |
@@ -195,6 +194,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Stinger](https://www.patreon.com/bazset/posts/stinger-seibu-173854537)                                                          |
 | [Stone Ball](https://www.patreon.com/Meathax/posts/stone-ball-chase-171312474)                                                   |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                          |
+| [Sunsoft GA9201](https://github.com/YoAaronD/SunsoftGA9201_MiSTer)                                                               |
 | [Super Dodge Ball](https://github.com/kyledlester/Super_Dodge_Ball_MiSTer)                                                       |
 | [SWAT Police](https://www.patreon.com/Meathax/posts/swat-police-2001-173604930)                                                  |
 | [Syvalion](https://github.com/diegov-au/Syvalion_MiSTer)                                                                         |
