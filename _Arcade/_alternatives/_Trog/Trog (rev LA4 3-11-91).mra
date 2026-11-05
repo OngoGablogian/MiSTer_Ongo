@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Trog (rev LA4 3/11/91)</name>
-	<mratimestamp>20261012</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>trog4</setname>
 	<year>1990</year>
@@ -61,4 +61,26 @@
 		<part crc="67f1658a" name="trog_ii_u-20_sl_1.u20"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="Invincibility">
+			2833 FE0F 05CA FFFF
+			033B FE0F 00C0 00FF
+			663B FE0F 00C0 00FF
+			4778 FE0F 00C0 00FF
+			9D8E FE0F 00C0 00FF
+			0C97 FE0F 00C0 00FF
+		</cheat>
+		<cheat name="P1 Infinite Lives">
+			5576 1000 0300 FF00
+		</cheat>
+		<cheat name="P2 Infinite Lives">
+			9A76 1000 0300 FF00
+		</cheat>
+		<cheat name="P3 Infinite Lives">
+			DF76 1000 0300 FF00
+		</cheat>
+		<cheat name="P4 Infinite Lives">
+			2477 1000 0300 FF00
+		</cheat>
+	</cheats>
 </misterromdescription>

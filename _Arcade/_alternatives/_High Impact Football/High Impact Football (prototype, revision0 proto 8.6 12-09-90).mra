@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>High Impact Football (prototype, revision0 proto 8.6 12/09/90)</name>
-	<mratimestamp>20261015</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>hiimpactp</setname>
 	<year>1990</year>
@@ -62,4 +62,25 @@
 		<part crc="4e747ab5" name="sl1_high_impact_sound_u20.u20"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="Finish Quarter Now">
+			A752 1080 0000 FF00
+			A852 1080 0000 FF00
+		</cheat>
+		<cheat name="Infinite Quarter Time">
+			A852 1000 3C00 FF00
+		</cheat>
+		<cheat name="P1 Infinite Time">
+			AE52 1000 E703 FFFF
+		</cheat>
+		<cheat name="P2 Infinite Time">
+			AF52 1000 E703 FFFF
+		</cheat>
+		<cheat name="P3 Infinite Time">
+			B052 1000 E703 FFFF
+		</cheat>
+		<cheat name="P4 Infinite Time">
+			B152 1000 E703 FFFF
+		</cheat>
+	</cheats>
 </misterromdescription>

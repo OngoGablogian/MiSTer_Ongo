@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Super High Impact (prototype, proto 6.0 09/23/91)</name>
-	<mratimestamp>20261015</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>shimpactp6</setname>
 	<year>1991</year>
@@ -63,4 +63,25 @@
 		<part crc="1b4a71c1" name="sl1_super_high_impact_u20_sound_rom.u20"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="End Quarter Now">
+			6351 1080 0000 FF00
+			6451 1080 0000 FF00
+		</cheat>
+		<cheat name="Infinite Quarter Time">
+			6451 1000 3B00 FF00
+		</cheat>
+		<cheat name="P1 Infinite Time">
+			6A51 1000 E703 FFFF
+		</cheat>
+		<cheat name="P2 Infinite Time">
+			6B51 1000 E703 FFFF
+		</cheat>
+		<cheat name="P3 Infinite Time">
+			6C51 1000 E703 FFFF
+		</cheat>
+		<cheat name="P4 Infinite Time">
+			6D51 1000 E703 FFFF
+		</cheat>
+	</cheats>
 </misterromdescription>

@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Strike Force (rev 1 02/25/91)</name>
-	<mratimestamp>20261015</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>strkforc</setname>
 	<year>1991</year>
@@ -60,4 +60,18 @@
 		<part crc="1bc9b746" name="sl1_strike_force_sound_rom_u20.u20"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="P1 Infinite Lives">
+			A1C8 1000 0300 FF00
+		</cheat>
+		<cheat name="P1 Infinite Weapons">
+			B6C8 1000 000A 00FF
+		</cheat>
+		<cheat name="P2 Infinite Lives">
+			CFC8 1000 0300 FF00
+		</cheat>
+		<cheat name="P2 Infinite Weapons">
+			E4C8 1000 000A 00FF
+		</cheat>
+	</cheats>
 </misterromdescription>

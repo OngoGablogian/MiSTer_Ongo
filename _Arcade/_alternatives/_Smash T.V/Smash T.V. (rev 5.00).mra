@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Smash T.V. (rev 5.00)</name>
-	<mratimestamp>20261012</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>smashtv5</setname>
 	<year>1990</year>
@@ -61,4 +61,23 @@
 		<part crc="875c66d9" name="sl2_smash_tv_sound_rom_u20.u20"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="Infinite Ammo">
+			9D32 FE0F 0003 FFFF
+			C532 FE0F 0003 FFFF
+			F432 FE0F 0003 FFFF
+			1B33 FE0F 0003 FFFF
+			3433 FE0F 0003 FFFF
+			4933 FE0F 0003 FFFF
+		</cheat>
+		<cheat name="Invincible After Dying">
+			F410 FE0F C009 FFFF
+		</cheat>
+		<cheat name="P1 Infinite Lives">
+			3686 1000 0A00 FF00
+		</cheat>
+		<cheat name="P2 Infinite Lives">
+			5286 1000 0A00 FF00
+		</cheat>
+	</cheats>
 </misterromdescription>

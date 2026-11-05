@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Terminator 2 - Judgment Day (prototype, rev PA2 10/18/91)</name>
-	<mratimestamp>20261022</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>term2pa2</setname>
 	<year>1991</year>
@@ -65,4 +65,45 @@
 		<part crc="956fa80b" name="sl1_terminator_2_u13_sound_rom.u13"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="Equipment Intact to 0 Now">
+			6AA3 1080 0000 FF00
+		</cheat>
+		<cheat name="P1 Infinite 3-Way Missile">
+			43A2 1000 E703 FFFF
+		</cheat>
+		<cheat name="P1 Infinite Energy">
+			40A2 1000 6400 FF00
+		</cheat>
+		<cheat name="P1 Infinite Gun Power">
+			41A2 1000 DC00 FF00
+		</cheat>
+		<cheat name="P1 Infinite Missiles">
+			42A2 1000 E703 FFFF
+		</cheat>
+		<cheat name="P1 No Human Casualties">
+			85A2 1000 0000 00FF
+		</cheat>
+		<cheat name="P1 Plasma Pulse Energizer">
+			82A2 1000 0100 FF00
+		</cheat>
+		<cheat name="P2 Infinite 3-Way Missile">
+			9EA2 1000 E703 FFFF
+		</cheat>
+		<cheat name="P2 Infinite Energy">
+			9BA2 1000 6400 FF00
+		</cheat>
+		<cheat name="P2 Infinite Gun Power">
+			BDA2 1000 DC00 FF00
+		</cheat>
+		<cheat name="P2 Infinite Missiles">
+			9DA2 1000 E703 FFFF
+		</cheat>
+		<cheat name="P2 No Human Casualties">
+			E0A2 1000 0000 00FF
+		</cheat>
+		<cheat name="P2 Plasma Pulse Energizer">
+			DDA2 1000 0100 FF00
+		</cheat>
+	</cheats>
 </misterromdescription>

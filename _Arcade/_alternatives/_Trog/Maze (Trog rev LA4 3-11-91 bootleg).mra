@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Maze (Trog rev LA4 3/11/91 bootleg)</name>
-	<mratimestamp>20261024</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mazebl</setname>
 	<year>1990</year>
@@ -55,4 +55,26 @@
 		<part crc="cf3a206e" name="1" offset="0x30000" length="0x10000"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="Invincibility">
+			BD32 FE0F 05CA FFFF
+			983A FE0F 00C0 00FF
+			FB3A FE0F 00C0 00FF
+			DC77 FE0F 00C0 00FF
+			328E FE0F 00C0 00FF
+			A196 FE0F 00C0 00FF
+		</cheat>
+		<cheat name="P1 Infinite Lives">
+			5576 1000 0300 FF00
+		</cheat>
+		<cheat name="P2 Infinite Lives">
+			9A76 1000 0300 FF00
+		</cheat>
+		<cheat name="P3 Infinite Lives">
+			DF76 1000 0300 FF00
+		</cheat>
+		<cheat name="P4 Infinite Lives">
+			2477 1000 0300 FF00
+		</cheat>
+	</cheats>
 </misterromdescription>

@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Mortal Kombat (rev 4.0 09/28/92)</name>
-	<mratimestamp>20261026</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mkla4</setname>
 	<year>1992</year>
@@ -29,14 +29,14 @@
 0xA00000 OKI M6295 samples (1 MB)
 	</romstruct>
 	<rom index="1">
-		<!-- game id; finishing moves: round state 0104D700, P1 character 0104CFB0, object pointer 0104CF50; Reptile: 6 program patches, flag 0104E660; Fixed AI Difficulty: CPU level word 0104D6E0; game state 0104CEB0 (tools/yunit_fmoves.py) -->
+		<!-- game id; finishing moves: round state 0104D700, P1 character 0104CFB0, object pointer 0104CF50; Reptile: 4 program patches, flag 0104E660; Fixed AI Difficulty: CPU level word 0104D6E0; game state 0104CEB0 (tools/yunit_fmoves.py) -->
 		<part>
 		06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		01 00 00 00 70 4D 10 00 FB 4C 10 00 29 4D 10 00 02 4D 10 00 30 4D 10 00 F5 4C 10 00 23 4D 10 00
 		F9 4C 10 00 27 4D 10 00 54 4D 10 00 5A 4D 10 00 60 36 DF FF B0 54 CE FF 00 00 00 00 00 00 00 00
 		EB 4C 10 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		C2 B1 04 01 E0 0D A0 05 C3 B1 04 01 60 09 40 D5 8B B8 04 02 00 03 08 CB CD B1 04 02 00 03 1A CB
-		30 A1 04 03 00 03 1D C8 34 A1 04 03 09 C0 C0 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		66 4E 10 00 6E 4D
 		</part>
 	</rom>
@@ -70,4 +70,85 @@
 		<part crc="7b7ec3b6" name="l1_mortal_kombat_u13_sound_rom.u13"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="Always Get Fatality Bonus">
+			17AC FC0F 0003 FFFF
+		</cheat>
+		<cheat name="Always have Reptile Clues">
+			30A1 FC0F 0003 FFFF
+		</cheat>
+		<cheat name="Always Secret Game Over">
+			EEA5 FC0F 00C0 00FF
+		</cheat>
+		<cheat name="Attract Mode Volume Never">
+			378C FC0F 00C0 FFFF
+		</cheat>
+		<cheat name="Bloody Floors">
+			B0E7 FD0F 0003 FFFF
+		</cheat>
+		<cheat name="Break Test Your Might">
+			94BE FD0F 0000 FFFF
+		</cheat>
+		<cheat name="CPU Performs Fatalities">
+			87AE FD0F 0003 FFFF
+		</cheat>
+		<cheat name="CPU Players Won't Block">
+			D770 FD0F 10C0 FFFF
+			957F FD0F 14C0 FFFF
+			E490 FD0F 0BC0 FFFF
+		</cheat>
+		<cheat name="Disable Blocking">
+			23EF FC0F 0003 FFFF
+		</cheat>
+		<cheat name="Enable 1-Round Matches">
+			10A0 FC0F 01C0 FFFF
+		</cheat>
+		<cheat name="Get Double Flawless Bonus">
+			044D 1000 0200 FF00
+		</cheat>
+		<cheat name="Hit Anywhere (P1 + P2)">
+			0DEF FC0F 04C0 FFFF
+		</cheat>
+		<cheat name="I Am Reptile. Find Me!">
+			B0A1 FC0F 4019 FFFF
+		</cheat>
+		<cheat name="Infinite Fatality Time">
+			16A1 FC0F F0C0 FFFF
+		</cheat>
+		<cheat name="Infinite Time">
+			8B9F FC0F E2C0 FFFF
+			8C9F FC0F 0003 FFFF
+		</cheat>
+		<cheat name="One Button Fatalities">
+			B39B FD0F 08C0 FFFF
+			849A FD0F 01C0 FFFF
+			E09C FD0F 06C0 FFFF
+			2D9B FD0F 0FC0 FFFF
+			239C FD0F 0CC0 FFFF
+			4D9B FD0F 08C0 FFFF
+			1D9A FD0F 01C0 FFFF
+		</cheat>
+		<cheat name="P1 Drain All Energy Now!">
+			024D 1080 0000 FF00
+		</cheat>
+		<cheat name="P1 Infinite Energy">
+			024D 1000 A100 FF00
+		</cheat>
+		<cheat name="P2 Drain All Energy Now!">
+			304D 1080 0000 FF00
+		</cheat>
+		<cheat name="P2 Infinite Energy">
+			304D 1000 A100 FF00
+		</cheat>
+		<cheat name="Pit Bottom in Lineup">
+			0AB1 FC0F F5FF FFFF
+		</cheat>
+		<cheat name="Single Opponent Endurance">
+			76A4 FC0F 69C0 FFFF
+		</cheat>
+		<cheat name="View Ending after 1P Win">
+			14A0 FC0F 3FC0 FFFF
+			89A0 FC0F 0003 FFFF
+		</cheat>
+	</cheats>
 </misterromdescription>

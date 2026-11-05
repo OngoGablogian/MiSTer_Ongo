@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Mortal Kombat (prototype, rev 8.0 07/21/92)</name>
-	<mratimestamp>20261026</mratimestamp>
+	<mratimestamp>20261101</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mkprot8</setname>
 	<year>1992</year>
@@ -69,4 +69,42 @@
 		<part crc="7b7ec3b6" name="l1_mortal_kombat_u13_sound_rom.u13"/>
 	</rom>
 	<nvram index="2" size="32768"/>
+	<cheats size="8" max="16">
+		<cheat name="Break Test Your Might">
+			5DA5 FD0F 0000 FFFF
+		</cheat>
+		<cheat name="CPU Players Won't Block">
+			F264 FD0F 10C0 FFFF
+			E070 FD0F 14C0 FFFF
+			5B7E FD0F 0BC0 FFFF
+		</cheat>
+		<cheat name="Disable Blocking">
+			C0E4 FC0F 0003 FFFF
+		</cheat>
+		<cheat name="Enable 1-Round Matches">
+			9B9B FC0F 01C0 FFFF
+		</cheat>
+		<cheat name="Get Double Flawless Bonus">
+			024D 1000 0200 FF00
+		</cheat>
+		<cheat name="Hit Anywhere (P1 + P2)">
+			AAE4 FC0F 04C0 FFFF
+		</cheat>
+		<cheat name="Infinite Time">
+			0E9B FC0F E2C0 FFFF
+			0F9B FC0F 0003 FFFF
+		</cheat>
+		<cheat name="P1 Drain All Energy Now!">
+			004D 1080 0000 FF00
+		</cheat>
+		<cheat name="P1 Infinite Energy">
+			004D 1000 A100 FF00
+		</cheat>
+		<cheat name="P2 Drain All Energy Now!">
+			2E4D 1080 0000 FF00
+		</cheat>
+		<cheat name="P2 Infinite Energy">
+			2E4D 1000 A100 FF00
+		</cheat>
+	</cheats>
 </misterromdescription>
