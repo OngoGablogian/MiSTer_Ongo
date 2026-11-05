@@ -1,0 +1,89 @@
+<misterromdescription>
+	<name>Mortal Kombat II Plus (Beta 2, hack)</name>
+	<mratimestamp>20261101</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>mk2p</setname>
+	<year>1993</year>
+	<manufacturer>hack</manufacturer>
+	<category>Fighter / Versus</category>
+	<rbf>Gm0rk_Midway-T-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="7D,FC">
+		<dip bits="12" name="Attract Sound" ids="Off,On"/>
+		<dip bits="10" name="Bill Validator" ids="Installed,Not Present"/>
+		<dip bits="14" name="Blood" ids="Off,On"/>
+		<dip bits="8" name="Circuit Boards" ids="2,1" values="1,0"/>
+		<dip bits="2,6" name="Coinage" ids="USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,French-1,French-2,French-3,French-4,French-ECA,French-Free Play" values="31,15,23,7,27,3,29,13,21,5,25,9,1,30,14,22,6,26,2"/>
+		<dip bits="7" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
+		<dip bits="11" name="Comic Book Offer" ids="Off,On"/>
+		<dip bits="1" name="Counters" ids="One,Two" values="1,0"/>
+		<dip bits="13" name="Low Blows" ids="Off,On"/>
+		<dip bits="9" name="Powerup Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
+		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
+		<dip bits="15" name="Violence" ids="Off,On"/>
+	</switches>
+	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
+	<romstruct>
+rom index 0 (SDRAM 0x000000):
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (12 MB of MAME "video", 32-bit interleaved)
+rom index 3 (SDRAM 0xD00000):
+0x000000 DCS sound data ROMs, packed (3 MB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id (rtl/tunit_secrets.sv): the OSD shows the Plus Move List and View Secrets, and no Finishing Moves or Hidden Items, for this set: no patches or codes -->
+		<part>
+		02 01 01 00
+		</part>
+		<!-- AI level word 01061AD0, demo fights set it at FF827BA0 (PC after the store) (Fixed AI Difficulty) -->
+		<part repeat="1104">00</part>
+		<part>
+		AD 61 10 00 BA 27 F8 0F
+		</part>
+	</rom>
+	<rom index="0" zip="/hbmame/mk2.zip" md5="f27539dc97987541eddfe6af46ae557f" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="05ff15a9" name="l3.1_mortal_kombat_ii_game_rom_uj12.uj12" map="01"/>
+			<part crc="b6d8ff5c" name="l3.1_mortal_kombat_ii_game_rom_ug12.ug12" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<interleave output="32">
+			<part crc="01e73af6" name="l1_mortal_kombat_ii_game_rom_ug14.ug14" map="0001"/>
+			<part crc="d4985cbb" name="l1_mortal_kombat_ii_game_rom_uj14.uj14" map="0010"/>
+			<part crc="fec137be" name="l1_mortal_kombat_ii_game_rom_ug19.ug19" map="0100"/>
+			<part crc="2d763156" name="l1_mortal_kombat_ii_game_rom_uj19.uj19" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="b2af2798" name="l1_mortal_kombat_ii_game_rom_ug16.ug16" map="0001"/>
+			<part crc="d70dd149" name="l1_mortal_kombat_ii_game_rom_uj16.uj16" map="0010"/>
+			<part crc="d05e970a" name="l1_mortal_kombat_ii_game_rom_ug20.ug20" map="0100"/>
+			<part crc="0f9c9a12" name="l1_mortal_kombat_ii_game_rom_uj20.uj20" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="937d8620" name="l1_mortal_kombat_ii_game_rom_ug17.ug17" map="0001"/>
+			<part crc="218de160" name="l1_mortal_kombat_ii_game_rom_uj17.uj17" map="0010"/>
+			<part crc="154d53b1" name="l1_mortal_kombat_ii_game_rom_ug22.ug22" map="0100"/>
+			<part crc="8891d785" name="l1_mortal_kombat_ii_game_rom_uj22.uj22" map="1000"/>
+		</interleave>
+	</rom>
+	<rom index="3" zip="/hbmame/mk2.zip" md5="b9790a5f6d38c110ec6ac3d8e13e7d22" type="merged">
+		<!-- DCS sound data -->
+		<part crc="65d11dd7" name="l1_mortal_kombat_ii_sound_rom_u2.u2"/>
+		<part crc="d6d92bf9" name="l1_mortal_kombat_ii_sound_rom_u3.u3"/>
+		<part crc="eebc8e0f" name="l1_mortal_kombat_ii_sound_rom_u4.u4"/>
+		<part crc="2b0b7961" name="l1_mortal_kombat_ii_sound_rom_u5.u5"/>
+		<part crc="f694b27f" name="l1_mortal_kombat_ii_sound_rom_u6.u6"/>
+		<part crc="20387e0a" name="l1_mortal_kombat_ii_sound_rom_u7.u7"/>
+	</rom>
+	<nvram index="2" size="16384"/>
+	<!-- cheats (rtl/tunit_cheats.sv): damage pointer table FFDAC1E0, hits go to FF8102F0 and FF800EC0; energy P1 010602F0, P2 01060EC0; round clock DEC A10 FFD463E0; FINISH HIM wait FFC79740, FFC797F0; 4 cheats -->
+	<cheats size="8" max="8">
+		<cheat name="Infinite Health P1">1FAC FD0F 81FF FFFF</cheat>
+		<cheat name="Infinite Health P2">21AC FD0F 80FF FFFF</cheat>
+		<cheat name="Infinite Round Time">3E46 FD1F 4A4D FFFF</cheat>
+		<cheat name="Stop Finishing Move Timer">7479 FC1F FF7F FFFF 7F79 FC1F FF7F FFFF</cheat>
+	</cheats>
+</misterromdescription>

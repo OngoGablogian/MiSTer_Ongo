@@ -1,65 +1,116 @@
 <misterromdescription>
-  <!-- Candidate generated from official MAME 0.289 signed tag mame0289 (f34f02505e32c1993c6a782b6814232cbfc74e36); no ROM data is distributed. -->
-  <about author="blahm1d"/>
-  <rotation>horizontal</rotation>
-  <name>NBA Jam Tournament Edition (rev 4.0 3/23/94)</name>
-  <setname>nbajamte</setname>
-  <parent>nbajamte</parent>
-  <mameversion>0289</mameversion>
-  <year>1994</year>
-  <manufacturer>Midway</manufacturer>
-  <players>4</players>
-  <rbf>blahm1d_tunit</rbf>
-  <joystick>8-way</joystick>
-  <region>World</region>
-  <!-- Descriptor: magic/version/profile/sound/gfx/program/flags/xor. -->
-  <rom index="3">
-    <part>54 01 03 00 03 01 00 54</part>
-  </rom>
-  <!-- Physical TMS34010 program EPROMs: UJ12 even/low, then UG12 odd/high. -->
-  <rom index="0" zip="nbajamte.zip" md5="None" type="merged|nonmerged">
-    <part name="l4_nba_jam_tournament_game_rom_uj12.uj12" crc="d7c21bc4"/>
-    <part name="l4_nba_jam_tournament_game_rom_ug12.ug12" crc="7ad49229"/>
-  </rom>
-  <!-- Raw graphics devices in pinned MAME four-lane declaration order. -->
-  <rom index="1" zip="nbajamte.zip" md5="None" type="merged|nonmerged">
-    <part name="l1_nba_jam_tournament_game_rom_ug14.ug14" crc="04bb9f64"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj14.uj14" crc="b34b7af3"/>
-    <part name="l1_nba_jam_tournament_game_rom_ug19.ug19" crc="a8f22fbb"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj19.uj19" crc="8130a8a2"/>
-    <part name="l1_nba_jam_tournament_game_rom_ug16.ug16" crc="c7ce74d0"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj16.uj16" crc="905ad88b"/>
-    <part name="l1_nba_jam_tournament_game_rom_ug20.ug20" crc="8a48728c"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj20.uj20" crc="bf263d61"/>
-    <part name="l1_nba_jam_tournament_game_rom_ug17.ug17" crc="9401be62"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj17.uj17" crc="8a852b9e"/>
-    <part name="l1_nba_jam_tournament_game_rom_ug22.ug22" crc="3b05133b"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj22.uj22" crc="39791051"/>
-    <part name="l1_nba_jam_tournament_game_rom_ug18.ug18" crc="6fd08f57"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj18.uj18" crc="4eb73c26"/>
-    <part name="l1_nba_jam_tournament_game_rom_ug23.ug23" crc="854f73bc"/>
-    <part name="l1_nba_jam_tournament_game_rom_uj23.uj23" crc="f8c30998"/>
-  </rom>
-  <!-- Raw physical sound devices; reload/mirror transforms are descriptor-driven. -->
-  <rom index="2" zip="nbajamte.zip" md5="None" type="merged|nonmerged">
-    <part name="l1_nba_jam_tournament_u3_sound_rom.u3" crc="d4551195"/>
-    <part name="l1_nba_jam_tournament_u12_sound_rom.u12" crc="4fac97bc"/>
-    <part name="l1_nba_jam_tournament_u13_sound_rom.u13" crc="6f27b202"/>
-  </rom>
-  <nvram index="4" size="16384"/>
-  <switches default="FD,7F">
-    <dip name="Test Switch" bits="0" ids="On,Off"/>
-    <dip name="Powerup Test" bits="1" ids="Off,On"/>
-    <dip name="Unused" bits="2" ids="On,Off"/>
-    <dip name="Unused" bits="3" ids="On,Off"/>
-    <dip name="Unused" bits="4" ids="On,Off"/>
-    <dip name="Unused" bits="5" ids="Off,On"/>
-    <dip name="Dollar Bill Validator" bits="6" ids="Installed,Not Present"/>
-    <dip name="Players" bits="7" ids="2,4"/>
-    <dip name="Coin Counters" bits="8,9" ids="-,2 Counters / 1 count/coin,1 Counter / Totalizing,1 Counter / 1 count/coin"/>
-    <dip name="Country" bits="10,11" ids="-,German,French,USA"/>
-    <dip name="Coinage" bits="12,13,14" ids="Free Play,4,-,2,-,3,ECA,1"/>
-    <dip name="Coinage Source" bits="15" ids="CMOS,Dipswitch"/>
-  </switches>
-  <buttons names="Turbo,Shoot / Block,Pass / Steal,Start,Coin" default="A,B,X,Start,Select" count="3"/>
+	<name>NBA Jam Tournament Edition (rev 4.0 3/23/94)</name>
+	<mratimestamp>20261101</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>nbajamte</setname>
+	<year>1994</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Sports / Basketball</category>
+	<rbf>Gm0rk_Midway-T-Unit</rbf>
+	<remark>4 players</remark>
+	<switches default="FD,7F">
+		<dip bits="8,9" name="Coin Counters" ids="1 Counter - 1 count/coin,1 Counter - Totalizing,2 Counters - 1 count/coin" values="3,2,1"/>
+		<dip bits="12,14" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
+		<dip bits="15" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
+		<dip bits="10,11" name="Country" ids="USA,French,German" values="3,2,1"/>
+		<dip bits="6" name="Dollar Bill Validator" ids="Installed,Not Present"/>
+		<dip bits="7" name="Players" ids="2,4"/>
+		<dip bits="1" name="Powerup Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
+		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
+	</switches>
+	<buttons names="Turbo,Shoot/Block,Pass/Steal,-,-,-,Start,Coin,Test,Pause" default="R,A,B,-,-,-,Start,Select,-,-"/>
+	<romstruct>
+rom index 0 (SDRAM 0x000000):
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB of MAME "video", 32-bit interleaved)
+rom index 3 (SDRAM 0xD00000):
+0x000000 sound CPU ROM (MAME region 0x10000-0x4FFFF)
+0x040000 OKI M6295 samples (1 MB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): secret menu code, second part FF9624A0 (11 presses); power-ups: counters 010EB160, big heads 010E6950, quick hands 010E6960, 8 patches -->
+		<part>
+		04 00 01 00 1B EB 10 A0 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00
+		71 71 03 00 00 00 01 00 02 02 5A 00 00 00 14 00 40 00 03 00 00 00 03 00 40 00 03 00 00 00 03 00
+		00 10 03 00 00 00 03 00 00 10 03 00 00 00 03 00 00 10 03 00 00 00 03 00 00 20 03 00 00 00 03 00
+		00 20 03 00 00 00 03 00 10 00 03 00 00 00 03 00 20 00 03 00 00 00 03 00 00 40 03 00 00 00 03 00
+		00 40 03 00 00 00 03 80
+		</part>
+	</rom>
+	<rom index="0" zip="nbajamte.zip" md5="ab691bee1f6c94c0937d2971caa67f51" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="d7c21bc4" name="l4_nba_jam_tournament_game_rom_uj12.uj12" map="01"/>
+			<part crc="7ad49229" name="l4_nba_jam_tournament_game_rom_ug12.ug12" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<interleave output="32">
+			<part crc="04bb9f64" name="l1_nba_jam_tournament_game_rom_ug14.ug14" map="0001"/>
+			<part crc="b34b7af3" name="l1_nba_jam_tournament_game_rom_uj14.uj14" map="0010"/>
+			<part crc="a8f22fbb" name="l1_nba_jam_tournament_game_rom_ug19.ug19" map="0100"/>
+			<part crc="8130a8a2" name="l1_nba_jam_tournament_game_rom_uj19.uj19" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="c7ce74d0" name="l1_nba_jam_tournament_game_rom_ug16.ug16" map="0001"/>
+			<part crc="905ad88b" name="l1_nba_jam_tournament_game_rom_uj16.uj16" map="0010"/>
+			<part crc="8a48728c" name="l1_nba_jam_tournament_game_rom_ug20.ug20" map="0100"/>
+			<part crc="bf263d61" name="l1_nba_jam_tournament_game_rom_uj20.uj20" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="9401be62" name="l1_nba_jam_tournament_game_rom_ug17.ug17" map="0001"/>
+			<part crc="8a852b9e" name="l1_nba_jam_tournament_game_rom_uj17.uj17" map="0010"/>
+			<part crc="3b05133b" name="l1_nba_jam_tournament_game_rom_ug22.ug22" map="0100"/>
+			<part crc="39791051" name="l1_nba_jam_tournament_game_rom_uj22.uj22" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="6fd08f57" name="l1_nba_jam_tournament_game_rom_ug18.ug18" map="0001"/>
+			<part crc="4eb73c26" name="l1_nba_jam_tournament_game_rom_uj18.uj18" map="0010"/>
+			<part crc="854f73bc" name="l1_nba_jam_tournament_game_rom_ug23.ug23" map="0100"/>
+			<part crc="f8c30998" name="l1_nba_jam_tournament_game_rom_uj23.uj23" map="1000"/>
+		</interleave>
+	</rom>
+	<rom index="3" zip="nbajamte.zip" md5="f76ab114ee04fa657ae82d1d9bde2ee9" type="merged">
+		<!-- sound CPU -->
+		<part crc="d4551195" name="l1_nba_jam_tournament_u3_sound_rom.u3"/>
+		<part crc="d4551195" name="l1_nba_jam_tournament_u3_sound_rom.u3"/>
+		<!-- OKI samples -->
+		<part crc="4fac97bc" name="l1_nba_jam_tournament_u12_sound_rom.u12"/>
+		<part crc="6f27b202" name="l1_nba_jam_tournament_u13_sound_rom.u13"/>
+	</rom>
+	<nvram index="2" size="16384"/>
+	<!-- cheats (rtl/tunit_cheats.sv): power-ups: counters 010EB160, big heads 010E6950, quick hands 010E6960, 8 patches; 29 cheats -->
+	<cheats size="8" max="8">
+		<cheat name="Baby Size Players">AAEA 1000 0100 FFFF</cheat>
+		<cheat name="Disable In-Game Play Tip">5B3E F91F 32C0 FFFF 8942 F91F 1DC0 FFFF</cheat>
+		<cheat name="Dunks Always Break Backbrd">FAA3 F81F 23C0 FFFF</cheat>
+		<cheat name="Huge Heads">4E77 F81F 03C0 FFFF</cheat>
+		<cheat name="Infinite Shot Time">E2EA 1000 0900 FF00</cheat>
+		<cheat name="Never Miss A Shot">3FA0 F81F 76CB FFFF F9A2 F81F 00C4 FFFF</cheat>
+		<cheat name="P1 Big/Huge Head">95E6 1000 0100 0100</cheat>
+		<cheat name="P1 Infinite Turbo">36E6 1000 2F00 FF00</cheat>
+		<cheat name="P1 Max Power">1DEB 1000 0100 0100</cheat>
+		<cheat name="P1 Powerup Goal Tending">16EB 1000 1800 FFFF</cheat>
+		<cheat name="P1 Quick Hands">96E6 1000 0100 0100</cheat>
+		<cheat name="P2 Big/Huge Head">95E6 1000 0200 0200</cheat>
+		<cheat name="P2 Infinite Turbo">49E6 1000 2F00 FF00</cheat>
+		<cheat name="P2 Max Power">1DEB 1000 0200 0200</cheat>
+		<cheat name="P2 Powerup Goal Tending">17EB 1000 1800 FFFF</cheat>
+		<cheat name="P2 Quick Hands">96E6 1000 0200 0200</cheat>
+		<cheat name="P3 Big/Huge Head">95E6 1000 0400 0400</cheat>
+		<cheat name="P3 Infinite Turbo">5CE6 1000 2F00 FF00</cheat>
+		<cheat name="P3 Max Power">1DEB 1000 0400 0400</cheat>
+		<cheat name="P3 Powerup Goal Tending">18EB 1000 1800 FFFF</cheat>
+		<cheat name="P3 Quick Hands">96E6 1000 0400 0400</cheat>
+		<cheat name="P4 Big/Huge Head">95E6 1000 0800 0800</cheat>
+		<cheat name="P4 Infinite Turbo">6FE6 1000 2F00 FF00</cheat>
+		<cheat name="P4 Max Power">1DEB 1000 0800 0800</cheat>
+		<cheat name="P4 Powerup Goal Tending">19EB 1000 1800 FFFF</cheat>
+		<cheat name="P4 Quick Hands">96E6 1000 0800 0800</cheat>
+		<cheat name="Shot Percentage">1AEB 1000 0100 FFFF</cheat>
+		<cheat name="Tournament Mode">1CEB 1000 0100 FFFF</cheat>
+		<cheat name="Unlock All-Star Jam Team">75C9 F91F 03C0 FFFF EAC9 F91F 01C0 FFFF A8C9 F91F 01C0 FFFF 9AC2 F91F 09C0 FFFF 6DC5 F91F 09C0 FFFF</cheat>
+	</cheats>
 </misterromdescription>

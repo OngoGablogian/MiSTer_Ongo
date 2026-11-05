@@ -111,8 +111,9 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Mad Gear / Last Duel](https://github.com/fiermanb/LastDuel-MadGear_MiSTer)                                                      |
 | [Mad Motor](https://www.patreon.com/Meathax/posts/mad-motor-173354738)                                                           |
 | [Mandelbrot](https://github.com/jacquesdriessen/MiSTer-mandelbrot)                                                               |
-| [Midway T Unit](https://mister.blahm1d.com/core-tunit.html)                                                                      |
-| [Midway T Unit (DCS)](https://mister.blahm1d.com/core-tunitdcs.html)                                                             |
+| [Midway T Unit (blahm1d)](https://mister.blahm1d.com/core-tunit.html)                                                            |
+| [Midway T Unit (DCS) (blahm1d)](https://mister.blahm1d.com/core-tunitdcs.html)                                                   |
+| [Midway T Unit (Gm0rk)](https://github.com/Gm0rk/Arcade-Midway-T-Unit_MiSTer)                                                    |
 | [Midway V Unit](https://mister.blahm1d.com/core-vunit.html)                                                                      |
 | [Midway V Unit (War Gods)](https://mister.blahm1d.com/core-wargods.html)                                                         |
 | [Midway Wolf Unit](https://mister.blahm1d.com/core-wolfunit.html)                                                                |

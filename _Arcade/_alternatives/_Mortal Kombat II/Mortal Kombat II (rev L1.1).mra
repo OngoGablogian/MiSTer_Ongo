@@ -1,0 +1,99 @@
+<misterromdescription>
+	<name>Mortal Kombat II (rev L1.1)</name>
+	<mratimestamp>20261101</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>mk2r11</setname>
+	<year>1993</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Fighter / Versus</category>
+	<rbf>Gm0rk_Midway-T-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="7D,FC">
+		<dip bits="12" name="Attract Sound" ids="Off,On"/>
+		<dip bits="14" name="Blood" ids="Off,On"/>
+		<dip bits="2,6" name="Coinage" ids="USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,French-1,French-2,French-3,French-4,French-ECA,French-Free Play" values="31,15,23,7,27,3,29,13,21,5,25,9,1,30,14,22,6,26,2"/>
+		<dip bits="7" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
+		<dip bits="11" name="Comic Book Offer" ids="Off,On"/>
+		<dip bits="1" name="Counters" ids="One,Two" values="1,0"/>
+		<dip bits="13" name="Low Blows" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
+		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
+		<dip bits="15" name="Violence" ids="Off,On"/>
+	</switches>
+	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
+	<romstruct>
+rom index 0 (SDRAM 0x000000):
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (12 MB of MAME "video", 32-bit interleaved)
+rom index 3 (SDRAM 0xD00000):
+0x000000 DCS sound data ROMs, packed (3 MB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FFE0CC50 (27 presses), menu FFE0C580; EJB code handler not called: Block handlers pointed at it while the code plays; security screen branches FFE0D230 FFE0D260; hitbox flag 01062000; battle 250 check not found; Noob Saibot check not found; Jade check not found; Smoke check not found -->
+		<part>
+		02 00 01 00 1A 87 FC 4F 40 C1 1B 87 FC 4F E0 FF 32 87 FC 4F 60 C1 33 87 FC 4F E0 FF 23 0D FE 1F
+		00 03 26 0D FE 1F 00 03 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 58 0C FE 0F 00 00 00 00
+		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 80
+		</part>
+		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 01061B10, P1 character 01060280, object pointer 01060220, stage 01061AD0, finish flag 010619E0; 63 moves not in this revision (OSD class 3); AI level word 01061AE0; demo store PC FFC99110 -->
+		<part repeat="744">00</part>
+		<part>
+		01 00 00 00 B1 61 10 00 28 60 10 00 E5 60 10 00 2F 60 10 00 EC 60 10 00 22 60 10 00 DF 60 10 00
+		26 60 10 00 E3 60 10 00 AD 61 10 00 9E 61 10 00 40 BA E0 FF 40 BA E0 FF F0 FD C9 FF 09 0E 03 00
+		3E 3D 3E 3E 3F 3F 3F 3D 3E 3C 7D 1F 00 00 00 00 00 00 00 00 AE 61 10 00 11 99 FC 0F
+		</part>
+	</rom>
+	<rom index="0" zip="mk2r11.zip|mk2.zip" md5="016690c1cffff2f6101817ee16f7ee27" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="01daff19" name="l1.1_mortal_kombat_ii_game_rom_uj12.uj12" map="01"/>
+			<part crc="54042eb7" name="l1.1_mortal_kombat_ii_game_rom_ug12.ug12" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<interleave output="32">
+			<part crc="01e73af6" name="l1_mortal_kombat_ii_game_rom_ug14.ug14" map="0001"/>
+			<part crc="d4985cbb" name="l1_mortal_kombat_ii_game_rom_uj14.uj14" map="0010"/>
+			<part crc="fec137be" name="l1_mortal_kombat_ii_game_rom_ug19.ug19" map="0100"/>
+			<part crc="2d763156" name="l1_mortal_kombat_ii_game_rom_uj19.uj19" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="8ba6ae18" name="l1_mortal_kombat_ii_game_rom_ug16.ug16" map="0001"/>
+			<part crc="39d885b4" name="l1_mortal_kombat_ii_game_rom_uj16.uj16" map="0010"/>
+			<part crc="809118c1" name="l1_mortal_kombat_ii_game_rom_ug20.ug20" map="0100"/>
+			<part crc="b96824f0" name="l1_mortal_kombat_ii_game_rom_uj20.uj20" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="937d8620" name="l1_mortal_kombat_ii_game_rom_ug17.ug17" map="0001"/>
+			<part crc="218de160" name="l1_mortal_kombat_ii_game_rom_uj17.uj17" map="0010"/>
+			<part crc="154d53b1" name="l1_mortal_kombat_ii_game_rom_ug22.ug22" map="0100"/>
+			<part crc="8891d785" name="l1_mortal_kombat_ii_game_rom_uj22.uj22" map="1000"/>
+		</interleave>
+	</rom>
+	<rom index="3" zip="mk2r11.zip|mk2.zip" md5="5240d54b5a591f18b117230838748ea7" type="merged">
+		<!-- DCS sound data -->
+		<part crc="5f23d71d" name="l1_mortal_kombat_ii_sound_rom_u2.u2"/>
+		<part crc="d6d92bf9" name="l1_mortal_kombat_ii_sound_rom_u3.u3"/>
+		<part crc="eebc8e0f" name="l1_mortal_kombat_ii_sound_rom_u4.u4"/>
+		<part crc="2b0b7961" name="l1_mortal_kombat_ii_sound_rom_u5.u5"/>
+		<part crc="f694b27f" name="l1_mortal_kombat_ii_sound_rom_u6.u6"/>
+		<part crc="20387e0a" name="l1_mortal_kombat_ii_sound_rom_u7.u7"/>
+	</rom>
+	<nvram index="2" size="16384"/>
+	<!-- cheats (rtl/tunit_cheats.sv): damage pointer table FFCA7120, hits go to FFC802F0 and FFC80EC0; energy P1 010602F0, P2 01060EC0; round clock DEC A10 FFC8E560; FINISH HIM wait FFC910A0; battle 250 check not found; Noob Saibot check not found; Jade check not found; Smoke check not found; 7 cheats -->
+	<cheats size="8" max="8">
+		<cheat name="Infinite Health P1">13A7 FC0F C8FF FFFF</cheat>
+		<cheat name="Infinite Health P2">15A7 FC0F C8FF FFFF</cheat>
+		<cheat name="Infinite Round Time">568E FC1F 4A4D FFFF</cheat>
+		<cheat name="P1 Drain all Energy Now!">2F60 1040 0100 FFFF</cheat>
+		<cheat name="P2 Drain all Energy Now!">EC60 1040 0100 FFFF</cheat>
+		<cheat name="Show Hitboxes">0062 1000 0100 FFFF</cheat>
+		<cheat name="Stop Finishing Move Timer">0A91 FC1F FF7F FFFF</cheat>
+	</cheats>
+</misterromdescription>

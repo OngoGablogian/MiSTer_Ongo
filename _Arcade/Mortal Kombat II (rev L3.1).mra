@@ -1,64 +1,139 @@
 <misterromdescription>
-  <!-- Candidate generated from official MAME 0.289 signed tag mame0289 (f34f02505e32c1993c6a782b6814232cbfc74e36); no ROM data is distributed. -->
-  <about author="blahm1d"/>
-  <rotation>horizontal</rotation>
-  <name>Mortal Kombat II (rev L3.1)</name>
-  <setname>mk2</setname>
-  <parent>mk2</parent>
-  <mameversion>0289</mameversion>
-  <year>1993</year>
-  <manufacturer>Midway</manufacturer>
-  <players>2</players>
-  <rbf>blahm1d_tunitdcs</rbf>
-  <joystick>8-way</joystick>
-  <region>World</region>
-  <!-- Descriptor: magic/version/profile/sound/gfx/program/flags/xor. -->
-  <rom index="3">
-    <part>54 01 01 01 01 01 01 54</part>
-  </rom>
-  <!-- Physical TMS34010 program EPROMs: UJ12 even/low, then UG12 odd/high. -->
-  <rom index="0" zip="mk2.zip" md5="None" type="merged|nonmerged">
-    <part name="l3.1_mortal_kombat_ii_game_rom_uj12.uj12" crc="cf100a75"/>
-    <part name="l3.1_mortal_kombat_ii_game_rom_ug12.ug12" crc="582c7dfd"/>
-  </rom>
-  <!-- Raw graphics devices in pinned MAME four-lane declaration order. -->
-  <rom index="1" zip="mk2.zip" md5="None" type="merged|nonmerged">
-    <part name="l1_mortal_kombat_ii_game_rom_ug14.ug14" crc="01e73af6"/>
-    <part name="l1_mortal_kombat_ii_game_rom_uj14.uj14" crc="d4985cbb"/>
-    <part name="l1_mortal_kombat_ii_game_rom_ug19.ug19" crc="fec137be"/>
-    <part name="l1_mortal_kombat_ii_game_rom_uj19.uj19" crc="2d763156"/>
-    <part name="l1_mortal_kombat_ii_game_rom_ug16.ug16" crc="8ba6ae18"/>
-    <part name="l1_mortal_kombat_ii_game_rom_uj16.uj16" crc="39d885b4"/>
-    <part name="l1_mortal_kombat_ii_game_rom_ug20.ug20" crc="809118c1"/>
-    <part name="l1_mortal_kombat_ii_game_rom_uj20.uj20" crc="b96824f0"/>
-    <part name="l1_mortal_kombat_ii_game_rom_ug17.ug17" crc="937d8620"/>
-    <part name="l1_mortal_kombat_ii_game_rom_uj17.uj17" crc="218de160"/>
-    <part name="l1_mortal_kombat_ii_game_rom_ug22.ug22" crc="154d53b1"/>
-    <part name="l1_mortal_kombat_ii_game_rom_uj22.uj22" crc="8891d785"/>
-  </rom>
-  <!-- Raw physical sound devices; reload/mirror transforms are descriptor-driven. -->
-  <rom index="2" zip="mk2.zip" md5="None" type="merged|nonmerged">
-    <part name="l1_mortal_kombat_ii_sound_rom_u2.u2" crc="5f23d71d"/>
-    <part name="l1_mortal_kombat_ii_sound_rom_u3.u3" crc="d6d92bf9"/>
-    <part name="l1_mortal_kombat_ii_sound_rom_u4.u4" crc="eebc8e0f"/>
-    <part name="l1_mortal_kombat_ii_sound_rom_u5.u5" crc="2b0b7961"/>
-    <part name="l1_mortal_kombat_ii_sound_rom_u6.u6" crc="f694b27f"/>
-    <part name="l1_mortal_kombat_ii_sound_rom_u7.u7" crc="20387e0a"/>
-  </rom>
-  <nvram index="4" size="16384"/>
-  <switches default="7D,FC">
-    <dip name="Test Switch" bits="0" ids="On,Off"/>
-    <dip name="Counters" bits="1" ids="Two,One"/>
-    <dip name="Coinage" bits="2,3,4,5,6" ids="-,German-Free Play,French-Free Play,USA-Free Play,-,German-4,French-4,USA-4,-,German-ECA,-,-,-,German-2,French-2,USA-2,-,-,-,-,-,German-3,French-3,USA-3,-,German-5,French-ECA,USA-ECA,-,German-1,French-1,USA-1"/>
-    <dip name="Coinage Source" bits="7" ids="CMOS,Dipswitch"/>
-    <dip name="Circuit Boards" bits="8" ids="1,2"/>
-    <dip name="Powerup Test" bits="9" ids="Off,On"/>
-    <dip name="Bill Validator" bits="10" ids="Installed,Not Present"/>
-    <dip name="Comic Book Offer" bits="11" ids="Off,On"/>
-    <dip name="Attract Sound" bits="12" ids="Off,On"/>
-    <dip name="Low Blows" bits="13" ids="Off,On"/>
-    <dip name="Blood" bits="14" ids="Off,On"/>
-    <dip name="Violence" bits="15" ids="Off,On"/>
-  </switches>
-  <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Block 2,Start,Coin" default="X,Y,A,B,R,L,Start,Select" count="6"/>
+	<name>Mortal Kombat II (rev L3.1)</name>
+	<mratimestamp>20261101</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>mk2</setname>
+	<year>1993</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Fighter / Versus</category>
+	<rbf>Gm0rk_Midway-T-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="7D,FC">
+		<dip bits="12" name="Attract Sound" ids="Off,On"/>
+		<dip bits="10" name="Bill Validator" ids="Installed,Not Present"/>
+		<dip bits="14" name="Blood" ids="Off,On"/>
+		<dip bits="8" name="Circuit Boards" ids="2,1" values="1,0"/>
+		<dip bits="2,6" name="Coinage" ids="USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,French-1,French-2,French-3,French-4,French-ECA,French-Free Play" values="31,15,23,7,27,3,29,13,21,5,25,9,1,30,14,22,6,26,2"/>
+		<dip bits="7" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
+		<dip bits="11" name="Comic Book Offer" ids="Off,On"/>
+		<dip bits="1" name="Counters" ids="One,Two" values="1,0"/>
+		<dip bits="13" name="Low Blows" ids="Off,On"/>
+		<dip bits="9" name="Powerup Test" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
+		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
+		<dip bits="15" name="Violence" ids="Off,On"/>
+	</switches>
+	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
+	<romstruct>
+rom index 0 (SDRAM 0x000000):
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (12 MB of MAME "video", 32-bit interleaved)
+rom index 3 (SDRAM 0xD00000):
+0x000000 DCS sound data ROMs, packed (3 MB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FFA1D4E0 (27 presses), menu FFA1D3A0; security screen branches FFA1DA90 FFA1DAC0; hitbox flag 01061FB0; battle counter 01061B40; Noob Saibot check FFA188F0 (50 wins); Jade check FFA199F0 (battle 10); Smoke check FFA19FD0 (stage 7) -->
+		<part>
+		02 00 01 00 A9 1D FA 1F 00 03 AC 1D FA 1F 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 3A 1D FA 0F 00 00 00 00
+		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 80
+		</part>
+		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 01061B00, P1 character 01060280, object pointer 01060220, stage 01061AC0, finish flag 010619C0; AI level word 01061AD0; demo store PC FF827BA0 -->
+		<part repeat="744">00</part>
+		<part>
+		01 00 00 00 B0 61 10 00 28 60 10 00 E5 60 10 00 2F 60 10 00 EC 60 10 00 22 60 10 00 DF 60 10 00
+		26 60 10 00 E3 60 10 00 AC 61 10 00 9C 61 10 00 C0 27 8C FF 10 7E A1 FF 70 F2 82 FF 09 0E 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AD 61 10 00 BA 27 F8 0F
+		</part>
+	</rom>
+	<rom index="0" zip="mk2.zip" md5="61472fc68c72bdd63567de43c6d5621d" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="cf100a75" name="l3.1_mortal_kombat_ii_game_rom_uj12.uj12" map="01"/>
+			<part crc="582c7dfd" name="l3.1_mortal_kombat_ii_game_rom_ug12.ug12" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<interleave output="32">
+			<part crc="01e73af6" name="l1_mortal_kombat_ii_game_rom_ug14.ug14" map="0001"/>
+			<part crc="d4985cbb" name="l1_mortal_kombat_ii_game_rom_uj14.uj14" map="0010"/>
+			<part crc="fec137be" name="l1_mortal_kombat_ii_game_rom_ug19.ug19" map="0100"/>
+			<part crc="2d763156" name="l1_mortal_kombat_ii_game_rom_uj19.uj19" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="8ba6ae18" name="l1_mortal_kombat_ii_game_rom_ug16.ug16" map="0001"/>
+			<part crc="39d885b4" name="l1_mortal_kombat_ii_game_rom_uj16.uj16" map="0010"/>
+			<part crc="809118c1" name="l1_mortal_kombat_ii_game_rom_ug20.ug20" map="0100"/>
+			<part crc="b96824f0" name="l1_mortal_kombat_ii_game_rom_uj20.uj20" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="937d8620" name="l1_mortal_kombat_ii_game_rom_ug17.ug17" map="0001"/>
+			<part crc="218de160" name="l1_mortal_kombat_ii_game_rom_uj17.uj17" map="0010"/>
+			<part crc="154d53b1" name="l1_mortal_kombat_ii_game_rom_ug22.ug22" map="0100"/>
+			<part crc="8891d785" name="l1_mortal_kombat_ii_game_rom_uj22.uj22" map="1000"/>
+		</interleave>
+	</rom>
+	<rom index="3" zip="mk2.zip" md5="5240d54b5a591f18b117230838748ea7" type="merged">
+		<!-- DCS sound data -->
+		<part crc="5f23d71d" name="l1_mortal_kombat_ii_sound_rom_u2.u2"/>
+		<part crc="d6d92bf9" name="l1_mortal_kombat_ii_sound_rom_u3.u3"/>
+		<part crc="eebc8e0f" name="l1_mortal_kombat_ii_sound_rom_u4.u4"/>
+		<part crc="2b0b7961" name="l1_mortal_kombat_ii_sound_rom_u5.u5"/>
+		<part crc="f694b27f" name="l1_mortal_kombat_ii_sound_rom_u6.u6"/>
+		<part crc="20387e0a" name="l1_mortal_kombat_ii_sound_rom_u7.u7"/>
+	</rom>
+	<nvram index="2" size="16384"/>
+	<!-- cheats (rtl/tunit_cheats.sv): damage pointer table FF836BE0, hits go to FF8102F0 and FF800EC0; energy P1 010602F0, P2 01060EC0; round clock DEC A10 FF819FA0; FINISH HIM wait FF81F150; 44 cheats -->
+	<cheats size="8" max="8">
+		<cheat name="Allow Fighting Before Round">D414 F81F 2002 FFFF D714 F81F FFFF FFFF D814 F81F 01CA FFFF 212F F81F 0003 FFFF</cheat>
+		<cheat name="Always Play Pong">B461 1000 FA00 FFFF</cheat>
+		<cheat name="Always Toasty Uppercut">00DF F81F 11C0 FFFF 12DF F81F 80C0 FFFF 161A FA1F C009 FFFF</cheat>
+		<cheat name="Ball Breaker Mode">8274 F81F 0003 FFFF 8574 F81F 0003 FFFF 8974 F81F 0003 FFFF 8F74 F81F 0003 FFFF</cheat>
+		<cheat name="Bloody Floors">E1B0 F91F 0001 FFFF</cheat>
+		<cheat name="CPU Throwing Disabled">8B34 F81F 22C0 FFFF 78B5 F91F 5EC0 FFFF 31B7 F91F 0CC0 FFFF FCC9 F91F 02C0 FFFF F4CA F91F 14C0 FFFF 0CCB F91F 07C0 FFFF B7CF F91F 02C0 FFFF</cheat>
+		<cheat name="CPU Won't Block">94B2 F91F 22C0 FFFF</cheat>
+		<cheat name="Disable Blocking">9337 F81F 0AC0 FFFF</cheat>
+		<cheat name="En Cage's Shadow Smash">618F F81F 0500 FFFF C58F F81F 0500 FFFF AE8F F81F 0500 FFFF 25D4 F81F 3083 FFFF 26D4 F81F 8DFF FFFF</cheat>
+		<cheat name="En Reptile Invisible Slice">3E6A F81F 0000 FFFF</cheat>
+		<cheat name="En Sub-Z Shatter No Freeze">E865 F81F 0000 FFFF</cheat>
+		<cheat name="Enable Cage Kick Fatality">E5C4 F81F 2000 FFFF</cheat>
+		<cheat name="Finish Him/Her Every Round">2519 F81F 0003 FFFF</cheat>
+		<cheat name="Hit Anywhere (Both Players)">B835 F81F 04C0 FFFF</cheat>
+		<cheat name="Infinite Health P1">BF36 F80F 81FF FFFF</cheat>
+		<cheat name="Infinite Health P2">C136 F80F 80FF FFFF</cheat>
+		<cheat name="Infinite Round Time">FA19 F81F 4A4D FFFF</cheat>
+		<cheat name="Jade Fight no Low Kick">A419 FA1F 0003 FFFF DA19 FA1F 06C0 FFFF</cheat>
+		<cheat name="Johnny Cage Red Shadow">7C8F F81F 0003 FFFF</cheat>
+		<cheat name="Kombat Tomb stage auto fall">1AEB F81F 0003 FFFF</cheat>
+		<cheat name="Night Mode">6CF8 F91F 03C0 FFFF</cheat>
+		<cheat name="P1 Drain all Energy Now!">2F60 1040 0100 FFFF</cheat>
+		<cheat name="P2 Drain all Energy Now!">EC60 1040 0100 FFFF</cheat>
+		<cheat name="Play on Goro's Lair Stage">AD26 F81F F5FF FFFF</cheat>
+		<cheat name="Play Pong After Every Round">F018 F81F 0003 FFFF FA18 F81F FFFF FFFF FB18 F81F 11CA FFFF</cheat>
+		<cheat name="Press Start To Fight Smoke">111A FA1F 12C0 FFFF</cheat>
+		<cheat name="Projectiles work on Jade">B5B6 F81F 0003 FFFF</cheat>
+		<cheat name="Rem Friendship Requirements">8280 F81F 0003 FFFF 8880 F81F 0003 FFFF 1D7E F81F 0003 FFFF 237E F81F 0003 FFFF</cheat>
+		<cheat name="Rem KL Accuracy Requirement">CEE0 F81F 0003 FFFF</cheat>
+		<cheat name="Remove Stage Restriction">6C29 F81F 80C0 FFFF 6D29 F81F 509A FFFF 6E29 F81F 82FF FFFF</cheat>
+		<cheat name="Restore Fatality Sounds">B4CD F81F 02C0 FFFF B3C5 F81F C309 FFFF B4C5 F81F F600 FFFF B6C5 F81F A03B FFFF</cheat>
+		<cheat name="Restore Kintaro's Kick">1ECB F91F A0FF FFFF</cheat>
+		<cheat name="Restore Shang Tsung's">2A62 F81F 01C0 FFFF</cheat>
+		<cheat name="Restore Shang Tsung's Laugh">3815 FA1F C009 FFFF 3915 FA1F 4900 FFFF 3B15 FA1F 3024 FFFF 3C15 FA1F A1FF FFFF 3E15 FA1F 0B00 FFFF</cheat>
+		<cheat name="Secret Game Over Screen">EC1F F81F 0003 FFFF</cheat>
+		<cheat name="Select Alternate Outfit">4E95 F81F 307B FFFF F406 F91F 307B FFFF 7607 F91F 307B FFFF 5295 F81F 1079 FFFF 0607 F91F 1079 FFFF 8107 F91F 1079 FFFF</cheat>
+		<cheat name="Shao Kahn Always Taunts">BF14 FA1F 0003 FFFF</cheat>
+		<cheat name="Show Hitboxes">FB61 1000 0100 FFFF</cheat>
+		<cheat name="Skip CPU Ladder Screen">E018 F81F 02C0 FFFF</cheat>
+		<cheat name="Skip Two Player Vs Screen">C0A1 F81F 00C0 FFFF</cheat>
+		<cheat name="Smoke and Jade Clues">2E1C F81F 0003 FFFF</cheat>
+		<cheat name="Stop Finishing Move Timer">151F F81F FF7F FFFF</cheat>
+		<cheat name="Vs Throwing Disabled">76A2 F81F 09C0 FFFF</cheat>
+		<cheat name="Winner Battles Noob Saibot">A518 FA1F 0000 FFFF</cheat>
+	</cheats>
 </misterromdescription>

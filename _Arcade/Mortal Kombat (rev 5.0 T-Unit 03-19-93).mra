@@ -1,61 +1,124 @@
 <misterromdescription>
-  <!-- Candidate generated from official MAME 0.289 signed tag mame0289 (f34f02505e32c1993c6a782b6814232cbfc74e36); no ROM data is distributed. -->
-  <about author="blahm1d"/>
-  <rotation>horizontal</rotation>
-  <name>Mortal Kombat (rev 5.0 T-Unit 03/19/93)</name>
-  <setname>mk</setname>
-  <parent>mk</parent>
-  <mameversion>0289</mameversion>
-  <year>1992</year>
-  <manufacturer>Midway</manufacturer>
-  <players>2</players>
-  <rbf>blahm1d_tunit</rbf>
-  <joystick>8-way</joystick>
-  <region>World</region>
-  <!-- Descriptor: magic/version/profile/sound/gfx/program/flags/xor. -->
-  <rom index="3">
-    <part>54 01 00 00 02 01 00 56</part>
-  </rom>
-  <!-- Physical TMS34010 program EPROMs: UJ12 even/low, then UG12 odd/high. -->
-  <rom index="0" zip="mk.zip" md5="None" type="merged|nonmerged">
-    <part name="l5_mortal_kombat_t-unit_uj12_game_rom.uj12" crc="f4990bf2"/>
-    <part name="l5_mortal_kombat_t-unit_ug12_game_rom.ug12" crc="b06aeac1"/>
-  </rom>
-  <!-- Raw graphics devices in pinned MAME four-lane declaration order. -->
-  <rom index="1" zip="mk.zip" md5="None" type="merged|nonmerged">
-    <part name="l1_mortal_kombat_t-unit_ug14_game_rom.ug14" crc="9e00834e"/>
-    <part name="l1_mortal_kombat_t-unit_uj14_game_rom.uj14" crc="f4b0aaa7"/>
-    <part name="l1_mortal_kombat_t-unit_ug19_game_rom.ug19" crc="2d8c7ba1"/>
-    <part name="l1_mortal_kombat_t-unit_uj19_game_rom.uj19" crc="33b9b7a4"/>
-    <part name="l1_mortal_kombat_t-unit_ug16_game_rom.ug16" crc="52c9d1e5"/>
-    <part name="l1_mortal_kombat_t-unit_uj16_game_rom.uj16" crc="c94c58cf"/>
-    <part name="l1_mortal_kombat_t-unit_ug20_game_rom.ug20" crc="2f7e55d3"/>
-    <part name="l1_mortal_kombat_t-unit_uj20_game_rom.uj20" crc="eae96df0"/>
-    <part name="l1_mortal_kombat_t-unit_ug17_game_rom.ug17" crc="e34fe253"/>
-    <part name="l1_mortal_kombat_t-unit_uj17_game_rom.uj17" crc="a56e12f5"/>
-    <part name="l1_mortal_kombat_t-unit_ug22_game_rom.ug22" crc="b537bb4e"/>
-    <part name="l1_mortal_kombat_t-unit_uj22_game_rom.uj22" crc="5e12523b"/>
-  </rom>
-  <!-- Raw physical sound devices; reload/mirror transforms are descriptor-driven. -->
-  <rom index="2" zip="mk.zip" md5="None" type="merged|nonmerged">
-    <part name="sl1_mortal_kombat_u3_sound_rom.u3" crc="c615844c"/>
-    <part name="sl1_mortal_kombat_u12_sound_rom.u12" crc="258bd7f9"/>
-    <part name="sl1_mortal_kombat_u13_sound_rom.u13" crc="7b7ec3b6"/>
-  </rom>
-  <nvram index="4" size="16384"/>
-  <switches default="7D,FE">
-    <dip name="Test Switch" bits="0" ids="On,Off"/>
-    <dip name="Counters" bits="1" ids="Two,One"/>
-    <dip name="Coinage" bits="2,3,4,5,6" ids="-,German-Free Play,French-Free Play,USA-Free Play,-,German-4,French-4,USA-4,-,German-ECA,-,-,-,German-2,French-2,USA-2,-,-,-,-,-,German-3,French-3,USA-3,-,German-5,French-ECA,USA-ECA,-,German-1,French-1,USA-1"/>
-    <dip name="Coinage Source" bits="7" ids="CMOS,Dipswitch"/>
-    <dip name="Skip Post Test" bits="8" ids="On,Off"/>
-    <dip name="Unused" bits="9" ids="On,Off"/>
-    <dip name="Unused" bits="10" ids="On,Off"/>
-    <dip name="Comic Book Offer" bits="11" ids="Off,On"/>
-    <dip name="Attract Sound" bits="12" ids="Off,On"/>
-    <dip name="Low Blows" bits="13" ids="Off,On"/>
-    <dip name="Blood" bits="14" ids="Off,On"/>
-    <dip name="Violence" bits="15" ids="Off,On"/>
-  </switches>
-  <buttons names="High Punch,Low Punch,Block,High Kick,Low Kick,Block 2,Start,Coin" default="X,Y,A,B,R,L,Start,Select" count="6"/>
+	<name>Mortal Kombat (rev 5.0 T-Unit 03/19/93)</name>
+	<mratimestamp>20261101</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>mk</setname>
+	<year>1992</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Fighter / Versus</category>
+	<rbf>Gm0rk_Midway-T-Unit</rbf>
+	<remark>2 players</remark>
+	<switches default="7D,FE">
+		<dip bits="12" name="Attract Sound" ids="Off,On"/>
+		<dip bits="14" name="Blood" ids="Off,On"/>
+		<dip bits="2,6" name="Coinage" ids="USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,French-1,French-2,French-3,French-4,French-ECA,French-Free Play" values="31,15,23,7,27,3,29,13,21,5,25,9,1,30,14,22,6,26,2"/>
+		<dip bits="7" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
+		<dip bits="11" name="Comic Book Offer" ids="Off,On"/>
+		<dip bits="1" name="Counters" ids="One,Two" values="1,0"/>
+		<dip bits="13" name="Low Blows" ids="Off,On"/>
+		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
+		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
+		<dip bits="15" name="Violence" ids="Off,On"/>
+	</switches>
+	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
+	<romstruct>
+rom index 0 (SDRAM 0x000000):
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (6 MB of MAME "video", 32-bit interleaved)
+rom index 3 (SDRAM 0xD00000):
+0x000000 sound CPU ROM (MAME region 0x10000-0x4FFFF)
+0x040000 OKI M6295 samples (1 MB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FFDD1530 (27 presses), menu FFDD0D40; Reptile check FFCB1FF0, flag 01052940, 6 patches -->
+		<part>
+		00 00 01 00 03 B2 FC 1F E0 0D 04 B2 FC 1F 60 09 C4 B8 FC 2F 00 03 0E B2 FC 2F 00 03 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 8C 00 D4 D0 FD 0F D4 D0 FD 0F
+		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 80 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00
+		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
+		20 00 02 00 00 00 02 00 30 00 02 00 10 00 F0 00 00 00 02 80
+		</part>
+		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 010519E0, P1 character 01051290, object pointer 01051230, stage 01051820, finish flag 01051880; Reptile flag 01052940; AI level word 010519C0; demo store PC FFCB3E30 -->
+		<part repeat="524">00</part>
+		<part>
+		01 00 00 00 9E 51 10 00 29 51 10 00 57 51 10 00 30 51 10 00 5E 51 10 00 23 51 10 00 51 51 10 00
+		27 51 10 00 55 51 10 00 82 51 10 00 88 51 10 00 90 42 DF FF 90 42 DF FF 70 54 CE FF 09 0E 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 94 52 10 00 9C 51 10 00 E3 B3 FC 0F
+		</part>
+	</rom>
+	<rom index="0" zip="mk.zip" md5="fcc62085553706fb2a37ceb16fbcca48" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="f4990bf2" name="l5_mortal_kombat_t-unit_uj12_game_rom.uj12" map="01"/>
+			<part crc="b06aeac1" name="l5_mortal_kombat_t-unit_ug12_game_rom.ug12" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<interleave output="32">
+			<part crc="9e00834e" name="l1_mortal_kombat_t-unit_ug14_game_rom.ug14" map="0001"/>
+			<part crc="f4b0aaa7" name="l1_mortal_kombat_t-unit_uj14_game_rom.uj14" map="0010"/>
+			<part crc="2d8c7ba1" name="l1_mortal_kombat_t-unit_ug19_game_rom.ug19" map="0100"/>
+			<part crc="33b9b7a4" name="l1_mortal_kombat_t-unit_uj19_game_rom.uj19" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="52c9d1e5" name="l1_mortal_kombat_t-unit_ug16_game_rom.ug16" map="0001"/>
+			<part crc="c94c58cf" name="l1_mortal_kombat_t-unit_uj16_game_rom.uj16" map="0010"/>
+			<part crc="2f7e55d3" name="l1_mortal_kombat_t-unit_ug20_game_rom.ug20" map="0100"/>
+			<part crc="eae96df0" name="l1_mortal_kombat_t-unit_uj20_game_rom.uj20" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="e34fe253" name="l1_mortal_kombat_t-unit_ug17_game_rom.ug17" map="0001"/>
+			<part crc="a56e12f5" name="l1_mortal_kombat_t-unit_uj17_game_rom.uj17" map="0010"/>
+			<part crc="b537bb4e" name="l1_mortal_kombat_t-unit_ug22_game_rom.ug22" map="0100"/>
+			<part crc="5e12523b" name="l1_mortal_kombat_t-unit_uj22_game_rom.uj22" map="1000"/>
+		</interleave>
+	</rom>
+	<rom index="3" zip="mk.zip" md5="61c5e97dacc0c3820161e7b573282385" type="merged">
+		<!-- sound CPU -->
+		<part crc="c615844c" name="sl1_mortal_kombat_u3_sound_rom.u3"/>
+		<!-- OKI samples -->
+		<part crc="258bd7f9" name="sl1_mortal_kombat_u12_sound_rom.u12"/>
+		<part crc="258bd7f9" name="sl1_mortal_kombat_u12_sound_rom.u12"/>
+		<part crc="7b7ec3b6" name="sl1_mortal_kombat_u13_sound_rom.u13"/>
+		<part crc="7b7ec3b6" name="sl1_mortal_kombat_u13_sound_rom.u13"/>
+	</rom>
+	<nvram index="2" size="16384"/>
+	<!-- cheats (rtl/tunit_cheats.sv): Reptile check FFCB1FF0, flag 01052940, 6 patches; 24 cheats -->
+	<cheats size="8" max="8">
+		<cheat name="Always Get Fatality Bonus">21AC FC1F 0003 FFFF</cheat>
+		<cheat name="Always have Reptile Clues">2EA1 FC1F 0003 FFFF 32A1 FC1F 09C0 FFFF</cheat>
+		<cheat name="Always Secret Game Over">05A6 FC1F 3CC0 FFFF</cheat>
+		<cheat name="Attract Mode Volume Never">9E8C FC1F 00C0 FFFF</cheat>
+		<cheat name="Bloody Floors">A9E7 FD1F 0003 FFFF</cheat>
+		<cheat name="Break Test Your Might">ADBE FD1F 0000 FFFF</cheat>
+		<cheat name="CPU Performs Fatalities">84AE FD1F 0003 FFFF</cheat>
+		<cheat name="CPU Players Won't Block">D570 FD1F 10C0 FFFF 937F FD1F 14C0 FFFF E290 FD1F 0BC0 FFFF</cheat>
+		<cheat name="Disable Blocking">23EF FC1F 0003 FFFF</cheat>
+		<cheat name="Enable Single Round Matches">0EA0 FC1F 01C0 FFFF</cheat>
+		<cheat name="Get Double Flawless Bonus">3251 1000 0200 FF00</cheat>
+		<cheat name="Hit Anywhere (Both Players)">0DEF FC1F 04C0 FFFF</cheat>
+		<cheat name="I Am Reptile. Find Me!">AEA1 FC1F 4019 FFFF</cheat>
+		<cheat name="Infinite Fatality Time">14A1 FC1F F0C0 FFFF</cheat>
+		<cheat name="Infinite Time">899F FC1F E2C0 FFFF 8A9F FC1F 0003 FFFF</cheat>
+		<cheat name="Night Mode">CC98 FC1F 04C0 FFFF</cheat>
+		<cheat name="One Button Fatalities">AF9B FD1F 08C0 FFFF 809A FD1F 01C0 FFFF DA9C FD1F 06C0 FFFF 299B FD1F 0FC0 FFFF 1F9C FD1F 0CC0 FFFF 499B FD1F 08C0 FFFF 1B9A FD1F 01C0 FFFF</cheat>
+		<cheat name="P1 Drain All Energy Now!">3051 1040 0000 FFFF</cheat>
+		<cheat name="P1 Infinite Energy">3051 1020 A100 FFFF</cheat>
+		<cheat name="P2 Drain All Energy Now!">5E51 1040 0000 FFFF 8651 1040 0200 FFFF</cheat>
+		<cheat name="P2 Infinite Energy">5E51 1020 A100 FFFF</cheat>
+		<cheat name="Pit Bottom in Stage Lineup">4BB1 FC1F F5FF FFFF</cheat>
+		<cheat name="Single Opponent Endurance">77A4 FC1F 69C0 FFFF</cheat>
+		<cheat name="View Ending after 1P Match">12A0 FC1F 3FC0 FFFF 87A0 FC1F 0003 FFFF</cheat>
+	</cheats>
 </misterromdescription>

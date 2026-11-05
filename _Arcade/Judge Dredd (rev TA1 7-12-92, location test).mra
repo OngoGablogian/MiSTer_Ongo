@@ -1,65 +1,96 @@
 <misterromdescription>
-  <!-- Candidate generated from official MAME 0.289 signed tag mame0289 (f34f02505e32c1993c6a782b6814232cbfc74e36); no ROM data is distributed. -->
-  <about author="blahm1d"/>
-  <rotation>horizontal</rotation>
-  <name>Judge Dredd (rev TA1 7/12/92, location test)</name>
-  <setname>jdreddp</setname>
-  <parent>jdreddp</parent>
-  <mameversion>0289</mameversion>
-  <year>1993</year>
-  <manufacturer>Midway</manufacturer>
-  <players>3</players>
-  <rbf>blahm1d_tunit</rbf>
-  <joystick>8-way</joystick>
-  <region>World</region>
-  <!-- Descriptor: magic/version/profile/sound/gfx/program/flags/xor. -->
-  <rom index="3">
-    <part>54 01 04 00 03 01 00 53</part>
-  </rom>
-  <!-- Physical TMS34010 program EPROMs: UJ12 even/low, then UG12 odd/high. -->
-  <rom index="0" zip="jdreddp.zip" md5="None" type="merged|nonmerged">
-    <part name="t1_judge_dredd_game_rom_uj12.uj12" crc="7e5c8d5a"/>
-    <part name="t1_judge_dredd_game_rom_ug12.ug12" crc="a16b8a4a"/>
-  </rom>
-  <!-- Raw graphics devices in pinned MAME four-lane declaration order. -->
-  <rom index="1" zip="jdreddp.zip" md5="None" type="merged|nonmerged">
-    <part name="t1_judge_dredd_game_rom_ug14.ug14" crc="468484d7"/>
-    <part name="t1_judge_dredd_game_rom_uj14.uj14" crc="fe6ec0ec"/>
-    <part name="t1_judge_dredd_game_rom_ug19.ug19" crc="e076c08e"/>
-    <part name="t1_judge_dredd_game_rom_uj19.uj19" crc="bd8cffe0"/>
-    <part name="t1_judge_dredd_game_rom_ug16.ug16" crc="1d7f12b6"/>
-    <part name="t1_judge_dredd_game_rom_uj16.uj16" crc="31d4a71b"/>
-    <part name="t1_judge_dredd_game_rom_ug20.ug20" crc="7b8c370a"/>
-    <part name="t1_judge_dredd_game_rom_uj20.uj20" crc="8fc7bfb9"/>
-    <part name="t1_judge_dredd_game_rom_ug17.ug17" crc="b6d83d74"/>
-    <part name="t1_judge_dredd_game_rom_uj17.uj17" crc="ddc76f0b"/>
-    <part name="t1_judge_dredd_game_rom_ug22.ug22" crc="6705d5b3"/>
-    <part name="t1_judge_dredd_game_rom_uj22.uj22" crc="7438295e"/>
-    <part name="t1_judge_dredd_game_rom_ug18.ug18" crc="c8a45e01"/>
-    <part name="t1_judge_dredd_game_rom_uj18.uj18" crc="3e16e7a9"/>
-    <part name="t1_judge_dredd_game_rom_ug23.ug23" crc="0c9edbc4"/>
-    <part name="t1_judge_dredd_game_rom_uj23.uj23" crc="86ea157d"/>
-  </rom>
-  <!-- Raw physical sound devices; reload/mirror transforms are descriptor-driven. -->
-  <rom index="2" zip="jdreddp.zip" md5="None" type="merged|nonmerged">
-    <part name="t1_judge_dredd_sound_rom_u3.u3" crc="6154d108"/>
-    <part name="t1_judge_dredd_sound_rom_u12.u12" crc="ef32f202"/>
-    <part name="t1_judge_dredd_sound_rom_u13.u13" crc="3dc70473"/>
-  </rom>
-  <nvram index="4" size="16384"/>
-  <switches default="FF,5C">
-    <dip name="Test Switch" bits="0" ids="On,Off"/>
-    <dip name="Unused" bits="1" ids="On,Off"/>
-    <dip name="Unused" bits="2" ids="On,Off"/>
-    <dip name="Unused" bits="3" ids="On,Off"/>
-    <dip name="Unused" bits="4" ids="On,Off"/>
-    <dip name="Blood" bits="5" ids="Off,On"/>
-    <dip name="Validator" bits="6" ids="Installed,None"/>
-    <dip name="Freeze" bits="7" ids="On,Off"/>
-    <dip name="Coin Counters" bits="8,9" ids="1 Counter / 1 count/coin,2 Counters / 1 count/coin,1 Counter / Totalizing,-"/>
-    <dip name="Country" bits="10,11" ids="Unused,German,French,USA"/>
-    <dip name="Coinage" bits="12,13,14" ids="Free Play,4,-,2,-,3,ECA,1"/>
-    <dip name="Coinage Source" bits="15" ids="CMOS,Dipswitch"/>
-  </switches>
-  <buttons names="Kick,Jump,Punch,Crouch,Start,Coin" default="A,B,X,Y,Start,Select" count="4"/>
+	<name>Judge Dredd (rev TA1 7/12/92, location test)</name>
+	<mratimestamp>20261101</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>jdreddp</setname>
+	<year>1993</year>
+	<manufacturer>Midway</manufacturer>
+	<category>Platform / Shooter Scrolling</category>
+	<rbf>Gm0rk_Midway-T-Unit</rbf>
+	<remark>3 players</remark>
+	<switches default="FF,5C">
+		<dip bits="5" name="Blood" ids="Off,On"/>
+		<dip bits="8,9" name="Coin Counters" ids="1 Counter - Totalizing,2 Counters - 1 count/coin,1 Counter - 1 count/coin" values="2,1,0"/>
+		<dip bits="12,14" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
+		<dip bits="15" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
+		<dip bits="10,11" name="Country" ids="USA,French,German" values="3,2,1"/>
+		<dip bits="7" name="Freeze" ids="Off,On" values="1,0"/>
+		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
+		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
+		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
+		<dip bits="6" name="Validator" ids="Installed,None"/>
+	</switches>
+	<buttons names="Kick,Jump,Punch,Crouch,-,-,Start,Coin,Test,Pause" default="X,B,A,Y,-,-,Start,Select,-,-"/>
+	<romstruct>
+rom index 0 (SDRAM 0x000000):
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (8 MB of MAME "video", 32-bit interleaved)
+rom index 3 (SDRAM 0xD00000):
+0x000000 sound CPU ROM (MAME region 0x10000-0x4FFFF)
+0x040000 OKI M6295 samples (1 MB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): secret audits code 9862, C832 with 0802 held -->
+		<part>
+		05 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 2C 00 00 00 00 00 00 00 00 00
+		02 08 0A 00 62 98 0A 00 02 08 05 00 32 C8 0A 00 02 08 19 00 00 00 02 80 02 08 0A 00 62 98 0A 00
+		02 08 05 00 32 C8 0A 00 02 08 19 00 00 00 28 00 40 00 08 00 00 00 20 00 40 00 08 00 00 00 20 00
+		40 00 08 00 00 00 20 00 40 00 08 00 00 00 20 00 40 00 08 00 00 00 20 00 40 00 08 00 00 00 20 00
+		00 00 3C 03 00 00 02 80
+		</part>
+	</rom>
+	<rom index="0" zip="jdreddp.zip" md5="2fa8c588d27e34c0c354c2aa2142f872" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="7e5c8d5a" name="t1_judge_dredd_game_rom_uj12.uj12" map="01"/>
+			<part crc="a16b8a4a" name="t1_judge_dredd_game_rom_ug12.ug12" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<interleave output="32">
+			<part crc="468484d7" name="t1_judge_dredd_game_rom_ug14.ug14" map="0001"/>
+			<part crc="fe6ec0ec" name="t1_judge_dredd_game_rom_uj14.uj14" map="0010"/>
+			<part crc="e076c08e" name="t1_judge_dredd_game_rom_ug19.ug19" map="0100"/>
+			<part crc="bd8cffe0" name="t1_judge_dredd_game_rom_uj19.uj19" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="1d7f12b6" name="t1_judge_dredd_game_rom_ug16.ug16" map="0001"/>
+			<part crc="31d4a71b" name="t1_judge_dredd_game_rom_uj16.uj16" map="0010"/>
+			<part crc="7b8c370a" name="t1_judge_dredd_game_rom_ug20.ug20" map="0100"/>
+			<part crc="8fc7bfb9" name="t1_judge_dredd_game_rom_uj20.uj20" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="b6d83d74" name="t1_judge_dredd_game_rom_ug17.ug17" map="0001"/>
+			<part crc="ddc76f0b" name="t1_judge_dredd_game_rom_uj17.uj17" map="0010"/>
+			<part crc="6705d5b3" name="t1_judge_dredd_game_rom_ug22.ug22" map="0100"/>
+			<part crc="7438295e" name="t1_judge_dredd_game_rom_uj22.uj22" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="c8a45e01" name="t1_judge_dredd_game_rom_ug18.ug18" map="0001"/>
+			<part crc="3e16e7a9" name="t1_judge_dredd_game_rom_uj18.uj18" map="0010"/>
+			<part crc="0c9edbc4" name="t1_judge_dredd_game_rom_ug23.ug23" map="0100"/>
+			<part crc="86ea157d" name="t1_judge_dredd_game_rom_uj23.uj23" map="1000"/>
+		</interleave>
+	</rom>
+	<rom index="3" zip="jdreddp.zip" md5="c7a92d2bf191bcb4d7f8986fbd145240" type="merged">
+		<!-- sound CPU -->
+		<part crc="6154d108" name="t1_judge_dredd_sound_rom_u3.u3"/>
+		<part crc="6154d108" name="t1_judge_dredd_sound_rom_u3.u3"/>
+		<!-- OKI samples -->
+		<part crc="ef32f202" name="t1_judge_dredd_sound_rom_u12.u12"/>
+		<part crc="3dc70473" name="t1_judge_dredd_sound_rom_u13.u13"/>
+	</rom>
+	<nvram index="2" size="16384"/>
+	<!-- cheats (rtl/tunit_cheats.sv): 9 cheats -->
+	<cheats size="8" max="8">
+		<cheat name="P1 Infinite Energy">B2E4 1000 C800 FF00</cheat>
+		<cheat name="P1 Infinite Lives">B1E4 1000 0A00 FF00</cheat>
+		<cheat name="P1 Invincibility">BBE4 1000 2400 FFFF</cheat>
+		<cheat name="P2 Infinite Energy">E3E4 1000 C800 FF00</cheat>
+		<cheat name="P2 Infinite Lives">E2E4 1000 0A00 FF00</cheat>
+		<cheat name="P2 Invincibility">ECE4 1000 2400 FFFF</cheat>
+		<cheat name="P3 Infinite Energy">14E5 1000 C800 FF00</cheat>
+		<cheat name="P3 Infinite Lives">13E5 1000 0A00 FF00</cheat>
+		<cheat name="P3 Invincibility">1DE5 1000 2400 FFFF</cheat>
+	</cheats>
 </misterromdescription>
