@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misterromdescription>
+    <name>Spinal Breakers (World)</name>
+    <setname>spinlbrk</setname>
+    <mameversion>0289</mameversion>
+    <rbf>Meathax_SpinalBreakers</rbf>
+    <year>1990</year>
+    <manufacturer>V-System Co.</manufacturer>
+    <rotation>horizontal</rotation>
+    <players>2</players>
+    <joystick>8-way</joystick>
+    <buttons names="Shot,Dodge,Bazooka,-,-,-,Start,Coin,Pause" default="A,B,X,Start,Select,R" count="3"/>
+    <switches base="16" default="FF,FF">
+        <dip name="Coin A" bits="0,3" ids="1-1C 1-2 HP,1-1-1-1C 1-1-1-2HP,1x5C 1x4-2HP,2-2C 1-2 HP,2-1-1C 1-1-1HP,2C 2 HP,5C 1 HP,4C 1 HP,3C 1 HP,2C 1 HP,1C 6 HP,1C 5 HP,1C 4 HP,1C 3 HP,1C 2 HP,1C 1 HP"/>
+        <dip name="Coin B" bits="4,7" ids="1-1C 1-2 HP,1-1-1-1C 1-1-1-2HP,1x5C 1x4-2HP,2-2C 1-2 HP,2-1-1C 1-1-1HP,2C 2 HP,5C 1 HP,4C 1 HP,3C 1 HP,2C 1 HP,1C 6 HP,1C 5 HP,1C 4 HP,1C 3 HP,1C 2 HP,1C 1 HP"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Credits for Extra HP" bits="10" ids="Off,On"/>
+        <dip name="Flip Screen" bits="11" ids="On,Off"/>
+        <dip name="Lever Type" bits="12" ids="Analog,Digital"/>
+        <dip name="Service Mode" bits="13" ids="On,Off"/>
+        <dip name="Health Pack" bits="14" ids="40 Hitpoints,32 Hitpoints"/>
+        <dip name="Life Restoration" bits="15" ids="5 Points,10 Points"/>
+    </switches>
+    <rom index="3" description="hiscore">
+        <part>00 00 00 00 00 10 00 02 00 02 00 01 00 01 01 00</part>
+        <part>00 FF AC 76 8C 00 50 00</part>
+    </rom>
+    <nvram index="4" size="140"/>
+    <rom index="0" zip="spinlbrk.zip" md5="164ae7b97ac38f41c2f67c4159ddb917">
+        <interleave output="16">
+            <part name="ic98" crc="36c2bf70" map="01"/>
+            <part name="ic104" crc="34a7e158" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ic93" crc="726f4683" map="01"/>
+            <part name="ic94" crc="c4385e03" map="10"/>
+        </interleave>
+        <part repeat="0x20000">00</part>
+        <part name="ic118" crc="1025f024"/>
+        <part name="ic118" crc="1025f024"/>
+        <part name="ic117" crc="625ada41"/>
+        <part name="ic15" crc="e318cf3a"/>
+        <part name="ic9" crc="e071f674"/>
+        <part name="ic17" crc="a63d5a55"/>
+        <part name="ic11" crc="7dcc913d"/>
+        <part name="ic16" crc="0d84af7f"/>
+        <part repeat="0x80000">00</part>
+        <interleave output="32">
+            <part name="ic12" crc="d63fac4e" map="0021"/>
+            <part name="ic18" crc="5a60444b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="ic14" crc="1befd0f3" map="0021"/>
+            <part name="ic35" crc="eba8e1a3" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="ic20" crc="c2f84a61" map="0021"/>
+            <part name="ic40" crc="5ef5aa7e" map="2100"/>
+        </interleave>
+        <interleave output="16">
+            <part name="ic19" crc="db24eeaa" map="01"/>
+            <part name="ic13" crc="97025bf4" map="10"/>
+        </interleave>
+        <part repeat="0x4000">00</part>
+        <part name="ic166" crc="6e0d063a"/>
+        <part name="ic163" crc="e6621dfb"/>
+    </rom>
+</misterromdescription>

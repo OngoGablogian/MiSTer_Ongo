@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<misterromdescription>
+  <name>Gaiapolis (ver UAF)</name>
+  <setname>gaiapolsu</setname>
+  <mameversion>0289</mameversion>
+  <year>1993</year>
+  <manufacturer>Konami</manufacturer>
+  <players>2</players>
+  <joystick>8</joystick>
+  <rotation>vertical</rotation>
+  <rbf>Meathax_Konami353396A</rbf>
+  <rom index="0" zip="gaiapolsu.zip|gaiapols.zip" md5="None" address="0x30000000">
+    <part repeat="0x10">00</part>
+    <interleave output="16">
+      <part name="123e07.24m" crc="f1a1db0f" map="10"/>
+      <part name="123e09.19l" crc="4b3b57e7" map="01"/>
+    </interleave>
+    <interleave output="16">
+      <part name="123uaf11.19p" crc="39dc1298" map="10"/>
+      <part name="123uaf12.17p" crc="c633cf52" map="01"/>
+    </interleave>
+    <part repeat="0x80000">00</part>
+    <part repeat="0x500000">FF</part>
+    <part name="123e13.9c" crc="e772f822"/>
+    <part repeat="0xc0000">FF</part>
+    <part name="123e14.2g" crc="65dfd3ff"/>
+    <part name="123e15.2m" crc="7017ff07"/>
+    <part name="123e04.32n" crc="0d4d5b8b"/>
+    <part name="123e05.29n" crc="7d123f3e"/>
+    <part name="123e06.26n" crc="fa50121e"/>
+    <part name="123e01.36j" crc="9dbc9678"/>
+    <part name="123e02.34j" crc="b8e3f500"/>
+    <part name="123e03.36m" crc="fde4749f"/>
+    <part repeat="0xe0000">FF</part>
+    <interleave output="32">
+      <part name="123e16.2t" crc="a3238200" map="0012"/>
+      <part name="123e17.2x" crc="bd0b9fb9" map="1200"/>
+    </interleave>
+    <part repeat="0x300000">00</part>
+    <part repeat="0x300000">FF</part>
+    <interleave output="64">
+      <part name="123e19.34u" crc="219a7c26" map="00000021"/>
+      <part name="123e21.34y" crc="1888947b" map="00002100"/>
+      <part name="123e18.36u" crc="3719b6d4" map="00210000"/>
+      <part name="123e20.36y" crc="490a6f64" map="21000000"/>
+    </interleave>
+    <part name="gaiapolsu.nv" crc="7ece27b6"/>
+    <!-- Skip the startup diagnostics after sending the sound initialization command. -->
+    <patch offset="0x201bee">f9 4e 20 00 06 04</patch>
+  </rom>
+  <rom index="1">
+    <part>01 80</part>
+  </rom>
+  <nvram index="2" size="384"/>
+  <switches page_id="1" page_name="DIP switches" base="16" default="ef,ff,ff,ff">
+    <dip name="Sound Output" bits="4" ids="Stereo,Mono"/>
+    <dip name="Flip Screen" bits="5" ids="On,Off"/>
+  </switches>
+  <buttons names="Attack,Guardian,Magic,Start,Coin,Pause,Service,Test" default="A,B,X,Start,Select,R,-,-" count="3"/>
+</misterromdescription>

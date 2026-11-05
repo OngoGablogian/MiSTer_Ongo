@@ -1,0 +1,77 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="Andrea Bogazzi" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
+    <name>Radical Radial (US)</name>
+    <setname>radrad</setname>
+    <mameversion>0289</mameversion>
+    <year>1982</year>
+    <manufacturer>Logitec Corp. (Nichibutsu USA license)</manufacturer>
+    <players>2</players>
+    <rbf>Meathax_Seicross</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="radrad.zip" md5="61cd883a76ad65993856e411f0a30021" address="0x30000000">
+        <!--  -->
+        <part>
+            05 00 00 00 </part>
+        <!-- maincpu - starts at 0x0 - length 0x7800 (15 bits) -->
+        <part name="1.3a" crc="b1e958ca"/>
+        <part name="2.3b" crc="30ba76b3"/>
+        <part name="3.3c" crc="1c9f397b"/>
+        <part name="4.3d" crc="453966a3"/>
+        <part name="5.3e" crc="c337c4bd"/>
+        <part name="6.3f" crc="06e15b59"/>
+        <part name="7.3g" crc="02b1f9c9"/>
+        <part name="8.3h" crc="911c90e8"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- gfx - starts at 0x7800 - length 0x4000 (14 bits) -->
+        <part name="11.l7" crc="4ace7afb"/>
+        <part name="12.n7" crc="b19b8473"/>
+        <part name="9.j7" crc="229939a3"/>
+        <part name="10.j7" crc="79237913"/>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0xB800 - length 0x40 (6 bits) -->
+        <part name="clr.9c" crc="c9d88422"/>
+        <part name="clr.9b" crc="ee81af16"/>
+        <!-- Total 0xB840 bytes - 46 kBytes -->
+    </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="f3,f1,f0,ff">
+        <DSW1/>
+        <dip name="Cabinet" bits="0" ids="Cocktail,Upright"/>
+        <dip name="Lives" bits="1,2" ids="2,3,4,5"/>
+        <dip name="Bonus Life" bits="3" ids="On,Off"/>
+        <DSW2/>
+        <dip name="Coin A" bits="8,11" ids="Free Play,1/1,2/1,3/1,4/1,5/1,6/1,7/1,-,1/2,2/2,3/2,4/2,5/2,6/2,7/2"/>
+        <DSW3/>
+        <dip name="Coin B" bits="16,19" ids="1/1,1/2,1/3,1/4,1/5,1/6,1/7,1/8,2/1,2/2,2/3,2/4,2/5,2/6,2/7,2/8"/>
+    </switches>
+    <buttons names="Shoot,Jump,Start,Coin" default="A,B,Start,Select" count="2"/>
+    <!-- Canonical hiscore.dat ranges, initialization verified in MAME 0.289. -->
+    <rom index="3" md5="none"><part>02ee0000ffff00020002000100ff04000000780203020000000091ba06240000</part></rom>
+    <rom index="4"/>
+    <nvram index="4" size="9"/>
+</misterromdescription>

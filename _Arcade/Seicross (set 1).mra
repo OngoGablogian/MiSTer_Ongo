@@ -1,0 +1,86 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="Andrea Bogazzi" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>vertical (cw)</rotation>
+    <name>Seicross (set 1)</name>
+    <setname>seicross</setname>
+    <mameversion>0289</mameversion>
+    <year>1984</year>
+    <manufacturer>Nichibutsu / Alice</manufacturer>
+    <players>2</players>
+    <rbf>Meathax_Seicross</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="seicross.zip" md5="419bc6ae03bfc585e40e57933e4ac0d2" address="0x30000000">
+        <!--  -->
+        <part>
+            01 00 00 00 </part>
+        <!-- maincpu - starts at 0x0 - length 0x7800 (15 bits) -->
+        <part name="smc1" crc="f6c3aeca"/>
+        <part name="smc2" crc="0ec6c218"/>
+        <part name="smc3" crc="ceb3c8f4"/>
+        <part name="smc4" crc="3112af59"/>
+        <part name="smc5" crc="b494a993"/>
+        <part name="smc6" crc="09d5b9da"/>
+        <part name="smc7" crc="13052b03"/>
+        <part name="smc8" crc="2093461d"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- gfx - starts at 0x7800 - length 0x4000 (14 bits) -->
+        <part name="sz11.7k" crc="fbd9b91d"/>
+        <part name="smcd" crc="c3c953c4"/>
+        <part name="sz9.7j" crc="4819f0cd"/>
+        <part name="sz10.7h" crc="4c268778"/>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0xB800 - length 0x40 (6 bits) -->
+        <part name="sz73.10c" crc="4d218a3c"/>
+        <part name="sz74.10b" crc="c550531c"/>
+        <!-- Total 0xB840 bytes - 46 kBytes -->
+    </rom>
+    <!-- Vertical screen. -->
+    <rom index="1">
+        <part>01 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="f0,f1,f0,fc">
+        <DEBUG/>
+        <dip name="Debug Mode" bits="29" ids="On,Off"/>
+        <dip name="Invulnerability" bits="30" ids="On,Off"/>
+        <DSW1/>
+        <dip name="Free Play" bits="1" ids="Off,On"/>
+        <dip name="Bonus Life" bits="2,3" ids="20k 40k,30k,30k 50k,30k 60k 90k"/>
+        <DSW2/>
+        <dip name="Cabinet" bits="8" ids="Cocktail,Upright"/>
+        <dip name="Difficulty" bits="9" ids="Easy,Hard"/>
+        <dip name="Lives" bits="10,11" ids="3,4,2,5"/>
+        <DSW3/>
+        <dip name="Coin B" bits="16,17" ids="1/1,2/1,3/1,4/1"/>
+        <dip name="Coin A" bits="18,19" ids="1/1,1/2,1/3,1/6"/>
+        <TEST/>
+        <dip name="Service Mode" bits="24" ids="Off,On"/>
+        <dip name="Connection Error" bits="25" ids="Off,On"/>
+    </switches>
+    <buttons names="Fire,-,Start,Coin" default="A,Start,Select" count="1"/>
+    <!-- Canonical hiscore.dat ranges, initialization verified in MAME 0.289. -->
+    <rom index="3" md5="none"><part>02ee0000ffff00020002000100ff040000007ad41e000a00</part></rom>
+    <rom index="4"/>
+    <nvram index="4" size="30"/>
+</misterromdescription>

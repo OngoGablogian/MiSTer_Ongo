@@ -1,0 +1,92 @@
+<!--          FPGA arcade hardware by Jotego
+
+              This core is available for hardware compatible with MiST and MiSTer
+              Other FPGA systems may be supported by the time you read this.
+              This work is not mantained by the MiSTer project. Please contact the
+              core author for issues and updates.
+
+              (c) Jose Tejada, 2026. Please support this research
+              Patreon: https://patreon.com/jotego
+
+              The author does not endorse or participate in illegal distribution
+              of copyrighted material. This work can be used with compatible
+              software. This software can be homebrew projects or legally
+              obtained memory dumps of compatible games.
+
+              This file license is GNU GPLv2.
+              You can read the whole license file in
+              https://opensource.org/licenses/gpl-2.0.php
+
+-->
+
+<misterromdescription>
+    <about author="Andrea Bogazzi" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
+    <rotation>horizontal</rotation>
+    <name>Frisky Tom (set 1)</name>
+    <setname>friskyt</setname>
+    <mameversion>0289</mameversion>
+    <year>1981</year>
+    <manufacturer>Nichibutsu</manufacturer>
+    <players>2</players>
+    <rbf>Meathax_Seicross</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="friskyt.zip" md5="cce428631ee131810203a0194852d02e" address="0x30000000">
+        <!--  -->
+        <part>
+            03 00 00 00 </part>
+        <!-- maincpu - starts at 0x0 - length 0x7800 (15 bits) -->
+        <part name="ftom.01" crc="bce5d486"/>
+        <part name="ftom.02" crc="63157d6e"/>
+        <part name="ftom.03" crc="c8d9ef2c"/>
+        <part name="ftom.04" crc="23a01aac"/>
+        <part name="ftom.05" crc="bfaf702a"/>
+        <part name="ftom.06" crc="bce70b9c"/>
+        <part name="ftom.07" crc="b2ef303a"/>
+        <part name="ft8_8.rom" crc="10461a24"/>
+        <!-- JTFRAME_BA1_START -->
+        <!-- gfx - starts at 0x7800 - length 0x4000 (14 bits) -->
+        <part name="ftom.11" crc="1ec6ff65"/>
+        <part name="ftom.12" crc="3b8f40b5"/>
+        <part name="ftom.09" crc="60642f25"/>
+        <part name="ftom.10" crc="07b9dcfc"/>
+        <!-- JTFRAME_PROM_START -->
+        <!-- proms - starts at 0xB800 - length 0x40 (6 bits) -->
+        <part name="ft.9c" crc="0032167e"/>
+        <part name="ft.9b" crc="6b364e69"/>
+        <!-- Total 0xB840 bytes - 46 kBytes -->
+    </rom>
+    <rom index="2">
+        <part>
+00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 01
+00 01 00 01 00 01 00 03 00 01 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="256"/>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff,ff,5c">
+        <IN1/>
+        <dip name="Service Mode" bits="29" ids="Off,On"/>
+        <dip name="Counter Check" bits="31" ids="Off,On"/>
+        <TEST/>
+        <dip name="Test Mode" bits="24" ids="Off,On"/>
+        <dip name="Connection Error" bits="25" ids="Off,On"/>
+    </switches>
+    <buttons names="-,-,Start,Coin" default="Start,Select" count="0"/>
+</misterromdescription>
