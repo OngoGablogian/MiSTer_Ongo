@@ -125,6 +125,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [MiSTerbrot](https://github.com/catallo/MiSTerbrot)                                                                              |
 | [Momoko 120%](https://github.com/javi-ivaj/momoko120-fpga)                                                                       |
 | [Mr. Do's Castle Hardware](https://github.com/meathax/mrdo)                                                                      |
+| [Mustache Boy](https://www.patreon.com/bazset/posts/mustache-boy-173910277)                                                      |
 | [Mysterious Stones - Dr. John's Adventure](https://www.patreon.com/Meathax/posts/mysterious-1984-172246699)                      |
 | [Namco NA-1 / NA-2](https://github.com/kyledlester/Namco_NA1_NA2_MiSTer)                                                         |
 | [Namco NB-1](https://github.com/kyledlester/Namco_NB1_MiSTer)                                                                    |
@@ -162,6 +163,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [R-Shark / Super-X (Dooyong)](https://github.com/kyledlester/R_Shark_Super_X_MiSTer)                                             |
 | [Reaktor](https://www.patreon.com/bazset/posts/reaktor-1987-172959189)                                                           |
 | [Return of the Jedi](https://github.com/Usquebagh/Arcade-Jedi_MiSTer)                                                            |
+| [Round Up 5 - Super Delta Force](https://www.patreon.com/bazset/posts/round-up-5-super-174367571)                                |
 | [S.T.U.N. Runner](https://www.patreon.com/Meathax/posts/s-t-u-n-runner-170684647)                                                |
 | [Sammy Seta Visco SSV](https://github.com/meathax/SVV)                                                                           |
 | [Sauro](https://www.patreon.com/bazset/posts/sauro-tecfri-173408965)                                                             |
@@ -207,6 +209,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Tee'd Off](https://www.patreon.com/bazset/posts/teed-off-1986-172816305)                                                        |
 | [Texas Instruments TI-82](https://github.com/Lentrave/TI82_MiSTer_Core)                                                          |
 | [Texas Instruments TI-83 Plus](https://github.com/Lentrave/TI83Plus_MiSTer_Core)                                                 |
+| [The Berlin Wall](https://www.patreon.com/bazset/posts/berlin-wall-1991-174210287)                                               |
 | [The Legend of Kage](https://mister.blahm1d.com/core-legendofkage.html)                                                          |
 | [The Lost Castle In Darkmist](https://www.patreon.com/Meathax/posts/lost-castle-in-172389752)                                    |
 | [The Masters of Kin](https://www.patreon.com/bazset/posts/masters-of-kin-173238309)                                              |

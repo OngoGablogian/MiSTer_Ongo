@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BAZSET CORE: Mustache Boy (Japan) -->
+<!-- RBF FILE: bazset_MustacheBoy.rbf -->
+<!-- REQUIRED ROM ZIP FILE(S): mustache.zip; t5182.zip -->
+<!-- B01 private FPGA hardware retest: 90 CW boot default, pending owner test. -->
+<!-- MAME 0.289 driver seibu/mustache.cpp; preserve original ROM CRCs. -->
+<!-- Index 0 = main encrypted Z80 program 0xC000 bytes. -->
+<!-- Index 1 = T5182 internal sound ROM 0x2000 bytes. -->
+<!-- Index 2 = sound external ROM 0x8000, tiles 0xC000, -->
+<!--           sprites 0x20000, PROMs 0x1300, total 0x35300. -->
+<misterromdescription>
+  <!-- BAZSET MRA14 source metadata for B01 private HDMI hardware retest. -->
+  <bazset_runtime version="1">
+    <pause>
+      <title>MUSTACHE BOY</title>
+      <build>BAZSET B01.2 PVM CRT TEST</build>
+      <core_by>bazset</core_by>
+      <patreon>patreon.com/c/bazset</patreon>
+      <x>x.com/bazset_</x>
+      <beta_testers>None yet</beta_testers>
+      <patreon_supporters>Alexander Facchini | Groquik | BabaYaga326 | Curt Dittmer | Alessandro Gulli | RGM | JamieCRT | AlfEightyOne | Scott Dexter</patreon_supporters>
+      <special_thanks>Original Seibu Kaihatsu game developers</special_thanks>
+      <bug_prompt>BUGS? REPORT ON MY PATREON</bug_prompt>
+    </pause>
+    <pause_style>
+      <colors background="#080B18" card="#101522" border="#D9A441" text="#F0E9D7" dim="#71798A" accent="#5DE4FF"/>
+      <layout preset="compact"/>
+      <marquee frames="12"/>
+    </pause_style>
+  </bazset_runtime>
+  <name>Mustache Boy (Japan)</name>
+  <setname>mustache</setname>
+  <mameversion>0289</mameversion>
+  <year>1987</year>
+  <region>Japan</region>
+  <category>Arcade</category>
+  <manufacturer>Seibu Kaihatsu (March license)</manufacturer>
+  <players>2</players>
+  <rotation>vertical</rotation>
+  <rbf>bazset_MustacheBoy</rbf>
+  <joystick>8</joystick>
+  <!-- DIP1 factory defaults: Normal difficulty, 3 lives, demo sounds on.
+       DIP2 1C/1C, upright, freeplay off, no hardware flip. -->
+  <switches page_id="1" page_name="DIP Switches" base="16" default="DD,FF">
+    <DSWA/>
+    <dip name="Cabinet" bits="0" ids="Cocktail,Upright"/>
+    <dip name="Difficulty" bits="1,2" ids="Hardest,Hard,Normal,Easy"/>
+    <dip name="Lives" bits="3,4" ids="5,4,1,3"/>
+    <dip name="Demo Sounds" bits="5" ids="On,Off"/>
+    <DSWB/>
+    <dip name="Coin A" bits="8,9,10" ids="5C/1C,1C/5C,3C/1C,1C/2C,4C/1C,1C/3C,2C/1C,1C/1C"/>
+    <dip name="Coin B" bits="11,12" ids="2C/3C,1C/2C,2C/1C,1C/1C"/>
+    <dip name="Service" bits="13" ids="On,Off"/>
+    <dip name="Free Play" bits="14" ids="On,Off"/>
+    <dip name="Hardware Flip" bits="15" ids="On,Off"/>
+  </switches>
+  <buttons names="Button 1,Button 2,Coin,Start 1P,Start 2P" default="A,B,Select,Start,R" count="2"/>
+  <rom index="0" zip="mustache.zip">
+    <part name="mustache.h18" crc="123bd9b8"/>
+    <part name="mustache.h16" crc="62552beb"/>
+  </rom>
+  <rom index="1" zip="t5182.zip">
+    <part name="t5182.rom" crc="d354c8fc"/>
+  </rom>
+  <rom index="2" zip="mustache.zip">
+    <part name="mustache.e5" crc="efbb1943"/>
+    <part name="mustache.a13" crc="9baee4a7"/>
+    <part name="mustache.a14" crc="8155387d"/>
+    <part name="mustache.a16" crc="4db4448d"/>
+    <part name="mustache.a4" crc="d5c3bbbf"/>
+    <part name="mustache.a7" crc="e2a6012d"/>
+    <part name="mustache.a5" crc="c975fb06"/>
+    <part name="mustache.a8" crc="2e180ee4"/>
+    <part name="mustache.c3" crc="68575300"/>
+    <part name="mustache.c2" crc="eb008d62"/>
+    <part name="mustache.c1" crc="65da3604"/>
+    <part name="mustache.b6" crc="5f83fa35"/>
+  </rom>
+
+
+  <!-- MRA14 BZM1 metadata index 249, no game ROM/ DIPs overlap. -->
+  <rom index="249"><part>425A4D3183020000F398ECB37B226F7364223A7B2264656661756C7473223A22222C227669736962696C697479223A22227D2C227061757365223A7B22626574615F74657374657273223A224E6F6E6520796574222C226275675F70726F6D7074223A22425547533F205245504F5254204F4E204D592050415452454F4E222C226275696C64223A2242415A534554204230312E322050564D204352542054455354222C22636F72655F6279223A2262617A736574222C2270617472656F6E223A2270617472656F6E2E636F6D2F632F62617A736574222C2270617472656F6E5F737570706F7274657273223A22416C6578616E646572204661636368696E69207C2047726F7175696B207C204261626159616761333236207C204375727420446974746D6572207C20416C657373616E64726F2047756C6C69207C2052474D207C204A616D6965435254207C20416C664569676874794F6E65207C2053636F747420446578746572222C227370656369616C5F7468616E6B73223A224F726967696E616C205365696275204B616968617473752067616D6520646576656C6F70657273222C227469746C65223A224D5553544143484520424F59222C2278223A22782E636F6D2F62617A7365745F227D2C2270617573655F7374796C65223A7B22636F6C6F7273223A7B22616363656E74223A2223354445344646222C226261636B67726F756E64223A2223303830423138222C22626F72646572223A2223443941343431222C2263617264223A2223313031353232222C2264696D223A2223373137393841222C2274657874223A2223463045394437227D2C226C61796F7574223A22636F6D70616374222C226D6172717565655F6672616D6573223A31327D2C2276657273696F6E223A317D</part></rom>
+</misterromdescription>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- ================================================================ -->
+<!-- BAZSET CORE - CORE BY bazset                                      -->
+<!-- RBF FILE: bazset_BerlinWall.rbf                                  -->
+<!-- REQUIRED ROM ZIP FILE(S): berlwall.zip                           -->
+<!-- STATUS: B01 PUBLIC RELEASE - HDMI AND CRT TESTED BY CORE AUTHOR       -->
+<!-- ================================================================ -->
+<misterromdescription>
+  <name>The Berlin Wall</name>
+  <setname>berlwall</setname>
+  <rbf>bazset_BerlinWall</rbf>
+  <year>1991</year>
+  <manufacturer>Kaneko</manufacturer>
+  <category>Arcade</category>
+  <buttons names="Dig,Fill,Mystery,Start,Coin,Pause" default="A,B,X,Start,Select,L"/>
+  <rom index="0" zip="berlwall.zip" md5="none">
+    <interleave output="16">
+      <part name="bw100e_u23-01.u23" crc="76b526ce" map="01"/>
+      <part name="bw101e_u39-01.u39" crc="78fa7ef2" map="10"/>
+    </interleave>
+    <part name="bw001.u84" crc="bc927260"/>
+    <part name="bw002.u83" crc="223f5465"/>
+    <part repeat="0x20000">00</part>
+    <part name="bw003.u77" crc="fbb4b72d"/>
+    <interleave output="16">
+      <part name="bw004.u73" crc="5300c34d" map="01"/>
+      <part name="bw008.u65" crc="9aaf2f2f" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bw005.u74" crc="16db6d43" map="01"/>
+      <part name="bw009.u66" crc="1151a0b0" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bw006.u75" crc="73a35d1f" map="01"/>
+      <part name="bw00a.u67" crc="f447dfc2" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="bw007.u76" crc="97f85c87" map="01"/>
+      <part name="bw00b.u68" crc="b0a48225" map="10"/>
+    </interleave>
+    <part name="bw000.u46" crc="d8fe869d"/>
+  </rom>
+</misterromdescription>
