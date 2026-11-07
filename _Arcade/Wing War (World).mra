@@ -145,6 +145,14 @@
         <part name="epr-16891.6" crc="a33f84d1"/>
     </rom>
 
+    <!-- The I/O board's 93C46, erased: this set has no image (MAME's part
+         powers up all ones). Sent so the part's SDRAM block is this game's
+         and not what the last game left there; the saved settings file
+         overrides it. -->
+    <rom index="3" md5="none">
+        <part repeat="128">FF</part>
+    </rom>
+
     <rom index="5" zip="wingwar.zip">
         <!--
              FOUR MB PER MULTIPCM, 2026-09-16. One stream shape for every game:
@@ -186,7 +194,10 @@
         <part name="mpr-16756.5" crc="d9c40672"/>
     </rom>
 
-    <nvram index="255" size="256"/>
+    <!-- The saved settings: "M1NVRAM1", the 93C46 (128 bytes), RAMA (64 KB).
+         Sent after the defaults above, so a saved file overrides them;
+         a file without the tag is ignored. OSD: Save settings (NVRAM). -->
+    <nvram index="7" size="65672"/>
 
-    <buttons names="Machine Gun,Missile,Smoke,Unused 4,View 1,View 2,View 3,View 4,Start,Coin,Service,Test,Coin 2" default="A,B,X,Y,L1,R1,L2,R2,Start,Select"/>
+    <buttons names="Machine Gun,Missile,Smoke,View 1,View 2,View 3,View 4,Start,Coin,Service,Test" default="A,B,X,L1,R1,L2,R2,Start,Select"/>
 </misterromdescription>

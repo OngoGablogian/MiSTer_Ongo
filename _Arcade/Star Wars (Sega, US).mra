@@ -125,6 +125,14 @@
         <part name="epr-14869b.25" crc="2d093304"/>
     </rom>
 
+    <!-- The I/O board's 93C46, erased: this set has no image (MAME's part
+         powers up all ones). Sent so the part's SDRAM block is this game's
+         and not what the last game left there; the saved settings file
+         overrides it. -->
+    <rom index="3" md5="none">
+        <part repeat="128">FF</part>
+    </rom>
+
     <rom index="5" zip="swa.zip">
         <!--
              FOUR MB PER MULTIPCM, 2026-09-16. One stream shape for every game:
@@ -177,7 +185,10 @@
         <part name="mpr-16515.58" crc="3114d748"/>
     </rom>
 
-    <nvram index="255" size="256"/>
+    <!-- The saved settings: "M1NVRAM1", the 93C46 (128 bytes), RAMA (64 KB).
+         Sent after the defaults above, so a saved file overrides them;
+         a file without the tag is ignored. OSD: Save settings (NVRAM). -->
+    <nvram index="7" size="65672"/>
 
-    <buttons names="Fire,Thumb,Button 3,Unused 4,Unused 5,Unused 6,Unused 7,Unused 8,Start,Coin,Service,Test,Coin 2" default="A,B,X,Y,L1,R1,L2,R2,Start,Select"/>
+    <buttons names="Fire,Thumb,Button 3,Throttle Up,Throttle Down,Start,Coin,Service,Test,Coin 2" default="A,B,X,R1,L1,Start,Select"/>
 </misterromdescription>

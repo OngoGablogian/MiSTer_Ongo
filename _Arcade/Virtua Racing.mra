@@ -208,7 +208,10 @@
         <part repeat="2097152">00</part>
     </rom>
 
-    <nvram index="255" size="256"/>
+    <!-- The saved settings: "M1NVRAM1", the 93C46 (128 bytes), RAMA (64 KB).
+         Sent after the defaults above, so a saved file overrides them;
+         a file without the tag is ignored. OSD: Save settings (NVRAM). -->
+    <nvram index="7" size="65672"/>
 
     <buttons names="Accelerate,Brake,Shift Up,Shift Down,VR1,VR2,VR3,VR4,Start,Coin,Service,Test,Coin 2" default="R2,L2,R1,L1,A,B,X,Y,Start,Select"/>
 </misterromdescription>
