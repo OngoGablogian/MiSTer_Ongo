@@ -43,7 +43,7 @@ rom index 3 (SDRAM 0xD00000):
 		AD 61 10 00 BA 27 F8 0F
 		</part>
 	</rom>
-	<rom index="0" zip="/hbmame/mk2.zip" md5="f27539dc97987541eddfe6af46ae557f" type="merged">
+	<rom index="0" zip="/hbmame/mk2p.zip" md5="f27539dc97987541eddfe6af46ae557f" type="merged">
 		<!-- program ROM -->
 		<interleave output="16">
 			<part crc="05ff15a9" name="l3.1_mortal_kombat_ii_game_rom_uj12.uj12" map="01"/>
@@ -69,7 +69,7 @@ rom index 3 (SDRAM 0xD00000):
 			<part crc="8891d785" name="l1_mortal_kombat_ii_game_rom_uj22.uj22" map="1000"/>
 		</interleave>
 	</rom>
-	<rom index="3" zip="/hbmame/mk2.zip" md5="b9790a5f6d38c110ec6ac3d8e13e7d22" type="merged">
+	<rom index="3" zip="/hbmame/mk2p.zip" md5="b9790a5f6d38c110ec6ac3d8e13e7d22" type="merged">
 		<!-- DCS sound data -->
 		<part crc="65d11dd7" name="l1_mortal_kombat_ii_sound_rom_u2.u2"/>
 		<part crc="d6d92bf9" name="l1_mortal_kombat_ii_sound_rom_u3.u3"/>
