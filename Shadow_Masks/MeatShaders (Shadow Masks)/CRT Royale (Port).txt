@@ -1,0 +1,16 @@
+####
+# Name: CRT Royale (Port)
+# Source-faithful mask (upstream default, encoded domain)
+# mask_type=1 slot mask, 3 px triads, pitch 24/7 px resampled to 7 rows
+# Slot depth from the Lanczos 24x24 tile, encoded with lcd_gamma 2.2
+# Dark phosphors at 15/16: Royale's bloom fills them (2-D source render)
+####
+v2
+6,7
+4af,2af,1af,4ef,2ef,1ef
+4ef,2ff,1ef,48f,28f,18f
+4df,2df,1df,4cf,2cf,1cf
+47f,28f,17f,4ef,2ff,1ef
+4df,2ef,1df,4cf,2cf,1cf
+4ef,2ff,1ef,48f,28f,18f
+4af,2af,1af,4ef,2ef,1ef

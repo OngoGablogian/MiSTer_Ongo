@@ -1,0 +1,10 @@
+####
+# Name: CRT Lottes (Port)
+# Source-faithful mask (upstream default, encoded domain)
+# shadowMask=3 stretched VGA, maskLight 1.5 / maskDark 0.5 in linear light
+# Encoded through sRGB: lit:dark 1.67 at mid grey -> 25/16 : 15/16
+####
+v2
+6,2
+29f,29f,19f,19f,49f,49f
+19f,49f,49f,29f,29f,19f

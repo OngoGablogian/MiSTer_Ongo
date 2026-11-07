@@ -1,0 +1,10 @@
+####
+# Name: CRT Royale Kurozumi (Port)
+# Source-faithful mask (upstream default, encoded domain)
+# mask_type=0 grille clamped to 2 px triads: red/blue antiphase, flat green
+# Texture bright:dim 2.230 encoded; bloom-inclusive fit -> 31/16 : 15/16
+# Green shares the bright multiplier everywhere; its gain is in the gamma curve
+####
+v2
+2,1
+6ff,3ff
