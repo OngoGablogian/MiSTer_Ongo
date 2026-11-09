@@ -397,7 +397,7 @@ db_url = https://raw.githubusercontent.com/misteraddons/Reflex-Adapt-Legacy/main
 [MiSTer Addons Reflex Adapt 2 (Classic2USB)](https://github.com/misteraddons/Reflex-Adapt)
 ```
 [misteraddons/reflex-adapt-manager]
-db_url = https://raw.githubusercontent.com/misteraddons/Reflex-Adapt/main/reflex-adapt-manager.json.zip
+db_url = https://raw.githubusercontent.com/misteraddons/reflex-io/main/reflex-adapt-manager.json.zip
 ```
 
 [MiSTer-syncthing](https://github.com/davewongillies/MiSTer-syncthing)
