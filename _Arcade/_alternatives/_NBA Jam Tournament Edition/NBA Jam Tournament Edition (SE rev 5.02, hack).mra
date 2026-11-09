@@ -72,7 +72,7 @@ rom index 3 (SDRAM 0xD00000):
 			<part crc="a659b604" name="l1_nba_jam_tournament_game_rom_uj23.uj23" map="1000"/>
 		</interleave>
 	</rom>
-	<rom index="3" zip="/hbmame/nbajamte.zip" md5="c43e66e16653d1f8fc18fde2f5b22c01" type="merged">
+	<rom index="3" zip="/hbmame/nbajamtese.zip" md5="c43e66e16653d1f8fc18fde2f5b22c01" type="merged">
 		<!-- sound CPU -->
 		<part crc="d4551195" name="l1_nba_jam_tournament_u3_sound_rom.u3"/>
 		<part crc="d4551195" name="l1_nba_jam_tournament_u3_sound_rom.u3"/>
