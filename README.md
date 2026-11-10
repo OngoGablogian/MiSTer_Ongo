@@ -179,7 +179,6 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [SEGA Model 1](https://github.com/alphanu1/sega-model1-mister)                                                                   |
 | [SEGA Model 2](https://github.com/alphanu1/sega-model2-mister)                                                                   |
 | [SEGA System 24](https://github.com/meathax/s24)                                                                                 |
-| [SEGA System 32](https://github.com/meathax/s32)                                                                                 |
 | [SEGA System 32 Multi](https://github.com/meathax/s32multi)                                                                      |
 | [SEGA System C / C-2](https://github.com/Mezzow/Arcade-SystemC2_MiSTer)                                                          |
 | [SEGA Y Board](https://github.com/rossops/Arcade-SegaYBoard_MiSTer)                                                              |
