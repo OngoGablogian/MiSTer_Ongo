@@ -47,8 +47,6 @@
         <!-- k054539: MAME's region as it is -->
         <part name="515a13.9g" crc="4b066b00"/>
         <part name="515a14.7g" crc="128cc944"/>
-        <patch offset="0x243c7">00</patch>  <!-- CPU 0x2043c7: 01 -> 00, MAME init_konamigx -->
-        <patch offset="0x3cba9">1F</patch>  <!-- CPU 0x21cba9: 11 -> 1F, MAME init_konamigx -->
     </rom>
 
     <!-- the default EEPROM image (the ROM_START eeprom region); the core loads it into the 93C46 -->
