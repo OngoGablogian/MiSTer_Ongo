@@ -1,6 +1,6 @@
 <misterromdescription>
     <name>Hydra (prototype 5/14/90)</name>
-    <mratimestamp>20260926</mratimestamp>
+    <mratimestamp>20261112</mratimestamp>
     <mameversion>0264</mameversion>
     <setname>hydrap</setname>
     <year>1990</year>
@@ -10,7 +10,7 @@
     <rotation>horizontal</rotation>
     <players>1</players>
     <num_buttons>6</num_buttons>
-    <buttons names="Left Trigger,Right Trigger,Left Thumb,Right Thumb,Boost,Pedal,Coin" default="A,B,X,Y,L,R,Select"/>
+    <buttons names="Left Trigger,Right Trigger,Left Thumb,Right Thumb,Boost,Pedal,Coin,Pause" default="A,B,X,Y,L,R,Select"/>
 
     <romstruct>
 SDRAM layout, the same for every Atari G1 set (unused space is zero-filled):
