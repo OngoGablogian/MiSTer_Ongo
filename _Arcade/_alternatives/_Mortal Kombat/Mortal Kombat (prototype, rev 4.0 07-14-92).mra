@@ -28,7 +28,7 @@
 0xA00000 OKI M6295 samples (1 MB)
 	</romstruct>
 	<rom index="1">
-		<!-- game id; finishing moves: round state 0104D6F0, P1 character 0104CF90, object pointer 0104CF30; Fixed AI Difficulty: CPU level word 0104D6D0; no hidden menu (tools/yunit_fmoves.py) -->
+		<!-- game id; finishing moves: round state 0104D6F0, P1 character 0104CF90, object pointer 0104CF30; Fixed AI Difficulty: CPU level word 0104D6D0; direct finishers: 7 handler sites; no hidden menu (tools/yunit_fmoves.py) -->
 		<part>
 		07 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		01 00 00 00 6F 4D 10 00 F9 4C 10 00 27 4D 10 00 00 4D 10 00 2E 4D 10 00 F3 4C 10 00 21 4D 10 00
@@ -36,7 +36,8 @@
 		00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-		00 00 00 00 6D 4D
+		00 00 00 00 6D 4D 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		D8 80 05 01 B2 81 05 01 75 80 05 01 F9 7F 05 01 2A 81 05 01 95 80 05 01 A5 7F 05 01
 		</part>
 	</rom>
 	<rom index="0" zip="mkprot4.zip|mk.zip" md5="d480bacf1839c4ef5d4a6e9d52290324" type="merged">
