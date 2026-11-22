@@ -1,0 +1,165 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Sega Water Ski (Japan, Revision A) (Model 2C-CRX). Derived from MAME 0.289 model2.cpp
+      ROM_START(segawski). For the Model 2C build of the 2A core (Model2.sv
+      M2_2C); the 2A and original cores cannot run it. Study R1010.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py's functions):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY
+                   mirrors written out)
+        0x2080000  4 MB of zeros (the 2C core keeps the TGPx4's program copy
+                   at its start, written by the upload)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2C has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB
+        0x2D40000  i960 program 512 KB-2 MB
+        0x2EC0000  copro data, 4 MB: the FIRST 4 MB of its 8 MB of copro data (the TGPx4's external ROM): the slot and the TGPx4's port hold 4 MB. MAME's 300 s of attract and play read only the first 4 MB (study R1010)
+        0x32C0000  texture-coordinate ROM, 16 MB (MAME's region tiled, as its
+                   mask reads it)
+        0x42C0000  polygons, 32 MB
+      Image: 0x62C0000 bytes. NOT LOADED: the copro data's upper 4 MB (see above).
+
+      Index 4, the game ID: 0x1F (R1010). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Sega Water Ski (Japan, Revision A)</name>
+    <setname>segawski</setname>
+    <rbf>Model2C</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>1F 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Sports</category>
+
+    <rom index="0" zip="segawski.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19963a.15" crc="89c9cb0d" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19964a.16" crc="c382cefe" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19980.11" crc="709804f2" map="0021"/>
+            <part name="mpr-19981.12" crc="a1e8ec09" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19982.9" crc="41c398bb" map="0021"/>
+            <part name="mpr-19983.10" crc="e210dea2" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19984.7" crc="14b967d1" map="0021"/>
+            <part name="mpr-19985.8" crc="57827677" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19961.5" crc="cc34ecaf" map="0021"/>
+            <part name="epr-19962.6" crc="e8a30e5e" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2C -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19967.31" crc="c6b8ef3f" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="mpr-19988.32" crc="303732fb" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19989.34" crc="8074a4b3" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19963a.15" crc="89c9cb0d" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19964a.16" crc="c382cefe" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862, R924) -->
+        <interleave output="32">
+            <part name="mpr-19986.29" crc="4b8e26f8" map="0021" offset="0x000000" length="0x200000"/>
+            <part name="mpr-19987.30" crc="8d5b9d38" map="2100" offset="0x000000" length="0x200000"/>
+        </interleave>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897) -->
+        <interleave output="32">
+            <part name="mpr-19969.27" crc="c0c33d39" map="0021"/>
+            <part name="mpr-19968.25" crc="b8d2f04f" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19971.28" crc="c8708096" map="0021"/>
+            <part name="mpr-19970.26" crc="c59d8d36" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 32 MB (R897) -->
+        <interleave output="32">
+            <part name="mpr-19972.17" crc="493c0f8f" map="0021"/>
+            <part name="mpr-19973.21" crc="01b6f8e1" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19974.18" crc="2bd947d3" map="0021"/>
+            <part name="mpr-19975.22" crc="07e6b699" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19976.19" crc="f9496566" map="0021"/>
+            <part name="mpr-19977.23" crc="b3dbf54b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19978.20" crc="c80f4ed7" map="0021"/>
+            <part name="mpr-19979.24" crc="1c0db4d2" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- The slide on either stick, the paddle or the d-pad (MAME's SLIDE,
+         left low; the game's VOLUME SETTING calibrates 0x38-0xC8 about
+         0x80). Select Down is the start button; Select Up / Set / Pitch
+         Left / Pitch Right as the cabinet's. OSD: Steering, Steering
+         smoothing (shown for this game). -->
+    <buttons names="Coin,Select Down (Start),Test,Service,Set,Select Up,Pitch Left,Pitch Right"/>
+</misterromdescription>

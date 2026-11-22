@@ -1,0 +1,277 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Wave Runner (Japan, Revision A) (Model 2C-CRX). Derived from MAME 0.289 model2.cpp
+      ROM_START(waverunr). For the Model 2C build of the 2A core (Model2.sv
+      M2_2C); the 2A and original cores cannot run it. Study R1010.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py's functions):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY
+                   mirrors written out)
+        0x2080000  4 MB of zeros (the 2C core keeps the TGPx4's program copy
+                   at its start, written by the upload)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2C has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB
+        0x2D40000  i960 program 512 KB-2 MB
+        0x2EC0000  copro data, 4 MB: its 1 MB of copro data (the TGPx4's external ROM; MAME's region is 8 MB, the rest zeros)
+        0x32C0000  texture-coordinate ROM, 16 MB (MAME's region tiled, as its
+                   mask reads it)
+        0x42C0000  polygons, 31 MB
+      Image: 0x61C0000 bytes. NOT LOADED: the drive board's program and the comm board's, if any (MAME models neither).
+
+      Index 4, the game ID: 0x1E (R1010). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Wave Runner (Japan, Revision A)</name>
+    <setname>waverunr</setname>
+    <rbf>Model2C</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>1E 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="waverunr.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19282a.15" crc="5df58604" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19283a.16" crc="bca188e1" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19291.11" crc="54431d67" map="0021"/>
+            <part name="mpr-19292.12" crc="9152d979" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19293.9" crc="b168bea9" map="0021"/>
+            <part name="mpr-19294.10" crc="c731e659" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19278.7" crc="29ed421d" map="0021"/>
+            <part name="epr-19279.8" crc="6ae9f899" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2C -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19284.31" crc="efe5f0f3" map="12"/>
+        </interleave>
+        <part repeat="262144">00</part>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="mpr-19295.32" crc="b14eeb09" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19296.34" crc="b4b9faff" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19282a.15" crc="5df58604" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19283a.16" crc="bca188e1" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862, R924) -->
+        <interleave output="32">
+            <part name="epr-19280.29" crc="c6b59fb9" map="0021"/>
+            <part name="epr-19281.30" crc="5a6110e7" map="2100"/>
+        </interleave>
+        <part repeat="3145728">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897) -->
+        <interleave output="32">
+            <part name="mpr-19286.27" crc="3ccc33cb" map="0021"/>
+            <part name="mpr-19285.25" crc="a070fbd0" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19303.28" crc="fcffc8a0" map="0021"/>
+            <part name="epr-19302.26" crc="bd00933a" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 31 MB (R897) -->
+        <interleave output="32">
+            <part name="mpr-19287.17" crc="203b9e45" map="0021"/>
+            <part name="mpr-19288.21" crc="4a488e4d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19289.18" crc="35361cb3" map="0021"/>
+            <part name="mpr-19290.22" crc="67300826" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19304.19" crc="1a7d9521" map="0021"/>
+            <part name="epr-19305.23" crc="00412412" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Handle bar (and the roll, which MAME also takes from the stick's X)
+         on either stick, the paddle or the d-pad; the throttle lever on the
+         right stick's Y, a trigger or the Throttle button (released 0x00,
+         the game's VOLUME SETTING calibrates it 0x40-0xE0); the pitch on
+         the left stick's Y. View. The safety sensor reads clear. OSD:
+         Pedals, Steering, Steering smoothing, Right stick (shown for this
+         game). -->
+    <buttons names="Coin,Start,Test,Service,View,-,Throttle"/>
+</misterromdescription>

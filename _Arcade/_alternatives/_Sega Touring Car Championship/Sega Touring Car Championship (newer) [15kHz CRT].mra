@@ -24,9 +24,12 @@
                    0x2780000
         0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
         0x42C0000  polygons, 16 MB             -> SDRAM byte 0x5000000
-      Image: 0x52C0000 bytes. NOT LOADED (no model in this core): the Digital
-      Sound Board's Z80 program and MPEG data (epr-19275, mpr-19262-19265:
-      the music; the SCSP's effects play), the comm board's program
+        0x52C0000  R979: the Digital Sound Board's MPEG data, 8 MB -> SDRAM
+                   byte 0x6000000
+        0x5AC0000  R979: its Z80 program, 128 KB -> SDRAM byte 0x6800000
+      Image: 0x5AE0000 bytes. The music plays on a core built with
+      M2_2C_DSB (R979); any other 2C core loads the last 8.1 MB and never
+      reads them. NOT LOADED (no model in this core): the comm board's program
       (epr-18643a) and the drive board's (epr-18261; MAME's stcc has no
       drive board either).
 
@@ -212,6 +215,16 @@
             <part name="epr-19266.18" crc="41464ee2" map="0021"/>
             <part name="epr-19267.22" crc="780f994d" map="2100"/>
         </interleave>
+
+        <!-- 0x52C0000  R979: the Digital Sound Board's MPEG data, 8 MB, bytes in
+                     order (the loader's third remap: SDRAM byte 0x6000000) -->
+        <part name="mpr-19262.57s" crc="922aed7a"/>
+        <part name="mpr-19263.58s" crc="a256f4cd"/>
+        <part name="mpr-19264.59s" crc="b6c51d0f"/>
+        <part name="mpr-19265.60s" crc="7d98700a"/>
+
+        <!-- 0x5AC0000  R979: its Z80 program, 128 KB (SDRAM byte 0x6800000) -->
+        <part name="epr-19275.2s" crc="ee809d3f"/>
 
     </rom>
 

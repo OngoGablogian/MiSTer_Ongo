@@ -1,0 +1,133 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Sega Ski Super G (Model 2C-CRX). Derived from MAME 0.289 model2.cpp
+      ROM_START(skisuprg). For the Model 2C build of the 2A core (Model2.sv
+      M2_2C); the 2A and original cores cannot run it. Study R1010.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py's functions):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY
+                   mirrors written out)
+        0x2080000  4 MB of zeros (the 2C core keeps the TGPx4's program copy
+                   at its start, written by the upload)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2C has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB
+        0x2D40000  i960 program 512 KB-2 MB
+        0x2EC0000  copro data, 4 MB: its first 4 MB (the slot tools/mra_vs_mame.py checks); the game reads its whole 8 MB from the region appended at 0x52C0000
+        0x32C0000  texture-coordinate ROM, 16 MB (MAME's region tiled, as its
+                   mask reads it)
+        0x42C0000  polygons, 16 MB
+        0x52C0000  R1010: copro data, all 8 MB -> SDRAM byte 0x6000000
+                   (GAME_COPRO8: the TGPx4 reads 0x900000-0x9FFFFF in a race)
+      Image: 0x5AC0000 bytes. NOT LOADED: the drive board's program (MAME has no drive board for this set either: the boot's DRIVE BOARD TROUBLE CODE FF screen is MAME's too, and Test passes it).
+
+      Index 4, the game ID: 0x21 (R1010). Bit 7 is SET in this MRA (0xA1): the
+      15 kHz CRT flag (R795), which starts the core in 15 kHz interlaced
+      whatever the OSD says (R908).
+    -->
+    <name>Sega Ski Super G [15kHz CRT]</name>
+    <setname>skisuprg</setname>
+    <rbf>Model2C</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>A1 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Sports</category>
+
+    <rom index="0" zip="skisuprg.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19489.15" crc="1df948a7" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19490.16" crc="e6fc24d3" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19494.11" crc="f19cdb5c" map="0021"/>
+            <part name="mpr-19495.12" crc="d42e5ef2" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19492.9" crc="4805318f" map="0021"/>
+            <part name="mpr-19493.10" crc="39daa909" map="2100"/>
+        </interleave>
+        <part repeat="16777216">00</part>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2C -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19491.31" crc="1c9b15fd" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="mpr-19504.32" crc="9419ec08" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19505.34" crc="eba7f41d" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19489.15" crc="1df948a7" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19490.16" crc="e6fc24d3" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19551.13" crc="3ee8f0d5" map="0021"/>
+            <part name="epr-19552.14" crc="baa2e49a" map="2100"/>
+        </interleave>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862, R924) -->
+        <interleave output="32">
+            <part name="mpr-19502.29" crc="2212d8d6" map="0021" offset="0x000000" length="0x200000"/>
+            <part name="mpr-19503.30" crc="3c9cfc73" map="2100" offset="0x000000" length="0x200000"/>
+        </interleave>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897) -->
+        <interleave output="32">
+            <part name="mpr-19501.27" crc="66d7b02e" map="0021"/>
+            <part name="mpr-19500.25" crc="905f5798" map="2100"/>
+        </interleave>
+        <part repeat="8388608">00</part>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897) -->
+        <interleave output="32">
+            <part name="mpr-19496.17" crc="0e9aef4e" map="0021"/>
+            <part name="mpr-19497.21" crc="5397efe9" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19498.18" crc="32e5ae60" map="0021"/>
+            <part name="mpr-19499.22" crc="2b9f5b48" map="2100"/>
+        </interleave>
+
+        <!-- 0x52C0000  R1010: copro data, all 8 MB (the TGPx4 reads 0x900000-0x9FFFFF in a race) -> SDRAM byte 0x6000000 -->
+        <interleave output="32">
+            <part name="mpr-19502.29" crc="2212d8d6" map="0021"/>
+            <part name="mpr-19503.30" crc="3c9cfc73" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Inclining (the skis' edge, left / right) on either stick, the paddle
+         or the d-pad; swing on the left stick's Y. Select 1 starts and
+         chooses; Select 2 / 3 and Zoom In / Out as the cabinet's. The foot
+         sensors (active high) read off unless held. The boot stops on DRIVE
+         BOARD TROUBLE CODE FF, as in MAME: press Test. OSD: Steering,
+         Steering smoothing (shown for this game). -->
+    <buttons names="Coin,Select 1 (Start),Test,Service,Select 2,Select 3,Zoom In,Zoom Out,Foot Sensor L,Foot Sensor R"/>
+</misterromdescription>
