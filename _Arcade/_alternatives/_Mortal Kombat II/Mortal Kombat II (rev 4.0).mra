@@ -1,0 +1,85 @@
+<misterromdescription>
+	<name>Mortal Kombat II (rev 4.0)</name>
+	<mratimestamp>20261119</mratimestamp>
+	<mameversion>0289</mameversion>
+	<setname>mk2s08</setname>
+	<year>2026</year>
+	<manufacturer>JUNKWAX</manufacturer>
+	<category>Fighter / Versus</category>
+	<rbf>Gm0rk_Midway-T-Unit</rbf>
+	<remark>2 players</remark>
+	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
+	<romstruct>
+rom index 0 (SDRAM 0x000000):
+0x000000 program ROM (1 MB, 16-bit little endian)
+0x100000 graphics ROM (12 MB of MAME "video", 32-bit interleaved)
+rom index 3 (SDRAM 0xD00000):
+0x000000 DCS sound data ROMs, packed (3 MB)
+	</romstruct>
+	<rom index="1">
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code table not found; security screen check not found; hitbox flag not found; battle counter 0110C640; Noob Saibot check FFB12010 (25 wins); Jade check FFB131F0 (battle 10); Smoke check FFB137D0 (stage 7); attract sound branches FF95EF30; the Move List shows rev 4.0's own pages (word 0 bit 9) -->
+		<part>
+		02 02 01 00 F3 5E F9 DF B9 C0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		</part>
+		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 0110C600, P1 character 0110ACF0, object pointer 0110AC90, stage 0110C5C0, finish flag 0110C430; MK2 rev 4.0 sites: all 40 as expected; MK2 direct finishers: 35 of 35 sites; AI level word 0110C5D0; demo store PC FF870980 -->
+		<part repeat="960">00</part>
+		<part>
+		02 00 00 00 60 0C 11 00 CF 0A 11 00 8C 0B 11 00 D6 0A 11 00 93 0B 11 00 C9 0A 11 00 86 0B 11 00
+		CD 0A 11 00 8A 0B 11 00 5C 0C 11 00 43 0C 11 00 F0 11 AC FF D0 EB B0 FF B0 47 87 FF 09 0E 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5D 0C 11 00 98 70 F8 0F 00 00 F8 0F
+		DB C3 43 B8 94 0F 12 DA 4A C4 F3 C3 A6 C1 97 BF BB BF FB BD 3A C2 8F C2 A5 BB CF BB 0D BD 64 BC
+		18 C3 28 B7 03 C3 DE C1 07 B7 B8 B8 E6 B8 F0 B7 6F C1 93 BB 63 B7 7E BF 47 BF 5B C0 6F C0 0D C0
+		A7 B6 BF B6 D6 B6 00 00 00 00 00 00 00 00 00 00 20 40 D2 A4 07 00 FB 0F 04 00 00 00 00 00
+		</part>
+	</rom>
+	<rom index="0" zip="/hbmame/mk2.zip" md5="24bf469c81ed3f80a83bae8fd4e55885" type="merged">
+		<!-- program ROM -->
+		<interleave output="16">
+			<part crc="fd23dd93" name="mk2s08.uj12" map="01"/>
+			<part crc="d40d34fd" name="mk2s08.ug12" map="10"/>
+		</interleave>
+		<!-- graphics -->
+		<interleave output="32">
+			<part crc="9c864f0f" name="mk2s08.ug14" map="0001"/>
+			<part crc="3314f622" name="mk2s08.uj14" map="0010"/>
+			<part crc="e768a4ce" name="mk2s08.ug19" map="0100"/>
+			<part crc="04305b16" name="mk2s08.uj19" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="1e5325f3" name="mk2s08.ug16" map="0001"/>
+			<part crc="8004a3b6" name="mk2s08.uj16" map="0010"/>
+			<part crc="0c929fba" name="mk2s08.ug20" map="0100"/>
+			<part crc="7ed4ba0d" name="mk2s08.uj20" map="1000"/>
+		</interleave>
+		<interleave output="32">
+			<part crc="3924479e" name="mk2s08.ug17" map="0001"/>
+			<part crc="a1af4391" name="mk2s08.uj17" map="0010"/>
+			<part crc="d7bd61c3" name="mk2s08.ug22" map="0100"/>
+			<part crc="53dc6b89" name="mk2s08.uj22" map="1000"/>
+		</interleave>
+	</rom>
+	<rom index="3" zip="/hbmame/mk2.zip" md5="adeb3b047cd7019ff29689afdb8cbaaa" type="merged">
+		<!-- DCS sound data -->
+		<part crc="fff86ce6" name="mk2s08.u2"/>
+		<part crc="a5d9baa8" name="mk2s08.u3"/>
+		<part crc="51ef6866" name="mk2s08.u4"/>
+		<part crc="373de0e7" name="mk2s08.u5"/>
+		<part crc="b05d11bf" name="mk2s08.u6"/>
+		<part crc="a51de7aa" name="mk2s08.u7"/>
+	</rom>
+	<nvram index="2" size="16384"/>
+	<!-- cheats (rtl/tunit_cheats.sv): damage pointer table FF87F170, hits go to FF84AD60 and FF80B930; energy P1 0110AD60, P2 0110B930; round clock DEC A10 FF860240; FINISH HIM wait FF865E60; EJB code table not found; security screen check not found; hitbox flag not found; 10 cheats -->
+	<cheats size="8" max="8">
+		<cheat name="Always Play Pong">640C 1100 FA00 FFFF</cheat>
+		<cheat name="Infinite Health P1">187F F80F 84FF FFFF</cheat>
+		<cheat name="Infinite Health P2">1A7F F80F 80FF FFFF</cheat>
+		<cheat name="Infinite Round Time">2460 F81F 4A4D FFFF</cheat>
+		<cheat name="Jade Fight no Low Kick">2413 FB1F 0003 FFFF 5A13 FB1F 06C0 FFFF</cheat>
+		<cheat name="P1 Drain all Energy Now!">D60A 1140 0100 FFFF</cheat>
+		<cheat name="P2 Drain all Energy Now!">930B 1140 0100 FFFF</cheat>
+		<cheat name="Press Start To Fight Smoke">9113 FB1F 12C0 FFFF</cheat>
+		<cheat name="Stop Finishing Move Timer">E665 F81F FF7F FFFF</cheat>
+		<cheat name="Winner Battles Noob Saibot">1712 FB1F 0000 FFFF</cheat>
+	</cheats>
+</misterromdescription>

@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>NBA Jam (rev 3.01 4/07/93)</name>
-	<mratimestamp>20261101</mratimestamp>
+	<mratimestamp>20261119</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>nbajam</setname>
 	<year>1993</year>
@@ -8,19 +8,6 @@
 	<category>Sports / Basketball</category>
 	<rbf>Gm0rk_Midway-T-Unit</rbf>
 	<remark>4 players</remark>
-	<switches default="FD,7F">
-		<dip bits="8,9" name="Coin Counters" ids="1 Counter - 1 count/coin,1 Counter - Totalizing,2 Counters - 1 count/coin" values="3,2,1"/>
-		<dip bits="12,14" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
-		<dip bits="15" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
-		<dip bits="10,11" name="Country" ids="USA,French,German" values="3,2,1"/>
-		<dip bits="6" name="Dollar Bill Validator" ids="Installed,Not Present"/>
-		<dip bits="7" name="Players" ids="2,4"/>
-		<dip bits="1" name="Powerup Test" ids="Off,On"/>
-		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
-		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
-		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
-		<dip bits="5" name="Video Clips" ids="Off,On"/>
-	</switches>
 	<buttons names="Turbo,Shoot/Block,Pass/Steal,-,-,-,Start,Coin,Test,Pause" default="R,A,B,-,-,-,Start,Select,-,-"/>
 	<romstruct>
 rom index 0 (SDRAM 0x000000):
@@ -39,6 +26,12 @@ rom index 3 (SDRAM 0xD00000):
 		00 10 03 00 00 00 03 00 00 10 03 00 00 00 03 00 00 10 03 00 00 00 03 00 00 20 03 00 00 00 03 00
 		00 20 03 00 00 00 03 00 10 00 03 00 00 00 03 00 20 00 03 00 00 00 03 00 00 40 03 00 00 00 03 00
 		00 40 03 00 00 00 03 80
+		</part>
+		<!-- Fixed AI Difficulty (tools/tunit_nbaai.py): hard word 010E52D0, FF859CE0 B5C1-&gt;09C0, FF859CF0 01A0-&gt;level, FF859D00 CB01-&gt;C001, FF8877E0 C913-&gt;C912 -->
+		<part repeat="940">00</part>
+		<part>
+		2D E5 10 00 00 00 00 00 00 00 00 00 CE 59 F8 0F C0 09 00 00 CF 59 F8 1F 00 00 00 00 D0 59 F8 0F
+		01 C0 00 00 7E 87 F8 0F 12 C9 00 00
 		</part>
 	</rom>
 	<rom index="0" zip="nbajam.zip" md5="ec636915caaa4d85a59093937218626f" type="merged">

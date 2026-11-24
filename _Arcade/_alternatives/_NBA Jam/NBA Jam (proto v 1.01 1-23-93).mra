@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>NBA Jam (proto v 1.01 1/23/93)</name>
-	<mratimestamp>20261101</mratimestamp>
+	<mratimestamp>20261119</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>nbajamp1</setname>
 	<year>1993</year>
@@ -8,16 +8,6 @@
 	<category>Sports / Basketball</category>
 	<rbf>Gm0rk_Midway-T-Unit</rbf>
 	<remark>4 players</remark>
-	<switches default="FD,7F">
-		<dip bits="8,9" name="Coin Counters" ids="1 Counter - 1 count/coin,1 Counter - Totalizing,2 Counters - 1 count/coin" values="3,2,1"/>
-		<dip bits="12,14" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
-		<dip bits="15" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
-		<dip bits="10,11" name="Country" ids="USA,French,German" values="3,2,1"/>
-		<dip bits="6" name="Dollar Bill Validator" ids="Installed,Not Present"/>
-		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
-		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
-		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
-	</switches>
 	<buttons names="Turbo,Shoot/Block,Pass/Steal,-,-,-,Start,Coin,Test,Pause" default="R,A,B,-,-,-,Start,Select,-,-"/>
 	<romstruct>
 rom index 0 (SDRAM 0x000000):

@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>NBA Jam Tournament Edition (Nani Edition, rev 5.2 8/11/95, prototype)</name>
-	<mratimestamp>20261101</mratimestamp>
+	<mratimestamp>20261119</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>nbajamten</setname>
 	<year>1995</year>
@@ -8,18 +8,6 @@
 	<category>Sports / Basketball</category>
 	<rbf>Gm0rk_Midway-T-Unit</rbf>
 	<remark>4 players</remark>
-	<switches default="FD,7F">
-		<dip bits="8,9" name="Coin Counters" ids="1 Counter - 1 count/coin,1 Counter - Totalizing,2 Counters - 1 count/coin" values="3,2,1"/>
-		<dip bits="12,14" name="Coinage" ids="1,2,3,4,ECA,Free Play" values="7,3,5,1,6,0"/>
-		<dip bits="15" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
-		<dip bits="10,11" name="Country" ids="USA,French,German" values="3,2,1"/>
-		<dip bits="6" name="Dollar Bill Validator" ids="Installed,Not Present"/>
-		<dip bits="7" name="Players" ids="2,4"/>
-		<dip bits="1" name="Powerup Test" ids="Off,On"/>
-		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
-		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
-		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
-	</switches>
 	<buttons names="Turbo,Shoot/Block,Pass/Steal,-,-,-,Start,Coin,Test,Pause" default="R,A,B,-,-,-,Start,Select,-,-"/>
 	<romstruct>
 rom index 0 (SDRAM 0x000000):
@@ -38,6 +26,12 @@ rom index 3 (SDRAM 0xD00000):
 		00 10 03 00 00 00 03 00 00 10 03 00 00 00 03 00 00 10 03 00 00 00 03 00 00 20 03 00 00 00 03 00
 		00 20 03 00 00 00 03 00 10 00 03 00 00 00 03 00 20 00 03 00 00 00 03 00 00 40 03 00 00 00 03 00
 		00 40 03 00 00 00 03 80
+		</part>
+		<!-- Fixed AI Difficulty (tools/tunit_nbaai.py): hard word 010ED7A0, FF878060 B5C1-&gt;09C0, FF878070 01A0-&gt;level, FF878080 CB01-&gt;C001, FF8AC3A0 C913-&gt;C912 -->
+		<part repeat="940">00</part>
+		<part>
+		7A ED 10 00 00 00 00 00 00 00 00 00 06 78 F8 0F C0 09 00 00 07 78 F8 1F 00 00 00 00 08 78 F8 0F
+		01 C0 00 00 3A AC F8 0F 12 C9 00 00
 		</part>
 	</rom>
 	<rom index="0" zip="nbajamten.zip|nbajamte.zip" md5="70652f30d054d6bbd67013ced1a22ef1" type="merged">

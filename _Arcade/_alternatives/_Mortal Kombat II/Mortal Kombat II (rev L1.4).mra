@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Mortal Kombat II (rev L1.4)</name>
-	<mratimestamp>20261101</mratimestamp>
+	<mratimestamp>20261119</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mk2r14</setname>
 	<year>1993</year>
@@ -8,19 +8,6 @@
 	<category>Fighter / Versus</category>
 	<rbf>Gm0rk_Midway-T-Unit</rbf>
 	<remark>2 players</remark>
-	<switches default="7D,FC">
-		<dip bits="12" name="Attract Sound" ids="Off,On"/>
-		<dip bits="14" name="Blood" ids="Off,On"/>
-		<dip bits="2,6" name="Coinage" ids="USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,French-1,French-2,French-3,French-4,French-ECA,French-Free Play" values="31,15,23,7,27,3,29,13,21,5,25,9,1,30,14,22,6,26,2"/>
-		<dip bits="7" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
-		<dip bits="11" name="Comic Book Offer" ids="Off,On"/>
-		<dip bits="1" name="Counters" ids="One,Two" values="1,0"/>
-		<dip bits="13" name="Low Blows" ids="Off,On"/>
-		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
-		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
-		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
-		<dip bits="15" name="Violence" ids="Off,On"/>
-	</switches>
 	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
 	<romstruct>
 rom index 0 (SDRAM 0x000000):
@@ -30,10 +17,10 @@ rom index 3 (SDRAM 0xD00000):
 0x000000 DCS sound data ROMs, packed (3 MB)
 	</romstruct>
 	<rom index="1">
-		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FF9CF1C0 (27 presses), menu FF9CEAF0; EJB code handler not called: Block handlers pointed at it while the code plays; security screen branches FF9CF770 FF9CF7A0; hitbox flag 01061F30; battle 250 check not found; Noob Saibot check not found; Jade check not found; Smoke check not found -->
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FF9CF1C0 (27 presses), menu FF9CEAF0; EJB code handler not called: Block handlers pointed at it while the code plays; security screen branches FF9CF770 FF9CF7A0; hitbox flag 01061F30; battle 250 check not found; Noob Saibot check not found; Jade check not found; Smoke check not found; attract sound branches FF83F0A0 -->
 		<part>
 		02 00 01 00 D3 11 F8 4F B0 E6 D4 11 F8 4F 9C FF EB 11 F8 4F D0 E6 EC 11 F8 4F 9C FF 77 CF F9 1F
-		00 03 7A CF F9 1F 00 03 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 AF CE F9 0F 00 00 00 00
+		00 03 7A CF F9 1F 00 03 0A 3F F8 DF 00 C0 00 00 00 00 00 00 20 00 00 00 AF CE F9 0F 00 00 00 00
 		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
 		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
 		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
@@ -42,12 +29,15 @@ rom index 3 (SDRAM 0xD00000):
 		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00
 		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 80
 		</part>
-		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 01061B00, P1 character 01060280, object pointer 01060220, stage 01061AC0, finish flag 010619C0; 53 moves not in this revision (OSD class 2); AI level word 01061AD0; demo store PC FF8242D0 -->
+		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 01061B00, P1 character 01060280, object pointer 01060220, stage 01061AC0, finish flag 010619C0; 55 moves not in this revision (OSD class 2); AI level word 01061AD0; demo store PC FF8242D0 -->
 		<part repeat="744">00</part>
 		<part>
-		01 00 00 00 B0 61 10 00 28 60 10 00 E5 60 10 00 2F 60 10 00 EC 60 10 00 22 60 10 00 DF 60 10 00
+		02 00 00 00 B0 61 10 00 28 60 10 00 E5 60 10 00 2F 60 10 00 EC 60 10 00 22 60 10 00 DF 60 10 00
 		26 60 10 00 E3 60 10 00 AC 61 10 00 9C 61 10 00 10 A5 89 FF B0 DF 9C FF 00 B0 82 FF 09 0E 02 00
-		3C 3D 3C 3E 3E 30 3D 3C 3D 3C 7D 1E 00 00 00 00 00 00 00 00 AD 61 10 00 2D 24 F8 0F
+		0F 0F 0F 1F 2F 0F 1F 37 2F 3F 16 2F 00 00 00 00 00 00 00 00 AD 61 10 00 2D 24 F8 0F 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		</part>
 	</rom>
 	<rom index="0" zip="mk2r14.zip|mk2.zip" md5="286acd60885ef2fbcc1bccececfd80d8" type="merged">

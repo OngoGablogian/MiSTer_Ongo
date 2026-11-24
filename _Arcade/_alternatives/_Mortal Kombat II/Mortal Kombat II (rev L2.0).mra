@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Mortal Kombat II (rev L2.0)</name>
-	<mratimestamp>20261101</mratimestamp>
+	<mratimestamp>20261119</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mk2r20</setname>
 	<year>1993</year>
@@ -8,20 +8,6 @@
 	<category>Fighter / Versus</category>
 	<rbf>Gm0rk_Midway-T-Unit</rbf>
 	<remark>2 players</remark>
-	<switches default="7D,FC">
-		<dip bits="12" name="Attract Sound" ids="Off,On"/>
-		<dip bits="10" name="Bill Validator" ids="Installed,Not Present"/>
-		<dip bits="14" name="Blood" ids="Off,On"/>
-		<dip bits="2,6" name="Coinage" ids="USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,French-1,French-2,French-3,French-4,French-ECA,French-Free Play" values="31,15,23,7,27,3,29,13,21,5,25,9,1,30,14,22,6,26,2"/>
-		<dip bits="7" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
-		<dip bits="11" name="Comic Book Offer" ids="Off,On"/>
-		<dip bits="1" name="Counters" ids="One,Two" values="1,0"/>
-		<dip bits="13" name="Low Blows" ids="Off,On"/>
-		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
-		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
-		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
-		<dip bits="15" name="Violence" ids="Off,On"/>
-	</switches>
 	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
 	<romstruct>
 rom index 0 (SDRAM 0x000000):
@@ -31,9 +17,9 @@ rom index 3 (SDRAM 0xD00000):
 0x000000 DCS sound data ROMs, packed (3 MB)
 	</romstruct>
 	<rom index="1">
-		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FFA0E990 (27 presses), menu FFA0E850; security screen branches FFA0EF40 FFA0EF70; hitbox flag 01061FA0; battle counter 01061B40; Noob Saibot check not found; Jade check FFA0AF90 (battle 10); Smoke check FFA0B520 (stage 7) -->
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FFA0E990 (27 presses), menu FFA0E850; security screen branches FFA0EF40 FFA0EF70; hitbox flag 01061FA0; battle counter 01061B40; Noob Saibot check not found; Jade check FFA0AF90 (battle 10); Smoke check FFA0B520 (stage 7); attract sound branches FF840E10 -->
 		<part>
-		02 00 01 00 F4 0E FA 1F 00 03 F7 0E FA 1F 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		02 00 01 00 F4 0E FA 1F 00 03 F7 0E FA 1F 00 03 E1 40 F8 DF 00 C0 00 00 00 00 00 00 00 00 00 00
 		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 00 85 0E FA 0F 00 00 00 00
 		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
 		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
@@ -43,12 +29,15 @@ rom index 3 (SDRAM 0xD00000):
 		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
 		00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 80
 		</part>
-		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 01061B00, P1 character 01060280, object pointer 01060220, stage 01061AC0, finish flag 010619C0; 15 moves not in this revision (OSD class 1); AI level word 01061AD0; demo store PC FF825300 -->
+		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 01061B00, P1 character 01060280, object pointer 01060220, stage 01061AC0, finish flag 010619C0; 17 moves not in this revision (OSD class 1); MK2 hold sites: 21 of 25 the same as L3.1's; MK2 sites: 68 of 69 the same as L3.1's (69 found); MK2 direct finishers: 29 of 31 sites; MK2 direct finishers not used: Raiden Super Uppercut, Shang Tsung Kintaro; AI level word 01061AD0; demo store PC FF825300 -->
 		<part repeat="744">00</part>
 		<part>
-		01 00 00 00 B0 61 10 00 28 60 10 00 E5 60 10 00 2F 60 10 00 EC 60 10 00 22 60 10 00 DF 60 10 00
+		02 00 00 00 B0 61 10 00 28 60 10 00 E5 60 10 00 2F 60 10 00 EC 60 10 00 22 60 10 00 DF 60 10 00
 		26 60 10 00 E3 60 10 00 AC 61 10 00 9C 61 10 00 70 9F 8B FF B0 A4 A0 FF E0 C8 82 FF 09 0E 01 00
-		20 24 20 20 20 34 20 20 20 20 40 10 00 00 00 00 00 00 00 00 AD 61 10 00 30 25 F8 0F
+		02 02 02 02 0A 02 02 12 02 02 1E 02 00 00 00 00 00 00 00 00 AD 61 10 00 30 25 F8 0F 00 00 F8 0F
+		05 66 A2 5F 11 7B C6 78 7E 71 1D 66 74 66 A6 64 14 63 D3 61 FD 64 23 65 A4 60 CB 60 76 61 75 65
+		BF 5E 00 00 03 60 34 60 72 64 5F 5F 92 60 F2 5E FB 62 D3 62 B8 63 C2 63 6C 63 8C 5E 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 40 A9 34 00 00 00 00 00 00 00 00 00 00
 		</part>
 	</rom>
 	<rom index="0" zip="mk2r20.zip|mk2.zip" md5="7222cf6245208c8b5f162b85df1d3878" type="merged">

@@ -1,6 +1,6 @@
 <misterromdescription>
 	<name>Mortal Kombat (Turbo Ninja T-Unit 03/19/93, hack)</name>
-	<mratimestamp>20261101</mratimestamp>
+	<mratimestamp>20261119</mratimestamp>
 	<mameversion>0289</mameversion>
 	<setname>mktturbo</setname>
 	<year>1992</year>
@@ -8,19 +8,6 @@
 	<category>Fighter / Versus</category>
 	<rbf>Gm0rk_Midway-T-Unit</rbf>
 	<remark>2 players</remark>
-	<switches default="7D,FE">
-		<dip bits="12" name="Attract Sound" ids="Off,On"/>
-		<dip bits="14" name="Blood" ids="Off,On"/>
-		<dip bits="2,6" name="Coinage" ids="USA-1,USA-2,USA-3,USA-4,USA-ECA,USA-Free Play,German-1,German-2,German-3,German-4,German-5,German-ECA,German-Free Play,French-1,French-2,French-3,French-4,French-ECA,French-Free Play" values="31,15,23,7,27,3,29,13,21,5,25,9,1,30,14,22,6,26,2"/>
-		<dip bits="7" name="Coinage Source" ids="Dipswitch,CMOS" values="1,0"/>
-		<dip bits="11" name="Comic Book Offer" ids="Off,On"/>
-		<dip bits="1" name="Counters" ids="One,Two" values="1,0"/>
-		<dip bits="13" name="Low Blows" ids="Off,On"/>
-		<dip bits="16" name="Service Credit" ids="Add credit,Add credit"/>
-		<dip bits="0" name="Test Switch" ids="Off,On" values="1,0"/>
-		<dip bits="17" name="Tilt" ids="Slam tilt,Slam tilt"/>
-		<dip bits="15" name="Violence" ids="Off,On"/>
-	</switches>
 	<buttons names="High Punch,Low Punch,High Kick,Low Kick,Block,-,Start,Coin,Test,Pause" default="Y,B,X,A,R,-,Start,Select,-,-"/>
 	<romstruct>
 rom index 0 (SDRAM 0x000000):
@@ -31,9 +18,9 @@ rom index 3 (SDRAM 0xD00000):
 0x040000 OKI M6295 samples (1 MB)
 	</romstruct>
 	<rom index="1">
-		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FFDD1530 (27 presses), menu FFDD0D40; Reptile check FFCB1FF0, flag 01052940, 5 patches -->
+		<!-- game id and secrets table (rtl/tunit_secrets.sv): EJB code FFDD1530 (27 presses), menu FFDD0D40; Reptile check FFCB1FF0, flag 01052940, 5 patches; attract sound branches FFC8C9E0 -->
 		<part>
-		01 00 01 00 03 B2 FC 1F E0 0D 04 B2 FC 1F 60 09 C4 B8 FC 2F 00 03 00 00 00 00 00 00 00 00 00 00
+		01 00 01 00 03 B2 FC 1F E0 0D 04 B2 FC 1F 60 09 C4 B8 FC 2F 00 03 9E 8C FC DF 00 C0 00 00 00 00
 		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 8C 00 D4 D0 FD 0F D4 D0 FD 0F
 		20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
 		20 00 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00
@@ -50,12 +37,15 @@ rom index 3 (SDRAM 0xD00000):
 		00 20 02 00 00 00 02 00 00 20 02 00 00 00 02 00 20 00 02 00 00 00 02 00 20 00 02 00 00 00 02 00
 		20 00 02 00 00 00 02 00 30 00 02 00 10 00 F0 00 00 00 02 80
 		</part>
-		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 010519E0, P1 character 01051290, object pointer 01051230, stage 01051820, finish flag 01051880; Reptile flag 01052940; AI level word 010519C0; demo store PC FFCB3E30 -->
+		<!-- fight variables for the finishing moves (rtl/tunit_fmoves.sv): round state 010519E0, P1 character 01051290, object pointer 01051230, stage 01051820, finish flag 01051880; Reptile flag 01052940; direct finishers for 7 fighters, handlers exit at FFD9C9F0; AI level word 010519C0; demo store PC FFCB3E30 -->
 		<part repeat="524">00</part>
 		<part>
-		01 00 00 00 9E 51 10 00 29 51 10 00 57 51 10 00 30 51 10 00 5E 51 10 00 23 51 10 00 51 51 10 00
+		02 00 00 00 9E 51 10 00 29 51 10 00 57 51 10 00 30 51 10 00 5E 51 10 00 23 51 10 00 51 51 10 00
 		27 51 10 00 55 51 10 00 82 51 10 00 88 51 10 00 90 42 DF FF 90 42 DF FF 70 54 CE FF 09 0E 00 00
-		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 94 52 10 00 9C 51 10 00 E3 B3 FC 0F
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 94 52 10 00 9C 51 10 00 E3 B3 FC 0F 00 00 FD 0F
+		AF 9B DA 9C 29 9B 80 9A 2B 9C 49 9B 1B 9A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+		00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		</part>
 	</rom>
 	<rom index="0" zip="mktturbo.zip|mk.zip" md5="34c10c90b3178d74736bd3114b02fc70" type="merged">
