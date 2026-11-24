@@ -10,9 +10,9 @@
   <rbf>ppriest_JalecoMS32</rbf>
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
-  <buttons names="-,-,-,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
+  <buttons names="-,-,-,-,-,Start,Coin,Pause,Service,Test" default="Start,Select,L"/>
   <switches default="FF,FF,FF,FF" base="0">
-    <dip name="Flip Screen" bits="0" ids="On,Off"/>
+    <!-- not implemented. <dip name="Flip Screen" bits="0" ids="On,Off"/> -->
     <dip name="Campaign Mode" bits="2" ids="Off,On"/>
     <dip name="Tsumo Pinfu" bits="3" ids="Off,On"/>
     <dip name="Demo Sounds" bits="4" ids="Off,On"/>

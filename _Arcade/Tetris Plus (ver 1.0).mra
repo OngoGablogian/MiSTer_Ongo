@@ -10,9 +10,9 @@
   <rbf>ppriest_JalecoMS32</rbf>
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
-  <buttons names="Rotate CCW,Rotate CW,-,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
+  <buttons names="Rotate CCW,Rotate CW,-,-,-,Start,Coin,Pause,Service,Test" default="A,B,Start,Select,L"/>
   <switches default="FF,FF,7F,FF" base="0">
-    <dip name="Flip Screen" bits="0" ids="On,Off"/>
+    <!-- not implemented. <dip name="Flip Screen" bits="0" ids="On,Off"/> -->
     <dip name="Demo Sounds" bits="1" ids="Off,On"/>
     <dip name="Join In" bits="2,3" ids="-,Normal &amp; Puzzle,VS Mode,All Modes"/>
     <dip name="VS Rounds" bits="4,5" ids="1/1,3/5,4/7,2/3"/>

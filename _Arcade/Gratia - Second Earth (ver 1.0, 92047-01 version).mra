@@ -10,9 +10,9 @@
   <rbf>ppriest_JalecoMS32</rbf>
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
-  <buttons names="Air Shot,Ground Bomb,Ultimate Shot,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
+  <buttons names="Air Shot,Ground Bomb,Ultimate Shot,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Start,Select,L"/>
   <switches default="FF,FF,7F,FF" base="0">
-    <dip name="Flip Screen" bits="0" ids="On,Off"/>
+    <!-- not implemented. <dip name="Flip Screen" bits="0" ids="On,Off"/> -->
     <dip name="Demo Sounds" bits="1" ids="Off,On"/>
     <dip name="Bonus Life" bits="2" ids="None,200k/every 1000k"/>
     <dip name="Invulnerability (Cheat)" bits="3" ids="On,Off"/>

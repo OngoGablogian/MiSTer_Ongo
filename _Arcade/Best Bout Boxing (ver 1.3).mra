@@ -10,9 +10,9 @@
   <rbf>ppriest_JalecoMS32</rbf>
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
-  <buttons names="Jab,Body Punch,Power Punch,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
+  <buttons names="Jab,Body Punch,Power Punch,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Start,Select,L"/>
   <switches default="FD,FF,FF,FF" base="0">
-    <dip name="Flip Screen" bits="0" ids="On,Off"/>
+    <!-- not implemented. <dip name="Flip Screen" bits="0" ids="On,Off"/> -->
     <dip name="Language" bits="1" ids="English,Japanese"/>
     <dip name="Demo Sounds" bits="2" ids="Off,On"/>
     <dip name="Timer Speed" bits="4,5" ids="60/60,40/60,50/60,35/60"/>

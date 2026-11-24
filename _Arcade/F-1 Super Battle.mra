@@ -10,7 +10,7 @@
   <rbf>ppriest_JalecoMS32F1</rbf>
   <mameversion>0289</mameversion>
   <rotation>horizontal</rotation>
-  <buttons names="Accelerator,Brake,Shifter,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Y,R,Start,Select,L"/>
+  <buttons names="Accelerator,Brake,Shifter,-,-,Start,Coin,Pause,Service,Test" default="A,B,X,Start,Select,L"/>
   <switches default="3F,FF,FF,00" base="0">
     <dip name="Credit Counter" bits="0" ids="Eremite,Display"/>
     <dip name="Speed Meter Display" bits="1" ids="mph,km/h"/>
