@@ -1,0 +1,143 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Zero Gunner (Japan, Model 2B) (Model 2B-CRX). Derived from MAME
+      0.289 model2.cpp ROM_START(zerogunj), a clone of zerogun. For
+      the Model 2B build (branch model2b, Model2.sv M2_2B: the
+      ADSP-21062 SHARC as the coprocessor); the 2A and 2C cores cannot
+      run it. Study R1024 (this set's census), R1031.
+
+      MAME 0.289: working. The Japanese program (epr-20290 / 20291);
+      every other ROM is the export set's (MAME loads them from
+      zerogun). R1023 / R1024 measured the parent.
+
+      THE 2A LAYOUT (VF2's MRA; no 128 MB module needed), each slot
+      zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB
+        0x1080000  textures, 8 MB (MAME's 0-4 MB and 8-12 MB; 4 MB loaded)
+        0x1880000  polygons, 12 MB (8 MB loaded). The 2B core keeps the
+                   SHARC's DM page at SDRAM byte 0x2080000, this slot's 8 MB
+                   mark, so a 2B set in this layout can have at most 8 MB
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+                   (the rest 0 as MAME's region)
+      Image: 0x2EC0000 bytes.
+
+      THE PATCH at 0x700 is MAME's init_zerogun, which MAME applies to
+      this set too: 0x08000004 ("b" to the next instruction) over the
+      same "st g14,(g5)" (0x92f55000) in the boot's work-RAM clear,
+      which otherwise wipes the PRCB the boot copied to 0x5000b0
+      (study R862).
+
+      THE 315-5881 (MAME's key 042c0d13) is not modelled (R862): its
+      window reads 0, and the game uses it only as a check (R873) -
+      eleven copies of one sequence, each adding 1 to a counter on a
+      mismatch; past 10 the game stops. Each check's "be" past the
+      increment becomes "b" (0x12 -> 0x08, the same displacement). The
+      eleven sites are Zero Gunner (Export, Model 2B)'s, found here by
+      the 48 bytes around each: the three unique ones at 0x44448
+      (+0x28), 0x44e94 and 0x56334 (export 0x56134); the eight
+      identical ones, in the same order, at 0x44760, 0x44a3c, 0x44c2c,
+      0x475bc, 0x476c8, 0x478d4, 0x4ceb8 and 0x56864 (export 0x4cd34 /
+      0x56664). Both programs hold 13 "be +0x18 / +0x28" words. Not
+      run in MAME with the patches.
+
+      Index 4, the game ID: 0x12, Zero Gunner's (R862). Bit 7 would be
+      the 15 kHz CRT flag.
+    -->
+    <name>Zero Gunner (Japan, Model 2B)</name>
+    <setname>zerogunj</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>12 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Psikyo</manufacturer>
+    <category>Shooter</category>
+
+    <rom index="0" zip="zerogunj.zip|zerogun.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-20290.15" crc="9ce3ad21" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-20291.16" crc="7267a03d" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-20296.11" crc="072d8a5e" map="0021"/>
+            <part name="mpr-20297.12" crc="ba6a825b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20294.9" crc="a0bd1474" map="0021"/>
+            <part name="mpr-20295.10" crc="c548cced" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB (MAME's 0-4 MB, then its 8-12 MB) -->
+        <interleave output="32">
+            <part name="mpr-20301.27" crc="52010fb2" map="0021"/>
+            <part name="mpr-20300.25" crc="6f042792" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB (8 MB loaded; the SHARC's DM page is at
+                     SDRAM byte 0x2080000, the slot's 8 MB mark) -->
+        <interleave output="32">
+            <part name="mpr-20298.17" crc="8ab782fc" map="0021"/>
+            <part name="mpr-20299.21" crc="90e20cdb" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-20302.31" crc="44ff50d2" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-20303.32" crc="c040973f" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20304.33" crc="6decfe83" map="12"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-20290.15" crc="9ce3ad21" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-20291.16" crc="7267a03d" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- MAME init_zerogun at 0x700; R873: the 315-5881 checks, "be" -> "b", at this program's addresses -->
+        <patch offset="0x700">04 00 00 08</patch>
+        <patch offset="0x44448">28 00 00 08</patch>
+        <patch offset="0x44760">18 00 00 08</patch>
+        <patch offset="0x44a3c">18 00 00 08</patch>
+        <patch offset="0x44c2c">18 00 00 08</patch>
+        <patch offset="0x44e94">18 00 00 08</patch>
+        <patch offset="0x475bc">18 00 00 08</patch>
+        <patch offset="0x476c8">18 00 00 08</patch>
+        <patch offset="0x478d4">18 00 00 08</patch>
+        <patch offset="0x4ceb8">18 00 00 08</patch>
+        <patch offset="0x56334">18 00 00 08</patch>
+        <patch offset="0x56864">18 00 00 08</patch>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons. -->
+    <buttons names="Button 1,Button 2,Start,Coin,Test,Service"/>
+</misterromdescription>

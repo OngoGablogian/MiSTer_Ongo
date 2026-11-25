@@ -1,0 +1,154 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Dynamite Baseball 97 (Revision A) (Model 2B-CRX). Derived from
+      MAME 0.289 model2.cpp ROM_START(dynabb97), the parent set. For
+      the Model 2B build (branch model2b, Model2.sv M2_2B: the
+      ADSP-21062 SHARC as the coprocessor); the 2A and 2C cores cannot
+      run it. Study R1024 (this set's census), R1031.
+
+      MAME 0.289: MACHINE_NOT_WORKING, but R1024's census played it: a
+      4,096-word SHARC program, 246 DM words, nothing past the first
+      cut's list (107 vblanks late in MAME's own pacing). It writes
+      0x01c80000 five times (dropped on 2B, R1031). No protection, no
+      patches.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py, the 2B slots as Dead or Alive (Model 2B)'s):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY mirrors
+                   written out)
+        0x2080000  4 MB of zeros (the 2B core keeps the SHARC's DM page at
+                   its start, SDRAM byte 0x2080000, 128 KB)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the SHARC's data ROM) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x52C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      Index 4, the game ID: 0x2D, the Dynamite Baseball sets' own (R1046;
+      the 2B build only): the large layout, no copro data (MAME's region is
+      ERASE00); MAME's dynabb ports: two buttons a player (IN1 / IN2 bits 0
+      / 1, bits 2 / 3 unused) and the BAT SWING on AN0 (player 1) and AN1
+      (player 2), MAME's BAT1 / BAT2 pedals, 0x00 at rest: 0xFF while that
+      player's Swing (J6) is held, player 1's right analogue trigger a
+      partial swing; its luma rows (16 of rows 66-100 drawn; eight ranges, a
+      mean error of 0.05 of 63 over MAME's walk dumps). Before (0x13, Hanguk
+      Pro Yagu 98's, borrowed): both bats read 0xFF, a swing held all the
+      time, and Hanguk Pro Yagu 98's luma ranges (a mean error of 2.2 of 63
+      on this game's rows, 14.5% of textured pixels more than 4 off). Bit 7
+      would be the 15 kHz CRT flag.
+    -->
+    <name>Dynamite Baseball 97 (Revision A)</name>
+    <setname>dynabb97</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>2D 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Sports</category>
+
+    <rom index="0" zip="dynabb97.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19833a.15" crc="d99ed1b2" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19834a.16" crc="24192bb1" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19841.11" crc="989309af" map="0021"/>
+            <part name="mpr-19842.12" crc="eec54070" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19839.9" crc="d5a74cf4" map="0021"/>
+            <part name="mpr-19840.10" crc="45704e95" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19837.7" crc="c02187d9" map="0021"/>
+            <part name="mpr-19838.8" crc="546b61cd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19835.5" crc="a3b0a37c" map="0021"/>
+            <part name="mpr-19836.6" crc="d70a32aa" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots (the 2B core keeps the
+                     SHARC's DM page at its start, SDRAM byte 0x2080000, 128 KB) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19849.31" crc="b0d5bff0" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-19850.32" crc="e1fd27bf" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19851.33" crc="dc644077" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19852.34" crc="cfda4efd" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19853.35" crc="cfc64857" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19833a.15" crc="d99ed1b2" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19834a.16" crc="24192bb1" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19831a.13" crc="0527ea40" map="0021"/>
+            <part name="epr-19832a.14" crc="2f380a40" map="2100"/>
+        </interleave>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): the SHARC's data ROM, MAME's region empty -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-19848.27" crc="4c0526b7" map="0021"/>
+            <part name="mpr-19847.25" crc="fe55edbd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19848.27" crc="4c0526b7" map="0021"/>
+            <part name="mpr-19847.25" crc="fe55edbd" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-19843.17" crc="019bc583" map="0021"/>
+            <part name="mpr-19845.21" crc="2d23e73a" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19844.18" crc="150198d6" map="0021"/>
+            <part name="mpr-19846.22" crc="fe53cd17" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (VF2's order; J6 is that player's bat swing, AN0 / AN1). -->
+    <buttons names="Button 1,Button 2,Swing,Start,Coin,Test,Service"/>
+</misterromdescription>

@@ -1,0 +1,169 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Dynamite Deka 2 (Japan, Model 2B) (Model 2B-CRX). Derived from
+      MAME 0.289 model2.cpp ROM_START(dyndeka2b), a clone of dynamcop.
+      For the Model 2B build (branch model2b, Model2.sv M2_2B: the
+      ADSP-21062 SHARC as the coprocessor); the 2A and 2C cores cannot
+      run it. Study R1024 (this set's census), R1031.
+
+      MAME 0.289: MACHINE_NOT_WORKING. The Japanese program (epr-20936
+      / 20937) of Dynamite Cop (Export, Model 2B); every other ROM is
+      that set's. R1024 measured dynamcopb, not this set.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py, the 2B slots as Dead or Alive (Model 2B)'s):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY mirrors
+                   written out)
+        0x2080000  4 MB of zeros (the 2B core keeps the SHARC's DM page at
+                   its start, SDRAM byte 0x2080000, 128 KB)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the SHARC's data ROM) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x62C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      THE 315-5881 is not modelled (R887): Dynamite Cop (Export, Model
+      2B)'s six patches, at the same addresses - this program's
+      checker code is at the same 0x13b10, every word equal to the
+      export program's but the two table literals (0xc9210 / 0xc9220),
+      the penalty flag 0x51c768 referenced 15 times as there. 3aad0010
+      -> 08000010 at 0x13b60, 0x13b78, 0x13b90, 0x13ba8; 3aad0038 ->
+      08000038 at 0x13c24, 0x13c64. Not run in MAME with the patches.
+
+      Index 4, the game ID: 0x14, Dynamite Cop's (R887): the same
+      large layout, DIGITAL three-button profile and luma-row ranges
+      as Dynamite Cop (Export, Model 2A). Bit 7 is SET in this MRA
+      (0x94): the 15 kHz CRT flag (R795), which starts the core in 15
+      kHz interlaced whatever the OSD says (R908).
+    -->
+    <name>Dynamite Deka 2 (Japan, Model 2B) [15kHz CRT]</name>
+    <setname>dyndeka2b</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>94 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1998</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Fighter / Beat em up</category>
+
+    <rom index="0" zip="dyndeka2b.zip|dynamcop.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-20936.15" crc="23ef98f2" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-20937.16" crc="25a14e00" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-20797.10" crc="87bab1e4" map="0021"/>
+            <part name="mpr-20798.11" crc="40dd752b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20795.8" crc="0ef85e12" map="0021"/>
+            <part name="mpr-20796.9" crc="870139cb" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20793.6" crc="42ea08f8" map="0021"/>
+            <part name="mpr-20794.7" crc="8e5cd1db" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20791.4" crc="4883d0df" map="0021"/>
+            <part name="mpr-20792.5" crc="47becfa2" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots (the 2B core keeps the
+                     SHARC's DM page at its start, SDRAM byte 0x2080000, 128 KB) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-20811.30" crc="a154b83e" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-20812.31" crc="695b6088" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20813.32" crc="1908679c" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20814.36" crc="e8ebc74c" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20815.37" crc="1b5aaae4" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-20936.15" crc="23ef98f2" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-20937.16" crc="25a14e00" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-20934.13" crc="618a68bf" map="0021"/>
+            <part name="epr-20935.14" crc="13abe49c" map="2100"/>
+        </interleave>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): the SHARC's data ROM, MAME's region empty -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-20809.25" crc="3b7b4622" map="0021"/>
+            <part name="mpr-20807.24" crc="1241e0f2" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20810.27" crc="838a10a7" map="0021"/>
+            <part name="mpr-20808.26" crc="706bd495" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 32 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-20799.16" crc="424571bf" map="0021"/>
+            <part name="mpr-20803.20" crc="61a8ad52" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20800.17" crc="3c2ee808" map="0021"/>
+            <part name="mpr-20804.21" crc="03b35cb8" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20801.18" crc="c6914173" map="0021"/>
+            <part name="mpr-20805.22" crc="f6605ede" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-20802.19" crc="d11b5267" map="0021"/>
+            <part name="mpr-20806.23" crc="0c942073" map="2100"/>
+        </interleave>
+
+        <!-- R887: the 315-5881 checks, cmpibe -> b (same displacement), at this program's addresses -->
+        <patch offset="0x13b60">10 00 00 08</patch>
+        <patch offset="0x13b78">10 00 00 08</patch>
+        <patch offset="0x13b90">10 00 00 08</patch>
+        <patch offset="0x13ba8">10 00 00 08</patch>
+        <patch offset="0x13c24">38 00 00 08</patch>
+        <patch offset="0x13c64">38 00 00 08</patch>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (VF2's order: R887's three-button profile). -->
+    <buttons names="Punch,Kick,Jump,Start,Coin,Test,Service"/>
+</misterromdescription>

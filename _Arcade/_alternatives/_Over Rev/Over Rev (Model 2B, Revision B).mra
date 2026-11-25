@@ -1,0 +1,119 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Over Rev (Model 2B, Revision B) (Model 2B-CRX). Derived from
+      MAME 0.289 model2.cpp ROM_START(overrevb), a clone of overrev.
+      For the Model 2B build (branch model2b, Model2.sv M2_2B: the
+      ADSP-21062 SHARC as the coprocessor); the 2A and 2C cores cannot
+      run it. Study R1024 (this set's census), R1031.
+
+      MAME 0.289: MACHINE_NOT_WORKING; R1024 did not run it (a ROM
+      then differed from 0.289's; this set's zip now matches every
+      CRC). The 2B program (epr-19992b / 19993b); data, textures,
+      polygons and sound are Over Rev (Model 2C)'s chips. The comms
+      program (epr-18643, MAME's cpu4) is not loaded (not modelled;
+      R928's comm-board answer stands in). No protection, no patches.
+
+      THE 2A LAYOUT (VF2's MRA; no 128 MB module needed), each slot
+      zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB
+        0x1080000  textures, 8 MB (MAME's 0-4 MB and 8-12 MB; 4 MB loaded)
+        0x1880000  polygons, 12 MB (4 MB loaded). The 2B core keeps the
+                   SHARC's DM page at SDRAM byte 0x2080000, this slot's 8 MB
+                   mark, so a 2B set in this layout can have at most 8 MB
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+                   (the rest 0 as MAME's region)
+      Image: 0x2EC0000 bytes.
+
+      Index 4, the game ID: 0x1C, Over Rev's (R928): its profile
+      (MAME's overrev ports, indy500's with the pedals reversed), its
+      comm-board answer and its luma table (R932) - kept live on the
+      2B build for this set (R1035). Bit 7 would be the 15 kHz CRT
+      flag.
+    -->
+    <name>Over Rev (Model 2B, Revision B)</name>
+    <setname>overrevb</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>1C 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1997</year>
+    <manufacturer>Jaleco</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="overrevb.zip|overrev.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19992b.15" crc="6d3e78d5" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19993b.16" crc="765dc9ce" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-19996.11" crc="21928a00" map="0021"/>
+            <part name="mpr-19997.12" crc="2a169cab" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19994.9" crc="e691fbd5" map="0021"/>
+            <part name="mpr-19995.10" crc="82a7828e" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB (MAME's 0-4 MB, then its 8-12 MB) -->
+        <interleave output="32">
+            <part name="mpr-20001.27" crc="6ca236aa" map="0021"/>
+            <part name="mpr-20000.25" crc="894d8ded" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB (4 MB loaded; the SHARC's DM page is at
+                     SDRAM byte 0x2080000, the slot's 8 MB mark) -->
+        <interleave output="32">
+            <part name="mpr-19998.17" crc="6a834574" map="0021"/>
+            <part name="mpr-19999.21" crc="ff590a2d" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-20002.31" crc="7efb069e" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-20003.32" crc="149ac22b" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-20004.34" crc="0b9c5410" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19992b.15" crc="6d3e78d5" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19993b.16" crc="765dc9ce" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+    </rom>
+
+    <!-- Steering on either stick (or the paddle); pedals on the right
+         stick's Y or the Accel / Brake buttons, reversed as MAME's ports (the
+         game's default with no NVRAM); Shift Up / Shift Down; View 1 / 2.
+         Over Rev (Model 2C)'s profile (R928). -->
+    <buttons names="Coin,Start,Test,Service,View 1,View 2,Accel,Brake,Shift Up,Shift Down"/>
+</misterromdescription>

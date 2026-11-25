@@ -1,0 +1,148 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Gunblade NY (Revision A) (Model 2B-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(gunblade), the parent set. For the Model 2B
+      build (branch model2b, Model2.sv M2_2B: the ADSP-21062 SHARC as
+      the coprocessor); the 2A and 2C cores cannot run it. Study R1024
+      (this set's census), R1031.
+
+      MAME 0.289: working. R1024's census: the largest SHARC program
+      of the library (6,958 words, executed to 0x21b27; the PM on chip
+      is 8 K words, R1027), 264 DM words, the data ROM read 4,181
+      times a vblank, the buffer RAM written 1,139 times, FMUL ||
+      FABS. MAME's copro_data region is 8 MB; the 2B build's slot is 4
+      MB (the 8 MB slot is 2C's Ski Super G's only, a2_copro8), so the
+      upper 4 MB are not loaded and a read there returns the word 4 MB
+      below it. MAME 0.289 (R1037: 300 s of attract and play, a tap on
+      the SHARC's reads) reads only the first 256 KB. No
+      protection, no patches.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py, the 2B slots as Dead or Alive (Model 2B)'s):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY mirrors
+                   written out)
+        0x2080000  4 MB of zeros (the 2B core keeps the SHARC's DM page at
+                   its start, SDRAM byte 0x2080000, 128 KB)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the SHARC's data ROM) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x52C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      Index 4, the game ID: 0x25, this set's own (R1037; the 2B build only):
+      the large layout; the SHARC's data-ROM reads from the copro-data slot
+      (Model2.sv a2_copro_rom); MAME's gunblade ports (m2_2a_inputs B2G):
+      IN0 model2's, IN1 bits 0 / 1 the two triggers, AN0 P1_X, AN1 P2_X, AN2
+      P1_Y, AN3 P2_Y from each player's left stick as 0x80 + s (the stops
+      MAME's MINMAX gives are the cabinet's; the game's gun adjustment in
+      the test menu takes them, and a stick covers every pair); its luma
+      rows, 0 and 1, exact. Before (0x18, Sky Target's, borrowed): Sky
+      Target's luma ranges drew both rows with row 6's table, MAME's walk
+      dumps scoring a mean error of 32 of 63 on every textured pixel (the
+      black polygons), and Sky Target's analog profile. Bit 7 would be the
+      15 kHz CRT flag.
+    -->
+    <name>Gunblade NY (Revision A)</name>
+    <setname>gunblade</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>25 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Shooter / Gun</category>
+
+    <rom index="0" zip="gunblade.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18988a.15" crc="f63f1ad2" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-18989a.16" crc="c1c84d65" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-18974.11" crc="e29ecaff" map="0021"/>
+            <part name="mpr-18975.12" crc="d8187582" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18976.9" crc="c95c15eb" map="0021"/>
+            <part name="mpr-18977.10" crc="db8f5b6f" map="2100"/>
+        </interleave>
+        <part repeat="16777216">00</part>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots (the 2B core keeps the
+                     SHARC's DM page at its start, SDRAM byte 0x2080000, 128 KB) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18990.31" crc="02b1b0d1" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18978.32" crc="0f78b3e3" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18979.34" crc="f13ea36f" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-18988a.15" crc="f63f1ad2" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-18989a.16" crc="c1c84d65" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): the SHARC's data ROM, MAME's 8 MB -->
+        <interleave output="32">
+            <part name="mpr-18986.29" crc="04820f7b" map="0021" offset="0x000000" length="0x200000"/>
+            <part name="mpr-18987.30" crc="2419367f" map="2100" offset="0x000000" length="0x200000"/>
+        </interleave>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-18985.27" crc="ad6166e3" map="0021"/>
+            <part name="mpr-18984.25" crc="756f6f37" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18985.27" crc="ad6166e3" map="0021"/>
+            <part name="mpr-18984.25" crc="756f6f37" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-18980.17" crc="22345534" map="0021"/>
+            <part name="mpr-18981.21" crc="2544a33d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18982.18" crc="d0a92b2a" map="0021"/>
+            <part name="mpr-18983.22" crc="1b4af982" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2: the trigger on J4,
+         Start J6, Coin J7, Test J8, Service J9 (Virtua Cop 2's order); each
+         player's left stick aims (calibrate in the test menu's gun
+         adjustment). -->
+    <buttons names="Trigger,-,Start,Coin,Test,Service"/>
+</misterromdescription>

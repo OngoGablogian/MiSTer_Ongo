@@ -1,0 +1,169 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Dead or Alive (Model 2B, Revision B) (Model 2B-CRX). Derived
+      from MAME 0.289 model2.cpp ROM_START(doab), a clone of doa. For
+      the Model 2B build (branch model2b, Model2.sv M2_2B: the
+      ADSP-21062 SHARC as the coprocessor); the 2A and 2C cores cannot
+      run it. Study R1024 (this set's census), R1031.
+
+      MAME 0.289: working. The Dec 4 1996 program (epr-19379b /
+      19380b); every other ROM is Revision C's (MAME loads them from
+      doa). R1023 / R1024 measured the parent: a 4,096-word program,
+      186 DM words, nothing past the first cut's list. The SHARC's
+      program is uploaded by the i960 at boot, as on the board
+      (R1023).
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py, the 2B slots as Dead or Alive (Model 2B)'s):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY mirrors
+                   written out)
+        0x2080000  4 MB of zeros (the 2B core keeps the SHARC's DM page at
+                   its start, SDRAM byte 0x2080000, 128 KB)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the SHARC's data ROM) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x5AC0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      THE 317-0229 is not modelled (R887, R921): its two boot routines
+      answer as the chip does: mov 1,g0 (5c801e01); ret (0a000000). In
+      this program they are at 0x29b0 and 0x29f0 (Revision C's 0x29c0
+      / 0x2a00: the same 64 bytes, found once each), called from 0x5a0
+      and 0x5b8 (0x09002410, 0x09002438); the boot's checksum of
+      0x570-0x5e4 against the word at 0x8fce0 (Revision C: 0x8fd90)
+      covers the calls, not the routines (R921), so the routines are
+      patched and the calls left alone.
+
+      Index 4, the game ID: 0x16, Dead or Alive's (R887): the same
+      large layout, inputs and protection as Dead or Alive (Model 2B,
+      Revision C), whose ID it is; the 2B build tells the boards
+      apart. Bit 7 is SET in this MRA (0x96): the 15 kHz CRT flag
+      (R795), which starts the core in 15 kHz interlaced whatever the
+      OSD says (R908).
+    -->
+    <name>Dead or Alive (Model 2B, Revision B) [15kHz CRT]</name>
+    <setname>doab</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>96 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Tecmo</manufacturer>
+    <category>Fighter</category>
+
+    <rom index="0" zip="doab.zip|doa.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19379b.15" crc="8a10a944" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19380b.16" crc="766c1ec8" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19318.11" crc="ab431bfe" map="0021"/>
+            <part name="mpr-19319.12" crc="c5cb694d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19316.9" crc="2d2d1b1a" map="0021"/>
+            <part name="mpr-19317.10" crc="96b17bcf" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19314.7" crc="a8d963fb" map="0021"/>
+            <part name="mpr-19315.8" crc="90ae5682" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19312.5" crc="1dcedb10" map="0021"/>
+            <part name="mpr-19313.6" crc="8c63055e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19312.5" crc="1dcedb10" map="0021"/>
+            <part name="mpr-19313.6" crc="8c63055e" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots (the 2B core keeps the
+                     SHARC's DM page at its start, SDRAM byte 0x2080000, 128 KB) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19328.31" crc="400bdbfb" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-19329.32" crc="8fd2708a" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19330.33" crc="0c69787d" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19331.34" crc="c18ea0b8" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19332.35" crc="2877f96f" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19379b.15" crc="8a10a944" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19380b.16" crc="766c1ec8" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): the SHARC's data ROM, MAME's region empty -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-19321.27" crc="9c49e845" map="0021"/>
+            <part name="mpr-19320.25" crc="190c017f" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19321.27" crc="9c49e845" map="0021"/>
+            <part name="mpr-19320.25" crc="190c017f" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 24 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-19322.17" crc="d0e6ecf0" map="0021"/>
+            <part name="mpr-19325.21" crc="7cbe432d" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19323.18" crc="453d3f4a" map="0021"/>
+            <part name="mpr-19326.22" crc="b976da02" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19324.19" crc="0d6bf454" map="0021"/>
+            <part name="mpr-19327.23" crc="6a75634c" map="2100"/>
+        </interleave>
+
+        <!-- R921 / R1031: the 317-0229 boot check's two routines -> mov 1,g0; ret -->
+        <patch offset="0x29b0">01 1e 80 5c</patch>
+        <patch offset="0x29b4">00 00 00 0a</patch>
+        <patch offset="0x29f0">01 1e 80 5c</patch>
+        <patch offset="0x29f4">00 00 00 0a</patch>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (VF2's order: R887's three-button profile). -->
+    <buttons names="Hold,Punch,Kick,Start,Coin,Test,Service"/>
+</misterromdescription>

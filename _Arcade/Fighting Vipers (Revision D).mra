@@ -1,0 +1,218 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Fighting Vipers (Revision D) (Model 2B-CRX). Derived from MAME
+      0.289 model2.cpp ROM_START(fvipers), the parent set. For the
+      Model 2B build (branch model2b, Model2.sv M2_2B: the ADSP-21062
+      SHARC as the coprocessor); the 2A and 2C cores cannot run it.
+      Study R1024 (this set's census), R1031.
+
+      MAME 0.289: MACHINE_NOT_WORKING, but R1024's census fought it.
+      The SHARC program (4,351 words) uses type-1 dual moves (19.7 M
+      in 200 s) and PM-bus data, which m2b_sharc does since R1042,
+      and DM to 0x826; also the data
+      ROM (598 reads a vblank), the buffer RAM (1,922 reads, 2,917
+      writes a vblank) and the status register at 0x00980014. Its
+      textures go to the windows' upper MB only (mirrored on 2B). No
+      protection, no patches.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py, the 2B slots as Dead or Alive (Model 2B)'s):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY mirrors
+                   written out)
+        0x2080000  4 MB of zeros (the 2B core keeps the SHARC's DM page at
+                   its start, SDRAM byte 0x2080000, 128 KB)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the SHARC's data ROM) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x4EC0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      Index 4, the game ID: 0x2A, the Fighting Vipers sets' own (R1046; the
+      2B build only): the large layout; the SHARC's data-ROM reads from the
+      copro-data slot (Model2.sv a2_copro_rom; MAME's 4 MB region); the
+      DIGITAL three-button profile in VF2's order, which is MAME's vf2 ports
+      (Punch, Kick, Guard on IN1 / IN2 bits 0-2); its luma rows, 0-3, exact
+      (measured on fvipers, the parent). Before (0x1A, Motor Raid's,
+      borrowed): Motor Raid's luma ranges drew all four rows with row 100's
+      table - over MAME's walk dumps a mean error of 29.9 of 63 on every
+      textured pixel, the dark 3D the board showed - and Motor Raid's analog
+      profile (no stick, no buttons, no Start 1). Bit 7 would be the 15 kHz
+      CRT flag.
+    -->
+    <name>Fighting Vipers (Revision D)</name>
+    <setname>fvipers</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>2A 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Fighter</category>
+
+    <rom index="0" zip="fvipers.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18606d.15" crc="7334de7d" map="0021"/>
+            <part name="epr-18607d.16" crc="700d2ade" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18604d.13" crc="704fdfcf" map="0021"/>
+            <part name="epr-18605d.14" crc="7dddf81f" map="2100"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-18614.11" crc="0ebc899f" map="0021"/>
+            <part name="mpr-18615.12" crc="018abdb7" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18612.9" crc="1f174cd1" map="0021"/>
+            <part name="mpr-18613.10" crc="f057cdf2" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18610d.7" crc="a1871703" map="0021"/>
+            <part name="epr-18611d.8" crc="39a75fee" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18608d.5" crc="5bc11881" map="0021"/>
+            <part name="epr-18609d.6" crc="cd426035" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots (the 2B core keeps the
+                     SHARC's DM page at its start, SDRAM byte 0x2080000, 128 KB) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18628.31" crc="aa7dd79f" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18629.32" crc="5d0006cc" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18630.33" crc="9d405615" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18631.34" crc="9dae5b45" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18632.35" crc="39da6805" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <part repeat="1572864">00</part>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): the SHARC's data ROM, MAME's 4 MB -->
+        <interleave output="32">
+            <part name="mpr-18622.29" crc="c74d99e3" map="0021"/>
+            <part name="mpr-18623.30" crc="746ae931" map="2100"/>
+        </interleave>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-18626.27" crc="9df0a961" map="0021"/>
+            <part name="mpr-18624.25" crc="1d74433e" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+        <interleave output="32">
+            <part name="mpr-18627.28" crc="946175a0" map="0021"/>
+            <part name="mpr-18625.26" crc="182fd572" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x42C0000  polygons, 12 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-18616.17" crc="15a239be" map="0021"/>
+            <part name="mpr-18619.21" crc="9d5e8e2b" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18617.18" crc="a62cab7d" map="0021"/>
+            <part name="mpr-18620.22" crc="4d432afd" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18618.19" crc="adab589f" map="0021"/>
+            <part name="mpr-18621.23" crc="f5eeaa95" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (VF2's order: R887's three-button profile; MAME's vf2 ports). -->
+    <buttons names="Punch,Kick,Guard,Start,Coin,Test,Service"/>
+</misterromdescription>

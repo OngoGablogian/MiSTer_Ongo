@@ -1,0 +1,148 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Rail Chase 2 (Revision A) (Model 2B-CRX). Derived from MAME
+      0.289 model2.cpp ROM_START(rchase2), the parent set. For the
+      Model 2B build (branch model2b, Model2.sv M2_2B: the ADSP-21062
+      SHARC as the coprocessor); the 2A and 2C cores cannot run it.
+      Study R1024 (this set's census), R1031.
+
+      MAME 0.289: working (imperfect sound). R1024's census: a
+      3,112-word SHARC program, 174 DM words, the buffer RAM written
+      1,371 times a vblank, no data-ROM reads. MAME's copro_data
+      region is empty but ERASEFF, so its 4 MB slot is carried as
+      0xFF. The motion seats' Z80 (iocpu) has no dump in MAME and is
+      not loaded. MAME answers the drive board's checks on the
+      315-5649's port D (rchase2_drive_board_r: each command's bit
+      low), and so does this set's ID (below). No protection, no
+      patches.
+
+      THE 2A LAYOUT (VF2's MRA; no 128 MB module needed), each slot
+      zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB
+        0x1080000  textures, 8 MB (MAME's 0-4 MB and 8-12 MB; 4 MB loaded)
+        0x1880000  polygons, 12 MB (8 MB loaded). The 2B core keeps the
+                   SHARC's DM page at SDRAM byte 0x2080000, this slot's 8 MB
+                   mark, so a 2B set in this layout can have at most 8 MB
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+                   (the rest 0 as MAME's region)
+        0x2EC0000  copro data, 4 MB: MAME's region is empty and ERASEFF,
+                   so the slot is 0xFF
+      Image: 0x32C0000 bytes.
+
+      Index 4, the game ID: 0x29, this set's own (R1037; the 2B build only):
+      the 2A layout; MAME's rchase2 ports (m2_2a_inputs B2G): IN0 model2's,
+      IN1 bits 0 / 1 the two triggers, AN0 P2_X, AN1 P1_X, AN2 P2_Y, AN3
+      P1_Y from each player's left stick, each PORT_REVERSE (0x7F-s); port D
+      the seats' drive board as MAME answers it (rchase2_drive_board_r: 0xFF
+      with one bit low for each command on port E). The boot's CHECKING
+      NETWORK NOW (main board - drive board) waits for that answer: MAME
+      with port D held at 0xFF shows NET_BAD and stays there for 40 s
+      (R1037), as the board did on the borrowed ID; MAME's own answer
+      reaches NET_GOOD in 9 s. Luma rows 0 and 1 only: R867's fixed map,
+      exact. Before (0x11, Virtua Cop 2's, borrowed): port D 0xFF, both aims
+      pinned. Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Rail Chase 2 (Revision A)</name>
+    <setname>rchase2</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>29 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Shooter / Gun</category>
+
+    <rom index="0" zip="rchase2.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18045a.15" crc="bfca0314" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-18046a.16" crc="0b8d3074" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-18037.11" crc="dea8f896" map="0021"/>
+            <part name="mpr-18038.12" crc="441f7709" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18039.9" crc="b98c6f06" map="0021"/>
+            <part name="mpr-18040.10" crc="0d872667" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18041.7" crc="e511ab0a" map="0021"/>
+            <part name="mpr-18042.8" crc="e9a04159" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18043.5" crc="ff84dfd6" map="0021"/>
+            <part name="mpr-18044.6" crc="ab9b406d" map="2100"/>
+        </interleave>
+
+        <!-- 0x1080000  textures, 8 MB (MAME's 0-4 MB, then its 8-12 MB) -->
+        <interleave output="32">
+            <part name="mpr-18035.27" crc="4423f66e" map="0021"/>
+            <part name="mpr-18036.25" crc="69221cf5" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB (8 MB loaded; the SHARC's DM page is at
+                     SDRAM byte 0x2080000, the slot's 8 MB mark) -->
+        <interleave output="32">
+            <part name="mpr-18031.17" crc="25d0deae" map="0021"/>
+            <part name="mpr-18032.21" crc="dbae35c2" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18033.18" crc="1e75946c" map="0021"/>
+            <part name="mpr-18034.22" crc="215235ad" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18047.31" crc="4c31d459" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18029.32" crc="f6804150" map="12"/>
+        </interleave>
+        <part repeat="2097152">00</part>
+        <interleave output="16">
+            <part name="mpr-18030.34" crc="1167615d" map="12"/>
+        </interleave>
+        <part repeat="2097152">00</part>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-18045a.15" crc="bfca0314" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-18046a.16" crc="0b8d3074" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18074a.13" crc="ca4b58df" map="0021"/>
+            <part name="epr-18075a.14" crc="b82672e4" map="2100"/>
+        </interleave>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): MAME's region is empty, ROMREGION_ERASEFF -->
+        <part repeat="4194304">FF</part>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2: Virtua Cop 2's
+         order (R870), the trigger on J4; each player's left stick aims. -->
+    <buttons names="Trigger,-,Start,Coin,Test,Service"/>
+</misterromdescription>

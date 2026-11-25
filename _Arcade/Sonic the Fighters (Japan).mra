@@ -1,0 +1,210 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Sonic the Fighters (Japan) (Model 2B-CRX). Derived from MAME
+      0.289 model2.cpp ROM_START(sfight), a clone of schamp. For the
+      Model 2B build (branch model2b, Model2.sv M2_2B: the ADSP-21062
+      SHARC as the coprocessor); the 2A and 2C cores cannot run it.
+      Study R1024 (this set's census), R1031.
+
+      MAME 0.289: MACHINE_NOT_WORKING. Sonic the Fighters: the
+      Japanese program (epr-19001 / 19002) and data EPROMs (epr-19003
+      / 19004); every other ROM is Sonic Championship's. Its SHARC
+      program needs dual moves and PM-bus data, as schamp's (R1024;
+      done since R1042). No protection, no patches.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py, the 2B slots as Dead or Alive (Model 2B)'s):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY mirrors
+                   written out)
+        0x2080000  4 MB of zeros (the 2B core keeps the SHARC's DM page at
+                   its start, SDRAM byte 0x2080000, 128 KB)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the SHARC's data ROM) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x52C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      Index 4, the game ID: 0x2B, Sonic Championship's and Sonic the
+      Fighters' own (R1046; the 2B build only; the two sets share every ROM
+      but the program and data EPROMs, and MAME gives both the schamp
+      ports): the large layout; the SHARC's data-ROM reads from the
+      copro-data slot (Model2.sv a2_copro_rom); the DIGITAL three-button
+      profile in VF2's order, which is MAME's schamp ports (Punch, Kick,
+      Barrier on IN1 / IN2 bits 0-2); its luma rows (14 of rows 0-68 drawn;
+      eight ranges, a mean error of 0.04 of 63 over MAME's walk dumps of
+      schamp and sfight). Before (0x1A, Motor Raid's, borrowed): Motor
+      Raid's luma ranges, a mean error of 46.9 of 63 on every textured pixel
+      - the black 3D the board showed - and Motor Raid's analog profile (no
+      stick, no buttons, no Start 1). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Sonic the Fighters (Japan)</name>
+    <setname>sfight</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>2B 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1996</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Fighter</category>
+
+    <rom index="0" zip="sfight.zip|schamp.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-19001.15" crc="9b088511" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-19002.16" crc="46f510da" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-19007.11" crc="8b8ff751" map="0021"/>
+            <part name="mpr-19008.12" crc="a94654f5" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19005.9" crc="98cd1127" map="0021"/>
+            <part name="mpr-19006.10" crc="e79f0a26" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-19003.7" crc="63bae5c5" map="0021"/>
+            <part name="epr-19004.8" crc="c10c9f39" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots (the 2B core keeps the
+                     SHARC's DM page at its start, SDRAM byte 0x2080000, 128 KB) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-19021.31" crc="0b9f7583" map="12"/>
+        </interleave>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-19022.32" crc="4381869b" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19023.33" crc="07c67f88" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19024.34" crc="15ff76d3" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-19025.35" crc="6ad8fb70" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-19001.15" crc="9b088511" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-19002.16" crc="46f510da" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): the SHARC's data ROM, MAME's 4 MB -->
+        <interleave output="32">
+            <part name="mpr-19015.29" crc="c74d99e3" map="0021"/>
+            <part name="mpr-19016.30" crc="746ae931" map="2100"/>
+        </interleave>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-19019.27" crc="59121896" map="0021"/>
+            <part name="mpr-19017.25" crc="7b298379" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19020.28" crc="9540dba0" map="0021"/>
+            <part name="mpr-19018.26" crc="3b7e7a12" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-19009.17" crc="fd410350" map="0021"/>
+            <part name="mpr-19012.21" crc="9bb7b5b6" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-19010.18" crc="6fd94187" map="0021"/>
+            <part name="mpr-19013.22" crc="9e232fe5" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (VF2's order: R887's three-button profile; MAME's schamp ports). -->
+    <buttons names="Punch,Kick,Barrier,Start,Coin,Test,Service"/>
+</misterromdescription>

@@ -1,0 +1,211 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      INDY 500 Twin (Revision A, Newer) (Model 2B-CRX). Derived from
+      MAME 0.289 model2.cpp ROM_START(indy500), the parent set. For
+      the Model 2B build (branch model2b, Model2.sv M2_2B: the
+      ADSP-21062 SHARC as the coprocessor); the 2A and 2C cores cannot
+      run it. Study R1024 (this set's census), R1031.
+
+      MAME 0.289: MACHINE_NOT_WORKING, but R1024's census raced it: a
+      4,096-word SHARC program (2,229 executed), 278 DM words, the
+      data ROM (MAME's 1 MB copro_data) read 1,499 times a vblank,
+      5,043 at most. No protection, no patches.
+
+      NEEDS THE 128 MB SDRAM MODULE (R891). THE LARGE 2A LAYOUT (R897,
+      written by tools/mra_2a_big.py, the 2B slots as Dead or Alive (Model 2B)'s):
+        0x0000000  i960 program 0-512 KB
+        0x0080000  main_data, 32 MB (MAME's 0x02000000 window, ROM_COPY mirrors
+                   written out)
+        0x2080000  4 MB of zeros (the 2B core keeps the SHARC's DM page at
+                   its start, SDRAM byte 0x2080000, 128 KB)
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+        0x2EC0000  copro data, 4 MB (the SHARC's data ROM) -> SDRAM byte 0x2780000
+        0x32C0000  texture-coordinate ROM, 16 MB -> SDRAM byte 0x4000000
+        0x42C0000  polygons                    -> SDRAM byte 0x5000000
+      Image: 0x52C0000 bytes. Every stretch MAME's region does not load is
+      written as MAME's fill (0, or 0xFF where the region is ERASEFF).
+
+      Index 4, the game ID: 0x26, this set's own (R1037; the 2B build only):
+      the large layout; the SHARC's data-ROM reads from the copro-data slot
+      (Model2.sv a2_copro_rom; MAME 0.289 reads only its first 1 MB, R1037);
+      MAME's indy500 ports (STCC's, R933: AN0 steering, AN1 accelerator, AN2
+      brake, the pedals not reversed; IN1 View 1 / View 2 and Shift Up /
+      Down); its luma rows (0-6 and 100, exact). Before (0x1A, Motor Raid's,
+      borrowed): Motor Raid's luma ranges drew rows 0-6 with row 100's table
+      (MAME's walk dumps: mean error 4.2 of 63, 27% of textured pixels more
+      than 4 off: the road and background) and Motor Raid's analog
+      channels (not drivable). Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>INDY 500 Twin (Revision A, Newer)</name>
+    <setname>indy500</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>26 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1995</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Driving</category>
+
+    <rom index="0" zip="indy500.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18598a.15" crc="3cdcac0f" map="0021" offset="0x000000" length="0x040000"/>
+            <part name="epr-18599a.16" crc="32bde9a2" map="2100" offset="0x000000" length="0x040000"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 32 MB (MAME's 0x02000000 window, mirrors written out) -->
+        <interleave output="32">
+            <part name="mpr-18237.11" crc="37e4255a" map="0021"/>
+            <part name="mpr-18238.12" crc="bf837bac" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18239.9" crc="9a2db86e" map="0021"/>
+            <part name="mpr-18240.10" crc="ab46a35f" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18596.7" crc="8be1a5cd" map="0021"/>
+            <part name="epr-18597.8" crc="44824e38" map="2100"/>
+        </interleave>
+
+        <!-- 0x2080000  4 MB of zeros, to the fixed slots (the 2B core keeps the
+                     SHARC's DM page at its start, SDRAM byte 0x2080000, 128 KB) -->
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18600.31" crc="269ee4a0" map="12"/>
+        </interleave>
+        <part repeat="262144">00</part>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18241.32" crc="3a380ae1" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18242.33" crc="1cc3deae" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18243.34" crc="a00a0053" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18244.35" crc="bfa75beb" map="12"/>
+        </interleave>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <interleave output="32">
+            <part name="epr-18598a.15" crc="3cdcac0f" map="0021" offset="0x040000" length="0x040000"/>
+            <part name="epr-18599a.16" crc="32bde9a2" map="2100" offset="0x040000" length="0x040000"/>
+        </interleave>
+        <part repeat="1048576">00</part>
+
+        <!-- 0x2EC0000  copro data, 4 MB (R862): the SHARC's data ROM, MAME's 1 MB -->
+        <interleave output="32">
+            <part name="epr-18249.29" crc="a399f023" map="0021"/>
+            <part name="epr-18250.30" crc="7479ad52" map="2100"/>
+        </interleave>
+        <part repeat="3145728">00</part>
+
+        <!-- 0x32C0000  texture-coordinate ROM, 16 MB (R897; the loader's third
+                     remap puts it at SDRAM byte 0x4000000) -->
+        <interleave output="32">
+            <part name="mpr-18232.27" crc="f962347d" map="0021"/>
+            <part name="mpr-18231.25" crc="673d5338" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18232.27" crc="f962347d" map="0021"/>
+            <part name="mpr-18231.25" crc="673d5338" map="2100"/>
+        </interleave>
+
+        <!-- 0x42C0000  polygons, 16 MB (R897; SDRAM byte 0x5000000) -->
+        <interleave output="32">
+            <part name="mpr-18233.17" crc="48a024d3" map="0021"/>
+            <part name="mpr-18234.21" crc="1178bfc8" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18235.18" crc="e7d70d59" map="0021"/>
+            <part name="mpr-18236.22" crc="6ca29e0e" map="2100"/>
+        </interleave>
+
+    </rom>
+
+    <!-- Steering on either stick (or the paddle); pedals on the right
+         stick's Y or the Accel / Brake buttons, over MAME's whole 0x00-0xFF
+         (indy500's ports: released 0x00, not reversed); Shift Up / Shift
+         Down; View 1 (zoom in) / View 2 (zoom out). STCC's profile (R933). -->
+    <buttons names="Coin,Start,Test,Service,View 1,View 2,Accel,Brake,Shift Up,Shift Down"/>
+</misterromdescription>

@@ -1,0 +1,133 @@
+<misterromdescription>
+    <!--
+      Sega Model 2 core for MiSTer FPGA - Copyright (C) 2026 alphanu1
+      SPDX-License-Identifier: GPL-3.0-or-later
+
+      Virtua Striker (Model 2B-CRX). Derived from MAME 0.289
+      model2.cpp ROM_START(vstrikero), a clone of vstriker. For the
+      Model 2B build (branch model2b, Model2.sv M2_2B: the ADSP-21062
+      SHARC as the coprocessor); the 2A and 2C cores cannot run it.
+      Study R1024 (this set's census), R1031.
+
+      MAME 0.289: working. The original release: its program
+      (epr-18066 - 18069) and two data EPROMs (epr-18070 / 18071);
+      every other ROM is the Revision A set's. R1024 measured the
+      parent. No protection, no patches.
+
+      THE 2A LAYOUT (VF2's MRA; no 128 MB module needed), each slot
+      zero-padded to its size:
+        0x0000000  i960 program 0-512 KB (MAME maincpu 0x000000)
+        0x0080000  main_data, 16 MB
+        0x1080000  textures, 8 MB (MAME's 0-4 MB and 8-12 MB; 4 MB loaded)
+        0x1880000  polygons, 12 MB (8 MB loaded). The 2B core keeps the
+                   SHARC's DM page at SDRAM byte 0x2080000, this slot's 8 MB
+                   mark, so a 2B set in this layout can have at most 8 MB
+        0x2480000  256 KB of zeros (the 2A TGP's tables; 2B has none)
+        0x24C0000  68000 sound program, 512 KB
+        0x2540000  SCSP samples, 8 MB          -> SDRAM byte 0x3400000
+        0x2D40000  i960 program 512 KB-2 MB    -> SDRAM byte 0x2600000
+                   (the rest 0 as MAME's region)
+      Image: 0x2EC0000 bytes.
+
+      Index 4, the game ID: 0x2C, the Virtua Striker sets' own (R1046; the
+      2B build only): the 2A layout, no copro data (MAME's region is
+      ERASE00); the DIGITAL three-button profile, MAME's vstriker ports (IN1
+      / IN2 bit 0 Long Pass, bit 1 Shoot, bit 2 Short Pass); R867's fixed
+      luma map, which holds its rows (0, 1 and 2 over MAME's walk dumps)
+      exactly. Before (0x17, borrowed: The House of the Dead's on the 2C
+      build, with no 2B decode): the same profile and the same luma map, so
+      on the board nothing changes but the ID; it is its own so that no
+      later 0x17 decode can reach it. Bit 7 would be the 15 kHz CRT flag.
+    -->
+    <name>Virtua Striker</name>
+    <setname>vstrikero</setname>
+    <rbf>Model2B</rbf>
+    <!-- R945: the NVRAM file is the backup RAM (16 KB), "M2EEPROM" and the
+         93C46 EEPROM (128 bytes): the game's settings. -->
+    <nvram index="2" size="16520"/>
+    <rom index="4" md5="none">
+        <part>2C 00</part>
+    </rom>
+    <mameversion>0289</mameversion>
+    <year>1994</year>
+    <manufacturer>Sega</manufacturer>
+    <category>Sports</category>
+
+    <rom index="0" zip="vstrikero.zip|vstriker.zip" md5="none">
+
+        <!-- 0x0000000  i960 program 0-512 KB -->
+        <interleave output="32">
+            <part name="epr-18068.15" crc="74a47795" map="0021"/>
+            <part name="epr-18069.16" crc="f6c3fcbf" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18066.13" crc="e774229e" map="0021"/>
+            <part name="epr-18067.14" crc="7dfd950c" map="2100"/>
+        </interleave>
+
+        <!-- 0x0080000  i960 data, 16 MB -->
+        <interleave output="32">
+            <part name="mpr-18055.11" crc="5aba9fc0" map="0021"/>
+            <part name="mpr-18056.12" crc="017f0c55" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18053.9" crc="46c770c8" map="0021"/>
+            <part name="mpr-18054.10" crc="437af66e" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="epr-18070.7" crc="f52e4db5" map="0021"/>
+            <part name="epr-18071.8" crc="1be63a7d" map="2100"/>
+        </interleave>
+        <part repeat="7340032">00</part>
+
+        <!-- 0x1080000  textures, 8 MB (MAME's 0-4 MB, then its 8-12 MB) -->
+        <interleave output="32">
+            <part name="mpr-18062.27" crc="126e7de3" map="0021"/>
+            <part name="mpr-18061.25" crc="c37f1c67" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x1880000  polygons, 12 MB (8 MB loaded; the SHARC's DM page is at
+                     SDRAM byte 0x2080000, the slot's 8 MB mark) -->
+        <interleave output="32">
+            <part name="mpr-18057.17" crc="890d8806" map="0021"/>
+            <part name="mpr-18059.21" crc="c5cdf534" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="mpr-18058.18" crc="d4cbdf7c" map="0021"/>
+            <part name="mpr-18060.22" crc="93d5c95f" map="2100"/>
+        </interleave>
+        <part repeat="4194304">00</part>
+
+        <!-- 0x2480000  TGP math tables, 256 KB: none on 2B (no TGP) -->
+        <part repeat="262144">00</part>
+
+        <!-- 0x24C0000  68000 sound program, 512 KB (16-bit, byte-swapped) -->
+        <interleave output="16">
+            <part name="epr-18072.31" crc="73eabb58" map="12"/>
+        </interleave>
+        <part repeat="393216">00</part>
+
+        <!-- 0x2540000  SCSP samples, 8 MB (16-bit, byte-swapped); moved by the
+                     loader to SDRAM byte 0x3400000 -->
+        <interleave output="16">
+            <part name="mpr-18063.32" crc="b74d7c8a" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18064.33" crc="783b9910" map="12"/>
+        </interleave>
+        <interleave output="16">
+            <part name="mpr-18065.34" crc="046b55fe" map="12"/>
+        </interleave>
+        <part repeat="2097152">00</part>
+
+        <!-- 0x2D40000  i960 program 512 KB-2 MB (R862) -->
+        <part repeat="1572864">00</part>
+
+    </rom>
+
+    <!-- Player 1 on joystick 1, player 2 on joystick 2, the same buttons
+         (R887's three-button profile: J4 IN1 bit 0, J5 bit 1, J6 bit 2 - MAME's
+         Long Pass, Shoot, Short Pass). -->
+    <buttons names="Long Pass,Shoot,Short Pass,Start,Coin,Test,Service"/>
+</misterromdescription>
