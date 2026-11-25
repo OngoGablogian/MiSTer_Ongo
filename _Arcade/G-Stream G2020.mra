@@ -9,7 +9,7 @@
     <manufacturer>Oriental Soft Japan</manufacturer>
     <category>Shooter</category>
     <rotation>vertical (ccw)</rotation>
-    <buttons names="Shot,Bomb,-,-,Start,Coin,Pause,Service Coin,Service Mode" default="A,B,X,Y,Start,Select,L,R" count="4"/>
+    <buttons names="Shot,Bomb,-,-,Start,Coin,Pause,Service Coin,Service Mode" default="A,B,Start,Select,L,R" count="4"/>
 
     <!-- mod byte (GStream.sv): [0] X2222's map -->
     <rom index="1"><part>00</part></rom>
