@@ -9,7 +9,7 @@
     <manufacturer>SemiCom</manufacturer>
     <category>Shooter</category>
     <rotation>vertical (ccw)</rotation>
-    <buttons names="Shot,Defense,Bomb,-,Start,Coin,Pause,Service Coin,Service Mode" default="A,B,X,Start,Select,L,R" count="3"/>
+    <buttons names="Shot,Barrier,Bomb,-,Start,Coin,Pause,Service Coin,Service Mode" default="A,B,X,Start,Select,L,R" count="3"/>
 
     <!-- mod bytes (Vamphalf.sv): [0] E1-32 board, [2:1] rotation, [7:3] I/O map family;
          second byte [0] 16-bit sprite codes (gfx above 8 MB), [1] a 2 MB program, [2] 17-bit codes,

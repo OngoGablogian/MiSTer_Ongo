@@ -9,7 +9,7 @@
     <manufacturer>F2 System</manufacturer>
     <category>Arcade</category>
     <rotation>horizontal</rotation>
-    <buttons names="Column 1,Column 2,Column 3,Column 4,Start,Coin,Pause,Service Coin,Service Mode,Column 5,Column 6,Column 7,Turn Up Card,Select Turned Up Card,Register,Gift" default="A,B,X,Y,Start,Select,L,R" count="11"/>
+    <buttons names="Column 1,Column 2,Column 3,Column 4,Start,Coin,Pause,Service Coin,Service Mode,Column 5,Column 6,Column 7,Turn Up Card,Select Turned Up Card,Register,Gift" default="A,B,X,Y,Start,Select,,,,,,,L,R" count="11"/>
 
     <!-- mod bytes (Vamphalf.sv): [0] E1-32 board, [2:1] rotation, [7:3] I/O map family;
          second byte [0] 16-bit sprite codes (gfx above 8 MB), [1] a 2 MB program, [2] 17-bit codes,

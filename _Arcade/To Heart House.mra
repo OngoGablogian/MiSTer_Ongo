@@ -9,7 +9,7 @@
     <manufacturer>Limenko</manufacturer>
     <category>Arcade</category>
     <rotation>horizontal</rotation>
-    <buttons names="Hold 1,Hold 2,Hold 3,Hold 4,Start,Coin,Pause,Service Coin,Service Mode,Take / Odd,Bet / Double Up" default="A,B,X,Y,Start,Select,L,R" count="6"/>
+    <buttons names="Hold 1,Hold 2,Hold 3,Hold 4,Start,Coin,Pause,Service Coin,Service Mode,Take / Odd,Bet / Double Up" default="A,B,X,Y,Start,Select,,,,L,R" count="6"/>
 
     <!-- mod byte (rtl/lm_main.sv): [2:0] game (0 dynabomb, 1 sb2003, 2 legendoh, 3 hrthouse,
          4 spotty), [4] a 1 MB program at 0xfff00000 -->
