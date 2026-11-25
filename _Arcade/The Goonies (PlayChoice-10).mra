@@ -8,7 +8,7 @@
 	<rotation>horizontal</rotation>
 	<players>2</players>
 	<joystick>8-way</joystick>
-	<buttons names="A,B,Game Select,Start,Coin,Enter,Channel Select,Service Coin,Reset" default="A,B,Back,Start,R,L,Y,X"/>
+	<buttons names="A,B,Game Select,Start,Coin,Enter,Channel Select,Service Coin,Reset" default="A,B,Select,Start,R,L,Y,X"/>
 	<rom index="4" zip="pc_goons.zip|playch10.zip" md5="None">
 		<!-- the BIOS board (PlayChoice10.sv, PC10_IDX_BIOS); channel 1 is pc_goons -->
 		<part crc="d52fa07a" name="pch1-c__8t_e-2.8t"/>  <!-- 0000 Z80 BIOS (dual) -->
