@@ -6,7 +6,7 @@
     <year>1992</year>
     <manufacturer>Visco</manufacturer>
     <category>Arcade</category>
-    <rotation>vertical</rotation>
+    <rotation>vertical (cw)</rotation>
 
     <rom index="1"><part>03</part></rom>
 
@@ -40,5 +40,5 @@
         <dip name="Title" bits="20" ids="Block Carnival,Thunder &amp; Lightning 2"/>
     </switches>
 
-    <buttons names="Shot,-,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+    <buttons names="Shot,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="2"/>
 </misterromdescription>

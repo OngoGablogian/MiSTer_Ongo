@@ -6,7 +6,7 @@
     <year>1990</year>
     <manufacturer>Seta</manufacturer>
     <category>Arcade</category>
-    <rotation>vertical</rotation>
+    <rotation>vertical (ccw)</rotation>
 
     <rom index="1"><part>01</part></rom>
 
@@ -48,5 +48,5 @@
         <dip name="Copyright" bits="21,23" ids="None,None,None,None,Romstar,Visco,Seta/Romstar,Seta/Visco"/>
     </switches>
 
-    <buttons names="Shot,-,-,-,-,-,Start,Coin,Pause,Service" default="A,B,Start,Select,L,R" count="2"/>
+    <buttons names="Shot,-,-,-,-,-,Start,Coin,Pause,Service" default="A,Start,Select,L,R" count="2"/>
 </misterromdescription>

@@ -6,7 +6,7 @@
     <year>1993</year>
     <manufacturer>Allumer</manufacturer>
     <category>Arcade</category>
-    <rotation>vertical</rotation>
+    <rotation>vertical (ccw)</rotation>
 
     <rom index="1"><part>19</part></rom>
 
