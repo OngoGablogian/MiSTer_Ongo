@@ -86,7 +86,7 @@
         <dip name="Select Connector" bits="3" ids="1P 2P,3P 4P"/>
     </switches>
 
-    <buttons names="Advice,Stance Left,Stance Right,-,-,-,Start,Coin,Pause,Service" default="A,B,X,Start,Select,L,R" count="3"/>
+    <buttons names="Advice,Stance Left,Stance Right,Swing,-,-,Start,Coin,Pause,Service" default="A,B,X,Y,Start,Select,L,R" count="4"/>
 
     <!-- from Pugsy's MAME cheats (mamecheat.co.uk), scripts/mame_cheats.py: replaced
          as the CPU reads them (rtl/cheat/cheatengine.sv) -->
