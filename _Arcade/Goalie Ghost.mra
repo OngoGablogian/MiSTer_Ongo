@@ -35,7 +35,7 @@
 
 	<nvram index="4" size="512"/>
 
-	<buttons names="Jump,Button 2,-,-,Start,Coin,Service,Pause" default="A,B,X,Y,Start,Select,L,R"/>
+	<buttons names="Jump,Button 2,-,-,Start,Coin,Service,Pause" default="A,B,Start,Select,L,R"/>
 
 	<switches default="FF,7D,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>

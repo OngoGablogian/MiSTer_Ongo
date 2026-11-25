@@ -31,7 +31,7 @@
 
 	<nvram index="4" size="512"/>
 
-	<buttons names="Tee Select,-,-,-,Start,Coin,Service,Pause,Start 3,Start 4" default="A,B,X,Y,Start,Select,L,R"/>
+	<buttons names="Tee Select,-,-,-,Start,Coin,Service,Pause,Start 3,Start 4" default="A,Start,Select,L,R"/>
 
 	<switches default="01,7F,FF,FE">
 		<dip name="Service Mode" bits="23" ids="On,Off"/>
