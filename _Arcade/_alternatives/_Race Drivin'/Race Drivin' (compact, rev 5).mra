@@ -1,0 +1,90 @@
+<misterromdescription>
+  <name>Race Drivin' (compact, rev 5)</name>
+  <setname>racedrivc</setname>
+  <year>1990</year>
+  <manufacturer>Atari Games</manufacturer>
+  <category>Racing</category>
+  <rbf>RaceDrivin_compact</rbf>
+  <mameversion>0289</mameversion>
+  <rotation>horizontal</rotation>
+  <buttons default="A,B,X,Y,L,R,Start,Select" names="Gas,Brake,Clutch,Abort,Gear Down,Gear Up,Key,Coin,Gear 1,Gear 2,Gear 3,Gear 4"/>
+  <switches default="FF 01">
+    <dip bits="0" name="SW1:8" ids="On,Off"/>
+    <dip bits="1" name="SW1:7" ids="On,Off"/>
+    <dip bits="2" name="SW1:6" ids="On,Off"/>
+    <dip bits="3" name="SW1:5" ids="On,Off"/>
+    <dip bits="4" name="SW1:4" ids="On,Off"/>
+    <dip bits="5" name="SW1:3" ids="On,Off"/>
+    <dip bits="6" name="SW1:2" ids="On,Off"/>
+    <dip bits="7" name="SW1:1" ids="On,Off"/>
+    <dip bits="8" name="Diagnostic jumper" ids="On,Off"/>
+  </switches>
+  <rom index="0" address="0x30000000" zip="racedrivc.zip|racedriv.zip" md5="none">
+    <interleave output="16">
+      <part name="136078-5002.200r" crc="ae8f79bd" map="01"/>
+      <part name="136078-5001.210r" crc="ad896e7f" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136078-5004.200s" crc="b8650bee" map="01"/>
+      <part name="136078-5003.210s" crc="bf56a29f" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136078-5006.200t" crc="8559a61b" map="01"/>
+      <part name="136078-5005.210t" crc="33d654b1" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136078-4008.200u" crc="5b119d16" map="01"/>
+      <part name="136078-4007.210u" crc="fa234861" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136078-4010.200v" crc="150acc9e" map="01"/>
+      <part name="136078-4009.210v" crc="85a9aa37" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136077-1012.200w" crc="9a78b952" map="01"/>
+      <part name="136077-1011.210w" crc="c5cd5491" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136077-1014.200x" crc="a872792a" map="01"/>
+      <part name="136077-1013.210x" crc="ca7b3e53" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136078-4016.200y" crc="aa296776" map="01"/>
+      <part name="136078-4015.210y" crc="030c803d" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136077-1021.10h" crc="9831fe73" map="01"/>
+      <part name="136077-1023.10k" crc="74bf0e0e" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="136077-1022.10j" crc="c0393c31" map="01"/>
+      <part name="136077-1024.10l" crc="1e2fb25f" map="10"/>
+    </interleave>
+    <part repeat="0x10000">ff</part>
+    <part name="136052-1123.65a" crc="a88411dc"/>
+    <part name="136052-1124.55a" crc="071a4309"/>
+    <part name="136052-3125.45a" crc="856548ff"/>
+    <part name="136052-1126.30a" crc="f46ef09c"/>
+    <part name="136077-1017.45c" crc="e93129a3"/>
+    <interleave output="16">
+      <part name="136078-1030.30e" crc="d355a1c2" map="01"/>
+      <part name="136078-1031.10e" crc="18fd5f44" map="10"/>
+    </interleave>
+    <part repeat="0x20000">ff</part>
+  </rom>
+  <rom index="1" zip="racedrivc.zip|racedriv.zip" md5="none">
+    <interleave output="16">
+      <part name="136077-1032.70n" crc="fbc903a6" map="01"/>
+      <part name="136077-1033.45n" crc="e032ca7c" map="10"/>
+    </interleave>
+  </rom>
+  <rom index="3" zip="racedrivc.zip|racedriv.zip" md5="none">
+    <interleave output="16">
+      <part name="racedrivc.200e" crc="2c0f7715" map="01"/>
+      <part name="racedrivc.210e" crc="2e843742" map="10"/>
+    </interleave>
+  </rom>
+  <nvram index="2" size="8192"/>
+
+  <remark>Work in progress. See PLAN.md in the project repository.</remark>
+</misterromdescription>

@@ -165,6 +165,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Punch-Out!! / Super Punch-Out!!](https://discord.com/channels/647909397477195803/737506076806611064/1540758518238421023)        |
 | [Pushman](https://www.patreon.com/bazset/posts/pushman-1990-172953620)                                                           |
 | [R-Shark / Super-X (Dooyong)](https://github.com/kyledlester/R_Shark_Super_X_MiSTer)                                             |
+| [Race Drivin'](https://github.com/djb-rh/Arcade-RaceDrivin_MiSTer)                                                               |
 | [Reaktor](https://www.patreon.com/bazset/posts/reaktor-1987-172959189)                                                           |
 | [Return of the Jedi](https://github.com/Usquebagh/Arcade-Jedi_MiSTer)                                                            |
 | [Round Up 5 - Super Delta Force](https://www.patreon.com/bazset/posts/round-up-5-super-174367571)                                |
