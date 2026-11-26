@@ -31,7 +31,7 @@
     <rbf>fifelix</rbf>
     <joystick>4</joystick>
     <region>World</region>
-    <rom index="0" zip="felixjr.zip" md5="None">
+    <rom index="0" zip="felixjr.zip" md5="None" address="0x30000000">
         <!-- maincpu - starts at 0x0 - length 0x20000 (17 bits) -->
         <part name="fj-p1.1d" crc="08c5f3ef"/>
         <part name="fj-p2.1e" crc="c691b8ed"/>
@@ -81,5 +81,5 @@
         <DSW3/>
         <dip name="Invulnerability" bits="16" ids="Off,On"/>
     </switches>
-    <buttons names="Jump,Fix,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+    <buttons names="Jump,Fix,Start,Coin,Pause,Test,Service" default="A,B,Start,Select,L2,R2,L3" count="2"/>
 </misterromdescription>
