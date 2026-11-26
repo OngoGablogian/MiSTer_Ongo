@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<misterromdescription>
+  <name>SunA Quiz 6000 Academy (940620-6)</name>
+  <mratimestamp>202607010000</mratimestamp>
+  <mameversion>0289</mameversion>
+  <setname>sunaq</setname>
+  <year>1994</year>
+  <manufacturer>SunA</manufacturer>
+  <rbf>suna16</rbf>
+  <category>Quiz</category>
+  <buttons names="Answer 1,Answer 2,Answer 3,Answer 4,-,-,Start,Coin" default="A,B,X,Y,-,-,Start,Select"/>
+  <switches default="00cf">
+    <dip bits="0,1,2" name="Coinage" ids="5C_1C,4C_1C,3C_1C,2C_1C,1C_4C,1C_3C,1C_2C,1C_1C" values="0,1,2,3,4,5,6,7"/>
+    <dip bits="3,4" name="Difficulty" ids="Easy,Normal,Hard,Hardest" values="0,1,2,3"/>
+    <dip bits="5" name="Demo Sounds" ids="On,Off" values="0,1"/>
+    <dip bits="6" name="Flip Screen" ids="On,Off" values="0,1"/>
+    <dip bits="7" name="Unused (SW1:8)" ids="On,Off" values="0,1"/>
+  </switches>
+  <romstruct>
+0000000-00FFFFF maincpu 68000 code
+0100000-010FFFF audiocpu Z80 music program
+0110000-018FFFF pcm1 PCM Z80 program
+0190000-038FFFF gfx1 Sprites, inverted
+</romstruct>
+  <rom zip="sunaq.zip" index="0">
+    <part>01 00 00 19 00 7f 00 7f</part>
+    <interleave output="16">
+      <part name="prog2.bin" crc="a92bce45" sha1="258b2a21c27effa1d3380e4c08558542b1d05175" map="01"/>
+      <part name="prog1.bin" crc="ff690e7e" sha1="43b9c67f8d8d791be922966632613a077807b755" map="10"/>
+    </interleave>
+    <part name="audio1.bin" crc="3df42f82" sha1="91c1037c9d5d1ec82ed4cdfb35de5a6d626ecb3b"/>
+    <part name="audio2.bin" crc="cac85ba9" sha1="e5fbe813022c17d9eaf2a57184341666e2af365a"/>
+    <interleave output="16">
+      <part name="gfx1.bin" crc="0bde5acf" sha1="a9befb5f9a663bf48537471313f606853ea1f274" map="01"/>
+      <part name="gfx2.bin" crc="24b74826" sha1="cb3f665d1b1f5c9d385a3a3193866c9cae6c7002" map="10"/>
+    </interleave>
+  </rom>
+</misterromdescription>

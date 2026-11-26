@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<misterromdescription>
+  <name>Best Of Best</name>
+  <mratimestamp>202607010000</mratimestamp>
+  <mameversion>0289</mameversion>
+  <setname>bestbest</setname>
+  <year>1994</year>
+  <manufacturer>SunA</manufacturer>
+  <rbf>suna16</rbf>
+  <category>Fighting</category>
+  <buttons names="Punch 1,Punch 2,Punch 3,Punch 4,Punch 5,Punch 6,Start,Coin" default="A,B,X,Y,L,R,Start,Select"/>
+  <switches default="d7ff">
+    <dip bits="0,1,2" name="Coinage" ids="5C_1C,4C_1C,3C_1C,2C_1C,1C_4C,1C_3C,1C_2C,1C_1C" values="0,1,2,3,4,5,6,7"/>
+    <dip bits="3,4" name="Difficulty" ids="Hardest,Hard,Normal,Easy" values="0,1,2,3"/>
+    <dip bits="5" name="Display Combos" ids="Off,On" values="0,1"/>
+    <dip bits="6" name="Service Mode" ids="On,Off" values="0,1"/>
+    <dip bits="7" name="Demo Sounds" ids="On,Off" values="0,1"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off" values="0,1"/>
+    <dip bits="9,10" name="Play Time" ids="1:40,1:30,1:20,1:10" values="0,1,2,3"/>
+  </switches>
+  <romstruct>
+0000000-003FFFF maincpu 68000 code
+0040000-013FFFF user1 68000 data ROM
+0140000-014FFFF audiocpu Z80 music program
+0150000-015FFFF pcm1 Z80 PCM program
+0160000-035FFFF gfx1 Sprite chip 1, inverted
+0360000-075FFFF gfx2 Sprite chip 2, inverted
+0760000-07601FF proms PROMs
+</romstruct>
+  <rom zip="bestbest.zip" index="0">
+    <part>00 00 00 16 00 36 00 7f</part>
+    <interleave output="16">
+      <part name="4.bin" crc="06741994" sha1="e872e9e9d02360dda9c9b6df8e6424b0f3e18c1f" map="01"/>
+      <part name="2.bin" crc="42843dec" sha1="3705661a9740b3499297424e340da9a3606873fb" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="3.bin" crc="e2bb8f26" sha1="d73bbe034718c77774dede61e751a9ae2d29118a" map="01"/>
+      <part name="1.bin" crc="d365e20a" sha1="29706d6e422e71c7dad51a3369683a6539f72b54" map="10"/>
+    </interleave>
+    <part name="5.bin" crc="bb9265e6" sha1="424eceac4fd48c9a99653ece2f3fcbc8b37569cf"/>
+    <part name="6.bin" crc="dd445f6b" sha1="658417d72c003f25db273e3c731838317ed1876c"/>
+    <interleave output="16">
+      <part name="9.bin" crc="b11994ea" sha1="4ff2250a9dbb2e575982e2ffcad7686347368b5b" map="01"/>
+      <part name="7.bin" crc="16188b73" sha1="1e67f9b100614466e2ff1169f25c90e34a2e7db9" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="10.bin" crc="37b41ef5" sha1="dd4500663537ffad369ee9415c56df90221bed23" map="01"/>
+      <part name="8.bin" crc="765ce06b" sha1="6cc6d7c27b49eedd58104c50e4887f86bff9357c" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="16.bin" crc="dc46cdea" sha1="d601f5464894223ce8459093ae53006155a3e680" map="01"/>
+      <part name="14.bin" crc="c210fb53" sha1="3d5a763bffaef922a77c95131b1e41f0f90629a5" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="17.bin" crc="c6fadd57" sha1="ce9bc4d7a288feebdd19de09d00bec8489346878" map="01"/>
+      <part name="15.bin" crc="3b1166c7" sha1="7f2a0c9131fcf39dd67047b6e697c4076ca37b19" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="13.bin" crc="23283ac4" sha1="f7aa00f203b17b590f1c43990f3f1c4aba7ba0ad" map="01"/>
+      <part name="11.bin" crc="323eebc3" sha1="0e82b583273c9ba5252f7a108538ae58edf39a03" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="18.bin" crc="674c4609" sha1="f1de78c01d26dfb1174203415ccf3c771398d163" map="01"/>
+      <part name="12.bin" crc="ca7c8176" sha1="1ec99db3e0840b4647d6ccdf6fda118fa9ad4f42" map="10"/>
+    </interleave>
+    <part name="82s129.5" crc="10bfcebb" sha1="ae8708db7d3a8984f16e876867ecdbb4445e3378"/>
+    <part name="82s129.6" crc="10bfcebb" sha1="ae8708db7d3a8984f16e876867ecdbb4445e3378"/>
+  </rom>
+</misterromdescription>

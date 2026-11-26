@@ -200,6 +200,7 @@ db_url = https://raw.githubusercontent.com/OngoGablogian/MiSTer_Ongo/db/db.json.
 | [Stinger](https://www.patreon.com/bazset/posts/stinger-seibu-173854537)                                                          |
 | [Stone Ball](https://www.patreon.com/Meathax/posts/stone-ball-chase-171312474)                                                   |
 | [SunA 8bit](https://www.patreon.com/Meathax/posts/suna-8-bit-169309109)                                                          |
+| [SunA16](https://github.com/ryanschlegl/suna16fpga)                                                                              |
 | [Sunsoft GA9201](https://github.com/YoAaronD/SunsoftGA9201_MiSTer)                                                               |
 | [Super Dodge Ball](https://github.com/kyledlester/Super_Dodge_Ball_MiSTer)                                                       |
 | [SWAT Police](https://www.patreon.com/Meathax/posts/swat-police-2001-173604930)                                                  |

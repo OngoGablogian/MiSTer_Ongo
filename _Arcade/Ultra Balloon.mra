@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<misterromdescription>
+  <name>Ultra Balloon</name>
+  <mratimestamp>202607010000</mratimestamp>
+  <mameversion>0289</mameversion>
+  <setname>uballoon</setname>
+  <year>1996</year>
+  <manufacturer>SunA (Unico license)</manufacturer>
+  <rbf>suna16</rbf>
+  <category>Platform</category>
+  <buttons names="Fire,Jump,-,-,-,-,Start,Coin" default="A,B,-,-,-,-,Start,Select"/>
+  <switches default="ff7f">
+    <dip bits="0,1,2" name="Coinage" ids="5C_1C,4C_1C,3C_1C,1C_4C,1C_3C,1C_2C,1C_1C,2C_1C" values="0,1,2,4,5,6,7,3"/>
+    <dip bits="3,4" name="Lives" ids="5,4,2,3" values="0,1,2,3"/>
+    <dip bits="5,6" name="Difficulty" ids="Hardest,Hard,Easy,Normal" values="0,1,2,3"/>
+    <dip bits="7" name="Service Mode" ids="On,Off" values="0,1"/>
+    <dip bits="8" name="Flip Screen" ids="On,Off" values="0,1"/>
+    <dip bits="9" name="Cabinet" ids="Cocktail,Upright" values="0,1"/>
+    <dip bits="10,11,12" name="Bonus Life" ids="None,500K/3000K,500K/2000K,500K/1500K,300K/1000K,600K,400K,200K" values="0,1,2,3,4,5,6,7"/>
+    <dip bits="13" name="Unused (SW2:6)" ids="On,Off" values="0,1"/>
+    <dip bits="14" name="Unused (SW2:7)" ids="On,Off" values="0,1"/>
+    <dip bits="15" name="Demo Sounds" ids="On,Off" values="0,1"/>
+  </switches>
+  <romstruct>
+0000000-00FFFFF maincpu 68000 code
+0100000-010FFFF audiocpu Z80 music program
+0110000-012FFFF pcm1 PCM Z80 program
+0130000-032FFFF gfx1 Sprites, inverted
+0330000-052FFFF gfx1copy Sprites duplicated for parallel rendering
+</romstruct>
+  <rom zip="uballoon.zip" index="0">
+    <part>03 00 00 13 00 33 00 7f</part>
+    <interleave output="16">
+      <part name="prg2.rom2" crc="72ab80ea" sha1="b755940877cf286559208106dd5e6933aeb72242" map="01"/>
+      <part name="prg1.rom1" crc="27a04f55" sha1="a530294b000654db8d84efe4835b72e0dca62819" map="10"/>
+    </interleave>
+    <part name="audio1.rom7" crc="c771f2b4" sha1="6da4c526c0ea3be5d5bb055a31bf1171a6ddb51d"/>
+    <part name="audio2.rom8" crc="c7f75347" sha1="5bbbd39285c593441c6da6a12f3632d60b103216"/>
+    <interleave output="16">
+      <part name="gfx3.rom3" crc="fd2ec297" sha1="885834d9b58ccfd9a32ecaa51c45e70fbbe935db" map="01"/>
+      <part name="gfx4.rom4" crc="718f3150" sha1="5971f006203f86743ebc825e4ab1ed1f811e3165" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="gfx5.rom5" crc="6307aa60" sha1="00406eba98ec368e72ee53c08b9111dec4f2552f" map="01"/>
+      <part name="gfx6.rom6" crc="af7e057e" sha1="67a03b54ffa1483c8ed044f27287b7f3f1150455" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="gfx3.rom3" crc="fd2ec297" sha1="885834d9b58ccfd9a32ecaa51c45e70fbbe935db" map="01"/>
+      <part name="gfx4.rom4" crc="718f3150" sha1="5971f006203f86743ebc825e4ab1ed1f811e3165" map="10"/>
+    </interleave>
+    <interleave output="16">
+      <part name="gfx5.rom5" crc="6307aa60" sha1="00406eba98ec368e72ee53c08b9111dec4f2552f" map="01"/>
+      <part name="gfx6.rom6" crc="af7e057e" sha1="67a03b54ffa1483c8ed044f27287b7f3f1150455" map="10"/>
+    </interleave>
+  </rom>
+</misterromdescription>
